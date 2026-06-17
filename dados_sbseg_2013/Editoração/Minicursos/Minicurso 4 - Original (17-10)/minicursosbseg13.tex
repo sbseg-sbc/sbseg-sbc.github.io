@@ -1,0 +1,965 @@
+\documentclass{SBCbookchapter}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,brazilian]{babel}
+\usepackage{graphicx,url,subfig}
+\usepackage{listings,color,verbatim}
+\usepackage[colorinlistoftodos]{todonotes}
+% \usepackage{ae}
+\usepackage{microtype, cite}
+
+% Comando para múltiplas colunas
+% uso: \mc{numero de colunas}{alinhamento}{Texto}
+\newcommand{\mc}[3]{\multicolumn{#1}{#2}{#3}}
+\usepackage{multirow}
+
+% configuracao do hyperref
+\hypersetup{colorlinks,breaklinks=true,
+    linkcolor=black,citecolor=black,urlcolor=black,
+	 pdfstartview=FitH, bookmarksopenlevel=1,
+	 pdftitle={Infraestrutura de autenticação e de autorização para Internet das Coisas},
+    pdfauthor={Wangham, et. al},
+    pdfsubject={Minicursos SBSeg 2012},
+    pdfkeywords={IoT, internet das coisas, autenticação, autorização}
+}
+
+% Definindo algumas cores que serão utilizadas nas listagens de códigos XML
+\definecolor{colBack}{rgb}{1,1,0.96}
+\definecolor{colKeys}{rgb}{0,0,0}
+\definecolor{colIdentifier}{rgb}{0,0,0.9}
+\definecolor{colComments}{rgb}{1,0,0}
+\definecolor{colString}{rgb}{0,0,0.6}
+
+
+% Definindo a aparência das listagens de códigos XML
+%-----------------------------------------------------
+\lstset{language=XML,basicstyle=\ttfamily\scriptsize,tabsize=3,frame=single,showtabs=false,showspaces=false,numbers=left,numberstyle=\tiny,linewidth=0.98\linewidth,xleftmargin=21pt,tab=$\to$,float=tbph,extendedchars,breaklines,showstringspaces=false,identifierstyle=\color{colIdentifier},keywordstyle=\color{colKeys},stringstyle=\color{colString},commentstyle=\color{colComments},backgroundcolor=\color{colBack},columns=flexible,captionpos=b,aboveskip=\bigskipamount}
+%--------------------------------------------------------
+
+% Palavras em inglês devem estar entre o \eng{}
+\newcommand{\eng}[1]{\foreignlanguage{english}{\textit{#1}}}
+%--------------------------------------------
+
+\usepackage{ulem,amsmath}
+\normalem
+\usepackage{color}
+
+%-------------------- COMANDOS PARA REVISAO DO EMERSON --------
+%  Para aceitar todas modificacoes dos comandos emerson e ignore
+% comente as duas linhas abaixo e descomente as outras proximas duas
+% linhas que estao comentadas.
+
+\definecolor{emersonCor}{rgb}{0,0,0.8}
+\definecolor{michelleCor}{cmyk}{0,100,0,0}
+\definecolor{marlonCor}{cmyk}{49,0,39,0}
+
+\newcommand{\emerson}[1]{\textcolor{emersonCor}{#1}}
+\newcommand{\michelle}[1]{\textcolor{michelleCor}{#1}}
+\newcommand{\marlon}[1]{\textcolor{marlonCor}{#1}}
+
+
+\newcommand{\ignore}[1]{\textcolor{red}{\sout{#1}}}
+
+
+
+% -------------------------------------------------------------
+%                  Exemplos de como usar o TODO
+% -------------------------------------------------------------
+
+\newcommand{\nota}[1]{
+\todo[color=red!60]{..#1}
+}
+
+% \todo{Plain todonotes.}%
+% \todo[color=blue!40]{Todonote with a different color.}%
+% \todo[nolist]{Todonote that is only shown in the margin and not in
+% the list of todos.}%
+% \todo[size=\small, color=green!40]{A note with a small fontsize.}%
+% \todo[inline]{testing testing}
+% \todo[noline]{A note with no line back to the text.}%
+% \todo[inline, color=red!50]{Inline todonotes.}%
+% \todo[inline, color=green!40]{A note with no line back to the text.}%
+% \listoftodos
+% -------------------------------------------------------------
+% -------------------------------------------------------------
+
+
+% Para aumentar a numeração do capítulo
+\refstepcounter{chapter}
+\refstepcounter{chapter}
+\refstepcounter{chapter}
+
+
+%------------------------------------------------------%
+% Isso nao faz parte do modelo do SBC - coloquei para  %
+%------------------------------------------------------%
+% para o rodapé
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% \renewcommand{\headrulewidth}{0pt}
+%------------------------------------------------------%
+
+
+\title{Infraestruturas de Autenticação e de Autorização para Internet das Coisas}
+
+\author{Michelle S. Wangham$^\diamond$, Marlon Cordeiro Domenech$^\diamond$, Emerson Ribeiro de Mello$^\dagger$\\[0.7ex]
+$^\diamond$ Universidade do Vale do Itajaí \\[0.6ex]
+$^\dagger$ Instituto Federal de Santa Catarina\\[0.6ex]
+\eng{email}:wangham@univali.br, marloncdomenech@gmail.com, \\ mello@ifsc.edu.br}
+
+\begin{document}
+\maketitle
+
+%------------------------------------------------------%
+% Isso nao faz parte do modelo do SBC   %
+%------------------------------------------------------%
+% % Só para aparecer onde foi publicado
+% \thispagestyle{fancy}
+%
+% \fancyhead{}
+% \fancyhead[CE,CO]{}
+% \fancyfoot{}
+% \fancyfoot[RE,LO]{Minicurso SBSeg 2010}
+% \fancyfoot[LE,RO]{\thepage}
+%------------------------------------------------------%
+
+\vspace*{-9px}
+
+\begin{abstract}
+\begin{otherlanguage}{english}
+
+The next step in growth of the Internet is the extensive integration of networked physical objects, known as things. The Internet of Things (IoT) paradigm is characterized by the diversity of devices that cooperate to achieve a common goal. In this environment, compose of constrained devices, the widespread adoption of this paradigm depends of security requirements like secure communication between devices, privacy and anonymity of its users. This chapter presents the main security challenges and solutions to provide authentication and authorization on the Internet of Things
+
+\end{otherlanguage}
+
+\end{abstract}
+
+\begin{resumo}
+
+O próximo salto no crescimento da Internet está na ampla integração de objetos físicos do dia a dia, denominados coisas, conectados em rede. O paradigma da Internet das Coisas (Internet of Things -- IoT) é caracterizado pela diversidade de dispositivos que cooperam entre si a fim de atingir um objetivo comum. Neste ambiente, composto por dispositivo com poucos recursos computacionais, garantir a comunicação segura entre estes dispositivos, a privacidade e o anonimato de seus usuários são requisitos de segurança fundamentais para a ampla adoção deste paradigma. Neste capítulo, são  apresentados os principais desafios e soluções de segurança para prover autenticação e autorização na Internet das Coisas.
+
+\end{resumo}
+
+\newpage
+
+% Exemplo de como inserir uma listagem de codigo XML
+% \begin{figure}
+% 	\lstinputlisting{xml/wssec.xml}
+% 	\caption{Exemplo WS-Security}
+% 	\label{f_wssecurity}
+% \end{figure}
+
+
+\section{Introdução}
+\label{s_introducao}
+
+O próximo salto no crescimento da Internet está fundamentado no paradigma da Internet das Coisas (\eng{Internet of Things} -- IoT) o qual abrange uma infraestrutura de \textit{hardware}, \textit{software} e serviços que conectam objetos físicos, denominados como coisas, à rede de computadores \cite{itu2005,ctec2008}. Segundo \cite{atzori2010}, a ideia básica de IoT consiste na presença de uma diversidade de objetos que interagem e cooperam entre si a fim de atingir um objetivo comum, para tal compartilham informações utilizando métodos de endereçamento único e protocolos de comunicação padronizados.
+
+A integração entre sensores e atuadores sobre a Internet forma a base tecnológica para o conceito de ambientes inteligentes, nos quais a informação gerada por um objeto pode ser compartilhada entre diversas plataformas e aplicações \cite{gubbi2013}. O conceito de ambientes inteligentes engloba diferentes tecnologias, tais como redes de sensores sem fio (RSSF) e sistemas de identificação por rádio frequência (\eng{Radio-Frequency IDentification} -- RFID) integrados para rastrear estados das coisas, como sua localização, temperatura, movimentos, etc \cite{atzori2010}.
+
+Outro conceito importante no cenário de IoT é o de Web das Coisas (\eng{Web of Things} -- WoT). A principal característica na WoT é a adoção de protocolos usados amplamente em aplicações web, como por exemplo, o HTTP, cujo principal ganho está na facilidade de integração entre os serviços da WoT e outros serviços e sistemas disponíveis na Internet \cite{guinard2009}. Com o aumento da adoção de aplicações para IoT e WoT, a preocupação com a segurança das informações aumentará o sucesso do uso desta tecnologia emergente e assim estará fundamentado no nível de segurança que o ambiente poderá fornecer para os usuários, como por exemplo, a confidencialidade dos dados trafegados, bem como a privacidade dos usuários \cite{itu2005}.
+
+A IoT apresenta requisitos singulares que demandam abordagens diferenciadas acerca da segurança. Segundo \cite{babar2011}, acrescentar mecanismos de segurança em dispositivos embarcados com restrições computacionais pode ser um desafio. Diante da heterogeneidade dos dispositivos, desenvolver mecanismos de segurança que possam ser executados em diferentes plataformas é um requisito importante para a IoT. Por fim, os autores afirmam que o acesso físico aos dispositivos é facilitado em função do tipo de ambiente nos quais os objetos estão inseridos. Assim, são necessárias não só a proteção lógica mas também física destes dispositivos.
+
+Dentre o conjunto de requisitos de segurança para IoT, cabe destacar: a gestão de identidade de usuários e dispositivos; a confidencialidade dos dados trocados na comunicação; a disponibilidade de recursos e sistemas; e o controle de acesso à rede para garantir somente dispositivos autorizados \cite{babar2011}.
+
+Pode-se atender a estes requisitos de segurança por meio de uma infraestrutura de autenticação e de autorização. Com esta infraestrutura, é possível implantar a gestão de identidades de forma a impedir que usuários ou dispositivos não autorizados tenham acesso aos recursos, impeça que usuários ou dispositivos legítimos acessem recursos para os quais não estejam autorizados e permita que usuários ou dispositivos legítimos tenham acesso aos recursos a estes autorizados \cite{liu2012}. Embora a autenticação e autorização de usuários seja bem abordada na literatura, a autenticação e autorização de dispositivos não é bem caracterizada e, segundo \cite{miorandi2012}, é um desafio de pesquisa neste cenário.
+
+O objetivo deste capítulo é discutir os desafios de segurança e as infraestruturas de autenticação e de autorização que proveem gestão de identidades para Internet das Coisas. As seguintes questões chaves são analisadas neste capítulo: autenticação única (\eng{Single Sign On -SSO}) de usuários e de dispositivos, gerenciamento de relações de confiança entre domínios administrativos diferentes e interoperabilidade entre mecanismos de autenticação e de autorização. Conceitos, requisitos e soluções tecnológicas encontradas na literatura são complementados com a apresentação de dois cenários de uso para IoT que demonstram a aplicabilidade das infraestruturas de autenticação e de autorização.
+
+Este capítulo está dividido em sete seções. Nesta primeira seção, foi apresentada uma contextualização, destacando os objetivos e a motivação para a escolha do tema. Na Seção \ref{s_visao_geral}, são apresentados os principais conceitos, características, bem como as tecnologias envolvidos e os domínios de aplicação na IoT. A Seção \ref{s_requisitos_ameacas} apresenta as principais características de IoT que fazem com que a segurança seja tratada de maneira distinta em relação aos demais sistemas computacionais, bem como os principais requisitos de segurança na IoT, as ameaças e os ataques descritos na literatura. Na Seção \ref{s_autenticacao_iot}, são descritos os principais conceitos e técnicas de autenticação de usuários e de dispositivos e de mecanismos de autorização apropriados ao cenário para IoT. As principais infraestruturas de autenticação e de autorização adotadas na Internet e que são também empregadas na Internet das Coisas são analisadas na Seção \ref{s_infra_auth_iot}. A Seção \ref{s_iniciativas_gid} apresenta
+uma análise dos principais projetos de pesquisa que tratam a gestão de identidades para IoT e os trabalhos acadêmicos mais relevantes que discutem infraestruturas de autenticação e de autorização. Por fim, a Seção \ref{s_consideracoes} traz uma síntese dos principais aspectos da gestão de identidades na IoT analisados e as tendências de pesquisa nesta área.
+
+
+\section{Visão Geral sobre Internet das Coisas}
+\label{s_visao_geral}
+
+O próximo passo para o crescimento da Internet é a integração de objetos físicos do dia a dia (coisas) às redes de comunicação \cite{ctec2008}. Em 2010, havia aproximadamente 1,5 bilhão de computadores pessoais e mais de 1 bilhão de celulares com acesso à Internet. Para 2020, é esperado que algo entre 50 e 100 bilhões de dispositivos estejam conectados à Internet \cite{CERP_IOT_2010}. \cite{babar2011} afirmam que na IoT estão coisas como roupas, mobília, carros, \emph{smartcards}, dispositivos médicos, medidores de consumo e máquinas industriais. O paradigma de IoT integra uma grande variedade de conceitos e áreas, tais como: eletrônica, automação, redes de comunicação, biotecnologia, mecânica e tecnologia dos materiais \cite{xiang2012}.
+
+Segundo o relatório \cite{itu2005}, a IoT pode trazer mudanças à sociedade em geral na maneira como o indivíduo se relaciona com o ambiente, assim como na maneira como serão realizados os processos de negócio. Além da comunicação e informação a qualquer momento, em qualquer lugar, na IoT é possível também a conectividade para qualquer coisa, como pode ser visto na Figura \ref{figDimensoesIoT}.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=.4]{figs/dimensoes_IoT}
+	\caption{Nova dimensão para comunicação e compartilhamento de informação \cite{itu2005}}
+	\label{figDimensoesIoT}
+\end{figure}
+
+Conforme \cite{gubbi2013}, os avanços e a convergência das tecnologias de sistemas microeletromecânicos, comunicação sem fio e eletrônica digital resultaram no desenvolvimento de dispositivos em miniatura com a capacidade de sentir, computar e se comunicar via rede sem fio a curtas distâncias. Deste cenário deriva o conceito de ambientes inteligentes (\emph{smart environments}). Vários países estão desenvolvendo projetos de Cidades Inteligentes (\emph{smart cities}), que oferecem experiências inovadoras em transporte, preservação ambiental, convivência e economia de energia. Mundialmente, se reconhece o potencial da tecnologia de IoT para criar ambientes  inteligentes através dos \emph{smart objects} \cite{Schaffers2011}.
+
+As principais características da Internet das Coisas estão indicadas no mapa conceitual da Figura \ref{figCaracIoT} e são:
+
+\begin{itemize}
+  \item A IoT pode ser caracterizada como uma rede mundial de coisas/objetos/dispositivos interconectados que se comportam como entidades ativas \cite{roman2011securing};
+  \item As coisas (dispositivos) na IoT, muitas vezes, possuem restrições de recursos como memória RAM ou ROM, poder de processamento e energia \cite{hummen2013};
+  \item Mecanismos de comunicação de alguns dispositivos, na maioria das vezes sem fio, possuem baixa potência de transmissão e baixa taxa de dados \cite{mahalle2010};
+  \item Há uma grande quantidade de coisas (dispositivos) com ciclo curto de vida, o que exige uma alta capacidade de gerenciamento \cite{fongen2012};
+  \item Integra coisas (dispositivos) heterogêneos, o que demanda uma preocupação em relação a interoperabilidade entre estes \cite{atzori2010,mahalle2012};
+  \item A rede possui uma topologia dinâmica, pois muitos nós entram e saem da rede com frequência \cite{mahalle2012,hanum2012};
+  \item Pode ser caracterizada como um ambiente contendo um grande número computadores ou dispositivos invisíveis que colaboram com o usuário, ou seja, um ambiente pervasivo e ubíquo \cite{hanum2012};
+  \item Na IoT, os usuários podem interagir com as coisas em seu ambiente físico e virtual de diversas maneiras \cite{mahalle2012}.
+\end{itemize}
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=\linewidth]{figs/MapaConceitual_caractereisticasIoT}
+	\caption{Mapa Conceitual sobre Internet das Coisas}
+	\label{figCaracIoT}
+\end{figure}
+
+De acordo com \cite{roman2011securing}, as coisas na IoT possuem cinco características principais e uma opcional. São estas:
+
+\begin{itemize}
+  \item Existência: coisas que existem no mundo real podem também existir no mundo virtual (IoT), por meio de dispositivos de comunicação embarcada;
+  \item Auto conhecimento (do inglês, \emph{sense of self}): todas as coisas têm, explicitamente ou implicitamente, uma identidade que as descreve. As coisas podem processar informação, tomar decisões e se comportar de maneira autônoma;
+  \item Conectividade: as coisas podem iniciar a comunicação com outras entidades. Dessa maneira, a comunicação com entidades nas suas proximidades ou em ambientes remotos é possível.
+  \item Interatividade: as coisas podem interoperar e colaborar com uma variedade de entidades heterogêneas, seja humanos ou máquinas virtuais ou reais. Desse modo, estas produzem e consomem uma grande variedade de serviços;
+  \item Dinamicidade: as coisas podem interagir entre si a qualquer momento, lugar ou maneira. Estas podem entrar e sair de uma rede conforme quiserem, não estando limitadas a um único local físico, podendo usar uma grande variedade de interfaces;
+  \item (opcional) Ciência do ambiente: sensores podem permitir que as coisas percebam as características de seu ambiente, por exemplo, a sobrecarga da rede ou a radiação da água. Esta característica é opcional, pois nem todas as coisas possuem esta capacidade, como por exemplo, um objeto com uma etiqueta RFID.
+\end{itemize}
+
+\cite{gubbi2013} afirmam ainda que o ambiente de IoT culmina com a geração de enormes quantidades de dados que precisam ser armazenados, processados e apresentados de uma maneira eficiente e fácil de interpretar. Os autores afirmam que o conceito de Computação em Nuvem (\emph{Cloud Computing}) completa o conceito de IoT no intuito de prover o sensoriamento ubíquo. Uma infraestrutura em nuvem, na qual seja possível armazenar uma grande quantidade de dados e fornecer esses dados para que aplicações possam ser construídas, com requisitos de disponibilidade, capacidade de processamento e alocação de recursos sob demanda, é necessária para que os ambientes inteligentes sejam de fato escaláveis e altamente disponíveis.
+
+Pode-se citar como exemplo desta integração (Cloud e IoT) o projeto europeu OpenIoT cujo objetivo é prover um \emph{middleware open-source} para o desenvolvimento de aplicações de IoT, usando o modelo baseado em computação em nuvem. Os objetos conectados à Internet podem ser acessados por serviços IoT na nuvem. Por exemplo, o sensoriamento deste objeto pode ser um serviço disponibilizado na nuvem (\emph{Sensing as a Service}). Através do uso de serviços de IoT, usuários podem configurar e desenvolver aplicações de IoT. O projeto visa ainda fornecer infraestrutura e aplicações IoT na nuvem, formando uma nuvem de coisas (\emph{Cloud of Things})\cite{OpenIoT2012}.
+
+Para compreender o paradigma da IoT, \cite{atzori2010} apresentam os principais conceitos, tecnologias e padrões envolvidos, a partir de três perspectivas, a saber:
+
+\begin{itemize}
+  \item \textbf{Visão orientada às coisas}. Considera as coisas como itens simples, por exemplo, etiquetas RFID (\emph{Radio-Frequency IDentification}), porém, não somente estas coisas simples. Trata de aspectos como endereçamento único e global (para acesso direto às coisas por meio da Internet) e da identificação unívoca das coisas. Um dos pontos relevantes dessa visão é que, para a efetiva concretização da IoT, contata-se a necessidade de aumentar a inteligência das coisas (conceber \emph{smarts things});
+  \item \textbf{Visão orientada à Internet}. Responsável pelos protocolos necessários e como esses  devem ser adaptados para permitir a troca de informações entre as coisas na IoT. Nessa visão, estão as pesquisas e padrões que tratam da adaptação do protocolo IP  para o ambiente de IoT;
+  \item \textbf{Visão orientada à Semântica}. A quantidade de coisas conectadas à rede (Internet do Futuro) está destinada a ser muito alta. Esta visão incluem questões como: representação, armazenamento, busca e organização da grande quantidade de dados gerados na IoT. Neste contexto, as tecnologias semânticas deverão desempenhar um papel fundamental, pois serão usadas para modelagem das coisas, para extração do conhecimento dos dados, para o raciocínio sobre os dados gerados na IoT, para criação de ambientes de execução semânticos e para definição da arquitetura que irá acomodar os requisitos da IoT.
+\end{itemize}
+
+
+\subsection{Tecnologias Envolvidas}
+
+\cite{atzori2010} afirmam que a realização do conceito de IoT no mundo real é possível por meio do uso e integração de várias tecnologias habilitadoras. Nesta seção, são apresentadas algumas tecnologias que tornam a IoT realizável, são estas: RFID (\emph{Radio Frequency Identification}), WSN (\emph{Wireless Sensor Network}) e WSAN (\emph{Wireless Sensor and Actuator Network}), EnHANTs (\emph{Energy-Harvesting Active Networked Tags}), NFC (\emph{Near-Field Communications}) e RSN (\emph{RFID Sensor Network}).
+
+\subsubsection*{RFID (\emph{Radio Frequency Identification})}
+
+RFID é um método para transmissão de informações sem a necessidade de contato físico ou linha de visada entre as partes participantes da comunicação \cite{yan2008}. Um dispositivo RFID, muitas vezes chamado apenas de etiqueta (\emph{tag}) RFID, é um microchip projetado para transmissão de dados sem fio, que transmite dados em resposta a interrogação feita por um leitor RFID \cite{juels2006}.
+
+As etiquetas RFID podem ser: passivas, semi-passivas e ativas. A etiqueta passiva não tem fonte de energia acoplada e a energia utilizada para a transmissão dos dados é obtida através do sinal enviado pelo leitor RFID. As etiquetas semi-passivas possuem baterias que alimentam o circuito durante a fase de recebimento de dados, sendo que o envio é feito com a energia captada do sinal enviado pelo leitor. Já as etiquetas ativas têm a energia fornecida pela bateria nas fases de recepção e transmissão de sinal, além de poderem iniciar uma comunicação. Outro ponto é que as etiquetas ativas podem ser lidas a distâncias de 100m ou mais. Essas características das etiquetas ativas têm, em contrapartida, um custo final mais alto \cite{atzori2010}.
+
+Cada etiqueta RFID tem um código único, que faz parte do sistema chamado EPC (\emph{Eletronic Product Code} - Código Eletrônico de Produtos), suportado pela EPCGlobal. Esse código por si só não identifica o objeto ao qual a etiqueta está associada. Contudo, com a associação do EPC com as informações de um banco de dados, é possível saber qual é o objeto referenciado pela etiqueta \cite{epcglobal2009}.
+
+\subsubsection*{WSN (\emph{Wireless Sensor Network}) e WSAN (\emph{Wireless Sensor and Actuator Network})}
+
+Conforme \cite{xiang2012}, um sensor é um equipamento físico que serve para detectar ou sentir um sinal externo, normalmente, uma característica do ambiente, como por exemplo, luz, temperatura e umidade, e transmitir essa informação para outros dispositivos. Uma Rede de Sensores Sem Fio (RSSF), do inglês \emph{Wireless Sensor Network} (WSN), é uma combinação de sensores, computação embarcada para comunicação sem fio e tecnologia de processamento distribuído.
+
+Redes de sensores são compostas de grandes quantidades de nós de sensoriamento, instalados na área ou próximo a esta, na qual se deseja extrair informações. Em uma RSSF, a transmissão das informações captadas pelos sensores é feita para alguns, normalmente um, dos nós da rede, chamado sorvedouro ou \emph{sink}. A infraestrutura de transmissão das informações pode ser feita por uma rede de múltiplos saltos (cada nó age como um roteador de mensagens) \cite{atzori2010}.
+
+A posição dos nós de sensoriamento não precisa ser pré-determinada, o que faz com que redes de sensores precisem de protocolos que tenham a capacidade de auto-organizar a rede. Os nós são providos de um pequeno processador, o que permite que estes possam processar dados antes de transmiti-los e não simplesmente transmiti-los \cite{akyildiz2002}.
+
+% o que faz com que, ao invés de somente mandar dados, estes possam processá-los antes do envio .
+
+Nas redes de sensores e atuadores sem fio, do inglês \emph{Wireless Sensor and Actuator Network} (WSAN), os sensores captam as informações e passam para os atuadores, para que estes façam o processamento das informações e tomem a decisão de atuar no ambiente (o que pode ocorrer de diversas maneiras) \cite{Martinez2008}.
+
+\subsubsection*{EnHANTs (\emph{Energy-Harvesting Active Networked Tags})}
+
+EnHANTs (\emph{Energy-Harvesting Active Networked Tags}) são equipamentos que, por serem pequenos, flexíveis e terem independência energética, podem ser acoplados a objetos como roupas e livros, que normalmente não estão interconectados. O desenvolvimento dessa tecnologia é possível devido aos avanços na comunicação em Banda Ultra Larga (\emph{Ultra Wide Band} - UWB), cujo consumo de energia é baixo, e de materiais de captação de energia baseados em semicondutores orgânicos. Considerando complexidade, banda passante, tamanho e requisitos de energia, as etiquetas EnHANTs ficam entre as tecnologias de Redes de Sensores e RFID.
+
+Comparada às etiquetas RFID, as EnHANTs terão uma fonte de energia, poderão se comunicar numa rede de múltiplos saltos e não precisarão depender da energia do sinal de um leitor. Em comparação com sensores, as etiquetas EnHANTs irão operar com taxas de dados menores e consumirão menos energia, transmitindo na maior parte das vezes a sua ID. Essa tecnologia permitirá aplicações além das permitidas
+pelo RFID. Ao invés de apenas identificar, será possível buscar por um objeto, devido à sua capacidade de operar continuamente e em rede \cite{Gorlatova2010}.
+
+\subsubsection*{NFC (\emph{Near-Field Communications})}
+
+NFC (\textit{Near-Field Communications}) é uma tecnologia sem fio, de curto alcance, que permite a comunicação entre equipamentos com etiquetas NFC, como por exemplo, placas/pôsteres, celulares, mercadorias, tickets, dentre outros e que pode ser usado para troca de dados entre equipamentos a uma distância máxima de 10cm \cite{ahsob2012}. NFC opera na frequência de 13,56MHz e consegue transmissões de dados de até 424Kbps. Traz os benefícios do RFID, já que os leitores NFC são compatíveis com etiquetas RFID (podem ler e escrever nas etiquetas). A tecnologia NFC permite a comunicação entre entidades do dia a dia, o que facilita a criação do cenário de IoT. Interações via NFC podem ser habilitadas somente mediante iniciativa e permissão do usuário. Devido à curta distância, a outra ponta de comunicação via NFC é fisicamente conhecida \cite{cavoukian2012}.
+
+Deve ser ressaltado que há ainda um grande esforço a ser realizado em termos de padronização desta tecnologia, tanto de interfaces como de protocolos. Conforme \cite{cavoukian2012}, há ainda desafios em termos de segurança e privacidade para que a adoção da tecnologia seja feita de forma mais ampla.
+
+\subsubsection*{RSN (\emph{RFID Sensor Network})}
+
+Uma rede de sensores de RFID (RSN) consiste de leitores RFID e sensores RFID, que estendem a funcionalidade do RFID para prover sensoriamento. As RSNs combinam as vantagens das etiquetas RFID, tais como: capacidade de identificação, baixo custo, vida longa, tamanho reduzido, capacidade de serem ativados, com as vantagens das redes de sensores, a saber: capacidade de sensoriamento, comunicação em rede e maior capacidade de processamento \cite{Buettner2008}.
+
+O representante mais forte das RSNs é a tecnologia WISP (\emph{Wireless Identification and Sensing Platforms}\footnote{https://wisp.wikispaces.com/}) do Intel Labs, que pode ser empregada em cenários que não são adequados para as etiquetas RFID e para as redes de sensores, como em locais nos quais as baterias não podem ser trocadas facilmente ou que precisam de identificação e sensoriamento com custo baixo e possibilitam o uso de leitor móvel. Contudo, algumas limitações desta tecnologia ainda precisam de investigações, tais como, a integração de unidades de sensoriamento em uma rede \emph{mesh} (constituindo uma verdadeira rede de sensores) e a eficiência energética, permitindo que os nós da rede consigam armazenar energia e processar dados de forma eficiente \cite{Buettner2008}.
+
+\subsubsection*{\emph{Smart Gateway}}
+
+Conforme Mahalle et al. (2010), um dos fatores que torna desafiadora a integração dos objetos (coisas) com a Internet são as restrições de conectividade. Alguns dispositivos não suportam diretamente a conectividade com a Internet, por meio do protocolo IP. Para estes casos, é possível utilizar um dispositivo intermediário entre a Internet e o objeto, chamado de \textit{Smart Gateway}. Esse dispositivo fornece uma interface de comunicação dos objetos com sistemas finais na Internet e vice-versa. Isso permite que sistemas finais na Internet, que podem ser outros objetos, se comuniquem com os objetos através desse \textit{Smart Gateway}, sendo que este recebe as mensagens vindas da Internet e repassa ao objeto por meio de sua API (\emph{Application Programming Interface}) de comunicação específica, e vice-versa.
+
+Em outras palavras, o \textit{Smart Gateway} atua como uma ponte entre a Internet e os dispositivos inteligentes. Este tem um endereço IP e compreende os diferentes protocolos dos dispositivos conectados a este através do uso de controladores (\textit{drivers}) dedicados. Assim, requisições vindas da Internet que visam acessar algum dispositivo irão passar pelo \textit{Smart Gateway}, que irá redirecionar a requisição através do protocolo específico.
+
+\subsubsection*{Padronização}
+
+A padronização é um aspecto importante para a concretização da IoT. Observa-se uma intensa colaboração entre as entidades de padronização, Grupos de Interesse e Alianças de fabricantes das tecnologias envolvidas, o que demonstra um grande interesse da indústria \cite{atzori2010}.
+
+Dentre os padrões existentes, destaca-se o padrão IEEE 802.15.4 que define as LR-WPAN (\emph{Low-Rate Wireless Personal Area Networks}), que são redes sem fio projetadas para ter um baixo custo, baixo consumo de energia e pequeno alcance. Esse padrão define apenas as camadas física e de enlace do modelo OSI, sendo que as camadas superiores não são especificadas \cite{atzori2010}\cite{baronti2007}.
+
+A \emph{Zigbee Alliance} é constituída por um grupo de empresas que padroniza e mantém as especificações do \textbf{Zigbee} que define as camadas superiores do modelo OSI para serem usadas sobre a especificação IEEE 802.15.4. A camada de rede do Zigbee é encarregada de fazer a organização e o roteamento sobre uma rede de múltiplos saltos, já a camada de aplicação provê um \emph{framework} para o desenvolvimento de aplicações distribuídas \cite{baronti2007}.
+
+Com a intenção de integrar os dispositivos que estão em conformidade com o padrão IEEE 802.15.4 em uma rede IP e, assim, na Internet, foi criado pela IETF o grupo de trabalho de integração do IPv6 às redes IEEE 802.15.4, o \textbf{6LoWPAN} (\emph{IPv6 over Low power Wireless Personal Area Networks})\cite{6LoWPAN_rfc2007}.
+
+Com a intenção de difundir o protocolo IP como padrão de comunicação entre objetos, foi criada a \emph{IPSO Alliance}, uma organização sem fins lucrativos com mais de sessenta companhias membros, dentre estas líderes mundiais dos mercados de TI, comunicação e energia. Dentre os objetivos da organização, estão: apoiar as entidades de padronização, como a IETF (Internet Engineering Task Force), no desenvolvimento de padrões que envolvem o protocolo IP e objetos inteligentes, assim como promover testes de interoperabilidade e auxiliar as indústrias na descoberta de novos mercados que envolvem a integração do IP com objetos inteligentes \cite{ipso2013}.
+
+\subsection{Web das Coisas - \emph{Web of Things} (WoT)}
+
+Há uma tendência nas pesquisas atuais em tratar a Internet das Coisas como Web das Coisas, nos quais os padrões abertos da Web são empregados para prover o compartilhamento de informação e a interoperabilidade entre dispositivos  \cite{zeng2011}. Segundo estes autores, alguns motivos favorecem a WoT, dentre estes, destacam-se:
+
+ \begin{itemize}
+   \item A Web se tornou o principal meio de comunicação na Internet;
+   \item Diversos pequenos servidores web embarcados estão disponíveis. Estes podem ser construídos em apenas alguns KBytes;
+   \item Navegadores Web estão disponíveis para quase todos as plataformas, de computadores a smart phones e tablets, o que os tornam a interface de usuário padrão de fato para uma gama de aplicações;
+   \item A tecnologia integradora dos serviços web tem se mostrado indispensável na criação de aplicações distribuídas interoperáveis para Internet;
+   \item Coisas inteligentes (\emph{smart things}), com servidores web incorporados, podem ser abstraídas como serviços web e perfeitamente integradas na web existente;
+   \item É natural a reutilização de tecnologias e padrões web existentes para unificar o mundo cibernético ao mundo das coisas físicas
+   \item Como as tecnologias web existentes podem ser reutilizadas e adaptadas, é possível construir novas aplicações e serviços com a participação das coisas inteligentes.
+ \end{itemize}
+
+Em suma, diferente do ponto de vista tradicional da IoT, que associa ao dispositivo um endereço IP e os torna interconectados na Internet, a WoT habilita os dispositivos a "conversarem" na mesma língua, de modo que estes possam se comunicar e interagir livremente na Internet. A interoperabilidade é particularmente essencial para concepção de sistemas com dispositivos heterogêneos produzidos por diferentes fabricantes. Na WoT, a integração dos dispositivos ocorre no nível de aplicação, acima da conectividade de rede \cite{zeng2011,Guinard2011}.
+
+Há dois métodos para integrar coisas à Web: integração direta e integração indireta. Na direta, via \emph{smart things}, é requerido que todas as coisas tenham um endereço IP ou que tenham um IP habilitado quando conectados à Internet. Servidores web devem ser embarcados nas coisas/dispositivos para que estas possam se entender por meio da linguagem da Web. Já na integração indireta, nem todos os dispositivos podem ter recursos computacionais suficientes para embarcar um servidor web, como por exemplo uma etiqueta RFID. Além disso, algumas vezes não é necessário integrar diretamente todas as coisas inteligentes dentro da Web, quando se considera custo, energia e a segurança. Como solução para integração indireta, pode-se usar de um proxy, chamado de \emph{smart gateway}, localizado entre os dispositivos inteligentes e a Web (ver Figura \ref{figWoT}).
+
+Os serviços Web são definidos pela W3C com um sistema de software projeto para suportar a comunicação máquina para máquina (do inglês, \emph{machine-to-machine} (M2M) interoperável sobre uma rede. Como a W3C atesta, existem dois grandes paradigmas de serviços web: serviços Web em conformidade com o REST\cite{fielding2002} (chamados de serviços web \emph{RESTful}) e os serviços web arbitrários (conhecidos como WS*) \cite{w3c2004}. O objetivo principal dos serviços web \emph{RESTful} é manipular os recursos da web usando um conjunto uniforme de operações sem estado. No segundo, usa-se um conjunto arbitrário de operações. Ambos os paradigmas podem ser adotados por \emph{smart things} ou \emph{smart gateways}.
+
+As tecnologias chaves dos WS* são: o protocolo SOAP, a linguagem de descrição de serviços web (\emph{Web Service Description Language}- WSDL), o \emph{Universal Description Discovery and Integration}(UDDI) e a \emph{Business Process Execution Language} (BPEL).
+
+Conforme definido em \cite{fielding2002}, o REST (\emph{Representational State Transfer}) é um estilo de arquitetura de software, desenvolvido como um modelo abstrato da arquitetura web, que que pode ser aplicado no desenvolvimento de sistemas distribuídos fracamente acoplados, denominados \emph{RESTful}. O conceito básico do REST é que qualquer coisa é modelada como recurso, ou particularmente como recursos HTTP, com uma URI (\emph{Uniform Resource Identifier}). Os sistemas \emph{RESTful} são menos acoplados, mais leves, eficientes (menos complexos) e flexíveis do que os sistemas baseados em Serviços Web arbitrários (WS*) que utilizam o protocolo SOAP. Essas características fazem do REST a opção mais adequada para ser embarcada em dispositivos com restrição de recursos e para permitir a fácil composição de serviços web (i.e., \emph{mashup}) \cite{guinard2009,zeng2011}. A WoT facilita a criação de \emph{mashups} físicos (objetos físicos). Um \emph{mashup} Web é uma aplicação que utiliza diversos recursos web
+e os usa para criar outra aplicação
+
+Conforme ilustrado na parte direita da Figura \ref{figWoT}, um dispositivo inteligente com um servidor web embarcado é capaz de tornar diretamente acessível na web a sua API RESTful para que outros dispositivos ou usuários tenham acesso aos seus recursos. Quando um servidor web não é possível ou desejado, pode-se utilizar um \emph{smart gateway} para interconectar um dispositivo não acessível diretamente como um recurso Web. Um Smart Gateway é um servidor Web que esconde a comunicação entre os dispositivos de rede (por exemplo, Bluetooth e Zigbee) e os clientes, através de controladores dedicados atrás de um serviço \emph{RESTful}.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=.4]{figs/wot.png}
+	\caption{Integração Direta e Indireta na Web das Coisas}
+	\label{figWoT}
+\end{figure}
+
+\subsection{Domínios de Aplicações na Internet das Coisas}
+
+As aplicações de IoT podem ser divididas em três grandes áreas \cite{xiang2012}:
+\begin{itemize}
+  \item Social: aplicações que envolvem o desenvolvimento e cuidados social, urbano e humano, como por exemplo, serviços públicos do Governo e saúde eletrônica (\emph{e-health}) para cidadãos;
+  \item Ambiental: aplicações que envolvem a proteção, monitoramento e desenvolvimento de recursos ambientais, por exemplo, aplicações na pecuária, agricultura, reciclagem de recursos, gestão de energia, dentre outros.; e
+  \item Industrial: aplicações financeiras e comerciais entre companhias, organizações e outras entidades, por exemplo, aplicações para pecuária, agricultura, reciclagem de recursos, gestão de energia, dentre outros.
+\end{itemize}
+
+\cite{atzori2010} agrupam os diferentes tipos de aplicações possíveis para IoT em quatro domínios distintos dos anteriores. São estes:
+\begin{itemize}
+  \item Transporte e logística: aplicações que envolvem meios de transporte de pessoas e de mercadorias, assim como aplicações para rodovias;
+  \item Cuidados com a saúde: aplicações para auxílio de cuidados com a saúde das pessoas;
+  \item Ambientes inteligentes: aplicações que tornam escritórios, casas, plantas industriais e ambientes de lazer inteligentes; e
+  \item Pessoal e social: aplicações que habilitam o usuário a interagir com outras pessoas para manter e criar relacionamentos.
+\end{itemize}
+
+%\subsubsection*{Estudo de Caso}
+%
+%De forma a analisar a aplicabilidade das infraestruturas de autenticação e de autorização analisadas neste capítulo, esta seção apresenta dois estudos de casos (aplicações) para Internet das Coisas: controle e monitoramento de máquinas industriais inteligentes e assistência médica remota.
+%
+%Um estudo de caso possível no cenário de Internet das Coisas é o de controle e monitoramento remoto de máquinas industriais inteligentes (\textit{Smart Machines}). A ideia é que cada máquina seja provida com um conjunto de sensores e atuadores, que permitam que estados dessas máquinas sejam monitorados e que seja possível realizar o controle do que a máquina está fazendo em um determinado momento do tempo. Como exemplo, pode-se realizar o controle de energia elétrica da máquina, monitorando se ela está ligada ou não, assim como parâmetros de tensão, corrente e consumo; também é possível monitorar parâmetros de qualidade da produção, como a umidade do ar e a temperatura, ou ainda monitorar se o operador está operando a máquina ou não. Por fim, podemos ainda monitorar o andamento do processo produtivo de uma determinada peça. Quanto ao controle, é possível, por exemplo, desligar um motor em caso de uma elevação de temperatura ou pausar a execução da tarefa na ausência do operador.
+%
+%\marlon{Tais sensores estarão conectados a um \textit{Smart Gateway}, o qual proverá um Serviço Web RESTful em uma arquitetura orientada a recursos (\textit{Resource Oriented Architecture} - ROA), provendo acesso a esses recursos de uma maneira padronizada, visando a interoperabilidade entre sistemas. Cada máquina terá um \textit{Smart Gateway}, sendo que através dele será possível que as máquinas em um mesmo chão de fábrica comuniquem-se entre si, orquestrando as operações da produção de modo a otimizar o processo. O \textit{Smart Gateway} permitirá também que aplicações hospedadas em uma Cloud possam acessar tais recursos de monitoramento e controle através da Internet, em uma arquitetura Web, viabilizando assim, além do controle e monitoramento remoto das máquinas, que diferentes visões dos recursos sejam providas, de acordo com a necessidade de cada um dos \textit{stakeholders}. Isso permitiria, em última instância, se antecipar a problemas no processo produtivo e acompanhar em tempo real aspectos mais detalhados da linha de produção, integrando a diversos outros tipos de sistemas, tais como um ERP. }
+%
+%\marlon{Outro cenário é o de Internet das Coisas aplicado à ambientes de \textit{E-Health} (saúde eletrônica). Este cenário é justificado pela existência de pessoas que precisam de atenção médica constante terem suas condições de saúde monitoradas pelo seu médico ou enfermeiro mesmo estando fora do ambiente hospitalar. Isso facilita o monitoramento da saúde do paciente mesmo distante da presença física dos profissionais de saúde. Para tanto, um conjunto de sensores deve medir as condições de saúde do paciente, como seus batimentos cardíacos, nível de açúcar no sangue e temperatura, além de movimentos bruscos, que podem indicar que houve uma queda, por exemplo. Também, condições do ambiente onde o paciente está devem ser monitoradas, como a qualidade do ar, a temperatura e umidade do ambiente.}
+%
+%\marlon{Os dispositivos do usuário poderão se comunicar com um módulo concentrador localizado em seu próprio corpo, constituindo uma rede corporal (\textit{Body Area Network} - BAN). Esse módulo concentrador poderá se comunicar diretamente com \textit{hosts} através da Internet, possuindo um servidor web embarcado. Do mesmo modo, os dispositivos do ambiente poderão se comunicar diretamente com \textit{hosts} através da Internet. Em intervalos de tempo pré-determinados, os dispositivos e o módulo concentrador irão se comunicar com uma aplicação web médica, hospedada na Cloud, enviando seus dados pré-processados. Ao perceber alterações nas condições do paciente ou do ambiente fora das faixas de valores pré-determinados, os próprios dispositivos irão disparar alertas para os profissionais de saúde, via SMS por exemplo, informando sobre as condições de saúde. O profissional poderá, então, acessar a aplicação web médica, hosperada na Cloud, para ter acesso à informações sobre esse paciente, auxiliando na tomada de decisão. }
+
+
+\section{Requisitos e Ameaças de Segurança na Internet das Coisas}
+\label{s_requisitos_ameacas}
+
+De acordo com \cite{roman2011securing}, a segurança é identificada como um dos obstáculos a serem
+transpostos para o efetivo uso da Internet das Coisas. Ao prover segurança às aplicações de IoT, por meio de uma infraestrutura de autenticação e de autorização, é preciso garantir o comportamento autônomo dos objetos e a interoperabilidade entre estes.
+
+\subsection{Requisitos de Segurança na IoT}
+\label{s_requisitos}
+
+Tendo em vista as características da IoT, \cite{alam2011,roman2011securing} apontam diversos requisitos de segurança
+para Internet das Coisas e indicam quais \textbf{propriedades de segurança} devem ser garantidas,
+sendo estas:
+
+\begin{itemize}
+  \item Confidencialidade: dados sensíveis de usuários ou organizações podem estar contidos nas
+  transações na Internet das Coisas e, portanto, a confidencialidade de tais dados deve ser assegurada;
+  \item Integridade: dados armazenados e transmitidos não devem ser alterados, removidos ou incluídos por usuários ou dispositivos não autorizados;
+  \item Disponibilidade: manter os serviços/recursos da Internet das Coisas disponíveis para acesso por usuários e dispositivos autorizados em qualquer momento e a partir de qualquer lugar, provendo assim o acesso a dados de forma contínua;
+  \item Autenticidade: necessidade de autenticação mútua, pois os dados de IoT são usados para diferentes
+  processos de tomada de decisão e atuação, sendo que é necessário que tanto o consumidor de recursos/serviços
+  como o provedor sejam autenticados; e
+  \item Privacidade: se refere a necessidade de prover aos usuários meios para que estes controlem a exposição e a disponibilidade dos seus próprios dados e informações e tenham maior transparência sobre como e por quem seus dados são usados.
+
+
+\end{itemize}
+
+\cite{babar2010} apontam alguns outros requisitos de segurança que precisam ser garantidos em IoT, dentre estes:
+
+\begin{itemize}
+  \item Gestão de Identidades: lida com a identificação e autenticação dos usuários e dos dispositivos/coisas em um sistema. Também controla acessos aos recursos deste sistema associando direitos e restrições de acesso, de acordo com a identidade estabelecida (autenticação e autorização);
+  \item Comunicação segura de dados: inclui a autenticação dos pares da comunicação, assegurando a
+  confidencialidade e integridade dos dados transmitidos, impedindo o repúdio de uma transação e
+  protegendo a identidade das entidades;
+  \item Acesso seguro à rede: garante a possibilidade de conexão de rede ou o acesso a um serviço apenas
+  para dispositivos autorizados; e
+  \item Resistência à violação: mantem os aspectos de segurança, mesmo quando o dispositivo for
+  acessado fisicamente por um atacante.
+\end{itemize}
+
+
+Segundo \cite{mahalle2013a}, a grande escala e escopo da IoT aumentam as opções de interação dos usuários
+com os sistemas, levando a necessidade de estender os modelos atuais de privacidade, segurança e gestão
+de identidades para incluir a forma como os usuários interagem com os objetos. Neste sentido, também são levantados os requisitos de que deve ser possível identificar os objetos de maneira única, ou seja, diferenciar um objeto do outro, além de permitir a autenticação única de objetos na IoT \cite{mahalle2013b}.
+
+Por fim, \cite{xiaohui2012} e \cite{roman2011securing} destacam o requisito da tolerância a faltas, que nos cenários em geral, se refere ao sistema não falhar e funcionar normalmente, mesmo diante da presença de uma falta. Na Internet das Coisas, a tolerância a faltas consiste no sistema recuperar a transmissão de dados e reparar a estrutura da rede (p. ex. a sua topologia) de forma autônoma, mesmo diante de faltas em nós ou nos enlaces da rede.
+
+Na Figura \ref{figReqIoT} são ilustrados os principais requisitos de segurança para a Internet das Coisas.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=\linewidth]{figs/requisitos_IoT}
+	\caption{Mapa Conceitual com os Principais Requisitos para a Internet das Coisas}
+	\label{figReqIoT}
+\end{figure}
+
+
+\subsection{Ameaças e Ataques na IoT}
+\label{s_ameacas_ataques}
+
+Em \cite{akram2008a}, os autores afirmam que a IoT possibilita que sistemas computacionais se tornem ubíquos e
+transparentes para os usuários. Essa transparência, juntamente com a onipresença, são potenciais ameaças
+para a privacidade dos usuários, bem como impõe dificuldades para garantir a confidencialidade e a
+integridade dos dados que ali trafegam. O compartilhamento de dispositivos com outras pessoas é
+uma das principais ameaças de segurança contra a privacidade dos usuários, pois os dados podem ser facilmente
+obtidos por pessoas não autorizados, uma vez que esta pessoa bastaria ter acesso físico
+ao dispositivo \cite{jindou2012}.
+
+Em \cite{liu2012}, afirma-se que antes da existência da IoT, sistemas digitais corrompidos eram em sua maioria incapazes de atuar no mundo físico, porém no cenário da IoT, dispositivos corrompidos podem atuar e influenciar o mundo físico diretamente. Por exemplo, um dispositivo que possua sensor de fumaça deve avisar uma central de controle sempre que detectar fumaça no ambiente. Se este dispositivo for corrompido, poderá emitir alertas falsos ou mesmo pode deixar de emitir alertas diante de uma real situação de perigo com fumaça.
+
+No cenário da Internet das Coisas, quando um nó envia dados para um outro nó da rede ou mesmo para um
+nó acessível através da Internet, esses dados podem ser armazenados temporariamente nos nós intermediários
+que atuam como roteadores. Assim, entre a origem e o destino de uma determinada informação, podem existir
+diversos nós intermediários que, se forem maliciosos, poderão alterar a informação em trânsito ou ainda
+não encaminhar a informação para o destino final \cite{conzon2012}.
+
+\cite{babar2011} apresentam uma divisão dos tipos de ataques na Internet das Coisas em cinco categorias, relacionadas a seguir:
+\begin{itemize}
+ \item \textbf{Ataques Físicos}: são ataques que violam o hardware do dispositivo e são difíceis de executar, pois o material necessário para executar os ataques é caro. \emph{De-packaging} de um chip, \emph{micro-probing} e \emph{layout reconstruction} são técnicas usadas para esse tipo de ataque;
+ \item \textbf{Ataques no canal de comunicação}: ataques baseados em dados recuperados dos dispositivos responsáveis por operações criptográficas. Esses dados são obtidos através de análise de temporização, radiação emitida, potência consumida, dentre outras fontes, que permitem que a chave de criptografia usada seja inferida;
+ \item \textbf{Ataques de análise de criptografia}: ataques com foco no texto cifrado, buscando encontrar a chave de criptografia para assim obter o texto em claro. Um dos ataques dessa categoria é o ataque do Homem do Meio (\emph{Man in the Middle} - MITM);
+ \item \textbf{Ataques de software}: exploram vulnerabilidades dos softwares presentes no dispositivo. Inclui ataques de exploração de estouro do buffer (\emph{buffer overflow}) e uso de programas cavalos de tróia, \textit{worms} e vírus para injetar código malicioso no sistema;
+ \item \textbf{Ataques de rede}: no meio sem fio a transmissão é por difusão (\textit{broadcast}) e assim há vulnerabilidades inerentes ao próprio meio. Nessa categoria entram ataques como captura e análise de tráfego (\emph{eavesdropping}), negação de serviço (\emph{Denial of Service} -- DoS), corrupção de mensagens, ataques de roteamento, dentre outros.
+\end{itemize}
+
+\cite{bonetto2012} destacam que as redes sem fio, como as utilizadas na IoT, são propensas a diversos tipos
+de ataques, tais como: \textbf{captura de informações} (\emph{eavesdroping}), que viola a propriedade da confidencialidade; \textbf{mascaramento}, no qual um nó se faz passar por outro, ferindo assim a propriedade da autenticidade; e ainda a \textbf{negação de serviço}, que viola a propriedade de disponibilidade. Sobre a negação de serviço, \cite{mahalle2012} citam a topologia dinâmica da rede, menor largura de banda e restrições de energia como vulnerabilidades que propiciam este tipo de ataque.
+
+Em \cite{mahalle2013b}, são descritas preocupações de segurança relacionadas com o ingresso dos dispositivos
+na rede. No momento do ingresso na rede, informações sobre chaves criptográficas, parâmetros de domínio e outras
+configurações podem ser capturadas por entidades maliciosas e estas poderiam fazer uso dessas informações para
+interceptar e reencaminhar dados de forma a não ser percebido, caracterizando um ataque de \textit{\textbf{man in the middle}}. Além disso, caso o  protocolo de estabelecimento de chaves seja comprometido, não só a confidencialidade da
+comunicação será comprometida, mas também a autenticidade dos nós participantes pode estar em risco, já que
+muitas vezes os nós comunicantes não tem conhecimento prévio um do outro. Segundo os autores, é possível realizar o ataque de esgotamento de recursos (DoS), uma vez que que neste ambiente os recursos computacionais e de energia são limitados.
+
+\cite{mahalle2012} apontam que o ataque de \emph{man in the middle}, pode levar ao ataque de mensagem antiga, no qual o atacante busca utilizar de mensagens antigas (interceptadas) para se comunicar com outros dispositivos, a fim de obter respostas desses dispositivos que inicialmente não seriam para ele, mas sim para o remetente da mensagem original.
+
+\cite{jara2011} indicam a possibilidade de corromper mensagens de identificação ou de localização em arquiteturas de
+IoT que fazem uso do protocolo 6LoWPAN \cite{6lowpan2007}. Corromper tais mensagens levaria a falhas na segurança
+da rede, uma vez que um intruso poderia enviar mensagens falsas de atualização sobre a localização de um nó,
+fazendo com que mensagens não chegassem ao seu destino ou fossem enviadas para o nó malicioso. Isso ainda
+permitiria a ocorrência de ataques de negação de serviço através de envio em massa de mensagens (\emph{flood}).
+
+\cite{nguyen2010} abordam dois outros tipos de ataques: chave compartilhada e \emph{sybil}. No \textbf{ataque de chave compartilhada} (\emph{shared-key attack}), o atacante conhece o mecanismo de distribuição de chaves do ambiente e, sabendo que dois nós estão próximos, supõe que estes compartilhem um mesmo espaço de chaves. O ataque ocorre quando a chave compartilhada pelos dispositivos também pode ser inferida pelo atacante, comprometendo a segurança do sistema. O \textbf{ataque \textit{sybil}} é caracterizado quando um nó malicioso assume múltiplas identidades falsas com o objetivo de roubar ou forjar a identidade de um nó legítimo.
+
+Por fim, \cite{liu2012} ressaltam também a existência do \textbf{ataque de controle de chaves} (\emph{key control attack}), no qual uma dos participantes da comunicação força os demais participantes a escolherem chaves criptográficas dentro de um conjunto restrito de valores ou mesmo um valor pré-determinado. Desta forma, o atacante influencia o processo de escolha de chaves criptográficas de modo a facilitar a obtenção do controle sobre os dados trafegados.
+
+
+\section{Autenticação e Autorização na Internet das Coisas}
+\label{s_autenticacao_iot}
+
+Autenticação e Autorização (controle de acesso) são conhecidos como elementos centrais para tratar a segurança em sistemas distribuídos. Uma forma para prover estes controles é através de uma infraestrutura de autenticação e de autorização (IAA) que provê a gestão de identidades (\emph{Identity Management - IdM}). IdM pode ser entendida como o conjunto de processos e tecnologias usados para garantir a identidade de uma entidade (usuário ou um dispositivo), garantir a qualidade das informações de uma identidade (identificadores, credenciais e atributos) e para prover procedimentos de autenticação e de autorização \cite{itu2009}. As entidades envolvidas em um sistema de IdM são: (i) usuário ou dispositivo, entidade que utiliza um serviço fornecido por um provedor de serviços; (ii) provedor de identidades (\emph{Identity Provider - IdP}), responsável por manter a base de dados de usuários do domínio e validar suas credenciais (autenticar usuários); e (iii) provedor de serviços (\emph{Service Provider - SP}), que oferece recursos ou serviços aos usuários \cite{wangham2010}.
+
+Na IoT, os dispositivos podem pertencer a mais de uma rede ou domínio administrativo, cenário que \cite{horrow2012} chamam de \emph{Internetwork of Things}. Esta situação pode afetar o funcionamento dos procedimentos de autenticação e de autorização, em função da mobilidade destes dispositivos entre redes diferentes.
+
+Esta seção aborda os conceitos e modelos de autenticação e de autorização para Internet das Coisas, considerando as particularidades deste cenário. Na literatura, a autenticação na IoT é tratada de forma diferente para usuários e para dispositivos. Nas seções a seguir, os conceitos e técnicas apresentados também seguem essa distinção.
+
+\subsection{Autenticação de Usuários}
+\label{s_aut_usuarios}
+
+Na Internet das Coisas, usuários interagem com muitos dispositivos inteligentes ou provedores de serviços (\emph{Service Providers - SPs}) para obter algum serviço útil para eles. Para que um usuário acesse um objeto/dispositivo na IoT, muitas vezes, é necessário que este passe por um processo de autenticação.
+
+Alguns trabalhos na literatura seguem o modelo de autenticação centralizada, baseada em uma terceira parte confiável. \cite{li2010} propõem o uso do LDAP ( \eng{Lightweight Directory Access Protocol}) em conjunto com o mecanismo de autenticação Kerberos, para prover autenticação única (Single Sign On) de usuários na IoT.
+
+Em \cite{konidala2005}, para que um usuário acesse um provedor de serviço, este precisa apresentar um \emph{token} de acesso assinado (emitido) por uma terceira parte confiável (\textit{Authorized Server - AS}) tanto para o usuário, quanto para o SP. Cada usuário precisa fazer um cadastro inicial neste servidor central (AS), o qual deve fornecer um identificador único e senha. Para obter o \emph{token} de acesso (\emph{capability}), o usuário precisa se autenticar no AS, fazendo uso de sua senha. O SP verifica a assinatura do token e analisa o conteúdo do mesmo para concluir o processo de autenticação do usuário.
+
+\cite{rotondi2011} fazem uso de criptografia de chave pública como técnica de autenticação de usuários na IoT. Neste trabalho, as requisições de acesso são assinadas digitalmente com as chaves privadas correspondentes às chaves públicas presentes nos certificados. Dessa forma, é possível garantir a autenticidade dos usuários diante dos dispositivos. Este trabalho encontra-se descrito na Seção \ref{s_rotondi}.
+
+Devido à característica da IoT, na qual nem sempre usuários e dispositivos estão em um mesmo domínio de rede, uma abordagem de autenticação centralizada, por exemplo, que faz uso de um centro de distribuição de chaves (\textit{Key Distribution Center} -- KDC), pode não ser indicada para realizar a autenticação do usuário \cite{liu2012}. Uma abordagem centralizada pode ser empregada apenas se um único e amplamente aceito provedor de identidades ou KDC estiver disponível.
+
+Um modelo de gestão de identidades mais adequado ao cenário de IoT é o modelo baseado em identidades federadas \cite{akram2008b,liu2012}. Neste modelo, o usuário se autentica no provedor de identidades do seu domínio e este provedor fornece as afirmações necessárias para que os provedores de serviços de outros domínios da IoT confiem na autenticação realizada e recebam o atributos do usuário. Em \cite{liu2012}, os autores propõem um mecanismo para autenticação de usuários que segue o modelo de identidades federadas, conforme apresentado na seção \ref{s_liu}. \cite{akram2008b} destacam o uso do OpenID como uma das soluções para gestão de identidades federadas do \emph{Hydra Middleware} (maiores detalhes na Seção \ref{s_hydra}).
+
+
+\subsection{Autenticação de Dispositivos}
+\label{s_aut_disp}
+
+
+\cite{mahalle2012} propõem um método de autenticação mútua para IoT focado em dispositivos que estejam em um único domínio. Um dispositivo, ao ingressar na rede, recebe um par de chaves assimétricas e um parâmetro de domínio de um centro de distribuição de chaves confiável (\textit{Key Distribution Center} -- KDC). Esse parâmetro de domínio foi utilizado pelo KDC no processo de geração do par de chaves entregue ao dispositivo, com base em um protocolo de criptografia de curvas elípticas (\textit{Elliptic Curve Cryptography} -- ECC). Assim, quando dois dispositivos desejam se comunicar dentro do domínio de um mesmo KDC, eles usam o protocolo ECCDH para o estabelecimento de uma chave privada, que será utilizada para a comunicação entre eles. A base para o estabelecimento dessa chave é o parâmetro de domínio e a chave pública de cada um dos dispositivos.
+
+Após o estabelecimento dessa chave privada, ocorre o processo de autenticação entre os dispositivos. Esse processo se dá através de protocolo de desafio resposta, que utiliza como base a chave privada estabelecida, um \textit{timestamp} e um número aleatório gerado por uma das partes da comunicação. Também são utilizados no processo de autenticação a habilidade apresentada por cada um dos dispositivos. A habilidade é um \textit{token} que contém a identidade do dispositivo, um conjunto de direitos de acesso e um \textit{hash} dos dois campos anteriores. Esse \textit{hash} é aplicado com o método CBC MAC, visando garantir a integridade das mensagens. Por fim, o dispositivo que será acessado verifica se o \textit{token} de habilidade enviado pelo outro dispositivo é igual ao que este tem armazenado. Se sim, e se o resultado do desafio-resposta for correto, o processo de autenticação mútua está finalizado e foi bem-sucedido.
+
+
+\cite{kothmayr2012} apresentam uma arquitetura de segurança para IoT baseada no  \textit{Datagram Transport Layer Security} (DTLS) \cite{DTLS2012} e fazem uso de certificados digitais no processo de autenticação de dispositivos. Nesta arquitetura, são propostos três atores: \textit{publisher} -- dispositivo produtor; \textit{subscriber} -- dispositivo consumidor de recursos; e servidor de controle de acesso -- equipamento com maior poder computacional e responsável por aplicar o controle de acesso aos recursos dos dispositivos produtores.
+
+São apresentados dois cenários, um no qual os dispositivos produtores possuem \textit{Trusted Platform Modules} (TPMs) e outro no qual os dispositivos não possuem TPMs. Para o primeiro cenário, o produtor está apto a fazer \textit{handshake} completo do DTLS com o consumidor do recurso, sendo a autenticação mútua realizada através de certificados X.509, emitidos por uma Autoridade Certificadora (AC), reconhecida por ambos.
+
+Para o segundo cenário (dispositivos com restrições), a autenticação do produtor é feita através do uso de uma chave compartilhada  (\textit{Pre-Shared Key} -- PSK) da suíte de cifragem do TLS  \cite{TLS_PSK2005}. Neste cenário, o dispositivo possui um conjunto de dados aleatórios pré-instalados, chamados \textit{protokeys}, que são usados para gerar a PSK de uma sessão. No processo de autenticação, o produtor gera uma identidade de sessão, composta por sua identidade\footnote{Endereço IPv6 ou outra informação que o dispositivo.} e alguns dados gerados aleatoriamente no momento da autenticação. Em seguida, uma PSK é gerada por meio da aplicação de uma função HMAC sobre essa identidade de sessão, tendo como chave neste processo a \textit{protokey}.
+
+O consumidor do recurso, por sua vez, deve se autenticar no servidor de controle de acesso, o qual tem conhecimento das \textit{protokeys} e da identidade de sessão do produtor. Assim, o servidor de controle de acesso é capaz de gerar a PSK do dispositivo produtor para essa sessão e de repassá-la  ao consumidor. Dessa maneira, o servidor de controle de acesso valida a identidade do consumidor para o produtor, além de validar a identidade (de sessão) do produtor para o consumidor. Sendo assim, o servidor de controle de acesso precisa ser uma terceira parte confiável nesta arquitetura.
+
+De acordo com \cite{hummen2013}, as restrições dos objetos inteligentes da IoT demanda por mecanismos de segurança mais leves. O uso de certificados digitais para autenticação de dispositivos é, em muitos casos, considerado impraticável. Neste trabalho, os autores tiveram como objetivo comprovar que, com algumas modificações no processo de \emph{handshake} do protocolo do DTLS, o uso de certificados digitais torna-se um método viável de autenticação em muitos cenários da IoT.
+
+Os autores descrevem três modificações no processo de \textit{handshake} do protocolo do DTLS, visando sua otimização em função das restrições computacionais dos dispositivos da IoT. A primeira modificação é voltada para ambientes em que o dispositivo se comunica com um objeto ou serviço fora de seu domínio, passando por um \textit{gateway}. Neste caso, durante o \textit{handshake} do DTLS, o \textit{gateway}  verifica se o certificado não foi expirado ou revogado, bem como valida a cadeia de certificação em nome do dispositivo, passando para este somente as mensagens de \textit{handshakes} DTLS que utilizarem certificados válidos.
+
+Outra forma de otimização em função das restrições computacionais é a retomada de sessão DTLS, na qual as operações criptográficas mais custosas e as verificações de certificados são realizadas apenas uma vez em um \textit{handshake} inicial. Para que isso seja possível, é necessário que o cliente, o servidor ou ambos mantenham informações sobre a sessão DTLS que foi estabelecida mesmo depois que esta seja desfeita. Isso permite que a sessão DTLS seja reestabelecida futuramente em um tempo menor e com menor custo computacional \cite{hummen2013}.
+
+A terceira modificação sugerida por \cite{hummen2013} consiste na delegação do primeiro \textit{handshake} para o dono do dispositivo. Desta forma, quando um cliente desejar acessar o dispositivo, o primeiro \textit{handshake} DTLS, que inclui operações criptográficas custosas e verificações de certificados, é feito entre o dono do dispositivo e o cliente. Em seguida, o dono do dispositivo finaliza a sessão DTLS com o cliente e passa as informações de retomada de sessão para o dispositivo que, possuindo esses dados, consegue reestabelecer a sessão com o cliente como se tivesse sido o próprio dispositivo a estabelecer a primeira sessão DTLS. Esse processo é chamado de transferência de sessão DTLS.
+
+Em \cite{jara2011} é descrito um esquema de gerenciamento de mobilidade segura para dispositivos que fazem uso do protocolo 6LoWPAN \cite{6lowpan2007} e que atravessam diferentes domínios administrativos. Os autores propõem uma solução para prover a autenticação entre domínios para os dispositivos móveis. Cada domínio administrativo contém um \textit{gateway} que é responsável por manter informação sobre a localização dos dispositivos que ingressam em seu domínio e remover tal informação quando estes saem do domínio. Assim, quando um dispositivo troca de domínio, este envia uma mensagem de ingresso para o \textit{gateway} do novo domínio, denominado \textit{Foreign Gateway} (F-GW),  para que este atualize as informações de localização do dispositivo, acionando o \textit{gateway} do domínio anterior, denominado \textit{Home Gateway} (H-GW).
+
+Para evitar que a mensagem enviada pelos dispositivos para troca de domínio seja forjada, \cite{jara2011} propõem o uso de uma chave compartilhada entre o dispositivo e seu H-GW. Essa chave é usada para assinar todas as mensagens sobre atualização da localização, trocadas entre dispositivo e o H-GW. Para assinar tais mensagens, os autores propõe o uso de do HMAC ou o CBC MAC, já que estes são adequados para ambientes com restrições de recursos, ou ainda um método de assinatura digital baseado em criptografia de curvas elípticas (ECC), proposto pelos autores.
+
+\cite{bonetto2012} propõem um método leve que permite a proteção de dispositivos de Internet das coisas através de criptografia forte e técnicas de autenticação, de modo que os dispositivos com restrição da IoT podem se beneficiar das mesmas funcionalidades de segurança que são típicos de domínios sem restrições (Internet), sem, contudo, ter que executar operações, computacionalmente intensivas para estes dispositivos. Para tornar isso possível, os autores propõem o uso de um nó confiável sem restrição (\emph{gateway}) para assumir as tarefas intensivas de computação. A solução proposta faz uso do protocolo \textit{Extensible Authentication Protocol} (EAP) \cite{EAP_2004}, para realização da autenticação de dispositivos. O \emph{gateway} faz um papel ativo intermediando o processo de autenticação, viabilizando assim o uso do protocolo EAP no cenário da IoT.
+
+O protocolo \textit{Host Identity Protocol} (HIP) \cite{HIP_2008}, concebido para autenticação de \textit{hosts}, tem recebido diversas variantes para operar com dispositivos que possuem restrições computacionais, tais como LHIP \cite{heer2006}, DEX \cite{moskowitz2012}, TEX \cite{saied2012a} e D-HIP \cite{saied2012b}, que podem ser utilizados para autenticação de dispositivos na IoT.
+
+% tem recebido diversas variantes com foco em dispositivos com restrições computacionais, tais como o DEX \cite{moskowitz2012}, TEX \cite{saied2012a}, D-HIP \cite{saied2012b} e LHIP \cite{heer2006}, que podem ser utilizados para autenticação de dispositivos na IoT.
+
+
+\subsection{Autorização}
+\label{s_autorizacao}
+
+Mecanismos de controle de acesso são necessários para garantir que recursos estejam disponíveis somente para sujeitos autorizados pela política de controle de acesso. Um sujeito pode ser um processo, uma pessoa ou um dispositivo que deseja executar alguma ação sobre um recurso \cite{NIST2012}. Na IoT, a implementação deste tipo de mecanismo deve levar em consideração a dinamicidade do ambiente, com grande número de dispositivos e usuários, bem como a presença de dispositivos com recursos computacionais restritos \cite{liu2012,rotondi2011}.
+
+No contexto da IoT, dentre os trabalhos analisados, observa-se que os mecanismos de controle de acesso implantam modelos conhecidos e já empregados na Internet clássica, a saber:
+\begin{itemize}
+  \item \textbf{Modelo discricionário}: por exemplo, \cite{Guinard2010} propõem um mecanismo baseado em lista de controle de acesso (\emph{Access Control List -- ACL}) para possibilitar que pessoas compartilhem seus dispositivos da WoT com outros usuários por meio das redes sociais existentes. O dono do dispositivo necessita configurar as permissões para cada dispositivo e para cada usuário com quem queira compartilhá-lo. Uma abordagem utilizando ACLs é custosa para um usuário manter quando este possui muitos dispositivos e muitos usuários com quem deseje compartilhar;
+  \item \textbf{Modelo baseado em papéis} (\textit{Role Based Access Control} -- RBAC): \cite{liu2012, jindou2012,desouza2008} adotam o modelo RBAC que é amplamente aceito na Internet e conhecido por sua simplicidade para gerenciar permissões e usuários. Porém, \cite{mahalle2013b} apontam que o RBAC possui granularidade limitada e a forma com que este lida com a delegação de direitos não é adequada para ambientes de larga escala, como o ambiente da IoT;
+  \item \textbf{Modelo baseado em habilidades} (\emph{Capability Based Access Control -- CapBAC}): o detentor da habilidade (\emph{token} de autorização) é capaz de interagir com um objeto por meio de operações bem definidas. A informação sobre a identidade do usuário ou dispositivo é transformada em uma habilidade, que ainda combina os direitos de acesso deste usuário/dispositivo. Esse modelo oferece boa escalabilidade, uma vez que não há a necessidade de confrontar a identidade do usuário com uma lista de controle de acesso, ou com listas de papéis e de permissões. Neste modelo, tem-se um número menor de informações armazenadas na entidade responsável por aplicar o controle de acesso. \cite{rotondi2011, mahalle2012, mahalle2013b} seguem este modelo em suas infraestruturas de autorização;
+  \item \textbf{Modelo baseado em atributos }(\textit{Attribute Based Access Control} -- ABAC): a decisão de autorização é tomada a partir de um conjunto de atributos do sujeito, do objeto, das operações requisitadas e das condições do contexto frente às políticas de controle de acesso, regras ou relações que descrevam as operações permitidas para um determinado conjunto de atributos \cite{NIST2013}. \cite{han2012} fazem uso do modelo ABAC na IoT, adaptando-o para tratar da delegação de atributos neste cenário. Segundo os autores, é possível perceber alguns benefícios do uso do ABAC em cenários como IoT, quando o sujeito faz o acesso a um objeto fora de seu domínio administrativo. Nesse caso, as listas de controle de acesso (\textit{Access Control List} -- ACL) ou os papéis do RBAC não são aplicáveis, pois estes estão fortemente ligados ao contexto do detentor do recurso. \cite{zhang2011} também adaptam o modelo ABAC para o cenário de IoT, combinando uma abordagem orientada a \textit{workflow} (WABAC). Neste modelo, para que seja tomada uma decisão de controle de acesso, são considerados os atributos de três atores: (i) o sujeito, aquele que deseja realizar uma ação sobre um recurso, que pode ser um usuário, uma aplicação ou um telefone móvel, tendo atributos como um identificador, um endereço IP ou endereço de e-mail, etc; (ii) o recurso, que pode ser, por exemplo, um serviço, um dado ou um dispositivo inteligente, tendo atributos como localização geográfica, identificador ou data de criação, etc; e (iii) o ambiente, que se refere ao contexto em que o acesso à informação acontece, tendo atributos como a data ou o nível de segurança da rede.
+\end{itemize}
+
+\section{Infraestruturas de Autenticação e de Autorização Aplicadas à IoT}
+\label{s_infra_auth_iot}
+
+%  Os principais padrões e soluções para prover gestão de identidades para Internet clássica, para Internet do Futuro, para Nuvens e para Redes Experimentais (Internet do Futuro), foram descritos em \cite{wangham2010,nogueira2011,feliciano2011,silva2013}, respectivamente. Esta seção apresenta os principais padrões e soluções que estão sendo empregados no contexto da Internet das Coisas.
+
+Em \cite{wangham2010,nogueira2011,feliciano2011,silva2013} foram descritos os principais padrões e soluções para prover gestão de identidade para a Internet clássica, para Internet do Futuro, para Nuvens e para Redes Experimentais, respectivamente. Esta seção apresenta os principais padrões e soluções que estão sendo empregados no contexto da Internet das Coisas.
+
+\subsection{Especificações de Segurança para Serviços Web}
+
+A \textit{Security Assertion Markup Language} (SAML) \cite{OASIS2008_saml}, baseada na linguagem XML, define sintaxe e regras para criação, requisição e transporte de informações sobre autenticação, autorização e atributos através de asserções de segurança . A  \textit{eXtensible Access Control Markup Language} (XACML) \cite{OASIS2003} tem por objetivo descrever políticas de controle de acesso em um formato interoperável. Na especificação da XACML, também é descrito um protocolo para realizar requisições sobre decisões de controle de acesso. Os padrões SAML e XACML são amplamente usados em Serviços \textit{Web}. O uso destes na IoT também é possível, conforme pode ser visto nos trabalhos, a seguir.
+
+%O XACML propõe o uso de cinco entidades distintas, cada uma responsável por processar uma parte da requisição de acesso do usuário. São elas: (i) \textit{Policy Decision Point} (PDP), que toma a decisão de controle de acesso avaliando a política aplicável; (ii) \textit{Policy Administration Point} (PAP), que permite a criação, teste, depuração de políticas, além do armazenamento no repositório adequado; (iii) \textit{Policy Enforcement Point} (PEP), que aplica a decisão de autorização tomada pelo PDP; (iv) \textit{Policy Information Point} (PIP), que fornece as informações (como atributos) utilizados pelo PDP para tomar a decisão; e (v) \textit{Policy Retrieval Point} (PRP), que armazena as políticas, para recuperação por parte do PDP \cite{NIST2012}. A arquitetura do XACML pode ser vista na Figura \ref{figXACML}.
+
+Conforme citado na Seção \ref{s_autorizacao}, \cite{zhang2011} apresentam um modelo de controle de acesso baseado em atributos e orientado a \textit{Workflow} (WABAC), no qual permissões são geradas para usuários de acordo com seus atributos, atributos dos recursos, do ambiente e da tarefa atual. Na solução proposta, o  SAML é usado para o transporte dos atributos do sujeito e o XACML é usado como linguagem para descrição das políticas de acesso e para tomada de decisão sobre quais usuários, baseado nas asserções SAML, podem acessar quais recursos.
+
+Inicialmente, antes do sujeito solicitar o acesso ao sistema, ele deve possuir uma asserção SAML de atributos , emitida por uma autoridade de atributos. Em seguida, essa asserção SAML é inserida no cabeçalho de uma requisição SOAP  enviada ao sistema. Ao receber a requisição, o sistema gera as tarefas relacionadas à requisição e as coloca em um estado \textit{pronto}. Assim que uma das tarefas é ativada, o \textit{Policy Enforcement Point} (PEP) obtém os atributos do sujeito, as informações da tarefa e monta uma requisição de autorização XACML, a qual é enviada para o \textit{Policy Decision Point} (PDP). Cabe ao PDP tomar a decisão de autorização baseado nas políticas de autorização,  no estado da tarefa e, caso precise de mais atributos, irá obtê-los através do \textit{Policy Information Point} (PIP).
+
+Em \cite{domenech2013} é proposta uma infraestrutura de autenticação e de autorização (IAA) para IoT que faz uso dos padrões SAML e XACML. O trabalho, em andamento, tem como objetivo prover autenticação e autorização de usuários e de dispositivos em domínios diferentes de segurança e que utilizam tecnologias de comunicação e de autenticação diferentes. A IAA proposta segue o modelo de identidades federadas, sendo o SAML usado para a troca de dados de atributos de usuários e de dispositivos. Cada domínio de segurança possui uma IAA, que contribui para a autenticação e o controle de acesso dos serviço web \emph{RESTful}, disponibilizados pelos dispositivos (seguindo uma arquitetura orientada a recursos). O XACML é usado para expressar as políticas de controle de acesso baseado em atributos e para troca de informações de autorização entre PDPs, PEPs e PIPs.
+
+A IAA é composta de duas partes: uma disponibilizada como um Serviço \textit{Web} \emph{RESTful}, que contempla o provedor de identidade (IdP) para autenticação e  o PDP para tomada de decisão de autorização de um dado domínio; e a outra embarcada em cada dispositivo (ou \emph{smart gateway}), que deve ser usada por estes para redirecionar as funções de autenticação e de autorização para a IAA oferecida como um serviço e para prover a implementação do PEP (monitor de referência). A IAA irá prover um IdP SAML com suporte a diferentes técnicas de autenticação de dispositivos e de usuários, oferecendo, quando necessário, a transposição de credenciais de autenticação para o padrão SAML. A asserção de atributos resultante do processo de autenticação será apresentada para o provedor de serviço (do dispositivo) para que então o processo de autorização se inicie.
+
+\subsection{Autenticação de Usuários com OpenID e Windows CardSpace}
+\label{s_openid}
+
+O OpenID é um protocolo de autenticação única (SSO - \emph{Single Sign On}) que permite que os usuários se autentiquem em sites (provedor de serviços), utilizando o identificador OpenID (conta) que desejarem. O OpenID também permite ao usuário controlar as informações que serão compartilhadas com as aplicações \cite{Recordon2006}. No OpenID, quando um usuário fornece o seu identificador, este é imediatamente redirecionado para o seu provedor OpenID, que realiza a autenticação utilizando o método de autenticação, suportado no provedor OpenID indicado. Após a confirmação dos dados, o usuário é redirecionado para o provedor de serviços, junto com seus atributos \cite{OpenID2007}.
+
+O Windows CardSpace é um metasistema que permite aos usuários escolherem, diante de um portfólio de identidades que possuem, aquela que melhor se adequa ao contexto de um dado provedor de serviços, independente do sistema que originou tal identidade \cite{chappell_cardspace2006}. O  CardSpace é um componente da plataforma .Net da Microsoft, projetado para oferecer aos usuários uma experiência consistente do uso de múltiplas identidades digitais, a partir do uso de um
+agente (user-agent) especializado, chamado seletor de  identidades. Quando um provedor de serviços requisita a autenticação e atributos de um usuário, o seletor de identidades do CardSpace transmite as informações requisitadas em um \emph{token} de segurança digitalmente assinado, sendo que esse conjunto de atributos pode ser gerado e assinado pelo próprio usuário ou por um provedor de identidades externo, que gerencia a identidade selecionada pelo usuário \cite{maler2008}.
+
+O uso do OpenID, do Windows CardSpace e do padrão SAML no cenário de Internet das Coisas, apenas para autenticação de usuários, é tratado no \emph{middleware Hydra} \cite{akram2008b}. A proposta dos autores é que haja um complemento entre as tecnologias para prover uma solução de gestão de identidades seguras, na qual uma tecnologia complementa a outra.
+
+\subsection{OAuth e OpenID Connect}
+\label{s_oauth}
+
+O OAuth é um \emph{framework} de autenticação e de autorização que permite que um usuário/aplicação compartilhe recursos na web (delegue acesso a um recurso) com terceiros sem ter que compartilhar sua credencial de autenticação. Com o protocolo OAuth é possível autorizar o acesso a esses recursos por um tempo determinado \cite{hardt2012}.
+
+Na versão 2.0 do protocolo o OAuth, são definidos quatro papéis: proprietário do recurso, servidor de recursos, cliente e servidor de autorização. Uma das interações possíveis entre os papéis possui os seguintes passos \cite{hardt2012}:
+
+\begin{enumerate}
+  \item O cliente solicita a autorização do proprietário do recurso;
+  \item O proprietário do recurso verifica os dados do cliente e retorna a permissão de autorização, representada por uma credencial de autorização do proprietário do recurso;
+  \item O cliente utiliza a credencial de autorização para solicitar o \emph{token} de acesso ao servidor de autorização;
+  \item O servidor de autorização autentica o cliente e valida a credencial de autorização e, se válidos, emite um \emph{token} de acesso;
+  \item O cliente solicita o recurso (aplicação) ao servidor de recursos e se autentica utilizando o \emph{token} de acesso;
+  \item O servidor de recursos verifica o \emph{token} de acesso, se válido, disponibiliza o recurso ao cliente.
+\end{enumerate}
+
+%
+%É possível ver a aplicação do OAuth 2.0 em conjunto com o OpenID, para um cenário de Web das Coisas, no trabalho em andamento de \cite{RNP2013}. Neste trabalho, o acesso aos dispositivos físicos ocorre através de um barramento de serviços, o Mule ESB. Neste barramento são publicados serviços para atuar sobre os dispositivos ou para obter dados sobre estes. Esses serviços são classificados de duas maneiras: com proprietário, que pode ter acesso público ou privado; e sem proprietário. A Figura \ref{figRNP_OAuth} ilustra o caso de dispositivo com acesso restrito, ou seja, o serviço é classificado com proprietário e privado.
+%
+%\begin{figure}[!htbp]
+%	\centering
+%	\includegraphics[width=.9\linewidth]{figs/RNP}
+%	\caption{Acesso a serviços privados com autorização - Adaptado de \cite{RNP2013}}
+%	\label{figRNP_OAuth}
+%\end{figure}
+%
+%Neste caso, pode-se utilizar o protocolo OAuth 2.0 integrado ou não à utilização de um provedor de identidades OpenID. Conforme pode ser visto na Figura \ref{figRNP_OAuth}, a requisição de acesso ao serviço é filtrada pelo módulo OAuth e este verifica que o serviço tem acesso restrito, solicitando ao usuário (através da aplicação cliente) que se autentique. Após a autenticação, o módulo OAuth notifica o proprietário do recurso de que um usuário está pedindo acesso ao serviço em questão. Caso o proprietário confirme a autorização, a aplicação do cliente recebe como resposta um \textit{token} de acesso que é válido por um tempo definido pelo provedor. Esse \textit{token} é então utilizado para acesso ao recurso enquanto for válido.
+
+O OpenID Connect 1.0 é uma camada de identidade sobre o protocolo OAuth 2.0. Esta integração OpenID com OAuth permite que um cliente verifique a identidade do usuário final  baseada na autenticação executada pelo \textit{Authorization Server}, assim como para obter informações do perfil do usuário, a partir de uma solução interoperável e baseada em REST \cite{OpenID_connect_basic2013}.
+
+Segundo \cite{OpenID_connect_basic2013}, o OpenID Connect 1.0 permite que clientes de diversos tipos, incluindo clientes Web, móveis e JavaScript, requisitem e recebam informações sobre sessões de autenticação de usuários finais. A especificação é extensível, permitindo, por exemplo, a cifragem de dados de identidade e a descoberta de provedores OpenID Connect.
+
+Um trabalho em andamento que envolve o uso do OpenID Connect no cenário da WoT está sendo desenvolvido por \cite{santos2013}. Este trabalho tem por objetivo avaliar os impactos causados em um sistema de assistência médica pelo uso de um sistema de IdM centrado no usuário. A autenticação de usuários e de dispositivos e o estabelecimento das relações de confiança entre usuários, servidor OAuth (IdP) e o servidor de recurso \footnote{Equivale aos provedores de serviços (SPs).} são providos pela infraestrutura de autenticação e autorização (IAA) OpenID Connect 1.0.
+
+Uma característica importante do uso do OpenID Connect neste trabalho é que por incluir o OAuth 2.0 em sua arquitetura, é possível que clientes sejam não apenas navegadores web, mas também outros tipos de aplicações ou dispositivos, possibilitando ao IdP OpenID Connect ser utilizado não só para autenticar usuários, mas também dispositivos inteligentes e aplicações que enviam dados para o sistema de assistência médica remota.
+
+Um usuário, através de seu navegador web e por meio da API RESTful oferecida pelo \textit{Smart Gateway}, ao tentar acessar um recurso de um dispositivo médico, é redirecionado para o \textit{OpenID Connect Provider}, para que o usuário se autentique. Após a autenticação, o navegador web é redirecionado ao servidor de recursos munido do \textit{token} de acesso. Com base nos atributos do usuário, o SP concede acesso a ele, retornando uma mensagem com os sinais vitais do paciente obtidos por meio do dispositivo médico.
+
+Na solução proposta, durante o processo de envio dos dados monitorados do paciente, obtidos com o dispositivo médico para uma aplicação web de assistência médica remota, o \emph{smart gateway} também precisará se autenticar. O \textit{Smart Gateway} ao tentar publicar dados na aplicação web (servidor de recurso), é informado pelo servidor de recurso que este precisa se autenticar, solicitando que indique  seu \textit{OpenID Connect Provider}. O dispositivo então se autentica no provedor escolhido e recebe um \textit{token}, o qual é enviado ao servidor de recurso para que, baseado nos atributos do dispositivo, este possa conceder ou não o acesso ao serviço solicitado.
+
+Outro trabalho em andamento, \cite{RNP2013}, propõem uma infraestrutura para disponibilização de dispositivos físicos na Web (WoT) por meio de barramento de serviços. Para controlar e prover autenticação e autorização para acesso a esses dispositivos, a solução proposta pelos autores é a utilização do OpenID Connect. Neste caso, um servidor OpenID Connect, externo ao barramento, é o responsável por prover a autenticação de usuários finais que tentarem acessar os recursos (coisas) disponibilizados no barramento de serviços.
+
+\section{Iniciativas de Gestão de Identidades para Internet das Coisas}
+\label{s_iniciativas_gid}
+
+Com o objetivo de fazer um levantamento do estado da arte sobre autenticação e autorização na Internet das Coisas, uma revisão sistemática da literatura foi conduzida. A seguir, tem-se um pequeno resumo do protocolo de busca executado:
+
+\begin{itemize}
+  \item Pergunta de pequisa: Quais mecanismos (soluções) abordam a autenticação ou autorização na IoT?
+  \item \emph{String} de busca em português: (Internet das Coisas OR IoT OR Dispositivos Inteligentes OR Objetos Inteligentes) AND (Autenticação OR Autorização OR Gestão de Identidade);
+  \item \emph{String} de busca em inglês: (Internet of Things OR IoT OR Smart Devices OR Smart Objects OR Machine to Machine) AND (Authentication OR Authorization OR Identity Management);
+  \item Fontes pesquisadas: IEEExplore (\url{http://ieeexplore.ieee.org};Springer Link (\url{http://link.springer.com/}, Google acadêmico (\url{http://scholar.google.com.br}, BDBComp (\url{http://www.lbd.dcc.ufmg.br/bdbcomp/bdbcomp.jsp}, ACM Digital Library \url{http://portal.acm.org}, Periódicos CAPES (\url{http://www.periodicos.capes.gov.br}).
+  \item Critérios de seleção: data da publicação (2005 a 2013) e análise do título, resumo e conclusões de forma a confirmar o alinhamento com a pergunta de pesquisa;
+   \item Critérios para exclusão: foram excluídos do estudo trabalhos cujos títulos e resumos eram conflitantes (em relação à questão de pesquisa) e soluções de segurança que não estavam alinhadas aos principais padrões de IoT.
+   \item Período de execução da revisão sistemática: abril a agosto de 2013.
+\end{itemize}
+
+Como resultado desta revisão sistemática, trinta e um trabalhos (artigos) foram identificados e tabulados. Destes, alguns foram agrupados, pois são desdobramentos de uma pesquisa ou por serem resultados de projetos de pesquisas. Para seleção dos projetos apresentados nesta seção, utilizou-se como critérios: projetos cujos resultados foram publicados em artigos retornados com o protocolo de busca, que foram financiados por órgãos de fomento e que tiveram mais de um ano de duração. Em relação aos artigos, dentre os que retornaram na revisão sistemática, foram selecionados os trabalhos mais recentes (a partir de  2010) e relevantes em relação às características da IoT.
+
+\subsection{Trabalhos Acadêmicos}
+\label{s_trabalhos}
+
+\subsubsection{Nguyen et al. 2010}
+\label{s_nguyen}
+
+\cite{nguyen2010} abordam um cenário de saúde eletrônica (\emph{e-health}) no qual enfermeiros e médicos precisam ter acesso aos dados de monitoramento da saúde do paciente em tempo real, quando este está dentro do hospital. Dados como temperatura e batimento cardíaco são monitorados através de sensores móveis que ficam no próprio paciente, além de dados sobre o ambiente em que o paciente está, como temperatura e umidade, que são medidos através de sensores fixos em cada ambiente. Esses sensores fazem parte de uma rede de sensores sem fio (RSSF) e podem se comunicar diretamente com o dispositivo móvel do médico, enviando informações diretamente para ele, sem a necessidade de uma infraestrutura de autenticação e comunicação ou de dispositivos intermediários que transferem dados para a Internet. Para esse ambiente, os autores propõem um esquema de autenticação baseado em identidades (IDs) dinâmicas para que um dispositivo autentique outro (M2M).
+
+ No cenário descrito no trabalho, diversas RSSF existem dentro de um hospital, sendo que cada rede é composta por um \textit{gateway} e por diversos sensores móveis (instalados no pacientes) e sensores fixos. Há ainda um provedor de serviços M2M para o hospital. O esquema se divide em três etapas. A primeira e tapa consiste na inicialização da identidades de todos os sensores e \textit{gateways} da rede. As identidades dos sensores são formadas pela concatenação da ID do domínio em que estão com a sua própria ID. Os \textit{gateways}, possuem uma ID igual à ID do domínio seguido por uma sequência de zeros. Já os dispositivos móveis (portados por médicos e emfermeiros) possuem uma ID igual a concatenação de sua própria ID com a ID do provedor de serviços M2M.
+
+A segunda etapa consiste na pré-distribuição de material criptográfico para que a comunicação entre os dispositivos (gateway, sensores fixos e móveis e dispositivos móveis) possa ocorrer. Nesta etapa, os sensores e os \textit{gateways} recebem material criptográfico de modo a poderem se comunicar com qualquer dispositivo móvel, que é portado pelos médicos. Já a comunicação entre os sensores poderá ocorrer de acordo com uma probabilidade de que eles dividam o mesmo espaço de chaves criptográficas, que permitirá que eles, na etapa seguinte, consigam gerar uma chave compartilhada comum.
+
+A última etapa consiste na autenticação e ocorre de maneira distinta para dispositivos móveis, sensores móveis e sensores fixos. Os dispositivos móveis difundem suas identidades ao ingressarem em um domínio.  Quando um sensor fixo recebe esta informação, este consegue determinar que se trata de um dispositivo móvel e envia essa informação para o \textit{gateway} de seu domínio. O \textit{gateway}, por sua vez, consulta o provedor de serviço M2M para confirmar se o dispositivo móvel é válido. Se for móvel, o \textit{gateway} cria uma ID dinâmica para este dispositivo móvel, a qual é válida apenas para esse domínio. Essa ID dinâmica é então enviada ao sensor fixo que recebeu a informação de identidade difundida pelo dispositivo pela primeira vez. Ao receber essa informação, o sensor envia a sua própria ID ao dispositivo móvel, juntamente com um índice do espaço de chaves a que o sensor pertence. De posse disso, o dispositivo móvel e o sensor irão calcular uma chave compartilhada.
+
+O dispositivo móvel cifra sua ID com esta chave compartilhada e a envia ao sensor fixo. O sensor tentará decifrar a mensagem e, caso não consiga, isto indica que se trata de um dispositivo malicioso que está forjando a ID de um dispositivo válido. Caso consiga decifrar com sucesso, então a ID dinâmica é enviada pelo sensor estático ao dispositivo móvel. Ambos irão calcular uma nova chave compartilhada, baseada na nova ID recebida, e poderão se comunicar com segurança. O sensor fixo difunde, aos sensores fixos do mesmo domínio, que há um novo dispositivo móvel no domínio. Caso o dispositivo móvel saia do domínio, o \textit{gateway} avisará aos sensores fixos.
+
+Em um sensor móvel o processo de autenticação ocorre de maneira diferente. Ao invés do \textit{gateway} fazer a verificação de identidade com o provedor de serviço M2M, este a faz com o \textit{gateway} no qual o sensor móvel estava associado anteriormente. Assim, quando um sensor móvel sai de um domínio B e entra num domínio A, este comunica-se com o \textit{gateway} do domínio A, para que este confirme com o \textit{gateway} de B que o sensor móvel não está mais no domínio B. Ao constatar que não está, o \textit{gateway} de B avisa aos sensores de seu domínio que o sensor em questão deixou o domínio e, em seguida, o \textit{gateway} de A recebe a confirmação da saída do sensor móvel do domínio B. Isso permite que o \textit{gateway} do domínio A gere uma ID dinâmica que permitirá ao sensor móvel continuar com o processo de estabelecimento de uma chave compartilhada com algum sensor vizinho, da mesma forma como foi descrito para o dispositivo móvel. Ao fazê-lo, o sensor vizinho irá informar a todos do domínio que o sensor móvel faz parte da rede.
+
+Deve-se ressaltar que o processo de estabelecimento de chave compartilhada entre um sensor móvel (colocado no paciente) e um sensor fixo (colocado no ambiente) é probabilístico, ou seja, é possível que dois sensores não consigam encontrar uma espaço de chaves comum para o cálculo de uma chave compartilhada. Isso se dá devido às restrições computacionais de tais dispositivos. Caso isto ocorra, os dois sensores devem encontrar uma maneira de concordar com uma chave comum ou utilizar outros sensores para encaminhamento de mensagens entre eles. Já com os dispositivos móveis, não há esse problema, haja vista que possuem mais recursos computacionais e podem carregar em sua memória toda a informação criptográfica necessária para se associar em qualquer domínio da rede hospitalar. Desse modo, é possível garantir que o dispositivo móvel sempre estará conectado em qualquer ambiente, enquanto o sensor móvel não possui tal garantia.
+
+\subsubsection{Alam et al. 2011}
+\label{s_alam}
+
+\cite{alam2011} abordam a provisão de acesso seguro a serviços na IoT e a interoperabilidade semântica de atributos de segurança entre diferentes domínios administrativos. No \textit{framework} proposto, usa-se o conceito de regras semânticas para expressar restrições de autorização de acesso, que são usadas para inferir decisões de acesso. Este processo é chamado pelos autores de \textit{security reasoning} (raciocínio de segurança).
+
+Atributos de segurança de domínios administrativos diferentes normalmente são diferentes. Tratando-se de organizações diferentes, o Diretor da organização A não terá os privilégios do Diretor da organização B, quando um estiver atuando em recursos/serviços do outro. Este deve ser mapeado para um outro papel dentro da organização B, com menor nível hierárquico e mais restrições de acesso.
+
+Os autores descrevem um cenário para esclarecer a motivação para o \textit{framework} proposto. No cenário, deseja-se monitorar constantemente trens de uma infraestrutura ferroviária, com o objetivo de: (i) detectar anomalias, como temperatura dos componentes e vibrações elevadas, e (ii) tornar tais informações disponíveis para os diferentes atores da infraestrutura, como o operador do trem, o dono da infraestrutura de trilhos e o consumidor do serviço de transporte, que estão em domínios administrativos diferentes.
+
+Para tratar o problema da interoperabilidade semântica dos aspectos de segurança, os autores propõem o uso de ontologias que levam em consideração as seguintes situações:
+\begin{itemize}
+ \item Organizações mantém papéis/responsabilidades de modos diferentes (nomes de papéis, significados, hierarquias). Deve ser possível mapear, assim, o papel de um usuário em uma organização para o papel correspondente em outra organização;
+ \item Manutenção de níveis de segurança diferentes pelas organizações. Mapear, conforme o papel, os níveis de segurança aplicáveis.
+\end{itemize}
+
+Os autores utilizam um \textit{framework} arquitetural do ETSI para M2M chamado TS 102 690 \cite{ETSI_102690_2011}, o qual é estendido para atender ao requisito de segurança entre domínios administrativos distintos. Para que o processo de raciocínio de segurança seja possível, é necessário que o sistema tenha conhecimento completo e formal do domínio em que atua, contendo a identificação de sensores, dados de sensores, identificação de usuários e atributos de usuários (como papéis).
+
+Regras semânticas especificam as restrições de autorização de acesso e a execução das regras irá gerar as decisões de autorização. Basicamente, são utilizadas três ontologias na base de conhecimento: (i) a de sensores, que descreve sensores e dados recuperados por estes; (ii) de eventos, que descreve falhas e suas características; e (iii) de controle de acesso, que descreve os atores envolvidos na provisão de acesso seguro.
+
+O \textit{framework} proposto permite que aspectos relacionados ao controle de acesso em uma organização, possam ser influenciados pelos mecanismos e modelos de controle de acesso utilizados em outros domínios administrativos. A interoperabilidade semântica de aspectos de segurança, abordada com ontologias em uma plataforma M2M, permite que atributos de segurança em diferentes domínios possam ser compreendidos sem ambiguidades, visando assim garantir uma operação integrada \cite{alam2011}.
+
+\subsubsection{Fu et al. 2011}
+\label{s_fu}
+
+\cite{fu2011} apresentam um sistema de gestão de identidades para um cenário \textit{Machine-to-Machine} (M2M) em que os dispositivos possuem múltiplas funcionalidades e atendem a diferentes aplicações ao mesmo tempo, podendo atender cada uma com uma funcionalidade diferente. A identidade (ID) é definida pelos autores como um conjunto de funções do dispositivo e de opções de configuração. Atributos de uma identidade se referem, portanto, à descrição de uma função do dispositivo e as opções de configuração desta função.
+
+Visando garantir a privacidade do dispositivo, para cada aplicação que utiliza uma função (ou um conjunto de funções) do dispositivo, este pode apresentar uma identidade diferente. Assim, para este cenário assume-se dois requisitos: (i) o requisito de autorização, no qual a aplicação exige que o dispositivo prove sua identidade; e (ii) o requisito de privacidade, no qual o dispositivo deseja manter privadas as informações não pertinentes à aplicação.
+
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=.6\linewidth]{figs/Figura_Fu_et_al}	
+	\caption{Relação do dispositivo, ID, pseudônimo e aplicações -- \cite{fu2011}}
+	\label{figFu}
+\end{figure}
+
+Antes que um dispositivo possa acessar uma aplicação, este deve acessar um provedor de identidades (IdP) para obter um ID, tendo como base as funções e propriedades que este possui e a aplicação que este deseja acessar. O IdP armazena um índice de registro global das funções que cada dispositivo do domínio pode oferecer. Uma aplicação M2M, ao ingressar no domínio, busca no índice do IdP pelo dispositivo mais adequado para atender a necessidade desta aplicação. Para não fornecer funcionalidades e informações que não são relevantes para o acesso pleiteado, o dispositivo faz uso de pseudônimos, definido a partir de um subconjunto do seu ID (funções e configurações que o dispositivo deseja compartilhar com a aplicação alvo). O dispositivo apresenta suas credenciais à aplicação (ID completo ou pseudônimo), a qual o autentica e recebe direito de acesso às opções de configuração no dispositivo.
+
+
+
+A Figura \ref{figFu} mostra um dispositivo fornecendo um pseudônimo diferente para cada uma das aplicações, tendo como base o ID gerado pelo IdP. Apresentando diferentes pseudônimos para diferentes aplicações, o dispositivo consegue atender diversas aplicações simultaneamente e ainda manter sua privacidade, já que as aplicações só poderão atuar sobre as configurações/funções que foram apresentadas pelo dispositivo.  Ao utilizar um pseudônimo, o dispositivo deve ainda provar sua identidade para a aplicação, processo que é feito através do método \textit{Zero Knowledge Proof} \cite{quisquater_1989}.
+
+
+
+\subsubsection{Hecate \cite{graf2011}}
+\label{s_hecate}
+
+Hecate, proposto em \cite{graf2011}, define um \emph{framework} de autorização centralizado e flexível. O Hecate usa do conhecimento da estrutura dos recursos oferecidos pelos dispositivos para tomar decisões de autorização. A flexibilidade do framework de autorização se baseia em conjuntos de permissões que estão relacionados aos métodos do HTTP (\textit{HTTP-verbs}) usados pelo REST.
+
+O mecanismo de autorização do Hecate tem como base um modelo de usuário, que faz o mapeamento do usuário (suas credenciais, IDs) para um conjunto de regras, as quais são definidas em documentos XML de permissões (\textit{Permission XML Documents} - PXDs). As requisições de acesso ao recurso contêm informações sobre o usuário requisitante e o URI. Essas duas informações ajudam a encontrar as regras aplicáveis à requisição (modelo do usuário). O documento  PXD está relacionado à representação de diferentes regras e seus mapeamentos para funcionalidades do HTTP. Cada regra no PXD pode, opcionalmente, suportar filtragem baseado no conhecimento dos recursos, de acordo com o \textit{HTTP-verb} usado na requisição, bem como baseado nas características desse recurso que são conhecidas pelo mecanismo de autorização. Cada regra no PXD refere-se a uma operação específica do HTTP sobre um determinado \textit{Uniform Resource Identifier} (URI), sendo que esta regra está ligada à URI e está também ligada a uma permissão. Desta maneira, o PXD está baseado nos seguintes aspectos:
+
+\begin{itemize}
+ \item Uma URI registrada pode ser protegida por muitas regras. Isto garante um conjunto de permissões em função das diversas maneiras de acessar uma URI (diversos \textit{HTTP-verbs} do REST);
+ \item Cada regra refere-se a um \textit{HTTP-verb};
+ \item Além da autorização baseada \textit{HTTP-verbs} do REST, filtros de permissões, baseados no conhecimento do recurso, podem ser aplicados;
+% \item O recurso pode ser referenciado através de \textit{links} que apontam para estrutura fora do PXD ou guardado no próprio PXD. Em ambos os casos, o conteúdo relacionado aos recursos é independente do mapeamento das regras e permissões.
+\end{itemize}
+
+%No mecanismo proposto tem-se o seguinte fluxo: (1) o usuário é mapeado às regras, as regras operam sobre um URI e são constituídas de uma permissão, e as permissões, que operam sobre um \textit{HTTP-verb} específico, podem estar ligadas à filtros. A permissão representa um \textit{HTTP-verb}, que é independente da URI. Os filtros não são relacionados à URI, podendo ser aplicados a diversos recursos similares. Um nó de dados (URI) representa um recurso e esse nó é referenciado por uma regra. Assim, as regras e permissões são os pontos principais onde o acesso é provido ou não, em função da URI (que é referenciado pela regra) e do \textit{HTTP-verb} (contido na permissão).
+
+Os filtros podem ser usados para alterar a requisição a um recurso (antes da requisição chegar ao dispositivo que provê o recurso) ou a resposta a uma requisição (antes de ela ser enviada ao requisitante). Em uma resposta a uma requisição, quando um filtro é aplicado, só é retornado ao requisitante a parte da informação que o filtro permite. Ou seja, é possível aplicar o filtro para realizar um controle de acesso mais granular ao recurso, a partir do conhecimento da estrutura desse recurso.
+
+O Hecate permite que o controle de acesso se mantenha independente da representação dos recursos, baseando-se nas operações do HTTP. Com conhecimento da estrutura dos recursos, é possível ainda  prover controle de acesso com alto grau de granularidade.
+
+
+\subsubsection{Rotondi et al. 2011}
+\label{s_rotondi}
+
+%\emerson{\cite{rotondi2011} utilizam o modelo CapBAC no cenário de IoT, cuja explicação é feita sobre um exemplo de um carro. }
+
+
+\cite{rotondi2011} apresentam uma abordagem de controle de acesso que utiliza o modelo de autorização baseada em habilidades (CapBAC), no âmbito do projeto IoT@Work\footnote{\url{https://www.iot-at-work.eu}}. Alguns elementos da abordagem proposta são descritos a seguir \cite{rotondi2011}:
+
+\begin{itemize}
+ \item Recurso: pode ser um serviço de informação (que fornece uma medição), um serviço de aplicação ou ainda uma com de serviços. O recurso deve ser identificado de forma única em seu contexto;
+ \item Habilidade de autorização: detalha os direitos de acesso concedidos, os recursos nos quais estes direitos podem ser aplicados, os sujeitos que pode usufruir desses direitos (habilidade) e outras informações adicionais, tais como validade da habilidade e restrições de uso;
+ \item Serviço de Revogação de Habilidade: é utilizado para revogar uma ou mais habilidades. Uma revogação é criada por um sujeito que tem direitos específicos, sendo utilizada para informar ao serviço que faz a gestão do recurso que uma habilidade não é mais válida;
+ \item Requisição de Operação: é uma requisição de serviço usual com uma característica adicional para referenciar ou incluir uma habilidade, que concede direitos ao requisitante;
+ \item \textit{Policy Decision Point} (PDP) do Recurso: responsável por validar e decidir acerca de uma requisição de acesso a um recurso. Avalia-se a habilidade presente na requisição de acesso (direitos que a habilidade garante) e frente às políticas de acesso ao recurso;
+ \item Gerente de Recursos: responsável por gerenciar as requisições de acesso ao recurso, agindo também como \textit{Policy Enforcement Point} (PEP), aplicando as decisões tomadas pelo PDP;
+ \item Serviço de Revogação: responsável por gerenciar as revogações de habilidades e as políticas de acesso aos recursos aplicadas pelo PDP.
+\end{itemize}
+
+Um exemplo do uso desta abordagem e de seus elmentos é descrita em \cite{rotondi2011}. Bob é dono de um carro e precisa que outras pessoas possam ter acesso às informações de seu carro, porém a cada pessoa específica é desejado compartilhar somente informações específica. Assim, Bob gera habilidades que são associadas ao identificador da pessoa e que contém um conjunto de direitos de acesso, bem como o prazo de validade desta habilidade. Alice, sua esposa, recebe uma habilidade (C1) para obter informações sobre a localização geográfica do carro de Bob. O serviço de tráfego da cidade também recebe a habilidade (C2) sobre a localização geográfica, porém sem outras informações que possam identificar que o carro é de Bob. Assim, toda requisição enviado ao carro de Bob contém os dados do requisitante, sua assinatura digital e a habilidade que Bob delegou ao requisitante. A habilidade C2 foi delegada para uma determinada aplicação, a qual solicita acesso ao recurso determinado pela habilidade. O Gerente de Recursos solicita ao PDP para que tome uma decisão de controle de acesso baseada na habilidade apresentada. Com base em suas regras, o PDP informa ao Gerente de Recursos (PEP) sobre sua decisão, a qual é aplicada por ele.
+
+Bob decide revogar a habilidade C1 que sua esposa possui. Para isso, ele cria uma nova habilidade de revogação, a qual é utilizada para informar ao Serviço de Revogação que uma determinada habilidade foi revogada. Essa habilidade contém informações sobre o ID do recurso ao qual a habilidade a ser revogada se aplica, qual a habilidade a ser revogada, quem está revogando esta habilidade, o período a partir do qual a revogação é válida, qual a habilidade que garante direitos a Bob de solicitar essa revogação e, por fim, a assinatura digital de Bob. O Serviço de Revogação, após verificar que Bob está autorizado a realizar a operação de revogação, aplica a revogação da habilidade e atualiza as regras do PDP \cite{rotondi2011}.
+
+\subsubsection{Hanumanthappa e Singh 2012}
+\label{s_hanumanthappa}
+
+\cite{hanum2012} apresentam uma técnica de autenticação de usuários que visa garantir, além da autenticidade do usuário, a posse do dispositivo pelo usuário correto, o dono do dispositivo. Através disso, operações que demandam maior segurança, como o acesso à uma conta bancária, poderão ser feitas pelo usuário no dispositivo, desde que tanto o usuário quanto o dispositivo sejam autenticados e que o usuário tenha se registrado previamente como dono do dispositivo.
+
+A solução proposta passa por quatro etapas. A primeira etapa é feita pelo fabricante do dispositivo (antes de sua venda), que o registra em um \textit{Key Distribution Center} (KDC) exclusivo para fabricantes de dispositivos. Esse registro é feito através do envio do identificado (ID) e do número do modelo do dispositivo (\textit{Device Model Number} -- DMN). O KDC gera um \textit{token} (T) composto pelo \textit{hash} da ID do fabricante do dispositivo e um \textit{timestamp} e os envia ao fabricante. Esse \textit{token} é armazenado, juntamente com o ID do dispositivo e seu DMN, em um \textit{Central Key Server} (CKS) para uso futuro no processo de autenticação do dispositivo. Esse \textit{token} é criptografado com o algoritmo RSA e então gravado no \textit{Trusted Platform Module} (TPM) embarcado no dispositivo.
+
+A segunda etapa, referente ao registro do usuário como dono, é realizada após a venda do dispositivo. O dono do dispositivo se registra no CKS, enviando o ID do dispositivo e o \textit{token} (T). O CKS compara estas informações com o ID do dispositivo e o \textit{token} recebidos do fabricante na primeira etapa. Se esta verificação for bem-sucedida, o CKS envia ao usuário uma mensagem de \textit{acknowledgement} (ACK) informando que a autenticação do dispositivo foi bem-sucedida e uma senha OTP (\textit{one time password}). Em seguida, o usuário precisa se registrar, e para isso informa seu ID de usuário e a senha OTP ao CKS. Finalizada a etapa de registro, o CKS envia um ACK ao usuário, junto com um \textit{Temp ID}. A partir desse momento, o usuário pode acessar qualquer  serviço com seu dispositivo.
+
+A terceira etapa trata de como usuários (não donos) se conectam nos dispositivos, etapa esta realizada por meio da Internet. Inicialmente, o usuário (A) que deseja se conectar ao dispositivo de outro usuário (B) envia ao CKS seu \textit{Temp ID}, o \textit{token} (T) do seu dispositivo e os detalhes do dispositivo que este deseja se conectar. O CKS compara então o \textit{Temp ID} e o \textit{token} (T) com os armazenados na fase de registro do usuário e, caso a verificação seja bem sucedida, o CKS solicita que B envie seus dados para o CKS (\textit{token} (T)) para que uma verificação também seja conduzida. Se a verificação de B for bem sucedida, então o CKS envia uma chave de sessão (\textit{one time session key}) para ambos os dispositivos, que podem, então, se comunicar. Caso alguma das verificações não seja bem sucedida, o CKS envia uma mensagem ao outro usuário informando que ele está tentando realizar uma conexão com uma entidade não confiável.
+
+A última etapa, de transações de alto nível, é aquela em que o usuário envia, através do dispositivo, informações importantes e sensíveis para provedores de serviço (como o acesso a uma conta bancária). Caso o usuário deseje realizar uma transação desse tipo, este enviará ao CKS a requisição de serviço, uma senha (\textit{pass-phrase} P2) conhecida por ele e pelo CKS (informada manualmente pelo usuário), o \textit{token} (T), seu \textit{Temp ID} e um \textit{nonce}. O CKS então autentica o usuário com base nas informações armazenadas nas etapas anteriores e envia como resposta o ID de um provedor de serviços adequado para atender à requisição do usuário. Junto com o ID do provedor de serviços, o CKS envia ao usuário uma chave de sessão (K), a senha P2, uma senha (\textit{pass-phrase} P1, conhecida apenas pelo CKS) encriptada com um \textit{nonce} do CKS. O usuário verifica se P2 é igual ao P2 enviado anteriormente e, em caso positivo, armazena K. Por fim, o usuário envia ao provedor de serviço o ID desse provedor e a senha P1 cifrada, conforme veio do CKS.
+
+O provedor de serviço envia ao CKS a P1 cifrada e o ID do usuário. Após receber essa mensagem, o CKS a confronta com as informações armazenadas das mensagens anteriores e autentica o provedor de serviços. O CKS então responde ao SP com duas mensagens, (i) uma contendo o P2, K e o ID do provedor de serviço, cifradas com o \textit{nonce} do usuário e (ii) outra contendo K e a ID do usuário. Por fim, o provedor de serviço envia ao usuário uma mensagem contendo o P2, K e a ID do provedor de serviço, cifrados com o \textit{nonce} do usuário, conforme recebido do CKS no passo anterior. O usuário então decifra essa mensagem e verifica se P2 é o mesmo que foi mandado no início para o CKS e se K corresponde ao valor armazenado anteriormente. Se sim, o usuário autentica o provedor de serviço com a certeza de que não é uma entidade maliciosa. A partir desse momento, usuário e provedor de serviço trocarão mensagens cifradas com K, que é comum a ambos.
+
+
+\subsubsection{Liu et al. 2012}
+\label{s_liu}
+
+\cite{liu2012} apresentam uma arquitetura para Internet das Coisas que contempla a autenticação e controle de acesso para dispositivos e usuários. Nesta arquitetura, os dispositivos são nós finais da arquitetura da Internet, tendo endereços únicos globais (como IPv6) e podem-se comunicar entre si através da Internet.
+
+A fim de gerenciar e organizar recursos massivos, o dispositivo faz seu pré-registro em um \textit{gateway} confiável, denominado Autoridade de Registro (\textit{Registration Authority} -- RA). O RA auxilia o processo de autenticação e pode também ser usado para fins de auditoria.
+
+O protocolo de autenticação proposto é mostrado na Figura \ref{figLiu_2012}. Inicialmente, o usuário solicita acesso a um dispositivo (passo 1), o qual envia uma solicitação de autenticação do usuário para seu RA (passo 2). O RA então solicita ao usuário a sua identidade (ID) de usuário (passo 3), o qual responde com informações sobre o seu \textit{Home Registration Authority} (HRA) e a sua ID (passo 4). No passo 5, o RA solicita ao HRA a verificação da ID do usuário. Para isto, o HRA, autentica o usuário utilizando oo método de autenticação que melhor se adeque às suas necessidades (passos 5.1 e 5.2). Na sequência, o HRA responde ao RA que a ID do usuário é válida ou não (passo 6). Por fim, o RA responde ao dispositivo sobre a ID do usuário e gera uma chave de sessão para ambos, utilizando um protocolo de estabelecimento e distribuição de chaves baseado em curvas elípticas (ECC) (passo 7).
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=.6\linewidth]{figs/Figura_Liu_et_al}
+	\caption{Protocolo de Autenticação -- \cite{liu2012}}
+	\label{figLiu_2012}	
+\end{figure}
+
+\cite{liu2012} também sugerem que o controle de acesso aos dispositivos seja feito pelo RA, usando o modelo RBAC. O algoritmo de controle de acesso decide quando uma nova conexão será aceita com base também nas informações de qualidade da comunicação. Caso a qualidade seja garantida, a conexão é aceita. Caso contrário, a conexão é descartada ou colocada em uma lista de espera. As conexões são classificadas em dois tipos: (i) a solicitação de um novo serviço que é disparada por usuários móveis dentro de um mesmo domínio e (ii) a solicitação de troca de domínio, feita por usuários móveis que estão mudando de um domínio para outro. O segundo caso tem mais prioridade na aceitação da conexão, haja vista que para os usuários é pior interromper um serviço que está sendo prestado, do que ser impossibilitado de ter acesso a um serviço.
+
+Para a aceitação de uma conexão pelo mecanismo de controle de acesso também são levadas em consideração os requisitos de Qualidade de Serviço da conexão solicitada, baseado nas diferentes características tecnológicas das redes disponíveis. Por exemplo, um domínio pode ter duas redes, uma rede local sem fio, que possui largura de banda maior, porém tem um atraso maior, e uma rede típica de Internet das Coisas, com baixo atraso e largura de banda limitada. Baseado nessas informações, o mecanismo de controle de acesso julga se uma nova conexão será aceita ou não, permitindo a otimização do uso da rede. Por fim, aos usuários são atribuídos papéis dentro do domínio, baseado nas políticas configuradas para cada aplicação. De posse de todas essas informações, o mecanismo de controle de acesso baseado no modelo RBAC toma a decisão de aceitação ou não de uma nova conexão.
+
+\subsubsection{VIRTUS Middleware \cite{conzon2012}}
+\label{s_conzon2012}
+
+Em \cite{conzon2012} é apresentado o \textit{middleware} VIRTUS, o qual é orientado a eventos e tem como base o protocolo XMPP (\emph{eXtensible Messaging and Presence Protocol}) \cite{XMPP_2004}, amplamente utilizado como protocolo para troca de mensagens instantâneas e que possui mecanismos de segurança que contribuem com a interoperabilidade, como a federação de servidores e o mapeamento sobre o HTTP. No VIRTUS, os protocolos TLS (\emph{Transport Layer Security}) e SASL (\emph{Simple Authentication and Security Layer}) são utilizados para garantir a integridade e confidencialidade das mensagens e para a autenticação das partes envolvidas, respectivamente.
+
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=.7\linewidth]{figs/Arquitetura_XMPP}	
+	\caption{Módulos do \textit{middleware} VIRTUS -- \cite{conzon2012}}
+	\label{figVIRTUS}
+\end{figure}
+
+A Figura \ref{figVIRTUS} ilustra os módulos presentes no \textit{middleware} VIRTUS, conforme descritos a seguir:
+
+\begin{itemize}
+ \item Módulos personalizados: também chamados de \emph{bundles} (p.ex. \emph{Zigbee bundle}), são usados para permitir a comunicação entre dispositivos com restrições computacionais e o Servidor VIRTUS, traduzindo as mensagens específicas da tecnologia do dispositivo para XMPP. Geralmente, são implementados em um intermediador entre o dispositivo e o resto do \textit{middleware};
+ \item Servidor VIRTUS: utilizado para gerenciar a comunicação entre os componentes do \textit{middleware}, sendo que há um servidor para cada rede (domínio) na qual o \textit{middleware} é implementado;
+ \item \emph{Manager}: gerencia a conexão entre os diversos módulos do \textit{middleware}. Este também provê uma lista dos módulos disponíveis e faz o gerenciamento de dependências;
+ \item \emph{Gateway}: se comunica com a instância local do Servidor VIRTUS, assim como com instâncias remotas do \textit{middleware}. Este componente é o intermediário entre qualquer aplicação que deseje se comunicar com qualquer dispositivo dentro do \textit{middleware}.
+\end{itemize}
+
+
+O \textit{middleware} considera a existência de três tipos distintos de dispositivos: dispositivos com muitos recursos -- como servidores, que implementam todo o \textit{middleware}; dispositivos restritos -- como smartphones, que implementam módulos cliente XMPP para interagir com outros módulos; e dispositivos simples  -- como sensores e etiquetas RFID, que tem suas mensagens encapsuladas em formato XMPP por um outro dispositivo com mais recursos computacionais. A comunicação intra-domínio e inter-domínio é feita através de troca de mensagens XMPP, contudo há módulos que permitem a comunicação com outras arquiteturas, como por exemplo com Serviços \textit{Web}.
+
+
+\subsubsection{Seitz et al. 2013}
+\label{s_seitz}
+
+\cite{seitz2013} propõem um \textit{framework} para IoT que permite o controle de acesso flexível e com granularidade fina para dispositivos com recursos computacionais restritos. O padrão XACML é utilizado visando permitir a aplicação de diferentes regras de autorização para diferentes clientes, além de permitir o controle de acesso em granularidade igual a de serviços RESTful. As funções desempenhadas no processo de decisão de autorização são tomadas fora do dispositivo que oferece o recurso, em um PDP, sendo que o dispositivo fica responsável pela tomada de decisão final de autorização.
+
+Apesar da decisão de autorização ser tomada, basicamente, fora do dispositivo, as condições locais ao dispositivo também são importantes para a tomada de decisão (localização, por exemplo), sendo que estas não são encaminhadas para a tomada de decisão do PDP, mas avaliadas localmente após a decisão ter sido tomada. Neste trabalho, estas condições são expressas através de \textit{XACML Obligations}, isto é, restrições perante as quais a decisão de autorização do PDP é válida. Para o transporte das decisões de autorização do PDP ao dispositivo, os autores propõem o o uso de asserções SAML de decisão de autorização.
+
+O \textit{framework} de autorização considera três entidades:
+\begin{itemize}
+ \item Dispositivo: armazena recursos;
+ \item Usuário: deseja acessar um recurso, enviando ao dispositivo, além da requisição de acesso, a asserção gerada pelo AE;
+ \item Motor de Autorização (\textit{Authorization Engine} - AE): faz a avaliação de políticas de autorização e gera as asserções de autorização para que o usuário acesse o recurso. Este atua em nome do dono do dispositivo que configurou as políticas de acesso.
+\end{itemize}
+
+Para que seja possível gerar uma asserção baseada na identidade do usuário, o motor de autorização deve autenticar o usuário, gerar a asserção de autorização e assiná-la utilizando uma chave conhecida e confiável para o dispositivo, permitindo que este possa verificar se a asserção é proveniente ou não de uma fonte confiável. Deste modo, ao receber do usuário um pedido de acesso a um recurso de um dispositivo, o motor de autorização, verifica se o usuário tem direito de acesso e gera, em caso positivo, uma asserção para este usuário. Junto da asserção é informada a chave de criptografia que deve ser usada na comunicação do dispositivo com o usuário.
+
+O dispositivo, ao receber a asserção do usuário junto com a requisição de acesso, verifica as condições locais (através das \textit{XACML Obligations}) e se os direitos da asserção de autorização correspondem à requisição. Se o acesso for confirmado para as condições locais especificadas, o dispositivo garante o acesso ao recurso. De modo a facilitar o processamento das respostas XACML e asserções SAML no dispositivo, os autores definiram um subconjunto das especificações originais. Com o mesmo objetivo, a notação XML desse subconjunto foi substituída por uma notação baseada em JSON (\emph{JavaScript Object Notation}), mais leve para o cenário, reduzindo a razão dez vezes o tamanho das mensagens.
+
+\subsubsection{Mahalle et al. 2013a}
+\label{s_mahalle}
+
+\cite{mahalle2013b} apresentam um modelo de controle de acesso baseado em habilidades e autenticação de identidades (\textit{Identity Authentication and Capability Based Access Control} -- IACAC) para Internet das Coisas. A inovação do modelo é que ele apresenta uma abordagem integrada de autenticação e controle de acesso para dispositivos em IoT, por meio de um novo método de autenticação de dispositivos e controle de acesso para recursos. O esquema proposto (IACAC) é compatível com diferentes tecnologias de acesso como Bluetooth, 4G, Wimax e WiFi, sendo que no trabalho a implementação é realizada em um ambiente WiFi.
+
+No modelo, o algoritmo proposto é dividido em três partes: (i) geração de chave secreta baseado no algoritmo \textit{Elliptical Curve Criptography -- Diffie Hellman} (ECCDH), (ii) estabelecimento de identidade e (iii) criação de habilidade para controle de acesso.
+
+O dispositivo ao ingressar em um domínio recebe um par de chaves. Essas chaves são geradas por um ou mais \textit{Key Distribution Center} (KDC) considerados confiáveis. Em cada domínio, há um acordo acerca de um parâmetro de domínio  relacionado ao protocolo ECC, comum a todos os dispositivos daquele domínio. Quando dois dispositivos desejam se comunicar, estes dão início à primeira etapa do algoritmo. Nesta etapa, os dispositivos enviam mensagens para troca de suas chaves públicas, permitindo o estabelecimento de uma chave secreta (X) para comunicação entre estes.
+
+A segunda etapa possibilita a autenticação em uma via (\textit{one way})ou mútua. Na autenticação de uma via, o dispositivo A autentica o dispositivo B. Neste processo de autenticação, o dispositivo A gera um numero (r) e um \textit{timestamp} (t). Uma chave de sessão (s) é então gerada pelo dispositivo A, a partir do \textit{hash} de uma operação \textit{XOR} entre a chave secreta (X) e o \textit{timestamp} (t). Na sequência, o dispositivo A cifra o número (r) com a chave de sessão (s), gerando (R), e encripta também o \textit{timestamp} (t) com a chave secreta (X), gerando (T). Em seguida, o dispositivo A gera um código de autenticação de mensagem (\textit{Message Authentication Code MAC)} contendo a chave secreta (X), R e um \textit{token} de habilidade baseado na identidade (chamado de ICAP). Após esse processo, o dispositivo A envia ao dispositivo B uma mensagem contendo R, T e o MAC gerado.
+
+O dispositivo B, ao receber a mensagem vinda do dispositivo A, gera um \textit{timestamp} local e confere se o \textit{timestamp} (t) é menor que o local. Se sim, o dispositivo B tenta calcular a chave de sessão (s) para poder decifrar R, conseguindo assim acesso ao número (r) gerado pelo dispositivo A. O dispositivo B possui uma cópia da ICAP que supostamente deverá vir do dispositivo A. Assim, se a ICAP fornecida pelo dispositivo A for igual a ICAP armazenada no dispositivo B, este último calculará o MAC. Se o MAC gerado pelo dispositivo B corresponder ao MAC que foi recebido, então o dispositivo B autentica o dispositivo B.
+
+Para que ocorra a autenticação mútua (dispositivo A autentica o B), o dispositivo B cifra o número (r) com a chave secreta (X), gerando R1. Também é gerado por B um MAC contendo o número (r) e a ICAP armazenada por B. Em seguida, R1 e o MAC gerado são enviados para o dispositivo A. Quando a mensagem chega no dispositivo A, este decifra R1 e acessa o número (r) enviado por B. Se (r) for igual ao número (r) gerado no início da autenticação, o processo de autenticação mútua foi bem sucedido e o acesso será garantido de acordo com a ICAP do dispositivo B.
+
+Na terceira etapa, de criação de habilidades para o controle de acesso, considera-se que a habilidade é composto por (1) um \textit{token} que contém um conjunto de direitos de acesso, (2) um identificador do usuário ou dispositivo que é dono desta habilidade e (3) um \textit{hash} dos dois elementos anteriores (para evitar que a habilidade seja forjada). Essa habilidade é utilizada na segunda etapa, sendo enviada no processo de autenticação.
+
+
+\subsection{Projetos}
+\label{s_projetos}
+
+\subsubsection{Middleware Hydra}
+\label{s_hydra}
+
+O objetivo principal do projeto Hydra (\textit{Link Smart Middleware})\footnote{\url{http://www.hydramiddleware.eu/}} foi o desenvolvimento de um \textit{middleware} baseado em uma arquitetura orientada a serviços (SOA), para a qual a camada de comunicação subjacente é transparente. O \textit{middleware} deve incluir suporte para arquiteturas distribuídas e centralizadas seguras. O \textit{middleware} foi concebido para operar em dispositivos que possuem limitações de recursos em termos de poder computacional, energia e uso de memória. Este deve permitir o desenvolvimento de aplicações seguras, confiáveis e tolerantes a faltas através do uso de componentes de segurança distribuídos.
+
+Em \cite{akram2008c_requirements} são apresentados os requisitos de gestão de identidades (\textit{Identity Management} - IdM) e são introduzidas as recomendações para a arquitetura do \textit{middleware}. Neste trabalho, foram extraídos 10 requisitos para IdM, tendo como referência um cenário de automação residencial do Projeto Hydra.
+
+\cite{akram2008b} é proposto um metasistema de identidades, independente de tecnologia, que possui três papéis: o sujeito, ao qual se refere a identidade; a \textit{Relying Party} (RP), que requisita informações de identidade relacionadas ao sujeito, e o \textit{Identity Provider} (IdP), que fornece informações de identidade do sujeito.
+No Hydra, uma identidade tipicamente compreende: (1) Identificadores virtuais temporários; (2) Atributos que especificam a entidade; (3) Histórico de acessos feito a esta entidade e a partir desta entidade.
+
+No projeto foram definidos alguns requisitos para o gestor de identidades Hydra (\textit{Hydra Identity Manager} - HIM), a saber:
+
+\begin{itemize}
+ \item Permitir que o usuário seja o responsável por controlar os dados enviados e recebidos;
+ \item Liberar o mínimo de informação (somente o suficiente), para que uma determinada ação seja executada;
+ \item Garantir a irretratabilidade (não repúdio dos dados trocados;
+ \item Suportar  diferentes tecnologias de gerenciamento de identidade de diversos fabricantes, além de prover a interoperabilidade dessas diferentes tecnologias;
+ \item Desacoplamento da camada de identidade da camada de aplicação, permitindo que as políticas e componentes de IdM sejam alterados sem que as aplicações sofram alterações, e vice-versa;
+ \item Preocupação com aspectos de usabilidade do usuário, nos processos de seleção e divulgação da identidade;
+ \item Experiência consistente entre contextos, considerando o fato de que uma entidade pode ter muitas identidades (e vice-versa) dependendo do contexto (para prover mais privacidade aos usuários);
+ \item Escalabilidade no gerenciamento das identidades, em função da dinamicidade do ambiente (entidades entrando e saindo do ambiente frequentemente).
+\end{itemize}
+
+De modo a atender esses requisitos, o Hydra Middleware constituiu a arquitetura da HIM de modo a integrar diversas tecnologias e especificações, dentre elas WS-*, Windows Cardspace, OpenID e SAML. A ideia é que haja um complemento entre as tecnologias para prover uma solução de gestão de identidades, de modo que uma tecnologia complemente aspectos de segurança falhos na outra.
+
+\subsubsection{Butler - SmartLife}
+\label{s_butler}
+
+BUTLER, acrônimo de \textit{uBiquitous, secUre inTernet-of-things with Location and contExt-awaReness}, é um projeto europeu em andamento que começou suas atividades em outubro de 2011. O projeto aborda aspectos de pervasividade, consciência de contexto e segurança na Internet das Coisas. Integra tecnologias existentes e desenvolve novas tecnologias a fim de formar um conjunto de aplicações, serviços e características das plataformas que permitirá trazer a Internet das Coisas para a vida diária \cite{butler_2011_about}.
+
+O projeto apresenta soluções para cenários como \textit{Smart Home/Office}, \textit{Smart Shopping}, \textit{Smart Mobility/Transport}, \textit{Smart Health} e \textit{Smart Cities}. Foram definidos papéis de segurança no nível de aplicação, que refletem os \textit{stakeholders} participantes das interações em cada cenário. Os papéis definidos no projeto são \cite{butler_2011_2_4}:
+
+\begin{itemize}
+ \item Usuário: entidade que ganha acesso a um recurso. Normalmente é um humano, mas pode ser também uma aplicação;
+ \item Provedor de Recurso: entidade que provê um recurso e opcionalmente o atualiza. Ele deve conferir o \textit{token} de acesso apresentado para que possa prover/atualizar um recurso;
+ \item Consumidor de Recurso: aplicação cliente recuperando e consumindo recursos em nome do usuário;
+ \item Servidor de Autorização: é a entidade que implementa a gestão de controle de acesso. É responsável pela autenticação do usuário e autorização do consumidor de recurso através da geração de um \textit{token} de acesso relacionado ao recurso que se deseja acessar. Opcionalmente, pode delegar a tarefa de autenticação para o servidor de autenticação;
+ \item Servidor de Autenticação: esta entidade pode ser utilizada pelo servidor de autorização de modo a confiar em um protocolo de autenticação que não é implementado nativamente no servidor de autorização. Isso significa que o servidor de autenticação e o servidor de autorização precisarão fazer a federação de identidades de usuários.
+\end{itemize}
+
+A Figura \ref{figButler} ilustra o fluxo de mensagens, baseado no protocolo OAuth 2.0, para acesso a um recurso, o qual deve ser autorizado pelo usuário. Utilizando um agente de usuário (como um navegador web), o usuário requisita um serviço a um Provedor de Serviço, que neste caso fará o papel de Consumidor do Recurso. Através do agente de usuário, a aplicação do Provedor de Serviço requisita um código de autorização para acesso ao recurso. O Servidor de Autorização valida a aplicação e retorna um \textit{token} de aplicação.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=\linewidth]{figs/Butler_Fluxo}
+	\caption{Fluxo de mensagens para acesso a um recurso - \cite{butler_2011_2_4}}
+	\label{figButler}
+\end{figure}
+
+
+De posse do \textit{token}, a aplicação requisita novamente o código de autorização e o usuário realiza o processo de autenticação junto ao Servidor de Autorização e autoriza a aplicação a acessar o recurso desejado, recebendo o código de autorização. Em seguida, em nome do usuário (e não mais através do agente de usuário), a aplicação do provedor de serviço, através do código de autorização obtido no passo anterior, requisita ao Servidor de Autorização um \textit{token} de acesso. O Servidor de Autorização gera o \textit{token} de acesso e também gera uma chave de sessão, que será usada entre a aplicação do provedor de serviço e o Provedor de Recurso. Utilizando o \textit{token} de acesso e a chave de sessão gerada, a aplicação requisita o recurso ao Provedor de Recurso. O Provedor de Recurso, por sua vez, valida o \textit{token} de acesso e provê o recurso. Por fim, a aplicação do provedor de serviço consome o recurso e provê o serviço ao usuário \cite{butler_2011_2_4}.
+
+\subsubsection{Middleware SMEPP}
+\label{s_smepp}
+
+SMEPP, acrônimo de \textit{Secure Middleware for Embedded Peer-to-Peer systems}, é um projeto  de \textit{middleware} para sistemas embarcados em uma arquitetura P2P (\textit{Peer-to-Peer}) que tem como foco a segurança. O \textit{middleware} visa facilitar o desenvolvimento de aplicações, escondendo detalhes das plataformas dos sistemas e detalhes relacionados à escalabilidade, adaptabilidade e interoperabilidade entre tais sistemas. Desse modo, uma premissa deste \textit{middleware} é prover mecanismos que garantam interações seguras entre os pares e abstraiam para os desenvolvedores de aplicações os problemas como falta de infraestrutura e vulnerabilidades de segurança. Também tem como premissa que o \textit{middleware} seja altamente personalizável e adaptável a diferentes dispositivos e domínios \cite{Benito2009, Roman2010}.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=.8\linewidth]{figs/SMEPP_Arquitetura}
+	\caption{Arquitetura do Middleware SMEPP - \cite{Roman2010}}
+	\label{figSMEPP}
+\end{figure}
+
+Na arquitetura do SMEPP os componentes são divididos em camadas, como pode ser visto na Figura \ref{figSMEPP}. A camada superior consiste em uma API para os desenvolvedores de aplicações, a qual permite o acesso aos serviços do \textit{middleware}, além de serviços específicos para cada domínio de aplicação. A camada intermediária oferece serviços comuns para qualquer aplicação que seja executado sobre o \textit{middleware}, como gestão de eventos, gestão de grupos e monitoramento de entrada e saída de dispositivo. A camada inferior, por sua vez, trata das implementações de funcionalidades oferecidas pelo \textit{middleware} na arquitetura em que ele está embarcado, se preocupando com detalhes dos dispositivos como a capacidade computacional e de energia. Contudo, a arquitetura pode ser simplificada contendo apenas os componentes úteis para um determinado domínio e contexto de aplicação \cite{Benito2009, Roman2010}.
+
+Dentro de uma rede SMEEP, os serviços são oferecidos para membros de um mesmo grupo. Os componentes da camada de segurança da arquitetura SMEEP são apresentados a seguir:\cite{Benito2009, Roman2010}.
+
+\begin{itemize}
+ \item Segurança de Grupo (\textit{Group Security}): Responsável por estabelecer e manter aspectos de segurança dentro dos grupos, desempenhando tarefas como autenticação de pares que tentam entrar em um grupo e garantindo a comunicação segura entre eles. É nesse componente que é definido, por exemplo, se um membro deve utilizar criptografia simétrica ou assimétrica;
+ \item Serviços de Criptografia (\textit{Cryptographic Services}): provê primitivas criptográficas que serão usadas por outros componentes, como a cifragem, decifragem, assinaturas digitais, código de autenticação de mensagem (MAC), etc. Também provê funcionalidades para geração de números aleatórios, armazenamento de chaves e gestão de certificados;
+ \item Infraestrutura de Segurança (\textit{Infrastructure Security}): faz uso de características de segurança específicas dos sistemas em que o \textit{middleware} está embarcado, facilitando a implementação dos componentes de segurança. Como exemplo dessas características dos sistemas tem-se os conjuntos de instruções específicas para operações criptográficas que um processador pode ter, agilizando os processos de segurança em todo o \textit{middleware}.
+\end{itemize}
+
+Para um sistema ingressar em um grupo é necessário que o mesmo apresente credenciais de segurança válidas. Uma vez dentro do grupo, este sistema poderá se comunicar de forma segura com os demais membros. Compete ao desenvolvedor da aplicação, que é executada sobre o \textit{middleware}, o provimento de credenciais de segurança e ao \textit{middleware} compete o processo para admissão de membros e a comunicação segura dentro do grupo \cite{Benito2009}.
+
+
+\subsubsection{Internet of Things - Architecture (IoT-A)}
+\label{s_iota}
+
+O projeto europeu \textit{Internet of Things - Architecture} (IoT-A) tem como objetivo a criação de um modelo arquitetural de referência para a Internet das Coisas \cite{IoT_A_intro}. Um ponto interessante da arquitetura proposta é que esta define o que se deve ter em uma solução de Internet das Coisas, mas não define através de qual tecnologia isso deve ser implementado. O núcleo da arquitetura é composta por \cite{IoTA_2012_D4_2} :
+
+
+\begin{itemize}
+ \item Autorização (\textit{AuthZ}): responsável pelo controle de acesso aos serviços e à infraestrutura de resolução de serviços;
+ \item Autenticação (\textit{AuthN}): responsável pela autenticação de usuários dos serviços;
+ \item Gestão de Identidades (\textit{Identity Management} - IM): responsável pela gestão de identidades, pseudônimos e políticas de acesso relacionadas;
+ \item Gestão e Troca de Chaves (\textit{Key Exchange and Management} - KEM): responsável pela troca de chaves criptográficas;
+ \item Confiança e Reputação (\textit{Trust and Reputation} - TRA): responsável pela coleta de pontuação sobre reputação e pelo cálculo do nível de confiança dos serviços.
+\end{itemize}
+
+O componente AuthZ é responsável por tomar decisões de controle de acesso baseado em políticas de controle de acesso. De maneira abstrata, uma decisão de controle de acesso pode ser modelada dessa forma: \textit{authZ(s, r, o) -> {true, false}}. Neste caso, \textit{s} é o sujeito tentando executar uma operação \textit{o} sobre um recurso \textit{r}. A decisão de controle de acesso leva em consideração as informações do usuário requisitante, do recurso e da ação que o usuário deseja realizar , resultando em um valor \textit{booleano} acerca da permissão ou negação do acesso. Dessa forma, o componente AuthZ atua como um \textit{Policy Decision Point} (PDP) \cite{IoTA_2012_D4_2}.
+
+O componente AuthN garante que a identidade de um usuário ou serviço é válida. A funcionalidade básica deste componente é oferecida da seguinte maneira: \textit{Assertion: authenticate(UserCredential)}. \textit{Assertion} é o componente de dados que garante que uma autenticação de um usuário ocorreu em determinado momento através de um método de autenticação específico. \textit{UserCredential} é a entrada para o processo de autenticação, que permite que o mecanismo tenha certeza de que o usuário é quem diz ser ou não, sendo normalmente baseado naquilo que o usuário \textit{tem}, naquilo que ele \textit{sabe} ou naquilo que e \textit{é} \cite{IoTA_2012_D4_2}.
+
+O componente IM é responsável por gerar pseudônimos para as IDs dos usuários e serviços, garantindo assim o anonimato destes. Pseudônimos são identidades temporárias de sujeitos fictícios (ou grupos de sujeitos) que podem ter suas credenciais usadas para interações entre sujeitos ou grupos de sujeitos, ao invés de se usar a identidade e as credenciais reais. De um ponto de vista abstrato, a funcionalidade que deve ser provida pelo componente IM é a seguinte: \textit{createPseudo (s1 [,s2, s3, ..., sn], p) -> s*}. Neste caso, \textit{s} representa um sujeito ou um conjunto de sujeitos que requisitam um pseudônimo \textit{s*}. Há também um conjunto opcional de especificações chamado \textit{p}, podendo ser, por exemplo, o tamanho da chave, algoritmo a ser usado, validade do pseudônimo, direitos de acesso, etc \cite{IoTA_2012_D4_2}.
+
+A geração de pseudônimos obedece as seguintes regras: (i) garantir que os direitos de acesso do pseudônimo estejam contidos no conjunto de direitos do sujeito real; (ii) garantir que o período de validade do pseudônimo seja menor ou igual ao do ID do sujeito real; (iii) garantir que os direitos de acesso de um grupo que solicita um pseudônimo seja igual ou menor que o de qualquer um dos sujeitos do grupo; e (iv) garantir que o período de validade do pseudônimo seja menor ou igual que o de qualquer um dos sujeitos do grupo. Os passos (iii) e (iv) são opcionais, haja vista que quem solicita o pseudônimo para o grupo deverá ser responsabilizado pelo uso que é feito deste por qualquer um dos componentes do grupo \cite{IoTA_2012_D4_2}.
+
+Também, é responsabilidade do componente IM prover a interoperabilidade entre diferentes \textit{frameworks} de autenticação e autorização, o que permite que a autenticação feita em um \textit{framework} resulte em uma asserção que possa ser usada em outro \textit{framework} \cite{IoTA_2012_D4_2}. Dessa forma, os autores sugerem o uso do XACML para implementar o AuthZ e do SAML para implementar o AuthN.
+
+
+\section{Considerações finais}
+\label{s_consideracoes}
+
+As possibilidades de aplicações para Internet das Coisas são inúmeras e, dentre estas, há potencial para criar ambientes inteligentes através dos \emph{smart objetcts}, que são objetos que tem a capacidade de sentir e atuar sobre o meio em que estão inseridos. As características diferenciadas e muitas vezes restritivas da IoT, como a sua natureza distribuída, a facilidade de acesso físico aos objetos e os objetos com recursos computacionais restritos, tornam o provimento da segurança um desafio.
+
+Este capítulo analisou a segurança na Internet das Coisas, dando foco aos aspectos de autenticação e autorização neste cenário. Os dispositivos na IoT geram, transmitem, modificam e armazenam dados  constantemente, sendo que estas informações muitas vezes são confidenciais para seus usuários. Estes dispositivos podem pertencer a mais de uma rede (domínio) e podem de se deslocar por mais de um domínio, o que afeta as abordagens de autenticação e de controle de acesso.
+
+Nos trabalhos apresentados, é possível notar a opção por não conceber mecanismos de autenticação e autorização que estejam condicionados a um determinado domínio de aplicação, nem à determinadas tecnologias utilizadas na IoT, tais como IEEE 802.15.4, WiFi ou Zigbee.
+
+Dos principais modelos de controle de acesso usado em cenários convencionais, o modelo CapBAC (ver Seção \ref{s_autorizacao}) foi apontado como o mais adequado para o cenário da IoT, por permitir um controle mais granular, sem exigir que os dispositivos tenham que lidar com a complexidade de manter listas de controle acesso. O modelo ABAC também se mostrou adequado para o cenário da IoT, como pode ser constatado na adaptação deste modelo feita por \cite{zhang2011}.
+
+Nos trabalhos analisados, constatou-se a tendência em se utilizar \textit{gateways} ou servidores dedicados como mecanismos de apoio aos dispositivos quando estes realizam operações relacionadas à segurança que exigem um grande poder computacional, como as operações criptográficas. Contudo, poucos trabalhos exploraram a questão sobre autenticação única de usuários e dispositivos e a transposição destas credenciais de autenticação por diferentes domínios administrativos.
+
+% É possível também visualizar oportunidades de pesquisa em relação à garantia de autenticação única de usuários e dispositivos em domínios administrativos diferentes, diante de credenciais distintas de autenticação. Poucos trabalhos trataram desse problema, sendo que ainda não existem respostas conclusivas sobre como resolvê-lo.
+
+Apesar de existirem diversos trabalhos na literatura que descrevem soluções de segurança para IoT, ainda é necessário superar uma série de desafios científicos e tecnológicos para que estas soluções sejam utilizadas e difundidas em sua forma plena. A implementação e avaliação dos mecanismos dos trabalhos apresentados neste capítulo em cenário reais, já que grande parte dos trabalhos carecem de implementação ou provas formais, é uma oportunidade de pesquisa.
+
+Autenticação e autorização para sistemas distribuídos pervasivos e ubíquos como a IoT são temas de
+pesquisas atuais e ativos e, provavelmente, diante das suas complexidades e relevâncias, continuarão assim por muito anos. Esta constatação decorre das inúmeras questões que os sistemas de gestão de identidades devem considerar, tais como: privacidade e anonimato do usuário, uso de algoritmos criptográficos fortes em dispositivos com restrições computacionais, autenticação única (SSO) de dispositivos diante de diferentes tecnologias, controle de acesso de granularidade fina e interoperabilidade semântica entre regras de autorização.
+
+\footnotesize
+
+\bibliographystyle{sbc}
+\bibliography{referencias}
+
+\end{document}

@@ -1,0 +1,595 @@
+\begin{thebibliography}{10}
+
+\bibitem{ajtai}
+M.~Ajtai.
+\newblock Generating hard instances of lattice problems (extended abstract).
+\newblock In {\em Proceedings of the twenty-eighth annual ACM symposium on
+  Theory of computing}, STOC '96, pages 99--108, New York, NY, USA, 1996. ACM.
+
+\bibitem{alabbadi-wicker}
+M.~Alabbadi and S.~B. Wicker.
+\newblock A digital signature scheme based on linear error-correcting block
+  codes.
+\newblock In {\em Proc. 4th International Advances in Cryptology Conference --
+  {ASIACRYPT} '94}, pages 238--348, 1994.
+
+\bibitem{Babai86onlovasz}
+L~Babai.
+\newblock On lovász lattice reduction and the nearest lattice point problem.
+\newblock {\em Combinatorica}, (6), 1986.
+
+\bibitem{baldi-chiaraluce}
+M.~Baldi and F.~Chiaraluce.
+\newblock Cryptanalysis of a new instance of {M}c{E}liece cryptosystem based on
+  {QC}-{LDPC} code.
+\newblock In {\em {IEEE} International Symposium on Information Theory --
+  {ISIT} 2007}, pages 2591--2595, Nice, France, 2007. {IEEE}.
+
+\bibitem{baldi-chiaraluce-bodrato}
+M.~Baldi, F.~Chiaraluce, and M.~Bodrato.
+\newblock A new analysis of the {M}c{E}liece cryptosystem based on {QC}-{LDPC}
+  codes.
+\newblock In {\em Security and Cryptography for Networks -- {SCN} 2008}, volume
+  5229 of {\em Lecture Notes in Computer Science}, pages 246--262, Amalfi,
+  Italia, 2008. Springer.
+
+\bibitem{barbulescu}
+Razvan Barbulescu, Pierrick Gaudry, Antoine Joux, and Emmanuel Thom{\'e}.
+\newblock A quasi-polynomial algorithm for discrete logarithm in finite fields
+  of small characteristic.
+\newblock HAL-INRIA technical report, \url{http://hal.inria.fr/hal-00835446/},
+  2013.
+
+\bibitem{bellare-goldwasser}
+Mihir Bellare and Shafi Goldwasser.
+\newblock The complexity of decision versus search.
+\newblock {\em SIAM Journal on Computing}, 23:97--119, 1994.
+
+\bibitem{br93}
+Mihir Bellare and Phillip Rogaway.
+\newblock Random oracles are practical: A paradigm for designing efficient
+  protocols, 1995.
+
+\bibitem{berger-cayrel-gaborit-otmani}
+T.~P. Berger, P.-L. Cayrel, P.~Gaborit, and A.~Otmani.
+\newblock Reducing key length of the {M}c{E}liece cryptosystem.
+\newblock In {\em Progress in Cryptology -- {Africacrypt} 2009}, Lecture Notes
+  in Computer Science, pages 77--97, Gammarth, Tunisia, 2009. Springer.
+
+\bibitem{berlekamp-mceliece-vantilborg}
+E.~Berlekamp, R.~McEliece, and H.~van Tilborg.
+\newblock On the inherent intractability of certain coding problems.
+\newblock {\em {IEEE} Transactions on Information Theory}, 24(3):384--386,
+  1978.
+
+\bibitem{bernstein-lange-peters:bcd}
+D.~Bernstein, T.~Lange, and C.~Peters.
+\newblock Smaller decoding exponents: ball-collision decoding.
+\newblock In {\em Advances in Cryptology -- {Crypto} 2011}, volume 6841 of {\em
+  Lecture Notes in Computer Science}, pages 743--760, Santa Barbara, {USA},
+  2011. Springer.
+
+\bibitem{bernstein}
+D.~J. Bernstein.
+\newblock List decoding for binary {G}oppa codes.
+\newblock In {\em Coding and cryptology---third international workshop, IWCC
+  2011}, Lecture Notes in Computer Science, pages 62--80, Qingdao, China, 2011.
+  Springer.
+
+\bibitem{bernstein-buchmann-dahmen}
+D.~J. Bernstein, J.~Buchmann, and E.~Dahmen.
+\newblock {\em Post-Quantum Cryptography}.
+\newblock Springer, Heidelberg, Deutschland, 2008.
+
+\bibitem{bernstein-lange-peters}
+D.~J. Bernstein, T.~Lange, and C.~Peters.
+\newblock Attacking and defending the {M}c{E}liece cryptosystem.
+\newblock In {\em Post-Quantum Cryptography Workshop -- {PQCrypto} 2008},
+  volume 5299 of {\em Lecture Notes in Computer Science}, pages 31--46.
+  Springer, 2008.
+\newblock \url{http://www.springerlink.com/content/68v69185x478p53g}.
+
+\bibitem{bernstein-lange-peters:wild}
+D.~J. Bernstein, T.~Lange, and C.~Peters.
+\newblock Wild {M}c{E}liece.
+\newblock In {\em Selected Areas in Cryptography -- {SAC} 2010}, volume 6544 of
+  {\em Lecture Notes in Computer Science}, pages 143--158, Waterloo, Canada,
+  2010. Springer.
+
+\bibitem{Bertoni07}
+Guido Bertoni, Joan Daemen, Micha\"{e}l Peeters, and Gilles~Van Assche.
+\newblock {Sponge functions}.
+\newblock {ECRYPT} Hash Workshop 2007, 2007.
+\newblock Also available as public comment to NIST from
+  \url{http://www.csrc.nist.gov/pki/HashWorkshop/Public_Comments/2007_May.html}.
+
+\bibitem{ibe2}
+Dan Boneh, Craig Gentry, and Michael Hamburg.
+\newblock Space-efficient identity based encryption without pairings.
+\newblock In {\em FOCS}, pages 647--657, 2007.
+
+\bibitem{braeken-wolf-preneel}
+A.~Braeken, C.~Wolf, and B.~Preneel.
+\newblock A study of the security of unbalanced oil and vinegar signature
+  schemes.
+\newblock In {\em Topics in Cryptology -- CT-RSA 2005}, volume 3376 of {\em
+  Lecture Notes in Computer Science}, pages 29--43. Springer, 2005.
+
+\bibitem{brakerski}
+Zvika Brakerski and Vinod Vaikuntanathan.
+\newblock Efficient fully homomorphic encryption from (standard) lwe.
+\newblock {\em Electronic Colloquium on Computational Complexity (ECCC)},
+  18:109, 2011.
+
+\bibitem{buch:06}
+J.~Buchmann, C.~Coronado, E.~Dahmen, M.~Döring, and E.~Klintsevich.
+\newblock {CMSS}– an improved merkle signature scheme.
+\newblock In {\em Progress in Cryptology – INDOCRYPT 2006, LNCS 4329}, pages
+  349--363. Springe-Verlag, 2006.
+
+\bibitem{buch:11}
+J.~Buchmann, E.~Dahmen, S.~Ereth, A.~Hülsing, and M.~Rückert.
+\newblock On the security of the winternitz one-time signature scheme.
+\newblock In {\em German Research}, pages 1--17. 2011.
+
+\bibitem{bucm:11}
+J.~Buchmann, E.~Dahmen, and A.~Hülsing.
+\newblock {XMSS}-a practical secure signature scheme based on minimal security
+  assumptions.
+\newblock In {\em Cryptology ePrint Archive - Report 2011/484}. ePrint, 2011.
+
+\bibitem{buch:07}
+J.~Buchmann, E.~Dahmen, E.~Klintsevich, K.~Okeya, and C.~Vuillaume.
+\newblock Merkle signatures with virtually unlimited signature capacity.
+\newblock In {\em Applied Cryptography and Network Security - ACNS 2007, LNCS
+  4521}, pages 31--45. Springer, 2007.
+
+\bibitem{buch:08}
+J.~Buchmann, E.~Dahmen, and M.~Schneider.
+\newblock Merkle tree traversal revisited.
+\newblock In {\em Proceedings of the 2nd International Workshop on Post-Quantum
+  Cryptography}, pages 63--78. Springer-Verlag, 2008.
+
+\bibitem{contini05}
+Scott Contini, Arjen~K. Lenstra, and Ron Steinfeld.
+\newblock {VSH, an Efficient and Provable Collision Resistant Hash Function}.
+\newblock Cryptology ePrint Archive, Report 2005/193, 2005.
+\newblock \url{http://eprint.iacr.org/}.
+
+\bibitem{courtois-finiasz-sendrier}
+N.~Courtois, M.~Finiasz, and N.~Sendrier.
+\newblock How to achieve a {McEliece}-based digital signature scheme.
+\newblock In {\em Advances in Cryptology -- {Asiacrypt} 2001}, volume 2248 of
+  {\em Lecture Notes in Computer Science}, pages 157--174, Gold Coast,
+  Australia, 2001. Springer.
+
+\bibitem{courtois-goubin-meier-tacier}
+Nicolas Courtois, Louis Goubin, Willi Meier, Jean daniel Tacier, and Cp~Crypto
+  Lab.
+\newblock Solving underdefined systems of multivariate quadratic equations.
+\newblock In {\em Proceedings of Public Key Cryptography 2002, LNCS 2274},
+  pages 211--227. Springer-Verlag, 2002.
+
+\bibitem{ding-schmidt}
+J.~Ding and D.~Schmidt.
+\newblock Rainbow, a new multivariable polynomial signature scheme.
+\newblock In {\em International Conference on Applied Cryptography and Network
+  Security -- ACNS 2005}, volume 3531 of {\em Lecture Notes in Computer
+  Science}, pages 164--175. Springer, 2005.
+
+\bibitem{dods:05}
+C.~Dods, N.~Smart, and M.~Stam.
+\newblock Hash-based digital signature schemes.
+\newblock In {\em In Cryptography and Coding, LNCS 3796}, pages 96--115.
+  Springer, 2005.
+
+\bibitem{dods-smart-stam}
+C.~Dods, Nigel Smart, and Martijn Stam.
+\newblock Hash based digital signature schemes.
+\newblock In {\em Cryptography and Coding}, pages 96--115. Springer Verlag LNCS
+  3796, November 2005.
+
+\bibitem{faugere-otmani-perret-tillich}
+J.-C. Faug\`ere, A.~Otmani, L.~Perret, and J.-P. Tillich.
+\newblock Algebraic cryptanalysis of {M}c{E}liece variants with compact keys.
+\newblock In {\em Advances in Cryptology -- {Eurocrypt} 2010}, volume 6110 of
+  {\em Lecture Notes in Computer Science}, pages 279--298, Nice, France, 2010.
+  Springer.
+
+\bibitem{gaborit}
+P.~Gaborit.
+\newblock Shorter keys for code based cryptography.
+\newblock In {\em International Workshop on Coding and Cryptography -- {WCC}
+  2005}, pages 81--91, Bergen, Norway, 2005. {ACM} Press.
+
+\bibitem{gallager}
+Robert~G. Gallager.
+\newblock Low-density parity-check codes, 1963.
+
+\bibitem{garey-johnson}
+M.~R. Garey and D.~S. Johnson.
+\newblock {\em Computers and Intractability -- A Guide to the Theory of
+  NP-Completeness}.
+\newblock W.H. Freeman and Company, 1979.
+
+\bibitem{multilin}
+Sanjam Garg, Craig Gentry, and Shai Halevi.
+\newblock Candidate multilinear maps from ideal lattices.
+\newblock In {\em EUROCRYPT}, pages 1--17, 2013.
+
+\bibitem{funcenc}
+Sanjam Garg, Craig Gentry, Shai Halevi, Mariana Raykova, Amit Sahai, and Brent
+  Waters.
+\newblock Candidate indistinguishability obfuscation and functional encryption
+  for all circuits.
+\newblock {\em IACR Cryptology ePrint Archive}, 2013:451, 2013.
+
+\bibitem{gentry}
+Craig Gentry.
+\newblock {\em A fully homomorphic encryption scheme}.
+\newblock PhD thesis, Stanford University, 2009.
+\newblock \url{crypto.stanford.edu/craig}.
+
+\bibitem{criptomania}
+Craig Gentry.
+\newblock Encrypted messages from the heights of cryptomania.
+\newblock In {\em TCC}, pages 120--121, 2013.
+
+\bibitem{signtrap}
+Craig Gentry, Chris Peikert, and Vinod Vaikuntanathan.
+\newblock Trapdoors for hard lattices and new cryptographic constructions.
+\newblock In {\em Proceedings of the 40th annual ACM symposium on Theory of
+  computing}, STOC '08, pages 197--206, New York, NY, USA, 2008. ACM.
+
+\bibitem{abe}
+Craig Gentry, Amit Sahai, and Brent Waters.
+\newblock Homomorphic encryption from learning with errors:
+  Conceptually-simpler, asymptotically-faster, attribute-based.
+\newblock In {\em CRYPTO (1)}, pages 75--92, 2013.
+
+\bibitem{gibson1996}
+J.~K. Gibson.
+\newblock The security of the {Gabidulin} public key cryptosystem.
+\newblock In {\em Advances in Cryptology -- {Eurocrypt} 1996}, volume 1070 of
+  {\em Lecture Notes in Computer Science}, pages 212--223, Zaragoza, Spain,
+  1996. Springer.
+
+\bibitem{Goldreich-Goldwasser-Halevi}
+O.~Goldreich, S.~Goldwasser, and S.~Halevi.
+\newblock Public-key cryptosystems from lattice reduction problems.
+\newblock In {\em Advances in Cryptology---{CRYPTO}~'97}, Lecture Notes in
+  Computer Science, pages 112--131. Springer-Verlag, 1997.
+
+\bibitem{goppa}
+V.~D. Goppa.
+\newblock A new class of linear error correcting codes.
+\newblock {\em Problemy Peredachi Informatsii}, 6:24--30, 1970.
+
+\bibitem{NTRU}
+Jeffrey Hoffstein, Jill Pipher, and Joseph~H. Silverman.
+\newblock Ntru: A ring-based public key cryptosystem.
+\newblock In {\em Lecture Notes in Computer Science}, pages 267--288.
+  Springer-Verlag, 1998.
+
+\bibitem{huffman-pless}
+W.C. Huffman and V.~Pless.
+\newblock {\em Fundamentals of Error-Correcting Codes}.
+\newblock Cambridge University Press, 2003.
+
+\bibitem{bernst:09}
+E.~Dahmen J.~Buchmann and M.~Szydlo.
+\newblock Hash-based digital signature schemes.
+\newblock In {\em Post-Quantum Cryptography}, pages 35--92. Springer, 2008.
+
+\bibitem{kipnis-shamir}
+A.~Kipnis and A.~Shamir.
+\newblock Cryptanalysis of the oil and vinegar signature scheme.
+\newblock In H.~Krawczyk, editor, {\em Advances in Cryptology -- Crypto 1998},
+  volume 1462 of {\em Lecture Notes in Computer Science}, pages 257--266.
+  Springer, 1998.
+
+\bibitem{kipnis-patarin-goubin}
+Aviad Kipnis, Jacques Patarin, and Louis Goubin.
+\newblock Unbalanced oil and vinegar signature schemes.
+\newblock In J.~Stern, editor, {\em In Advances in Cryptology -- EUROCRYPT
+  1999}, volume 1592 of {\em Lecture Notes in Computer Science}, pages
+  206--222. Springer, 1999.
+
+\bibitem{kipnis-patarin-goubin-ext}
+Aviad Kipnis, Jacques Patarin, and Louis Goubin.
+\newblock Unbalanced oil and vinegar signature schemes -- extended version.
+\newblock 2003.
+
+\bibitem{lamport:79}
+L.~Lamport.
+\newblock Constructing digital signatures from a one way function.
+\newblock In {\em SRI International}. CSL-98, 1979.
+
+\bibitem{LLL}
+A~K Lenstra, H~W Lenstra, and L~Lovász.
+\newblock Factoring polynomials with rational coefficients.
+\newblock {\em Mathematische Annalen}, 261(4):515--534, 1982.
+
+\bibitem{fe10}
+Allison Lewko, Tatsuaki Okamoto, Amit Sahai, Katsuyuki Takashima, and Brent
+  Waters.
+\newblock Fully secure functional encryption: Attribute-based encryption and
+  (hierarchical) inner product encryption.
+\newblock In Henri Gilbert, editor, {\em Advances in Cryptology – EUROCRYPT
+  2010}, volume 6110 of {\em Lecture Notes in Computer Science}, pages 62--91.
+  Springer Berlin Heidelberg, 2010.
+
+\bibitem{RingLWE}
+Vadim Lyubashevsky, Chris Peikert, and Oded Regev.
+\newblock On ideal lattices and learning with errors over rings.
+\newblock {\em Advances in Cryptology EUROCRYPT 2010}, 6110/2010(015848):1?23,
+  2010.
+
+\bibitem{macwilliams-sloane}
+F.~J. MacWilliams and N.~J.~A. Sloane.
+\newblock {\em The theory of error-correcting codes}, volume~16.
+\newblock North-Holland Mathematical Library, Amsterdam, The Netherlands, 1977.
+
+\bibitem{mmo85}
+S.M. Matyas, C.H. Meyer, and J.~Oseas.
+\newblock {Generating strong one-way functions with cryptographic algorithm}.
+\newblock IBM Techn. Disclosure Bull., 1985.
+
+\bibitem{McEliece}
+R.~McEliece.
+\newblock A public-key cryptosystem based on algebraic coding theory.
+\newblock The Deep Space Network Progress Report, {DSN PR} 42--44, 1978.
+\newblock \url{http://ipnpr.jpl.nasa.gov/progress report2/42-44/44N.PDF}.
+  Acesso em: \today.
+
+\bibitem{merkle:79}
+R.~C. Merkle.
+\newblock {\em Secrecy, Authentication, and Public Key Systems}.
+\newblock Stanford Ph.D. thesis, 1979.
+
+\bibitem{merkle:87}
+R.C. Merkle.
+\newblock A digital signature based on a conventional encryption function.
+\newblock In {\em Proceedings of Crypto ’87}, pages 369--378. Springer, 1987.
+
+\bibitem{strongtrap}
+Daniele Micciancio and Chris Peikert.
+\newblock Trapdoors for lattices: Simpler, tighter, faster, smaller.
+\newblock In David Pointcheval and Thomas Johansson, editors, {\em Advances in
+  Cryptology – EUROCRYPT 2012}, volume 7237 of {\em Lecture Notes in Computer
+  Science}, pages 700--718. Springer Berlin Heidelberg, 2012.
+
+\bibitem{miller}
+V.~S. Miller.
+\newblock Use of elliptic curves in cryptography.
+\newblock In {\em Advances in Cryptology --- Crypto '85}, pages 417--426, New
+  York, 1986. Springer-Verlag.
+
+\bibitem{misoczki-sendrier-tillich-barreto}
+R.~Misoczki, N.~Sendrier, J.-P. Tilllich, and P.~S.~L.~M. Barreto.
+\newblock {MDPC}-{M}c{E}liece: New {M}c{E}liece variants from moderate density
+  parity-check codes.
+\newblock Cryptology ePrint Archive, Report 2012/409, 2012.
+\newblock \url{http://eprint.iacr.org/2012/409}.
+
+\bibitem{monico-rosenthal-shokrollahi}
+C.~Monico, J.~Rosenthal, and A.~Shokrollahi.
+\newblock Using low density parity check codes in the {M}c{E}liece
+  cryptosystem.
+\newblock In {\em {IEEE} International Symposium on Information Theory --
+  {ISIT} 2000}, page 215, Sorrento, Italy, 2000. {IEEE}.
+
+\bibitem{minicursoFHE}
+E.~M. Morais and R.~Dahab.
+\newblock Encriptação homomórfica.
+\newblock SBSeg, 2012.
+
+\bibitem{signattack2}
+PhongQ. Nguyen and Oded Regev.
+\newblock Learning a parallelepiped: Cryptanalysis of ggh and ntru signatures.
+\newblock In Serge Vaudenay, editor, {\em Advances in Cryptology - EUROCRYPT
+  2006}, volume 4004 of {\em Lecture Notes in Computer Science}, pages
+  271--288. Springer Berlin Heidelberg, 2006.
+
+\bibitem{Niederreiter}
+H.~Niederreiter.
+\newblock Knapsack-type cryptosystems and algebraic coding theory.
+\newblock {\em Problems of Control and Information Theory}, 15(2):159--166,
+  1986.
+
+\bibitem{DSS:07}
+NIST.
+\newblock {Digital Signature Standard (DSS)}.
+\newblock {FIPS PUB-186-2, http://csrc.nist.gov/publications/fips}, 2007.
+
+\bibitem{ana:13}
+A.~K. D.~S. Oliveira and J.~López.
+\newblock Implementação em software do esquema de assinatura digital de
+  merkle e suas variantes.
+\newblock SBSeg, 2013.
+
+\bibitem{otmani-tillich-dallot}
+A.~Otmani, J.-P. Tillich, and L.~Dallot.
+\newblock Cryptanalysis of two {M}c{E}liece crypto\-systems based on
+  quasi-cyclic codes.
+\newblock {\em Mathematics in Computer Science}, 3(2):129--140, 2010.
+
+\bibitem{Patarin}
+J.~Patarin.
+\newblock The oil and vinegar signature scheme.
+\newblock In {\em Dagstuhl Workshop on Cryptography}, 1997.
+\newblock transparencies.
+
+\bibitem{patarin-ip}
+Jacques Patarin.
+\newblock Hidden fields equations (hfe) and isomorphisms of polynomials (ip):
+  Two new families of asymmetric algorithms.
+\newblock In Ueli Maurer, editor, {\em Advances in Cryptology -- EUROCRYPT
+  '96}, volume 1070 of {\em Lecture Notes in Computer Science}, pages 33--48.
+  Springer Berlin Heidelberg, 1996.
+
+\bibitem{Patarin-Goubin}
+Jacques Patarin and Louis Goubin.
+\newblock Trapdoor one-way permutations and multivariate polynomials.
+\newblock In {\em Proc. of ICICS'97, LNCS 1334}, pages 356--368. Springer,
+  1997.
+
+\bibitem{patarin-goubin-courtois}
+Jacques Patarin, Louis Goubin, and Nicolas Courtois.
+\newblock Improved algorithms for isomorphisms of polynomials.
+\newblock In {\em Advances in Cryptology -- {EUROCRYPT} '98 (Kaisa Nyberg, Ed},
+  pages 184--200. Springer-Verlag, 1998.
+
+\bibitem{patterson}
+N.~J. Patterson.
+\newblock The algebraic decoding of {G}oppa codes.
+\newblock {\em {IEEE} Transactions on Information Theory}, 21(2):203--207,
+  1975.
+
+\bibitem{peikert}
+Chris Peikert.
+\newblock Public-key cryptosystems from the worst-case shortest vector problem:
+  extended abstract.
+\newblock In {\em Proceedings of the 41st annual ACM symposium on Theory of
+  computing}, STOC '09, pages 333--342, New York, NY, USA, 2009. ACM.
+
+\bibitem{petzoldt-bulygin-buchmann:cyclicrainbow}
+A.~Petzoldt, S.~Bulygin, and J.~Buchmann.
+\newblock {C}yclic{R}ainbow -- a multivariate signature scheme with a partially
+  cyclic public key.
+\newblock In Guang Gong and KishanChand Gupta, editors, {\em Progress in
+  Cryptology -- Indocrypt 2010}, volume 6498 of {\em Lecture Notes in Computer
+  Science}, pages 33--48. Springer Berlin Heidelberg, 2010.
+
+\bibitem{petzoldt-bulygin-buchmann:params}
+A.~Petzoldt, S.~Bulygin, and J.~Buchmann.
+\newblock Selecting parameters for the {R}ainbow signature scheme.
+\newblock In Nicolas Sendrier, editor, {\em Post-Quantum Cryptography Workshop
+  -- {PQCrypto} 2010}, volume 6061 of {\em Lecture Notes in Computer Science},
+  pages 218--240. Springer Berlin / Heidelberg, 2010.
+\newblock Extended Version: \url{http://eprint.iacr.org/2010/437}.
+
+\bibitem{petzoldt-bulygin-buchmann:LRS}
+A.~Petzoldt, S.~Bulygin, and J.~Buchmann.
+\newblock Linear recurring sequences for the {UOV} key generation.
+\newblock In {\em International Conference on Practice and Theory in Public Key
+  Cryptography -- {PKC} 2011}, volume 6571 of {\em Lecture Notes in Computer
+  Science}, pages 335--350. Springer Berlin Heidelberg, 2011.
+
+\bibitem{petzoldt-bulygin-buchmann:cyclicouv}
+Albrecht Petzoldt, Stanislav Bulygin, and Johannes Buchmann.
+\newblock Cyclicrainbow - a multivariate signature scheme with a partially
+  cyclic public key.
+\newblock In Guang Gong and Kishan~Chand Gupta, editors, {\em INDOCRYPT},
+  volume 6498 of {\em Lecture Notes in Computer Science}, pages 33--48.
+  Springer, 2010.
+
+\bibitem{preneel79}
+B.~Preneel.
+\newblock {\em {Analysis and design of cryptographic hash functions}}.
+\newblock PhD thesis, Katholieke Universiteit Leuven, 1983.
+
+\bibitem{Rabin78}
+Michael~O. Rabin.
+\newblock {\em Foundations of secure computation}, chapter Digitalized
+  signatures.
+\newblock Academic Press, 1978.
+
+\bibitem{surveyRegev10}
+Oded Regev.
+\newblock The learning with errors problem (invited survey).
+\newblock In {\em IEEE Conference on Computational Complexity}, pages 191--204.
+  IEEE Computer Society, 2010.
+
+\bibitem{rivest-shamir-adleman}
+R.~L. Rivest, A.~Shamir, and L.~Adleman.
+\newblock A method for obtaining digital signatures and public-key
+  cryptosystems.
+\newblock {\em Communications of the ACM}, 21:120--126, 1978.
+
+\bibitem{abeLWE}
+Amit Sahai and Brent Waters.
+\newblock Attribute-based encryption for circuits from multilinear maps.
+\newblock {\em CoRR}, abs/1210.5287, 2012.
+
+\bibitem{sendrier-doom}
+Nicolas Sendrier.
+\newblock Decoding one out of many.
+\newblock In Bo-Yin Yang, editor, {\em Post-Quantum Cryptography}, volume 7071
+  of {\em Lecture Notes in Computer Science}, pages 51--67. Springer Berlin /
+  Heidelberg, 2011.
+\newblock 10.1007/978-3-642-25405-5-4.
+
+\bibitem{shor}
+P.~W. Shor.
+\newblock Polynomial-time algorithms for prime factorization and discrete
+  logarithms on a quantum computer.
+\newblock {\em SIAM J. Comput.}, 26:1484--1509, 1997.
+
+\bibitem{Stehle2011}
+Damien Stehl{\'e} and Ron Steinfeld.
+\newblock Making ntru as secure as worst-case problems over ideal lattices.
+\newblock In {\em Proceedings of the 30th Annual international conference on
+  Theory and applications of cryptographic techniques: advances in cryptology},
+  EUROCRYPT'11, pages 27--47, Berlin, Heidelberg, 2011. Springer-Verlag.
+
+\bibitem{stern}
+J.~Stern.
+\newblock A method for finding codewords of small weight.
+\newblock {\em Coding Theory and Applications}, 388:106--133, 1989.
+
+\bibitem{stern-sign}
+J.~Stern.
+\newblock Can one design a signature scheme based on error-correcting codes?
+\newblock {\em Lecture Notes in Computer Science}, 917:424--??, 1995.
+
+\bibitem{szydlo:03}
+M.~Szydlo.
+\newblock Merkle tree traversal in log space and time.
+\newblock In {\em Prepint version, 2003}. 2003.
+
+\bibitem{tanner}
+R.~M. Tanner.
+\newblock Spectral graphs for quasi-cyclic {LDPC} codes.
+\newblock In {\em {IEEE} International Symposium on Information Theory --
+  {ISIT} 2001}, page 226, Washington, DC, {USA}, 2001. {IEEE}.
+
+\bibitem{thomae}
+E.~Thomae.
+\newblock A generalization of the {R}ainbow band separation attack and its
+  applications to multivariate schemes.
+\newblock Cryptology ePrint Archive, Report 2012/223, 2012.
+\newblock \url{http://eprint.iacr.org/2012/223}.
+
+\bibitem{gauthier-leander}
+V.~Gauthier Uma{\~n}a and G.~Leander.
+\newblock Practical key recovery attacks on two {M}c{E}liece variants.
+\newblock In {\em International Conference on Symbolic Computation and
+  Cryptography -- {SCC} 2010}, Egham, {UK}, 2010. Springer.
+
+\bibitem{wieschebrink}
+C.~Wieschebrink.
+\newblock Two {NP}-complete problems in coding theory with an application in
+  code based cryptography.
+\newblock In {\em {IEEE} International Symposium on Information Theory --
+  {ISIT} 2006}, pages 1733--1737, Seattle, {USA}, 2006. {IEEE}.
+
+\bibitem{winternitz83}
+Robert~S. Winternitz.
+\newblock Producing a one-way hash function from des.
+\newblock In {\em Advances in Cryptology: Proceedings of CRYPTO '83}, pages
+  203--207. Plenum, 1983.
+
+\bibitem{wolf-preneel-taxonomy}
+Christopher Wolf and Bart Preneel.
+\newblock Taxonomy of public key schemes based on the problem of multivariate
+  quadratic equations.
+\newblock {\em IACR Cryptology ePrint Archive}, 2005:77, 2005.
+
+\bibitem{yasuda-sakurai-takagi}
+T.~Yasuda, K~Sakurai, and T.~Takagi.
+\newblock Reducing the key size of {R}ainbow using non-commutative rings.
+\newblock In {\em Topics in Cryptology -- CT-RSA 2012}, volume 7178 of {\em
+  Lecture Notes in Computer Science}, pages 68--83. Springer, 2012.
+
+\end{thebibliography}

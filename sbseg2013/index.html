@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SBSeg 2013 — XIII Simpósio Brasileiro em Segurança da Informação e de Sistemas Computacionais · Manaus</title>
+<meta name="description" content="Reconstrução estática do site do SBSeg 2013, o XIII Simpósio Brasileiro em Segurança da Informação e de Sistemas Computacionais, realizado de 11 a 14 de novembro de 2013 em Manaus (AM), no Studio 5 Centro de Convenções.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23347a2f' d='M16 2 4 7v8c0 7 5 12 12 15 7-3 12-8 12-15V7L16 2Zm0 5 8 3v5c0 5-3 8-8 10-5-2-8-5-8-10V10l8-3Z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --soft:#f4f7f2;
+    --line:#e3e9df;
+    --line-soft:#eef2ec;
+    --text:#1b2a1c;
+    --muted:#566355;
+    --faint:#8a978a;
+    --green:#347a2f;        /* Amazônia */
+    --green-dark:#235221;
+    --green-deep:#16331a;
+    --olive:#a7c44e;        /* "SB" do logo */
+    --slate:#5b86a6;        /* "Seg" do logo */
+    --gold:#c79a3e;         /* faixa dourada */
+    --gold-soft:#f4ead0;
+    --macaw:#d8472b;        /* arara */
+    --maxw:1100px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);
+    font-family:"Inter",-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  /* ---------- archive top menu (consistent with the rest of the site) ---------- */
+  header.topbar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.93);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header.topbar .tb-wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;display:flex;
+    align-items:center;justify-content:space-between;gap:1rem;min-height:60px;flex-wrap:wrap}
+  header.topbar .brand{display:flex;align-items:center;gap:9px;font-weight:800;
+    letter-spacing:-.02em;font-size:1.05rem;color:var(--text)}
+  header.topbar .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--green)}
+  header.topbar .brand .sub{color:var(--faint);font-weight:500}
+  header.topbar nav{display:flex;flex-wrap:wrap;gap:.5rem 1.35rem;font-size:.9rem;font-weight:500}
+  header.topbar nav a{color:var(--muted);transition:color .2s}
+  header.topbar nav a:hover{color:var(--green)}
+  @media(max-width:680px){header.topbar .tb-wrap{padding:.55rem 1rem}
+    header.topbar nav{gap:.35rem 1rem;font-size:.82rem}}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;color:#eef5ea;overflow:hidden;
+    background:
+      radial-gradient(120% 120% at 80% 10%, rgba(216,71,43,.20), transparent 45%),
+      linear-gradient(160deg, var(--green-deep), var(--green-dark) 55%, var(--green))}
+  .hero::after{content:"";position:absolute;inset:0;opacity:.10;pointer-events:none;
+    background-image:radial-gradient(circle at 1px 1px, #fff 1px, transparent 0);background-size:22px 22px}
+  .hero .wrap{position:relative;padding:54px 24px 60px}
+  .ribbon{display:inline-block;background:var(--gold);color:#3a2b06;font-weight:700;
+    font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 14px;border-radius:6px}
+  .hero-logo{margin:24px 0 18px;max-width:420px;width:100%;height:auto;
+    filter:drop-shadow(0 10px 24px rgba(0,0,0,.35));border-radius:10px}
+  h1.title{font-size:clamp(1.7rem,4.2vw,2.7rem);font-weight:800;letter-spacing:-.02em;line-height:1.12;max-width:22ch}
+  .hero .edn{color:var(--olive);font-weight:700}
+  .hero-meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px 12px}
+  .hero-meta span{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);
+    border-radius:999px;padding:7px 15px;font-size:.9rem}
+  .hero-meta b{color:#fff;font-weight:700}
+  .promo{margin-top:22px;font-size:.86rem;color:#cfe0c8}
+  .promo b{color:#fff}
+
+  /* ---------- generic section ---------- */
+  section{padding:46px 0}
+  section:nth-of-type(even){background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .sec-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:24px}
+  .sec-head h2{font-size:1.55rem;font-weight:700;letter-spacing:-.01em;color:var(--green-dark)}
+  .sec-head h2::before{content:"";display:inline-block;width:26px;height:4px;border-radius:3px;
+    background:var(--gold);margin-right:12px;vertical-align:middle}
+  .sec-head .tag{font-size:.84rem;color:var(--faint)}
+  .lead{max-width:74ch;color:var(--muted)}
+  .lead+.lead{margin-top:14px}
+
+  /* ---------- dates ---------- */
+  .dates{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+  .date{background:var(--bg);border:1px solid var(--line);border-left:3px solid var(--green);
+    border-radius:10px;padding:14px 16px}
+  .date .d{font-weight:700;color:var(--green-dark);font-size:1.02rem}
+  .date .l{font-size:.86rem;color:var(--muted);margin-top:2px}
+
+  /* ---------- program ---------- */
+  .days{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .day{background:var(--bg);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+  .day h3{background:linear-gradient(120deg,var(--green-dark),var(--green));color:#fff;
+    padding:12px 16px;font-size:1.02rem;font-weight:700}
+  .day h3 span{display:block;font-size:.78rem;font-weight:500;color:#d4e7cd}
+  .slots{padding:8px 16px 16px;display:grid;gap:2px}
+  .slot{padding:9px 0;border-bottom:1px dashed var(--line)}
+  .slot:last-child{border-bottom:0}
+  .slot .t{font-size:.74rem;font-weight:700;color:var(--gold);letter-spacing:.02em}
+  .slot .track{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--slate)}
+  .slot .n{font-size:.9rem;color:var(--text)}
+  .slot .n em{color:var(--muted);font-style:normal;font-size:.82rem}
+
+  /* ---------- card lists (minicursos / workshops) ---------- */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+  .icard{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .icard .k{font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--green)}
+  .icard h3{font-size:1.02rem;margin:6px 0 6px;color:var(--text)}
+  .icard p{font-size:.88rem;color:var(--muted)}
+
+  /* ---------- topics ---------- */
+  .topics{display:flex;flex-wrap:wrap;gap:8px}
+  .topics span{background:var(--bg);border:1px solid var(--line);border-radius:999px;
+    padding:6px 13px;font-size:.84rem;color:var(--muted)}
+
+  /* ---------- organization ---------- */
+  .org{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+  .role{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .role h3{font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--green-dark);
+    padding-left:.6rem;border-left:3px solid var(--gold);margin-bottom:10px}
+  .role ul{list-style:none;display:grid;gap:8px}
+  .role .person{font-weight:600}
+  .role .affil{color:var(--muted);font-size:.86rem;margin-left:6px}
+
+  /* ---------- sponsors ---------- */
+  .spon{display:grid;gap:18px}
+  .spon-row h3{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);margin-bottom:10px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chips span{background:var(--bg);border:1px solid var(--line);border-radius:10px;
+    padding:10px 16px;font-weight:600;font-size:.92rem;color:var(--green-dark)}
+
+  /* ---------- venue ---------- */
+  .venue{display:grid;grid-template-columns:1.2fr 1fr;gap:18px;align-items:start}
+  .venue .box{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .venue .box h3{color:var(--green-dark);font-size:1.05rem;margin-bottom:6px}
+  .venue .box p{color:var(--muted);font-size:.92rem}
+  @media(max-width:680px){.venue{grid-template-columns:1fr}}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--green-deep);color:#cfe0c8}
+  footer .wrap{padding:40px 24px 50px}
+  .flinks{display:flex;flex-wrap:wrap;gap:14px 26px;margin-bottom:20px}
+  .flinks a{color:#eaf3e6;font-weight:500;font-size:.9rem;border-bottom:1px solid transparent;transition:border-color .2s}
+  .flinks a:hover{border-color:var(--olive)}
+  .archive-note{border:1px solid rgba(255,255,255,.18);border-left:3px solid var(--gold);border-radius:8px;
+    padding:14px 16px;max-width:78ch;font-size:.88rem;background:rgba(255,255,255,.04)}
+  .archive-note b{color:#fff}
+  .colophon{margin-top:22px;font-size:.82rem;color:#9fb59a;line-height:1.9}
+
+  @media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="tb-wrap">
+    <a class="brand" href="../"><span class="dot"></span>SBSeg <span class="sub">/ CESeg</span></a>
+    <nav>
+      <a href="../#edicoes">Edições</a>
+      <a href="../organizadores/">Organizadores</a>
+      <a href="../palestrantes/">Palestrantes</a>
+      <a href="../premiacoes/">Premiações</a>
+      <a href="../patrocinadores/">Patrocinadores</a>
+      <a href="https://sol.sbc.org.br/index.php/sbseg" target="_blank" rel="noopener">Anais</a>
+      <a href="https://ceseg-sbc.github.io" target="_blank" rel="noopener">CESeg</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <span class="ribbon">11 a 14 de novembro de 2013 · Manaus — AM</span>
+    <img class="hero-logo" src="assets/sbseg2013-logo.png"
+         alt="Logomarca do SBSeg 2013 — Manaus, com a arara da Amazônia">
+    <h1 class="title"><span class="edn">XIII</span> Simpósio Brasileiro em Segurança
+      da Informação e de Sistemas Computacionais</h1>
+    <div class="hero-meta">
+      <span><b>SBSeg 2013</b></span>
+      <span>📍 Studio 5 <b>Centro de Convenções</b></span>
+      <span>🗓 <b>11–14</b> nov. 2013</span>
+      <span>Manaus · <b>Amazonas</b></span>
+    </div>
+    <p class="promo">Promoção <b>Sociedade Brasileira de Computação (SBC)</b> ·
+      Realização <b>Instituto de Computação (IComp) / UFAM</b></p>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap">
+    <div class="sec-head"><h2>Sobre o evento</h2><span class="tag">apresentação</span></div>
+    <p class="lead">O <strong>Simpósio Brasileiro em Segurança da Informação e de Sistemas
+      Computacionais (SBSeg)</strong> é um evento científico promovido anualmente pela Sociedade
+      Brasileira de Computação (SBC). Representa o principal fórum no país para divulgação de
+      resultados de pesquisas, debates, intercâmbio de ideias e atividades relevantes ligadas à
+      segurança da informação e de sistemas, integrando a comunidade brasileira de pesquisadores
+      e profissionais atuantes nessa área.</p>
+    <p class="lead">A <strong>13ª edição</strong> do simpósio foi realizada de <strong>11 a 14 de
+      novembro de 2013</strong>, em <strong>Manaus, Amazonas</strong>, reunindo a trilha principal
+      de sessões técnicas, palestras nacionais e internacionais, minicursos e diversos workshops e
+      eventos satélite.</p>
+  </div>
+</section>
+
+<section id="datas">
+  <div class="wrap">
+    <div class="sec-head"><h2>Datas importantes</h2><span class="tag">trilha principal de artigos</span></div>
+    <div class="dates">
+      <div class="date"><div class="d">17 de junho</div><div class="l">Registro de artigos (título, autores, resumo)</div></div>
+      <div class="date"><div class="d">24 de junho</div><div class="l">Submissão dos artigos</div></div>
+      <div class="date"><div class="d">23 de agosto</div><div class="l">Notificação de aceitação</div></div>
+      <div class="date"><div class="d">9 de setembro</div><div class="l">Envio da versão final</div></div>
+      <div class="date"><div class="d">11–14 de novembro</div><div class="l">Realização do evento</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="programa">
+  <div class="wrap">
+    <div class="sec-head"><h2>Programação</h2><span class="tag">visão geral · 11 a 14 nov.</span></div>
+    <div class="days">
+
+      <div class="day">
+        <h3>Segunda · 11 nov<span>Minicursos · WGID · WTICG</span></h3>
+        <div class="slots">
+          <div class="slot"><div class="t">08:30 – 12:30</div><div class="n">Minicurso 1 — Anti-Forense Digital: Conceitos, Técnicas, Ferramentas e Estudos de Caso</div></div>
+          <div class="slot"><div class="t">08:30 – 12:30</div><div class="n">Minicurso 3 — Segurança de Software em Sistemas Embarcados: Ataques &amp; Defesas</div></div>
+          <div class="slot"><div class="t">14:30 – 18:30</div><div class="n">Minicurso 2 — Criptografia Pós-Quântica</div></div>
+          <div class="slot"><div class="t">14:30 – 18:30</div><div class="n">Minicurso 4 — Infraestrutura de Autenticação e de Autorização para a Internet das Coisas</div></div>
+          <div class="slot"><div class="track">WGID</div><div class="n">Sessões técnicas, palestra e Salão de Ferramentas; Programa de Gestão de Identidades (PGID) I e II e painel</div></div>
+          <div class="slot"><div class="track">WTICG</div><div class="n">Sessões técnicas: Segurança em Redes e Sistemas · Segurança Web · Segurança da Informação</div></div>
+        </div>
+      </div>
+
+      <div class="day">
+        <h3>Terça · 12 nov<span>Trilha principal</span></h3>
+        <div class="slots">
+          <div class="slot"><div class="t">08:30 – 10:00</div><div class="n">Sessão Técnica 1 — Métodos de Autenticação, Identificação e Autorização</div></div>
+          <div class="slot"><div class="t">08:30 – 10:00</div><div class="n">Sessão Técnica 2 — Prevenção e Detecção de Ataques</div></div>
+          <div class="slot"><div class="t">10:30 – 11:30</div><div class="track">Palestra Internacional 1</div><div class="n">Securing Security Hardware <em>(en)</em></div></div>
+          <div class="slot"><div class="t">11:30 – 12:30</div><div class="track">Palestra Internacional 2</div><div class="n">Trust Evidence for Software Runtime Environments <em>(en)</em></div></div>
+          <div class="slot"><div class="t">14:30 – 15:15</div><div class="n">Sessão Técnica 3 — Mecanismos de Autenticação e de Gestão de Identidade</div></div>
+          <div class="slot"><div class="t">15:15 – 16:00</div><div class="n">Sessão Técnica 4 — Distribuição de Chaves e Detecção de Anomalias e Malwares</div></div>
+          <div class="slot"><div class="t">16:30 – 18:30</div><div class="track">Palestra Internacional 3</div><div class="n">Hooked On Phonics: Learning to Read Encrypted VoIP <em>(en)</em></div></div>
+        </div>
+      </div>
+
+      <div class="day">
+        <h3>Quarta · 13 nov<span>Trilha principal</span></h3>
+        <div class="slots">
+          <div class="slot"><div class="t">08:30 – 10:00</div><div class="n">Sessão Técnica 5 — Segurança em Redes</div></div>
+          <div class="slot"><div class="t">08:30 – 10:00</div><div class="n">Sessão Técnica 6 — Técnicas de Desenvolvimento de Software Seguro</div></div>
+          <div class="slot"><div class="t">10:30 – 11:30</div><div class="track">Palestra Nacional 1</div><div class="n">Desafios do IPv6 para Profissionais de Segurança</div></div>
+          <div class="slot"><div class="t">11:30 – 12:30</div><div class="track">Palestra Nacional 2</div><div class="n">Aplicação de Tecnologias da Confiança ao Controle de Serviços em Nuvens Computacionais</div></div>
+          <div class="slot"><div class="t">14:30 – 16:00</div><div class="n">Sessão Técnica 7 — Prevenção e Detecção de Ataques</div></div>
+          <div class="slot"><div class="t">14:30 – 16:00</div><div class="n">Sessão Técnica 8 — Protocolos Criptográficos</div></div>
+          <div class="slot"><div class="t">16:30 – 18:30</div><div class="track">Palestra Internacional 4</div><div class="n">An Analysis of the Buffer Overflow Problem <em>(en)</em></div></div>
+        </div>
+      </div>
+
+      <div class="day">
+        <h3>Quinta · 14 nov<span>Minicursos · WFC · FSC</span></h3>
+        <div class="slots">
+          <div class="slot"><div class="t">08:30 – 12:30</div><div class="n">Minicurso 3 — Segurança de Software em Sistemas Embarcados: Ataques &amp; Defesas</div></div>
+          <div class="slot"><div class="t">14:30 – 18:30</div><div class="n">Minicurso 4 — Infraestrutura de Autenticação e de Autorização para a Internet das Coisas</div></div>
+          <div class="slot"><div class="track">WFC</div><div class="n">Workshop de Forense Computacional — Sessões Técnicas 1 a 4</div></div>
+          <div class="slot"><div class="track">FSC</div><div class="n">Fórum de Segurança Corporativa — Sessões Técnicas 1 a 4</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="minicursos">
+  <div class="wrap">
+    <div class="sec-head"><h2>Minicursos</h2><span class="tag">capítulos no livro “Minicursos SBSeg 2013”</span></div>
+    <div class="cards">
+      <div class="icard"><div class="k">Minicurso 1</div><h3>Anti-Forense Digital</h3><p>Conceitos, técnicas, ferramentas e estudos de caso.</p></div>
+      <div class="icard"><div class="k">Minicurso 2</div><h3>Criptografia Pós-Quântica</h3><p>Fundamentos e esquemas criptográficos resistentes a computadores quânticos.</p></div>
+      <div class="icard"><div class="k">Minicurso 3</div><h3>Segurança de Software em Sistemas Embarcados</h3><p>Ataques &amp; defesas em plataformas embarcadas.</p></div>
+      <div class="icard"><div class="k">Minicurso 4</div><h3>Autenticação e Autorização para a IoT</h3><p>Infraestrutura de autenticação e de autorização para a Internet das Coisas.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="workshops">
+  <div class="wrap">
+    <div class="sec-head"><h2>Workshops e eventos satélite</h2><span class="tag">em conjunto com o simpósio</span></div>
+    <div class="cards">
+      <div class="icard"><div class="k">WTICG</div><h3>Trabalhos de Iniciação Científica e de Graduação</h3><p>Incentiva a participação de recém-graduados e alunos de graduação na produção e divulgação de trabalhos científicos em segurança. Os três melhores trabalhos foram premiados.</p></div>
+      <div class="icard"><div class="k">WGID</div><h3>Workshop de Gestão de Identidades</h3><p>Sessões técnicas, palestra, Salão de Ferramentas e o Programa de Gestão de Identidades (PGID).</p></div>
+      <div class="icard"><div class="k">WFC</div><h3>Workshop de Forense Computacional</h3><p>Sessões técnicas dedicadas à perícia e investigação digital.</p></div>
+      <div class="icard"><div class="k">FSC</div><h3>Fórum de Segurança Corporativa</h3><p>Espaço de aproximação entre academia e o setor produtivo em segurança.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="topicos">
+  <div class="wrap">
+    <div class="sec-head"><h2>Tópicos de interesse</h2><span class="tag">lista não exaustiva</span></div>
+    <div class="topics">
+      <span>Algoritmos, protocolos e técnicas criptográficas</span>
+      <span>Anonimato, auditoria e análise em sistemas</span>
+      <span>Controle de acesso, autenticação, gerência de identidade, biometria</span>
+      <span>Criminalística computacional</span>
+      <span>Detecção e prevenção de intrusões, ataques e vulnerabilidades</span>
+      <span>Direito digital</span>
+      <span>Forense computacional</span>
+      <span>Hardware criptográfico, RFID, cartões inteligentes e biometria</span>
+      <span>Modelos de confiança</span>
+      <span>Padronização e normalização em segurança</span>
+      <span>Privacidade</span>
+      <span>Proteção de propriedade intelectual e DRM</span>
+      <span>Resposta a incidentes de segurança</span>
+      <span>Segurança adaptativa e políticas de segurança</span>
+      <span>Segurança em aplicações (TV digital, e-banking, etc.)</span>
+      <span>Segurança em computação ubíqua/pervasiva</span>
+      <span>Segurança em dispositivos móveis e sistemas embarcados</span>
+      <span>Segurança em grades computacionais ou em nuvem</span>
+      <span>Segurança em middleware</span>
+      <span>Segurança em redes, redes virtuais e redes sem fio</span>
+      <span>Segurança em smart grids, smart meters e smart houses</span>
+      <span>Segurança em serviços web e sistemas distribuídos</span>
+      <span>Segurança e privacidade em banco de dados</span>
+      <span>Segurança e privacidade em redes sociais</span>
+      <span>Sistemas e softwares seguros: desenvolvimento, testes e certificação</span>
+      <span>Tolerância a falhas/intrusões</span>
+      <span>Votação eletrônica</span>
+    </div>
+  </div>
+</section>
+
+<section id="organizacao">
+  <div class="wrap">
+    <div class="sec-head"><h2>Organização</h2><span class="tag">comitê de coordenação</span></div>
+    <div class="org">
+      <div class="role">
+        <h3>Coordenação Geral</h3>
+        <ul>
+          <li><span class="person">Eduardo Luzeiro Feitosa</span><span class="affil">UFAM</span></li>
+          <li><span class="person">Eduardo James Pereira Souto</span><span class="affil">UFAM</span></li>
+        </ul>
+      </div>
+      <div class="role">
+        <h3>Comitê de Programa</h3>
+        <ul>
+          <li><span class="person">Raul Ceretta Nunes</span><span class="affil">UFSM</span></li>
+          <li><span class="person">Michel Abdalla</span><span class="affil">ENS Paris</span></li>
+        </ul>
+      </div>
+      <div class="role">
+        <h3>Palestras e Tutoriais</h3>
+        <ul>
+          <li><span class="person">Anderson Clayton Alves Nascimento</span><span class="affil">UnB</span></li>
+        </ul>
+      </div>
+      <div class="role">
+        <h3>Minicursos</h3>
+        <ul>
+          <li><span class="person">Rossana Maria de Castro Andrade</span><span class="affil">UFC</span></li>
+        </ul>
+      </div>
+      <div class="role">
+        <h3>WTICG</h3>
+        <ul>
+          <li><span class="person">Lau Cheuk Lung</span><span class="affil">UFSC</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="apoio">
+  <div class="wrap">
+    <div class="sec-head"><h2>Promoção e apoio</h2><span class="tag">instituições</span></div>
+    <div class="spon">
+      <div class="spon-row">
+        <h3>Promoção e realização</h3>
+        <div class="chips">
+          <span>SBC — Sociedade Brasileira de Computação</span>
+          <span>IComp / UFAM</span>
+        </div>
+      </div>
+      <div class="spon-row">
+        <h3>Apoio e fomento</h3>
+        <div class="chips">
+          <span>CNPq</span>
+          <span>CAPES</span>
+          <span>FAPEAM</span>
+          <span>SECTI — Amazonas</span>
+          <span>NIC.br / CGI.br</span>
+          <span>Intel</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="local">
+  <div class="wrap">
+    <div class="sec-head"><h2>Local</h2><span class="tag">Manaus — Amazonas</span></div>
+    <div class="venue">
+      <div class="box">
+        <h3>Studio 5 Centro de Convenções</h3>
+        <p>O simpósio foi sediado no Studio 5 Centro de Convenções, em Manaus, capital do Amazonas
+        — porta de entrada da Amazônia e um dos principais polos de tecnologia da região Norte.</p>
+      </div>
+      <div class="box">
+        <h3>Como chegar</h3>
+        <p>Manaus é atendida pelo Aeroporto Internacional Eduardo Gomes (MAO), com voos diretos das
+        principais capitais brasileiras.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks">
+      <a href="https://sol.sbc.org.br/index.php/sbseg" target="_blank" rel="noopener">↗ Anais do SBSeg (SOL/SBC)</a>
+      <a href="https://ceseg-sbc.github.io" target="_blank" rel="noopener">↗ CESeg</a>
+      <a href="https://www.sbc.org.br" target="_blank" rel="noopener">↗ Sociedade Brasileira de Computação</a>
+      <a href="../">↗ Arquivo histórico do SBSeg</a>
+    </div>
+    <p class="archive-note">Esta página é uma <b>reconstrução estática</b> do site do SBSeg 2013,
+    elaborada a partir de documentos públicos do evento (chamadas de trabalhos, programação e
+    materiais de divulgação). O site original (<i>sbseg2013.icomp.ufam.edu.br</i>) não está mais
+    disponível. Os <b>anais</b> permanecem acessíveis na Biblioteca Digital SOL da SBC.</p>
+    <p class="colophon">
+      SBSeg 2013 — XIII Simpósio Brasileiro em Segurança da Informação e de Sistemas Computacionais<br>
+      Manaus · AM · 11 a 14 de novembro de 2013 · Studio 5 Centro de Convenções<br>
+      Reconstrução para o arquivo histórico da CESeg/SBC · 2026
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

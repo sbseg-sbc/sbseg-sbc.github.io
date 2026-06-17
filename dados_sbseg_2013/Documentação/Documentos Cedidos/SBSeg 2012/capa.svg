@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448"
+   height="1052.3622"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="capa.svg"
+   version="1.0"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective2821"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2835"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2998"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6271-4"
+       id="linearGradient3857"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.30000088,0,0,9.8966842,-435.82753,-1052.0088)"
+       x1="-0.17716536"
+       y1="53.149593"
+       x2="1063.1694"
+       y2="53.149593" />
+    <linearGradient
+       id="linearGradient6271-4">
+      <stop
+         style="stop-color:#1c857d;stop-opacity:1;"
+         offset="0"
+         id="stop6273-8" />
+      <stop
+         id="stop6281-9"
+         offset="0.5"
+         style="stop-color:#1c8530;stop-opacity:0.49803922;" />
+      <stop
+         style="stop-color:#1c8530;stop-opacity:0;"
+         offset="1"
+         id="stop6275-0" />
+    </linearGradient>
+    <linearGradient
+       y2="53.149593"
+       x2="1063.1694"
+       y1="53.149593"
+       x1="-0.17716536"
+       gradientTransform="matrix(0.93333339,0,0,6.3333335,-503.14904,-708.98688)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3008"
+       xlink:href="#linearGradient6271-4"
+       inkscape:collect="always" />
+    <inkscape:perspective
+       id="perspective3707"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <linearGradient
+       y2="53.149593"
+       x2="1063.1694"
+       y1="53.149593"
+       x1="-0.17716536"
+       gradientTransform="matrix(0.36666667,0,0,6.6666664,-503.14949,-726.37797)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3008-6"
+       xlink:href="#linearGradient6271-4-3"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient6271-4-3">
+      <stop
+         style="stop-color:#1c857d;stop-opacity:1;"
+         offset="0"
+         id="stop6273-8-3" />
+      <stop
+         id="stop6281-9-4"
+         offset="0.5"
+         style="stop-color:#1c8530;stop-opacity:0.49803922;" />
+      <stop
+         style="stop-color:#1c8530;stop-opacity:0;"
+         offset="1"
+         id="stop6275-0-4" />
+    </linearGradient>
+    <linearGradient
+       y2="53.149593"
+       x2="1063.1694"
+       y1="53.149593"
+       x1="-0.17716536"
+       gradientTransform="matrix(0.26666667,0,0,6.6666664,148.81931,-17.716557)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3717"
+       xlink:href="#linearGradient6271-4-3"
+       inkscape:collect="always" />
+    <inkscape:perspective
+       id="perspective2855"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2869"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2857"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2871"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.79700691"
+     inkscape:cx="465.40445"
+     inkscape:cy="495.05695"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1279"
+     inkscape:window-height="713"
+     inkscape:window-x="85"
+     inkscape:window-y="24"
+     units="mm"
+     gridtolerance="5"
+     objecttolerance="5"
+     guidetolerance="5"
+     inkscape:object-nodes="true"
+     inkscape:snap-intersection-line-segments="true"
+     inkscape:snap-intersection-grid-guide="false"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2383"
+       units="mm"
+       visible="true"
+       enabled="true"
+       empspacing="5"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,527.95292)">
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="358.50571"
+       y="488.9762"
+       id="text2871"><tspan
+         sodipodi:role="line"
+         id="tspan2873"
+         x="358.50571"
+         y="488.9762" /></text>
+    <rect
+       style="fill:url(#linearGradient3008);fill-opacity:1;stroke:none;display:inline"
+       id="rect6247-2-5"
+       width="992.12598"
+       height="673.22839"
+       x="-503.14978"
+       y="-708.98688"
+       transform="matrix(0,1,-1,0,0,0)" />
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Andale Mono"
+       x="372.12656"
+       y="-343.70099"
+       id="text2849"><tspan
+         sodipodi:role="line"
+         id="tspan2851"
+         x="372.12656"
+         y="-343.70099">SBSeg 2012</tspan><tspan
+         sodipodi:role="line"
+         x="372.12656"
+         y="-253.70099"
+         id="tspan2853">Curitiba - Paraná</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="372.18515"
+       y="276.37778"
+       id="text2859"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2852"
+         x="372.18515"
+         y="276.37778">Carta-Convite</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="372.32578"
+       y="-195.35452"
+       id="text2855"><tspan
+         sodipodi:role="line"
+         id="tspan2857"
+         x="372.32578"
+         y="-195.35452">XII Simpósio Brasileiro em</tspan><tspan
+         sodipodi:role="line"
+         x="372.32578"
+         y="-155.35452"
+         id="tspan2877">Segurança da Informação e de</tspan><tspan
+         sodipodi:role="line"
+         x="372.32578"
+         y="-115.35452"
+         id="tspan2881">Sistemas Computacionais</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Andale Mono Bold"
+       x="372.21445"
+       y="50.346268"
+       id="text2863"><tspan
+         sodipodi:role="line"
+         id="tspan2865"
+         x="372.21445"
+         y="50.346268">19 a 22 de novembro de 2012</tspan><tspan
+         sodipodi:role="line"
+         x="372.21445"
+         y="80.346268"
+         id="tspan2867">Centro de Convenções do Hotel Pestana Curitiba</tspan><tspan
+         sodipodi:role="line"
+         x="372.21445"
+         y="110.34627"
+         id="tspan2869" /><tspan
+         sodipodi:role="line"
+         x="372.21445"
+         y="140.34627"
+         id="tspan2883">http://www.sbc.org.br/sbseg</tspan></text>
+    <image
+       y="237.67703"
+       x="35.433071"
+       id="image2873"
+       height="251.29916"
+       width="673.22833"
+       xlink:href="file:///home/maziero/documentos/projetos/2012%20sbseg/grafico/fundos/fundo%20baixo%20transp.png" />
+  </g>
+</svg>

@@ -1,0 +1,73 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: minicurso-PQ.aux
+The style file: plain.bst
+Database file #1: minicurso-PQ.bib
+A bad cross reference---entry "braeken-wolf-preneel"
+refers to entry "DBLP:conf/ctrsa/2005", which doesn't exist
+A bad cross reference---entry "petzoldt-bulygin-buchmann:cyclicouv"
+refers to entry "conf/indocrypt/2010", which doesn't exist
+A bad cross reference---entry "surveyRegev10"
+refers to entry "conf/coco/2010", which doesn't exist
+A bad cross reference---entry "multilin"
+refers to entry "DBLP:conf/eurocrypt/2013", which doesn't exist
+A bad cross reference---entry "ibe2"
+refers to entry "DBLP:conf/focs/2007", which doesn't exist
+A bad cross reference---entry "abe"
+refers to entry "DBLP:conf/crypto/2013-1", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/ctrsa/2005"
+Warning--I didn't find a database entry for "conf/indocrypt/2010"
+Warning--I didn't find a database entry for "DBLP:conf/focs/2007"
+Warning--I didn't find a database entry for "DBLP:conf/eurocrypt/2013"
+Warning--I didn't find a database entry for "DBLP:conf/crypto/2013-1"
+Warning--I didn't find a database entry for "conf/coco/2010"
+Warning--there's a number but no volume in Babai86onlovasz
+Warning--empty publisher in buch:11
+Warning--empty booktitle in kipnis-patarin-goubin-ext
+Warning--empty booktitle in minicursoFHE
+Warning--empty booktitle in DSS:07
+Warning--empty booktitle in ana:13
+Warning--can't use both author and editor fields in Rabin78
+Warning--empty publisher in szydlo:03
+You've used 96 entries,
+            2118 wiz_defined-function locations,
+            1079 strings with 19894 characters,
+and the built_in function-call counts, 36969 in all, are:
+= -- 3795
+> -- 1418
+< -- 76
++ -- 570
+- -- 457
+* -- 2319
+:= -- 5670
+add.period$ -- 348
+call.type$ -- 96
+change.case$ -- 502
+chr.to.int$ -- 0
+cite$ -- 104
+duplicate$ -- 1676
+empty$ -- 3110
+format.name$ -- 457
+if$ -- 8310
+int.to.chr$ -- 0
+int.to.str$ -- 96
+missing$ -- 91
+newline$ -- 491
+num.names$ -- 212
+pop$ -- 662
+preamble$ -- 1
+purify$ -- 414
+quote$ -- 0
+skip$ -- 1218
+stack$ -- 0
+substring$ -- 2217
+swap$ -- 591
+text.length$ -- 76
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 372
+warning$ -- 8
+while$ -- 364
+width$ -- 98
+write$ -- 1150
+(There were 6 error messages)

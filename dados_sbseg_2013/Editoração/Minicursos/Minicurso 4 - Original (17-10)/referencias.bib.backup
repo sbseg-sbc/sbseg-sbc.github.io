@@ -1,0 +1,484 @@
+
+@article{alam2011,
+  title={Interoperability of security-enabled internet of things},
+  author={Alam, Sarfraz and Chowdhury, Mohammad MR and Noll, Josef},
+  journal={Wireless Personal Communications},
+  volume={61},
+  number={3},
+  pages={567--586},
+  year={2011},
+  publisher={Springer}
+}
+
+@inproceedings{akram2008a,
+  title={Laws of Identity in Ambient Environments: The HYDRA Approach},
+  author={Akram, Hasan and Hoffmann, Mario},
+  booktitle={Mobile Ubiquitous Computing, Systems, Services and Technologies, 2008. UBICOMM'08. The Second International Conference on},
+  pages={367--373},
+  year={2008},
+  organization={IEEE}
+}
+
+@inproceedings{akram2008b,
+  title={Supports for identity management in ambient environments-the hydra approach},
+  author={Akram, Hasan and Hoffmann, Mario},
+  booktitle={Systems and Networks Communications, 2008. ICSNC'08. 3rd International Conference on},
+  pages={371--377},
+  year={2008},
+  organization={IEEE}
+}
+
+@article{atzori2010,
+  title={The internet of things: A survey},
+  author={Atzori, Luigi and Iera, Antonio and Morabito, Giacomo},
+  journal={Computer Networks},
+  volume={54},
+  number={15},
+  pages={2787--2805},
+  year={2010},
+  publisher={Elsevier}
+}
+
+@inproceedings{babar2010,
+  author = {Babar, Sachin and Mahalle, Parikshit and Stango, Antonietta and Prasad, Neeli R. and Prasad, Ramjee},
+  title = {Proposed Security Model and Threat Taxonomy for the Internet of Things (IoT).},
+  booktitle = {CNSA},
+  editor = {Meghanathan, Natarajan and Boumerdassi, Selma and Chaki, Nabendu and Nagamalai, Dhinaharan},
+  pages = {420--429},
+  publisher = {Springer},
+  series = {Communications in Computer and Information Science},
+  volume = {89},
+  year = {2010}
+}
+
+@inproceedings{babar2011,
+  title={Proposed embedded security framework for Internet of Things (IoT)},
+  author={Babar, Sachin and Stango, Antonietta and Prasad, Neeli and Sen, Jaydip and Prasad, Ramjee},
+  booktitle={Wireless Communication, Vehicular Technology, Information Theory and Aerospace \& Electronic Systems Technology (Wireless VITAE), 2011 2nd International Conference on},
+  pages={1--5},
+  year={2011},
+  organization={IEEE}
+}
+
+
+@inproceedings{bonetto2012,
+  title={Secure communication for smart IoT objects: Protocol stacks, use cases and practical examples},
+  author={Bonetto, Riccardo and Bui, Nicola and Lakkundi, Vishwas and Olivereau, Alexis and Serbanati, Alexandru and Rossi, Michele},
+  booktitle={World of Wireless, Mobile and Multimedia Networks (WoWMoM), 2012 IEEE International Symposium on a},
+  pages={1--7},
+  year={2012},
+  organization={IEEE}
+}
+
+@TECHREPORT{ctec2008,
+  title={Future networks and the internet: Early Challenges regarding the Internet of Things},
+  author={CTEC - COMMISSION OF THE EUROPEAN COMMUNITIES},
+  institution={CTEC},
+  publisher={European Union},
+  year={2008}
+}
+
+@inproceedings{conzon2012,
+  title={The VIRTUS Middleware: An XMPP Based Architecture for Secure IoT Communications},
+  author={Conzon, Davide and Bolognesi, Thomas and Brizzi, Paolo and Lotito, Antonio and Tomasi, Riccardo and Spirito, Maurizio A},
+  booktitle={Computer Communications and Networks (ICCCN), 2012 21st International Conference on},
+  pages={1--6},
+  year={2012},
+  organization={IEEE}
+}
+
+@incollection{desouza2008,
+  title={Socrades: A web service based shop floor integration infrastructure},
+  author={De Souza, Luciana Moreira S{\'a} and Spiess, Patrik and Guinard, Dominique and K{\"o}hler, Moritz and Karnouskos, Stamatis and Savio, Domnic},
+  booktitle={The internet of things},
+  pages={50--67},
+  year={2008},
+  publisher={Springer}
+}
+
+@inproceedings{doukas2012,
+  title={Enabling data protection through PKI encryption in IoT m-Health devices},
+  author={Doukas, Charalampos and Maglogiannis, Ilias and Koufi, Vassiliki and Malamateniou, Flora and Vassilacopoulos, George},
+  booktitle={Bioinformatics \& Bioengineering (BIBE), 2012 IEEE 12th International Conference on},
+  pages={25--29},
+  year={2012},
+  organization={IEEE}
+}
+
+@article{faynberg2011,
+title={On dynamic access control in Web 2.0 and beyond: Trends and technologies},
+author={Faynberg, Igor and Lu, Hui?Lan and Ristock, Herbert},
+journal={Bell Labs Technical Journal},
+volume={16},
+number={2},
+pages={199--218},
+year={2011}
+}
+
+@inproceedings{fongen2012,
+  title={Identity management and integrity protection in the internet of things},
+  author={Fongen, Anders},
+  booktitle={Emerging Security Technologies (EST), 2012 Third International Conference on},
+  pages={111--114},
+  year={2012},
+  organization={IEEE}
+}
+
+@article{gubbi2013,
+  title={Internet of Things (IoT): A vision, architectural elements, and future directions},
+  author={Gubbi, Jayavardhana and Buyya, Rajkumar and Marusic, Slaven and Palaniswami, Marimuthu},
+  journal={Future Generation Computer Systems},
+  year={2013},
+  volume={29},
+  number={7},
+  pages={1645--1660},
+  publisher={Elsevier}
+}
+
+@inproceedings{guinard2009,
+  title={Towards the web of things: Web mashups for embedded devices},
+  author={Guinard, Dominique and Trifa, Vlad},
+  booktitle={Workshop on Mashups, Enterprise Mashups and Lightweight Composition on the Web (MEM 2009)},
+  year={2009}
+}
+
+
+@article{han2012,
+  title={An Authorization Management Approach in the Internet of Things},
+  author={Han, Qiyun and Li, Jing},
+  journal={Journal of Information \& Computational Science},
+  volume={9},
+  number={6},
+  pages={1705--1713},
+  year={2012}
+}
+
+@inproceedings{hanum2012,
+  title={Privacy preserving and ownership authentication in ubiquitous computing devices using secure three way authentication},
+  author={Hanumanthappa, Pradeep and Singh, Sanjay},
+  booktitle={Innovations in Information Technology (IIT), 2012 International Conference on},
+  pages={107--112},
+  year={2012},
+  organization={IEEE}
+}
+
+@Misc{hardt2012,
+ author = {Ed. D. Hardt},
+ title = {The OAuth 2.0 Authorization Framework},
+ month = {oct},
+ year = {2012},
+ note = {\url{http://tools.ietf.org/html/rfc6749}}
+ }
+
+@MASTERSTHESIS{heer2006,
+  author =       {Tobias Martin Heer},
+  title =        {LHIP - Lightweight Authentication for the Host Identity Protocol},
+  school =       {University of Tübingen},
+  year =         {2006},
+  month =        {aug},
+}
+
+@inproceedings{horrow2012,
+  title={Identity management framework for cloud based internet of things},
+  author={Horrow, Susmita and Sardana, Anjali},
+  booktitle={Proceedings of the First International Conference on Security of Internet of Things},
+  pages={200--203},
+  year={2012},
+  organization={ACM}
+}
+
+@inproceedings{hummen2013,
+  title={Towards viable certificate-based authentication for the internet of things},
+  author={Hummen, Ren{\'e} and Ziegeldorf, Jan H and Shafagh, Hossein and Raza, Shahid and Wehrle, Klaus},
+  booktitle={Proceedings of the 2nd ACM workshop on Hot topics on wireless network security and privacy},
+  pages={37--42},
+  year={2013}
+}
+
+@misc{itu2005,
+  title={ITU Internet Reports 2005: The internet of things},
+  author={ITU},
+  publisher={International Telecommunication Union (ITU)},
+  year={2005}
+}
+
+
+@inproceedings{jara2011,
+  title={Secure Mobility Management Scheme for 6LoWPAN ID/Locator Split Architecture},
+  author={Jara, Antonio J and Marin, Leandro and Skarmeta, Antonio FG and Singh, Dhananjay and Bakul, Gohel and Kim, Daeyeoul},
+  booktitle={Innovative Mobile and Internet Services in Ubiquitous Computing (IMIS), 2011 Fifth International Conference on},
+  pages={310--315},
+  year={2011},
+  organization={IEEE}
+}
+
+@inproceedings{jindou2012,
+  title={Access Control Method for Web of Things based on Role and SNS},
+  author={Jindou, Jia and Xiaofeng, Qiu and Cheng, Cheng},
+  booktitle={Computer and Information Technology (CIT), 2012 IEEE 12th International Conference on},
+  pages={316--321},
+  year={2012},
+  organization={IEEE}
+}
+
+@inproceedings{konidala2005,
+  title={A capability-based privacy-preserving scheme for pervasive computing environments},
+  author={Konidala, Divyan M and Duc, Dang Nguyen and Lee, Dongman and Kim, Kwangjo},
+  booktitle={Pervasive Computing and Communications Workshops, 2005. PerCom 2005 Workshops. Third IEEE International Conference on},
+  pages={136--140},
+  year={2005},
+  organization={IEEE}
+}
+
+@inproceedings{kothmayr2012,
+  title={A DTLS based end-to-end security architecture for the Internet of Things with two-way authentication},
+  author={Kothmayr, Thomas and Schmitt, Corinna and Hu, Wen and Brunig, Michael and Carle, Georg},
+  booktitle={Local Computer Networks Workshops (LCN Workshops), 2012 IEEE 37th Conference on},
+  pages={956--963},
+  year={2012},
+  organization={IEEE}
+}
+
+@inproceedings{li2010,
+  title={Authentication framework of IIEDNS based on LDAP \& Kerberos},
+  author={Li, Ning and Wang, Qing and Deng, Zhongliang},
+  booktitle={Broadband Network and Multimedia Technology (IC-BNMT), 2010 3rd IEEE International Conference on},
+  pages={695--699},
+  year={2010},
+  organization={IEEE}
+}
+
+@inproceedings{liu2012,
+  title={Authentication and access control in the internet of things},
+  author={Liu, Jing and Xiao, Yang and Chen, CL Philip},
+  booktitle={Distributed Computing Systems Workshops (ICDCSW), 2012 32nd International Conference on},
+  pages={588--592},
+  year={2012},
+  organization={IEEE}
+}
+
+@incollection{mahalle2010,
+  title={Identity management framework towards internet of things (IoT): Roadmap and key challenges},
+  author={Mahalle, Parikshit and Babar, Sachin and Prasad, Neeli R and Prasad, Ramjee},
+  booktitle={Recent Trends in Network Security and Applications},
+  pages={430--439},
+  year={2010},
+  publisher={Springer}
+}
+
+@inproceedings{mahalle2012,
+  title={Identity establishment and capability based access control (IECAC) scheme for Internet of Things},
+  author={Mahalle, Parikshit N and Anggorojati, Bayu and Prasad, Neeli Rashmi and Prasad, Ramjee},
+  booktitle={Wireless Personal Multimedia Communications (WPMC), 2012 15th International Symposium on},
+  pages={187--191},
+  year={2012},
+  organization={IEEE}
+}
+
+@article{mahalle2013a,
+  title={Object Classification based Context Management for Identity Management in Internet of Things},
+  author={Mahalle, Parikshit N and Prasad, Neeli Rashmi and Prasad, Ramjee},
+  journal={International Journal of Computer Applications},
+  volume={63},
+  number={12},
+  year={2013}
+}
+
+@article{mahalle2013b,
+  title={Identity Authentication and Capability Based Access Control (IACAC) for the Internet of Things},
+  author={Mahalle, Parikshit N and Anggorojati, Bayu and Prasad, Neeli R and Prasad, Ramjee},
+  journal={Journal of Cyber Security and Mobility},
+  volume={1},
+  number={4},
+  pages={309--348},
+  year={2013}
+}
+
+@article{miorandi2012,
+  title={Internet of things: Vision, applications and research challenges},
+  author={Miorandi, Daniele and Sicari, Sabrina and De Pellegrini, Francesco and Chlamtac, Imrich},
+  journal={Ad Hoc Networks},
+  volume={10},
+  number={7},
+  pages={1497--1516},
+  year={2012},
+  publisher={Elsevier}
+}
+
+@article{maler2008,
+  title={The Venn of Identity: Options and Issues in Federated Identity Management},
+  author={Maler, Eve and Reed, Drummond},
+  journal={IEEE Security \& Privacy},
+  volume={6},
+  number={2},
+  pages={16--23},
+  year={2008},
+  publisher={IEEE Computer Society}
+}
+
+@Misc{moskowitz2012,
+ author = {Moskowitz, R},
+ title = {HIP Diet EXchange (DEX)},
+ month = {aug},
+ year = {2012},
+ note = {\url{http://tools.ietf.org/html/draft-moskowitz-hip-dex-00}}
+ }
+
+@inproceedings{nguyen2010,
+  title={A dynamic ID-based authentication scheme},
+  author={Nguyen, Tien-Dung and Al-Saffar, Aymen and Huh, Eui-Nam},
+  booktitle={Networked Computing and Advanced Information Management (NCM), 2010 Sixth International Conference on},
+  pages={248--253},
+  year={2010},
+  organization={IEEE}
+}
+
+@TECHREPORT{nic2008,
+  title={Disruptive Civil Technologies: Six Technologies with Potential Impacts on US Interests Out to 2025},
+  author={National Intelligence Council},
+  institution={National Intelligence Council},
+  year={2008}
+}
+
+@TECHREPORT{NIST2012,
+  AUTHOR =       {Hu, Vincent C. and Scarfone, Karen},
+  TITLE =        {Guidelines for Access Control System Evaluation Metrics},
+  INSTITUTION =  {National Institute of Standards and Technology},
+  YEAR =         {2012},
+}
+
+@TECHREPORT{NIST2013,
+  AUTHOR =       {Hu, Vincent C. and Ferraiolo, David and Kuhn, Rick and Friedman, Arthur R. and Lang, Alan J. and Cogdell, Margaret M. and Schnitzer, Adam and Sandlin, Kenneth and Miller, Robert and Scarfone, Karen},
+  TITLE =        {Guide to Attribute Based Access Control (ABAC) Definition and Considerations (Draft)},
+  INSTITUTION =  {National Institute of Standards and Technology},
+  YEAR =         {2013},
+}
+
+@Misc{OASIS2003,
+ author = {OASIS},
+ title = {A Brief Introduction to XACML},
+ year = {2003},
+ note = {\url{https://www.oasis-open.org/committees/download.php/2713/Brief_Introduction_to_XACML.html}}
+}
+
+@Misc{OASIS2008_saml,
+ author = {OASIS},
+ title = {Security Assertion Markup Language (SAML) V2.0 - Technical Overview},
+ year = {2008},
+ note = {\url{https://www.oasis-open.org/committees/download.php/27819/sstc-saml-tech-overview-2.0-cd-02.pdf}}
+}
+
+@Misc{OpenID_what2013,
+ author = {OpenID},
+ title = {What is OpenID?},
+ year = {2013},
+ note = {\url{http://openid.net/get-an-openid/what-is-openid/}}
+}
+
+@Misc{OpenID_benefits2013,
+ author = {OpenID},
+ title = {Benefits of OpenID},
+ year = {2013},
+ note = {\url{http://openid.net/get-an-openid/individuals/}}
+}
+
+
+@Misc{OpenID2007,
+ author = {OpenID},
+ title = {OpenID Authentication 2.0 - Final},
+ month = {dec},
+ year = {2007},
+ note = {\url{http://openid.net/specs/openid-authentication-2_0.html}}
+}
+
+@Misc{OpenID_connect_basic2013,
+ author = {Sakimura, Nat and Bradley, John and Jones, Michael B. and de Medeiros, Breno and Mortimore, Chuck},
+ title = {OpenID Connect Basic Client Profile 1.0 - draft 28},
+ month = {jul},
+ year = {2013},
+ note = {\url{http://openid.net/specs/openid-connect-basic-1_0.html}}
+}
+
+@TECHREPORT{RNP2013,
+  AUTHOR =       {Prazeres, Cássio Vinícius Serafim and do Prado Filho, Tito Gardel},
+  TITLE =        {Gestão de identidade, autenticação e autorização na Web das Coisas - Relatório técnico de acompanhamento},
+  INSTITUTION =  {Rede Nacional de Ensino e Pesquisa},
+  YEAR =         {2013}  
+}
+
+@article{roman2011securing,
+title={Securing the Internet of Things},
+author={Roman, Rodrigo and Najera, Pablo and Lopez, Javier},
+journal={Computer},
+volume={44},
+number={9},
+pages={51--58},
+year={2011},
+publisher={IEEE Computer Society}
+}
+
+@inproceedings{rotondi2011,
+  title={Access Control \& IoT: Capability Based Authorization Access Control System},
+  author={Rotondi, Domenico and Seccia, Cristoforo and Piccione, Salvatore},
+  booktitle={1st IoT International Forum},
+  year={2011}
+}
+
+@inproceedings{saied2012a,
+  title={HIP Tiny Exchange (TEX): A distributed key exchange scheme for HIP-based Internet of Things},
+  author={Saied, Y Ben and Olivereau, Alexis},
+  booktitle={Communications and Networking (ComNet), 2012 Third International Conference on},
+  pages={1--8},
+  year={2012},
+  organization={IEEE}
+}
+
+@inproceedings{saied2012b,
+  title={D-HIP: A distributed key exchange scheme for HIP-based Internet of Things},
+  author={Saied, Yosra Ben and Olivereau, Alexis},
+  booktitle={World of Wireless, Mobile and Multimedia Networks (WoWMoM), 2012 IEEE International Symposium on a},
+  pages={1--7},
+  year={2012},
+  organization={IEEE}
+}
+
+@incollection{wangham2010,
+  title={Gerenciamento de identidades federadas},
+  author={Wangham, Michelle S and de Mello, Emerson Ribeiro and da Silva B{\"o}ger, Davi and Guerios, Marlon and da Silva Fraga, Joni},
+  booktitle={Minicurso - SBSeg 2010 - Fortaleza - CE},
+  year={2010}
+}
+
+@Misc{WinCardSpace2013,
+ author = {Microsoft},
+ title = {About Information Cards and Digital Identity},
+ year = {2013},
+ note = {\url{http://msdn.microsoft.com/en-us/library/vstudio/ms734655%28v=vs.90%29.aspx}}
+}
+
+@inproceedings{xiaohui2012,
+  title={Research on Safety Certification and Control Technology in Internet of Things},
+  author={Xiaohui, Xu},
+  booktitle={Computational and Information Sciences (ICCIS), 2012 Fourth International Conference on},
+  pages={518--521},
+  year={2012},
+  organization={IEEE}
+}
+
+@Misc{youn2011,
+ author = {Paul Youn},
+ title = {Creating a Safer OAuth User-Experience},
+ month = {apr},
+ year = {2011},
+ note = {\url{https://www.isecpartners.com/media/11683/isec-creating_safer_oauth_experience.pdf}}
+}
+
+
+
+@PhdThesis{melloTese09,
+ author = {Emerson Ribeiro de Mello},
+ title = {Um modelo para confiança dinâmica em ambientes orientados a serviço},
+ school = {Universidade Federal de Santa Catarina},
+ year = {2009},
+ month = {feb}
+}

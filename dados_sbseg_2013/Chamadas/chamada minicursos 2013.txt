@@ -1,0 +1,149 @@
+-----------------------------------------------------------------------------------------
+Chamada de Propostas para Minicursos do SBSeg 2013
+
+XIII Simpósio Brasileiro em Segurança da Informação
+e de Sistemas Computacionais
+
+Manaus (AM), 11 a 14 de novembro de 2013
+http://sbseg2013.icomp.ufam.edu.br
+-----------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------
+Datas Importantes 
+----------------------------------------------------------
+Submissão das propostas: 10/06/2013
+Comunicação dos resultados: 01/07/2013
+Entrega dos textos completos e copyright: 09/09/2013
+
+-------------------------
+Sobre o Evento
+-------------------------
+
+Os Minicursos do SBSeg têm por objetivo abordar temas relevantes 
+geralmente não ministrados nas grades curriculares dos cursos de 
+graduação além de despertar o interesse pela área de segurança 
+entre acadêmicos e profissionais. Priorizam-se temas atuais e com 
+maior potencial para atrair o interesse de jovens estudantes e 
+profissionais, de forma a melhor qualificá-los para suas pesquisas
+e/ou mercado de trabalho. Cada minicurso deve ser estruturado 
+para um total de três horas e meia, podendo incluir prática de laboratório.
+
+-------------------------------
+Temas de Interesse
+-------------------------------
+
+O tema central dos minicursos é a segurança (security) da informação 
+e de sistemas computacionais. Nesse contexto, destacamos os 
+seguintes tópicos:
+
+- Algoritmos, protocolos e técnicas criptográficas
+- Anonimato, auditoria e análise em sistemas
+- Controle de acesso, autenticação, gerência de identidade, biometria
+- Criminalística computacional
+- Detecção e prevenção de intrusões, ataques e vulnerabilidades
+- Direito digital
+- Forense computacional
+- Hardware criptográfico, RFID, cartões inteligentes e sistemas biométricos
+- Modelos de confiança
+- Padronização e normalização em segurança
+- Privacidade
+- Proteção de propriedade intelectual e DRM
+- Resposta a incidentes de segurança
+- Segurança adaptativa, políticas de segurança
+- Segurança em aplicações (TV digital, e-banking, etc.)
+- Segurança em computação ubíqua/pervasiva
+- Segurança em dispositivos móveis e sistemas embarcados
+- Segurança em grades computacionais ou em nuvem
+- Segurança em middleware (Java RMI, J2EE, CorbaSec, .Net, etc.)
+- Segurança em redes, rede de sobreposição, redes virtuais e redes sem fio
+- Segurança em smart grids, smart meters e smart houses
+- Segurança em serviços web, sistemas distribuídos ou sistemas operacionais
+- Segurança e privacidade em banco de dados
+- Segurança e privacidade em redes sociais
+- Sistemas e softwares seguros: desenvolvimento, testes e certificação
+- Tolerância a falhas/intrusões
+- Votação eletrônica
+
+
+A lista de tópicos acima certamente não é exaustiva. Outros tópicos
+podem ser abordados desde que em consonância com o tema central do 
+evento.
+
+---------------------------------------------------------
+Submissão de Propostas de Minicurso
+--------------------------------------------------------
+
+Professores/pesquisadores interessados em ministrar um minicurso 
+devem submeter uma proposta, escrita em Português, contendo entre 
+3 e 5 páginas (excluindo-se os CVs, item 6 abaixo), com as seguintes 
+informações:
+
+1. Dados de identificação - Título do minicurso, Autores,
+Instituição(ções) e Indicação do autor que apresentará o curso;
+
+2. Dados gerais - Objetivos do curso, tratamento dado ao tema (por
+exemplo: teórico ou prático; apanhado geral de resultados ou
+aprofundamento de aspectos específicos; apresentação ou comparação 
+de tecnologias; formação de novas habilidades ou informação etc.) e 
+perfil desejado da audiência;
+
+3. Estrutura prevista do texto (tópicos/capítulos a serem desenvolvidos);
+
+4. Para cada capítulo/tópico previsto no item 3, escrever um resumo de 
+seu conteúdo e uma previsão do respectivo número de páginas;
+
+5. Bibliografia principal utilizada na preparação do curso;
+
+6. Curriculum Vitae resumido dos autores (uma página por autor, no 
+máximo).
+
+Observe que todas as informações acima devem estar contidas em 
+apenas um documento (um arquivo no formato PDF).
+
+A submissão de propostas será exclusivamente eletrônica, em formato 
+PDF, através do sistema JEMS da SBC (https://submissoes.sbc.org.br).
+
+----------------------------------
+Processo de Avaliação
+----------------------------------
+
+Cada proposta submetida ao SBSeg 2013 será avaliada por três ou mais
+membros da comissão de avaliação. Serão considerados na avaliação 
+os seguintes critérios: relevância e atualidade do tema para o evento, 
+qualidade técnica da proposta e experiência dos proponentes no tema 
+proposto. As melhores propostas em temas distintos serão aceitas para 
+apresentação e publicação.
+
+A fim de assegurar a diversidade dos minicursos oferecidos, as propostas
+selecionadas tratarão de temas distintos. Assim, caso duas ou mais 
+propostas submetidas versem sobre o mesmo tema (ou sobre temas 
+muito sobrepostos), apenas a melhor delas poderá ser selecionada, 
+a critério da comissão de avaliação.
+
+
+-----------------
+Livro-Texto
+-----------------
+
+
+Os autores das propostas selecionadas deverão produzir um texto
+(capítulo de livro) em Português contendo entre 40 e 50 páginas cada.
+Os textos serão publicados, na forma de capítulos, no livro "Minicursos
+SBSeg 2013", a ser distribuído entre os participantes do evento. O formato 
+do capítulo de livro está disponível na seção Documentos/Publicações do 
+portal da SBC (http://www.sbc.org.br).
+
+------------------------------------------------------
+Coordenação Geral do SBSEG 2013
+------------------------------------------------------
+
+Eduardo James Pereira Souto (UFAM)
+Eduardo Luzeiro Feitosa (UFAM)
+
+---------------------------------------------------------------------
+Coordenação dos Minicursos do SBSEG 2013
+---------------------------------------------------------------------
+
+Rossana Maria de Castro Andrade (UFC)
+contato: rossana at ufc.br 

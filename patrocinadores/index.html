@@ -35,11 +35,40 @@
   .src{display:inline-block;font-size:.84rem;color:var(--muted);margin-top:.9rem}
   .note{color:var(--muted);font-size:.9rem;border-left:3px solid var(--line);padding:.3rem 0 .3rem .9rem;margin:1.6rem 0}
   footer{color:var(--faint);font-size:.84rem;margin-top:2.4rem;border-top:1px solid var(--line);padding-top:1rem}
+  /* ---------- shared archive top menu ---------- */
+  header.topbar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header.topbar .tb-wrap{max-width:1000px;margin:0 auto;padding:0 1.25rem;display:flex;
+    align-items:center;justify-content:space-between;gap:1rem;min-height:60px;flex-wrap:wrap}
+  header.topbar .brand{display:flex;align-items:center;gap:9px;font-weight:800;
+    letter-spacing:-.02em;font-size:1.05rem;color:var(--text)}
+  header.topbar .brand:hover{text-decoration:none}
+  header.topbar .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
+  header.topbar .brand .sub{color:var(--faint);font-weight:500}
+  header.topbar nav{display:flex;flex-wrap:wrap;gap:.5rem 1.35rem;font-size:.9rem;font-weight:500}
+  header.topbar nav a{color:var(--muted);transition:color .2s}
+  header.topbar nav a:hover{color:var(--accent);text-decoration:none}
+  header.topbar nav a.active{color:var(--accent-dark);font-weight:700}
+  @media(max-width:680px){header.topbar .tb-wrap{padding:.55rem 1rem}
+    header.topbar nav{gap:.35rem 1rem;font-size:.82rem}}
 </style>
 </head>
 <body>
+<header class="topbar">
+  <div class="tb-wrap">
+    <a class="brand" href="../"><span class="dot"></span>SBSeg <span class="sub">/ CESeg</span></a>
+    <nav>
+      <a href="../#edicoes">Edições</a>
+      <a href="../organizadores/">Organizadores</a>
+      <a href="../palestrantes/">Palestrantes</a>
+      <a href="../premiacoes/">Premiações</a>
+      <a href="../patrocinadores/" class="active" aria-current="page">Patrocinadores</a>
+      <a href="https://sol.sbc.org.br/index.php/sbseg" target="_blank" rel="noopener">Anais</a>
+      <a href="https://ceseg-sbc.github.io" target="_blank" rel="noopener">CESeg</a>
+    </nav>
+  </div>
+</header>
 <div class="wrap">
-<a class="back" href="../index.html">← Início</a>
 <h1>Patrocinadores das Edições do SBSeg</h1>
 <p class="lead">Patrocinadores e apoiadores do Simpósio Brasileiro de Cibersegurança (SBSeg),
 organizados por <strong>cota de patrocínio</strong>. As logomarcas foram preservadas a partir das
