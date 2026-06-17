@@ -4,26 +4,29 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Palestrantes das Edições do SBSeg</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#0b1020;--card:#141b33;--fg:#e6e9f2;--muted:#9aa3c0;--accent:#7aa2ff;--line:#24305a}
-  *{box-sizing:border-box}
-  body{font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--fg);margin:0;line-height:1.55}
-  .wrap{max-width:960px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
-  h1{font-size:1.9rem;margin:0 0 .3rem}
-  .lead{color:var(--muted);margin:0 0 1.5rem;max-width:70ch}
-  .edition{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.2rem 1.4rem;margin:1.1rem 0}
-  .ed-head{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap}
-  .ed-head h2{font-size:1.3rem;margin:0;color:var(--accent)}
-  .city{color:var(--muted);font-size:.95rem}
+  :root{--bg:#fff;--soft:#f6f8f9;--line:#e6eaec;--text:#16242a;--muted:#5d6b72;--faint:#8a979d;--accent:#0e8a78;--accent-dark:#0a6457}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:"Inter",-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+  .wrap{max-width:1000px;margin:0 auto;padding:2.4rem 1.25rem 4rem}
   a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-  .src{display:inline-block;font-size:.85rem;color:var(--muted);margin:.35rem 0 .6rem}
-  ul.speakers{list-style:none;margin:.3rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.7rem}
-  ul.speakers li{background:#0f1530;border:1px solid var(--line);border-radius:10px;padding:.7rem .85rem}
+  .back{display:inline-block;margin-bottom:1.1rem;font-size:.9rem;color:var(--muted)}
+  h1{font-size:1.9rem;letter-spacing:-.02em}
+  .lead{color:var(--muted);margin:.5rem 0 1.6rem;max-width:72ch}
+  .edition{border:1px solid var(--line);border-radius:16px;padding:1.3rem 1.5rem;margin:1.1rem 0}
+  .ed-head{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:.6rem;margin-bottom:.4rem}
+  .ed-head h2{font-size:1.4rem;color:var(--accent-dark)}
+  .city{color:var(--faint);font-size:.9rem}
+  .src{display:inline-block;font-size:.84rem;color:var(--muted);margin:.3rem 0 1rem}
+  ul.speakers{list-style:none;margin:.3rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.6rem}
+  ul.speakers li{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:.65rem .85rem}
   .sp-name{font-weight:600}
-  .links{margin-top:.25rem;font-size:.82rem}
-  .note{color:var(--muted);font-size:.9rem;border-left:3px solid var(--line);padding:.3rem 0 .3rem .9rem;margin:1.5rem 0}
-  footer{color:var(--muted);font-size:.85rem;margin-top:2.5rem;border-top:1px solid var(--line);padding-top:1rem}
-  .back{display:inline-block;margin-bottom:1.2rem;font-size:.9rem}
+  .links{margin-top:.3rem;font-size:.82rem;color:var(--muted)}
+  .note{color:var(--muted);font-size:.9rem;border-left:3px solid var(--line);padding:.3rem 0 .3rem .9rem;margin:1.6rem 0}
+  footer{color:var(--faint);font-size:.84rem;margin-top:2.4rem;border-top:1px solid var(--line);padding-top:1rem}
 </style>
 </head>
 <body>
