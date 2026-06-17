@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>SBSeg 2012</title>
+    <link href="css/estilo.css" rel="stylesheet" type="text/css" />
+
+    <!-- Estilo do banner de cookies -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+    <!-- Script Google Analytics (bloqueado até consentimento) -->
+    <script type="text/plain" data-cookiecategory="analytics">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27800002-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); 
+        ga.type = 'text/javascript'; 
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; 
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+    <!-- Biblioteca do Cookie Consent -->
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+
+    <script>
+    window.addEventListener('load', function(){
+      var cc = window.cookieconsent.initialise({
+        "type": "opt-in",
+        "position": "bottom",
+        "palette": {
+          "popup": {
+            "background": "#ffffff",
+            "text": "#4b4b4b"
+          },
+          "button": {
+            "background": "#7a003c",
+            "text": "#ffffff",
+            "border": "#7a003c"
+          }
+        },
+        "content": {
+          "message": "Utilizamos cookies para melhorar sua experiência em nosso site e promover os nossos serviços. Ao permitir todos os cookies, você terá acesso a todas as funcionalidades do site. Ao rejeitar os cookies, aqueles que não forem estritamente necessários permanecerão desativados. Saiba mais em nosso",
+          "link": "Aviso de Privacidade",
+          "href": "https://www.pucpr.br/politica-de-privacidade/",
+          "allow": "Permitir Todos os Cookies",
+          "deny": "Recusar não essenciais",
+          "dismiss": "Gerenciar Cookies"
+        },
+        "revokable": true,
+        "revokeBtn": "<div id='reabrirCookies' class='cc-revoke cc-bottom cc-left' style='background:#7a003c;color:#fff;cursor:pointer;padding:10px 15px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.2);'>Configurações de Cookies</div>",
+        "categories": {
+          "necessary": {
+            "needed": true,
+            "wanted": true,
+            "checked": true,
+            "readonly": true,
+            "text": "Cookies essenciais que garantem o funcionamento adequado do site e não podem ser desativados."
+          },
+          "analytics": {
+            "needed": false,
+            "wanted": false,
+            "checked": false,
+            "text": "Cookies de análise e desempenho que nos ajudam a entender como os visitantes interagem com o site e a melhorar nossos serviços."
+          }
+        },
+        "onStatusChange": function(status) {
+          if (this.hasConsented()) {
+            var scripts = document.querySelectorAll('script[type=\"text/plain\"][data-cookiecategory=\"analytics\"]');
+            scripts.forEach(function(tag) {
+              var s = document.createElement('script');
+              s.type = "text/javascript";
+              if (tag.src) s.src = tag.src;
+              else s.innerHTML = tag.innerHTML;
+              document.head.appendChild(s);
+            });
+          }
+        }
+      });
+
+      // Garante que o botão de reabertura funcione após inicialização
+      setTimeout(function() {
+        var btn = document.getElementById('reabrirCookies');
+        if (btn) {
+          btn.addEventListener('click', function() {
+            cc.revokeChoice();
+          });
+        }
+      }, 1000);
+    });
+    </script>
+</head>
+
+<body id="viagemeturismo">
+    <div id="geral">
+        <div id="cabecalho">
+            <img class="float-right" src="img/cabecalho2.jpg" alt="" />
+            <img class="float-left" src="img/cabecalho1.jpg" alt="" />
+            <a class="float-right" href="http://sbseg2012.ppgia.pucpr.br/en/index.php">
+                <img class="flag" src="img/en.gif" alt="English version"/>
+            </a>
+            <img id="data" src="img/data.jpg" alt="18 a 29 de novembro em Curitiba-PR" />
+            <a id="logo" href="index.html" title="Voltar para página inicial">
+                <img src="img/logo.jpg" alt="SBSeg 2012" />
+            </a>
+        </div>
+
+        <div id="central">
+            <div id="conteudo">
+                <h1>Agência Oficial do Evento</h1>
+<h2><a href="http://www.bwtoperadora.com.br/">BWT Operadora</a></h2>
+<address>
+Av. Pres. Affonso Camargo, 330 <br/>
+80060-090 - Curitiba - PR <br/>
+<br/>
+Contato SBSeg 2012:<br/>
+Patricia Will<br/>
+(41) 3888-3457<br/>
+<a href="/cdn-cgi/l/email-protection#b2c2d3c6c0dbd1dbd3c5f2d0c5c6ddc2d7c0d3d6ddc0d39cd1dddf9cd0c0"><span class="__cf_email__" data-cfemail="dbabbaafa9b2b8b2baac9bb9acafb4abbea9babfb4a9baf5b8b4b6f5b9a9">[email&#160;protected]</span></a>
+</address>
+
+
+<h1	>Informações sobre Curitiba</h1>
+<p>A cidade de Curitiba dispensa apresentações, por se tratar de uma das mais importantes e conceituadas capitais brasileiras. Em 2007, segundo a revista norte americana Reader's Digest, era a cidade com melhor qualidade de vida do Brasil. É a oitava cidade mais populosa do Brasil e a maior do sul do país, com uma população de 1.746.896 habitantes. Hoje, a cidade é considerada a capital com melhor qualidade de vida do Brasil, com um polo industrial diversificado que lhe dá o posto de quinta maior economia do país. Curitiba também tem altos índices de educação. Tem o menor índice de analfabetismo e a melhor qualidade na educação básica entre as capitais. A cidade hospeda diversas universidades e centros de pesquisa de renome internacional, como a UFPR, UTFPR e PUCPR, além de um parque empresarial atuante, moderno e em sinergia com as instituições de pesquisa.</p>
+
+<h2 class="inscricao">Clima em Novembro</h2>
+<ul>
+<li>Temperatura máxima média: 24 °C</li>
+<li>Temperatura mínima média: 14 °C</li>
+</ul>
+<p>Fonte: Simepar</p>
+
+<h2 class="inscricao">Transporte até o Evento</h2>
+<p><b>Ônibus Executivo Aeroporto - Centro - Aeroporto</b>: Curitiba possui um serviço de ônibus executivo do aeroporto Afonso Pena para o centro da cidade no valor de R$ 10,00. Para informações sobre o ônibus executivo (horários, pontos de parada, etc.), consulte <a href="http://www.aeroportoexecutivo.com.br"/>www.aeroportoexecutivo.com.br</a></p>
+
+<h2 class="inscricao">Informação turísticas</h2>
+<p>Para informações relacionadas a Pontos Turísticos, Alimentação, Cultura, Lazer, Transportes, Compras, etc., consulte <a href="http://www.turismo.curitiba.pr.gov.br">http://www.turismo.curitiba.pr.gov.br</a></p>
+
+<h2 class="inscricao">Vídeo sobre Curitiba</h2>
+<p>Este <a href="http://www.youtube.com/watch?v=rrCYESsegQU">vídeo</a> sobre a cidade foi produzido pelo <a target="_blank" href="http://www.curitiba.pr.gov.br/conteudo/secretaria-imt-instituto-municipal-de-turismo/34">Instituto Municipal de Turismo de Curitiba</a>.</p>
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/rrCYESsegQU" frameborder="0" allowfullscreen></iframe>
+
+<p>Este <a href="http://www.youtube.com/watch?v=YTA7nBLSYKw">vídeo</a> sobre o TecnoParque foi produzido pela <a target="_blank" href="http://www.curitiba.pr.gov.br">Prefeitura Municipal de Curitiba</a>.</p>
+<iframe width="420" height="315" src="http://www.youtube.com/embed/YTA7nBLSYKw" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <ul id="menu">
+                <li><a href="index.html" id="btinicio">Início</a></li>
+                <li><a href="evento.html" id="btevento">Sobre o Evento</a></li>
+                <li><a href="comites.html" id="btcomites">Comitês</a></li>
+                <li><a href="chamadas.html" id="btchamadas">Chamadas</a></li>
+                <li><a href="inscricoes.html" id="btinscricoes">Inscrições</a></li>
+                <li><a href="programacao.html" id="btprogramacao">Programação</a></li>
+                <li><a href="viagemeturismo.html" id="btviagemeturismo">Viagem e Turismo</a></li>
+                <li><a href="contato.html" id="btcontato">Contato</a></li>
+            </ul>
+        </div>
+
+        <div id="rodape">
+            <div>
+                <h3>Promoção</h3>
+                <a href="http://www.sbc.org.br/" target="_blank"><img src="img/sbc.jpg" alt="SBC" /></a>
+            </div>
+            <div>
+                <h3>Organização</h3>
+                <a href="http://www.pucpr.br/" target="_blank"><img src="img/pucpr.jpg" alt="PUCPR" /></a>
+                <a href="http://www.ufpr.br/" target="_blank"><img src="img/ufpr.jpg" alt="UFPR" /></a>
+                <a href="http://www.utfpr.edu.br/" target="_blank"><img src="img/utfpr.jpg" alt="UTFPR" /></a>
+            </div>
+            <div id="apoio">
+                <h3>Apoio</h3>
+                <a href="http://www.cgi.br" target="_blank"><img src="img/cgibr.jpg" alt="CGIBR" /></a>
+                <a href="http://www.intel.br" target="_blank"><img src="img/intel.png" alt="Intel" /></a><br/>
+                <a href="http://www.bb.br" target="_blank"><img src="img/bb.jpg" width="370" alt="Banco do Brasil" /></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="copyright">
+        <p>
+            <a id="twitter" href="http://www.twitter.com/#!/sbseg2012" target="_blank">
+                <img src="img/twitter.jpg" alt="Twitter" />
+            </a>
+            Copyright 2012 © Todos os direitos reservados (
+            <a id="webmaster" href="/cdn-cgi/l/email-protection#addecfdec8ca9f9d9c9fedddddcac4cc83ddd8cedddf83cfdf">webmaster</a>)
+        </p>
+    </div>
+    <p id="intel">Intel e seu logotipo são marcas registradas da Intel Corporation nos EUA e/ou em outros países.</p>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>SBSeg 2012</title>
+    <link href="css/estilo.css" rel="stylesheet" type="text/css" />
+
+    <!-- Estilo do banner de cookies -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+    <!-- Script Google Analytics (bloqueado até consentimento) -->
+    <script type="text/plain" data-cookiecategory="analytics">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27800002-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); 
+        ga.type = 'text/javascript'; 
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; 
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+    <!-- Biblioteca do Cookie Consent -->
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+
+    <script>
+    window.addEventListener('load', function(){
+      var cc = window.cookieconsent.initialise({
+        "type": "opt-in",
+        "position": "bottom",
+        "palette": {
+          "popup": {
+            "background": "#ffffff",
+            "text": "#4b4b4b"
+          },
+          "button": {
+            "background": "#7a003c",
+            "text": "#ffffff",
+            "border": "#7a003c"
+          }
+        },
+        "content": {
+          "message": "Utilizamos cookies para melhorar sua experiência em nosso site e promover os nossos serviços. Ao permitir todos os cookies, você terá acesso a todas as funcionalidades do site. Ao rejeitar os cookies, aqueles que não forem estritamente necessários permanecerão desativados. Saiba mais em nosso",
+          "link": "Aviso de Privacidade",
+          "href": "https://www.pucpr.br/politica-de-privacidade/",
+          "allow": "Permitir Todos os Cookies",
+          "deny": "Recusar não essenciais",
+          "dismiss": "Gerenciar Cookies"
+        },
+        "revokable": true,
+        "revokeBtn": "<div id='reabrirCookies' class='cc-revoke cc-bottom cc-left' style='background:#7a003c;color:#fff;cursor:pointer;padding:10px 15px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.2);'>Configurações de Cookies</div>",
+        "categories": {
+          "necessary": {
+            "needed": true,
+            "wanted": true,
+            "checked": true,
+            "readonly": true,
+            "text": "Cookies essenciais que garantem o funcionamento adequado do site e não podem ser desativados."
+          },
+          "analytics": {
+            "needed": false,
+            "wanted": false,
+            "checked": false,
+            "text": "Cookies de análise e desempenho que nos ajudam a entender como os visitantes interagem com o site e a melhorar nossos serviços."
+          }
+        },
+        "onStatusChange": function(status) {
+          if (this.hasConsented()) {
+            var scripts = document.querySelectorAll('script[type=\"text/plain\"][data-cookiecategory=\"analytics\"]');
+            scripts.forEach(function(tag) {
+              var s = document.createElement('script');
+              s.type = "text/javascript";
+              if (tag.src) s.src = tag.src;
+              else s.innerHTML = tag.innerHTML;
+              document.head.appendChild(s);
+            });
+          }
+        }
+      });
+
+      // Garante que o botão de reabertura funcione após inicialização
+      setTimeout(function() {
+        var btn = document.getElementById('reabrirCookies');
+        if (btn) {
+          btn.addEventListener('click', function() {
+            cc.revokeChoice();
+          });
+        }
+      }, 1000);
+    });
+    </script>
+</head>
+
+<body id="evento">
+    <div id="geral">
+        <div id="cabecalho">
+            <img class="float-right" src="img/cabecalho2.jpg" alt="" />
+            <img class="float-left" src="img/cabecalho1.jpg" alt="" />
+            <a class="float-right" href="http://sbseg2012.ppgia.pucpr.br/en/index.php">
+                <img class="flag" src="img/en.gif" alt="English version"/>
+            </a>
+            <img id="data" src="img/data.jpg" alt="18 a 29 de novembro em Curitiba-PR" />
+            <a id="logo" href="index.html" title="Voltar para página inicial">
+                <img src="img/logo.jpg" alt="SBSeg 2012" />
+            </a>
+        </div>
+
+        <div id="central">
+            <div id="conteudo">
+                <h1>Sobre o Evento</h1>
+<p>O Simpósio Brasileiro em Segurança da Informação e de Sistemas Computacionais é promovido anualmente pela Sociedade Brasileira de Computação (SBC). É o principal fórum acadêmico no País para a apresentação de pesquisas e atividades relevantes ligadas à segurança da informação e de sistemas, integrando a comunidade brasileira de pesquisadores e profissionais atuantes nessa área.</p>
+<p>A décima segunda edição do SBSeg será organizada numa iniciativa conjunta dos Programas de  Pós-graduação em Computação da Universidade Federal do Paraná (PPGInf/UFPR), Pontifícia Universidade Católica do Paraná (PPGIa/PUCPR) e Universidade Tecnológica Federal do Paraná (PPGCA/UTFPR).</p>
+<p>Por ser um evento itinerante a cada ano o SBSeg é realizado em uma cidade do país, a seguir é apresentada uma relação das edições anteriores do evento:</p>
+<ul class="evento-list">
+<li><a target=_blank" href="http://www.peotta.com/sbseg2011/">2011 – Brasília, DF</a></li>
+<li><a target="_blank" href="http://labcom.inf.ufrgs.br/ceseg/anais/2010/">2010 – Fortaleza, CE</a></li> 
+<li><a target="_blank" href="http://sbseg2009.inf.ufsm.br/sbseg2009/">2009 – Campinas, SP</a></li> 
+<li><a target="_blank" href="http://sbseg2008.inf.ufrgs.br/index.php?option=com_content&task=view&id=50&Itemid=71">2008 – Gramado, RS</a></li> 
+<li><a target="_blank" href="http://sbseg2007.nce.ufrj.br/">2007 – Rio de Janeiro, RJ</a></li> 
+<li>2006 – Santos, SP</li> 
+<li><a target="_blank" href="http://www.sbseg2005.ufsc.br/">2005 – Florianópolis, SC</a></li> 
+<li><a target="_blank" href="http://www.sbrc2004.ufrgs.br/cfps/wseg.php">2004 – Gramado, RS (junto ao SBRC)</a></li> 
+<li><a target="_blank" href="http://www.sbrc2003.ufrn.br/portugues/wseg.php">2003 – Natal, RN (junto ao SBRC)</a></li>
+<li>2002 – Búzios RJ (junto ao SBRC)</li>
+<li>2001 – Florianópolis, SC (junto ao SCTF)</li>
+</ul>
+            </div>
+
+            <ul id="menu">
+                <li><a href="index.html" id="btinicio">Início</a></li>
+                <li><a href="evento.html" id="btevento">Sobre o Evento</a></li>
+                <li><a href="comites.html" id="btcomites">Comitês</a></li>
+                <li><a href="chamadas.html" id="btchamadas">Chamadas</a></li>
+                <li><a href="inscricoes.html" id="btinscricoes">Inscrições</a></li>
+                <li><a href="programacao.html" id="btprogramacao">Programação</a></li>
+                <li><a href="viagemeturismo.html" id="btviagemeturismo">Viagem e Turismo</a></li>
+                <li><a href="contato.html" id="btcontato">Contato</a></li>
+            </ul>
+        </div>
+
+        <div id="rodape">
+            <div>
+                <h3>Promoção</h3>
+                <a href="http://www.sbc.org.br/" target="_blank"><img src="img/sbc.jpg" alt="SBC" /></a>
+            </div>
+            <div>
+                <h3>Organização</h3>
+                <a href="http://www.pucpr.br/" target="_blank"><img src="img/pucpr.jpg" alt="PUCPR" /></a>
+                <a href="http://www.ufpr.br/" target="_blank"><img src="img/ufpr.jpg" alt="UFPR" /></a>
+                <a href="http://www.utfpr.edu.br/" target="_blank"><img src="img/utfpr.jpg" alt="UTFPR" /></a>
+            </div>
+            <div id="apoio">
+                <h3>Apoio</h3>
+                <a href="http://www.cgi.br" target="_blank"><img src="img/cgibr.jpg" alt="CGIBR" /></a>
+                <a href="http://www.intel.br" target="_blank"><img src="img/intel.png" alt="Intel" /></a><br/>
+                <a href="http://www.bb.br" target="_blank"><img src="img/bb.jpg" width="370" alt="Banco do Brasil" /></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="copyright">
+        <p>
+            <a id="twitter" href="http://www.twitter.com/#!/sbseg2012" target="_blank">
+                <img src="img/twitter.jpg" alt="Twitter" />
+            </a>
+            Copyright 2012 © Todos os direitos reservados (
+            <a id="webmaster" href="/cdn-cgi/l/email-protection#b2c1d0c1d7d580828380f2c2c2d5dbd39cc2c7d1c2c09cd0c0">webmaster</a>)
+        </p>
+    </div>
+    <p id="intel">Intel e seu logotipo são marcas registradas da Intel Corporation nos EUA e/ou em outros países.</p>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

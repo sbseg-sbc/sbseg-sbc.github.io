@@ -1,0 +1,171 @@
+-----------------------------------------------------------------------------------------
+ Chamada de Propostas - Minicursos do SBSeg 2012
+
+  XII Simpósio Brasileiro em Segurança da Informação
+                e de Sistemas Computacionais
+
+          Curitiba (PR), 19 a 22 de novembro de 2012
+                  http://sbseg2012.ppgia.pucpr.br
+-----------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------
+Datas Importantes (NOVAS DATAS)
+----------------------------------------------------------
+Submissão das propostas: 17/06/2012
+Comunicação dos resultados: 02/07/2012
+Entrega dos textos completos: 16/09/2012
+
+
+-------------------------
+Sobre o Evento
+-------------------------
+
+Os Minicursos do SBSeg têm por objetivo abordar temas relevantes 
+geralmente não ministrados nas grades curriculares dos cursos de 
+graduação além de despertar o interesse pela área de segurança 
+entre acadêmicos e profissionais. Priorizam-se temas atuais e com 
+maior potencial para atrair o interesse de jovens estudantes e 
+profissionais, de forma a melhor qualificá-los para suas pesquisas
+e/ou mercado de trabalho. Cada minicurso deve ser estruturado 
+para um total de três horas e meia, podendo incluir prática de laboratório.
+
+-------------------------------
+Temas de Interesse
+-------------------------------
+
+O tema central dos minicursos é a segurança (security) da informação 
+e de sistemas computacionais. Nesse contexto, destacamos os 
+seguintes tópicos:
+
+- Algoritmos, protocolos e técnicas criptográficas
+- Análise de software malicioso (malware)
+- Anonimato
+- Auditoria e análise em sistemas
+- Autenticação e gerência de identidade
+- Biometria e sistemas biométricos
+- Controle de acesso
+- Criminalística computacional
+- Detecção de vulnerabilidades, ataques e intrusões
+- Hardware criptográfico, RFID e cartões inteligentes
+- Metodologias de desenvolvimento de sistemas seguros
+- Modelos de confiança
+- Padronização e normalização em segurança
+- Políticas de segurança
+- Proteção de propriedade intelectual e DRM
+- Resposta a Incidentes de Segurança
+- Segurança adaptativa
+- Segurança em aplicações (TV digital, e-banking, e-commerce, etc.)
+- Segurança em dispositivos móveis, sistemas embarcados e redes sem fio
+- Segurança em grades computacionais e em nuvem
+- Segurança em smart grids, smart meters e smart houses
+- Segurança em smart phones
+- Segurança em middleware (Java RMI, J2EE, CorbaSec, .Net, etc.)
+- Segurança em redes, redes P2P, rede de sobreposição, redes virtuais
+- Segurança em serviços web
+- Segurança em sistemas distribuídos
+- Segurança em sistemas operacionais
+- Segurança em computação ubíqua/pervasiva
+- Sistemas e softwares seguros: desenvolvimento, testes e certificação
+- Tecnologias de "firewall"
+- Tolerância a falhas/intrusões
+- Votação eletrônica
+
+
+A lista de tópicos acima certamente não é exaustiva. Outros tópicos
+podem ser abordados desde que em consonância com o tema central do 
+evento.
+
+---------------------------------------------------------
+Submissão de Propostas de Minicurso
+--------------------------------------------------------
+
+Professores/pesquisadores interessados em ministrar um minicurso 
+devem submeter uma proposta, escrita em Português, contendo entre 
+3 e 5 páginas (excluindo-se os CVs, item 6 abaixo), com as seguintes 
+informações:
+
+1. Dados de identificação - Título do minicurso , Autores,
+Instituição(ções) e Indicação do autor que apresentará o curso;
+
+2. Dados gerais - Objetivos do curso, tratamento dado ao tema (por
+exemplo: teórico ou prático; apanhado geral de resultados ou
+aprofundamento de aspectos específicos; apresentação ou comparação 
+de tecnologias; formação de novas habilidades ou informação etc.) e 
+perfil desejado da audiência;
+
+3. Estrutura prevista do texto (tópicos/capítulos a serem desenvolvidos);
+
+4. Para cada capítulo/tópico previsto no item 3, escrever um resumo de 
+seu conteúdo e uma previsão do respectivo número de páginas;
+
+5. Bibliografia principal utilizada na preparação do curso;
+
+6. Curriculum Vitae resumido dos autores (uma página por autor, no 
+máximo).
+
+Observe que todas as informações acima devem estar contidas em 
+apenas um documento (um arquivo no formato PDF).
+
+A submissão de propostas será exclusivamente eletrônica, em formato 
+PDF, através do sistema JEMS da SBC (https://submissoes.sbc.org.br).
+
+----------------------------------
+Processo de Avaliação
+----------------------------------
+
+Cada proposta submetida ao SBSeg 2012 será avaliada por três ou mais
+membros da comissão de avaliação. Serão considerados na avaliação 
+os seguintes critérios: relevância e atualidade do tema para o evento, 
+qualidade técnica da proposta e experiência dos proponentes no tema 
+proposto. As melhores propostas em temas distintos serão aceitas para 
+apresentação e publicação.
+
+A fim de assegurar a diversidade dos minicursos oferecidos, as propostas
+selecionadas tratarão de temas distintos. Assim, caso duas ou mais 
+propostas submetidas versem sobre o mesmo tema (ou sobre temas 
+muito sobrepostos), apenas a melhor delas poderá ser selecionada, 
+a critério da comissão de avaliação.
+
+
+-----------------
+Livro-Texto
+-----------------
+
+Os autores das propostas selecionadas deverão produzir um texto
+(capítulo de livro) em Português contendo entre 40 e 50 páginas cada.
+Os textos serão publicados, na forma de capítulos, no livro "Minicursos
+SBSeg 2012", a ser distribuído entre os participantes do evento. O formato 
+do capítulo de livro está disponível na seção Documentos/Publicações do 
+portal da SBC (http://www.sbc.org.br) ou diretamente através do 
+endereço http://sbseg2012.ppgia.pucpr.br/@docs/minicursos.zip
+
+----------------------------------
+Comitê de Avaliação 
+----------------------------------
+
+Antonio Cândido Faleiros (UFABC)
+Célia Ghedini Ralha (UnB)
+Jacir Luiz Bordim (UnB)
+Julio Cesar López Hernández (UNICAMP)
+Lau Cheuk Lung (UFSC)
+Luciano Porto Barreto (CVM)
+Luiz Fernando Rust da Costa Carmo (UFRJ)
+Marcos Antonio Simplicio Jr. (USP)
+Paulo André da Silva Gonçalves (UFPE)
+Ricardo Dahab (UNICAMP)
+
+------------------------------------------------------
+Coordenação Geral do SBSEG 2012
+------------------------------------------------------
+
+Aldri dos Santos (UFPR)
+Altair Santin (PUCPR)
+Carlos Maziero (UTFPR)
+
+---------------------------------------------------------------------
+Coordenação dos Minicursos do SBSEG 2012
+---------------------------------------------------------------------
+
+Paulo André da S. Gonçalves (UFPE)
+contato: pasg at cin.ufpe.br

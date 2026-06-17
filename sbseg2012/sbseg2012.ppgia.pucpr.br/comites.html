@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>SBSeg 2012</title>
+    <link href="css/estilo.css" rel="stylesheet" type="text/css" />
+
+    <!-- Estilo do banner de cookies -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+    <!-- Script Google Analytics (bloqueado até consentimento) -->
+    <script type="text/plain" data-cookiecategory="analytics">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27800002-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); 
+        ga.type = 'text/javascript'; 
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; 
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+    <!-- Biblioteca do Cookie Consent -->
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+
+    <script>
+    window.addEventListener('load', function(){
+      var cc = window.cookieconsent.initialise({
+        "type": "opt-in",
+        "position": "bottom",
+        "palette": {
+          "popup": {
+            "background": "#ffffff",
+            "text": "#4b4b4b"
+          },
+          "button": {
+            "background": "#7a003c",
+            "text": "#ffffff",
+            "border": "#7a003c"
+          }
+        },
+        "content": {
+          "message": "Utilizamos cookies para melhorar sua experiência em nosso site e promover os nossos serviços. Ao permitir todos os cookies, você terá acesso a todas as funcionalidades do site. Ao rejeitar os cookies, aqueles que não forem estritamente necessários permanecerão desativados. Saiba mais em nosso",
+          "link": "Aviso de Privacidade",
+          "href": "https://www.pucpr.br/politica-de-privacidade/",
+          "allow": "Permitir Todos os Cookies",
+          "deny": "Recusar não essenciais",
+          "dismiss": "Gerenciar Cookies"
+        },
+        "revokable": true,
+        "revokeBtn": "<div id='reabrirCookies' class='cc-revoke cc-bottom cc-left' style='background:#7a003c;color:#fff;cursor:pointer;padding:10px 15px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.2);'>Configurações de Cookies</div>",
+        "categories": {
+          "necessary": {
+            "needed": true,
+            "wanted": true,
+            "checked": true,
+            "readonly": true,
+            "text": "Cookies essenciais que garantem o funcionamento adequado do site e não podem ser desativados."
+          },
+          "analytics": {
+            "needed": false,
+            "wanted": false,
+            "checked": false,
+            "text": "Cookies de análise e desempenho que nos ajudam a entender como os visitantes interagem com o site e a melhorar nossos serviços."
+          }
+        },
+        "onStatusChange": function(status) {
+          if (this.hasConsented()) {
+            var scripts = document.querySelectorAll('script[type=\"text/plain\"][data-cookiecategory=\"analytics\"]');
+            scripts.forEach(function(tag) {
+              var s = document.createElement('script');
+              s.type = "text/javascript";
+              if (tag.src) s.src = tag.src;
+              else s.innerHTML = tag.innerHTML;
+              document.head.appendChild(s);
+            });
+          }
+        }
+      });
+
+      // Garante que o botão de reabertura funcione após inicialização
+      setTimeout(function() {
+        var btn = document.getElementById('reabrirCookies');
+        if (btn) {
+          btn.addEventListener('click', function() {
+            cc.revokeChoice();
+          });
+        }
+      }, 1000);
+    });
+    </script>
+</head>
+
+<body id="comites">
+    <div id="geral">
+        <div id="cabecalho">
+            <img class="float-right" src="img/cabecalho2.jpg" alt="" />
+            <img class="float-left" src="img/cabecalho1.jpg" alt="" />
+            <a class="float-right" href="http://sbseg2012.ppgia.pucpr.br/en/index.php">
+                <img class="flag" src="img/en.gif" alt="English version"/>
+            </a>
+            <img id="data" src="img/data.jpg" alt="18 a 29 de novembro em Curitiba-PR" />
+            <a id="logo" href="index.html" title="Voltar para página inicial">
+                <img src="img/logo.jpg" alt="SBSeg 2012" />
+            </a>
+        </div>
+
+        <div id="central">
+            <div id="conteudo">
+                <h1>Comitê de Organização</h1>
+<dl>
+    <dt>Coordenadores Gerais</dt>
+    <dd>Aldri dos Santos,UFPR</dd>
+    <dd>Altair Santin, PUCPR</dd>
+    <dd>Carlos Maziero, UTFPR</dd>
+    
+    <dt>Coordenadores do Comitê de Programa</dt>
+    <dd>Ricardo Dahab, UNICAMP</dd>
+    <dd>Michele Nogueira, UFPR</dd>
+    
+    <dt>Coordenador de Minicursos</dt>
+    <dd>Paulo Gonçalves, UFPE</dd>
+
+    <dt>Coordenador de Palestras e tutoriais</dt>
+    <dd>Paulo Licio de Geus, UNICAMP</dd>
+
+    <dt>Coordenador do CTD-Seg</dt>
+    <dd>Routo Terada, IME-USP</dd>
+    
+    <dt>Coordenadora do WTICG</dt>
+    <dd>Carla Merkle Westphall, UFSC</dd>
+
+    <dt>Coordenadores do Workshop de Gestão de Identidades Digitais</dt>
+    <dd>Michelle S. Wangham, UNIVALI</dd>
+    <dd>Ricardo Custódio, UFSC</dd>
+    
+    <dt>Coordenadores do Workshop de Forense Computacional</dt>
+    <dd>Anderson Rocha, UNICAMP</dd>
+    <dd>Cinthia Freitas, PUCPR</dd> 
+</dl>
+<br />
+<h1>Comitê Consultivo</h1>
+<ul class="comite-list">
+    <li>Marinho Pilla Barcellos, UFRGS</li>
+    <li>Anderson Clayton Alves Nascimento, UnB</li>
+    <li>Jeroen van de Graaf, UFMG</li>
+    <li>André Luiz Moura dos Santos, UECE</li>
+    <li>Otto Carlos Muniz Bandeira Duarte, UFRJ</li>
+    <li>Ricardo Dahab, UNICAMP</li>
+    <li>Luciano Paschoal Gaspary, UFRGS</li>
+    <li>Michelle Silva Wangham, UNIVALI</li>
+    <li>Aldri Luiz dos Santos, UFPR</li>
+</ul>
+<br />
+<h1>Comitê do Programa</h1>
+<table border="0">
+  <tr>
+    <td>
+      <ul class="comite-list">
+        <li>Aldri dos Santos, UFPR</li>
+        <li>Altair Olivo Santin, PUCPR</li>
+        <li>Anderson Nascimento, UNB</li>
+        <li>André Santos, UECE</li>
+        <li>Carla Merkle Westphall, UFSC</li>
+        <li>Carlos Maziero, UTFPR</li>
+        <li>Carlos Westphall, UFSC</li>
+        <li>Célio V. N. de Albuquerque, UFF</li>
+        <li>Daniel Mesquita, UFU</li>
+        <li>Daniel Santana de Freitas, UFSC</li>
+        <li>Davidson Boccardo, INMETRO</li>
+        <li>Diego Aranha, UNB</li>
+        <li>Eduardo Souto, UFAM</li>
+        <li>Hao Chi Wong, Intel</li>
+        <li>Jean Martina, University of Cambridge</li>
+        <li>Jeroen van de Graaf, UFMG</li>
+        <li>Joaquim Celestino Júnior, UECE</li>
+        <li>José De Souza, UFC</li>
+        <li>Julio Hernandez, UNICAMP</li>
+        <li>Lau Cheuk Lung, UFSC</li>
+        <li>Leonardo Oliveira, UFMG</li>
+	   </ul>
+    </td>
+    <td>
+      <ul class="comite-list">
+        <li>Lisandro Z. Granville, UFRGS</li>
+        <li>Luciano Paschoal Gaspary, UFRGS</li>
+        <li>Luiz F. Rust da Costa Carmo, UFRJ</li>
+        <li>Luiz Carlos Albini, UFPR</li>
+        <li>Marcos Simplicio, USP</li>
+        <li>Marinho Barcellos, UFRGS</li>
+        <li>Michel Abdalla, École Normale Supérieure & CNRS</li>
+        <li>Michelle Wangham, UNIVALI</li>
+        <li>Otto C. M. Bandeira Duarte, UFRJ</li>
+        <li>Paulo Barreto, USP</li>
+        <li>Paulo de Geus, UNICAMP</li>
+        <li>Paulo A. da Silva Goncalves, UFPE</li>
+        <li>Pedro Velloso, UFF</li>
+        <li>Rafael Obelheiro, UDESC</li>
+        <li>Raul Ceretta Nunes, UFSM</li>
+        <li>Raul Weber, UFRGS</li>
+        <li>Ricardo Custódio, UFSC</li>
+        <li>Rossana Andrade, UFC</li>
+        <li>Routo Terada, USP</li>
+        <li>Ruy J. G. Barretto de Queiroz, UFPE</li>
+        <li>Sergio Oliveira, UFSJ</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+<br />
+<h1>Comitê Local</h1>
+<ul class="comite-list">
+    <li>Arlindo Marcon Jr., PUCPR/IFPR</li>
+    <li>Elisa Mannes, UFPR</li>
+    <li>Luiz Albini, UFPR</li>
+    <li>Maicon Stihler, PUCPR</li>
+    <li>Robson Gomes de Melo, UFPR/UNEMAT</li>
+</ul>            </div>
+
+            <ul id="menu">
+                <li><a href="index.html" id="btinicio">Início</a></li>
+                <li><a href="evento.html" id="btevento">Sobre o Evento</a></li>
+                <li><a href="comites.html" id="btcomites">Comitês</a></li>
+                <li><a href="chamadas.html" id="btchamadas">Chamadas</a></li>
+                <li><a href="inscricoes.html" id="btinscricoes">Inscrições</a></li>
+                <li><a href="programacao.html" id="btprogramacao">Programação</a></li>
+                <li><a href="viagemeturismo.html" id="btviagemeturismo">Viagem e Turismo</a></li>
+                <li><a href="contato.html" id="btcontato">Contato</a></li>
+            </ul>
+        </div>
+
+        <div id="rodape">
+            <div>
+                <h3>Promoção</h3>
+                <a href="http://www.sbc.org.br/" target="_blank"><img src="img/sbc.jpg" alt="SBC" /></a>
+            </div>
+            <div>
+                <h3>Organização</h3>
+                <a href="http://www.pucpr.br/" target="_blank"><img src="img/pucpr.jpg" alt="PUCPR" /></a>
+                <a href="http://www.ufpr.br/" target="_blank"><img src="img/ufpr.jpg" alt="UFPR" /></a>
+                <a href="http://www.utfpr.edu.br/" target="_blank"><img src="img/utfpr.jpg" alt="UTFPR" /></a>
+            </div>
+            <div id="apoio">
+                <h3>Apoio</h3>
+                <a href="http://www.cgi.br" target="_blank"><img src="img/cgibr.jpg" alt="CGIBR" /></a>
+                <a href="http://www.intel.br" target="_blank"><img src="img/intel.png" alt="Intel" /></a><br/>
+                <a href="http://www.bb.br" target="_blank"><img src="img/bb.jpg" width="370" alt="Banco do Brasil" /></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="copyright">
+        <p>
+            <a id="twitter" href="http://www.twitter.com/#!/sbseg2012" target="_blank">
+                <img src="img/twitter.jpg" alt="Twitter" />
+            </a>
+            Copyright 2012 © Todos os direitos reservados (
+            <a id="webmaster" href="/cdn-cgi/l/email-protection#aad9c8d9cfcd989a9b98eadadacdc3cb84dadfc9dad884c8d8">webmaster</a>)
+        </p>
+    </div>
+    <p id="intel">Intel e seu logotipo são marcas registradas da Intel Corporation nos EUA e/ou em outros países.</p>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

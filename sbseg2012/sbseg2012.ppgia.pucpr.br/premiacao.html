@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>SBSeg 2012</title>
+    <link href="css/estilo.css" rel="stylesheet" type="text/css" />
+
+    <!-- Estilo do banner de cookies -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+    <!-- Script Google Analytics (bloqueado até consentimento) -->
+    <script type="text/plain" data-cookiecategory="analytics">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27800002-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); 
+        ga.type = 'text/javascript'; 
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; 
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+    <!-- Biblioteca do Cookie Consent -->
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+
+    <script>
+    window.addEventListener('load', function(){
+      var cc = window.cookieconsent.initialise({
+        "type": "opt-in",
+        "position": "bottom",
+        "palette": {
+          "popup": {
+            "background": "#ffffff",
+            "text": "#4b4b4b"
+          },
+          "button": {
+            "background": "#7a003c",
+            "text": "#ffffff",
+            "border": "#7a003c"
+          }
+        },
+        "content": {
+          "message": "Utilizamos cookies para melhorar sua experiência em nosso site e promover os nossos serviços. Ao permitir todos os cookies, você terá acesso a todas as funcionalidades do site. Ao rejeitar os cookies, aqueles que não forem estritamente necessários permanecerão desativados. Saiba mais em nosso",
+          "link": "Aviso de Privacidade",
+          "href": "https://www.pucpr.br/politica-de-privacidade/",
+          "allow": "Permitir Todos os Cookies",
+          "deny": "Recusar não essenciais",
+          "dismiss": "Gerenciar Cookies"
+        },
+        "revokable": true,
+        "revokeBtn": "<div id='reabrirCookies' class='cc-revoke cc-bottom cc-left' style='background:#7a003c;color:#fff;cursor:pointer;padding:10px 15px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.2);'>Configurações de Cookies</div>",
+        "categories": {
+          "necessary": {
+            "needed": true,
+            "wanted": true,
+            "checked": true,
+            "readonly": true,
+            "text": "Cookies essenciais que garantem o funcionamento adequado do site e não podem ser desativados."
+          },
+          "analytics": {
+            "needed": false,
+            "wanted": false,
+            "checked": false,
+            "text": "Cookies de análise e desempenho que nos ajudam a entender como os visitantes interagem com o site e a melhorar nossos serviços."
+          }
+        },
+        "onStatusChange": function(status) {
+          if (this.hasConsented()) {
+            var scripts = document.querySelectorAll('script[type=\"text/plain\"][data-cookiecategory=\"analytics\"]');
+            scripts.forEach(function(tag) {
+              var s = document.createElement('script');
+              s.type = "text/javascript";
+              if (tag.src) s.src = tag.src;
+              else s.innerHTML = tag.innerHTML;
+              document.head.appendChild(s);
+            });
+          }
+        }
+      });
+
+      // Garante que o botão de reabertura funcione após inicialização
+      setTimeout(function() {
+        var btn = document.getElementById('reabrirCookies');
+        if (btn) {
+          btn.addEventListener('click', function() {
+            cc.revokeChoice();
+          });
+        }
+      }, 1000);
+    });
+    </script>
+</head>
+
+<body id="premiacao">
+    <div id="geral">
+        <div id="cabecalho">
+            <img class="float-right" src="img/cabecalho2.jpg" alt="" />
+            <img class="float-left" src="img/cabecalho1.jpg" alt="" />
+            <a class="float-right" href="http://sbseg2012.ppgia.pucpr.br/en/index.php">
+                <img class="flag" src="img/en.gif" alt="English version"/>
+            </a>
+            <img id="data" src="img/data.jpg" alt="18 a 29 de novembro em Curitiba-PR" />
+            <a id="logo" href="index.html" title="Voltar para página inicial">
+                <img src="img/logo.jpg" alt="SBSeg 2012" />
+            </a>
+        </div>
+
+        <div id="central">
+            <div id="conteudo">
+                <h1>Premiação do SBSeg 2012</h1>
+
+<table class="prog-detalhe">
+
+    <tr>
+      <th colspan="" style="background:#666; color:#FFFFFF; text-align: left">Premiados das Sessões Técnicas</th>
+    </tr>
+    <tr>
+      <td style="background: #1B8530; color:#FFF">Melhor Artigo</td>
+    </tr>
+    <tr>
+        <td><strong>Chi-square Attacks on Block-Cipher based Compression Functions</strong><br/>
+		<em>Daniel Santana de Freitas, UFSC, Brasil<br/>
+		    Jorge Nakahara Junior, Brasil.</em>
+	</td>
+    </tr>
+    <tr>
+        <td><strong>Universally Composable Committed Oblivious Transfer With A Trusted Initializer</strong><br/>
+		<em>Adriana Pinto, Anderson Nascimento, Bernardo David, Universidade de Brasília, Brasil<br/>
+		    Jeroen Graaf, Universidade Federal de Minas Gerais, Brasil.</em>
+	</td>
+    </tr>
+
+   <tr>
+      <th colspan="" style="background:#666; color:#FFFFFF; text-align: left">Premiados do CTDSeg</th>
+   </tr>
+   <tr>
+      <td style="background: #1B8530; color:#FFF">Melhor Dissertação</td>
+   </tr>
+    <tr>
+        <td><strong>Um esquema bio-inspirado para tolerância a má-conduta em sistemas de quórum apoiando serviços em MANETs</strong><br/>
+		<em>Elisa Mannes, Michele Nogueira, Aldri dos Santos, Universidade Federal do Paraná</em>
+	</td>
+    </tr>
+    <tr>
+        <td><strong>Assinatura digital Rabin-Williams sem randomização e com prova eficiente de segurança</strong><br/>
+		<em>Bernardo Magri, Routo Terada, Universidade de São Paulo</em>
+	</td>
+    </tr>
+
+   <tr>
+      <td style="background: #1B8530; color:#FFF">Menção Honrosa: Dissertação de Mestrado</td>
+   </tr>    
+   <tr>
+        <td><strong>Segurança do bit menos significativo no RSA e em curvas elípticas</strong><br/>
+		<em>Dionathan Nakamura, Routo Terada, Universidade de São Paulo</em>
+	</td>
+    </tr>
+
+  <tr>
+      <td style="background: #1B8530; color:#FFF">Melhor Tese de Doutorado</td>
+   </tr>    
+   <tr>
+        <td><strong>Implementação eficiente em software de curvas elípticas e emparelhamentos bilineares</strong><br/>
+		<em>Diego de Freitas Aranha, Universidade de Brasília<br/>Julio Hernandez, UNICAMP</em>
+	</td>
+    </tr>
+ 
+  <tr>
+      <td style="background: #1B8530; color:#FFF">Menção Honrosa: Tese de Doutorado</td>
+   </tr>    
+   <tr>
+        <td><strong>Criptografia de chave pública sem certificado</strong><br/>
+		<em>Denise Goya, Routo Terada, Universidade de São Paulo</em>
+	</td>
+    </tr>
+   <tr>
+        <td><strong>An Orchestration Approach for Unwanted Internet Traffic Identification</strong><br/>
+		<em>Eduardo Louzeiro Feitosa, Universidade Federal do Amazonas<br/>
+		    Djamel Fawzi Hadj Sadok, Universidade Federal de Pernambuco</em>
+	</td>
+    </tr>
+
+   <tr>
+      <th colspan="" style="background:#666; color:#FFFFFF; text-align: left">Premiados do WTICG</th>
+   </tr>
+  <tr>
+      <td style="background: #1B8530; color:#FFF">Melhor Artigo</td>
+   </tr>    
+   <tr>
+        <td><strong>Detecção de Phishing em Páginas Web Utilizando Técnicas de Aprendizagem de Máquina</strong><br/>
+		<em>Francisco Fagner do Rego Cunha, Universidade Federal do Amazonas<br/>
+		    Eulanda Miranda dos Santos, Universidade Federal do Amazonas<br/>
+		    Eduardo James Pereira Souto, Universidade Federal do Amazonas</em>
+	</td>
+    </tr>
+  <tr>
+      <td style="background: #1B8530; color:#FFF">Menção Honrosa</td>
+   </tr>    
+   <tr>
+        <td><strong>Modelagem e Verificação Formal de Aspectos de Tempo Real do Protocolo Kerberos</strong><br/>
+		<em>Bruno Marques Cremonezi, Universidade Federal de Juiz de Fora<br/>
+		    Guilherme Albuquerque Pinto, Universidade Federal de Juiz de Fora</em>
+	</td>
+    </tr>
+   <tr>
+   <tr>
+        <td><strong>Senhas descartáveis em dispositivos móveis para ambientes de Telemedicina</strong><br/>
+		<em>Thaís Bardini Idalino, Universidade Federal de Santa Catarina<br/>
+		    Dayana Pierina Brustolin Spagnuelo, Universidade Federal de Santa Catarina</em>
+	</td>
+    </tr>
+   <tr>
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+            <ul id="menu">
+                <li><a href="index.html" id="btinicio">Início</a></li>
+                <li><a href="evento.html" id="btevento">Sobre o Evento</a></li>
+                <li><a href="comites.html" id="btcomites">Comitês</a></li>
+                <li><a href="chamadas.html" id="btchamadas">Chamadas</a></li>
+                <li><a href="inscricoes.html" id="btinscricoes">Inscrições</a></li>
+                <li><a href="programacao.html" id="btprogramacao">Programação</a></li>
+                <li><a href="viagemeturismo.html" id="btviagemeturismo">Viagem e Turismo</a></li>
+                <li><a href="contato.html" id="btcontato">Contato</a></li>
+            </ul>
+        </div>
+
+        <div id="rodape">
+            <div>
+                <h3>Promoção</h3>
+                <a href="http://www.sbc.org.br/" target="_blank"><img src="img/sbc.jpg" alt="SBC" /></a>
+            </div>
+            <div>
+                <h3>Organização</h3>
+                <a href="http://www.pucpr.br/" target="_blank"><img src="img/pucpr.jpg" alt="PUCPR" /></a>
+                <a href="http://www.ufpr.br/" target="_blank"><img src="img/ufpr.jpg" alt="UFPR" /></a>
+                <a href="http://www.utfpr.edu.br/" target="_blank"><img src="img/utfpr.jpg" alt="UTFPR" /></a>
+            </div>
+            <div id="apoio">
+                <h3>Apoio</h3>
+                <a href="http://www.cgi.br" target="_blank"><img src="img/cgibr.jpg" alt="CGIBR" /></a>
+                <a href="http://www.intel.br" target="_blank"><img src="img/intel.png" alt="Intel" /></a><br/>
+                <a href="http://www.bb.br" target="_blank"><img src="img/bb.jpg" width="370" alt="Banco do Brasil" /></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="copyright">
+        <p>
+            <a id="twitter" href="http://www.twitter.com/#!/sbseg2012" target="_blank">
+                <img src="img/twitter.jpg" alt="Twitter" />
+            </a>
+            Copyright 2012 © Todos os direitos reservados (
+            <a id="webmaster" href="/cdn-cgi/l/email-protection#99eafbeafcfeaba9a8abd9e9e9fef0f8b7e9ecfae9ebb7fbeb">webmaster</a>)
+        </p>
+    </div>
+    <p id="intel">Intel e seu logotipo são marcas registradas da Intel Corporation nos EUA e/ou em outros países.</p>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

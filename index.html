@@ -3,184 +3,145 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SBSeg: Simpósio Brasileiro de Cibersegurança</title>
+<title>SBSeg — Simpósio Brasileiro de Cibersegurança · Arquivo histórico</title>
 <meta name="description" content="Arquivo histórico das edições do SBSeg, o Simpósio Brasileiro de Cibersegurança, promovido pela CESeg/SBC.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%235eead4' d='M16 2 4 7v8c0 7 5 12 12 15 7-3 12-8 12-15V7L16 2Zm0 5 8 3v5c0 5-3 8-8 10-5-2-8-5-8-10V10l8-3Z'/%3E%3Crect x='13' y='14' width='6' height='7' rx='1' fill='%235eead4'/%3E%3Cpath fill='none' stroke='%235eead4' stroke-width='1.6' d='M14 14v-2a2 2 0 0 1 4 0v2'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%230e8a78' d='M16 2 4 7v8c0 7 5 12 12 15 7-3 12-8 12-15V7L16 2Zm0 5 8 3v5c0 5-3 8-8 10-5-2-8-5-8-10V10l8-3Z'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#070a10;
-    --bg-soft:#0b111c;
-    --panel:#0d1320;
-    --line:#1a2331;
-    --text:#e8edf4;
-    --muted:#8b97a8;
-    --faint:#5a6678;
-    --accent:#5eead4;
-    --accent-dim:#2c7d72;
-    --accent-glow:rgba(94,234,212,.16);
-    --maxw:1080px;
+    --bg:#ffffff;
+    --bg-soft:#f6f8f9;
+    --panel:#ffffff;
+    --line:#e6eaec;
+    --line-soft:#eef1f2;
+    --text:#16242a;
+    --muted:#5d6b72;
+    --faint:#8a979d;
+    --accent:#0e8a78;
+    --accent-dark:#0a6457;
+    --accent-soft:#e7f4f1;
+    --maxw:1140px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:"IBM Plex Sans",sans-serif;
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-    position:relative;
-  }
-  /* atmosphere: radial glow + faint grid + scanlines */
-  body::before{
-    content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
-    background:
-      radial-gradient(900px 600px at 78% -8%, var(--accent-glow), transparent 60%),
-      radial-gradient(700px 500px at 0% 100%, rgba(76,110,245,.10), transparent 55%);
-  }
-  body::after{
-    content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
-    background-image:
-      linear-gradient(var(--line) 1px,transparent 1px),
-      linear-gradient(90deg,var(--line) 1px,transparent 1px);
-    background-size:64px 64px;
-    -webkit-mask-image:radial-gradient(circle at 50% 30%,#000 0%,transparent 78%);
-            mask-image:radial-gradient(circle at 50% 30%,#000 0%,transparent 78%);
+    background:var(--bg);color:var(--text);
+    font-family:"Inter",-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased;
   }
   a{color:inherit;text-decoration:none}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-  .mono{font-family:"IBM Plex Mono",monospace}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 
   /* ---------- top bar ---------- */
   header.topbar{
     position:sticky;top:0;z-index:10;
-    backdrop-filter:blur(10px);
-    background:linear-gradient(to bottom,rgba(7,10,16,.86),rgba(7,10,16,.4));
+    background:rgba(255,255,255,.88);backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);
   }
-  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
-  .brand{display:flex;align-items:center;gap:10px;font-family:"Syne",sans-serif;font-weight:800;letter-spacing:-.02em;font-size:1.05rem}
-  .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
-  .topnav{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em;font-size:1.1rem}
+  .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
+  .brand span.sub{color:var(--faint);font-weight:500}
+  .topnav{display:flex;gap:28px;font-size:.9rem;font-weight:500;color:var(--muted)}
   .topnav a{transition:color .2s}
   .topnav a:hover{color:var(--accent)}
-  @media(max-width:640px){.topnav{display:none}}
+  @media(max-width:680px){.topnav{display:none}}
 
   /* ---------- hero ---------- */
-  .hero{padding:96px 0 64px;position:relative}
+  .hero{padding:72px 0 40px}
   .eyebrow{
-    font-family:"IBM Plex Mono",monospace;font-size:.8rem;letter-spacing:.16em;
-    text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:12px;margin-bottom:26px;
+    font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);
+    font-weight:600;margin-bottom:18px;
   }
-  .eyebrow::before{content:"";width:34px;height:1px;background:var(--accent-dim)}
-  h1.title{
-    font-family:"Syne",sans-serif;font-weight:800;letter-spacing:-.03em;line-height:.92;
-    font-size:clamp(3.6rem,13vw,9.5rem);
+  h1.title{font-size:clamp(2.4rem,6vw,4rem);font-weight:800;letter-spacing:-.03em;line-height:1.04}
+  .lead{margin-top:20px;max-width:64ch;font-size:1.15rem;color:var(--muted)}
+  .lead strong{color:var(--text);font-weight:600}
+  .meta{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px 14px}
+  .meta span{
+    background:var(--bg-soft);border:1px solid var(--line);border-radius:999px;
+    padding:6px 14px;font-size:.85rem;color:var(--muted);
   }
-  h1.title .seg{
-    color:transparent;-webkit-text-stroke:1.6px var(--accent);text-stroke:1.6px var(--accent);
-  }
-  .lead{
-    margin-top:24px;max-width:62ch;font-size:1.12rem;color:var(--text);
-  }
-  .lead strong{color:#fff;font-weight:600}
-  .sub{margin-top:14px;max-width:64ch;color:var(--muted);font-size:1rem}
-  .meta{
-    margin-top:40px;display:flex;flex-wrap:wrap;gap:14px 34px;
-    font-family:"IBM Plex Mono",monospace;font-size:.82rem;color:var(--faint);
-  }
-  .meta b{color:var(--accent);font-weight:500}
+  .meta b{color:var(--accent-dark);font-weight:700}
 
   /* ---------- editions ---------- */
-  section.editions{padding:40px 0 30px}
-  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;
-    padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:8px}
-  .sec-head h2{font-family:"Syne",sans-serif;font-weight:700;font-size:1.9rem;letter-spacing:-.01em}
-  .sec-head .count{font-family:"IBM Plex Mono",monospace;font-size:.8rem;color:var(--faint)}
+  section.editions{padding:34px 0 30px}
+  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+    padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:26px}
+  .sec-head h2{font-size:1.6rem;font-weight:700;letter-spacing:-.01em}
+  .sec-head .count{font-size:.85rem;color:var(--faint)}
 
-  .ed{
-    display:grid;grid-template-columns:minmax(0,148px) 1fr auto;align-items:center;gap:22px;
-    padding:22px 18px;border-bottom:1px solid var(--line);position:relative;
-    transition:background .25s,transform .25s;
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:18px}
+  .card{
+    border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--panel);
+    display:flex;flex-direction:column;transition:box-shadow .25s,transform .25s,border-color .25s;
   }
-  .ed::before{
-    content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--accent);
-    transform:scaleY(0);transform-origin:top;transition:transform .3s ease;
+  .card:hover{box-shadow:0 14px 34px -18px rgba(14,138,120,.4);transform:translateY(-3px);border-color:#cfe6e1}
+  .logo-box{
+    height:128px;display:flex;align-items:center;justify-content:center;padding:20px;
+    background:var(--bg-soft);border-bottom:1px solid var(--line-soft);
   }
-  .ed:hover{background:linear-gradient(90deg,rgba(94,234,212,.06),transparent 70%)}
-  .ed:hover::before{transform:scaleY(1)}
-  .ed .year{
-    font-family:"IBM Plex Mono",monospace;font-weight:500;
-    font-size:clamp(2rem,5.4vw,3.1rem);line-height:1;color:var(--text);
-    transition:color .25s,transform .25s;letter-spacing:-.02em;
+  .logo-box img{max-height:84px;max-width:100%;object-fit:contain}
+  .logo-fallback{
+    font-weight:800;letter-spacing:-.02em;color:var(--accent);
+    display:flex;flex-direction:column;align-items:center;line-height:1;
   }
-  .ed:hover .year{color:var(--accent);transform:translateX(4px)}
-  .ed .info{min-width:0}
-  .ed .name{font-weight:600;font-size:1.05rem}
-  .ed .loc{color:var(--muted);font-size:.92rem;font-family:"IBM Plex Mono",monospace;letter-spacing:.01em}
-  .badge{
-    display:inline-block;margin-left:10px;vertical-align:middle;
-    font-family:"IBM Plex Mono",monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;
-    color:var(--accent);border:1px solid var(--accent-dim);border-radius:999px;padding:3px 9px;
-    background:rgba(94,234,212,.06);
+  .logo-fallback .yr{font-size:2.6rem}
+  .logo-fallback .tag{font-size:.7rem;font-weight:600;letter-spacing:.18em;color:var(--faint);margin-top:8px;text-transform:uppercase}
+  .card-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .card-body .ed-name{font-weight:700;font-size:1.08rem}
+  .card-body .loc{color:var(--muted);font-size:.88rem;flex:1}
+  .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .btn{
+    font-size:.8rem;font-weight:600;padding:6px 12px;border-radius:8px;transition:all .2s;
+    border:1px solid var(--line);color:var(--muted);
   }
-  /* offline-archive badge is a real link sitting above the row's stretched link */
-  a.badge{position:relative;z-index:2;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
-  a.badge:hover{background:rgba(94,234,212,.18);border-color:var(--accent);color:#fff}
-  /* stretched link: covers the whole row so it stays clickable as a div */
-  .ed-link{position:absolute;inset:0;z-index:1}
-  .ed .go{
-    font-family:"IBM Plex Mono",monospace;font-size:.82rem;color:var(--faint);
-    display:flex;align-items:center;gap:8px;white-space:nowrap;transition:color .25s;
-  }
-  .ed .go .arrow{transition:transform .25s}
-  .ed:hover .go{color:var(--accent)}
-  .ed:hover .go .arrow{transform:translate(3px,-3px)}
-  @media(max-width:680px){
-    .ed{grid-template-columns:1fr auto;gap:6px 16px;padding:18px 12px}
-    .ed .year{grid-column:1/-1;font-size:2.2rem}
-    .ed .go{font-size:.74rem}
-  }
+  .btn:hover{border-color:var(--accent);color:var(--accent)}
+  .btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .btn.primary:hover{background:var(--accent-dark);border-color:var(--accent-dark);color:#fff}
+  .btn.brand{background:var(--accent-soft);border-color:var(--accent-soft);color:var(--accent-dark)}
+  .btn.brand:hover{border-color:var(--accent)}
 
-  /* reveal animation */
-  .reveal{opacity:0;transform:translateY(18px)}
-  .reveal.in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+  /* ---------- explore band ---------- */
+  section.explore{padding:24px 0 10px}
+  .explore-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .xcard{
+    border:1px solid var(--line);border-radius:16px;padding:22px;background:var(--bg-soft);
+    transition:border-color .2s,transform .2s;
+  }
+  .xcard:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .xcard h3{font-size:1.1rem;margin-bottom:6px}
+  .xcard p{font-size:.9rem;color:var(--muted)}
+  .xcard .go{margin-top:10px;font-size:.85rem;font-weight:600;color:var(--accent)}
+  .xcard.soon{opacity:.7}
+  .xcard.soon .go{color:var(--faint)}
 
   /* ---------- footer ---------- */
-  footer{margin-top:70px;border-top:1px solid var(--line);background:linear-gradient(to bottom,transparent,rgba(13,19,32,.6))}
-  footer .wrap{padding:54px 28px 64px}
-  .flinks{display:flex;flex-wrap:wrap;gap:14px 28px;margin-bottom:30px}
-  .flinks a{
-    font-family:"IBM Plex Mono",monospace;font-size:.85rem;color:var(--muted);
-    display:inline-flex;align-items:center;gap:9px;transition:color .2s;
-  }
+  footer{margin-top:60px;border-top:1px solid var(--line);background:var(--bg-soft)}
+  footer .wrap{padding:46px 24px 56px}
+  .flinks{display:flex;flex-wrap:wrap;gap:14px 26px;margin-bottom:24px}
+  .flinks a{font-size:.9rem;color:var(--muted);font-weight:500;transition:color .2s}
   .flinks a:hover{color:var(--accent)}
-  .flinks a::before{content:"↗";color:var(--accent-dim)}
   .archive-note{
-    border:1px solid var(--line);border-left:2px solid var(--accent);border-radius:4px;
-    padding:16px 18px;max-width:70ch;color:var(--muted);font-size:.9rem;background:var(--panel);
+    border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;
+    padding:16px 18px;max-width:74ch;color:var(--muted);font-size:.9rem;background:#fff;
   }
   .archive-note b{color:var(--text);font-weight:600}
-  .colophon{margin-top:30px;font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--faint);line-height:1.9}
-  .colophon .accent{color:var(--accent-dim)}
+  .colophon{margin-top:26px;font-size:.82rem;color:var(--faint);line-height:1.9}
 
-  @media(prefers-reduced-motion:reduce){
-    *{animation:none!important;transition:none!important}
-    .reveal{opacity:1;transform:none}
-    html{scroll-behavior:auto}
-  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
 <header class="topbar">
   <div class="wrap">
-    <a class="brand" href="#top"><span class="dot"></span>SBSeg<span style="color:var(--faint);font-weight:400">/CESeg</span></a>
+    <a class="brand" href="#top"><span class="dot"></span>SBSeg <span class="sub">/ CESeg</span></a>
     <nav class="topnav">
       <a href="#edicoes">Edições</a>
+      <a href="palestrantes/">Palestrantes</a>
+      <a href="premiacoes/">Premiações</a>
       <a href="https://sol.sbc.org.br/index.php/sbseg" target="_blank" rel="noopener">Anais</a>
       <a href="https://ceseg.org" target="_blank" rel="noopener">CESeg</a>
     </nav>
@@ -191,12 +152,14 @@
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow">CESeg · Sociedade Brasileira de Computação</p>
-      <h1 class="title">SB<span class="seg">Seg</span></h1>
-      <p class="lead"><strong>Simpósio Brasileiro de Cibersegurança</strong>, o principal fórum nacional de pesquisa em segurança da informação e cibersegurança.</p>
-      <p class="sub">Este é o arquivo histórico do evento: um índice das edições do SBSeg ao longo dos anos, com acesso aos sites de cada edição.</p>
+      <h1 class="title">Simpósio Brasileiro<br>de Cibersegurança</h1>
+      <p class="lead"><strong>SBSeg</strong> — o principal fórum nacional de pesquisa em
+      segurança da informação e cibersegurança. Este é o <strong>arquivo histórico</strong>
+      do evento: um índice das edições ao longo dos anos, com cópias offline preservadas e
+      acesso aos sites de cada edição.</p>
       <div class="meta">
-        <span><b>14</b> edições registradas</span>
-        <span>2012 <b>a</b> 2025</span>
+        <span><b>15</b> edições registradas</span>
+        <span>2011 <b>—</b> 2025</span>
         <span>promovido pela <b>CESeg</b>/SBC</span>
       </div>
     </div>
@@ -206,102 +169,39 @@
     <div class="wrap">
       <div class="sec-head">
         <h2>Edições</h2>
-        <span class="count mono">// índice cronológico</span>
+        <span class="count">índice cronológico</span>
       </div>
-      <div class="ed-list">
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
 
-        <div class="ed reveal">
-          <span class="year">2025</span>
-          <span class="info">
-            <span class="name">SBSeg 2025<a class="badge" href="sbseg2025/">arquivo offline</a></span><br>
-            <span class="loc">Curitiba · PR · PUCPR</span>
-          </span>
-          <span class="go">acessar <span class="arrow">↗</span></span>
-          <a class="ed-link" href="https://sbseg2025.ppgia.pucpr.br/" target="_blank" rel="noopener" aria-label="Acessar o site original do SBSeg 2025"></a>
+  <section class="explore">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Explorar o arquivo</h2>
+        <span class="count">recursos transversais</span>
+      </div>
+      <div class="explore-grid">
+        <a class="xcard" href="palestrantes/">
+          <h3>Palestrantes</h3>
+          <p>Palestrantes convidados (keynotes) das edições anteriores, com afiliação e links.</p>
+          <div class="go">Ver palestrantes →</div>
+        </a>
+        <a class="xcard" href="premiacoes/">
+          <h3>Premiações</h3>
+          <p>Trabalhos premiados por edição, em todas as categorias e sub-eventos.</p>
+          <div class="go">Ver premiações →</div>
+        </a>
+        <div class="xcard soon">
+          <h3>Galeria de fotos</h3>
+          <p>Galeria integrada de fotos das edições. Em construção.</p>
+          <div class="go">Em breve</div>
         </div>
-
-        <div class="ed reveal">
-          <span class="year">2024</span>
-          <span class="info">
-            <span class="name">SBSeg 2024<a class="badge" href="sbseg2024/">arquivo offline</a></span><br>
-            <span class="loc">São José dos Campos · SP · ITA · 16 a 19 set</span>
-          </span>
-          <span class="go">acessar <span class="arrow">↗</span></span>
-          <a class="ed-link" href="https://sbseg2024.ita.br/" target="_blank" rel="noopener" aria-label="Acessar o site original do SBSeg 2024"></a>
+        <div class="xcard soon">
+          <h3>Patrocinadores</h3>
+          <p>Patrocinadores e apoiadores ao longo das edições. Em construção.</p>
+          <div class="go">Em breve</div>
         </div>
-
-        <a class="ed reveal" href="https://sbseg2023.ufjf.br/" target="_blank" rel="noopener">
-          <span class="year">2023</span>
-          <span class="info"><span class="name">SBSeg 2023</span><br><span class="loc">Juiz de Fora · MG · UFJF</span></span>
-          <span class="go">acessar <span class="arrow">↗</span></span>
-        </a>
-
-        <a class="ed reveal" href="https://sbseg2022.inf.ufsm.br/" target="_blank" rel="noopener">
-          <span class="year">2022</span>
-          <span class="info"><span class="name">SBSeg 2022</span><br><span class="loc">Santa Maria · RS · UFSM</span></span>
-          <span class="go">acessar <span class="arrow">↗</span></span>
-        </a>
-
-        <a class="ed reveal" href="https://sbseg2021.ufpa.br/" target="_blank" rel="noopener">
-          <span class="year">2021</span>
-          <span class="info"><span class="name">SBSeg 2021</span><br><span class="loc">Belém · PA · UFPA</span></span>
-          <span class="go">acessar <span class="arrow">↗</span></span>
-        </a>
-
-        <a class="ed reveal" href="http://sbseg.sbc.org.br/2020/" target="_blank" rel="noopener">
-          <span class="year">2020</span>
-          <span class="info"><span class="name">SBSeg 2020</span><br><span class="loc">Petrópolis · RJ</span></span>
-          <span class="go">acessar <span class="arrow">↗</span></span>
-        </a>
-
-        <a class="ed reveal" href="https://sbseg2019.ime.usp.br/" target="_blank" rel="noopener">
-          <span class="year">2019</span>
-          <span class="info"><span class="name">SBSeg 2019</span><br><span class="loc">São Paulo · SP · IME/USP</span></span>
-          <span class="go">acessar <span class="arrow">↗</span></span>
-        </a>
-
-        <a class="ed reveal" href="https://sbseg2018.imd.ufrn.br/" target="_blank" rel="noopener">
-          <span class="year">2018</span>
-          <span class="info"><span class="name">SBSeg 2018</span><br><span class="loc">Natal · RN · IMD/UFRN</span></span>
-          <span class="go">acessar <span class="arrow">↗</span></span>
-        </a>
-
-        <a class="ed reveal" href="https://sbseg2017.redes.unb.br/" target="_blank" rel="noopener">
-          <span class="year">2017</span>
-          <span class="info"><span class="name">SBSeg 2017</span><br><span class="loc">Brasília · DF · UnB</span></span>
-          <span class="go">acessar <span class="arrow">↗</span></span>
-        </a>
-
-        <a class="ed reveal" href="http://sbseg2016.ic.uff.br/" target="_blank" rel="noopener">
-          <span class="year">2016</span>
-          <span class="info"><span class="name">SBSeg 2016</span><br><span class="loc">Niterói · RJ · UFF</span></span>
-          <span class="go">acessar <span class="arrow">↗</span></span>
-        </a>
-
-        <a class="ed reveal" href="https://siaiap34.univali.br/sbseg2015/" target="_blank" rel="noopener">
-          <span class="year">2015</span>
-          <span class="info"><span class="name">SBSeg 2015</span><br><span class="loc">Florianópolis · SC · UNIVALI</span></span>
-          <span class="go">acessar <span class="arrow">↗</span></span>
-        </a>
-
-        <a class="ed reveal" href="http://www.sbseg2014.dcc.ufmg.br/" target="_blank" rel="noopener">
-          <span class="year">2014</span>
-          <span class="info"><span class="name">SBSeg 2014</span><br><span class="loc">Belo Horizonte · MG · DCC/UFMG</span></span>
-          <span class="go">acessar <span class="arrow">↗</span></span>
-        </a>
-
-        <a class="ed reveal" href="http://sbseg2013.icomp.ufam.edu.br/" target="_blank" rel="noopener">
-          <span class="year">2013</span>
-          <span class="info"><span class="name">SBSeg 2013</span><br><span class="loc">Manaus · AM · IComp/UFAM</span></span>
-          <span class="go">acessar <span class="arrow">↗</span></span>
-        </a>
-
-        <a class="ed reveal" href="http://sbseg2012.ppgia.pucpr.br/" target="_blank" rel="noopener">
-          <span class="year">2012</span>
-          <span class="info"><span class="name">SBSeg 2012</span><br><span class="loc">Curitiba · PR · PUCPR</span></span>
-          <span class="go">acessar <span class="arrow">↗</span></span>
-        </a>
-
       </div>
     </div>
   </section>
@@ -310,37 +210,65 @@
 <footer>
   <div class="wrap">
     <div class="flinks">
-      <a href="https://sol.sbc.org.br/index.php/sbseg" target="_blank" rel="noopener">Anais do SBSeg (SOL/SBC)</a>
-      <a href="https://ceseg.org" target="_blank" rel="noopener">CESeg</a>
-      <a href="https://www.sbc.org.br" target="_blank" rel="noopener">Sociedade Brasileira de Computação</a>
+      <a href="https://sol.sbc.org.br/index.php/sbseg" target="_blank" rel="noopener">↗ Anais do SBSeg (SOL/SBC)</a>
+      <a href="https://ceseg.org" target="_blank" rel="noopener">↗ CESeg</a>
+      <a href="https://www.sbc.org.br" target="_blank" rel="noopener">↗ Sociedade Brasileira de Computação</a>
     </div>
-    <p class="archive-note">As edições <b>2024</b> e <b>2025</b> possuem uma <b>cópia estática preservada</b> neste projeto, navegável offline, caso os sites originais saiam do ar. Os links acima apontam para os sites originais ao vivo.</p>
+    <p class="archive-note">Várias edições possuem uma <b>cópia estática preservada</b> neste
+    projeto, navegável offline caso o site original saia do ar. Onde a cópia existe, o botão
+    <b>Arquivo offline</b> aparece no cartão da edição; o botão <b>Site original</b> aponta
+    para o site ao vivo (quando ainda disponível).</p>
     <p class="colophon">
-      <span class="accent">//</span> SBSeg: Simpósio Brasileiro de Cibersegurança<br>
-      <span class="accent">//</span> Comissão Especial em Segurança da Informação e de Sistemas Computacionais (CESeg) · SBC<br>
-      <span class="accent">//</span> arquivo histórico de edições
+      SBSeg — Simpósio Brasileiro de Cibersegurança<br>
+      Comissão Especial em Segurança da Informação e de Sistemas Computacionais (CESeg) · SBC<br>
+      Arquivo histórico de edições · atualizado em 2026-06-17
     </p>
   </div>
 </footer>
 
 <script>
-  // staggered reveal on scroll (graceful: rows are shown immediately if JS/IO unavailable)
-  (function(){
-    var rows = document.querySelectorAll('.reveal');
-    if(!('IntersectionObserver' in window)){ rows.forEach(function(r){r.classList.add('in')}); return; }
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){
-          var el = e.target;
-          var i = [].indexOf.call(el.parentNode.children, el);
-          el.style.transitionDelay = Math.min(i,8)*55 + 'ms';
-          el.classList.add('in');
-          io.unobserve(el);
-        }
-      });
-    },{rootMargin:'0px 0px -8% 0px',threshold:.08});
-    rows.forEach(function(r){io.observe(r)});
-  })();
+  // Single source of truth for the editions; rendered into cards.
+  // logo: path under assets/logos or null (uses typographic fallback)
+  // archive: local offline copy folder or null
+  // site: original live site or null (dead)
+  // brand: logomarca page or null
+  var EDITIONS = [
+    {y:2025, n:"SBSeg 2025", loc:"Foz do Iguaçu · PR · PUCPR · 1–4 set", logo:"assets/logos/sbseg2025.png", archive:"sbseg2025/", site:"https://sbseg2025.ppgia.pucpr.br/", brand:"sbseg2025/sbseg2025.ppgia.pucpr.br/informacoes/logomarca/index.html"},
+    {y:2024, n:"SBSeg 2024", loc:"São José dos Campos · SP · ITA · 16–19 set", logo:"assets/logos/sbseg2024.png", archive:"sbseg2024/", site:"https://sbseg2024.ita.br/", brand:"sbseg2024/sbseg2024.ita.br/informacoes/logomarca/index.html"},
+    {y:2023, n:"SBSeg 2023", loc:"Juiz de Fora · MG · UFJF", logo:null, archive:null, site:"https://sbseg2023.ufjf.br/", brand:null},
+    {y:2022, n:"SBSeg 2022", loc:"Santa Maria · RS · UFSM", logo:"assets/logos/sbseg2022.png", archive:"sbseg2022/", site:"https://sbseg2022.inf.ufsm.br/", brand:null},
+    {y:2021, n:"SBSeg 2021", loc:"Belém · PA · UFPA", logo:"assets/logos/sbseg2021.svg", archive:"sbseg2021/", site:"https://sbseg2021.ufpa.br/", brand:null},
+    {y:2020, n:"SBSeg 2020", loc:"Petrópolis · RJ", logo:null, archive:"sbseg2020/", site:"http://sbseg.sbc.org.br/2020/", brand:null},
+    {y:2019, n:"SBSeg 2019", loc:"São Paulo · SP · IME/USP", logo:null, archive:"sbseg2019/", site:"https://sbseg2019.ime.usp.br/", brand:null},
+    {y:2018, n:"SBSeg 2018", loc:"Natal · RN · IMD/UFRN", logo:"assets/logos/sbseg2018.png", archive:"sbseg2018/", site:"https://sbseg2018.imd.ufrn.br/", brand:null},
+    {y:2017, n:"SBSeg 2017", loc:"Brasília · DF · UnB", logo:"assets/logos/sbseg2017.png", archive:"sbseg2017/", site:"https://sbseg2017.redes.unb.br/", brand:null},
+    {y:2016, n:"SBSeg 2016", loc:"Niterói · RJ · UFF", logo:null, archive:null, site:"http://sbseg2016.ic.uff.br/", brand:null},
+    {y:2015, n:"SBSeg 2015", loc:"Florianópolis · SC · UFSC/UNIVALI", logo:null, archive:"sbseg2015/", site:null, brand:null},
+    {y:2014, n:"SBSeg 2014", loc:"Belo Horizonte · MG · DCC/UFMG", logo:"assets/logos/sbseg2014.png", archive:"sbseg2014/", site:"http://www.sbseg2014.dcc.ufmg.br/", brand:null},
+    {y:2013, n:"SBSeg 2013", loc:"Manaus · AM · IComp/UFAM", logo:null, archive:null, site:"http://sbseg2013.icomp.ufam.edu.br/", brand:null},
+    {y:2012, n:"SBSeg 2012", loc:"Curitiba · PR · PUCPR", logo:"assets/logos/sbseg2012.jpg", archive:"sbseg2012/", site:"http://sbseg2012.ppgia.pucpr.br/", brand:null},
+    {y:2011, n:"SBSeg 2011", loc:"Brasília · DF · UnB", logo:null, archive:"sbseg2011/", site:null, brand:null}
+  ];
+
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+
+  var grid = document.getElementById('grid');
+  grid.innerHTML = EDITIONS.map(function(e){
+    var logo = e.logo
+      ? '<img src="'+e.logo+'" alt="Logomarca do '+esc(e.n)+'" loading="lazy">'
+      : '<div class="logo-fallback"><span class="yr">'+("'"+String(e.y).slice(2))+'</span><span class="tag">SBSeg</span></div>';
+    var acts = [];
+    if(e.archive) acts.push('<a class="btn primary" href="'+e.archive+'">Arquivo offline</a>');
+    if(e.site)    acts.push('<a class="btn" href="'+e.site+'" target="_blank" rel="noopener">Site original</a>');
+    if(e.brand)   acts.push('<a class="btn brand" href="'+e.brand+'">Logomarca</a>');
+    return '<div class="card">'
+      + '<div class="logo-box">'+logo+'</div>'
+      + '<div class="card-body">'
+      +   '<div class="ed-name">'+esc(e.n)+'</div>'
+      +   '<div class="loc">'+esc(e.loc)+'</div>'
+      +   '<div class="actions">'+acts.join('')+'</div>'
+      + '</div></div>';
+  }).join('');
 </script>
 </body>
 </html>

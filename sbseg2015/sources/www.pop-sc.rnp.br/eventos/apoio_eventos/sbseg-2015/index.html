@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="PT-Br" name="Language" />
+    <meta name="google-site-verification" content="EmZFAVwmcereD2s5GMgJrDBWIIie5JyXe7h-LhNzOsg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>POP-SC/RNP</title>
+	
+	  <link rel="stylesheet" href="../../../css/global.css">
+	  <link rel="stylesheet" href="../../../css/bootstrap.css">
+	  <link rel="stylesheet" href="../../../css/bootstrap-table.css">
+	  <link rel="stylesheet" href="../../../css/normalize.css">
+	  <link rel="stylesheet" href="../../../css/fonts.css">
+	  <link rel="stylesheet" href="../../../css/leaflet.css">
+	 
+  </head>
+  
+  <body>
+  
+  	  <script type="text/javascript" src="../../../js/jquery-3.2.1.min.js"></script>
+  	  <script type="text/javascript" src="../../../js/jquery-migrate-3.0.0.min.js"></script>
+	  <script type="text/javascript" src="../../../js/bootstrap.3.3.7.min.js"></script>
+	  <script type="text/javascript" src="../../../js/bootstrap-table.js"></script>
+	  <script type="text/javascript" src="../../../js/bootstrap-table-pt-BR.js"></script>
+	  <script type="text/javascript" src="../../../js/jquery.bootstrap.newsbox.min.js"></script>
+	  <script type="text/javascript" src="../../../js/highcharts.js"></script>
+	  <script type="text/javascript" src="../../../js/exporting.js"></script>
+	  <script type="text/javascript" src="../../../js/jquery.matchHeight.js"></script>
+	  <script type="text/javascript" src="../../../js/bootstrap-hover-dropdown.js"></script>
+	  <script type="text/javascript" src="../../../js/leaflet.js"></script>
+  
+   <div class='header'>
+   
+<div class="navbar navbar-inverse  navbar-fixed-top"
+	role="navigation">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="https://www.pop-sc.rnp.br:443/home/"><img
+				src="../../../img/logos/logo_pop_novo_simples_positivo.png"
+				alt="PoP-SC" class='header_logo' width="135px"></a>
+		</div>
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+
+				<!-- MENU PRINCIPAL -->
+							 
+								<li class="menu-item dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" data-hover="dropdown" href="index.html#"><span
+						class="glyphicon glyphicon-home"></span>PoP-SC<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="https://www.pop-sc.rnp.br:443/home/">Página Inicial</a></li>
+						<li><a href="https://www.pop-sc.rnp.br:443/home/sobre/">Sobre</a></li>
+						<li><a href="https://www.pop-sc.rnp.br:443/home/instituicoes/">Instituições</a></li>
+						<li><a href="https://www.pop-sc.rnp.br:443/home/como_conectar/">Como se
+								conectar</a></li>
+						<li><a href="https://www.pop-sc.rnp.br:443/home/equipe/">Equipe</a></li>
+						<li><a href="https://www.pop-sc.rnp.br:443/home/noticias/">Notícias</a></li>
+						<!-- <li><a href="https://www.pop-sc.rnp.br:443/home/historico/">Histórico</a></li> -->
+						<li class='divider'></li>
+						<li><a href="https://remep.pop-sc.rnp.br"><strong>REMEP-FLN</strong></a></li>
+					</ul></li>
+
+				<li class="menu-item dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" data-hover="dropdown" href="index.html#"><span
+						class="glyphicon glyphicon-book"></span>Catálogo de Serviços<span
+						class="caret"></span></a>
+					<ul class="dropdown-menu">
+				                       <li class='menu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/'>Índice</a></li><li class='menu-item dropdown dropdown-submenu'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown'>Conectividade</a><ul class='dropdown-menu'><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/conectividade#acesso_backbone_rnp'>Acesso ao Backbone RNP</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/conectividade#agregacao_enlaces_wan'>Agregação de enlaces WAN</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/conectividade#rede_metropolitana'>Rede Metropolitana</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/conectividade#enlaces_diretos'>Enlaces Diretos</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/conectividade#ponto_troca_trafego'>Ponto de Troca de Tráfego IX.BR</a></li></ul></li><li class='menu-item dropdown dropdown-submenu'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown'>Monitoramento</a><ul class='dropdown-menu'><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/monitoramento#monitoramento_24x7'>Monitoramento 24x7</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/monitoramento#operacao_12x7'>Operação 12x7</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/monitoramento#sla'>Nível de Serviço (SLA)</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/monitoramento#notificacao_sms'>Notificações e Alertas (E-mail/SMS)</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/monitoramento#medicoes_qualidade'>Medições de Qualidade</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/monitoramento#fluxos'>Análise de Fluxos</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/monitoramento#panorama'>Panorama</a></li></ul></li><li class='menu-item dropdown dropdown-submenu'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown'>Serviços de Rede</a><ul class='dropdown-menu'><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/servicos_rede#engenharia_operacao'>Engenharia e Operação</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/servicos_rede#acesso_internet'>Acesso a Internet</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/servicos_rede#dns'>Resolução de Nomes (DNS)</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/servicos_rede#sincronizacao_relogio'>Sincronização de Relógio</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/servicos_rede#ipv4_ipv6'>IPv4 e IPv6</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/servicos_rede#qos'>Priorização de tráfego / QoS</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/servicos_rede#espelhamento'>Espelhamento de Conteúdo</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/servicos_rede#whois_lg'>WHOIS / Looking Glass</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/servicos_rede#afericao_enlaces'>Aferição de Enlaces</a></li></ul></li><li class='menu-item dropdown dropdown-submenu'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown'>Segurança</a><ul class='dropdown-menu'><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/seguranca#apoio_incidentes'>Apoio no tratamento de Incidentes</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/seguranca#melhores_praticas'>Melhores práticas (BCP)</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/seguranca#mitigacao_ddos'>Mitigação de DoS/DDoS</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/seguranca#sensores'>Sensores - Honeypot</a></li></ul></li><li class='menu-item dropdown dropdown-submenu'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown'>Comunicação</a><ul class='dropdown-menu'><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/comunicacao#portal_publico'>Portal Público (Sítio)</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/comunicacao#intranet'>Portal de Relacionamento (Intranet)</a></li></ul></li><li class='menu-item dropdown dropdown-submenu'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown'>Capacitação</a><ul class='dropdown-menu'><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/capacitacao#workshops_rede'>Workshop de Tecnologia de Redes</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/capacitacao#programa_capacitacao'>Programa de Capacitação</a></li><li class='submenu-item'><a href='https://www.pop-sc.rnp.br:443/servicos/capacitacao#divulgacao_eventos'>Divulgação de Eventos</a></li></ul></li>			                		</ul></li>
+
+				<li class="menu-item dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="index.html#">
+						<span class="glyphicon glyphicon-list-alt"></span>Publicações<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li class="menu-item dropdown dropdown-submenu">
+							<a href="index.html#"	class="dropdown-toggle" data-toggle="dropdown">Relatórios</a>
+							<ul class="dropdown-menu">
+								<li class="submenu-item"><a	href="https://www.pop-sc.rnp.br:443/publicacoes/relatorios_sla">SLA</a></li>
+								<li class="submenu-item"><a	href="https://www.pop-sc.rnp.br:443/publicacoes/relatorios_planos">Planos de Trabalho</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+
+
+				<li class="menu-item dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" data-hover="dropdown" href="index.html#"><span
+						class="glyphicon glyphicon-calendar"></span>Eventos<span
+						class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li class="menu-item"><a
+							href="https://www.pop-sc.rnp.br:443/eventos/wtr/">WTR</a></li>
+						<li class="menu-item"><a
+							href="https://www.pop-sc.rnp.br:443/eventos/seminarios/">Seminários</a></li>
+						<li class="menu-item"><a
+							href="https://www.pop-sc.rnp.br:443/eventos/disi/">DISI</a></li>
+						<li class="menu-item"><a
+							href="https://www.pop-sc.rnp.br:443/eventos/meseg_2016/">MESEG 2016</a></li>
+						<li class="menu-item dropdown dropdown-submenu"><a href="index.html#"
+							class="dropdown-toggle" data-toggle="dropdown">Apoio a eventos</a>
+							<ul class="dropdown-menu">
+								<li class="submenu-item"><a
+									href="https://www.pop-sc.rnp.br:443/eventos/apoio_eventos/sbrc-2001/">SBRC-2001</a></li>
+								<li class="submenu-item"><a
+									href="https://www.pop-sc.rnp.br:443/eventos/apoio_eventos/sbrc-2014/">SBRC-2014</a></li>
+								<li class="submenu-item"><a
+									href="https://www.pop-sc.rnp.br:443/eventos/apoio_eventos/wrnp/">WRNP</a></li>
+								<li class="submenu-item"><a
+									href="index.html">SBSEG-2015</a></li>
+								<li class="submenu-item"><a
+									href="https://www.pop-sc.rnp.br:443/eventos/apoio_eventos/sci-2007/">SCI-2007</a></li>
+							</ul></li>
+					</ul></li>
+
+				<li class="menu-item dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" data-hover="dropdown" href="index.html#"><span
+						class="glyphicon glyphicon-stats"></span>Monitoramento<span
+						class="caret"></span></a>
+					<ul class="dropdown-menu">
+                                                                            <li
+							class="menu-item dropdown dropdown-submenu"><a href="index.html#"
+							class="dropdown-toggle" data-toggle="dropdown">Disponibilidade</a>
+							<ul class="dropdown-menu">
+
+                                                                                                    <li
+									class="submenu-item"><a
+									href="https://www.pop-sc.rnp.br:443/monitoramento/disponibilidade/backbone_rnp/">Backbone RNP</a>
+								</li>
+                                                                                                    <li
+									class="submenu-item"><a
+									href="https://www.pop-sc.rnp.br:443/monitoramento/disponibilidade/infra_eletrica/">Disponibilidade Elétrica</a>
+								</li>
+                                                                                                    <li
+									class="submenu-item"><a
+									href="https://www.pop-sc.rnp.br:443/monitoramento/disponibilidade/infra_critica/">Infraestrutura Crítica</a>
+								</li>
+                                                                                                    <li
+									class="submenu-item"><a
+									href="https://www.pop-sc.rnp.br:443/monitoramento/disponibilidade/conectividade_externa/">Conectividade Externa</a>
+								</li>
+                                                                                                    <li
+									class="submenu-item"><a
+									href="https://www.pop-sc.rnp.br:443/monitoramento/disponibilidade/datacenter_pop/">Datacenter PoP-SC</a>
+								</li>
+                                                                                                    <li
+									class="submenu-item"><a
+									href="https://www.pop-sc.rnp.br:443/monitoramento/disponibilidade/disp_clientes/">Disponibilidade Instituições</a>
+								</li>
+                                                                                            </ul></li>
+                                    						<li class="menu-item"><a
+							href="https://www.pop-sc.rnp.br:443/monitoramento/metricas/">Métricas e Estatísticas</a></li>
+							<li class="menu-item"><a
+							href="https://www.pop-sc.rnp.br:443/monitoramento/status_page/">Status Page</a></li>
+
+							<li class="menu-item"><a
+							href="https://www.pop-sc.rnp.br:443/monitoramento/ipv6/">IPv6</a></li>
+						<li class="menu-item"><a
+							href="https://www.pop-sc.rnp.br:443/monitoramento/looking_glass/">Looking
+								Glass</a></li>
+						<li class="menu-item dropdown dropdown-submenu"><a href="index.html#"
+							class="dropdown-toggle" data-toggle="dropdown">Panoramas</a>
+							<ul class="dropdown-menu">
+								<li class="submenu-item"><a
+									href="https://www.pop-sc.rnp.br:443/monitoramento/panoramas/pop_sc/">PoP-SC</a></li>
+								<li class="submenu-item"><a
+									href="https://www.pop-sc.rnp.br:443/monitoramento/panoramas/rct/">RCT</a></li>
+								<li class="submenu-item"><a
+									href="https://www.pop-sc.rnp.br:443/monitoramento/panoramas/rnp/">RNP</a></li>
+								<li class="submenu-item"><a
+									href="https://www.pop-sc.rnp.br:443/monitoramento/panoramas/via_ipe/">ViaIpê</a></li>
+							</ul></li>
+
+						<!-- <li class="menu-item"><a href="https://www.pop-sc.rnp.br:443/monitoramento/temperatura/">Temperatura</a></li> -->
+						<li class="menu-item dropdown dropdown-submenu"><a href="index.html#"
+							class="dropdown-toggle" data-toggle="dropdown">Medição de rede</a>
+							<ul class="dropdown-menu">
+								<li class="submenu-item"><a
+									href="https://speedtest.pop-sc.rnp.br/">Speedtest REMEP</a></li>
+								<li class="submenu-item"><a
+									href="https://sc.medidor.rnp.br/">Medidor RNP</a></li>
+								<li class="submenu-item"><a
+									href="http://speed.measurementlab.net/">MLAB</a></li>
+							</ul></li>
+							
+						<li class="menu-item"><a
+							href="https://www.pop-sc.rnp.br:443/monitoramento/whois/">WHOIS</a></li>
+					</ul></li>
+		                   	    
+		                   		                        
+                        </ul>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+$(function(){
+
+	$('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+
+	    // Avoid following the href location when clicking
+	    event.preventDefault(); 
+	    // Avoid having the menu to close when clicking
+	    event.stopPropagation(); 
+
+	    // If a menu is already open we close it
+	    $('ul.dropdown-menu [data-toggle=dropdown]').parent().removeClass('open');
+	    // opening the one you clicked on
+	    $(this).parent().addClass('open');
+
+	    var menu = $(this).parent().find("ul");
+	    var menupos = menu.offset();
+	  
+	    if ((menupos.left + menu.width()) + 30 > $(window).width()) {
+	        var newpos = - menu.width();      
+	    } else {
+	        var newpos = $(this).parent().width();
+	    }
+	    menu.css({ left:newpos });
+
+	});
+
+	$('ul.dropdown-menu .menu-item').on('mouseover', function(event) {
+		//console.log($(this).children().attr('class'));
+		if ($(this).attr('class') == 'menu-item'){
+			$('ul.dropdown-menu [data-toggle=dropdown]').parent().removeClass('open');
+			//console.log("entrou aqui");
+		}
+
+	});
+
+	$('[data-hover="dropdown"]').dropdownHover();
+
+});
+
+</script>   </div>
+   
+   <div class="container">
+  	 	<div class="page-header">
+  <ul class="breadcrumb">
+	   <li>Eventos</li>
+	  <li>Apoio a eventos</li>
+	  <li class="active">SBSEG-2015</li>
+  </ul>
+  <div class='content_header'>SBSEG-2015</div>
+</div>
+
+<div class="panel panel-default">
+  	<div class="panel-body conteudo">
+  	
+  		<p>O Simpósio Brasileiro de Segurança da Informação e de Sistemas Computacionais (SBSeg) é um evento científico promovido anualmente pela Sociedade Brasileira de Computação (SBC). Ele representa o principal fórum do país para divulgação de resultados de pesquisas, debates, intercâmbio de ideias e atividades relevantes ligadas à segurança da informação e de sistemas computacionais, integrando a comunidade brasileira de pesquisadores e profissionais atuantes nessa área.</p>
+		<p>O PoP-SC apoiou o evento provendo conectividade.</p>
+		
+  		<p>Maiores informações em: <a target='_blank' class='external_link' href='http://sbseg2015.univali.br/'>SBSEG-2015</a></p>
+		<hr>
+		<img class="img-responsive img-centered" src="../../../img/conteudo/sbseg-2015.png" alt="sbseg-2015" width='80%'>
+	</div>
+</div>   </div>
+   
+   
+<div class='spacer'></div>
+
+		 
+	<footer class="footer page-row" style='text-align: center;'>
+	  <p><img height="38px" src="../../../img/logos/logo_pop_novo.png" alt="Ponto de Presen�a da RNP - Santa Catarina"/></p>
+	  <p><img height="36px" src="../../../img/logos/logo_rnp.png" alt="Rede Nacional de Ensino e Pesquisa"/></p>
+	  <p><img height="34px" src="../../../img/logos/ministerio_cultura.png" alt="Minist�rio da Cultura"/></p>
+	  <p><img height="34px" src="../../../img/logos/ministerio_defesa.png" alt="Minist�rio da Defesa"/></p>
+	  <p><img height="34px" src="../../../img/logos/ministerio_saude.png" alt="Minist�rio da Saúde"/></p>
+	  <p><img height="34px" src="../../../img/logos/ministerio_cominucacoes.png" alt="Minist�rio das Comunicações"/></p>
+	  <p><img height="34px" src="../../../img/logos/ministerio_educacao.png" alt="Minist�rio da Educação"/></p>
+	  <p><img height="34px" src="../../../img/logos/ministerio_cti.png" alt="Minist�rio da Ciência, Tecnologia e Inovação"/></p>
+	  <p><img height="38px" src="../../../img/logos/governo-federal-2023.png" alt="Governo Federal"/></p>
+	 
+	</footer>
+	
+  </body>
+  
+</html>

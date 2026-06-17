@@ -1,0 +1,106 @@
+Chamada de Trabalhos
+
+
+SBSeg 2012 - Simpósio Brasileiro em Segurança da Informação e de 
+Sistemas Computacionais (SBSeg)
+
+
+Workshop de Forense Computacional (WFC)
+
+
+22/11/2012 (Quinta-feira)
+
+
+Em 2012, como uma inovação, o Simpósio Brasileiro em Segurança da  
+Informação e de Sistemas Computacionais (SBSeg) abre as portas para
+ a área interdisciplinar de Forense Computacional, despertando o 
+interesse de pesquisadores, peritos, consultores e acadêmicos, tanto da
+ área de Informática quanto da área do Direito concentrando esforços em 
+um evento satélite denominado Workshop de Forense Computacional 
+(WFC).
+
+A Ciência da Computação e Informática trazendo a técnica, os métodos 
+e a segurança necessária em todos os tipos de trabalhos, operações, 
+investigações e atividades relacionadas com a Forense Computacional. 
+O Direito trazendo os aspectos jurídicos, a legislação e as implicações 
+à sociedade brasileira decorrentes de atos ilícitos. 
+
+A área de Forense Computacional ocupa-se da atualidade, a qual vem 
+transferindo para o ambiente virtual (digital), a maioria das relações da
+sociedade convencional. Assim, problemas sociais do cotidiano rompem
+fronteiras do mundo real e adentram o mundo digital surgindo diversos
+e novos problemas técnicos e jurídicos. Problemas tais como a invasão
+de privacidade, descumprimentos de contratos celebrados pela Internet,
+disseminação de e-mails caluniosos ou difamatórios, pornografia infantil,
+cyberbulling, compartilhamento ilícito de softwares, músicas e filmes, 
+entre outros problemas que passaram a fazer parte da nova realidade 
+vivida pela sociedade brasileira e mundial.
+
+A área denominada de computação forense ou forense computacional 
+(computer forensics) é a ciência cujo objetivo é prover métodos que 
+favoreçam a coleta, preservação, validação, identificação, análise, 
+interpretação, documentação e apresentação de evidências derivadas 
+de fontes digitais, com o propósito de facilitar ou, em alguns casos, 
+reconstituir um evento. Nesses casos, metodologias apropriadas para a 
+recuperação e reprodução dos fatos, devem ser necessariamente 
+estudadas e analisadas.
+
+Por outro lado, os problemas decorrentes do mau uso das tecnologias da 
+informação e comunicação necessitam da comprovação dos fatos que 
+possam ser trazidos em juízo para as devidas atribuições de 
+responsabilidades. Portanto, é importante que os aspectos técnicos e 
+jurídicos sejam estudados e aplicados por meio da caracterização de 
+boas práticas.
+
+Neste contexto, o WFC terá palestrantes de várias regiões do Brasil e, 
+ainda, contará com debatedores especializados em Computação Forense,
+ além de profissionais atuantes em Direito Digital, Tecnologia da 
+Informação, Segurança, além de membros do Ministério Público, do 
+Poder Judiciário, da Polícia Federal e dos Institutos de Criminalística.
+
+Assim, a forense computacional desempenha papel importante e vem 
+sendo considerada como uma peça fundamental do quebra-cabeça da 
+investigação. Nesse contexto, a Comissão Organizadora convida você a 
+participar ativamente deste evento submetendo artigos sobre os temas 
+abaixo relacionados. Ressaltamos temas aqui não descritos também 
+podem ser considerados bastando um contato com a comissão 
+organizadora para esclarecer sua adequabilidade. Finalmente, convidamos
+a todos os interessados a enviar sua contribuições. 
+
+Temas:
+
+- Análise Forense de Documentos Digitais;
+- Aspectos Forenses de Redes de Computadores e Segurança;
+- Aspectos Jurídicos da Forense Computacional;
+- Biometria e Ataques a Sistemas Biométricos (Spoofing);
+- Crimes Eletrônicos;
+- Detecção de Pornografia e Pornografia Infantil;
+- Detecção de Violência;
+- Fundamentos Teóricos para Forense Computacional;
+- Gestão da Segurança da Informação;
+- Levantamento (coleta) de Provas Digitais;
+- Mascaramento de Informações (Esteganografia e Esteganálise);
+- Segurança e Procedimentos Investigatórios em Nuvem Computacional;
+- Vigilância Eletrônica e CCTVs;
+
+Comitê de Avaliação
+
+-Alceu Britto Jr, PUC-PR
+-Anderson Rocha, Unicamp
+-Cinthia Freitas, PUC-PR
+-Eduardo Valle, Unicamp
+-Helio Pedrini, Unicamp
+-Julio Hernandez, Unicamp
+-Paulo Miranda, USP
+-William Schwartz, UFMG
+
+Datas 
+
+Submissão (registro e upload do artigo): 01 de Setembro de 2012
+Notificação dos Autores: 17 de setembro de 2012
+Versão Final: 20 de setembro de 2012
+
+Coordenadores do Workshop de Forense Computacional
+
+Anderson Rocha, UNICAMP (anderson em ic ponto unicamp ponto br)
+Cinthia Freitas, PUCPR (cinthia em ppgia ponto pucpr ponto br)

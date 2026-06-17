@@ -1,0 +1,1213 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SBSEG 2014 - Accepted Papers</title>
+	<!-- Fontes -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600|Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+	<!-- Css -->
+	<link rel="stylesheet" href="https://www.sbseg2014.dcc.ufmg.br/eng/css/base.css">
+	<!-- Script -->
+	<script src="https://www.sbseg2014.dcc.ufmg.br/eng/js/head.js"></script>
+	<script>
+		head.js(
+			'../js/jquery.js',
+			'../js/jquery-migrate.js',
+			'../js/Modernizr.js',
+			'../js/easing.js',
+			'../js/base.js'
+			)
+		head.ready('base.js', function(){
+			$('.accordion').click(function(event) {
+				$(this).toggleClass('accordion-active');
+				$(this).next('.conteudo-accordion').slideToggle('normal');
+			}).next('.conteudo-accordion').hide();
+			if (window.location.hash) {
+				titulo = window.location.hash;
+				$(titulo).toggleClass('accordion-active');
+				rolaPara = $(titulo).offset().top-55;
+				$(window.location.hash).next().slideDown('normal', function(){
+					$('html, body').stop().animate({
+						scrollTop: rolaPara
+					}, 1000, 'easeOutExpo');
+				});
+			}
+		})
+	</script>
+</head>
+<body id="chamadas">
+	<div id="base">
+		<header id="topo" class="container clr">
+			<div class="sbseg14"></div>
+			<div class="sbsegTitulo"></div>
+			<a href="../trabalhos-aceitos.html" class="mudaIdioma"></a>
+		</header>
+		<nav id="menuPrincipal">
+			<ul class="container">
+				<li class="menuItem"><a class="menuLink" href="../eng/index.html">HOME</a></li>
+				<li class="menuItem"><a class="menuLink" href="event.html">EVENT</a></li>
+				<li class="menuItem"><a class="menuLink" href="committees.html">COMMITTEES</a></li>
+				<li class="menuItem"><a class="menuLink" href="call-for-papers.html">CALL FOR PAPERS</a></li>
+				<li class="menuItem"><a class="menuLink" href="registration.html">REGISTRATION</a></li>
+				<li class="menuItem"><a class="menuLink" href="program.html">PROGRAM</a></li>
+				<li class="menuItem menuLocal"><a class="menuLink" href="accepted-papers.html#">VENUE</a>
+					<ul class="subMenu">
+						<li><a href="overview.html" class="menuLink">OVERVIEW</a></li>
+						<li><a href="about-ufmg.html" class="menuLink">ABOUT UFMG</a></li>
+						<li><a href="http://www.dcc.ufmg.br/dcc/?q=en" class="menuLink">ABOUT OUR CS DEPT.</a></li>
+						<li><a href="belo-horizonte.html" class="menuLink">BELO HORIZONTE</a></li>
+						<li><a href="sorroundings.html" class="menuLink">SURROUNDINGS</a></li>
+						<li><a href="getting-here.html" class="menuLink">GETTING HERE</a></li>
+						<li><a href="accommodation/index.html" class="menuLink">ACCOMMODATION</a></li>
+					</ul>
+				</li>
+				<li class="menuItem"><a class="menuLink" href="contact-us.html">CONTACT US</a></li>
+			</ul>
+		</nav>
+		<div id="conteudo" class="container clr">
+			<section class="conteudoFull">
+				<article>
+					<header>
+						<h1>ACCEPTED PAPERS</h1>
+					</header>
+					<h2 id="artigos-completos" class="accordion">Full Papers - Technical Program</h2>
+					<div class="conteudo-accordion">
+						<h3>ST1 - Acess Control</h3>
+						<h3>Tuesday: 8:30 am - 10:00 am</h3>
+						<table class="mrgB table" cellspacing="2">
+							<tr class="cor3">
+								<th width="50">Paper#</th>
+								<th width="150">Title</th>
+								<th width="220">Authors</th>
+								<th>Emails</th>
+								<th>Authors(Affiliation)</th>
+							</tr>
+							<tr class="cor1">
+								<td>131100</td>
+								<td>Controle de acesso baseado em reencriptação por proxy em Redes Centradas em Informação</td>
+								<td>
+									<h6>Elisa Mannes</h6>
+									<h6>Carlos Maziero</h6>
+									<h6>Luiz Carlos Lassance</h6>
+									<h6>Fábio Borges</h6>
+								</td>
+								<td>
+									<h6>elisam@inf.ufpr.br</h6>
+									<h6>maziero@utfpr.edu.br</h6>
+									<h6>lclassance@gmail.com</h6>
+									<h6>borges@lncc.br</h6>
+								</td>
+								<td>
+									<h6>Elisa Mannes (Universidade Federal do Paraná - Brazil)</h6>
+									<h6>Carlos Maziero (UTFPR - Brazil)</h6>
+									<h6>Luiz Carlos Lassance (CONFESOL - Brazil)</h6>
+									<h6>Fábio Borges (National Laboratory for Scientific Computing - LNCC - Brazil)</h6>
+								</td>
+							</tr>
+							<tr class="cor2">
+								<td>130621</td>
+								<td>Protocolo para transferência parcial de conhecimento e sua aplicação à verificação segura de marcas d'água</td>
+								<td>
+									<h6>Raphael Machado</h6>
+									<h6>Davidson Boccardo</h6>
+									<h6>Vinícius Pereira de Sá</h6>
+									<h6>Jayme Szwarcfiter</h6>
+								</td>
+								<td>
+									<h6>rcmachado@inmetro.gov.br</h6>
+									<h6>drboccardo@inmetro.gov.br</h6>
+									<h6>vigusmao@dcc.ufrj.br</h6>
+									<h6>jayme@cos.ufrj.br</h6>
+								</td>
+								<td>
+									<h6>Raphael Machado (INMETRO Instituto Nacional de Metrologia, Qualidade e Tecnologia - Brazil)</h6>
+									<h6>Davidson Boccardo (INMETRO - Brazil)</h6>
+									<h6>Vinícius Pereira de Sá (Universidade Federal do Rio de Janeiro - Brazil)</h6>
+									<h6>Jayme Szwarcfiter (Universidade Federal do Rio de Janiero (UFRJ) - Brazil)</h6>
+								</td>
+							</tr>
+							<tr class="cor1">
+								<td>130658</td>
+								<td>A randomized graph-based scheme for software watermarking</td>
+								<td>
+									<h6>Lucila Bento</h6>
+									<h6>Davidson Boccardo</h6>
+									<h6>Raphael Machado</h6>
+									<h6>Vinícius Pereira de Sá</h6>
+									<h6>Jayme Szwarcfiter</h6>
+								</td>
+								<td>
+									<h6>lucilabento@ppgi.ufrj.br</h6>
+									<h6>drboccardo@inmetro.gov.br</h6>
+									<h6>rcmachado@inmetro.gov.br</h6>
+									<h6>vigusmao@dcc.ufrj.br</h6>
+									<h6>jayme@cos.ufrj.br</h6>
+								</td>
+								<td>
+									<h6>Lucila Bento (Universidade Federal do Rio de Janeiro - Brazil)</h6>
+									<h6>Davidson Boccardo (INMETRO - Brazil)</h6>
+									<h6>Raphael Machado (INMETRO Instituto Nacional de Metrologia, Qualidade e Tecnologia - Brazil)</h6>
+									<h6>Vinícius Pereira de Sá (Universidade Federal do Rio de Janeiro - Brazil)</h6>
+									<h6>Jayme Szwarcfiter (Universidade Federal do Rio de Janiero (UFRJ) - Brazil)</h6>
+								</td>
+							</tr>
+						</table>
+						<h3>ST 2 - Forensic</h3>
+						<h3>Tuesday: 08:30 am - 10:00 am</h3>
+						<table class="mrgB table" cellspacing="2">
+							<tr class="cor3">
+								<th width="50">Paper#</th>
+								<th width="150">Title</th>
+								<th width="220">Authors</th>
+								<th>Emails</th>
+								<th>Authors(Affiliation)</th>
+							</tr>
+							<tr class="cor2">
+								<td>131136</td>
+								<td>Esquema de Estruturação SbC-EC para Log Seguro</td>
+								<td>
+									<h6>Sérgio de Medeiros Câmara</h6>
+									<h6>Luiz Fernando Rust da Costa Carmo</h6>
+									<h6>Luci Pirmez</h6>
+								</td>
+								<td>
+									<h6>smcamara@gmail.com</h6>
+									<h6>rust@nce.ufrj.br</h6>
+									<h6>luci@nce.ufrj.br</h6>
+								</td>
+								<td>
+									<h6>Sérgio de Medeiros Câmara (Universidade Federal do Rio de Janeiro - Brazil)</h6>
+									<h6>Luiz Fernando Rust da Costa Carmo (UFRJ - Brazil)</h6>
+									<h6>Luci Pirmez (UFRJ - Brazil)</h6>
+								</td>
+							</tr>
+							<tr class="cor1">
+								<td>130543</td>
+								<td>Detecção de Dados Suspeitos de Fraude em Organismos de Inspeção Acreditados</td>
+								<td>
+									<h6>Rosembergue Souza</h6>
+									<h6>Luiz Fernando Rust da Costa Carmo</h6>
+									<h6>Luci Pirmez</h6>
+								</td>
+								<td>
+									<h6>rosembergue.souza@ppgi.ufrj.br</h6>
+									<h6>rust@nce.ufrj.br</h6>
+									<h6>uci@nce.ufrj.br</h6>
+								</td>
+								<td>
+									<h6>Rosembergue Souza (Universidade Federal do Rio de Janeiro - Brazil)</h6>
+									<h6>Luiz Fernando Rust da Costa Carmo (UFRJ - Brazil)</h6>
+									<h6>Luci Pirmez (UFRJ - Brazil)</h6>
+								</td>
+							</tr>
+							<tr class="cor2">
+								<td>131102</td>
+								<td>Segurança no Sensoriamento e Aquisição de Dados de Testes de Impacto Veiculares</td>
+								<td>
+									<h6>Wilson Melo Jr</h6>
+									<h6>Luiz Fernando Rust da Costa Carmo</h6>
+									<h6>Charles Prado</h6>
+									<h6>Paulo Roberto Nascimento</h6>
+									<h6>Luci Pirmez</h6>
+								</td>
+								<td>
+									<h6>wsjunior@inmetro.gov.br</h6>
+									<h6>rust@nce.ufrj.br</h6>
+									<h6>cbprado@inmetro.gov.br</h6>
+									<h6>prnascimento@inmetro.gov.br</h6>
+									<h6>luci@nce.ufrj.br</h6>
+								</td>
+								<td>
+									<h6>Wilson Melo Jr (National Institute of Metrology, Quality and Technology - Brazil)</h6>
+									<h6>Luiz Fernando Rust da Costa Carmo (UFRJ - Brazil)</h6>
+									<h6>Charles Prado (Inmetro - Brazil)</h6>
+									<h6>Paulo Roberto Nascimento (Inmetro - Brazil)</h6>
+									<h6>Luci Pirmez (UFRJ - Brazil)</h6>
+								</td>
+							</tr>
+						</table>
+						<h3>ST 3 - Encryption</h3>
+						<h3>Tuesday: 2:00 pm - 4:00 pm</h3>
+						<table class="mrgB table" cellspacing="2">
+							<tr class="cor3">
+								<th width="50">Paper#</th>
+								<th width="150">Title</th>
+								<th width="220">Authors</th>
+								<th>Emails</th>
+								<th>Authors(Affiliation)</th>
+							</tr>
+							<tr class="cor1">
+								<td>130473</td>
+								<td>Attacks on single-pass confidentiality modes of operation</td>
+								<td>
+									<h6>Jorge Nakahara Junior</h6>
+									<h6>Olivier Markowitch</h6>
+								</td>
+								<td>
+									<h6>jorge_nakahara@yahoo.com.br</h6>
+									<h6>olivier.markowitch@ulb.ac.be</h6>
+								</td>
+								<td>
+									<h6>Jorge Nakahara Junior (--- - Brazil)</h6>
+									<h6>Olivier Markowitch (Universite' Libre de Bruxelles - Belgium)</h6>
+								</td>
+							</tr>
+							<tr class="cor2">
+								<td>131048</td>
+								<td>Efficient variants of the GGH-YK-M cryptosystem</td>
+								<td>
+									<h6>Joao Barguil</h6>
+									<h6>Paulo Barreto</h6>
+								</td>
+								<td>
+									<h6>jbarguil@larc.usp.br</h6>
+									<h6>pbarreto@larc.usp.br</h6>
+								</td>
+								<td>
+									<h6>Joao Barguil (USP - Brazil)</h6>
+									<h6>Paulo Barreto (USP - Brazil)</h6>
+								</td>
+							</tr>
+							<tr class="cor1">
+								<td>131131</td>
+								<td>Expanding a Lattice-based HVE Scheme</td>
+								<td>
+									<h6>Karina Mochetti</h6>
+									<h6>Ricardo Dahab</h6>
+								</td>
+								<td>
+									<h6>mochetti@ic.unicamp.br</h6>
+									<h6>rdahab@ic.unicamp.br</h6>
+								</td>
+								<td>
+									<h6>Karina Mochetti (UNICAMP - Brazil)</h6>
+									<h6>Ricardo Dahab (University of Campinas - Brazil)</h6>
+								</td>
+							
+							</tr>
+							<tr class="cor2">
+								<td>131138</td>
+								<td>A comparison of simple side-channel analysis countermeasures for variable-base elliptic curve scalar multiplication</td>
+								<td>
+									<h6>Erick Nascimento</h6>
+									<h6>Rodrigo Abarzúa</h6>
+									<h6>Julio Hernandez</h6>
+									<h6>Ricardo Dahab</h6>
+								</td>
+								<td>
+									<h6>erick.nogueira.nascimento@gmail.com</h6>
+									<h6>rodrigo.abarzua@usach.cl</h6>
+									<h6>jlopez@ic.unicamp.br</h6>
+									<h6>rdahab@ic.unicamp.br</h6>
+								</td>
+								<td>
+									<h6>Erick Nascimento (Universidade Estadual de Campinas - Brazil)</h6>
+									<h6>Rodrigo Abarzúa (Universidad de Santiago de Chile - Chile)</h6>
+									<h6>Julio Hernandez (UNICAMP - Brazil)</h6>
+									<h6>Ricardo Dahab (University of Campinas - Brazil)</h6>
+								</td>
+							</tr>
+						</table>
+						<h3>ST 4 - Network Security</h3>
+						<h3>Tuesday: 2:00 pm - 4:00 pm</h3>
+						<table class="mrgB table" cellspacing="2">
+							<tr class="cor3">
+								<th width="50">Paper#</th>
+								<th width="150">Title</th>
+								<th width="220">Authors</th>
+								<th>Emails</th>
+								<th>Authors(Affiliation)</th>
+							</tr>
+							<tr class="cor1">
+								<td>131120</td>
+								<td>Sistema Indicador de Resiliência na Conectividade de Redes Heterogêneas sem fio</td>
+								<td>
+									<h6>Robson Gomes de Melo</h6>
+									<h6>Michele Nogueira</h6>
+									<h6>Aldri dos Santos</h6>
+								</td>
+								<td>
+									<h6>rgmelo@inf.ufpr.br</h6>
+									<h6>michele@inf.ufpr.br</h6>
+									<h6>aldri@inf.ufpr.br</h6>
+								</td>
+								<td>
+									<h6>Robson Gomes de Melo (Universidade Federal do Paraná-UFPR - Brazil)</h6>
+									<h6>Michele Nogueira (Universidade Federal do Paraná - Brazil)</h6>
+									<h6>Aldri dos Santos (Universidade Federal do Paraná - Brazil)</h6>
+								</td>
+							</tr>
+							<tr class="cor2">
+								<td>131122</td>
+								<td>Um Sistema de Detecção de Ataques Sinkhole sobre 6LoWPAN para Internet das Coisas</td>
+								<td>
+									<h6>Christian Alonso</h6>
+									<h6>Diego Poplade</h6>
+									<h6>Michele Nogueira</h6>
+									<h6>Aldri dos Santos</h6>
+								</td>
+								<td>
+									<h6>cavcervantes@inf.ufpr.br</h6>
+									<h6>dap10@inf.ufpr.br</h6>
+									<h6>michele@inf.ufpr.br</h6>
+									<h6>aldri@inf.ufpr.br</h6>
+								</td>
+								<td>
+									<h6>Christian Alonso (Universidade Federal do Parana -UFPR - Brazil)</h6>
+									<h6>Diego Poplade (UFPR - Brazil)</h6>
+									<h6>Michele Nogueira (Universidade Federal do Paraná - Brazil)</h6>
+									<h6>Aldri dos Santos (Universidade Federal do Paraná - Brazil)</h6>
+								</td>
+							</tr>
+							<tr class="cor1">
+								<td>131127</td>
+								<td>Identificação e Caracterização de Comportamentos Suspeitos Através da Análise do Tráfego DNS</td>
+								<td>
+									<h6>Eduardo Souto</h6>
+									<h6>Kaio Barbosa</h6>
+									<h6>Eduardo Feitosa</h6>
+									<h6>Gilbert Martins</h6>
+								</td>
+								<td>
+									<h6>esouto@icomp.ufam.edu.br</h6>
+									<h6>kaiorafael@gmail.com</h6>
+									<h6>efeitosa@icomp.ufam.edu.br</h6>
+									<h6>gilbert.martins@icomp.ufam.edu.br</h6>
+								</td>
+								<td>
+									<h6>Eduardo Souto (Universidade Federal de Amazonas - UFAM - Brazil)</h6>
+									<h6>Kaio Barbosa (Universidade Federal do Amazonas - Brazil)</h6>
+									<h6>Eduardo Feitosa (Universidade Federal do Amazonas - Brazil)</h6>
+									<h6>Gilbert Martins (Universidade Federal do Amazonas - Brazil)</h6>
+								</td>
+							</tr>
+							<tr class="cor2">
+								<td>131110</td>
+								<td>Um Mecanismo Agregador de Atributos Mediado pelo Cliente Alinhado ao Programa de EGOV.BR</td>
+								<td>
+									<h6>Marcondes Maçaneiro</h6>
+									<h6>Michelle Wangham</h6>
+								</td>
+								<td>
+									<h6>marcondes@unidavi.edu.br</h6>
+									<h6>wangham@univali.br</h6>
+								</td>
+								<td>
+									<h6>Marcondes Maçaneiro (UNIDAVI - Brazil)</h6>
+									<h6>Michelle Wangham (Universidade do Vale do Itajaí - Brazil)</h6>
+								</td>
+							</tr>
+						</table>
+						<h3>ST 5 - Attack Prevention</h3>
+						<h3>Wednesday: 08:00 am - 10:00 am</h3>
+						<table class="mrgB table" cellspacing="2">
+							<tr class="cor3">
+								<th width="50">Paper#</th>
+								<th width="150">Title</th>
+								<th width="220">Authors</th>
+								<th>Emails</th>
+								<th>Authors(Affiliation)</th>
+							</tr>
+							<tr class="cor1">
+								<td>131116</td>
+								<td>Monitoração de comportamento de malware em sistemas operacionais Windows NT 6.x de 64 bits</td>
+								<td>
+									<h6>Marcus Botacin</h6>
+									<h6>Vitor Afonso</h6>
+									<h6>Paulo de Geus</h6>
+									<h6>André Ricardo Abed Grégio</h6>
+								</td>
+								<td>
+									<h6>marcus@lasca.ic.unicamp.br</h6>
+									<h6>vitor@las.ic.unicamp.br</h6>
+									<h6>paulo@lasca.ic.unicamp.br</h6>
+									<h6>andre.gregio@cti.gov.br</h6>
+								</td>
+								<td>
+									<h6>Marcus Botacin (Universidade Estadual de Campinas - Brazil)</h6>
+									<h6>Vitor Afonso (Universidade Estadual de Campinas - Brazil)</h6>
+									<h6>Paulo de Geus (University of Campinas - Brazil)</h6>
+									<h6>André Ricardo Abed Grégio (CTI Renato Archer - Brazil)</h6>
+								</td>
+							</tr>
+							<tr class="cor2">
+								<td>131031</td>
+								<td>Prevenção de Ataques em Sistemas Distribuídos via Análise de Intervalos</td>
+								<td>
+									<h6>Vitor Paisante</h6>
+									<h6>Luiz Saggioro</h6>
+									<h6>Raphael Rodrigues</h6>
+									<h6>Leonardo Oliveira</h6>
+									<h6>Fernando Quintao Pereira</h6>
+								</td>
+								<td>
+									<h6>paisante@dcc.ufmg.br</h6>
+									<h6>luizfzsaggioro@dcc.ufmg.br</h6>
+									<h6>raphael@dcc.ufmg.br</h6>
+									<h6>leob@dcc.ufmg.br</h6>
+									<h6>fpereira@dcc.ufmg.br</h6>
+								</td>
+								<td>
+									<h6>Vitor Paisante (UFMG - Brazil)</h6>
+									<h6>Luiz Saggioro (UFMG - Brazil)</h6>
+									<h6>Raphael Rodrigues (Universidade Federal de Minas Gerais - Brazil)</h6>
+									<h6>Leonardo Oliveira (UFMG - Brazil)</h6>
+									<h6>Fernando Quintao Pereira (Universidade Federal de Minas Gerais - Brazil)</h6>
+								</td>
+							</tr>
+							<tr class="cor1">
+								<td>131129</td>
+								<td>Controlando a Frequência de Desvios Indiretos para Bloquear Ataques ROP</td>
+								<td>
+									<h6>Mateus Ferreira</h6>
+									<h6>Eduardo Feitosa</h6>
+									<h6>Ailton Santos</h6>
+								</td>
+								<td>
+									<h6>mateus@icomp.ufam.edu.br</h6>
+									<h6>efeitosa@icomp.ufam.edu.br</h6>
+									<h6>ailton.santos07@gmail.com</h6>
+								</td>
+								<td>
+									<h6>Mateus Ferreira (Universidade Federal do Amazonas - Brazil)</h6>
+									<h6>Eduardo Feitosa (Universidade Federal do Amazonas - Brazil)</h6>
+									<h6>Ailton Santos (Universidade Federal do Amazonas - Brazil)</h6>
+								</td>
+							</tr>
+							<tr class="cor2">
+								<td>131084</td>
+								<td>Estruturas Virtuais e Diferenciação de Vértices em Grafos de Dependência para Detecção de Malware Metamórfico</td>
+								<td>
+									<h6>Gilbert Martins</h6>
+									<h6>Eduardo Souto</h6>
+									<h6>Rosiane de Freitas</h6>
+									<h6>Eduardo Feitosa</h6>
+								</td>
+								<td>
+									<h6>gilbert.martins@icomp.ufam.edu.br</h6>
+									<h6>esouto@icomp.ufam.edu.br</h6>
+									<h6>rosiane@icomp.ufam.edu.br</h6>
+									<h6>efeitosa@icomp.ufam.edu.br</h6>
+								</td>
+								<td>
+									<h6>Gilbert Martins (Universidade Federal do Amazonas - Brazil)</h6>
+									<h6>Eduardo Souto (Universidade Federal de Amazonas - UFAM - Brazil)</h6>
+									<h6>Rosiane de Freitas (IComp/UFAM - Brazil)</h6>
+									<h6>Eduardo Feitosa (Universidade Federal do Amazonas - Brazil)</h6>
+								</td>
+							</tr>
+						</table>
+						<h3>ST 6 - Application Security</h3>
+						<h3>Wednesday: 2:00 pm - 4:00 pm</h3>
+						<table class="mrgB table" cellspacing="2">
+							<tr class="cor3">
+								<th width="50">Paper#</th>
+								<th width="150">Title</th>
+								<th width="220">Authors</th>
+								<th>Emails</th>
+								<th>Authors(Affiliation)</th>
+							</tr>
+							</tr>
+							<tr class="cor1">
+								<td>131123</td>
+								<td>An Ontological Approach to Mitigate Risk in Web Applications</td>
+								<td>
+									<h6>Marcius Marques</h6>
+									<h6>Celia Ralha</h6>
+								</td>
+								<td>
+									<h6>marcius@marciusmarques.com</h6>
+									<h6>ghedini@cic.unb.br</h6>
+								</td>
+								<td>
+									<h6>Marcius Marques (University of Brasilia - Brazil)</h6>
+									<h6>Celia Ralha (University of Brasilia - Brazil)</h6>
+								</td>
+							</tr>
+							<tr class="cor2">
+								<td>131121</td>
+								<td>SpamBands: uma metodologia para identificação de fontes de spam agindo de forma orquestrada</td>
+								<td>
+									<h6>Elverton Fazzion</h6>
+									<h6>Pedro Henrique Bragioni Las Casas</h6>
+									<h6>Osvaldo Luis Fonseca</h6>
+									<h6>Dorgival Guedes</h6>
+									<h6>Wagner Meira Jr.</h6>
+									<h6>Cristine Hoepers</h6>
+									<h6>Klaus Steding-Jessen</h6>
+									<h6>Marcelo Chaves</h6>
+								</td>
+								<td>
+									<h6>elverton@dcc.ufmg.br</h6>
+									<h6>pedro.lascasas@dcc.ufmg.br</h6>
+									<h6>osvaldo.morais@dcc.ufmg.br</h6>
+									<h6>dorgival@dcc.ufmg.br</h6>
+									<h6>meira@dcc.ufmg.br</h6>
+									<h6>cristine@cert.br</h6>
+									<h6>jessen@cert.br</h6>
+									<h6>mhp@cert.br</h6>
+								</td>
+								<td>
+									<h6>Elverton Fazzion (Universidade Federal de Minas Gerais - Brazil)</h6>
+									<h6>Pedro Henrique Bragioni Las Casas (Universidade Federal de Minas Gerais - Brazil)</h6>
+									<h6>Osvaldo Luis Fonseca (Universidade Federal de Minas Gerais - Brazil)</h6>
+									<h6>Dorgival Guedes (UFMG - Brazil)</h6>
+									<h6>Wagner Meira Jr. (UFMG - Brazil)</h6>
+									<h6>Cristine Hoepers (Núcleo de Informação e Coordenação do Ponto br - NIC.br - Brazil)</h6>
+									<h6>Klaus Steding-Jessen (Núcleo de Informação e Coordenação do Ponto br - NIC.br - Brazil)</h6>
+									<h6>Marcelo Chaves (Núcleo de Informação e Coordenação do Ponto br - NIC.br - Brazil)</h6>
+								</td>
+							</tr>
+							<tr class="cor1">
+								<td>131002</td>
+								<td>CloudSec - Um Middleware para Compartilhamento de Informações Sigilosas em Nuvens Computacionais</td>
+								<td>
+									<h6>Rick Lopes de Souza</h6>
+									<h6>Hylson Netto</h6>
+									<h6>Lau Cheuk Lung</h6>
+									<h6>Ricardo Custódio</h6>
+								</td>
+								<td>
+									<h6>rick.lopes@inf.ufsc.br</h6>
+									<h6>hylson.vescovi@blumenau.ifc.edu.br</h6>
+									<h6>lau.lung@inf.ufsc.br</h6>
+									<h6>custodio@inf.ufsc.br</h6>
+								</td>
+								<td>
+									<h6>Rick Lopes de Souza (Universidade Federal de Santa Catarina - Brazil)</h6>
+									<h6>Hylson Netto (Universidade Federal de Santa Catarina - Brazil)</h6>
+									<h6>Lau Cheuk Lung (UFSC - Brazil)</h6>
+									<h6>Ricardo Custódio (UFSC - Brazil)</h6>
+								</td>
+							</tr>
+							<tr class="cor2">
+								<td>130612</td>
+								<td>Análise de cerimônias no sistema de votação Helios</td>
+								<td>
+									<h6>Taciane Martimiano</h6>
+									<h6>Jean Martina</h6>
+								</td>
+								<td>
+									<h6>tacianeemartimiano@gmail.com</h6>
+									<h6>jean.martina@cl.cam.ac.uk</h6>
+								</td>
+								<td>
+									<h6>Taciane Martimiano (Universidade Federal de Santa Catarina - Brazil)</h6>
+									<h6>Jean Martina (University of Cambridge - Great Britain)</h6>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<h2 id="resumos-estendidos" class="accordion">Extended Abstracts - Technical Program</h2>
+					<div class="conteudo-accordion">
+						<h3>ST7</h3>
+						<h3>Wednesday: 8:00 am - 10:00 am</h3>
+						<table class="mrgB table" cellspacing="2">
+							<tr class="cor3">
+								<th width="50">Paper#</th>
+								<th width="300">Title</th>
+								<th width="220">Authors</th>
+								<th>Authors(Affiliation)</th>
+							</tr>
+							<tr class="cor2">
+								<td>134274</td>
+								<td>SIMO: Security Incident Management Ontology</td>
+								<td>
+									<h6>P. Silva</h6>
+								</td>
+								<td>
+									<h6>P. Silva (Universidade do vale do Rio dos Sinos - Brazil)</h6>
+								</td>
+							</tr>
+							<tr class="cor1">
+								<td>134308</td>
+								<td>S-MOVL: Protegendo Sistemas Computacionais contra Ataques de Violação de Memória por meio de Instruções em Hardware</td>
+								<td>
+									<h6>Antonio Maia</h6>
+									<h6>Omar Vilela Neto</h6>
+									<h6>Fernando Duarte Oliveira Castro</h6>
+									<h6>Leonardo Oliveira</h6>
+								</td>
+								<td>
+									<h6>Antonio Maia (UFMG - Brasil)</h6>
+									<h6>Omar Vilela Neto (UFMG - Brasil)</h6>
+									<h6>Fernando Duarte Oliveira Castro (UFMG - Brasil)</h6>
+									<h6>Leonardo Oliveira (UFMG - Brasil)</h6>
+								</td>
+							</tr>
+							<tr class="cor2">
+								<td>134317</td>
+								<td>Arquitetura de monitoramento para Security-SLA em Nuvem Computacional do tipo SaaS</td>
+								<td>
+									<h6>Carlos da Silva</h6>
+									<h6>Paulo de Geus</h6>
+								</td>
+								<td>
+									<h6>Carlos da Silva (UNICAMP - Brasil)</h6>
+									<h6>Paulo de Geus (UNICAMP - Brasil)</h6>
+								</td>
+							</tr>
+							<tr class="cor1">
+								<td>134340</td>
+								<td>Detecção Estática e Consistente de Potenciais Estouros de Arranjos</td>
+								<td>
+									<h6>Bruno Rodrigues Silva</h6>
+								</td>
+								<td>
+									<h6>Bruno Rodrigues Silva (UFMG - Brasil</h6>
+								</td>
+							</tr>
+							<tr class="cor2">
+								<td>134329</td>
+								<td>Um Mecanismo Simples e Eficiente para a Autenticação de Dispositivos na Comunicação por Campo de Proximidade</td>
+								<td>
+									<h6>Silvio Quincozes</h6>
+									<h6>Juliano Kazienko</h6>
+								</td>
+								<td>
+									<h6>Silvio Quincozes (UNIPAMPA - Brasil)</h6>
+									<h6>Juliano Kazienko (UNIPAMPA - Brasil)</h6>
+								</td>
+							</tr>
+							<tr class="cor1">
+								<td>134334</td>
+								<td>Comparison of the cost/benefit of techniques used to provide privacy in cloud computing</td>
+								<td>
+									<h6>Vitor Hugo Galhardo Moia</h6>
+									<h6>Marco Aurelio Amaral Henriques</h6>
+								</td>
+								<td>
+									<h6>Vitor Hugo Galhardo Moia (UNICAMP - Brasil)</h6>
+									<h6>Marco Aurelio Amaral Henriques (UNICAMP - Brasil)</h6>
+								</td>
+							</tr>
+						</table>
+						<h3>ST 8</h3>
+						<h3>Wednesday: 2:00 pm - 4:00 pm</h3>
+						<table class="mrgB table" cellspacing="2">
+							<tr class="cor3">
+								<th width="50">Paper#</th>
+								<th width="300">Title</th>
+								<th width="220">Authors</th>
+								<th width="340">Authors(Affiliation)</th>
+							</tr>
+							<tr class="cor1">
+								<td>134287</td>
+								<td>Decentralized management of One-Time Pad key material for a group</td>
+								<td>
+									<h6>Jeroen van de Graaf</h6>
+								</td>
+								<td>
+									<h6>Jeroen van de Graaf (UFMG - Brazil)</h6>
+								</td>
+							</tr>
+							<tr class="cor2">
+								<td>134318</td>
+								<td>Software implementation of SHA-3 family using AVX2</td>
+								<td>
+									<h6>Roberto Filho</h6>
+									<h6>Julio Hernández</h6>
+								</td>
+								<td>
+									<h6>Roberto Filho (UNICAMP - Brasil)</h6>
+									<h6>Julio Hernández (UNICAMP - Brasil)</h6>
+								</td>
+							</tr>
+							<tr class="cor1">
+								<td>134330</td>
+								<td>A True Random Number Generator based on quantum-optical noise</td>
+								<td>
+									<h6>Jeroen van de Graaf</h6>
+								</td>
+								<td>
+									<h6>Jeroen van de Graaf (UFMG - Brasil)</h6>
+								</td>
+							</tr>
+							<tr class="cor2">
+								<td>134345</td>
+								<td>On Software Implementation of Arithmetic Operations on Prime Fields using AVX2</td>
+								<td>
+									<h6>Julio Hernández</h6>
+									<h6>Armando Faz Hernández</h6>
+								</td>
+								<td>
+									<h6>Julio Hernández (UNICAMP - Brasil)</h6>
+									<h6>Armando Faz Hernández (UNICAMP - Brasil)</h6>
+								</td>
+							</tr>
+							<tr class="cor1">
+								<td>134342</td>
+								<td>Autenticação contínua para smartphones baseada em assinatura acústica</td>
+								<td>
+									<h6>Marcelo da Luz Colome</h6>
+									<h6>Raul Ceretta Nunes</h6>
+								</td>
+								<td>
+									<h6>Marcelo da Luz Colome (UFSM - Brasil)</h6>
+									<h6>Raul Ceretta Nunes (UFSM - Brasil)</h6>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<h2 id="CTDseg" class="accordion">CTDSeg - III Contest of Theses and Dissertations in Security</h2>
+					<div class="conteudo-accordion">
+						<h3>Master's</h3>
+						<table class="mrgB table" cellspacing="2">
+							<tr class="cor3">
+								<th width="30%">Title</th>
+								<th>Authors</th>
+								<th width="10%">Schedule</th>
+							</tr>
+							<tr class="cor1">
+								<td>Segurança em Redes-em-Chip: Mecanismos para Proteger a Rede SoCIN contra Ataques de Negação de Serviço</td>
+								<td><a href="mailto:sbaron@univali.br">Sidnei Baron</a> (Universidade do Vale do Itajaí - Brazil)<br>
+								<a href="mailto:wangham@univali.br">Michelle Wangham</a> (Universidade do Vale do Itajaí - Brazil)<br>
+								<a href="mailto:zeferino@univali.br">Cesar Zeferino</a> (Universidade do Vale do Itajaí - Brazil)</td>
+								<td>10:30</td>
+							</tr>
+							<tr class="cor2">
+								<td>Proposta de aprimoramento para o protocolo de assinatura digital Quartz</td>
+								<td><a href="mailto:ewe@ime.usp.br">Ewerton Andrade</a> (University of São Paulo - Brazil)<br><a href="mailto:rt@ime.usp.br">Routo Terada</a> (University of São Paulo - Brazil)</td>
+								<td>10:55</td>
+							</tr>
+							<tr class="cor1">
+								<td>TwinBFT: Tolerância a Faltas Bizantinas com Máquinas Virtuais Gêmeas</td>	
+								<td><a href="mailto:fdettoni@gmail.com">Fernando Dettoni</a> (PPGCC-UFSC - Brazil)<br>
+								<a href="mailto:lau.lung@inf.ufsc.br">Lau Cheuk Lung</a> (UFSC - Brazil)</td>
+								<td>14:00</td>
+							</tr>
+							<tr class="cor2">
+								<td>Emparelhamentos e reticulados: estado-da-arte em algoritmos e parâmetros para as famílias mais flexíveis de sistemas criptográficos</td>
+								<td><a href="mailto:jricardini@larc.usp.br">Jefferson Ricardini</a> (University of Sao Paulo - Brazil)<br>
+								<a href="mailto:pbarreto@larc.usp.br">Paulo Barreto</a> (USP - Brazil)</td>
+								<td>14:25</td>
+							</tr>
+							<tr class="cor1">
+								<td>Autenticação e comunicação segura em dispositivos móveis de poder computacional restrito</td>	
+								<td><a href="mailto:rafael_wi@yahoo.com.br">Rafael Will Macedo de Araujo</a> (Universidade de São Paulo - Brazil)<br>
+								<a href="mailto:rt@ime.usp.br">Routo Terada</a> (University of São Paulo - Brazil)</td>
+								<td>16:30</td>
+							</tr>
+						</table>
+						<h3>Doctorate</h3>
+						<table class="mrgB table" cellspacing="2">
+							<tr class="cor3">
+								<th width="30%">Title</th>
+								<th>Authors</th>
+								<th width="10%">Schedule</th>
+							</tr>
+							<tr class="cor1">
+								<td>Addressing human factors in the design of cryptographic solutions: a two-case study in item validation and authentication</td>	
+								<td>
+									<a href="mailto:earthcraft@gmail.com">Fabio Piva</a> (University of Campinas - Brazil)<br>
+									<a href="mailto:rdahab@ic.unicamp.br">Ricardo Dahab</a> (University of Campinas - Brazil)
+								</td>
+								<td>11:20</td>
+							</tr>
+							<tr class="cor2">
+								<td>Avaliação Resiliente de Autorização UCONabc para Computação em Nuvem</td>	
+								<td><a href="mailto:almjr@ppgia.pucpr.br">Arlindo L. Marcon Jr.</a> (Instituto Federal do Paraná - IFPR - Brazil)<br>
+									<a href="mailto:santin@ppgia.pucpr.br">Altair Santin</a> (Pontifícia Universidade Católica do Paraná / Pontifical Catholic University of Parana (PUCPR) - Brazil)
+								</td>
+								<td>11:55</td>
+							</tr>
+							<tr class="cor1">
+								<td>Illumination Inconsistency Sleuthing for Exposing Fauxtography and Uncovering Composition Telltales in Digital Images</td>
+								<td>
+									<a href="mailto:tiagojc@gmail.com">Tiago Jose de Carvalho</a> (Universidade Estadual de Campinas - Brazil)<br>
+									<a href="mailto:helio@ic.unicamp.br">Helio Pedrini</a> (Universidade Estadual de Campinas - Brazil)<br>
+									<a href="mailto:anderson.rocha@ic.unicamp.br">Anderson Rocha</a> (University of Campinas (UNICAMP) - Brazil)
+								</td>
+								<td>14:50</td>
+							</tr>
+							<tr class="cor2">
+								<td>Two Approaches for Achieving Efficient Code-Based Cryptosystems</td>	
+								<td>
+									<a href="mailto:rafa.misoczki@gmail.com">Rafael Misoczki</a> (University of São Paulo - Brazil)<br>
+									<a href="mailto:nicolas.sendrier@inria.fr">Nicolas Sendrier</a> (INRIA Paris-Rocquencourt - France)
+								</td>
+								<td>15:25</td>
+							</tr>
+							<tr class="cor1">
+								<td>Malware Behavior</td>
+								<td>
+									<a href="mailto:andre.gregio@cti.gov.br">André Ricardo Abed Grégio</a> (CTI Renato Archer - Brazil)<br>
+									<a href="mailto:jino@dca.fee.unicamp.br">Mario Jino</a> (FEEC-UNICAMP - Brazil)<br>
+									<a href="mailto:paulo@lasca.ic.unicamp.br">Paulo de Geus</a> (University of Campinas - Brazil)
+								</td>
+								<td>16:55</td>
+							</tr>
+						</table>
+					</div>
+					<h2 id="minicursos" class="accordion">Tutorials proposals</h2>
+					<div class="conteudo-accordion">
+						<table class="mrgB table" cellspacing="2">
+							<tr class="cor3">
+								<th width="200">Título</th>
+								<th width="220">Autores</th>
+								<th>Resumo</th>
+							</tr>
+							<tr class="cor1">
+								<td>MC1: Tolerância a Faltas e Intrusões para Sistemas de Armazenamento de Dados em Nuvens Computacionais.</td>
+								<td>
+									<h6>Lau Cheuk Lung (UFSC) <b>(apresentador)</b></h6>
+									<h6>Hylson Vescovi Netto (UFSC)</h6>
+									<h6>Rick Lopes de Souza (UFSC)</h6>
+								</td>
+								<td>
+									<p>O objetivo deste minicurso é mostrar o estado da arte em sistemas de armazenamento nas nuvens que sejam tolerantes a faltas e intrusões. Para isto, serão apresentados conceitos, técnicas e mecanismos que dão suporte aos protocolos e arquiteturas existentes na literatura.
+									</p>
+									<p class="clrPb">De início, serão abordadas características e benefícios das nuvens de armazenamento atualmente disponíveis, apresentando ao participante do minicurso as nuvens comerciais mais utilizadas. Entre as características, destacam-se os tipos de dados que são suportados pelas nuvens públicas, bem como a possibilidade de realizar processamento sobre os dados na própria nuvem que os armazena, o que resulta na criação de aplicações mais elaboradas; o participante então terá visão das potenciais utilizações da nuvem para o armazenamento. Concluída a visão geral, será feita uma problematização referente a ameaças e vulnerabilidades que podem comprometer o funcionamento dos sistemas de armazenamento nas nuvens, onde o participante compreenderá as lacunas de segurança atualmente existentes nas nuvens. Será também apresentado como os provedores de nuvens lidam com os problemas mais comuns, onde então o participante compreenderá como alguns problemas são resolvidos na prática. A questão de confidencialidade será abordada, mostrando aos participantes como os provedores de nuvens tratam a privacidade do dado armazenado, desde a simples utilização de criptografia até o gerenciamento das chaves criptográficas. Serão apresentadas também estratégias de fragmentação de dados, onde o participante conhecerá as técnicas mais utilizadas e quais suas implicações sobre o dado armazenado. Finalmente, serão apresentados os trabalhos mais relevantes e recentes que realizam armazenamento nas nuvens, onde o participante conhecerá novos protocolos e arquiteturas, bem como os problemas de armazenamento que continuam abertos para pesquisa.</p>
+								</td>
+							</tr>
+							<tr class="cor2">
+								<td>MC2: Device Fingerprint: Conceitos e Técnicas, Exemplos e Contramedidas</td>
+								<td>
+									<h6>Adriana Rodrigues Saraiva (UFAM) <b>(apresentadora)</b></h6>
+									<h6>Pablo Augusto da Paz Elleres (UFAM)</h6>
+									<h6>Guilherme de Brito Carneiro (UFAM)</h6>
+									<h6>Eduardo Luzeiro Feitosa (UFAM) <b>(apresentador)</b></h6>
+								</td>
+								<td>
+									<p class="clrPb">De acordo com a RFC 6973 fingerprint é o processo pelo qual um observador ou atacante identifica, de maneira única e com alta probabilidade, um dispositivo ou uma instância de um aplicativo com base em um conjunto de informações. No contexto da Internet, técnicas de fingerprint são aquelas empregadas para identificar (ou re-identificar) um usuário ou um dispositivo através de  um conjunto de atributos (tamanho da tela do dispositivo, versões de softwares instalados, entre muitos outros) e outras características observáveis durante processo de comunicação. Tais técnicas, também conhecidas como machine fingerprint, browser fingerprint e web-based device fingerprint, podem ser usadas como medida de segurança (por exemplo, na autenticação de usuários e no monitoramento das atividades de navegação de um usuário dentro e através de sessões) e como mecanismo para vendas, já que a coleta de informações permite inferir preferências e hábitos de usuários na Web e ser empregada na recomendação de serviços e produtos. Infelizmente, também podem ser consideradas uma ameaça potencial a privacidade Web dos usuários, uma vez que dados pessoais e sigilosos podem ser capturados e em empregados para fins maliciosos no mais variados tipos de ataque e fraudes. Este minicurso apresenta os conceitos e as técnicas de device fingerprint que permitem obter dados relativos aos usuários e seus dispositivos.</p>
+								</td>
+							</tr>
+							<tr class="cor1">
+								<td>MC3: Botnets: Características e Métodos de Detecção Através do Tráfego de Rede</td>
+								<td>
+									<h6>Kaio R. S. Barbosa (UFAM) <b>(apresentador)</b></h6>
+									<h6>Eduardo Souto (UFAM)</h6>
+									<h6>Eduardo Feitosa (UFAM)</h6>
+									<h6>Gilbert Martins (UFAM)</h6>
+								</td>
+								<td>
+									<p class="clrPb">O monitoramento e análise passiva permitem identificar padrões de comunicação suspeitos de máquinas infectadas (bots) no tráfego de rede. Tais hosts frequentemente estão associados a redes de computadores maliciosas (botnets) utilizadas para proliferação de códigos maliciosos (vírus e worms) e ataques de negação de serviço (DDoS, do inglês Distributed Denial of Service). Pesquisadores têm utilizado técnicas de engenharia reversa do binário malicioso para mitigar esse tipo de aplicação, no entanto, à medida que soluções são criadas para facilitar a engenharia reversa, atacantes desenvolvem novos mecanismos para dificultar tal análise. Portanto, análise passiva é uma alternativa viável para encontrar comportamentos suspeitos no tráfego de rede desconhecidos (zero-day), ou quando um worm ainda não foi totalmente explorado pelas técnicas de engenharia reversa. Este minicurso apresenta as estratégias utilizadas para detecção de botnets através da análise passiva do tráfego de rede.</p>
+								</td>
+							</tr>
+							<tr class="cor2">
+								<td>MC4: Segurança em Redes Veiculares: Inovações e Direções Futuras</td>
+								<td>
+									<h6>Michelle S. Wangham (UNIVALI) <b>(apresentadora)</b></h6>
+									<h6>Michele Nogueira (UFPR) <b>(apresentadora)</b></h6>
+									<h6>Cláudio Fernandes (UNIVALI)</h6>
+									<h6>Osmarildo Paviani (UNIVALI)</h6>
+									<h6>Benevid Silva (UFPR)</h6>
+								</td>
+								<td>
+									<p class="clrPb">O objetivo deste minicurso é, diante das recentes pesquisas a cerca das inovações das redes veiculares, analisar os desafios de segurança e as principais contramedidas descritas em trabalhos acadêmicos. Pretende-se com este minicurso, contribuir para um melhor entendimento das ameaças e ataques em ambientes veiculares e das possíveis contramedidas, analisando as questões chaves de autenticação de usuários e veículos versus privacidade, ataques de nós maliciosos e novos ataques decorrentes do uso da computação em nuvem e dos modelos da Internet do Futuro. Neste curso, será dado um enfoque nos conceitos, problemas e soluções tecnológicas encontrados na literatura nos últimos cinco anos. Complementando esta abordagem conceitual, dois estudos de casos (aplicações inovadoras de redes veiculares) serão analisados para demonstrar os possíveis ataques e contramedidas que podem ser empregadas para minimizá-los.</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<h2 id="WTICG" class="accordion">WTICG - VIII Workshop on Scientific Initiation and Undergraduate Papers</h2>
+					<div class="conteudo-accordion">
+						<h3>Session 1 - Network and Computer Systems Security</h3>
+						<h3>Schedule: 10:30 - 12:30</h3>
+						<table class="table" cellspacing="2">
+							<tr class="cor3">
+								<th width="50"><b>ID</b></th>
+								<th width="150"><b>Title</b></th>
+								<th width="220"><b>Authors</b></th>
+								<th><b>Abstract</b></th>
+							</tr>
+							<tr class="cor1">
+								<td>131246</td>
+								<td>Análise de Segurança de Conversores Serial-Ethernet e Microcontroladores Tibbo</td>
+								<td>Ildomar Gomes de Carvalho Junior (Universidade do Estado de Santa Catarina - Brazil),
+									Rafael Obelheiro (UDESC - Brazil)</td>
+									<td>Microcontroladores e conversores serial-Ethernet são utilizados em sistemas de controle industrial para a comunicação e controle de diversos dispositivos. O funcionamento incorreto de microcontroladores e conversores pode acarretar danos em equipamentos e/ou no processo de manufatura de produtos, trazendo riscos até mesmo para a integridade física de pessoas que operam máquinas que dependem desses sistemas embarcados. A crescente integração de microcontroladores e conversores à Internet e o aumento de vulnerabilidades e incidentes envolvendo sistemas de controle industriais fazem com que a segurança desses dispositivos se torne um atributo cada vez mais importante. Este artigo apresenta o uso de técnicas de injeção de faltas através da rede para avaliar a segurança da pilha TCP/IP do microcontrolador e conversor serial-Ethernet Tibbo EM1206. O processo seguido nesta avaliação pode ser utilizado para a condução de avaliações similares.</td>
+								</tr>
+								<tr class="cor2">
+									<td>131342</td>
+									<td>Um Mecanismo de Segurança para o Protocolo HTR</td>
+									<td>Gregório Correia (Federal University of Pernnambuco - Brazil), Eduardo Feitosa (Universidade Federal do Amazonas - Brazil), Djamel Fawzi Hadj Sadok (Universidade Federal de Pernambuco (UFPE) - Brazil)</td>
+									<td>Segurança de dados tornou-se um requisito essencial para todo e qualquer sistema em rede, para as redes adhoc isso não seria diferente. Entre a gama de protocolos existentes não há foco na proteção dos dados que trafegam. O Heterogeneous Technologies Routing (HTR) foi um protocolo desenvolvido que provê um roteamento eficiente de dados com o menor consumo energético, porém seus dados trafegam em claro entre os elementos que compõem a rede. Este trabalho tem como foco avaliar o impacto causado por um sistema de segurança sobre a rede adhoc móvel HTR.</td>
+								</tr>
+								<tr class="cor1">
+									<td>132012</td>
+									<td>Uma análise do Impacto do Intervalo de Tempo de Captura do Acelerômetro na Biometria baseada em gestos em dispositivos móveis usando Android</td>
+									<td>Paulo Dreher (Universidade do Vale do Rio do Sinos - Brazil), Luciano Ignaczak (UNISINOS - Brazil)</td>
+									<td>The application of behavioural biometrics for authentication in mobile devices has been demonstrated in several studies, which show the feasibility of using gestures for authenticating users in a system. However, no attention has been given to the way the movement is done and the period between capture points of a gesture. This paper aims to analyse the security of different intervals capture of an accelerometer coordinates applied to biometrics gestures on mobile devices. The analysis of the intervals was conducted through an experiment, based on an Android application, where two types of movements and three different capture intervals were executed. The findings demonstrate that reducing the capture interval accelerometer increases the safety of the use of biometrics by gestures. The results also highlight the importance of using complex movements to make the authentication process less susceptible to attacks.</td>
+								</tr>
+								<tr class="cor2">
+									<td>132136</td>
+									<td>Aplicações Seguras no uso de QR Code: Dois Estudos de Caso</td>
+									<td>Eduardo Costa (Instituto Federal do Espirito Santo - IFES - Brazil), Jefferson Andrade (Instituto Federal do EspÃ-rito Santo - Brazil), Karin Komati (Ifes Campus Serra - Brazil)</td>
+									<td>QR Codes facilitam a navegação de usuários em seus dispositivos móveis, entretanto, esta estratégia pode expor os usuários e o próprio sistema a diversos tipos de ataques, tais como: fraudes, sites clonados e injeção SQL. Portanto, estratégias de segurança devem ser adotadas para evitar prejuízos. Neste contexto, o objetivo deste trabalho é apresentar propostas de utilização segura do QR Code. Este trabalho apresenta duas aplicações, a primeira é um sistema de associação entre documentos digitais e impressos que utiliza a verificação do resumo hash dos documentos para manter a integridade da associação e, a segunda um sistema de m-commerce que utiliza criptografia para manter o sigilo da entrada do sistema. Através dos resultados dos experimentos verificou-se que as duas estratégias de segurança propostas são eficazes quando existe um QR Code malicioso, tornando a utilização deste código gráfico mais segura e confiável.</td>
+								</tr>
+								<tr class="cor1">
+									<td>132742</td>
+									<td>Implementação em Hardware de Instrução Segura de Acesso à Memória - Caso MIPS 16 bit</td>
+									<td>Eric Torres (Universidade Federal de Minas Gerais - Brazil), Antonio Maia (Student UFMG - Brazil), Omar Vilela Neto (Universidade Federal de Minas Gerais - Brazil), Leonardo Barbosa (UFMG - Brazil)</td>
+									<td>Algumas linguagens não possuem mecanismos de segurança. Isso faz com que diversos programas estejam vulneráveis a ataques. Um ataque bastante comum é o Buffer Overflow. Existem diversas propostas de solução para esse problema. Mas, em sua grande maioria, essas soluções são implementadas em software, gerando uma grande sobrecarga. Por isto, este trabalho propõe uma alternativa em hardware, capaz de realizar o acesso seguro à memória. Foi criado então a SSW, uma instrução segura de escrita à memória desenvolvida para a arquitetura MIPS 16 bit.</td>
+								</tr>
+							</table>
+							<h3><br>Session 2 - Web Security</h3>
+							<h3>Schedule: 2:00 pm - 4:00 pm</h3>
+							<table class="table" cellspacing="2">
+								<tr class="cor3">
+									<th width="50"><b>ID</b></th>
+									<th width="150"><b>Titles</b></th>
+									<th width="220"><b>Authors</b></th>
+									<th><b>Abstract</b></th>
+								</tr>
+								<tr class="cor2">
+									<td>131319</td>
+									<td>Esteno: Uma Abordagem para Detecção Visual de Bankers</td>
+									<td>Victor Furuse Martins (Universidade Estadual de Campinas - Brazil), André Abed Grégio (CenPRA/MCT - Brazil), Vitor Afonso (Universidade Estadual de Campinas - Brazil), Paulo de Geus (University of Campinas - Brazil)</td>
+									<td>Bankers-programas maliciosos para roubo de informações bancárias-geralmente usam janelas que imitam sites dos bancos reais para ludibriar os usuários. Isto e sua execução não intrusiva no sistema alvo dificultam a detecção e análise por sistemas automáticos não supervisionados. Neste artigo, apresenta-se uma proposta de solução para a identificação de bankers brasileiros. Para tanto, lança-se mão de três analisadores visuais (baseados em cores, na presença de logotipos conhecidos e no conteúdo dos textos) refinados por meio de aprendizado de máquina supervisionado (Random Forest). Testes com mais de 1.100 imagens extraídas de malware resultaram em 92,1% de exemplares corretamente classificados.</td>
+								</tr>
+								<tr class="cor1">
+									<td>131472</td>
+									<td>CAFe Expresso: Comunidade Acadêmica Federada para Experimentação usando Framework Shibboleth</td>
+									<td>Maykon de Souza (IFSC - Brazil), Emerson Ribeiro de Mello (Instituto Federal de Santa Catarina - Brazil), Michelle Wangham (Universidade do Vale do Itajaí - Brazil)</td>
+									<td>To perform research in Identity Management, the researcher needs a complete infrastructure with Identity Providers (IdPs) and Service Providers (SPs) so that it can conduct your experiments. The process to provide this kind of infrastructure is time-consuming and requires a thorough knowledge on the tools, which are limiting factors for researchers who only want to conduct researches in the area. The aim of this article is to describe the CAFe Expresso wich was implemented with the purpose to facilitate the development of research on identity management and for this provides an environment for experimentation based on the Shibboleth framework, composed of IdPs, SPs, Discovery Services (DS) and the uApprove service.</td>
+								</tr>
+								<tr class="cor2">
+									<td>131776</td>
+									<td>Estudo e Análise de Vulnerabilidades Web</td>
+									<td>Wagner Monteverde (Universidade Tecnológica Federal do Paraná - Brazil), Rodrigo Campiolo (Universidade Tecnológica Federal do Paraná - Brazil)</td>
+									<td>A segurança em aplicações Web é importante para prover a proteção aos clientes e serviços na Web. Inúmeras vulnerabilidades Web são exploradas a cada dia e os ataques tem se tornado mais frequentes devido a facilidade introduzida por ferramentas de exploração e pelo aumento de aplicações e o uso da Web. Neste trabalho é realizado o estudo e análise de vulnerabilidades em aplicações Web em diferentes tipos de aplicações. São usadas ferramentas para identificação de vulnerabilidades em uma amostra de sítios Web heterogêneos e brasileiros. Por consequência, foram investigadas as principais formas de ataques utilizadas em aplicações Web. Os resultados indicam a necessidade urgente de melhorias na segurança, principalmente em sítios Web menores e regionais.</td>
+								</tr>
+								<tr class="cor1">
+									<td>132082</td>
+									<td>Sistema de Gerenciamento de Identidades para a Rede Catarinense de Informações Municipais baseado no SAML</td>
+									<td>Emerson Souto (Universidade do Vale do Itajaí - Brazil), Marlon Domenech (Univali - Brazil), Michelle Wangham (Universidade do Vale do Itajaí - Brazil)</td>
+									<td>A Rede Catarinense de Informações Municipais (RedeCIM) integra diversos sistemas de apoio à gestão pública municipal. Tais sistemas utilizam diferentes mecanismos de autenticação e de autorização, fazendo com que os usuários precisem lidar com diferentes credenciais para cada sistema. Este trabalho descreve um sistema de IdM centralizado baseado no padrão SAML 2.0, que provê autenticação única alinhada aos requisitos da RedeCIM. A pesquisa de satisfação realizada atestou a aprovação dos usuários e gestores da RedeCIM e os testes de software evidenciam a viabilidade da solução, garantindo a IdM na RedeCIM.</td>
+								</tr>
+							</table>
+							<h3><br>Session 3 - Information Security</h3>
+							<h3>Schedule: 4:30 pm - 5:30 pm</h3>
+							<table class="table" cellspacing="2">
+								<tr class="cor3">
+									<th width="50"><b>ID</b></th>
+									<th width="150"><b>Titles</b></th>
+									<th width="220"><b>Authors</b></th>
+									<th><b>Abstract</b></th>
+								</tr>
+								<tr class="cor2">
+									<td>131967</td>
+									<td>Implementação Eficiente de Algoritmos para Teste de Primalidade</td>
+									<td>Bruno Ribeiro (University of Brasília - Brazil), Diego Aranha (University of Campinas - Brazil)</td>
+									<td>O desenvolvimento da criptografia, em especial a criptografia de chave assimétrica, foi fator determinante para o crescimento e popularização das redes de computadores. Foi responsável pela viabilização de demandas como comércio e correio eletrônicos, assinaturas e certificações digitais. O uso adequado de técnicas criptográficas requer o desenvolvimento de implementações eficientes que sejam capazes de serem executadas em diversos tipos de dispositivos, que cada vez mais se incorporam à vida das pessoas. A geração de chaves criptográficas, por exemplo, é uma operação não só crítica quanto à segurança, mas também de alto custo computacional no algoritmo RSA. Este trabalho tem como objetivo estudar técnicas para teste de primalidade, elemento que compõe o núcleo do processo de geração de chaves nesse algoritmo. É dado enfoque na implementação, otimização e análise de desempenho do Teste de Frobenius Quadrático Simplificado, um teste de primalidade de 2005 e pouco explorado. As análises apontam uma eficiência 30% maior para inteiros de até 256 bits, resultados positivos quanto à viabilidade da redução do custo computacional da geração de números primos.</td>
+								</tr>
+								<tr class="cor1">
+									<td>132046</td>
+									<td>Implementação do esquema totalmente homomórfico sobre inteiros de chave reduzida</td>
+									<td>Luan Santos (Centro Universitario Euripedes de Marilia - Brazil), Guilherme Rodrigues Bilar (Centro Universitario Euripedes de Marilia - Brazil), Fabio Pereira (UNIVEM - Brazil)</td>
+									<td>Resumo: Neste papel implementamos o esquema totalmente homomórfico de chave reduzida (DGVH sobre inteiros) proposto por Jean-Sébastian Coron, Avradip Mandal, David Naccache e Mehdi Tibouchi, que foi publicado na conferencia CRYPTO 2011, este mesmo esquema pode ser comparado com o esquema totalmente homomórfico de Gentry, que trata-se de um esquema totalmente homomórfico mais simples, contudo essa simplicidade vem ao custo de que sua chave pública possui um tamanho estimado de ? , o que de acordo com Coron et al, torna inviável a aplicação em sistemas práticos. O esquema totalmente homomórfico DGVH com chave pública reduzida diminui o tamanho da chave pública gerada para ? criptografando de maneira quadrática os elementos da chave pública, ao invés de criptografa-los de maneira linear. Para fazê-lo foram utilizadas linguagens de programação como C++ e Python, contando com a biblioteca de matemática e teoria numérica GMPY2. Abstract: In this paper we implemented the fully homomorphic scheme with shoter key (DGVH with shorter key) proposed by Jean-Sébastian Coron, Avradip Mandal , David Naccache and Mehdi Tibouchi , which was published in the conference CRYPTO 2011, this same scheme can be compared with the Gentry's fully homomorphic scheme, being it a simpler fully homomorphic scheme, however this simplicity comes at the cost of the public key having an estimated size of ? , which according to Coron et al, makes it impossible to use in practical systems. The DGVH scheme over intergers with shorter public key decreases the size of the generated public key to ? , encrypting the information of the public key in a quadratic manner, instead of encrypting them in a linear way. To do so, programming languages like C + + and Python were used, with the library of mathematics and number theory GMPY2.</td>
+								</tr>
+								<tr class="cor2">
+									<td>132018</td>
+									<td>Análise dos Desafios para Estabelecer e Manter Sistema de Gestão de Segurança da Informação no Cenário Brasileiro</td>
+									<td>Rodrigo Fazenda (Universidade do Vale do Rio dos Sinos (Unisinos) - Brazil), Leonardo Fagundes (Universidade do Vale do Rio dos Sinos - Brazil)</td>
+									<td>O estabelecimento da norma ISO 27001 cresce entre as organizações em todo o mundo. Porém, diversos desafios são enfrentados pelas empresas para implementar esta norma. É escassa a quantidade de estudos sobre os desafios que empresas brasileiras enfrentam para estabelecer e manter o SGSI. Este artigo tem como objetivo identificar e analisar os desafios enfrentados para estabelecer e manter o SGSI no cenário nacional. Foi através do método de estudo de caso múltiplo que fatores como falta de apoio da direção, falta de capacitação da área de Segurança da Informação, influência da cultura local, falhas na análise de riscos e resistência á mudança foram identificados como obstáculos.</td>
+								</tr>
+							</table>
+						</div>
+						<h2 id="WGID" class="accordion">WGID -  IV Workshop on Digital Identity Management</h2>
+						<div class="conteudo-accordion">
+							<h3>Program:</h3>
+							<table class="mrgB table">
+								<tr class="cor3">
+									<th colspan="2">WGID - Workshop on Digital Identity Management</th>
+								</tr>
+								<tr class="cor2">
+									<td width="90">14:00 - 15:30</td>
+									<td>
+										<h6>Painel: <b>Gestão de Identidade Eletrônica e Identificação Civil no Brasil</b><br>Tema: <b>Registro de Identidade Civil Brasileiro</b><br>Panelistas:<br>-Hélvio Pereira Peixoto (Comitê Gestor do Sistema Nacional de Registro de Identificação Civil)<br>-Timóteo de Sousa Júnior (UnB)<br>-José Alberto Torres (Ministério da Justiça)<br>Moderadora:<br>-Profa. Michelle Wangham (UNIVALI)</h6>
+									</td>
+								</tr>
+								<tr class="cor1">
+									<td>15:30 - 15:40</td>
+									<td>
+										<h6>Apresentação do Comitê Técnico de Gestão de Identidades da RNP<br>Marco Aurélio Amaral Henriques (Coordenador do CT-GId)</h6>
+									</td>
+								</tr>
+								<tr class="cor2">
+									<td>15:40 - 15:55</td>
+									<td>
+										<h6>Apresentação do Laboratório de Gestão de Identidades (GIdLab) da RNP<br>Maykon Chagas (UNIVALI)</h6>
+									</td>
+								</tr>
+								<tr class="cor3">
+									<th colspan="2">Full Papers</th>
+								</tr>
+								<tr class="cor1">
+									<td>16:30 - 16:50</td>
+									<td>
+										<h6>Controle de Acesso Baseado em Políticas e Atributos para Federações de Recursos<br>Edelberto Silva (UFF),<br>Debora Muchaluat-Saade (UFF),<br>Natalia Castro Fernandes (UFF)</h6>
+									</td>
+								</tr>
+								<tr class="cor2">
+									<td>16:50 - 17:10</td>
+									<td>
+										<h6>Um Estudo Comparativo de Estratégias Nacionais de Gestão de Identidades para Governo Eletrônico<br>Glaidson Verzeletti (IFSC),<br>Michelle Wangham (UNIVALI),<br>Emerson Ribeiro de Mello (IFSC),<br>José Torres (DPRF)</h6>
+									</td>
+								</tr>
+								<tr class="cor1">
+									<td>17:10 - 17:30</td>
+									<td>
+										<h6>Diagnóstico do governo eletrônico brasileiro - uma análise com base no modelo de gerenciamento de identidades e no novo guia de serviços<br>José Torres (DPRF),<br>Rafael Sousa (UnB),<br>Flavio Deus (UnB)</h6>
+									</td>
+								</tr>
+								<tr class="cor3">
+									<th colspan="2">Short Papers</th>
+								</tr>
+								<tr class="cor2">
+									<td>17:30 - 17:45</td>
+									<td>
+										<h6>Armazenamento Distribuído de Dados Seguros para Efeito de Sistemas de Identificação Civil<br>Renata Jordão (UnB),Valério Aymoré Martins (UnB),<br>Fábio Buiati (UnB),<br>Flavio Deus (UnB),<br>Rafael Sousa (UnB</h6>
+									</td>
+								</tr>
+								<tr class="cor1">
+									<td>17:45 - 18:00</td>
+									<td>
+										<h6>Um Estudo Sobre Autenticação Federada no Acesso a Recursos Computacionais por Terminal Remoto Seguro<br>Antonio Tadeu Azevedo Gomes (LNCC),<br>Marcelo Galheigo (LNCC)</h6>
+									</td>
+								</tr>
+								<tr class="cor2">
+									<td>18:00 - 18:15</td>
+									<td>
+										<h6>Um Sistema de Controle de Acesso Utilizando Agentes e Ontologia<br>Pedro Oliveira (UNISINOS),<br>João Gluz (UNISINOS)</h6>
+									</td>
+								</tr>
+								<tr class="cor1">
+									<td>18:15 - 18:30</td>
+									<td>
+										<h6>Autenticação e Autorização em Federações de Nuvens<br>Ioram S. Sette (UFPE),<br>Carlos Ferraz (UFPE)</h6>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<h2 id="WFC" class="accordion">WFC - III Workshop on Computational Forensics</h2>
+						<div class="conteudo-accordion">
+							<h3>Program:</h3>
+							<table class="mrgB table">
+								<tr class="cor3">
+									<th width="90">Schedule</th>
+									<th>Program</th>
+								</tr>
+								<tr class="cor2">
+									<td>08:30 - 09:00</td>
+									<td><b>Palestrante Convidado: Angelo Volpi Neto</b><br> 7º. Tabelionato Volpi – Curitiba- PR <br><b>“A imputação de Autoria em Documentos Digitais”</b></td>
+								</tr>
+								<tr class="cor1">
+									<td>09:00 - 09:30</td>
+									<td><b>Artigo 1: Linux Remote Evidence Colector - Uma ferramenta de coleta de dados utilizando a metodologia Live Forensics </b><br><a href="https://submissoes.sbc.org.br/PersonShow.cgi?c=2101&who=2520">Evandro Della Vecchia</a>, <a href="https://submissoes.sbc.org.br/PersonShow.cgi?c=2101&who=158775">Luciano Coral</a></td>
+								</tr>
+								<tr class="cor2">
+									<td>09:30 - 10:00</td>
+									<td><b>Palestrante Convidado: Paulo Henrique Batimarchi</b><br> IFIP – International Federation on Intellectual Property (Latin America) – São Paulo – SP<br><b> "Aspectos Juridicos da Forense Computacional"</b>></td>
+								</tr>
+								<tr class="cor1">
+									<td>10:00 - 10:30</td>
+									<td><b>Artigo 2: Uso de Funções de Hash em Forense Computacional</b><br> <a href="https://submissoes.sbc.org.br/PersonShow.cgi?c=2101&who=67319">Marcos Corrêa Jr.</a>, <a href="https://submissoes.sbc.org.br/PersonShow.cgi?c=2101&who=19086">Ruy José Guerra Barretto de Queiroz</a></td>
+								</tr>
+								<tr class="cor2">
+									<td>10:30 - 11:00</td>
+									<td><b>Coffee Break</b></td>
+								</tr>
+								<tr class="cor1">
+									<td>11:00 - 11:30</td>
+									<td><b>Artigo 3: NPDI Find Porn: Uma Ferramenta para Detecção de Conteúdo Pornográfico</b><br> Ramon F. Pessoa, Edemir Ferreira de A. Junior, Carlos A. Caetano Junior, Silvio Jamil F. Guimarães, Jefersson A. dos Santos, Arnaldo de A. Araújo</td>
+								</tr>
+								<tr class="cor2">
+									<td>11:30 - 12:30</td>
+									<td><b>Palestrante Convidado: Magnus Anseklev</b><br> Micro Systemation <br><b>“Mini Computadores”</b></td>
+								</tr>
+								<tr class="cor1">
+									<td>12:30 - 14:00</td>
+									<td><b>Almoço</b></td>
+								</tr>
+								<tr class="cor2">
+									<td>14:00 - 14:30</td>
+									<td><b>Artigo 4: Banco de Dados de Laudos Periciais de Dispositivos Móveis </b><br><a href="https://submissoes.sbc.org.br/PersonShow.cgi?c=2101&who=140753">Alonso Decarli</a>, <a href="https://submissoes.sbc.org.br/PersonShow.cgi?c=2101&who=158779">Cicero Grokoski</a>, <a href="https://submissoes.sbc.org.br/PersonShow.cgi?c=2101&who=37982">Emerson Paraiso</a>, <a href="https://submissoes.sbc.org.br/PersonShow.cgi?c=2101&who=140750">Luiz Grochocki</a>, <a href="https://submissoes.sbc.org.br/PersonShow.cgi?c=2101&who=2580">Cinthia O. A. Freitas</a></td>
+								</tr>
+								<tr class="cor1">
+									<td>14:30 - 15:30</td>
+									<td><b>Palestrante Convidado: Luiz Rodrigo Grochocki </b><br>Perito Oficial Criminal da Polícia Científica do Estado do Paraná – Setor de Computação Forense<br> <b>“Procedimento Operacional Padrão para Pericia Criminal em Computação - POP/SENASP”</b></td>
+								</tr>
+								<tr class="cor2">
+									<td>15:30 - 16:00</td>
+									<td><b>Artigo 5: Clonagem de Cartões Bancários</b><br>Gustavo G. Parma, Amilton Soares Júnior</td>
+								</tr>
+								<tr class="cor1">
+									<td>16:00 - 16:30</td>
+									<td><b>Coffee Break</b></td>
+								</tr>
+								<tr class="cor2">
+									<td>16:30 - 17:00</td>
+									<td><b>Palestrante Convidado: Márjory da Costa-Abreu</b><br>Pesquisadora do Imagina Lab (Imaging, Graphics, and Intelligent Agents Research Laboratory) da Universidade Federal do Rio Grande do Norte (UFRN)<br><b>“Implications of ageing in biometrics system design”</b></td>
+								</tr>
+								<tr class="cor1">
+									<td>17:00 - 17:30</td>
+									<td><b>Artigo 6: ZetaDnaCripto: Método de criptografia baseado em fitas de DNA</b><br>Yasmmin C. Martins<br>Instituto Militar de Engenharia (IME)</td>
+								</tr>
+								<tr class="cor2">
+									<td>17:30 - 18:00</td>
+									<td><b>Encerramento</b></td>
+								</tr>
+							</table>
+							<h3>Lecturers:</h3>
+							<table class="mrgB table">
+								<tr class="cor3">
+									<th>Lecture Title</th>
+									<th>Lecturer</th>
+								</tr>
+								<tr class="cor2">
+									<td><h6><b>A imputação de Autoria em Documentos Digitais</b></h6></td>
+									<td><h6><b>Angelo Volpi Neto</b> é Tabelião, escritor, consultor, formado em Direito pela PUC-Pr., pós graduando em direito imobiliário. Professor convidado de pós graduação em direito eletrônico  na Unicuritiba, PUC-Pr., UNISINOS-RS, UNICEMP-PR, entre outras. Autor dos livros: Comércio Eletrônico Direito e Segurança, Ed. Juruá e A VIDA EM BITS, Ed. Aduaneiras. Colunista e membro do Conselho Editorial da revista INFORMATION MANAGEMENT. Articulista, autor de centenas de ensaios, artigos e crônicas. Membro do Conselho Honorário da União Internacional do Notariado Latino. Roma –IT. É presidente do Colégio Notarial do Paraná e Vice da ANOREG-Pr. </h6></td>
+								</tr>
+								<tr class="cor1">
+									<td><h6><b>Procedimento Operacional Padrão para Pericia Criminal em Computação - POP/SENASP</b></h6></td>
+									<td><h6><b>Luiz Rodrigo Grochocki</b> Perito Criminal da Polícia Científica do Paraná, Bacharel em Direito e Engenharia, especialista em Estado Democrático de Direito pela Escola do Ministério Público do Paraná. Especialista em Direito Aplicado pela Escola da Magistratura do Paraná, Mestre em Tecnologia pela PUC-PR.</h6></td>
+								</tr>
+								<tr class="cor2">
+									<td><h6><b>Mini Computadores</b></h6></td>
+									<td><h6><b>Magnus Anseklev</b> is a highly regarded international business executive with a successful track record as a general manager and an international sales and marketing executive.  He has more than 20 years of experience from the Telecom sector. He has advanced language skills in English, Spanish, Portuguese and Swedish<br>In 2012 he was asked by Microsystemation AB, the Global Leader in Digital Forensics for Mobile Devices, to build and grow their business throughout Latin America with special focus on Brazil. He is active in the region promoting the benefits of a solid, state of the art, forensic tool that assist government agencies solve crimes in a highly technological driven society where mobile devices are playing a vital part in every person´s life. He is also the Founder of AEI Consulting - a management and business consultancy agency based in Sao Paulo.<br>He holds a Master of Science of Business Administration from the University of Linkoping, Sweden and the University of Washington at Seattle USA. He is also an INSEAD Alumni after having completed the INSEAD AMP program.</h6></td>
+								</tr>
+								<tr class="cor1">
+									<td><h6><b>Implications of ageing in biometrics system design</b></h6></td>
+									<td><h6><b>Márjory da Costa-Abreu</b> Pesquisadora do Imagina Lab (Imaging, Graphics, and Intelligent Agents Research Laboratory) da Universidade Federal do Rio Grande do Norte (UFRN). É graduada em Ciência da Computação pela UFRN (2004). Possui Mestrado em Sistemas e Computação pela UFRN (2006) e Doutorado em Electronic Engineering (University of Kent,  Inglaterra – 2010).</h6></td>
+								</tr>
+								<tr class="cor2">
+									<td><h6><b>Aspectos Juridicos da Forense Computacional</b></h6></td>
+									<td><h6><b>Paulo Henrique Batimarchi</b> Profissional formado em Direito pela Universidade Mackenzie, SP, com especialização em Direito Autoral e Direito Eletrônico, além de Web Marketing e Gestão Estratégica. Atua na área de combate a delitos cyberneticos desde 1999 em investigações de casos internacionais e nacionais, treinamento para agentes de Law Enforcement em toda America Latina e proteção de conteúdo online.</h6></td>
+								</tr>
+							</table>
+						</div>
+					</article>
+				</section>
+			</div>
+			<footer class="container clr">
+				<div class="promocao">
+					<h3>PROMOTER:</h3>
+					<div class="logo sbc"><a href="http://www.sbc.org.br"><img src="imagens/logo_sbc.png" alt="SBC - Sociedade Brasileira de Computação"></a></div>
+				</div>
+				<div class="organizacao">
+					<h3>ORGANIZER:</h3>
+					<div class="logo ufmg"><a href="http://www.dcc.ufmg.br"><img src="imagens/logo_ufmg.png" alt="UFMG"></a></div>
+				</div>
+				<div class="patrocinio">
+				<h3>SPONSORS:</h3>
+				<ul class="logos">
+					<li class="logo google"><a href="http://www.google.com.br"><img src="imagens/logo_google.png" alt="Google"></a></li>
+					<!--<li class="logo"><a href="http://www.cnpq.br"><img src="imagens/logo-CNPq.png" alt="CNPq"></a></li>
+					<li class="logo"><a href="http://capes.gov.br"><img src="imagens/logo-capes.png" alt="CAPES"></a></li>-->
+					<li class="logo eteg"><a href="http://www.eteg.com.br"><img src="imagens/logo_eteg.png" alt="ETEG"></a></li>
+					<li class="logo intel"><a href="http://www.intel.com.br"><img src="imagens/logo_intel.png" alt="Intel"></a></li>
+				</ul>
+				<ul class="logos">
+					<li class="logo"><a href="http://www.nic.br"><img src="imagens/logo-nic.png" alt="NIC.BR"></a></li>
+					<li class="logo"><a href="http://www.cgi.br"><img src="imagens/logo-cgi.png" alt="CGI.BR"></a></li>
+					<li></li>
+				</ul>
+			</div>
+				<p class="iniciativa clr">An initiative of the Brazilian Society of Computer Science (SBC) - <a href="http://www.sbc.org.br">http://www.sbc.org.br</a></p>
+			</footer>
+		</div>
+	</body>
+	</html>

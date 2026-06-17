@@ -1,0 +1,593 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SBSEG 2014 - CALL FOR PAPERS</title>
+	<!-- Fontes -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600|Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+	<!-- Css -->
+	<link rel="stylesheet" href="https://www.sbseg2014.dcc.ufmg.br/eng/css/base.css">
+	<!-- Script -->
+	<script src="https://www.sbseg2014.dcc.ufmg.br/eng/js/head.js"></script>
+	<script>
+		head.js(
+			'../js/jquery.js',
+			'../js/jquery-migrate.js',
+			'../js/Modernizr.js',
+			'../js/easing.js',
+			'../js/base.js'
+			)
+		head.ready('base.js', function(){
+			$('.accordion').click(function(event) {
+				$(this).toggleClass('accordion-active');
+				$(this).next('.conteudo-accordion').slideToggle('normal');
+			}).next('.conteudo-accordion').hide();
+			if (window.location.hash) {
+				titulo = window.location.hash;
+				$(titulo).toggleClass('accordion-active');
+				rolaPara = $(titulo).offset().top-55;
+				$(window.location.hash).next().slideDown('normal', function(){
+					$('html, body').stop().animate({
+						scrollTop: rolaPara
+					}, 1000, 'easeOutExpo');
+				});
+			}
+		})
+	</script>
+</head>
+<body id="chamadas">
+	<div id="base">
+		<header id="topo" class="container clr">
+			<div class="sbseg14"></div>
+			<div class="sbsegTitulo"></div>
+			<a href="../chamadas.html" class="mudaIdioma"></a>
+		</header>
+		<nav id="menuPrincipal">
+			<ul class="container">
+				<li class="menuItem"><a class="menuLink" href="../eng/index.html">HOME</a></li>
+				<li class="menuItem"><a class="menuLink" href="event.html">EVENT</a></li>
+				<li class="menuItem"><a class="menuLink" href="committees.html">COMMITTEES</a></li>
+				<li class="menuItem current"><a class="menuLink link-current" href="call-for-papers.html">CALL FOR PAPERS</a></li>
+				<li class="menuItem"><a class="menuLink" href="registration.html">REGISTRATION</a></li>
+				<li class="menuItem"><a class="menuLink" href="program.html">PROGRAM</a></li>
+				<li class="menuItem menuLocal"><a class="menuLink" href="call-for-papers.html#">VENUE</a>
+					<ul class="subMenu">
+						<li><a href="overview.html" class="menuLink">OVERVIEW</a></li>
+						<li><a href="about-ufmg.html" class="menuLink">ABOUT UFMG</a></li>
+						<li><a href="http://www.dcc.ufmg.br/dcc/?q=en" class="menuLink">ABOUT OUR CS DEPT.</a></li>
+						<li><a href="belo-horizonte.html" class="menuLink">BELO HORIZONTE</a></li>
+						<li><a href="sorroundings.html" class="menuLink">SURROUNDINGS</a></li>
+						<li><a href="getting-here.html" class="menuLink">GETTING HERE</a></li>
+						<li><a href="accommodation/index.html" class="menuLink">ACCOMMODATION</a></li>
+					</ul>
+				</li>
+				<li class="menuItem"><a class="menuLink" href="contact-us.html">CONTACT US</a></li>
+			</ul>
+		</nav>
+		<div id="conteudo" class="container clr">
+			<section class="conteudoFull">
+				<article>
+					<header>
+						<h1>Call for Papers</h1>
+					</header>
+					<h2 id="artigos-completos" class="accordion">Full Papers - Technical Sessions</h2>
+					<div class="conteudo-accordion">
+						<h2>Topics of Interest</h2>
+						<p>The symposium’s central theme is information and computational systems security, and within this framework completed scientific papers in one or more of the areas listed below are welcome for submission. The list is not exhaustive and papers in other related areas are also welcome for submission.</p>
+						<ul class="lista">
+							<li>Algorithms, protocols and cryptographic techniques</li>
+							<li>System audit and analysis</li>
+							<li>Access control, authentication and identity management</li>
+							<li>Computational forensics and criminology</li>
+							<li>Attack, vulnerability, and intrusion detection and prevention</li>
+							<li>Digital l</li>
+							<li>Constrained hardware security: RFID tags, smart cards, wireless sensors</li>
+							<li>Confidence models</li>
+							<li>Security policies, standards and norms</li>
+							<li>Anonymity and privacy</li>
+							<li>Intellectual property protection and DRM</li>
+							<li>Security incident response</li>
+							<li>Adaptive security, security policy</li>
+							<li>Database privacy and security</li>
+							<li>Security and privacy in social networks</li>
+							<li>Security of applications (Digital TV, E-banking, etc)</li>
+							<li>Security in ubiquitous and pervasive computing</li>
+							<li>Security in mobile and embedded systems</li>
+							<li>Middleware security (Java RMI, J2EE, CorbaSec, .Net, etc)</li>
+							<li>Network security: P2P networks, virtual networks, wireless networks</li>
+							<li>Security of web services, distributed systems and operating systems</li>
+							<li>Security of smart grids, smart meters and smart houses</li>
+							<li>Cloud computing security</li>
+							<li>Software security: development, tests and certification</li>
+							<li>Biometric systems and techniques</li>
+							<li>Fault and intrusion tolerance</li>
+							<li>Electronic voting</li>
+							<li>Cryptographic Hardware</li>
+							<li>Grid Computing Security</li>
+							<li>Smart card security</li>
+						</ul>
+						<h2>Important Dates and Deadlines</h2>
+						<ul class="datasImportantes">
+							<li>Registration and Paper Submission: <span class="data"><strike>June 24, 2014</strike> - <u>July 4, 2014</u></span></li>
+							<li>Acceptance Notification: <span class="data">August 23, 2014</span></li>
+							<li>Final Version Deadline: <span class="data">September 9, 2014</span></li>
+						</ul>
+						<h2>Instructions for Authors</h2>
+						<p>Only full papers will be accepted. Papers must be the product of developed research that produced original and relevant results that were properly analyzed and validated. Furthermore, the paper presentation must contain grounded and detailed descriptions of the research as well as consistent conclusions based on the obtained results.</p>
+						<p>Submitted papers must include description of research activity and methodology, as well as reports on relevant experiences (observations/background information) and on related case studies. Papers will only be accepted electronically, through SBC’s JEMS portal (<a href="https://submissoes.sbc.org.br/">https://submissoes.sbc.org.br/</a>). Papers must be submitted anonymously, i.e. avoid placing identifying information in the headers, in the paper’s text, or in any references which could link the paper to its authors and affiliated institutions.</p>
+						<p>Papers may be written in Portuguese or English. Only PDF copies of papers will be accepted. The paper’s text format and layout must follow SBC’s guidelines for formatting. For more information on SBC’s guidelines please visit <a href="http://www.sbc.org.br">www.sbc.org.br</a> (select the English version of the website on the top banner, then on the left side menu select “Documents”, then select “Templates for Articles and Book Chapters”). Papers are limited to 14 pages including figures, tables, references and appendices.</p>
+						<p>All papers will be initially evaluated by a review committee followed by two anonymous peer reviews (no identifying information about the authors, reviewers, and affiliated institutions will be shared). Accepted papers must be presented at the symposium by one of the authors, as they will be included in XIV SBSeg’s official proceedings. At the symposium, an evaluation committee will then select the best paper presented.</p>
+						<h2>Coordination</h2>
+						<ul class="lista">
+							<li>Diego F. Aranha (UNICAMP) - <a href="mailto:dfaranha@ic.unicamp.br">dfaranha@ic.unicamp.br</a></li>
+							<li>Marinho P Barcellos (UFRGS) - <a href="mailto:marinho@inf.ufrgs.br">marinho@inf.ufrgs.br</a></li>
+						</ul>
+					</div>
+					<h2 id="extended-abstracts" class="accordion">Extended Abstracts - Technical Sessions</h2>
+					<div class="conteudo-accordion">
+						<p>The symposium’s central theme is information and computational systems security, and within this framework completed scientific papers in one or more of the areas listed below are welcome for submission. The list is not exhaustive and papers in other related areas are also welcome for submission.</p>
+						<ul class="lista">
+							<li>Algorithms, protocols and cryptographic techniques</li>
+							<li>System audit and analysis</li>
+							<li>Access control, authentication and identity management</li>
+							<li>Computational forensics and criminology</li>
+							<li>Attack, vulnerability, and intrusion detection and prevention</li>
+							<li>Digital l</li>
+							<li>Constrained hardware security: RFID tags, smart cards, wireless sensors</li>
+							<li>Confidence models</li>
+							<li>Security policies, standards and norms</li>
+							<li>Anonymity and privacy</li>
+							<li>Intellectual property protection and DRM</li>
+							<li>Security incident response</li>
+							<li>Adaptive security, security policy</li>
+							<li>Database privacy and security</li>
+							<li>Security and privacy in social networks</li>
+							<li>Security of applications (Digital TV, E-banking, etc)</li>
+							<li>Security in ubiquitous and pervasive computing</li>
+							<li>Security in mobile and embedded systems</li>
+							<li>Middleware security (Java RMI, J2EE, CorbaSec, .Net, etc)</li>
+							<li>Network security: P2P networks, virtual networks, wireless networks</li>
+							<li>Security of web services, distributed systems and operating systems</li>
+							<li>Security of smart grids, smart meters and smart houses</li>
+							<li>Cloud computing security</li>
+							<li>Software security: development, tests and certification</li>
+							<li>Biometric systems and techniques</li>
+							<li>Fault and intrusion tolerance</li>
+							<li>Electronic voting</li>
+							<li>Cryptographic Hardware</li>
+							<li>Grid Computing Security</li>
+							<li>Smart card security</li>
+						</ul>
+						<h2>Important Dates and Deadlines</h2>
+						<ul class="datasImportantes">
+							<li>Registration and Paper Submission: <span class="data">Setember 08, 2014</span></li>
+							<li>Acceptance Notification: <span class="data">September 19, 2014</span></li>
+						</ul>
+						<h2>Instructions For Authors</h2>
+						<p>This call contemplates extended abstracts only, which must present research producing preliminary results and suggesting future work consistent with these results. The goal of this category is foster the discussion of ideas, even if not yet fully developed or validated.</p>
+						<p>Submitted extended abstracts must include description of research activity and methodology, as well as reports on relevant experiences (observations/background information) and on related case studies. Papers will only be accepted electronically, through SBC’s JEMS portal (<a href="https://submissoes.sbc.org.br/">https://submissoes.sbc.org.br/</a>). Extended abstracts must be submitted anonymously, i.e. avoid placing identifying information in the headers, in the abstracts’s text, or in any references which could link the paper to its authors and affiliated institutions.</p>
+						<p>Extended abstracts may be written in Portuguese or English. Only PDF copies of papers will be accepted. The abstract’s text format and layout must follow SBC’s guidelines for formatting. For more information on SBC’s guidelines please visit <a href="http://www.sbc.org.br">www.sbc.org.br</a> (select the English version of the website on the top banner, then on the left side menu select “Documents”, then select “Templates for Articles and Book Chapters”). Extended abstracts are limited to 4 pages including figures, tables, references and appendices.</p>
+						<p>All extended abstracts will be initially evaluated by a review committee followed by anonymous peer reviews (no identifying information about the authors, reviewers, and affiliated institutions will be shared). Accepted extended abstracts must be presented at the symposium by one of the authors, as they will be included in XIV SBSeg’s official proceedings. At the symposium, an evaluation committee will then select the best paper presented.</p>
+						<h2>Coordination</h2>
+						<ul class="lista">
+							<li>Diego F. Aranha (UNICAMP)</li>
+							<li>Marinho P Barcellos (UFRGS)</li>
+						</ul>
+					</div>
+					<h2 id="CTDSeg" class="accordion">CTDSeg - III Contest of Theses and Dissertations in Security</h2>
+					<div class="conteudo-accordion">
+						<h2>Important Dates and Deadlines</h2>
+						<ul class="datasImportantes">
+							<li>Paper Submission: <span class="data">July <strike>14, 2014</strike> - <u>23, 2014</u></span></li>
+							<li>Acceptance Notification: <span class="data">August 27, 2014</span></li>
+							<li>Final Version Deadline: <span class="data">to be determined</span></li>
+							<li>Contest Date: <span class="data">November 3, 2014</span></li>
+						</ul>
+						<h2>Call for Submission</h2>
+						<p>The Contest of Theses and Dissertations on Information and Computational Systems Security (CTDSeg), part of SBSeg, aims to acknowledge and reward the best doctoral theses and best post-graduate dissertations in the security field. Researchers are invited to submit a summary paper which describes and summarizes the results concluded in their thesis or dissertation. Theses and dissertations completed between August 2012 to June 2014 are eligible for submission. The contest will award the determined three best doctoral theses and the three best post-graduate dissertations.</p>
+						<h2>Article Submission and Formatting</h2>
+						<p>Submitted paper summaries must be written in either Portuguese or English with a maximum page limit of 8 pages. Paper summaries will only be accepted in PDF file form. Paper summaries should be formatted based on SBC’s formatting guidelines. For more information on SBC’s guidelines please visit <a href="http://www.sbc.org.br/template">http://www.sbc.org.br/template</a> (select the English version of the website on the top banner, then on the left side menu select “Documents”, then select “Templates for Articles and Book Chapters”).</p>
+						<p>Paper summaries in PDF file form must be submitted through SBC’s JEMS portal at (<a href="https://submissoes.sbc.org.br">submissoes.sbc.org.br</a>). Please note, that there are actually two separate items that must be combined into one PDF file for submission (see paragraphs below for more details).</p>
+						<h3>First Document for Submission:</h3>
+						<p>In the paper summary (8 page maximum length), the author must discuss the thesis’s or dissertation’s contribution to its intended academic field as well as it’s thematic originally. The summary must also include the following items: the title of the thesis or dissertation, the author’s name, name of supervisor(s) and their affiliations, the original abstract, motivations, goals, achievements, associated scientific work, and the web address where an official copy of the thesis or dissertation is published and available for view</p>
+						<h3>Second Document for Submission:</h3>
+						<p>Along with the paper summary, each submission must also contain a scanned copy of the Declaration of Completion for the related thesis or dissertation. The statement must explicitly state that the candidate’s work was approved and successfully defended. The statement must also indicate the location and date of the defense, the supervisor’s name, and database location.</p>
+						<h2>Topics of Interest</h2>
+						<p>In order to be eligible for consideration, submitted theses and dissertations must be related to a topic in the field of Information and Computational Systems Security.</p>
+						<h2>Evaluation</h2>
+						<p>The paper summaries for an applicant’s thesis or dissertation will undergo an initial evaluation by three research experts on SBSeg’s Program Committee. The paper summaries accepted from the initial evaluation stage will be published in the SBSeg symposium proceedings. Furthermore, the principal author must present their thesis or dissertation at the CTDSeg on November 3, 2014. At CTDSeg, the contest’s Evaluation Committee will review the completed thesis or dissertation and evaluate the applicant’s oral presentation in order to determine the three best doctoral thesis and post-graduate dissertation contestants.</p>
+						<h2>STDSeg 2014 Coordination</h2>
+						<ul class="lista">
+							<li>Aldri Santos (UFPR) - <a href="mailto:aldri@inf.ufpr.br">aldri@inf.ufpr.br</a></li>
+							<li>Anderson Nascimento (UnB) - <a href="mailto:andclay@ene.unb.br">andclay@ene.unb.br</a></li>
+						</ul>
+					</div>
+					<h2 class="accordion">Tutorials proposals</h2>
+					<div class="conteudo-accordion">
+						<h2>Important Dates and Deadlines</h2>
+						<ul class="datasImportantes">
+							<li>Proposal Submission: <span class="data">July <strike>11, 2014</strike> - <u>18, 2014</u></span></li>
+							<li>Acceptance notification: <span class="data"> <strike>August 10, 2014</strike> - <u>August 14, 2014</u> </span></li>
+							<li>Completed Lesson Plan and Presentation Deadline: <span class="data">September 15, 2014</span></li>
+						</ul>
+						<h2>About the Tutorials</h2>
+						<p>OSBSeg’s tutorials aim to cover relevant topics not generally covered at the undergraduate level, as well as to spark interest in and develop connections between academics and professionals in the security field. Tutorials will be considered based on thematic relevancy and attractiveness to students and professionals in relation to current academic research areas and labor market needs. Each tutorials should be planned for a three and a half hour time block, which may also include laboratory exercises.</p>
+						<h2>Topics of Interest</h2>
+						<p>The symposium’s central theme and thus of the tutorials is information and computational systems security, and within this framework tutorials may cover one or more of the following topics:</p>
+						<ul class="lista">
+							<li>Algorithms, protocols and cryptographic techniques</li>
+							<li>System audit and analysis</li>
+							<li>Access control, authentication and identity management</li>
+							<li>Computational forensics and criminology</li>
+							<li>Attack, vulnerability, and intrusion detection and prevention</li>
+							<li>Digital law</li>
+							<li>Constrained hardware security: RFID tags, smart cards, wireless sensors</li>
+							<li>Confidence models</li>
+							<li>Security policies, standards and norms</li>
+							<li>Anonymity and privacy</li>
+							<li>Intellectual property protection and DRM</li>
+							<li>Security incident response</li>
+							<li>Adaptive security, security policy</li>
+							<li>Database privacy and security</li>
+							<li>Security and privacy in social networks</li>
+							<li>Security of applications (Digital TV, E-banking, etc)</li>
+							<li>Security in ubiquitous and pervasive computing</li>
+							<li>Security in mobile and embedded systems</li>
+							<li>Middleware security (Java RMI, J2EE, CorbaSec, .Net, etc)</li>
+							<li>Network security: P2P networks, virtual networks, wireless networks</li>
+							<li>Security of web services, distributed systems and operating systems</li>
+							<li>Security of smart grids, smart meters and smart houses</li>
+							<li>Cloud computing security</li>
+							<li>Software security: development, tests and certification</li>
+							<li>Biometric systems and techniques</li>
+							<li>Fault and intrusion tolerance</li>
+							<li>Electronic voting</li>
+							<li>Cryptographic Hardware</li>
+							<li>Grid Computing Security</li>
+							<li>Smart card security</li>
+						</ul>
+						<p><b>The list is not exhaustive and tutorials may cover other topics related to Information and Computational Systems Security.</b></p>
+						<h2>Tutorials Proposal Submission</h2>
+						<p>Professors or researchers interested in teaching a tutorials must submit a proposal, written in Portuguese, between 3 to 5 pages (excluding CVs, item 6 below), with the following information:</p>
+						<ul class="listaNumero">
+							<li>Identification Information: tutorials title, author(s) and affiliated institution(s), and indicate which author(s) will present the tutorials at the symposium;</li>
+							<li>General Information: tutorials objectives, desired audience profile, and thematic approach (i.e. theoretical or practical course; discussing general summary of findings or conducting an in-depth investigation on specific aspects; giving a presentation on or holding a comparative discussion on technology; providing a training session for new skills or information, etc.);</li>
+							<li>Anticipated structure of supporting text (topic areas and/or chapters to be developed);</li>
+							<li>For each anticipated topic area / chapter (from item 3), write a summary of its content and provided an estimation of the number of pages for each topic area / chapter;</li>
+							<li>Bibliography for principal sources used in tutorials preparation;</li>
+							<li> CV for each of the tutorials authors (maximum one page per author) (CVs do not count towards the 3 to 5 page written proposal limit).</li>
+						</ul>
+						<p><b>Please note that all the information listed above must be submitted as one document (in PDF format only).</b></p>
+						<p>Proposals can only be submitted in electronic form (as one PDF file) via SBC’s JEMS portal (<a href="https://submissoes.sbc.org.br">https://submissoes.sbc.org.br</a>).</p>
+						<h2>Evaluation Process</h2>
+						<p>Each tutorials proposal submitted to SBSeg 2014 will be evaluated by three or more members of the Evaluation Committee. Tutorials proposals will be reviewed on the following criteria: thematic relevancy, technical quality, and experience of the tutorials author(s) in the topic area. The best proposals in different topic areas will be accepted for presentation and publication.</p>
+						<p>In an effort to provide a diverse selection of tutorials, only one proposal per topic area will be accepted. Therefore, if two or more submitted proposals cover the same topic or significantly overlap, only the best proposal will be selected at the discretion of the evaluation committee.</p>
+						<h2>Tutorials Supporting Text</h2>
+						<p>The author(s) of accepted tutorials proposals must produce a supporting text for the course between 40 to 50 pages in length. The supporting text must be written in Portuguese; other languages will not be accepted. The supporting text for each selected tutorials will be published as a chapter in the symposium’s catalog “Tutorials of SBSeg 2014”.  Tutorials authors are expected to format the supporting text based on SBC’s formatting guidelines. For more information on SBC’s guidelines please visit (<a href="http://www.sbc.org.br">www.sbc.org.br</a>) (select the English version of the website on the top banner, then on the left side menu select “Documents”, then select “Templates for Articles and Book Chapters”). </p>
+						<h2>Coordination</h2>
+						<ul class="lista">
+							<li>André dos Santos (UECE) - <a href="mailto:andre@dossantos.org">andre@dossantos.org</a></li>
+						</ul>
+					</div>
+					<h2 id="WFC" class="accordion">WFC - III Workshop on Computational Forensics</h2>
+					<div class="conteudo-accordion">
+						<h2>Important Dates and Deadlines</h2>
+						<ul class="datasImportantes">
+							<li>Paper Submission: <span class="data"><strike>September 4, 2014</strike> - <u>September 11, 2014</u></span></li>
+							<li>Acceptance Notification: <span class="data">October 1, 2014</span></li>
+							<li>Final Version Deadline: <span class="data">to be determined</span></li>
+							<li>Workshop Date: <span class="data">November 6, 2014</span></li>
+						</ul>
+						<h2>Call for Submission</h2>
+						<p>The Brazilian Symposium on Information and Computational Security Systems (SBSeg) opened its doors to the interdisciplinary field of Computational Forensics in 2012 and the annual Workshop on Computational Forensics is convening for the third time! The past workshops in 2012 (Curitiba, PR) and in 2013 (Manaus, AM) were a success thanks to the speakers, technical sessions, and submitted articles.</p>
+						<p>The upcoming WFC III in Belo Horizonte will focus on improving the training and motivation within the computational forensics community. This theme is a result of a last year’s workshop report which highlighted the lack of computational forensics experts and its effect in the legal arena, especially as the “TJMG admits that there are large number of stalled legal processes” in part to the lack of experts.</p>
+						<p>The WFC III will not resolve all of the issues, but will encourage discussion on the problems and possible technical and scientific solutions that can assist experts in their everyday activities. It is important to note, that the Public Ministry of Minas Gerais created the State Coordinator for Combating Cyber Crime (Coeciber). This office is part of the Center for Operational Support for Criminal Prosecutors, for prosecutors working in Criminal Enforcement, Juried Trial, and under Military Authority (Caocrim). The State Coordinator for Combating Cyber Crime (Coeciber) works, in conjunction with public prosecutors, to expand and reform judicial and extrajudicial measures necessary to effectively combat cyber crime under state jurisdiction.</p>
+						<p>Moreover, another important issue to review is the current labor demand for specialized experts, as the Institute for General Skills (IGP) reported that “investigation for both common and technologically sophisticated crimes require specialized expertise.”</p>
+						<p>The WFC III facilitates knowledge transfer and best practice exchange between experts in the Computer Science and Law fields. By bringing together technical experts working in the computer forensics realm with those in relevant legal fields, important legal aspects affecting legislation arising from unlawful acts can be appropriately dealt with while minimizing implications on Brazilian society.</p>
+						<p>The computational forensics field is continuously growing more important and necessary as the virtual online environment continuously becomes part of everyday society and societal interactions. This transformation in societal interaction is facilitating the movement of traditional societal problems, once common in the real world, into the virtual world. With this movement, new technical and legal problems are emerging, including issues related to: invasion of privacy; breaches of contracts made over the internet; dissemination of slanderous or defamatory e-mails; child pornography; cyber bullying; illegal copy right infringement of software, music, and movies; and many more issues becoming an everyday reality in Brazilian and worldwide society.</p> 
+						<p>Given the context and state of affairs, the SBSeg organizing committee invites potential workshop participants to submit papers related to the topics listed below. The workshop organizing committee recognizes that the items below are not a complete list and encourages individuals interested in submitting papers in relevant fields not list below to contact the workshop coordinators for consultation.</p>
+						<h2>Formatting and Submission of Papers </h2>
+						<p>Those interested in submitting papers for the workshop must submit the initial drafts in PDF file form. The papers should be formatted based on SBC’s formatting guidelines. For more information on SBC’s guidelines please visit <a href="http://www.sbc.org.br/en/index.php?option=com_jdownloads&task=view.download&catid=32&cid=38&Itemid=195">www.sbc.org.br/en/index.php?option=com_jdownloads&task=view.download&catid=32&cid=38&Itemid=195</a>.</p>
+						<p>Papers must be submitted through SBC’s JEMS portal at (<a href="https://submissoes.sbc.org.br">submissoes.sbc.org.br</a>).</p>
+						<h2>Topics of Interest</h2>
+						<ul class="lista">
+							<li>Forensic Analysis of Digital Documents</li>
+							<li>Forensic Aspects of Computer Networks and Security</li>
+							<li>Legal Aspects of Computational Forensics</li>
+							<li>Biometrics and Attacks on Biometric Systems (Spoofing)</li>
+							<li>Electronic Crimes</li>
+							<li>Detection of Pornography and Child Pornography</li>
+							<li>Detection of Violence</li>
+							<li>Theoretical Foundations for Computational Forensics</li>
+							<li>Management of Information Security</li>
+							<li>Collection of Digital Evidence</li>
+							<li>Masking Information (Steganography and Steganalysis)</li>
+							<li>Security and Investigative Procedures in Cloud Computing</li>
+							<li>Surveillance (Pedestrian detection, object tracking, re-identification of people, facial recognition, recognition of actions and activities).</li>
+						</ul>
+						<h2>Program Committee</h2>
+						<p>To be determined.</p>
+						<h2>Coordination of WFC 2014</h2>
+						<ul class="lista">
+							<li>Cinthia O. de A. Freitas (PUCPR) - <a href="mailto:cinthia@ppgia.pucpr.br">cinthia@ppgia.pucpr.br</a></li>
+							<li>William Schwartz (DCC/UFMG) - <a href="mailto:william@dcc.ufmg.br">william@dcc.ufmg.br</a></li>
+						</ul>
+					</div>
+					<h2 id="WGID" class="accordion">WGID - IV Workshop on Digital Identity Management</h2>
+					<div class="conteudo-accordion">
+						<h2>Important Dates and Deadlines</h2>
+						<ul class="datasImportantes">
+							<li>Submission (registration and paper upload): <span class="data"> <strike>August 1 to 11, 2014</strike> - <u>August 1 to 19, 2014</u> </span></li>
+							<li>Acceptance Notification: <span class="data"><strike>September 1, 2014</strike> - <u>September 5, 2014</u></span></li>
+							<li>Final Version Deadline: <span class="data"><strike>September 8, 2014</strike> - <u>September 12, 2014</u> </span></li>
+						</ul>
+						<h2>Presentation</h2>
+						<p>Management of digital identities (IdM-Identity Management) consists of an integrated system of policies, processes, and technologies that enable organizations to treat and manipulate the identities of its users and objects (devices) in authentication, authorization, accounting, and auditing.</p>
+						<p>This is an active research topic and due to its complexity and relevance it is expected to remain important for some time. This outlook stems from the numerous technical issues that identity management systems must consider, such as: ease of use, user privacy and anonymity, security, single authentication, scalability, fine granularity access control (based on attributes), interoperability, and systems costs (total cost of ownership).</p>
+						<p>The 4<span>th</span> Workshop on Digital Identity Management (WGID) will provide a forum for technical paper discussions and presentations on the state of the art technologies related to identity management. Furthermore, a workshop goal is to identify research challenges as well as empower workshop participants.</p>
+						<h2>Topics of Interest</h2>
+						<p>Authors are invited to submit original papers on identity management. Topics of interests for the workshop include (but are not limited to):</p>
+						<ul class="lista">
+							<li>Federated mobile access and mobile certification</li>
+							<li>Attribute aggregation</li>
+							<li>Integrated environments for attribute aggregation management</li>
+							<li>Anonymity in IdM systems</li>
+							<li>Reference architectures and frameworks for IdM</li>
+							<li>Auditing IdM systems</li>
+							<li>Single sign on authentication</li>
+							<li>Object authentication (devices or things)</li>
+							<li>Attribute based authentication and access control</li>
+							<li>Authentication and access control federated in non-web applications and mobile computing</li>
+							<li>Digital certification</li>
+							<li>Atribute certificates</li>
+							<li>Lifecycle of digital identities (provision and administration)</li>
+							<li>Attribute based access control (ABAC)</li>
+							<li>Developing application using A&A infrastructure provided by federations</li>
+							<li>Scalability in identity management technologies</li>
+							<li>Academic network federations</li>
+							<li>Tools for managing and monitoring federations</li>
+							<li>Trust management in IdM system</li>
+							<li>Attribute Management</li>
+							<li>A&A management in interinstitutional projects</li>
+							<li>User centered identity management</li>
+							<li>Identity and cloud computing management</li>
+							<li>Identity and access management</li>
+							<li>Identity and Egovernment management</li>
+							<li>Identity and grid computing management</li>
+							<li>Identity and IoT (Internet of Things) management</li>
+							<li>Federated identity management</li>
+							<li>Interoperability between IdM systems </li>
+							<li>Levels of Assurance in IdM</li>
+							<li>New approaches to authentication and access control (e.g., based on context, reputation etc.)</li>
+							<li>Standards for digital identity in the academic community</li>
+							<li>Privacy and Anonymity in IdM systems </li>
+							<li>Authentication and authorization protocols</li>
+							<li>Social networks and digital identities</li>
+							<li>Civil Identity Registry (RIC) of Brazil</li>
+							<li>Prevention techniques for fraud and identity theft</li>
+							<li>Technologies to strengthen privacy</li>
+							<li>Technology usability in Identity Management</li>
+						</ul>
+
+						<h2>Workshop Format</h2>
+						<p>The WGID will be held on November 6, 2014 and will include the presentation of papers accepted for publication, a guest lecturer and a panel discussion.</p>
+
+						<h2>Information for Authors</h2>
+						<p>Articles can be submitted in two categories:</p>
+
+						<ul class="lista">
+							<li>Full papers should present research has been developed to the point of producing original and relevant results that have been appropriately validated and analyzed. Submitted completed articles are limited to 10 pages.</li>
+							<li>Short papers should describe a research paper in progress, a computational tool and/or practical experiments. The short articles should be between 4 to 6 pages in length. In the case of tools and/or experiments, the article must contain the following information: description and motivation of the problem addressed by the tool; solution architecture and description of the main features; URL where the tool is available; URL tool documentation and description of the planned demonstration.</li>
+						</ul>
+
+						<p>The summaries should be formatted based on SBC’s formatting guidelines. For more information on SBC’s guidelines please visit www.sbc.org.br (select the English version of the website on the top banner, then on the left side menu select “Documents”, then select “Templates for Articles and Book Chapters”).
+							Paper summaries must be submitted through SBC’s JEMS portal at (<a href="https://submissoes.sbc.org.br">submissoes.sbc.org.br</a>). Paper summaries must be submitted in PDF format and may be written in Portuguese of English.</p>
+
+							<p>Papers submitted to WGID will be evaluated by a board of reviewers and selected papers will be invited for presentation and published in the Conference Proceedings. At least one author of each selected paper must register for and attend the Symposium on Information Security and Computer Systems (SBSeg) to present their work at the workshop.</p>
+
+							<p>All submitted manuscripts must be anonymized, that is, the authors must remove from the head, body and references in the paper any information that may be linked to the authors or their institutions.</p>
+
+							<h2>Organizing Committee</h2>
+
+							<h3 class="mrgB">Coordenadores Gerais do Sbseg</h3>
+
+							<ul class="lista">
+								<li>Jeroen van de Graaf (UFMG)</li>
+								<li>José Marcos Nogueira (UFMG)</li>
+								<li>Leonardo B. Oliveira (UFMG)</li>
+							</ul>
+
+							<h2>WGID Coordinator</h2>
+							<ul class="lista">
+								<li>Marco Aurélio Amaral Henriques (UNICAMP) - <a href="mailto:marco@dca.fee.unicamp.br">marco@dca.fee.unicamp.br</a></li>
+							</ul>
+
+							<h2>Program Committee</h2>
+							<ul class="lista">
+								<li>Adilson Eduardo Guelfi (Unoeste)</li>
+								<li>Aldri Santos (UFPR)</li>
+								<li>Altair Olivo Santin (PUC-PR)</li>
+								<li>Débora Christina Muchaluat Saade (UFF)</li>
+								<li>Emerson Ribeiro de Mello (IFSC)</li>
+								<li>Joni da Silva Fraga (UFSC)</li>
+								<li>Marco Aurélio Amaral Henriques (Unicamp)</li>
+								<li>Michelle Silva Wangham (Univali)</li>
+								<li>Noemi Rodriguez (PUC-RJ)</li>
+								<li>Ricardo Custódio (UFSC)</li>
+								<li>Roberto Samarone (UFPA)</li>
+								<li>Vinod Rebello (UFF)</li>
+							</ul>
+						</div>
+						<h2 id="WTE" class="accordion">WTE - I Workshop on Electoral Technology</h2>
+						<div class="conteudo-accordion">
+							<h3>The Workshop in Election Technology (WTE) will be held on November 3, 2014, in Belo Horizonte in conjunction with SESeg 2014.</h3>
+
+							<h2>Call for Papers</h2>
+							<p>Brazil has been increasingly adopting automation of its elections since the deployment of voting machines in 1996, reaching the current scenario where integration with biometric identification is planned for all voting equipment. However, participation of academia in this initiative, in particular of the information security segment, has been not expressive.</p>
+							<p>The <span class="destacaTexto">Workshop on Electoral Technology</span> is a scientific venue organized as a satellite event of the XIV Brazilian Symposium on Security of Information and Computer Systems (SBSeg 2014). The main objective of the event is to promote research in electoral technology and to establish collaboration with the international research community, integrating experts in academia and industry with interest on the security of electronic voting. In this context, papers are solicited for submission in any work aligned with the main goal, with emphasis on the following items:</p>
+							<ul class="lista">
+								<li>Auditing of electronic voting systems</li>
+								<li>Cryptographic protocols and primitives for electronic voting</li>
+								<li>Design of new voting systems</li>
+								<li>Experiences with systems in production or development</li>
+								<li>Formal or informal security or requirements analysis</li>
+								<li>Legal aspects and standardization in electronic voting</li>
+								<li>Mechanisms for protecting ballot secrecy and integrity</li>
+								<li>Mechanisms for verifying election results</li>
+								<li>Security analysis and attacks on existing systems</li>
+								<li>Security of paper and remote voting</li>
+								<li>Usability and accessibility issues</li>
+								<li>Voter registration and authentication</li>
+							</ul>
+							<h2>Important Dates</h2>
+							<ul class="datasImportantes">
+								<li>Registration and Submission: <span class="data">September 8, 2014 </span></li>
+								<li>Notification of Decision: <span class="data">September 19, 2014 </span></li>
+								<li>Final Version: <span class="data">September 29, 2014</span></li>
+							</ul>
+							<h2>Instructions to the Authors</h2>
+							<p>Submitted papers should present original research results, event if preliminary. Each submission should provide proper context in the introduction, rigorous treatment of the research subject or case study, and conclusions consistent with the results.</p>
+							<p>Submission will be exclusively electronic, through the JEMS system (<a href="https://submissoes.sbc.org.br/">submissoes.sbc.org.br</a>). Submissions must be anonymous, with no author names, affiliations, acknowledgments, or obvious references.</p>
+							<p>Papers can be written in Portuguese or English and must submitted in PDF format. Formatting should follow the Brazilian Computer Society template and fit between 5 and 12 pages, including pictures, tables, references and appendices. Longer papers are expected to have more definite results. For more information on the formatting guidelines please visit <a href="http://www.sbc.org.br">www.sbc.org.br</a> (select the English version of the website on the top banner, then on the left side menu select "Documents", then select "Templates for Articles and Book Chapters").</p>
+							<p>All submissions will be evaluated by a body of reviewers, following a standard double-blind process (no identification of authors, reviewers and their affiliations). Accepted papers must be presented by one of the authors, in order to be included in the final proceedings. The length assigned to each presentation will depend on the number of accepted papers and depth of each individual contribution.</p>
+							<h2>Program Committee</h2>
+							<ul class="lista">
+								<li>Diego de Freitas Aranha (UNICAMP)</li>
+								<li>Jeroen van de Graaf (UFMG)</li>
+								<li>Mario Gazziro (UFABC)</li>
+								<li>Roberto Samarone Araújo (UFPA)</li>
+								<li>Ruy J. Guerra B. de Queiroz (UFPE)</li>
+							</ul>
+						</div>
+						<h2 class="accordion">WTICG - VIII Workshop on Scientific Initiation and Undergraduate Papers</h2>
+						<div class="conteudo-accordion">
+							<h2>Important Dates and Deadlines</h2>
+							<ul class="datasImportantes">
+								<li>Paper Submission (registration and uploading): <span class="data">July <strike>7 to 18, 2014</strike> - <u>7 to 25, 2014</u></span></li>
+								<li>Acceptance Notification: <span class="data">August 23, 2014</span></li>
+								<li>Final Version Deadline: <span class="data">September 9, 2014</span></li>
+								<li>Workshop Date: <span class="data">November 3, 2014</span></li>
+							</ul>
+							<h2>Call for Submission</h2>
+							<p>The Workshop on Scientific Initiation and Undergraduate Papers (WTICG), a joint event with SBSeg, aims to encourage new graduates and undergraduates to participate in the production and dissemination of scientific papers on topics related to information and computational systems security. WTICG 2014 will be held in conjunction with SBSed 2014 (<a href="../index.html">www.sbseg2014.dcc.ufmg.br/</a>) November 3 to 6, 2014 in Belo Horizonte, MG. </p>
+							<p>Undergraduate students currently enrolled in university and recent graduates who completed their undergraduate course work in 2013 are invited to participate in WTICG 2014. Participants are required to provide documentation to the event coordinator indicating their enrollment status at a university or indicating their recent and successful completion of studies.</p>
+							<p>Authors are invited to submit papers for Scientific Initiation (IC), completion of course work (TCC), software implementations , and independent projects completed in the years 2013 and 2014 or that are in the final stages of completion. The following criteria will be used in the evaluation of submitted work: originality, relevance, technical quality, and presentation. Submissions selected by the Program Committee will be published (in digital form), provided that at least one of the papers’ authors is registered for the workshop.  All papers selected for publication must be presented during the workshop’s technical session by one of the authors.</p>
+							<h2>Article Submission and Formatting</h2>
+							<p>Submitted papers should be formatted based on SBC’s formatting guidelines. For more information on SBC’s guidelines please visit <a href="http://www.sbc.org.br">www.sbc.org.br</a> (select the English version of the website on the top banner, then on the left side menu select “Documents”, then select “Templates for Articles and Book Chapters”).</p>
+							<p>Papers must be submitted through SBC’s JEMS portal at (<a href="https://submissoes.sbc.org.br">submissoes.sbc.org.br</a>). Papers must be submitted in PDF format and may be written in Portuguese or English with a maximum length of 10 pages.</p>
+							<h2>Topics of Interest</h2>
+							<p>The list of topics of interest includes (but is not excluded to):</p>
+							<ul class="lista">
+								<li>Algorithms, protocols and cryptographic techniques</li>
+								<li>System anonymity, auditing and analysis</li>
+								<li>Access control, authentication, identity management, biometrics</li>
+								<li>Computational Forensics</li>
+								<li>Detecting and preventing intrusions, attacks and vulnerabilities</li>
+								<li>Digital Law</li>
+								<li>Cryptographic hardware, RFID, smart cards and biometric systems</li>
+								<li>Trust Models</li>
+								<li>Security standardization and normalization</li>
+								<li>Privacy </li>
+								<li>Intellectual property protection and DRM </li>
+								<li>Response to security incidents</li>
+								<li>Adaptive security, security policies</li>
+								<li>Security in applications (digital TV, e-banking, etc.)</li>
+								<li>Security in ubiquitous / pervasive computing</li>
+								<li>Security on mobile devices and embedded systems</li>
+								<li>Security in grid and cloud computing</li>
+								<li>Security middleware (Java RMI, J2EE, CORBASec,. Net, etc.)</li>
+								<li>Security in networks, overlay networks, virtual networks and wireless networks</li>
+								<li>Security in smart grids, smart meters and smart houses</li>
+								<li>Security in web services, distributed systems and operating systems</li>
+								<li>Database security and privacy</li>
+								<li>Social network privacy and security</li>
+								<li>Secure systems and software: developing, testing and certification</li>
+								<li>Fault/intrusion tolerance</li>
+								<li>Electronic Voting</li>
+							</ul>
+							<h2>Program Committee</h2>
+							<ul class="lista">
+								<li>Aldri dos Santos (UFPR)</li>
+								<li>Altair Santin (PUCPR)</li>
+								<li>Anderson Nascimento (UnB)</li>
+								<li>André Santos (UECE)</li>
+								<li>Bruno Barros (LARC/USP)</li>
+								<li>Bruno Rodrigues Silva (UFMG)</li>
+								<li>Carla Merkle Westphall (UFSC)</li>
+								<li>Carlos Maziero (UTFPR)</li>
+								<li>Cristian Cleder Machado (URI)</li>
+								<li>Edna Canedo (UnB)</li>
+								<li>Eduardo Feitosa (UFAM)</li>
+								<li>Eduardo Souto (UFAM)</li>
+								<li>Eduardo Viegas (PUCPR)</li>
+								<li>Ewerton Andrade (USP)</li>
+								<li>Gilbert Martins (UFAM)</li>
+								<li>Gustavo Vieira (UFMG)</li>
+								<li>Jim Lau (UFSC)</li>
+								<li>Joéo Eugenio Marynowski (UFPR)</li>
+								<li>Jose Antonio Xexeo (IME)</li>
+								<li>Lau Cheuk Lung (UFSC)</li>
+								<li>Leandro Magnabosco (UFSC)</li>
+								<li>Luis Knob (UFRGS)</li>
+								<li>Marcos Silva (USP)</li>
+								<li>Marinho Barcellos (UFRGS)</li>
+								<li>Marlon Domenech (Univali)</li>
+								<li>Mateus Rutzig (UFSM)</li>
+								<li>Márcio Carvalho (UFRGS)</li>
+								<li>Paulo Barreto (USP)</li>
+								<li>Paulo de Geus (Unicamp)</li>
+								<li>Paulo Mafra (UFSC)</li>
+								<li>Paulo André da Silva Goncalves (UFPE)</li>
+								<li>Pedro Heleno Isolani (UFRGS)</li>
+								<li>Rafael Obelheiro (UDESC)</li>
+								<li>Raul Ceretta Nunes (UFSM)</li>
+								<li>Ricardo Custódio (UFSC)</li>
+								<li>Ricardo Dahab (Unicamp)</li>
+								<li>Rick Lopes de Souza  (UFSC)</li>
+								<li>Rossana Andrade (UFC)</li>
+								<li>Routo Terada (USP)</li>
+								<li>Vilmar Abreu (PUCPR)</li>
+								<li>Vitor Paisante (UFMG)</li>
+								<li>William de Souza (Royal Holloway)</li>
+							</ul>
+							<h2>Prizes</h2>
+							<p>The top three entries will receive awards.</p>
+							<h2>WTICG 2014 Coordination</h2>
+							<ul class="lista">
+								<li>Eduardo Souto (UFAM) - <a href="mailto:esouto@icomp.ufam.edu.br">esouto@icomp.ufam.edu.br</a></li>
+							</ul>
+						</div>
+					</article>
+				</section>
+			</div>
+			<footer class="container clr">
+				<div class="promocao">
+					<h3>PROMOTER:</h3>
+					<div class="logo sbc"><a href="http://www.sbc.org.br"><img src="imagens/logo_sbc.png" alt="SBC - Sociedade Brasileira de Computação"></a></div>
+				</div>
+				<div class="organizacao">
+					<h3>ORGANIZER:</h3>
+					<div class="logo ufmg"><a href="http://www.dcc.ufmg.br"><img src="imagens/logo_ufmg.png" alt="UFMG"></a></div>
+				</div>
+				<div class="patrocinio">
+					<h3>SPONSORS:</h3>
+					<ul class="logos">
+					<li class="logo google"><a href="http://www.google.com.br"><img src="imagens/logo_google.png" alt="Google"></a></li>
+					<!--<li class="logo"><a href="http://www.cnpq.br"><img src="imagens/logo-CNPq.png" alt="CNPq"></a></li>
+					<li class="logo"><a href="http://capes.gov.br"><img src="imagens/logo-capes.png" alt="CAPES"></a></li>-->
+					<li class="logo eteg"><a href="http://www.eteg.com.br"><img src="imagens/logo_eteg.png" alt="ETEG"></a></li>
+					<li class="logo intel"><a href="http://www.intel.com.br"><img src="imagens/logo_intel.png" alt="Intel"></a></li>
+				</ul>
+				<ul class="logos">
+					<li class="logo"><a href="http://www.nic.br"><img src="imagens/logo-nic.png" alt="NIC.BR"></a></li>
+					<li class="logo"><a href="http://www.cgi.br"><img src="imagens/logo-cgi.png" alt="CGI.BR"></a></li>
+					<li></li>
+				</ul>
+			</div>
+				<p class="iniciativa clr">An initiative of the Brazilian Society of Computer Science (SBC) - <a href="http://www.sbc.org.br">http://www.sbc.org.br</a></p>
+			</footer>
+		</div>
+	</body>
+	</html>

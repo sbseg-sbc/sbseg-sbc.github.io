@@ -1,0 +1,593 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SBSEG 2014 - Chamadas</title>
+	<!-- Fontes -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600|Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+	<!-- Css -->
+	<link rel="stylesheet" href="css/base.css">
+	<!-- Script -->
+	<script src="js/head.js"></script>
+	<script>
+		head.js(
+			'../js/jquery.js',
+			'../js/jquery-migrate.js',
+			'../js/Modernizr.js',
+			'../js/easing.js',
+			'../js/base.js'
+			)
+		head.ready('base.js', function(){
+			$('.accordion').click(function(event) {
+				$(this).toggleClass('accordion-active');
+				$(this).next('.conteudo-accordion').slideToggle('normal');
+			}).next('.conteudo-accordion').hide();
+			if (window.location.hash) {
+				titulo = window.location.hash;
+				$(titulo).toggleClass('accordion-active');
+				rolaPara = $(titulo).offset().top-55;
+				$(window.location.hash).next().slideDown('normal', function(){
+					$('html, body').stop().animate({
+						scrollTop: rolaPara
+					}, 1000, 'easeOutExpo');
+				});
+			}
+		})
+	</script>
+</head>
+<body id="chamadas">
+	<div id="base">
+		<header id="topo" class="container clr">
+			<div class="sbseg14"></div>
+			<div class="sbsegTitulo"></div>
+			<a href="eng/call-for-papers.html" class="mudaIdioma"></a>
+		</header>
+		<nav id="menuPrincipal">
+			<ul class="container">
+				<li class="menuItem"><a href="index.html" class="menuLink">INÍCIO</a></li>
+				<li class="menuItem"><a href="evento.html" class="menuLink">EVENTO</a></li>
+				<li class="menuItem"><a href="comites.html" class="menuLink">COMITÊS</a></li>
+				<li class="menuItem current"><a href="chamadas.html" class="menuLink link-current">CHAMADAS</a></li>
+				<li class="menuItem"><a href="inscricoes.html" class="menuLink">INSCRIÇÕES</a></li>
+				<li class="menuItem"><a href="programacao.html" class="menuLink">PROGRAMAÇÃO</a></li>
+				<li class="menuItem menuLocal"><a href="chamadas.html#" class="menuLink">LOCAL</a>
+					<ul class="subMenu">
+						<li><a href="visao-geral.html" class="menuLink">VISÃO GERAL</a></li>
+						<li><a href="sobre-a-ufmg.html" class="menuLink">SOBRE A UFMG</a></li>
+						<li><a href="http://www.dcc.ufmg.br" class="menuLink">SOBRE O DCC</a></li>
+						<li><a href="conheca-bh.html" class="menuLink">CONHEÇA BH</a></li>
+						<li><a href="regiao.html" class="menuLink">REGIÃO</a></li>
+						<li><a href="como-chegar.html" class="menuLink">COMO CHEGAR</a></li>
+						<li><a href="onde-ficar/index.html" class="menuLink">ONDE FICAR</a></li>
+					</ul>
+				</li>
+				<li class="menuItem"><a href="contato.html" class="menuLink menuContato">CONTATO</a></li>
+			</ul>
+		</nav>
+		<div id="conteudo" class="container clr">
+			<section class="conteudoFull">
+				<article>
+					<header>
+						<h1>Chamadas</h1>
+					</header>
+					<h2 id="artigos-completos" class="accordion">Artigos Completos - Sessões Técnicas</h2>
+					<div class="conteudo-accordion">
+						<h2>Tópicos de Interesse</h2>
+						<p>O tema central do evento é a segurança da informação e de sistemas computacionais. Nesse contexto, destacamos os seguintes tópicos, não exaustivos:</p>
+						<ul class="lista">
+							<li>Algoritmos, protocolos e técnicas criptográficas</li>
+							<li>Auditoria e análise de sistemas</li>
+							<li>Controle de acesso, autenticação, gerência de identidade</li>
+							<li>Criminalística e forense computacional</li>
+							<li>Detecção e prevenção de intrusões, ataques e vulnerabilidades</li>
+							<li>Direito digital</li>
+							<li>Hardware seguro: RFIDs, cartões inteligentes, sensores</li>
+							<li>Modelos de confiança</li>
+							<li>Padronização e normatização em segurança</li>
+							<li>Privacidade e anonimato computacional</li>
+							<li>Proteção de propriedade intelectual e DRM</li>
+							<li>Resposta a incidentes de segurança</li>
+							<li>Segurança adaptativa, políticas de segurança</li>
+							<li>Segurança e privacidade em banco de dados</li>
+							<li>Segurança e privacidade em redes sociais</li>
+							<li>Segurança em aplicações (TV digital, e-banking, etc.)</li>
+							<li>Segurança em computação ubíqua/pervasiva</li>
+							<li>Segurança em dispositivos móveis e sistemas embarcados</li>
+							<li>Segurança em middleware (Java RMI, J2EE, CorbaSec, .Net, etc.)</li>
+							<li>Segurança em redes, rede de sobreposição, redes virtuais e redes sem fio</li>
+							<li>Segurança em serviços web, sistemas distribuídos ou sistemas operacionais</li>
+							<li>Segurança em smart grids, smart meters e smart houses</li>
+							<li>Segurança para computação em nuvem ou grades computacionais</li>
+							<li>Software seguro: desenvolvimento, testes e certificação</li>
+							<li>Técnicas e sistemas para identificação biométrica</li>
+							<li>Tolerância a falhas/intrusões</li>
+							<li>Votação eletrônica</li>
+						</ul>
+						<h2>Datas Importantes</h2>
+						<ul class="datasImportantes">
+							<li>Registro e submissão de artigos: <span class="data"><strike>24 de junho</strike> - <u>04 de julho</u></span></li>
+							<li>Notificação de aceite: <span class="data">23 de Agosto</span></li>
+							<li>Versão Final: <span class="data">09 de Setembro</span></li>
+						</ul>
+						<h2>Instruções aos Autores</h2>
+						<p>Esta chamada se refere apenas aos artigos completos, que devem apresentar um trabalho de pesquisa desenvolvido ao ponto de produzir resultados originais e relevantes, devidamente validados e analisados. Ademais, a apresentação do artigo deve conter uma descrição criteriosa e fundamentada do trabalho de pesquisa, bem como conclusões consistentes com base nos resultados obtidos.</p>
+						<p>Os trabalhos submetidos devem descrever atividades de pesquisa, relatos de experiências relevantes e estudos de casos. A submissão de artigos será exclusivamente eletrônica, por meio do sistema JEMS da SBC (<a href="https://submissoes.sbc.org.br/">https://submissoes.sbc.org.br/</a>). Todos artigos devem ser submetidos de forma anônima, ou seja, devem evitar qualquer informação no cabeçalho do artigo, no texto e nas referências que vinculem o artigo à identidade dos autores e suas instituições.</p>
+						<p>Os artigos podem ser escritos em português ou inglês e submetidos exclusivamente em formato PDF. A formatação do texto deve seguir o padrão da SBC para escrita de artigos, disponível em <a href="http://www.sbc.org.br">www.sbc.org.br</a> (no menu CONTEÚDO, clique em "Documentos" e então clique em "Publicações"). Os artigos completos têm um limite de 14 páginas, incluindo figuras, tabelas, referências e apêndices.</p>
+						<p>Todos os artigos serão avaliados por um corpo de revisores, seguindo um processo de revisão duplamente cega (sem identificação dos autores, revisores e suas instituições). Os artigos aceitos deverão ser apresentados no evento por um dos autores, para que possam ser publicados nos anais do 14º SBSeg. Uma comissão de avaliação escolherá os melhores dentre os artigos completos aceitos e apresentados no evento.</p>
+						<h2>Coordenação</h2>
+						<ul class="lista">
+							<li>Diego F. Aranha (UNICAMP) - <a href="mailto:dfaranha@ic.unicamp.br">dfaranha@ic.unicamp.br</a></li>
+							<li>Marinho P Barcellos (UFRGS) - <a href="mailto:marinho@inf.ufrgs.br">marinho@inf.ufrgs.br</a></li>
+						</ul>
+					</div>
+					<h2 id="resumos-estendidos" class="accordion">Resumos Estendidos - Sessões Técnicas</h2>
+					<div class="conteudo-accordion">
+						<h2>Datas Importantes</h2>
+						<ul class="datasImportantes">
+							<li>Registro e submissão de artigos: <span class="data">08 de Setembro</span></li>
+							<li>Notificação de aceite: <span class="data">19 de Setembro</span></li>
+						</ul>
+						<h2>Apresentação</h2>
+						<p>O Simpósio Brasileiro em Segurança da Informação e de Sistemas Computacionais (SBSeg) é um evento científico promovido anualmente pela Sociedade Brasileira de Computação (SBC). Ele representa o principal fórum no paí­s para divulgação de resultados de pesquisas, debates, intercâmbio de ideias e atividades relevantes ligadas à segurança da informação e de sistemas, integrando a comunidade brasileira de pesquisadores e profissionais atuantes nessa área. A 14a edição do simpósio será realizada de 03 a 06 de Novembro de 2014 em Belo Horizonte, Minas Gerais.</p>
+						<p>O tema central do evento é a segurança da informação e de sistemas computacionais. Nesse contexto, destacamos os seguintes tópicos, não exaustivos:</p>
+						<ul class="lista">
+							<li>Algoritmos, protocolos e técnicas criptográficas</li>
+							<li>Auditoria e análise de sistemas</li>
+							<li>Controle de acesso, autenticação, gerência de identidade</li>
+							<li>Criminalí­stica e forense computacional</li>
+							<li>Detecção e prevenção de intrusões, ataques e vulnerabilidades</li>
+							<li>Direito digital</li>
+							<li>Hardware seguro: RFIDs, cartões inteligentes, sensores</li>
+							<li>Modelos de confiança</li>
+							<li>Padronização e normatização em segurança</li>
+							<li>Privacidade e anonimato computacional</li>
+							<li>Proteção de propriedade intelectual e DRM</li>
+							<li>Resposta a incidentes de segurança</li>
+							<li>Segurança adaptativa, polí­ticas de segurança</li>
+							<li>Segurança e privacidade em banco de dados</li>
+							<li>Segurança e privacidade em redes sociais</li>
+							<li>Segurança em aplicações (TV digital, e-banking, etc.)</li>
+							<li>Segurança em computação ubí­qua/pervasiva </li>
+							<li>Segurança em dispositivos móveis e sistemas embarcados</li>
+							<li>Segurança em middleware (Java RMI, J2EE, CorbaSec, .Net, etc.)</li>
+							<li>Segurança em redes, rede de sobreposição, redes virtuais e redes sem fio</li>
+							<li>Segurança em serviços web, sistemas distribuÃ­dos ou sistemas operacionais</li>
+							<li>Segurança em smart grids, smart meters e smart houses</li>
+							<li>Segurança para computação em nuvem ou grades computacionais</li>
+							<li>Software seguro: desenvolvimento, testes e certificação</li>
+							<li>Técnicas e sistemas para identificação biométrica</li>
+							<li>Tolerância a falhas/intrusões</li>
+							<li>Votação eletrônica</li>
+						</ul>
+						<h2>Instruções aos Autores</h2>
+						<p>Esta chamada se refere apenas aos resumos estendidos, que devem apresentar um trabalho de pesquisa desenvolvido ao ponto de produzir resultados preliminares e indicar trabalhos futuros consistentes com os resultados obtidos. O objetivo dessa categoria é fornecer uma oportunidade para apresentação e discussão de idéias, mesmo que ainda não completamente desenvolvidas ou validadas.</p>
+						<p>Os trabalhos submetidos devem descrever atividades de pesquisa, relatos de experiências relevantes e estudos de casos. A submissão de artigos será exclusivamente eletrônica, por meio do sistema JEMS da SBC (<a href="https://submissoes.sbc.org.br/">https://submissoes.sbc.org.br/</a>). Todos resumos devem ser submetidos de forma anônima, ou seja, devem evitar qualquer informação no cabeçalho do artigo, no texto e nas referências que vinculem o artigo à identidade dos autores e suas instituições.</p>
+						<p>Os resumos podem ser escritos em português ou inglês e submetidos exclusivamente em formato PDF. A formatação do texto deve seguir o padrão da SBC para escrita de artigos, disponí­vel em <a href="http://www.sbc.org.br">www.sbc.org.br</a> (no menu CONTEÚDO, clique em "Documentos" e então clique em "Publicações"). Os resumos estendidos têm um limite de 4 páginas, incluindo figuras, tabelas, referências e apêndices.</p>
+						<p>Todos os resumos serão avaliados por um corpo de revisores, seguindo um processo de revisão duplamente cega (sem identificação dos autores, revisores e suas instituições). Os resumos aceitos deverão ser apresentados no evento por um dos autores, para que possam ser publicados nos anais do 14o SBSeg.</p>
+						<h2>Coordenação</h2>
+						<ul class="lista">
+							<li>Diego F. Aranha (UNICAMP)</li>
+							<li>Marinho P Barcellos (UFRGS)</li>
+						</ul>
+					</div>
+					<h2 id="CTDSeg" class="accordion">CTDSeg - III Concurso de Teses e Dissertações em Segurança</h2>
+					<div class="conteudo-accordion">
+						<h2>Datas Importantes</h2>
+						<ul class="datasImportantes">
+							<li>Prazo para submissão de trabalhos: <span class="data"><strike>14 de julho de 2014</strike> - <u>23 de julho de 2014</u></span></li>
+							<li>Notificação dos trabalhos aceitos: <span class="data">27 de agosto de 2014</span></li>
+							<li>Versão Final: <span class="data">a definir</span></li>
+							<li>Data do evento: <span class="data">03 de novembro de 2014</span></li>
+						</ul>
+						<h2>Convite para Submissão</h2>
+						<p>O Concurso de Teses e Dissertações em Segurança da Informação e Sistemas Computacionais (CTDSeg), evento integrante do SBSeg, visa selecionar e premiar as melhores teses de doutorado e as melhores dissertações de mestrado na área. Os pesquisadores estão convidados a submeter um artigo descrevendo e resumindo os resultados obtidos em suas teses e dissertações concluídas no período de agosto de 2012 a junho de 2014. O evento premiará as três melhores teses e as três melhores dissertações.</p>
+						<h2>Submissão e Formato dos Artigos</h2>
+						<p>Os artigos submetidos devem ser escritos em português ou inglês na forma de resumo e deverão respeitar o limite máximo de 8 páginas. A formatação do texto deve seguir o padrão da SBC, disponível em <a href="http://www.sbc.org.br/template">http://www.sbc.org.br/template</a>. Os artigos devem ser submetidos através da URL https://submissoes.sbc.org.br e deverão estar, exclusivamente, em formato PDF.</p>
+						<p>O autor deve deixar claro qual a contribuição do trabalho para área e a originalidade do tema. O texto deve constar, obrigatoriamente, do título da tese ou dissertação, nome do autor, orientador e co-orientador (es) com as respectivas afiliações, resumo/abstract, as motivações, objetivos, resultados obtidos, produção científica associada e o endereço web no qual está disponível a tese/dissertação.</p>
+						<p>Cada trabalho submetido deverá conter dois arquivos (em formato PDF): artigo e declaração digitalizada da conclusão. Na declaração deverá constar explicitamente que o candidato defendeu e teve o trabalho aprovado. A declaração deverá conter também o local, a data da defesa, o nome do orientador, e banca.</p>
+						<h2>Tópicos de Interesse</h2>
+						<p>Os temas das teses e dissertações devem estar relacionados a qualquer tópico da área da Segurança da Informação e Sistemas Computacionais.</p>
+						<h2>Avaliação</h2>
+						<p>Os artigos de teses e dissertações submetidos passarão por uma etapa inicial de avaliação, onde cada artigo será avaliado por pelo menos três pesquisadores especializados - membros do comitê de programa. Os artigos selecionados trabalhos serão publicados nos anais do Congresso, e seu principal autor deverá apresentá-lo no CTDSeg. Por fim, para a seleção da melhor tese e da melhor dissertação, o comitê de avaliação irá analisar o trabalho completo e também avaliar a qualidade da apresentação oral no SBSEG.</p>
+						<h2>Coordenação do CTDSeg 2014</h2>
+						<ul class="lista">
+							<li>Aldri Santos (UFPR) - <a href="mailto:aldri@inf.ufpr.br">aldri@inf.ufpr.br</a></li>
+							<li>Anderson Nascimento (UnB) - <a href="mailto:andclay@ene.unb.br">andclay@ene.unb.br</a></li>
+						</ul>
+					</div>
+					<h2 id="minicursos" class="accordion">Minicursos - Propostas</h2>
+					<div class="conteudo-accordion">
+						<h2>Datas Importantes</h2>
+						<ul class="datasImportantes">
+							<li>Submissão das propostas: <span class="data"><strike>11 de Julho</strike> - <u>18 de julho</u></span></li>
+							<li>Comunicação dos resultados: <span class="data"><strike>10 de agosto</strike> - <u>14 de agosto</u>  </span></li>
+							<li>Entrega dos textos completos e copyright: <span class="data">15 de setembro</span></li>
+						</ul>
+						<h2>Sobre os Minicursos</h2>
+						<p>Os Minicursos do SBSeg têm por objetivo abordar temas relevantes geralmente não ministrados nas grades curriculares dos cursos de graduação além de despertar o interesse pela área de segurança entre acadêmicos e profissionais. Priorizam-se temas atuais e com maior potencial para atrair o interesse de jovens estudantes e profissionais, de forma a melhor qualificá-los para suas pesquisas e/ou mercado de trabalho. Cada minicurso deve ser estruturado para um total de três horas e meia, podendo incluir prática de laboratório.</p>
+						<h2>Temas de Interesse</h2>
+						<p>O tema central dos minicursos é a segurança (security) da informação e de sistemas computacionais. Nesse contexto, destacamos os seguintes tópicos:</p>
+						<ul class="lista">
+							<li>Algoritmos, protocolos e técnicas criptográficas</li>
+							<li>Anonimato, auditoria e análise em sistemas</li>
+							<li>Controle de acesso, autenticação, gerência de identidade, biometria</li>
+							<li>Criminalística computacional</li>
+							<li>Detecção e prevenção de intrusões, ataques e vulnerabilidades</li>
+							<li>Direito digital</li>
+							<li>Forense computacional</li>
+							<li>Hardware criptográfico, RFID, cartões inteligentes e sistemas biométricos</li>
+							<li>Modelos de confiança</li>
+							<li>Padronização e normalização em segurança</li>
+							<li>Privacidade</li>
+							<li>Proteção de propriedade intelectual e DRM</li>
+							<li>Resposta a incidentes de segurança</li>
+							<li>Segurança adaptativa, políticas de segurança</li>
+							<li>Segurança em aplicações (TV digital, e-banking, etc.)</li>
+							<li>Segurança em computação ubíqua/pervasiva</li>
+							<li>Segurança em dispositivos móveis e sistemas embarcados</li>
+							<li>Segurança em grades computacionais ou em nuvem</li>
+							<li>Segurança em middleware (Java RMI, J2EE, CorbaSec, .Net, etc.)</li>
+							<li>Segurança em redes, rede de sobreposição, redes virtuais e redes sem fio</li>
+							<li>Segurança em smart grids, smart meters e smart houses</li>
+							<li>Segurança em serviços web, sistemas distribuídos ou sistemas operacionais</li>
+							<li>Segurança e privacidade em banco de dados</li>
+							<li>Segurança e privacidade em redes sociais</li>
+							<li>Sistemas e softwares seguros: desenvolvimento, testes e certificação</li>
+							<li>Tolerância a falhas/intrusões</li>
+							<li>Votação eletrônica</li>
+						</ul>
+						<p><b>A lista de tópicos acima certamente não é exaustiva. Outros tópicos podem ser abordados desde que em consonância com o tema central do evento.</b></p>
+						<h2>Submissão de Propostas de Minicursos</h2>
+						<p>Professores/pesquisadores interessados em ministrar um minicurso devem submeter uma proposta, escrita em Português, contendo entre 3 e 5 páginas (excluindo-se os CVs, item 6 abaixo), com as seguintes informações:</p>
+						<ul class="listaNumero">
+							<li>Dados de identificação - Título do minicurso, Autores,Instituição(ções) e Indicação do autor que apresentará o curso;</li>
+							<li>Dados gerais - Objetivos do curso, tratamento dado ao tema (por exemplo: teórico ou prático; apanhado geral de resultados ou aprofundamento de aspectos específicos; apresentação ou comparação de tecnologias; formação de novas habilidades ou informação etc.) e perfil desejado da audiência;</li>
+							<li>Estrutura prevista do texto (tópicos/capítulos a serem desenvolvidos);</li>
+							<li>Para cada capítulo/tópico previsto no item 3, escrever um resumo de seu conteúdo e uma previsão do respectivo número de páginas;</li>
+							<li>Bibliografia principal utilizada na preparação do curso;</li>
+							<li>Curriculum Vitae resumido dos autores (uma página por autor, no máximo).</li>
+						</ul>
+						<p><b>Observe que todas as informações acima devem estar contidas em apenas um documento (um arquivo no formato PDF).</b></p>
+						<p>A submissão de propostas será exclusivamente eletrônica, em formato PDF, através do sistema JEMS da SBC (<a href="https://submissoes.sbc.org.br">https://submissoes.sbc.org.br</a>).</p>
+						<h2>Processo de Avaliação</h2>
+						<p>Cada proposta submetida ao SBSeg 2014 será avaliada por três ou mais membros da comissão de avaliação. Serão considerados na avaliação os seguintes critérios: relevância e atualidade do tema para o evento, qualidade técnica da proposta e experiência dos proponentes no tema proposto. As melhores propostas em temas distintos serão aceitas para apresentação e publicação.</p>
+						<p>A fim de assegurar a diversidade dos minicursos oferecidos, as propostas selecionadas tratarão de temas distintos. Assim, caso duas ou mais propostas submetidas versem sobre o mesmo tema (ou sobre temas muito sobrepostos), apenas a melhor delas poderá ser selecionada, a critério da comissão de avaliação.</p>
+						<h2>Livro-Texto</h2>
+						<p>Os autores das propostas selecionadas deverão produzir um texto (capítulo de livro) em Português contendo entre 40 e 50 páginas cada. Os textos serão publicados, na forma de capítulos, no livro "Minicursos SBSeg 2014", a ser distribuído entre os participantes do evento. O formato do capítulo de livro está disponível na seção Documentos/Publicações do portal da SBC (<a href="http://www.sbc.org.br">http://www.sbc.org.br</a>). </p>
+						<h2>Coordenação</h2>
+						<ul class="lista">
+							<li>André dos Santos (UECE) - <a href="mailto:andre@dossantos.org">andre@dossantos.org</a></li>
+						</ul>
+					</div>
+					<h2 id="WFC" class="accordion">WFC - III Workshop de Forense Computacional</h2>
+					<div class="conteudo-accordion">
+						<h2>Datas Importantes</h2>
+						<ul class="datasImportantes">
+							<li>Submissão: <span class="data"><strike>04 de setembro de 2014</strike> - <u>11 de setembro de 2014</u></span></li>
+							<li>Notificação de Aceite: <span class="data">1 de outubro de 2014</span></li>
+							<li>Versão Final: <span class="data">a definir</span></li>
+							<li>Data do workshop: <span class="data">06 de novembro de 2014</span></li>
+						</ul>
+						<h2>Convite para Submissão</h2>
+						<p>O Simpósio Brasileiro em Segurança da Informação e de Sistemas Computacionais (SBSeg) abriu as portas para a área interdisciplinar de Forense Computacional e o Workshop de Forense Computacional (WFC) já está em sua terceira edição!</p>
+						<p>Os eventos de 2012 (Curitiba-PR) e 2013 (Manaus-AM) foram realizados com sucesso, visto o nível dos palestrantes, sessões técnicas e artigos selecionados.</p>
+						<p>Agora, o III WFC, em Belo Horizonte, contribuirá para formação e motivação da comunidade, visto existirem deficiências na quantidade de peritos, como mostrado na reportagem, veiculada em 08/julho/2013 pelo em.br1, abordando que a “Falta de peritos vem atrasando o andamento de ações com assistência jurídica gratuita”, sendo que o “TJMG admite que há grande número de processos parados”.</p>
+						<p>O III WFC sozinho não irá resolver todos os problemas, mas fomentará a discussão dos problemas e das possíveis soluções técnico-científicas que podem auxiliar os peritos na atividade cotidiana. Deve-se destacar que o Ministério Público de Minas Gerais2 criou a Coordenadoria Estadual de Combate aos Crimes Cibernéticos (Coeciber). Tal Coordenadoria é vinculada ao Centro de Apoio Operacional das Promotorias Criminais, de Execução Penal, do Tribunal do Júri e da Auditoria Militar (Caocrim), sendo que a Coeciber tem por finalidade articular, em conjunto com os promotores de Justiça, medidas judiciais e extrajudiciais necessárias à efetivação do combate aos crimes cibernéticos no âmbito estadual.</p>
+						<p>Além disto, outro fato importante é o reconhecimento da demanda por peritos especializados, como mostrado pelo Instituto Geral de Perícias (IGP)3, pois “... os tipos de perícia na sua grande maioria envolvem todos os tipos de crime, comuns ou sofisticados tecnologicamente”.</p>
+						<p>O evento representa a troca de conhecimentos nas áreas de Ciência da Computação e Direito, trazendo as técnicas, os métodos e a segurança necessária em todos os tipos de trabalhos, operações, perícias, investigações e atividades relacionadas com a Forense Computacional. Sem esquecer, dos aspectos jurídicos, legislação e implicações à sociedade brasileira decorrentes de atos ilícitos.</p>
+						<p>A área de Forense Computacional cresce em atuação e torna-se a cada dia mais importante e necessária, visto que a sociedade atual vem transferindo para o ambiente virtual (digital) a maioria das relações da sociedade convencional. Deste modo, problemas sociais do cotidiano rompem fronteiras do mundo real e adentram o mundo digital surgindo diversos e novos problemas técnicos e jurídicos. Problemas estes, relacionados com invasão de privacidade, descumprimentos de contratos celebrados pela Internet, disseminação de e-mails caluniosos ou difamatórios, pornografia infantil, cyberbulling, compartilhamento ilícito de softwares, músicas e filmes, entre outros problemas que passaram a fazer parte da realidade da sociedade brasileira e mundial.</p>
+						<p>Nesse contexto, a Comissão Organizadora convida você a participar ativamente deste evento submetendo artigos sobre os temas abaixo relacionados. Ressaltamos que temas aqui não descritos também podem ser considerados bastando um contato com a comissão organizadora para esclarecer sua adequabilidade.</p>
+						<h2>Submissão e Formato dos Artigos</h2>
+						<p>A formatação do texto deve seguir o padrão da SBC, disponível em (<a href="http://www.sbc.org.br/en/index.php?option=com_jdownloads&task=view.download&catid=32&cid=38&Itemid=195">www.sbc.org.br/en/index.php?option=com_jdownloads&task=view.download&catid=32&cid=38&Itemid=195</a>).</p>
+						<p>A submissão deve ser realizada no sistema JEMS (<a href="https://submissoes.sbc.org.br/">https://submissoes.sbc.org.br/</a>) utilizando o formato PDF.</p>
+						<h2>Tópicos de Interesse</h2>
+						<ul class="lista">
+							<li>Análise Forense de Documentos Digitais;</li>
+							<li>Aspectos Forenses de Redes de Computadores e Segurança;</li>
+							<li>Aspectos Jurídicos da Forense Computacional;</li>
+							<li>Biometria e Ataques a Sistemas Biométricos (Spoofing);</li>
+							<li>Crimes Eletrônicos;</li>
+							<li>Detecção de Pornografia e Pornografia Infantil;</li>
+							<li>Detecção de Violência;</li>
+							<li>Fundamentos Teóricos para Forense Computacional;</li>
+							<li>Gestão da Segurança da Informação;</li>
+							<li>Levantamento (coleta) de Provas Digitais;</li>
+							<li>Mascaramento de Informações (Esteganografia e Esteganálise);</li>
+							<li>Segurança e Procedimentos Investigatórios em Nuvem Computacional;</li>
+							<li>Vigilância (detecção de pedestres, rastreamento de objetos, reidentificação de pessoas, reconhecimento de faces, ações e atividades).</li>
+						</ul>
+						<h2>Comitê de Programa</h2>
+						<p>A definir.</p>
+						<h2>Coordenação do WFC 2014</h2>
+						<ul class="lista">
+							<li>Cinthia O. de A. Freitas (PUCPR) - <a href="mailto:cinthia@ppgia.pucpr.br">cinthia@ppgia.pucpr.br</a></li>
+							<li>William Schwartz (DCC/UFMG) - <a href="mailto:william@dcc.ufmg.br">william@dcc.ufmg.br</a></li>
+						</ul>
+					</div>
+					<h2 id="WGID" class="accordion">WGID - IV Workshop de Gestão de Identidades Digitais</h2>
+					<div class="conteudo-accordion">
+						<h2>Datas Importantes</h2>
+						<ul class="datasImportantes">
+							<li>Submissão (registro e upload de artigos): <span class="data"><strike>01 a 11 de agosto</strike> - <u>01 a 19 de agosto</u></span></li>
+							<li>Notificação de aceite: <span class="data"> <strike>01 de setembro</strike> - <u>05 de setembro</u> </span></li>
+							<li>Versão Final: <span class="data"> <strike>08 de setembro</strike> - <u>12 de setembro</u> </span></li>
+						</ul>
+
+						<h2>Apresentação</h2>
+
+						<p>A gestão de identidades digitais (IdM-Identity Management) consiste de um sistema integrado de políticas, processos e tecnologias que permitem às organizações o tratamento e a manipulação de identidades de seus usuários e de seus objetos (dispositivos) em procedimentos de autenticação, autorização, contabilização e auditoria.</p>
+						<p>Este é um tema de pesquisa ativo e, diante da sua complexidade e relevância, deverá continuar assim por muito tempo. Esta constatação decorre das inúmeras questões técnicas que os sistemas de gestão de identidades devem considerar, tais como: facilidade de uso, privacidade e anonimato do usuário, segurança, autenticação única, escalabilidade, controle de acesso de granularidade fina (baseado em atributos), interoperabilidade e custo dos sistemas (total cost of ownership).</p>
+						<p>O IV Workshop de Gestão de Identidades (WGID) visa ser um fórum para discussões e apresentações técnicas de trabalhos  em torno do estado da arte de tecnologias relacionadas com gestão de identidades. Além disso, busca-se também identificar os desafios de pesquisa e possibilitar a reunião de pesquisadores da área.</p>
+
+						<h2>Tópicos de Interesse</h2>
+
+						<p>Autores são convidados a submeterem trabalhos originais relacionados a gestão de identidades. Os tópicos de interesse incluem (mas não são limitados a):</p>
+
+						<ul class="lista">
+							<li>Acesso móvel federado e certificação móvel</li>
+							<li>Agregação de Atributos</li>
+							<li>Ambientes integrados para gestão de A&A</li>
+							<li>Anonimato em sistemas de IdM</li>
+							<li>Arquiteturas de Referência e Frameworks para IdM</li>
+							<li>Auditoria em sistemas de IdM</li>
+							<li>Autenticação Single Sign On</li>
+							<li>Autenticação de objetos (dispositivos ou coisas)</li>
+							<li>Autenticação e controle de acesso baseado em atributos</li>
+							<li>Autenticação e controle de acesso federado em aplicações não web e computação móvel</li>
+							<li>Certificação digital</li>
+							<li>Certificados de Atributos</li>
+							<li>Ciclo de vida de identidades digitais (provisionamento e administração)</li>
+							<li>Controle de acesso baseado em atributos (ABAC)</li>
+							<li>Desenvolvimento de aplicações usando infraestrutura de A&A provida por federações</li>
+							<li>Escalabilidade em tecnologias de gestão de identidade</li>
+							<li>Federações de Redes Acadêmicas</li>
+							<li>Ferramentas para gestão/monitoramento de federações</li>
+							<li>Gerenciamento de confiança (trust management) em sistema de IdM</li>
+							<li>Gestão de Atributos</li>
+							<li>Gestão de A&A em projetos interinstitucionais</li>
+							<li>Gestão de identidade centrada no usuário</li>
+							<li>Gestão de Identidades e Cloud Computing</li>
+							<li>Gestão de identidades e de acesso</li>
+							<li>Gestão de Identidades e Governo Eletrônico</li>
+							<li>Gestão de Identidades e Grades Computacionais</li>
+							<li>Gestão de Identidades e Internet das Coisas (Internet of Things)</li>
+							<li>Gestão de Identidades Federadas</li>
+							<li>Interoperabilidade entre sistemas de IdM</li>
+							<li>Níveis de garantia (Level of Assurance) em IdM</li>
+							<li>Novas abordagens de autenticação e controle de acesso (p.ex. baseados em contexto, reputação etc.)</li>
+							<li>Padrões para identidade digital na comunidade acadêmica</li>
+							<li>Privacidade e anonimato em sistemas de IdM</li>
+							<li>Protocolos de autenticação e autorização</li>
+							<li>Redes Sociais e Identidades Digitais</li>
+							<li>Registro de Identidade Civil (RIC) do Brasil</li>
+							<li>Técnicas de prevenção contra fraudes e roubo de identidade</li>
+							<li>Tecnologias para fortalecimento da privacidade</li>
+							<li>Usabilidade em tecnologias de Gestão de Identidade</li>
+						</ul>
+
+						<h2>Formato do Workshop</h2>
+						<p>O WGID será realizado no dia 06 de Novembro de 2014 e incluirá a apresentação de artigos aceitos para publicação, de palestra(s) convidada(s) e de um painel de discussão.</p>
+
+						<h2>Informações aos Autores</h2>
+						<p>Artigos poderão ser submetidos em duas categorias:</p>
+
+						<ul class="lista">
+							<li><b>Artigos Completos:</b> um artigo completo deve apresentar um trabalho de pesquisa que tenha sido desenvolvido ao ponto de produzir resultados originais e relevantes, devidamente validados e analisados. Estes devem respeitar um limite máximo de 10 páginas.</li>
+							<li><b>Artigos Curtos:</b> um artigo curto pode descrever um trabalho de pesquisa em andamento ou uma ferramenta computacional e/ou experimentos práticos. Estes devem conter de 4 a 6 páginas. No caso de ferramentas e/ou experimentos, o artigo deve conter as seguintes informações: descrição e motivação do problema tratado pela ferramenta; arquitetura da solução e descrição das principais funcionalidades; URL onde a ferramenta está disponível; URL da documentação da ferramenta e descrição da demonstração planejada.</li>
+						</ul>
+
+						<p>A formatação do texto deve seguir o padrão da SBC. Os trabalhos devem ser submetidos através da URL: <a href="https://submissoes.sbc.org.br">submissoes.sbc.org.br</a> e deverão estar, exclusivamente, em formato PDF. Os trabalhos devem ser escritos em português ou inglês.</p>
+
+						<p>Os trabalhos submetidos ao WGID serão avaliados por um corpo de revisores e os trabalhos selecionados serão organizados para apresentação e publicação nos anais do evento. No mínimo um dos autores de cada trabalho selecionado deverá se inscrever no Simpósio Brasileiro de Segurança da Informação e de Sistemas Computacionais (SBSEG) e comparecer ao evento para apresentar seu trabalho.</p>
+
+						<p>Todos artigos devem ser submetidos de forma anônima, ou seja, devem evitar qualquer informação no cabeçalho do artigo, no texto e nas referências que vinculem o artigo à identidade dos autores e suas instituições.</p>
+
+						<h2>Comitê de Organização</h2>
+
+						<h3 class="mrgB">Coordenadores Gerais do Sbseg</h3>
+
+						<ul class="lista">
+							<li>Jeroen van de Graaf (UFMG)</li>
+							<li>José Marcos Nogueira (UFMG)</li>
+							<li>Leonardo B. Oliveira (UFMG)</li>
+						</ul>
+
+						<h2>Coordenador do WGID</h2>
+						<ul class="lista">
+							<li>Marco Aurélio Amaral Henriques (UNICAMP) - <a href="mailto:marco@dca.fee.unicamp.br">marco@dca.fee.unicamp.br</a></li>
+						</ul>
+
+						<h2>Comitê de Programa</h2>
+						<ul class="lista">
+							<li>Adilson Eduardo Guelfi (Unoeste)</li>
+							<li>Aldri Santos (UFPR)</li>
+							<li>Altair Olivo Santin (PUC-PR)</li>
+							<li>Carlos Eduardo da Silva (UFRN)</li>
+							<li>Débora Christina Muchaluat Saade (UFF)</li>
+							<li>Emerson Ribeiro de Mello (IFSC)</li>
+							<li>Joni da Silva Fraga (UFSC)</li>
+							<li>Marco Aurélio Amaral Henriques (Unicamp)</li>
+							<li>Michele Nogueira (UFPR)</li>
+							<li>Michelle Silva Wangham (Univali)</li>
+							<li>Noemi Rodriguez (PUC-RJ)</li>
+							<li>Ricardo Custódio (UFSC)</li>
+							<li>Roberto Samarone (UFPA)</li>
+							<li>Vinod Rebello (UFF)</li>
+						</ul>
+					</div>
+					<h2 id="WTE" class="accordion">WTE - I Workshop de Tecnologia Eleitoral</h2>
+					<div class="conteudo-accordion">
+						<h2>Chamada de Artigos</h2>
+
+						<p>O Brasil vem adotando crescente informatização das suas eleições desde a  implantação das urnas eletrônicas em 1996, culminando no cenário atual onde se  vislumbra a instalação de dispositivos de identificação biométrica em todos os  equipamentos de votação. Entretanto, a participação do meio acadêmico, em  particular do segmento orientados à Segurança da Informação, tem sido pouco  expressiva nesta iniciativa.</p>
+
+						<p>O <span class="destacaTexto">I Workshop de Tecnologia Eleitoral</span> é um evento científico organizado como evento satélite do XIV Simpósio Brasileiro em Segurança da Informação e de Sistemas Computacionais (SBSeg 2014). O objetivo principal do evento consiste em fomentar a pesquisa em tecnologia eleitoral, integrando a comunidade brasileira de pesquisadores e profissionais com interesse em questões ligadas ao voto eletrônico. Nesse contexto, solicita-se a submissão de trabalhos relacionados diretamente ao objetivo central, destacada a lista não-exaustiva de temas a seguir:</p>
+						<ul class="lista">
+							<li>Auditoria de sistemas eleitorais eletrônicos</li>
+							<li>Análise de segurança e ataques em sistemas existentes</li>
+							<li>Autenticação e registro de eleitores</li>
+							<li>Aspectos legais e padrões em votação eletrônica</li>
+							<li>Levantamento formal de requisitos e propriedades de segurança</li>
+							<li>Mecanismos para verificação independente de resultados</li>
+							<li>Mecanismos para incremento de transparência eleitoral</li>
+							<li>Projeto de novos sistemas para votação eletrônica</li>
+							<li>Proteção do sigilo do voto e integridade de resultados</li>
+							<li>Protocolos criptográficos para votação eletrônica</li>
+							<li>Primitivas criptográficas com aplicação em votação eletrônica</li>
+							<li>Sistemas de votação em produção ou em desenvolvimento</li>
+							<li>Usabilidade e acessibilidade em tecnologia eleitoral</li>
+							<li>Votação segura com cédulas físicas ou via Internet</li>
+						</ul>
+						<h2>Datas Importantes</h2>
+						<ul class="datasImportantes">
+							<li>Registro e submissão de artigos: <span class="data">08 de Setembro</span></li>
+							<li>Notificação de aceite: <span class="data">19 de Setembro</span></li>
+							<li>Versão Final: <span class="data">29 de Setembro</span></li>
+						</ul>
+						<h2>Instruções aos Autores</h2>
+						<p>Os artigos submetidos devem apresentar um trabalho de pesquisa com resultados originais, ainda que de caráter preliminar. A apresentação do artigo deve conter uma descrição do contexto em que se insere o trabalho, detalhamento rigoroso da pesquisa propriamente dita ou estudo de caso relevante, e conclusões consistentes com os resultados.</p>
+						<p>A submissão de artigos será exclusivamente eletrônica, por meio do sistema JEMS da SBC (https://submissoes.sbc.org.br/). Todos os artigos devem ser submetidos de forma anônima, ou seja, devem evitar qualquer informação no cabeçalho do artigo, no texto e nas referências que vinculem o artigo à identidade dos autores e suas instituições.</p>
+						<p>Os artigos podem ser escritos em português ou inglês e submetidos exclusivamente em formato PDF. A formatação do texto deve seguir o padrão da SBC para escrita de artigos, entre 5 e 12 páginas, incluindo figuras, tabelas, referências e apêndices. Espera-se que artigos mais longos possuam resultados mais definitivos.</p>
+						<p>Todos os artigos serão avaliados por um corpo de revisores, seguindo um processo de revisão duplamente cega (sem identificação dos autores, revisores e suas instituições). Os artigos aceitos deverão ser apresentados no evento por um dos autores, para que possam ser publicados nos anais do evento. A duração das apresentações será determinada de acordo com o número de artigos aceitos e profundidade de cada contribuição individual.</p>
+						<h2>Comitê de Programa</h2>
+						<ul class="lista">
+							<li>Diego de Freitas Aranha (UNICAMP)</li>
+							<li>Jeroen van de Graaf (UFMG)</li>
+							<li>Mario Gazziro (UFABC)</li>
+							<li>Roberto Samarone Araújo (UFPA)</li>
+							<li>Ruy J. Guerra B. de Queiroz (UFPE)</li>
+						</ul>
+					</div>
+					<h2 id="WTICG" class="accordion">WTICG - VIII Workshop de Trabalhos de Iniciação Científica e de Graduação</h2>
+					<div class="conteudo-accordion">
+						<ul class="datasImportantes">
+							<li>Submissão (registro e upload): <span class="data"><strike>07 a 18 de julho de 2014</strike> - <u>07 a 25 de julho de 2014</u></span></li>
+							<li>Notificação de Aceite: <span class="data">23 de agosto de 2014</span></li>
+							<li>Versão Final: <span class="data">09 de setembro de 2014</span></li>
+							<li>Data do workshop: <span class="data">03 de novembro de 2014</span></li>
+						</ul>
+						<h2>Convite para Submissão</h2>
+						<p>O Workshop de Trabalhos de Iniciação Científica e de Graduação (WTICG), evento integrante do Simpósio Brasileiro em Segurança da Informação e de Sistemas Computacionais (SBSeg), visa incentivar a participação de recém-graduados e de alunos de graduação na produção e divulgação de trabalhos científicos sobre temas relacionados às áreas de segurança da informação e de sistemas computacionais. O WTICG 2014 será realizado em conjunto com SBSeg 2014 (<a href="index.html">http://www.sbseg2014.dcc.ufmg.br/</a>) em Belo Horizonte, MG, durante a semana de 03 a 06 de Novembro de 2014.</p>
+						<p>Podem participar do WTICG 2014 estudantes de graduação regularmente matriculados, ou ainda, recém-graduados que tenham concluído o curso em 2013. A situação de aluno de graduação ou recém-graduado deve ser comprovada com documentação apropriada, que deverá ser enviada, após a submissão, para o coordenador do evento.</p>
+						<p>Os autores estão convidados a submeter trabalhos de Iniciação Científica (IC), trabalhos de conclusão de curso (TCC), implementações de software e projetos independentes, concluídos nos anos de 2013 e 2014 ou em fase final de conclusão. Os seguintes critérios serão observados no julgamento dos trabalhos: originalidade, relevância, apresentação e qualidade técnica. Os trabalhos selecionados pelo Comitê de Programa serão publicados (em meio digital) desde que pelo menos um dos autores esteja inscrito no evento. Todos os trabalhos selecionados para publicação deverão ser apresentados em sessões técnicas do Workshop por um dos autores.</p>
+						<h2>Submissão e Formato dos Artigos</h2>
+						<p>Os trabalhos devem ser escritos em português ou inglês, respeitando um limite máximo de 10 páginas.</p>
+						<p>A formatação do texto deve seguir o padrão da SBC, disponível em (<a href="http://www.sbc.org.br/index.php?option=com_jdownloads&Itemid=195&task=finish&cid=38&catid=32">http://www.sbc.org.br/index.php?option=com_jdownloads&Itemid=195&task=finish&cid=38&catid=32</a>).</p>
+						<p>A submissão deve ser realizada no sistema JEMS (https://submissoes.sbc.org.br/) utilizando o formato PDF.</p>
+						<h2>Tópicos de Interesse</h2>
+						<p>A lista de tópicos de interesse, não exaustiva, inclui:</p>
+						<ul class="lista">
+							<li>Algoritmos, protocolos e técnicas criptográficas</li>
+							<li>Anonimato, auditoria e análise em sistemas</li>
+							<li>Controle de acesso, autenticação, gerência de identidade, biometria</li>
+							<li>Criminalística computacional</li>
+							<li>Detecção e prevenção de intrusões, ataques e vulnerabilidades</li>
+							<li>Direito digital</li>
+							<li>Forense computacional</li>
+							<li>Hardware criptográfico, RFID, cartões inteligentes e sistemas biométricos</li>
+							<li>Modelos de confiança</li>
+							<li>Padronização e normatização em segurança</li>
+							<li>Privacidade</li>
+							<li>Proteção de propriedade intelectual e DRM</li>
+							<li>Resposta a incidentes de segurança</li>
+							<li>Segurança adaptativa, políticas de segurança</li>
+							<li>Segurança em aplicações (TV digital, e-banking, etc.)</li>
+							<li>Segurança em computação ubíqua/pervasiva</li>
+							<li>Segurança em dispositivos móveis e sistemas embarcados</li>
+							<li>Segurança em grades computacionais ou em nuvem</li>
+							<li>Segurança em middleware (Java RMI, J2EE, CorbaSec, .Net, etc.)</li>
+							<li>Segurança em redes, rede de sobreposição, redes virtuais e redes  sem fio</li>
+							<li>Segurança em smart grids, smart meters e smart houses</li>
+							<li>Segurança em serviços web, sistemas distribuídos ou sistemas  operacionais</li>
+							<li>Segurança e privacidade em banco de dados</li>
+							<li>Segurança e privacidade em redes sociais</li>
+							<li>Sistemas e softwares seguros: desenvolvimento, testes e certificação</li>
+							<li>Tolerância a falhas/intrusões</li>
+							<li>Votação eletrônica</li>
+						</ul>
+						<h2>Comitê de Programa</h2>
+						<ul class="lista">
+							<li>Aldri dos Santos (UFPR)</li>
+							<li>Altair Santin (PUCPR)</li>
+							<li>Anderson Nascimento (UnB)</li>
+							<li>André Santos (UECE)</li>
+							<li>Bruno Barros (LARC/USP)</li>
+							<li>Bruno Rodrigues Silva (UFMG)</li>
+							<li>Carla Merkle Westphall (UFSC)</li>
+							<li>Carlos Maziero (UTFPR)</li>
+							<li>Cristian Cleder Machado (URI)</li>
+							<li>Edna Canedo (UnB)</li>
+							<li>Eduardo Feitosa (UFAM)</li>
+							<li>Eduardo Souto (UFAM)</li>
+							<li>Eduardo Viegas (PUCPR)</li>
+							<li>Ewerton Andrade (USP)</li>
+							<li>Gilbert Martins (UFAM)</li>
+							<li>Gustavo Vieira (UFMG)</li>
+							<li>Jim Lau (UFSC)</li>
+							<li>João Eugenio Marynowski (UFPR)</li>
+							<li>Jose Antonio Xexeo (IME)</li>
+							<li>Lau Cheuk Lung (UFSC)</li>
+							<li>Leandro Magnabosco (UFSC)</li>
+							<li>Luis Knob (UFRGS)</li>
+							<li>Marcos Silva (USP)</li>
+							<li>Marinho Barcellos (UFRGS)</li>
+							<li>Marlon Domenech (Univali)</li>
+							<li>Mateus Rutzig (UFSM)</li>
+							<li>Márcio Carvalho (UFRGS)</li>
+							<li>Paulo Barreto (USP)</li>
+							<li>Paulo de Geus (Unicamp)</li>
+							<li>Paulo Mafra (UFSC)</li>
+							<li>Paulo André da Silva Gonçalves (UFPE)</li>
+							<li>Pedro Heleno Isolani (UFRGS)</li>
+							<li>Rafael Obelheiro (UDESC)</li>
+							<li>Raul Ceretta Nunes (UFSM)</li>
+							<li>Ricardo Custódio (UFSC)</li>
+							<li>Ricardo Dahab (Unicamp)</li>
+							<li>Rick Lopes de Souza  (UFSC)</li>
+							<li>Rossana Andrade (UFC)</li>
+							<li>Routo Terada (USP)</li>
+							<li>Vilmar Abreu (PUCPR)</li>
+							<li>Vitor Paisante (UFMG)</li>
+							<li>William de Souza (Royal Holloway)</li>
+						</ul>
+						<h2>Premiação</h2>
+						<p>Os três melhores trabalhos receberão premiação.</p>
+						<h2>Coordenação do WTICG 2014</h2>
+						<ul class="lista">
+							<li>Eduardo Souto (UFAM) - <a href="mailto:esouto@icomp.ufam.edu.br">esouto@icomp.ufam.edu.br</a></li>
+						</ul>
+					</div>
+				</article>
+			</section>
+		</div>
+		<footer class="container clr">
+			<div class="promocao">
+				<h3>PROMOÇÃO:</h3>
+				<div class="logo sbc"><a href="http://www.sbc.org.br"><img src="imagens/logo_sbc.png" alt="SBC - Sociedade Brasileira de Computação"></a></div>
+			</div>
+			<div class="organizacao">
+				<h3>ORGANIZAÇÃO:</h3>
+				<div class="logo ufmg"><a href="http://www.dcc.ufmg.br"><img src="imagens/logo_ufmg.png" alt="UFMG"></a></div>
+			</div>
+			<div class="patrocinio">
+				<h3>PATROCÍNIO:</h3>
+				<ul class="logos">
+					<li class="logo google"><a href="http://www.google.com.br"><img src="imagens/logo_google.png" alt="Google"></a></li>
+					<!--<li class="logo"><a href="http://www.cnpq.br"><img src="imagens/logo-CNPq.png" alt="CNPq"></a></li>
+					<li class="logo"><a href="http://capes.gov.br"><img src="imagens/logo-capes.png" alt="CAPES"></a></li>-->
+					<li class="logo eteg"><a href="http://www.eteg.com.br"><img src="imagens/logo_eteg.png" alt="ETEG"></a></li>
+					<li class="logo intel"><a href="http://www.intel.com.br"><img src="imagens/logo_intel.png" alt="Intel"></a></li>
+				</ul>
+				<ul class="logos">
+					<li class="logo"><a href="http://www.nic.br"><img src="imagens/logo-nic.png" alt="NIC.BR"></a></li>
+					<li class="logo"><a href="http://www.cgi.br"><img src="imagens/logo-cgi.png" alt="CGI.BR"></a></li>
+					<li></li>
+				</ul>
+			</div>
+			<p class="iniciativa clr">Uma iniciativa da  Sociedade Brasileira de Computação (SBC) - <a href="http://www.sbc.org.br">http://www.sbc.org.br</a></p>
+		</footer>
+	</div>
+</body>
+</html>

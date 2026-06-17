@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>SBSeg 2012</title>
+    <link href="css/estilo.css" rel="stylesheet" type="text/css" />
+
+    <!-- Estilo do banner de cookies -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+    <!-- Script Google Analytics (bloqueado até consentimento) -->
+    <script type="text/plain" data-cookiecategory="analytics">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27800002-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); 
+        ga.type = 'text/javascript'; 
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; 
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+    <!-- Biblioteca do Cookie Consent -->
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+
+    <script>
+    window.addEventListener('load', function(){
+      var cc = window.cookieconsent.initialise({
+        "type": "opt-in",
+        "position": "bottom",
+        "palette": {
+          "popup": {
+            "background": "#ffffff",
+            "text": "#4b4b4b"
+          },
+          "button": {
+            "background": "#7a003c",
+            "text": "#ffffff",
+            "border": "#7a003c"
+          }
+        },
+        "content": {
+          "message": "Utilizamos cookies para melhorar sua experiência em nosso site e promover os nossos serviços. Ao permitir todos os cookies, você terá acesso a todas as funcionalidades do site. Ao rejeitar os cookies, aqueles que não forem estritamente necessários permanecerão desativados. Saiba mais em nosso",
+          "link": "Aviso de Privacidade",
+          "href": "https://www.pucpr.br/politica-de-privacidade/",
+          "allow": "Permitir Todos os Cookies",
+          "deny": "Recusar não essenciais",
+          "dismiss": "Gerenciar Cookies"
+        },
+        "revokable": true,
+        "revokeBtn": "<div id='reabrirCookies' class='cc-revoke cc-bottom cc-left' style='background:#7a003c;color:#fff;cursor:pointer;padding:10px 15px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.2);'>Configurações de Cookies</div>",
+        "categories": {
+          "necessary": {
+            "needed": true,
+            "wanted": true,
+            "checked": true,
+            "readonly": true,
+            "text": "Cookies essenciais que garantem o funcionamento adequado do site e não podem ser desativados."
+          },
+          "analytics": {
+            "needed": false,
+            "wanted": false,
+            "checked": false,
+            "text": "Cookies de análise e desempenho que nos ajudam a entender como os visitantes interagem com o site e a melhorar nossos serviços."
+          }
+        },
+        "onStatusChange": function(status) {
+          if (this.hasConsented()) {
+            var scripts = document.querySelectorAll('script[type=\"text/plain\"][data-cookiecategory=\"analytics\"]');
+            scripts.forEach(function(tag) {
+              var s = document.createElement('script');
+              s.type = "text/javascript";
+              if (tag.src) s.src = tag.src;
+              else s.innerHTML = tag.innerHTML;
+              document.head.appendChild(s);
+            });
+          }
+        }
+      });
+
+      // Garante que o botão de reabertura funcione após inicialização
+      setTimeout(function() {
+        var btn = document.getElementById('reabrirCookies');
+        if (btn) {
+          btn.addEventListener('click', function() {
+            cc.revokeChoice();
+          });
+        }
+      }, 1000);
+    });
+    </script>
+</head>
+
+<body id="inscricoes">
+    <div id="geral">
+        <div id="cabecalho">
+            <img class="float-right" src="img/cabecalho2.jpg" alt="" />
+            <img class="float-left" src="img/cabecalho1.jpg" alt="" />
+            <a class="float-right" href="http://sbseg2012.ppgia.pucpr.br/en/index.php">
+                <img class="flag" src="img/en.gif" alt="English version"/>
+            </a>
+            <img id="data" src="img/data.jpg" alt="18 a 29 de novembro em Curitiba-PR" />
+            <a id="logo" href="index.html" title="Voltar para página inicial">
+                <img src="img/logo.jpg" alt="SBSeg 2012" />
+            </a>
+        </div>
+
+        <div id="central">
+            <div id="conteudo">
+                <p><a class="link-destaque" href="https://centraldesistemas.sbc.org.br/ecos/sbseg2012">>>> Inscrever-se agora no SBSeg 2012 <<<</a></p>
+<br/><br/>
+<h1>Inscrições de Autor</h1>
+<p>Para <u>cada artigo ou trabalho</u> aceito para publicação no SBSeg 2012 é necessário no mínimo a <u>inscrição de um dos autores como profissional</u> no SBSeg 2012 até o dia <b>28 de setembro</b>.</p>
+
+<p>WTICG: apenas para este evento do SBSeg 2012 será aceita a <u>inscrição como estudante</u> de pelo menos um <u>aluno de graduação</u> para cada artigo aceito. A data limite para a inscrição é o dia <b>28 de setembro</b>.</p>
+<br />
+<h1>Inscrição de Participante</h1>
+<p>A seguir são fornecidas informações sobre a inscrição de participantes no SBSeg 2012.</p>
+<table class="table-border">
+<tr>
+	<th>Inscrição básica do evento</th>
+	<th>até 19/09</th>
+	<th>até 19/10</th>
+	<th>após 20/10</th>
+</tr>
+<tr>
+	<td>Estudante <u>sócio</u> da SBC</td>
+	<td>50,00</td>
+	<td>65,00</td>
+	<td>75,00</td>
+</tr>
+<tr>
+	<td>Estudante <u>não sócio</u> da SBC</td>
+	<td>70,00</td>
+	<td>85,00</td>
+	<td>95,00</td>
+</tr>
+<tr>
+	<td>Profissional <u>sócio</u> da SBC</td>
+	<td>230,00</td>
+	<td>270,00</td>
+	<td>320,00</td>
+</tr>
+<tr>
+	<td>Profissional <u>não sócio</u> da SBC</td>
+	<td>310,00</td>
+	<td>350,00</td>
+	<td>400,00</td>
+</tr>
+</table>
+
+<p><i>A <b>inscrição básica</b> dará direito a participação nas sessões técnicas, palestras, tutoriais, painéis e nos workshops. Além disto, o participante terá direito ao material do simpósio (pasta, bloco, caneta e anáis em mídia digital), coffee-breaks e coquetel de abertura.</i></p>
+
+<table class="table-border">
+<tr>
+	<th>Minicurso (valor individual)</th>
+	<th>até 19/09</th>
+	<th>até 19/10</th>
+	<th>após 20/10</th>
+</tr>
+<tr>
+	<td>Estudante <u>sócio</u> da SBC</td>
+	<td>20,00</td>
+	<td>25,00</td>
+	<td>35,00</td>
+</tr>
+<tr>
+	<td>Estudante <u>não sócio</u> da SBC</td>
+	<td>30,00</td>
+	<td>35,00</td>
+	<td>45,00</td>
+</tr>
+<tr>
+	<td>Profissional <u>sócio</u> da SBC</td>
+	<td>55,00</td>
+	<td>70,00</td>
+	<td>95,00</td>
+</tr>
+<tr>
+	<td>Profissional <u>não sócio</u> da SBC</td>
+	<td>75,00</td>
+	<td>90,00</td>
+	<td>115,00</td>
+</tr>
+</table>
+
+<p><i>A <b>inscrição em um ou mais minicursos</b> cobre, além da participação no(s) minicurso(s) escolhido(s), um exemplar do Livro Texto dos Minicursos. Para se inscrever em um ou mais minicursos, é necessário uma inscrição básica no SBSeg 2012.</i></p> 
+
+<h2 class="inscricao" >Descontos</h2>
+<ul>
+	<li><b>Caravanas</b>: serão oferecidos descontos a grupos de inscritos. <b>A cada 10 inscrições de um mesmo grupo será oferecida a 11ª inscrição básica gratuita</b>. O responsável pelo grupo deve indicar os inscritos em seu grupo enviando uma mensagem para <a href="/cdn-cgi/l/email-protection#82f1e0f1e7e5b0b2b3b0c2f2f2e5ebe3acf2f7e1f2f0ace0f0"><span class="__cf_email__" data-cfemail="98ebfaebfdffaaa8a9aad8e8e8fff1f9b6e8edfbe8eab6faea">[email&#160;protected]</span></a> (assunto: "Caravana de inscritos no SBSeg 2012") para ter direito à 11ª inscrição gratuita.</li>
+	<li><b>Minicursos</b>: <u>a cada duas inscrições em minicursos</u>, o participante receberá <u>desconto de 10%</u> no valor total das inscrições.</li>
+</ul>
+
+<h2 class="inscricao">Jantar do SBSeg 2012</h2>
+<p>O <b>Jantar de Confraternização</b> será realizado na churrascaria <a href="http://www.batelgrill.com.br/inicio/">Batel Grill</a>. O jantar não está incluso na inscrição no SBSeg, mas o convite pode ser adquirido a um custo de R$ 50,00 no sistema de inscrição. <i>O convite para o jantar dará direito a rodízio de carnes e massas, buffet de saladas, antepastos e frutos do mar, buffet de sushis, <b>refrigerantes</b> AMBEV e <b>água mineral</b> Ouro Fino à vontade.</i></p>
+
+<h2 class="inscricao">Pagamento da inscrição no SBSeg 2012</h2>
+<p>O <b>pagamento da inscrição</b> poderá ser realizado por meio de Boleto Bancário, Cartão de Crédito, Débito em Conta Banco do Brasil, Faturamento ou Nota de Empenho.</p>
+
+<h2 class="inscricao">Contato</h2>
+<p>Em caso de dúvidas sobre o processo de inscrição, entre em contato com a organização pelo email <a href="/cdn-cgi/l/email-protection#8dfeeffee8eabfbdbcbfcdfdfdeae4eca3fdf8eefdffa3efff"><span class="__cf_email__" data-cfemail="b4c7d6c7d1d386848586f4c4c4d3ddd59ac4c1d7c4c69ad6c6">[email&#160;protected]</span></a> (assunto "Dúvidas sobre a inscrição").</p>
+            </div>
+
+            <ul id="menu">
+                <li><a href="index.html" id="btinicio">Início</a></li>
+                <li><a href="evento.html" id="btevento">Sobre o Evento</a></li>
+                <li><a href="comites.html" id="btcomites">Comitês</a></li>
+                <li><a href="chamadas.html" id="btchamadas">Chamadas</a></li>
+                <li><a href="inscricoes.html" id="btinscricoes">Inscrições</a></li>
+                <li><a href="programacao.html" id="btprogramacao">Programação</a></li>
+                <li><a href="viagemeturismo.html" id="btviagemeturismo">Viagem e Turismo</a></li>
+                <li><a href="contato.html" id="btcontato">Contato</a></li>
+            </ul>
+        </div>
+
+        <div id="rodape">
+            <div>
+                <h3>Promoção</h3>
+                <a href="http://www.sbc.org.br/" target="_blank"><img src="img/sbc.jpg" alt="SBC" /></a>
+            </div>
+            <div>
+                <h3>Organização</h3>
+                <a href="http://www.pucpr.br/" target="_blank"><img src="img/pucpr.jpg" alt="PUCPR" /></a>
+                <a href="http://www.ufpr.br/" target="_blank"><img src="img/ufpr.jpg" alt="UFPR" /></a>
+                <a href="http://www.utfpr.edu.br/" target="_blank"><img src="img/utfpr.jpg" alt="UTFPR" /></a>
+            </div>
+            <div id="apoio">
+                <h3>Apoio</h3>
+                <a href="http://www.cgi.br" target="_blank"><img src="img/cgibr.jpg" alt="CGIBR" /></a>
+                <a href="http://www.intel.br" target="_blank"><img src="img/intel.png" alt="Intel" /></a><br/>
+                <a href="http://www.bb.br" target="_blank"><img src="img/bb.jpg" width="370" alt="Banco do Brasil" /></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="copyright">
+        <p>
+            <a id="twitter" href="http://www.twitter.com/#!/sbseg2012" target="_blank">
+                <img src="img/twitter.jpg" alt="Twitter" />
+            </a>
+            Copyright 2012 © Todos os direitos reservados (
+            <a id="webmaster" href="/cdn-cgi/l/email-protection#66150415030154565754261616010f07481613051614480414">webmaster</a>)
+        </p>
+    </div>
+    <p id="intel">Intel e seu logotipo são marcas registradas da Intel Corporation nos EUA e/ou em outros países.</p>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

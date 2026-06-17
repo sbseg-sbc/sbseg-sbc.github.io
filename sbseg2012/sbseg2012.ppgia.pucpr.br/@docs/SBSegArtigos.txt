@@ -1,0 +1,187 @@
+-------------------------------------------------------------------------------
+   XII Simpósio Brasileiro em Segurança da Informação
+        e de Sistemas Computacionais - SBSeg 2012
+
+
+                  19 a 22 de Novembro de 2012
+                                Curitiba, PR
+
+               http://sbseg2012.ppgia.pucpr.br/
+--------------------------------------------------------------------------------
+                 *CHAMADA DE ARTIGOS - SESSÕES TÉCNICAS*
+
+
+*DATAS IMPORTANTES*
+
+Registro de artigos:  24 de Junho (novo prazo)
+Submissão de artigos: 01 de Julho (novo prazo)
+Realização do evento: 19 a 22 de Novembro
+
+
+*APRESENTAÇÃO*
+
+O Simpósio Brasileiro em Segurança da Informação e de Sistemas 
+Computacionais (SBSeg) é um evento científico promovido anualmente
+ pela Sociedade Brasileira de Computação (SBC). Ele representa o 
+principal fórum no país para divulgação de resultados de pesquisas, 
+debates, intercâmbio de ideias e atividades relevantes ligadas à 
+segurança da informação e de sistemas, integrando a comunidade 
+brasileira de pesquisadores e profissionais atuantes nessa área. 
+A 12a edição do simpósio será realizada de 19 a 22 de Novembro 
+de 2012 em Curitiba, PR.
+
+O tema central do evento é a segurança da informação e de sistemas 
+computacionais. Nesse contexto, destacamos os seguintes tópicos, 
+não exaustivos:
+
+- Algoritmos, protocolos e técnicas criptográficas
+- Anonimato, auditoria e análise em sistemas
+- Controle de acesso, autenticação, gerência de identidade, biometria
+- Criminalística computacional
+- Detecção e prevenção de intrusões, ataques e vulnerabilidades
+- Direito digital
+- Forense computacional
+- Hardware criptográfico, RFID, cartões inteligentes e sistemas 
+  biométricos
+- Modelos de confiança
+- Padronização e normalização em segurança
+- Privacidade
+- Proteção de propriedade intelectual e DRM
+- Resposta a incidentes de segurança
+- Segurança adaptativa, políticas de segurança
+- Segurança em aplicações (TV digital, e-banking, etc.)
+- Segurança em computação ubíqua/pervasiva
+- Segurança em dispositivos móveis e sistemas embarcados
+- Segurança em grades computacionais ou em nuvem
+- Segurança em middleware (Java RMI, J2EE, CorbaSec, .Net, etc.)
+- Segurança em redes, rede de sobreposição, redes virtuais e redes 
+  sem fio
+- Segurança em smart grids, smart meters e smart houses
+- Segurança em serviços web, sistemas distribuídos ou sistemas 
+   operacionais
+- Segurança e privacidade em banco de dados
+- Segurança e privacidade em redes sociais
+- Sistemas e softwares seguros: desenvolvimento, testes e 
+  certificação
+- Tolerância a falhas/intrusões
+- Votação eletrônica
+
+*INSTRUÇÕES AOS AUTORES*
+
+Os trabalhos submetidos devem descrever atividades de pesquisa, 
+relatos de experiências relevantes e estudos de casos. A submissão 
+de artigos será exclusivamente eletrônica, por meio do sistema JEMS 
+da SBC (https://submissoes.sbc.org.br/). Todos artigos devem ser  
+submetidos de forma anônima, ou seja, devem evitar qualquer 
+informação no cabeçalho do artigo, no texto e nas referências que 
+vinculem o artigo à identidade dos autores e suas instituições. 
+Artigos poderão ser submetidos em duas categorias:
+
+- Artigos completos – um artigo completo apresenta trabalho de 
+pesquisa que tenha sido desenvolvido ao ponto de produzir resultados
+ originais e relevantes, devidamente validados e analisados. 
+Ademais, a apresentação do artigo deve conter uma descrição 
+criteriosa e fundamentada do trabalho de pesquisa, e conclusões 
+consistentes com base nos resultados obtidos.
+
+- Artigos curtos – um artigo curto apresenta resultados originais mas 
+que estejam ainda num estágio preliminar. O objetivo desta categoria
+é criar um espaço no evento para apresentação e discussão de 
+trabalhos que contenham boas ideias, ainda que não tenham sido 
+completamente desenvolvidas ou plenamente validadas e justificadas.
+
+Os autores devem submeter seu artigo em UMA das categorias 
+descritas acima. No momento da submissão, os autores devem 
+verificar se a submissão foi realizada corretamente na categoria 
+desejada. Os artigos completos e curtos terão critérios diferentes 
+de avaliação; desta forma, um artigo submetido à categoria de 
+artigos curtos não poderá vir a ser alterado para a categoria de 
+artigos completos (e vice-versa) após sua submissão final pelos 
+autores.
+
+Os artigos podem ser escritos em português ou inglês, e submetidos 
+pelo sistema JEMS exclusivamente em formato PDF. A formatação do 
+texto deve seguir o padrão da SBC para escrita de artigos, disponível 
+em www.sbc.org.br (no menu CONTEÚDO, clique em "Documentos" e 
+então clique em "Publicações").
+
+Os trabalhos completos devem ter até 14 páginas, incluindo figuras, 
+tabelas, referências e apêndices, enquanto os artigos curtos devem 
+ter até 7 páginas.
+
+Todos os artigos serão avaliados por um corpo de revisores, seguindo
+ um processo de revisão double-blind. Os artigos aceitos (completos 
+ou curtos) deverão ser apresentados por um dos autores no SBSeg 
+2012, para que possam ser publicados nos anais do simpósio. Os 
+artigos completos e curtos terão seções separadas nos anais.
+
+Uma comissão de avaliação escolherá os melhores dentre os artigos 
+completos aceitos e apresentados no evento.
+
+NOTA: Artigos deverão ter título, autor(es), resumo e palavras-chave
+registrados até o dia 24 de Junho (23h55min, horário de Brasília). Uma
+vez registrados, o envio dos artigos poderá ser realizado até o dia 01
+de Julho (23h55min, horário de Brasília). Apenas artigos registrados 
+poderão ser enviados até o dia 01 de Julho.
+
+
+*COMITÊ DE ORGANIZAÇÃO*
+
+*Coordenação Geral
+
+Aldri dos Santos, UFPR
+Altair Santin, PUCPR
+Carlos Maziero, UTFPR
+
+*Coordenação do Comitê de Programa
+
+Michele Nogueira, UFPR
+Ricardo Dahab, UNICAMP
+
+*Membros do Comitê de Programa
+
+Aldri dos Santos		UFPR
+Altair Olivo Santin		PUCPR
+Anderson Nascimento		UNB
+André Santos			UECE
+Carla Merkle Westphall		UFSC
+Carlos Maziero			UTFPR
+Carlos Westphall		UFSC
+Célio V. N. de Albuquerque	UFF
+Daniel Mesquita			UFU
+Daniel Santana de Freitas	UFSC
+Davidson Boccardo		INMETRO
+Diego Aranha			UNB
+Eduardo Souto			UFAM
+Hao Chi Wong			Intel
+Jean Martina			University of Cambridge
+Jeroen van de Graaf		UFMG
+Joaquim Celestino Júnior	UECE
+José De Souza			UFC
+Julio Hernandez			UNICAMP
+Lau Cheuk Lung			UFSC
+Leonardo Oliveira		UFMG
+Lisandro Z. Granville		UFRGS
+Luciano Paschoal Gaspary	UFRGS
+Luiz F. Rust da Costa Carmo	UFRJ
+Luiz Carlos Albini		UFPR
+Marcos Simplicio		USP
+Marinho Barcellos		UFRGS
+Michel Abdalla			École Normale Supérieure & CNRS
+Michelle Wangham		UNIVALI
+Otto C. M. Bandeira Duarte	UFRJ
+Paulo Barreto			USP
+Paulo de Geus			UNICAMP
+Paulo A. da Silva Goncalves	UFPE
+Pedro Velloso			UFF
+Rafael Obelheiro		UDESC
+Raul Ceretta Nunes		UFSM
+Raul Weber			UFRGS
+Ricardo Custódio		UFSC
+Rossana Andrade			UFC
+Routo Terada			USP
+Ruy J. G. Barretto de Queiroz	UFPE
+Sergio Oliveira			UFSJ
+
+*** Promoção Sociedade Brasileira de Computação (SBC)
+http://www.sbc.org.br

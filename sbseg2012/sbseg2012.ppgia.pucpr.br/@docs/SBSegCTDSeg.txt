@@ -1,0 +1,65 @@
+-----------------------------------------------------------------------------------------
+ Chamada de Propostas - CDTSeg do SBSeg 2012
+
+  XII Simpósio Brasileiro em Segurança da Informação
+                e de Sistemas Computacionais
+
+          Curitiba (PR), 19 a 22 de novembro de 2012
+                  http://sbseg2012.ppgia.pucpr.br
+-----------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------
+Datas Importantes (NOVAS DATAS)
+----------------------------------------------------------
+Submissão das propostas: 18/07/2012
+Comunicação dos resultados: 29/08/2012
+Entrega dos textos completos: 16/09/2012
+
+-----------------------------------------------------------------------------------
+Primeira chamada para o CTD - Concurso de Teses e Dissertações
+
+Como coordenador do CTD SBSeg2012 informo que oportunamente
+será aberta a submissão on-line deste Concurso.
+
+Cada submissão deverá ser um resumo de tese ou dissertação
+defendida no período de agosto de 2010 a junho de 2012.
+Haverá prêmio para as três melhores teses, e as três melhores
+dissertações.
+
+Cada resumo será avaliado por três pesquisadores especializados,
+e um subconjunto será selecionado para o autor apresentá-lo
+durante o primeiro dia do evento SBSeg 2012.
+
+O resumo deverá ser de oito páginas no máximo
+e conter os itens seguintes:
+
+- Título da tese ou dissertação
+- Nome do orientado e nome do orientador
+- Endereços e Emails respectivos
+- Filiação
+- Abstract
+- Resumo
+- Artigo com motivações, objetivos, resultados obtidos, etc
+- Publicações referenciadas
+
+O prazo de submissão é 4 de julho de 2012, que NÃO será 
+prorrogado para não prejudicar outros prazos como, por
+exemplo, o prazo para o aluno solicitar auxílio financeiro
+para apresentar a sua dissertaçao ou tese.
+
+Comitê de Avaliação
+
+Anderson Nascimento, UNB
+Jeroen van de Graaf, UFMG
+Julio Lopez, UNICAMP
+Michelle Silva Wangham. UNIVALI
+Paulo Lício de Geus, UNICAMP
+Ricardo Custódio, UFSC
+Ricardo Dahab, UNICAMP
+Routo Terada, USP
+
+
+Coordenador do CTDSeg
+Routo Terada
+

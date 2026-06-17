@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>SBSeg 2012</title>
+    <link href="css/estilo.css" rel="stylesheet" type="text/css" />
+
+    <!-- Estilo do banner de cookies -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+    <!-- Script Google Analytics (bloqueado até consentimento) -->
+    <script type="text/plain" data-cookiecategory="analytics">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27800002-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); 
+        ga.type = 'text/javascript'; 
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; 
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+    <!-- Biblioteca do Cookie Consent -->
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+
+    <script>
+    window.addEventListener('load', function(){
+      var cc = window.cookieconsent.initialise({
+        "type": "opt-in",
+        "position": "bottom",
+        "palette": {
+          "popup": {
+            "background": "#ffffff",
+            "text": "#4b4b4b"
+          },
+          "button": {
+            "background": "#7a003c",
+            "text": "#ffffff",
+            "border": "#7a003c"
+          }
+        },
+        "content": {
+          "message": "Utilizamos cookies para melhorar sua experiência em nosso site e promover os nossos serviços. Ao permitir todos os cookies, você terá acesso a todas as funcionalidades do site. Ao rejeitar os cookies, aqueles que não forem estritamente necessários permanecerão desativados. Saiba mais em nosso",
+          "link": "Aviso de Privacidade",
+          "href": "https://www.pucpr.br/politica-de-privacidade/",
+          "allow": "Permitir Todos os Cookies",
+          "deny": "Recusar não essenciais",
+          "dismiss": "Gerenciar Cookies"
+        },
+        "revokable": true,
+        "revokeBtn": "<div id='reabrirCookies' class='cc-revoke cc-bottom cc-left' style='background:#7a003c;color:#fff;cursor:pointer;padding:10px 15px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.2);'>Configurações de Cookies</div>",
+        "categories": {
+          "necessary": {
+            "needed": true,
+            "wanted": true,
+            "checked": true,
+            "readonly": true,
+            "text": "Cookies essenciais que garantem o funcionamento adequado do site e não podem ser desativados."
+          },
+          "analytics": {
+            "needed": false,
+            "wanted": false,
+            "checked": false,
+            "text": "Cookies de análise e desempenho que nos ajudam a entender como os visitantes interagem com o site e a melhorar nossos serviços."
+          }
+        },
+        "onStatusChange": function(status) {
+          if (this.hasConsented()) {
+            var scripts = document.querySelectorAll('script[type=\"text/plain\"][data-cookiecategory=\"analytics\"]');
+            scripts.forEach(function(tag) {
+              var s = document.createElement('script');
+              s.type = "text/javascript";
+              if (tag.src) s.src = tag.src;
+              else s.innerHTML = tag.innerHTML;
+              document.head.appendChild(s);
+            });
+          }
+        }
+      });
+
+      // Garante que o botão de reabertura funcione após inicialização
+      setTimeout(function() {
+        var btn = document.getElementById('reabrirCookies');
+        if (btn) {
+          btn.addEventListener('click', function() {
+            cc.revokeChoice();
+          });
+        }
+      }, 1000);
+    });
+    </script>
+</head>
+
+<body id="wfc">
+    <div id="geral">
+        <div id="cabecalho">
+            <img class="float-right" src="img/cabecalho2.jpg" alt="" />
+            <img class="float-left" src="img/cabecalho1.jpg" alt="" />
+            <a class="float-right" href="http://sbseg2012.ppgia.pucpr.br/en/index.php">
+                <img class="flag" src="img/en.gif" alt="English version"/>
+            </a>
+            <img id="data" src="img/data.jpg" alt="18 a 29 de novembro em Curitiba-PR" />
+            <a id="logo" href="index.html" title="Voltar para página inicial">
+                <img src="img/logo.jpg" alt="SBSeg 2012" />
+            </a>
+        </div>
+
+        <div id="central">
+            <div id="conteudo">
+                <h1>Workshop de Forense Computacional - WFC</h1>
+
+<table class="prog-detalhe">
+ <tr>
+  <th colspan="2">22/11/2012 (Quinta-feira)</th>
+ </tr>
+ <tr>
+  <th width="140">Horário</th>
+  <th>Programação</th>
+ </tr>
+ <tr>
+  <th>08:30 – 09:00</th>
+  <td>Dr. Paulo Batimarchi - IFIP – International  Federation on Intellectual Property (Latin America) – São Paulo – SP</td>
+ </tr>
+ <tr>
+  <th>09:00 – 09:30</th>
+  <td><strong>Artigo #1</strong> –  Metodologia para Análise Forense de Imagens Digitais utilizando Sensor  Pattern Noise: Alisson S. Nascimento, Leonardo Torres, Valter Ramos, José  Alencar Neto</td>
+ </tr>
+ <tr>
+  <th>09:30 – 10:00</th>
+  <td><strong>Artigo #2</strong> – Além do  óbvio: a análise forense de imagens e a investigação do conteúdo implícito e  explícito de fotografias digitais: Tiago Carvalho, Ewerton Silva, Filipe  Oliveira Costa, Anselmo Ferreira, Anderson Rocha</td>
+ </tr>
+ <tr>
+  <th>10:00 – 10:30</th>
+  <td><em>Coffee Break</em></td>
+ </tr>
+ <tr>
+  <th>10:30 – 11:00</th>
+  <td>Dr.  Demétrius Gonzaga - Delegado de crimes virtuais de Curitiba (NUCIBER) – PR </td>
+ </tr>
+ <tr>
+  <th>11:00 – 11:30</th>
+  <td><strong>Artigo #3</strong> – Identificação  da Origem de Imagens com Zoom utilizando Sensor Pattern Noise: Leonardo  Torres, Alisson S. Nascimento, Valter Ramos, José Alencar Neto, Alejandro C.  Frery</td>
+ </tr>
+ <tr>
+  <th>11:30 – 12:00</th>
+  <td><strong>Artigo #4</strong> – Content-Based  Filtering for Video Sharing Social Networks: Eduardo Valle, Sandra Avila,  Fillipe de Souza, Marcelo Coelho, Arnaldo de A. Araújo</td>
+ </tr>
+ <tr>
+  <th>12:00 – 12:30</th>
+  <td>Dr. Angelo Volpi – Tabelião  do 7º. Tabelionato Volpi em Curitiba – PR </td>
+ </tr>
+ <tr>
+  <th>12:30 – 14:30</th>
+  <td><em>Almoço</em></td>
+ </tr>
+ <tr>
+  <th>14:30 – 15:00</th>
+  <td>Dr.  Leandro Bissoli – Escritório Patrícia Peck Pinheiro – Advogados Especialistas  em Direito Digital – São Paulo – SP</td>
+ </tr>
+ <tr>
+  <th>15:00 – 16:00</th>
+  <td>Apresentações  técnicas – Instituto  Nacional de Criminalística – Departamento de Policia Federal – Brasília – DF</td>
+ </tr>
+ <tr>
+  <th>16:00 – 16:30</th>
+  <td><em>Coffee Break</em></td>
+ </tr>
+ <tr>
+  <th>16:30 – 17:00</th>
+  <td><strong>Artigo #5</strong> –  Identificação de Autoria Offline em Documentos Manuscritos: Aline Maria  Malachini Miotto Amaral, Cinthia O. A. Freitas, Flavio Bortolozzi</td>
+ </tr>
+ <tr>
+  <th>17:00 – 17:30</th>
+  <td>MSc. Luiz Rodrigo Grochocki - Perito Oficial Criminal da  Polícia Científica do Estado do Paraná – Setor de Computação Forense </td>
+ </tr>
+ <tr>
+  <th>17:30 – 18:00</th>
+  <td><strong>Artigo #6</strong> –  Aplicação de Observação de Pessoas em Computação Forense: William Robson  Schwartz </td>
+ </tr>
+ <tr>
+  <th>18:00 – 18:30</th>
+  <th>Mesa Redonda</th>
+ </tr>
+</table>
+
+<br />
+<h1>Palestrantes Convidados (Versão Preliminar)</h1>
+
+<table class="prog-detalhe">
+  <tr>
+  	<th style="background: #1B8530; color:#FFF; text-align: left;">Estratégias de investigação e coleta de Evidências: desafios, oportunidades e tendências</th>
+  </tr>
+  <tr class="convidados">
+  	<td>
+      <img src="img/conv7.jpg" alt="Paulo Henrique Batimarchi"/>
+      Muitos casos, criminais e cíveis, ficam enfraquecidos e prejudicados por um conjunto probatório deficiente, como resultado de falta de coordenação, estratégia e ferramental adequado no    momento em que os profissionais envolvidos num projeto necessitam de uma    gestão multidisciplinar dinâmica para atingir resultados positivos.    Identificar, quantificar e coletar determinadas informações na internet    prova-se tarefa complexa em muitos casos. Num primeiro momento pode-se operar    num ambiente onde o expertise da corte em tais casos é reduzido, em outros,    pelo contrario, o ambiente é altamente técnico e com procedimentos complexos    a serem cumpridos. Ambos os casos representam desafios para qualquer    profissional envolvido em litígios nessa esfera, ainda mais quando as    evidencias proveem de diferentes jurisdições, com diferentes cadeias de    custódia. Essa apresentação tem por objetivo trazer para debate algumas    técnicas, tecnologias e experiências de casos concretos de sucesso no cenário internacional.<br /><br />
+      <strong>Paulo Henrique Batimarchi </strong>Profissional formado em Direito pela Universidade Mackenzie, SP, com especialização em Direito    Autoral e Direito Eletrônico, além de Web Marketing e Gestão Estratégica.    Atua na área de combate a delitos cyberneticos desde 1999 em investigações de    casos internacionais e nacionais, treinamento para agentes de Law Enforcement    em toda America Latina e proteção de conteúdo online.
+    </td>
+  </tr>
+  <tr>
+    <th style="background: #1B8530; color:#FFF; text-align: left;">Cibercrimes e a Realidade Brasileira</th>
+  </tr>
+  <tr>
+    <td class="convidados">
+    	<img src="img/conv6.jpg" alt="Demétrius Gonzaga"/>
+   	 	Há muito tempo nosso planeta vem sendo afetado pelos reflexos dos crimes praticados mediante uso de recursos    tecnológicos. Atos de espionagem em busca de informações nos campos militar,    comercial e industrial foram responsáveis por ascensões e quedas de governos    e impérios ao longo das últimas décadas. Inegável que estratégias    assemelhadas foram utilizadas para coibir tais delitos. Com a popularização    das  diversas formas de tecnologia, o    mapa da criminalidade passou a incorporar novas características. Nessa linha    de análise, destaco que algumas dessas técnicas, conceitos e principalmente    ferramentas tecnológicas devem passar a integrar o campo de visão dos    responsáveis pela manutenção da Ordem Pública e da Segurança Nacional. Vale    ressaltar que pesquisas recentes revelaram um expressivo aumento de registros    de ocorrências pertinentes às diversas modalidades de delitos praticados    através do emprego de recursos tecnológicos no Brasil e no exterior. Esse    dado não reflete necessariamente aumento da incidência de crimes dessa natureza, mas certamente indica que a mesma sociedade que até então não    acreditava na possibilidade de uma resposta efetiva por parte do Estado    agora, diante das notícias da criação de unidades especializadas,    manifesta-se pleiteando providências e resultados. Neste diapasão, a idéia    central dessa análise é estimular a reflexão sobre as diversificadas condutas    delituosas a que toda sociedade está sujeita, analisar a estrutura estatal e    legal destinada a atender a demanda decorrente desses crimes e, ao mesmo    tempo, apresentar sugestões concretas para que o Estado, através de seus    representantes, nas três esferas de poderes, esteja preparado a    identificá-las enfrentá-las.<br /><br />
+      <strong>Demétrius Gonzaga </strong>Graduação em Direito pela Faculdade de Direito de Curitiba, Delegado-Chefe do Núcleo de    Combate aos Cibercrimes – NUCIBER – Curitiba-PR, Coordenador Estadual do    INSTITUTO BRASILEIRO DE INTELIGÊNCIA CRIMINAL – INTECRIM, Professor Titular    da disciplina Investigação de Crimes Cibernéticos da Escola Superior de    Polícia Civil do Paraná e Coordenador de Defesa Cibernética para a Copa de    2014, no Estado do Paraná.
+    </td>
+  </tr>
+  <tr>
+    <th style="background: #1B8530; color:#FFF; text-align: left;">Os Documentos e Assinaturas Eletrônicas e Seus Aspectos Legais</th>
+  </tr>
+  <tr class="convidados">
+    <td>
+    <img src="img/conv5.jpg" alt="Angelo Volpi Neto"/>
+    Definições jurídicas referente a    documento, sua definição, características e valor probatório.Comparação do    documento em papel ao digital. Assinaturas definição jurídica, assinatura    eletrônica e digital, definição, características, legislação. Aplicações práticas    para validação, autenticação e reconhecimento de assinaturas. Atas notariais,    definição, aplicação, exemplos.<br /><br />
+      <strong>Angelo Volpi Neto</strong> é    Tabelião, escritor, consultor, formado em Direito pela PUC-Pr.,  professor convidado de pós graduação na    PUC-Pr., UNISINOS-RS, UNIRON-RO, entre outras. É Professor de direito    eletrônico e Coordenador de Pós Graduação em Direito Imobiliário da    Universidade POSITIVO. Autor dos livros: Comércio Eletrônico Direito e    Segurança, Ed. Juruá e A VIDA EM BITS, Ed. Aduaneiras. Colunista e membro do    Conselho Editorial da revista INFORMATION MANAGEMENT. Articulista, autor de    centenas de ensaios, artigos e crônicas.
+    </td>
+  </tr>
+  <tr>
+    <th style="background: #1B8530; color:#FFF; text-align: left;">Aspectos Jurídicos da Forense Computacional - levantamento e coleta de provas</th>
+  </tr>
+  <tr>
+    <td><strong>Leandro Bissoli</strong> - Advogado especialista em Direito Digital, sócio do escritório Patricia Peck Pinheiro  Advogados, formado pela Faculdade de Direito de São Bernardo do Campo, pós    graduando em Negociações Econômicas Internacionais pelo Programa San Tiago    Dantas, especialização em Política Comercial Internacional pela Fundação    Getúlio Vargas e Cooperação Internacional ao Desenvolvimento pela    Universidade de São Paulo. Membro do Instituto Brasileiro de Estudos da    Concorrência, Consumo e Comércio Internacional e da Comissão de Comércio    Exterior e Relações Internacionais da OAB-SP. Em tecnologia, possui    experiência em análise e desenvolvimento de aplicação web e mobile, tendo    atuado como Gerente de Tecnologia em diversas empresas do setor. Certificado    pela Sun Microsystems nos cursos SL-110, SL-275, OO-226, SL-285 e SL-314.    Experiência em arquitetura e gerenciamento de bases de dados como MSSQL,    MYSQL e ORACLE. Certificado ICS Professional através da Impacta Certified    Specialist. Cutting Edge Hacking Techniques (GHTQ) certificado pelo Global    Information Assurance Certification (GIAC).</td>
+  </tr>
+  <tr>
+    <th style="background: #1B8530; color:#FFF; text-align: left;">Polícia Científica do Paraná: a atuação do Perito Criminal especialista em Informática Forense</th>
+  </tr>
+  <tr class="convidados">
+    <td>
+    <img src="img/conv4.jpg" alt="Luiz Rodrigo Grochocki"/>
+    Nesta palestra o participante terá oportunidade de conhecer a estrutura da Seção de    Informática Forense da Polícia Científica do Paraná, os aspectos legais,    tecnológicos e procedimentais das perícias em Informática Forense. Bem como,    receberá dicas de como agir em incidentes em ambientes computacionais, como    preservar uma evidencia digital, e quem procurar quando vítima de incidentes    computacionais. Serão ainda apresentados exemplos de exames realizados pela    Polícia Científica em dispositivos computacionais.
+      <br /><br />
+      <strong>Luiz Rodrigo Grochocki</strong> é Perito Criminal da Polícia Científica do    Paraná, bacharel em direito e engenharia, especialista em Estado Democrático    de Direito pela Escola do Ministério Público do Paraná, especialista em    Direito Aplicado pela Escola da Magistratura do Paraná, Mestre em Tecnologia    pela PUC-PR.
+    </td>
+  </tr>
+  </table>
+
+<br />
+  <h1>Apresentações técnicas – Instituto Nacional de Criminalística – Departamento de Policia    Federal – Brasília – DF</h1>
+
+<table class="prog-detalhe">
+    <tr>
+      <th style="background: #1B8530; color:#FFF; text-align: left;">Apresentação #1: Reconhecimento    automático de plantações de Cannabis sativa a partir de imagens de sensores    remotos</th>
+    </tr>
+    <tr>
+      <td>A apresentação se baseia na tese de Doutorado da    autora sobre a detecção de plantios de <em>Cannabis sativa</em> com emprego de    classificação de imagens baseada em objetos, seus principais resultados e    idéias de trabalhos futuros. Desafios: Aplicação de técnicas de mineração de    dados para aprimoramento das regras e redução de ruídos da classificação;    desenvolvimento de algoritmos de reconhecimento de feições de <em>Cannabis    sativa</em> e outras lavouras ilícitas a partir de dados de sensores remotos.<br /><br />
+      <strong>Alessandra Lisita DC</strong><br />
+      Alessandra Lisita é Perita Criminal Federal    lotada na Área de Perícias de Meio Ambiente do  Instituto Nacional de Criminalística da    Polícia Federal. É Engenheira Florestal e Mestre em Ciência Florestal pela    Universidade Federal de Viçosa e Doutora na área de Processamento de Dados e    Análise Ambiental pelo Instituto de Geociências da Universidade de Brasília.
+   		</td>
+  </tr>
+  <tr>
+    <th style="background: #1B8530; color:#FFF; text-align: left;">Apresentação #2: OCR específico para números de série em cédulas do    Real</th>
+    </tr>
+    <tr>
+    <td>
+      A apresentação é o resumo da metodologia usada    para abordar um caso real em que se pretendia analisar o vínculo entre    suspeitos a partir dos números de série de uma grande quantidade de cédulas    apreendidas com cada um, que incluiu o desenvolvimento de um OCR específico    para tal fim. <strong>DESAFIOS:</strong> I) Aprimorar o algoritmo de OCR para operar    imagens de cédulas em diferentes condições de resolução, posição, iluminação    e distorção e II) Desenvolver uma ferramenta simples e amigável capaz de    realizar a OCR de cédulas e analisar as possíveis consequências de construir    um banco de dados com os números de série das cédulas associados aos locais e    época onde foram identificadas.<br /><br />
+      <strong>Jorge de A. Lambert - MC</strong><br />
+      Jorge Lambert é Mestre em Sistemas e Computação    pelo Instituto Militar de Engenharia, onde foi professor no Departamento de    Engenharia Elétrica em 2004, 2005 e 2006. Concluiu o curso de formação de    Oficiais de Comunicações da Academia Militar das Agulhas Negras em 1992, a    graduação em Engenharia Elétrica no IME em 1998, trabalhou na Indústria de    Material Bélico do Brasil, na Fábrica de armas de Itajubá e na Fábrica de    Material de Comunicações do Rio de Janeiro, nas atividades de manutenção    elétrica, controle de qualidade e P&amp;D em ambas as fábricas. Tem    especialização em Segurança do Trabalho pela UFRJ, concluída em 2005. Em    2007, após o exame de qualificação,     interrompeu o curso de Doutorado em Engenharia Elétrica no    CETUC/PUC-RJ para tomar posse no cargo Perito Criminal Federal. Trabalha    atualmente no Serviço de Perícias em Audiovisual e Eletrônicos do Instituto    Nacional de Criminalística em Brasília.
+      </td>
+  </tr>
+  <tr>
+    <th style="background: #1B8530; color:#FFF; text-align: left;">Apresentação #3: Compressão de imagens baseada em conteúdo de    interesse forense</th>
+	</tr>
+    <tr>
+    <td>
+      A apresentação aborda a relação de compromisso    entre qualidade de imagens e necessidade de memória para armazenamento, o que    contribui para a baixa qualidade das imagens armazenadas pelos sistemas de    CFTV e resulta em baixo aproveitamento das imagens de CFTV no âmbito forense. <strong>DESAFIO: </strong>Desenvolver algoritmos e ferramentas, possivelmente    integrados em hardware, capazes de reconhecer o conteúdo de potencial    interesse forense, especialmente para identificação, e realizar operações de    compressão que preservem as principais características das regiões de    interesse em detrimento do restante da cena.<br /><br />
+      <strong>Jorge de A. Lambert - MC</strong><br />
+      Jorge Lambert é Mestre em Sistemas e Computação    pelo Instituto Militar de Engenharia, onde foi professor no Departamento de    Engenharia Elétrica em 2004, 2005 e 2006. Concluiu o curso de formação de    Oficiais de Comunicações da Academia Militar das Agulhas Negras em 1992, a    graduação em Engenharia Elétrica no IME em 1998, trabalhou na Indústria de    Material Bélico do Brasil, na Fábrica de armas de Itajubá e na Fábrica de    Material de Comunicações do Rio de Janeiro, nas atividades de manutenção    elétrica, controle de qualidade e P&amp;D em ambas as fábricas. Tem    especialização em Segurança do Trabalho pela UFRJ, concluída em 2005. Em    2007, após o exame de qualificação,     interrompeu o curso de Doutorado em Engenharia Elétrica no    CETUC/PUC-RJ para tomar posse no cargo Perito Criminal Federal. Trabalha    atualmente no Serviço de Perícias em Audiovisual e Eletrônicos do Instituto    Nacional de Criminalística em Brasília.
+      </td>
+  </tr>
+  <tr>
+    <th style="background: #1B8530; color:#FFF; text-align: left;">Apresentação #4: Aumento da precisão no cálculo de velocidades a    partir de registros de imagens com baixa resolução espacial e temporal</th>
+    </tr>
+    <tr>
+    <td>
+      A apresentação é um resumo da metodologia    utilizada para o cálculo da velocidade do avião no acidente da TAM em    congonhas em 2007  a partir das imagens    das câmeras do CFTV longo da pista de pouso. <strong>DESAFIOS:</strong> <strong>I)</strong> Desenvolver algoritmos capazes de aprimorar a precisão das velocidades    calculadas a partir sequências de imagens de baixa resolução típicas de um    CFTV. <strong>II) </strong>Definir um conjunto de requisitos a serem atendidos por um    banco de imagens de testes a ser utilizado para o aprimoramento e validação    das metodologias de cálculo de velocidade a partir de imagens típicas de CFTV    considerando limites pre-estabelecidos de precisão e confiabilidade.<br /><br />
+      <strong>Jorge de A. Lambert - MC</strong><br />
+      Jorge Lambert é Mestre em Sistemas e Computação    pelo Instituto Militar de Engenharia, onde foi professor no Departamento de    Engenharia Elétrica em 2004, 2005 e 2006. Concluiu o curso de formação de    Oficiais de Comunicações da Academia Militar das Agulhas Negras em 1992, a    graduação em Engenharia Elétrica no IME em 1998, trabalhou na Indústria de Material    Bélico do Brasil, na Fábrica de armas de Itajubá e na Fábrica de Material de    Comunicações do Rio de Janeiro, nas atividades de manutenção elétrica,    controle de qualidade e P&amp;D em ambas as fábricas. Tem especialização em    Segurança do Trabalho pela UFRJ, concluída em 2005. Em 2007, após o exame de    qualificação,  interrompeu o curso de    Doutorado em Engenharia Elétrica no CETUC/PUC-RJ para tomar posse no cargo    Perito Criminal Federal. Trabalha atualmente no Serviço de Perícias em    Audiovisual e Eletrônicos do Instituto Nacional de Criminalística em    Brasília.
+      </td>
+  </tr>
+  <tr>
+    <th style="background: #1B8530; color:#FFF; text-align: left;">Apresentação #5: Classificação de Imagens    de Pornografia e Pornografia Infantil Utilizando Recuperação de Imagens    Baseada em Conteúdo</th>
+    </tr>
+    <tr>
+    <td>
+      A apresentação se baseia na dissertação de    Mestrado do autor sobre este tema, apresentando seus principais resultados e    ideias de trabalhos futuros.<br /><br />
+      <strong>Itamar  de Almeida Carvalho - MC</strong><br />
+      Itamar Carvalho é Perito Criminal Federal da área    de Informática, atualmente lotado no Serviço de Perícias em Informática do    Instituto Nacional de Criminalística da Polícia Federal. É Bacharel em    Ciência da Computação pela Universidade Federal do Ceará e Mestre em    Informática Forense e Segurança da Informação pela Universidade de Brasília.
+      </td>
+  </tr>
+</table>            </div>
+
+            <ul id="menu">
+                <li><a href="index.html" id="btinicio">Início</a></li>
+                <li><a href="evento.html" id="btevento">Sobre o Evento</a></li>
+                <li><a href="comites.html" id="btcomites">Comitês</a></li>
+                <li><a href="chamadas.html" id="btchamadas">Chamadas</a></li>
+                <li><a href="inscricoes.html" id="btinscricoes">Inscrições</a></li>
+                <li><a href="programacao.html" id="btprogramacao">Programação</a></li>
+                <li><a href="viagemeturismo.html" id="btviagemeturismo">Viagem e Turismo</a></li>
+                <li><a href="contato.html" id="btcontato">Contato</a></li>
+            </ul>
+        </div>
+
+        <div id="rodape">
+            <div>
+                <h3>Promoção</h3>
+                <a href="http://www.sbc.org.br/" target="_blank"><img src="img/sbc.jpg" alt="SBC" /></a>
+            </div>
+            <div>
+                <h3>Organização</h3>
+                <a href="http://www.pucpr.br/" target="_blank"><img src="img/pucpr.jpg" alt="PUCPR" /></a>
+                <a href="http://www.ufpr.br/" target="_blank"><img src="img/ufpr.jpg" alt="UFPR" /></a>
+                <a href="http://www.utfpr.edu.br/" target="_blank"><img src="img/utfpr.jpg" alt="UTFPR" /></a>
+            </div>
+            <div id="apoio">
+                <h3>Apoio</h3>
+                <a href="http://www.cgi.br" target="_blank"><img src="img/cgibr.jpg" alt="CGIBR" /></a>
+                <a href="http://www.intel.br" target="_blank"><img src="img/intel.png" alt="Intel" /></a><br/>
+                <a href="http://www.bb.br" target="_blank"><img src="img/bb.jpg" width="370" alt="Banco do Brasil" /></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="copyright">
+        <p>
+            <a id="twitter" href="http://www.twitter.com/#!/sbseg2012" target="_blank">
+                <img src="img/twitter.jpg" alt="Twitter" />
+            </a>
+            Copyright 2012 © Todos os direitos reservados (
+            <a id="webmaster" href="/cdn-cgi/l/email-protection#7c0f1e0f191b4e4c4d4e3c0c0c1b151d520c091f0c0e521e0e">webmaster</a>)
+        </p>
+    </div>
+    <p id="intel">Intel e seu logotipo são marcas registradas da Intel Corporation nos EUA e/ou em outros países.</p>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

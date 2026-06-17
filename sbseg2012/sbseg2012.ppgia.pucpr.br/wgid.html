@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>SBSeg 2012</title>
+    <link href="css/estilo.css" rel="stylesheet" type="text/css" />
+
+    <!-- Estilo do banner de cookies -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+    <!-- Script Google Analytics (bloqueado até consentimento) -->
+    <script type="text/plain" data-cookiecategory="analytics">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27800002-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); 
+        ga.type = 'text/javascript'; 
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; 
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+    <!-- Biblioteca do Cookie Consent -->
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+
+    <script>
+    window.addEventListener('load', function(){
+      var cc = window.cookieconsent.initialise({
+        "type": "opt-in",
+        "position": "bottom",
+        "palette": {
+          "popup": {
+            "background": "#ffffff",
+            "text": "#4b4b4b"
+          },
+          "button": {
+            "background": "#7a003c",
+            "text": "#ffffff",
+            "border": "#7a003c"
+          }
+        },
+        "content": {
+          "message": "Utilizamos cookies para melhorar sua experiência em nosso site e promover os nossos serviços. Ao permitir todos os cookies, você terá acesso a todas as funcionalidades do site. Ao rejeitar os cookies, aqueles que não forem estritamente necessários permanecerão desativados. Saiba mais em nosso",
+          "link": "Aviso de Privacidade",
+          "href": "https://www.pucpr.br/politica-de-privacidade/",
+          "allow": "Permitir Todos os Cookies",
+          "deny": "Recusar não essenciais",
+          "dismiss": "Gerenciar Cookies"
+        },
+        "revokable": true,
+        "revokeBtn": "<div id='reabrirCookies' class='cc-revoke cc-bottom cc-left' style='background:#7a003c;color:#fff;cursor:pointer;padding:10px 15px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.2);'>Configurações de Cookies</div>",
+        "categories": {
+          "necessary": {
+            "needed": true,
+            "wanted": true,
+            "checked": true,
+            "readonly": true,
+            "text": "Cookies essenciais que garantem o funcionamento adequado do site e não podem ser desativados."
+          },
+          "analytics": {
+            "needed": false,
+            "wanted": false,
+            "checked": false,
+            "text": "Cookies de análise e desempenho que nos ajudam a entender como os visitantes interagem com o site e a melhorar nossos serviços."
+          }
+        },
+        "onStatusChange": function(status) {
+          if (this.hasConsented()) {
+            var scripts = document.querySelectorAll('script[type=\"text/plain\"][data-cookiecategory=\"analytics\"]');
+            scripts.forEach(function(tag) {
+              var s = document.createElement('script');
+              s.type = "text/javascript";
+              if (tag.src) s.src = tag.src;
+              else s.innerHTML = tag.innerHTML;
+              document.head.appendChild(s);
+            });
+          }
+        }
+      });
+
+      // Garante que o botão de reabertura funcione após inicialização
+      setTimeout(function() {
+        var btn = document.getElementById('reabrirCookies');
+        if (btn) {
+          btn.addEventListener('click', function() {
+            cc.revokeChoice();
+          });
+        }
+      }, 1000);
+    });
+    </script>
+</head>
+
+<body id="wgid">
+    <div id="geral">
+        <div id="cabecalho">
+            <img class="float-right" src="img/cabecalho2.jpg" alt="" />
+            <img class="float-left" src="img/cabecalho1.jpg" alt="" />
+            <a class="float-right" href="http://sbseg2012.ppgia.pucpr.br/en/index.php">
+                <img class="flag" src="img/en.gif" alt="English version"/>
+            </a>
+            <img id="data" src="img/data.jpg" alt="18 a 29 de novembro em Curitiba-PR" />
+            <a id="logo" href="index.html" title="Voltar para página inicial">
+                <img src="img/logo.jpg" alt="SBSeg 2012" />
+            </a>
+        </div>
+
+        <div id="central">
+            <div id="conteudo">
+                <h1>Chamada de Trabalhos</h1>
+<p>Aqui você encontra a chamada de trabalhos do <a href="@docs/SBSegWGID.txt">Workshop de Gestão de Identidades Digitais - WGID</a>.</p>
+
+<h1>Programação</h1>
+
+<table class="prog-detalhe">
+ 
+   <tr>
+      <th colspan="2" style="background:#666; color:#FFFFFF; text-align: left">22 de Novembro de 2012</th>
+    </tr>
+
+    <tr>
+      <th width="120" rowspan="4">08:30-10:00</th>
+      <td style="background: #1B8530; color:#FFF">ST1 - Artigos Convidados</td>
+    </tr>
+
+    <tr>
+        <td><strong>Um Survey sobre Ferramentas para Single Sign-On</strong> <br/>
+	Hendri Nogueira, <em>Universidade Federal de Santa Catarina</em><br/>
+	Douglas Bayer Santos, <em>Universidade Federal de Santa Catarina</em><br/>
+	Ricardo Felipe Custódio, <em>Universidade Federal de Santa Catarina</em><br/></td>
+    </tr>
+
+    <tr>
+        <td><strong>A Framework for Secure Single Sign-On</strong><br/>
+	Bernardo Machado David, <em>Universidade de Brasília</em><br/>
+	Anderson C. A. Nascimento, <em>Universidade de Brasília</em><br/>
+	Rafael Tonicelli, <em>Universidade de Brasília</em><br/>
+	Rafael de Sousa Júnior, <em>Universidade de Brasília</em><br/></td>
+    </tr>
+
+    <tr>
+        <td><strong>Geração de Certificados Digitais a partir da Autenticação Federada Shibboleth</strong><br/>
+	Michele S. Wangham, <em>UNIVALI</em><br/>
+	Emerson Ribeiro de Mello, <em>Instituto Federal de Santa Catarina</em><br/>
+	Davi da Silva Böger, <em>Universidade Federal de Santa Catarina</em><br/>
+	Joni da Silva Fraga, <em>Universidade Federal de Santa Catarina</em><br/>
+	Marlon Candido Guérios, <em>INOHAUS</em><br/></td>
+    </tr>
+
+    <tr>
+	<th>10:00-10:30</th>
+	<td><strong>Coffee Break</strong></td>
+    </tr>
+
+    <tr>
+        <th rowspan="2">10:30-12:00</th>
+      <td style="background: #1B8530; color:#FFF">PN1 - Palestra Convidado Nacional 1</td>
+    </tr>
+
+    <tr>
+        <td><strong>Certificação Digital no Brasil</strong><br/>
+	Ruy Ramos, <em>assessor técnico do Instituto Nacional de Tecnologia da Informação - ITI</em><br/>
+	</td>
+    </tr>
+	
+    <tr>
+	<th rowspan="2">12:00-12:30</th>
+	<td style="background: #1B8530; color:#FFF">PGId - Programa de Gestão de Identidades da RNP</td>
+    </tr>
+  <tr>
+        <td><strong>Um Levantamento de Métodos para Autenticação com Múltiplos Fatores</strong><br/>
+	Orientador: Jeroen van de Graaf, <em>Universidade Federal de Minas Gerais</em><br/>
+	Bolsista: Dayana Spagnuelo, <em>Universidade Federal de Santa Catarina</em></br>
+	</td>
+    </tr>
+
+    <tr>
+        <th>12:30-14:30</th>
+        <td><strong>Almoço</strong></td>
+    </tr>
+
+    <tr>
+	<th rowspan="4">14:30-16:00</th>
+	<td style="background: #1B8530; color:#FFF">PGId - Programa de Gestão de Identidades da RNP</td>
+    </tr>
+
+	<tr>
+	<td><strong>Integração de OpenID e OAuth a uma Infraestrutura de Autenticação Baseada em Shibboleth/SAML</strong><br/>
+	Orientador: Prof. Dr. Marco Aurélio Amaral Henriques, <em>UNICAMP</em><br/>
+	Bolsista: Mateus Lara, <em>UNICAMP</em><br/>
+	</td>
+	</tr>
+
+	<tr>
+	<td><strong>Gestão de Identidade em Redes Definidas por Software</strong><br/>
+	Orientadora: Débora Christina Muchaluata Saade, <em>Universidade Federal Fluminense</em><br/>
+	Bolsista: Edelberto Franco Silva, <em>Universidade Federal Fluminense</em><br/>
+	</td>
+	</tr>
+
+	<tr>
+	<td><strong>Adaptação do Sistema de Gerenciamento de Dados e Aplicações Científicas do SINAPAD para Controle de Acesso Federado</strong><br/>
+	Orientador: Antônio Tadeu Azevedo Gomes, <em>LNCC</em><br/>
+	Bolsista: Vivian Medeiros, <em>LNCC</em><br/>
+	</td>
+	</tr>
+
+    <tr>
+	<th>16:00-16:30</th>
+	<td><strong>Coffee Break</strong></td>
+    </tr>
+
+    <tr>
+	<th rowspan="2">16:30-18:00</th>
+	<td style="background: #1B8530; color:#FFF">PN2 - Palestra do Convidado Nacional 2</td>
+    </tr>
+    <tr>
+	<td><strong>Gestão de Identidades da Geração que Vive na Nuvem</strong><br/>
+	Paulo Pagliusi, <em>Procela Inteligência em Segurança</em><br/>
+	</td>
+    </tr>
+
+    <tr>
+	<th rowspan="2">18:00-19:30</th>
+	<td style="background: #1B8530; color:#FFF">PL  - Painel</td>
+    </tr>
+
+    <tr>
+	<td><strong>Impacto das Novas Tecnologias de IdM na Comunidade Acadêmica</strong><br/>
+	Noemi de La Rocque, <em>Moderadora, PUC-Rio</em><br/>
+	Ricardo F. Custodio, <em>LabSEC/UFSC</em><br/>
+	Jean Carlo Faustino, <em>RNP</em><br/>
+	Leandro Marcos de Oliveira Guimarães, <em>RNP</em><br/></td>
+    </tr>
+
+    <tr>
+	<th rowspan="1">19:00-19:30</th>
+	<td style="background: #1B8530; color:#FFF">Encerramento</td>
+    </tr>
+</table>
+            </div>
+
+            <ul id="menu">
+                <li><a href="index.html" id="btinicio">Início</a></li>
+                <li><a href="evento.html" id="btevento">Sobre o Evento</a></li>
+                <li><a href="comites.html" id="btcomites">Comitês</a></li>
+                <li><a href="chamadas.html" id="btchamadas">Chamadas</a></li>
+                <li><a href="inscricoes.html" id="btinscricoes">Inscrições</a></li>
+                <li><a href="programacao.html" id="btprogramacao">Programação</a></li>
+                <li><a href="viagemeturismo.html" id="btviagemeturismo">Viagem e Turismo</a></li>
+                <li><a href="contato.html" id="btcontato">Contato</a></li>
+            </ul>
+        </div>
+
+        <div id="rodape">
+            <div>
+                <h3>Promoção</h3>
+                <a href="http://www.sbc.org.br/" target="_blank"><img src="img/sbc.jpg" alt="SBC" /></a>
+            </div>
+            <div>
+                <h3>Organização</h3>
+                <a href="http://www.pucpr.br/" target="_blank"><img src="img/pucpr.jpg" alt="PUCPR" /></a>
+                <a href="http://www.ufpr.br/" target="_blank"><img src="img/ufpr.jpg" alt="UFPR" /></a>
+                <a href="http://www.utfpr.edu.br/" target="_blank"><img src="img/utfpr.jpg" alt="UTFPR" /></a>
+            </div>
+            <div id="apoio">
+                <h3>Apoio</h3>
+                <a href="http://www.cgi.br" target="_blank"><img src="img/cgibr.jpg" alt="CGIBR" /></a>
+                <a href="http://www.intel.br" target="_blank"><img src="img/intel.png" alt="Intel" /></a><br/>
+                <a href="http://www.bb.br" target="_blank"><img src="img/bb.jpg" width="370" alt="Banco do Brasil" /></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="copyright">
+        <p>
+            <a id="twitter" href="http://www.twitter.com/#!/sbseg2012" target="_blank">
+                <img src="img/twitter.jpg" alt="Twitter" />
+            </a>
+            Copyright 2012 © Todos os direitos reservados (
+            <a id="webmaster" href="/cdn-cgi/l/email-protection#dba8b9a8bebce9ebeae99bababbcb2baf5abaeb8aba9f5b9a9">webmaster</a>)
+        </p>
+    </div>
+    <p id="intel">Intel e seu logotipo são marcas registradas da Intel Corporation nos EUA e/ou em outros países.</p>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

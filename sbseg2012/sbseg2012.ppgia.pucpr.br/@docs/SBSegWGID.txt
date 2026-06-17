@@ -1,0 +1,112 @@
+Chamada de Trabalhos
+Workshop de Gestão de Identidades Digitais (WGID)
+
+22 de novembro de 2011, Curitiba, Paraná
+- Evento em conjunto com o SBSeg 2012- 
+
+A gestão de identidades digitais (IdM-Identity Management) consiste de
+um sistema integrado de políticas, processos de negócios e tecnologias
+que permite às organizações o tratamento e a manipulação de
+identidades de seus usuários.
+
+Este é um tema de pesquisa ativo e, diante da sua complexidade e
+relevância, continuará assim por muito mais anos. Esta constatação
+decorre das inúmeras questões técnicas que os sistemas de gestão de
+identidades devem considerar, tais como: facilidade de uso,
+privacidade e anonimato do usuário, segurança forte, autenticação
+única diante de diferentes tecnologias, custo dos sistemas (total cost
+of ownership), escalabilidade, controle de acesso de granularidade
+fina (baseado em atributos) e interoperabilidade.
+
+O II Workshop de Gestão de Identidades (WGID) visa ser um fórum para
+discussões e apresentações técnicas de trabalhos recentes e/ou em
+andamento em torno do estado da arte de tecnologias relacionadas com
+gestão de identidades. Além disso, busca-se também identificar os
+desafios de pesquisa na área e possibilitar o mapeamento dos grupos de
+pesquisa.
+
+## Tópicos de Interesse
+
+Autores são convidados a submeterem trabalhos originais relacionados
+com gestão de identidades. Autores que possuam trabalhos com
+resultados preliminares ou trabalhos em andamento também são
+encorajados a submeterem artigos. Os tópicos de interesse incluem:
+?       Acesso móvel federado e certificação móvel
+?       Agregação de Atributos
+?       Anonimato em sistemas de IdM
+?       Arquiteturas de Referência e Frameworks para IdM
+?       Auditoria em sistemas de IdM
+?       Autenticação Single Sign On
+?       Certificação digital
+?       Certificados de Atributos
+?       Ciclo de vida de identidades digitais (provisionamento e administração)
+?       Controle de acesso baseado em atributos (ABAC)
+?       Federações de Redes Acadêmicas
+?       Gerenciamento de confiança (trust management) em sistema de IdM
+?       Gestão de Atributos
+?       Gestão de Identidades e Cloud Computing
+?       Gestão de identidades e de acesso
+?       Gestão de Identidades e Governo Eletrônico
+?       Gestão de Identidades e Grades Computacionais
+?       Gestão de Identidades e Internet das Coisas (Internet of Things)
+?       Gestão de Identidades Federadas
+?       Interoperabilidade entre sistemas de IdM
+?       Níveis de garantia (Level of Assurance) em IdM
+?       Privacidade em sistemas de IdM
+?       Redes Sociais e Identidades Digitais
+?       Registro de Identidade Civil (RIC) do Brasil
+
+## Formato do Workshop
+
+O WGID será realizado no dia 22 de Novembro de 2012 e incluirá a
+apresentação de palestras convidadas, artigos aceitos para publicação
+e projetos de pesquisa relacionados à gestão de identidades.
+
+## Informações para Autores
+
+Os trabalhos devem ser escritos em português ou inglês, respeitando um
+limite máximo de 10 páginas. A formatação do texto deve seguir o
+padrão da SBC. Os artigos devem ser submetidos através da URL:
+https://submissoes.sbc.org.br e deverão estar, exclusivamente, em
+formato PDF.
+
+Os artigos submetidos ao WGID serão avaliados por um corpo de
+revisores e os trabalhos selecionados serão organizados para
+apresentação e publicação nos anais do evento. No mínimo um dos
+autores de cada artigo selecionado deverá inscrever-se no SBSEG e
+comparecer ao evento para apresentar seu trabalho.
+
+## Data Importante
+
+Submissão artigos completos: 06/09/2012
+Notificação dos Autores: 17/09/2012
+Versão Final: 20/09/2012
+
+## Comitê de Organização
+
+Coordenadores Gerais do SBSeg
+
+Aldri dos Santos,UFPR
+Altair Santin, PUCPR
+Carlos Maziero, UTFPR
+
+Coordenadores do Workshop
+
+Michelle S. Wangham, UNIVALI (wangham at univali.br)
+Ricardo Custódio, UFSC (custodio at inf.ufsc.br)
+
+Comitê de Programa
+
+Adilson Eduardo Guelfi, IPT
+Aldri dos Santos, UFPR
+Altair Santin, PUC-PR
+Débora Muchaluat, UFF
+Emerson Ribeiro de Mello, IFSC
+Jeroen van de Graaf, UFMG
+Joni Fraga, UFSC
+Michelle Wangham, UNIVALI
+Michele Nogueira, UFPR
+Noemi Rodriguez, PUC-Rio
+Ricardo Custódio, UFSC
+Roberto Samarone, UFPA
+Vinod Rebello, UFF

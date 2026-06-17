@@ -1,0 +1,686 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>SBSeg 2012</title>
+    <link href="css/estilo.css" rel="stylesheet" type="text/css" />
+
+    <!-- Estilo do banner de cookies -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+    <!-- Script Google Analytics (bloqueado até consentimento) -->
+    <script type="text/plain" data-cookiecategory="analytics">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27800002-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); 
+        ga.type = 'text/javascript'; 
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; 
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+    <!-- Biblioteca do Cookie Consent -->
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+
+    <script>
+    window.addEventListener('load', function(){
+      var cc = window.cookieconsent.initialise({
+        "type": "opt-in",
+        "position": "bottom",
+        "palette": {
+          "popup": {
+            "background": "#ffffff",
+            "text": "#4b4b4b"
+          },
+          "button": {
+            "background": "#7a003c",
+            "text": "#ffffff",
+            "border": "#7a003c"
+          }
+        },
+        "content": {
+          "message": "Utilizamos cookies para melhorar sua experiência em nosso site e promover os nossos serviços. Ao permitir todos os cookies, você terá acesso a todas as funcionalidades do site. Ao rejeitar os cookies, aqueles que não forem estritamente necessários permanecerão desativados. Saiba mais em nosso",
+          "link": "Aviso de Privacidade",
+          "href": "https://www.pucpr.br/politica-de-privacidade/",
+          "allow": "Permitir Todos os Cookies",
+          "deny": "Recusar não essenciais",
+          "dismiss": "Gerenciar Cookies"
+        },
+        "revokable": true,
+        "revokeBtn": "<div id='reabrirCookies' class='cc-revoke cc-bottom cc-left' style='background:#7a003c;color:#fff;cursor:pointer;padding:10px 15px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.2);'>Configurações de Cookies</div>",
+        "categories": {
+          "necessary": {
+            "needed": true,
+            "wanted": true,
+            "checked": true,
+            "readonly": true,
+            "text": "Cookies essenciais que garantem o funcionamento adequado do site e não podem ser desativados."
+          },
+          "analytics": {
+            "needed": false,
+            "wanted": false,
+            "checked": false,
+            "text": "Cookies de análise e desempenho que nos ajudam a entender como os visitantes interagem com o site e a melhorar nossos serviços."
+          }
+        },
+        "onStatusChange": function(status) {
+          if (this.hasConsented()) {
+            var scripts = document.querySelectorAll('script[type=\"text/plain\"][data-cookiecategory=\"analytics\"]');
+            scripts.forEach(function(tag) {
+              var s = document.createElement('script');
+              s.type = "text/javascript";
+              if (tag.src) s.src = tag.src;
+              else s.innerHTML = tag.innerHTML;
+              document.head.appendChild(s);
+            });
+          }
+        }
+      });
+
+      // Garante que o botão de reabertura funcione após inicialização
+      setTimeout(function() {
+        var btn = document.getElementById('reabrirCookies');
+        if (btn) {
+          btn.addEventListener('click', function() {
+            cc.revokeChoice();
+          });
+        }
+      }, 1000);
+    });
+    </script>
+</head>
+
+<body id="programacao">
+    <div id="geral">
+        <div id="cabecalho">
+            <img class="float-right" src="img/cabecalho2.jpg" alt="" />
+            <img class="float-left" src="img/cabecalho1.jpg" alt="" />
+            <a class="float-right" href="http://sbseg2012.ppgia.pucpr.br/en/index.php">
+                <img class="flag" src="img/en.gif" alt="English version"/>
+            </a>
+            <img id="data" src="img/data.jpg" alt="18 a 29 de novembro em Curitiba-PR" />
+            <a id="logo" href="index.html" title="Voltar para página inicial">
+                <img src="img/logo.jpg" alt="SBSeg 2012" />
+            </a>
+        </div>
+
+        <div id="central">
+            <div id="conteudo">
+                <h1>Programação</h1>
+
+<p>O SBSeg 2012 será realizado no Centro de Convenções do <a href="#local-evento">Pestana Hotel Curitiba</a>. A programação do SBSeg 2012 é composta de <a href="#sessoes-tecnicas">sessões técnicas</a>, <a href="#minicursos">minicursos</a>, <a href="#palestras-tutoriais">palestras e tutoriais</a> com convidados nacionais e internacionais e demais eventos associados.</p>
+
+<ul class="evento-list">
+  <li><a href="wticg.html">WTICG - Workshop de Trabalhos de Iniciação Científica</a></li>
+    <li><a href="ctdseg.html">CTDSeg - Concurso de Teses e Dissertações</a></li>
+    <li><a href="wgid.html">WGID - Workshop de Gestão de Identidades Digitais</a></li>
+    <li><a href="wfc.html">WFC - Workshop de Forense Computacional</a></li>
+</ul>
+
+<table class="programa">
+    <tr>
+        <th></th>
+        <th colspan="3">19/11/2012<br />(Segunda-feira)</th>
+        <th colspan="2">20/11/2012<br />(Terça-Feira)</th>
+        <th colspan="2">21/11/2012<br />(Quarta-Feira)</th>
+        <th colspan="3">22/11/2012<br />(Quinta-feira)</th>
+    </tr>
+    <tr>
+        <th width="120">08:00-08:30</th>
+        <td colspan="3">inscrições</td>
+        <td colspan="2">inscrições</td>
+        <td colspan="2">inscrições</td>
+        <td colspan="3">inscrições</td>
+    </tr>
+    <tr>
+        <th>08:30-10:00</th>
+        <td style="background:#91D2FF">WTICG</td>
+        <td style="background:#66CC99">CTD</td>
+        <td style="background:#CCCC66">MC1</td>
+        <td style="background:#99C08F">ST1</td>
+        <td style="background:#99C08F">ST2</td>
+        <td style="background:#99C08F">ST5</td>
+        <td style="background:#99C08F">ST6</td>
+        <td style="background:#00DF70">WGID</td>
+        <td style="background:#91D2FF">WFC</td>
+        <td style="background:#CCCC66">MC3</td>
+    </tr>
+    <tr>
+        <th>10:00-10:30</th>
+        <td colspan="3">coffee break</td>
+        <td colspan="2">coffee break</td>
+        <td colspan="2">coffee break</td>
+        <td colspan="3">coffee break</td>
+    </tr>
+    <tr>
+        <th>10:30-11:30</th>
+        <td rowspan="2" style="background:#91D2FF">WTICG</td>
+        <td rowspan="2" style="background:#66CC99">CTD</td>
+        <td rowspan="2" style="background:#CCCC66">MC1</td>
+        <td colspan="2" rowspan="2" style="background:#8AA7E1">PI1</td>
+        <td colspan="2" style="background:#8AA7E1">TI2</td>
+        <td rowspan="2" style="background:#00DF70">WGID</td>
+        <td rowspan="2" style="background:#91D2FF">WFC</td>
+        <td rowspan="2" style="background:#CCCC66">MC3</td>
+    </tr>
+    <tr>
+        <th>11:30-12:30</th>
+        <td colspan="2" style="background:#91D2FF">PN2</td>
+    </tr>
+    <tr>
+        <th>12:30-14:30</th>
+        <td colspan="3">almoço</td>
+        <td colspan="2">almoço</td>
+        <td colspan="2">almoço</td>
+        <td colspan="3">almoço</td>
+    </tr>
+    <tr>
+        <th>14:30-15:15</th>
+        <td rowspan="2" style="background:#91D2FF">WTICG</td>
+        <td rowspan="2" style="background:#66CC99">CTD</td>
+        <td rowspan="2" style="background:#FFCC99">MC2</td>
+        <td colspan="2" style="background:#8AA7E1">TI1</td>
+        <td rowspan="2" style="background:#99C08F">ST7</td>
+        <td rowspan="2" style="background:#99C08F">ST8</td>
+        <td rowspan="2" style="background:#00DF70">WGID</td>
+        <td rowspan="2" style="background:#91D2FF">WFC</td>
+        <td rowspan="2" style="background:#FFCC99">MC4</td>
+    </tr>
+    <tr>
+        <th>15:15-16:00</th>
+        <td colspan="2" style="background:#91D2FF">PN1</td>
+    </tr>
+    <tr>
+        <th>16:00-16:30</th>
+        <td colspan="3" style="white-space:nowrap">coffee break</td>
+        <td colspan="2" style="white-space:nowrap">coffee break</td>
+        <td colspan="2" style="white-space:nowrap">coffee break</td>
+        <td colspan="3" style="white-space:nowrap">coffee break</td>
+    </tr>
+    <tr>
+        <th>16:30-17:30</th>
+        <td rowspan="2" style="background:#91D2FF">WTICG</td>
+        <td rowspan="2" style="background:#66CC99">CTD</td>
+        <td rowspan="2" style="background:#FFCC99">MC2</td>
+        <td style="background:#99C08F">ST3</td>
+        <td rowspan="2" style="background:#99C08F"><em>AC</em></td>
+        <td colspan="2" rowspan="2" style="background:#8AA7E1">PI2</td>
+      <td rowspan="2" style="background:#00DF70">WGID</td>
+        <td rowspan="2" style="background:#91D2FF">WFC</td>
+        <td rowspan="2" style="background:#FFCC99">MC4</td>
+    </tr>
+    <tr>
+        <th>17:30-18:30</th>
+        <td style="background:#99C08F">ST4</td>
+    </tr>
+    <tr>
+        <th>18:30-19:00</th>
+        <td colspan="3"> </td>
+        <td colspan="2"> </td>
+        <td colspan="2"> </td>
+        <td colspan="3"> </td>
+    </tr>
+    <tr>
+        <th>19:00-19:30</th>
+        <td colspan="3" style="background:#00B000">abertura</td>
+        <td colspan="2" rowspan="2" style="background:#00B000">CESeg/SBC</td>
+        <td colspan="2"></td>
+        <td colspan="3"></td>
+    </tr>
+    <tr>
+        <th>19:30-21:00</th>
+        <td colspan="3" style="background:#00B000">coquetel</td>
+        <td colspan="2" rowspan="2" style="background:#00B000">Jantar do Evento</td>
+        <td colspan="3"></td>
+    </tr>
+    <tr>
+        <th>21:00-23:00</th>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="3"></td>
+    </tr>
+</table>
+
+<h2 class="inscricao">Legenda:</h2>
+<ul class="legenda">
+    <li>WTICG - Workshop de Trabalhos de Iniciação Científica e de Graduação</li>
+    <li>WGID - Workshop de Gestão de Identidades Digitais</li>
+    <li>TI/PI - Tutorial/Palestra Internacional</li>
+    <li>PN - Palestra Nacional</li>
+    <li>ST/AC - Sessão Técnica/Artigos Curtos</li>
+    <li>MC - Minicurso</li>
+    <li>WFC - Workshop de Forense Computacional</li>
+    <li>CTD - Concurso de Teses e Dissertações</li>
+    <li>CESeg/SBC - Comissão Especial de Segurança da Informação da SBC</li>
+</ul>
+<br />
+<h1><a name="caderno-programacao">Caderno de Programação </a></h1>
+<p> Acesse o caderno de programação <a href="@docs/SBSegProgramacao.pdf"> disponivel online.</a></p>
+
+<h1>Anais do SBSeg 2012</h1>
+<p> Acesso os Anais do SBSeg 2012 <a href="@docs/SBSeg2012Anais.pdf">disponível online</a>.</a></p>
+
+<h1><a name="palestras-tutoriais">Programação detalhada - Palestras e Tutoriais</a></h1>
+<table class="prog-detalhe">
+	<tr>
+      <th colspan="2" style="background:#666; color:#FFFFFF; text-align: left">Tuesday, November 20, 2012</th>
+    </tr>
+    <tr>
+      <th width="120" rowspan="2">10:30-12:30</th>
+      <td style="background: #1B8530; color:#FFF">PI1: Internet Monitoring via DNS Traffic Analysis</td>
+    </tr>
+    <tr>
+    	<td><em>Wenke Lee, Georgia Institute of Technology</em><br /><br />
+			<strong>Abtract:</strong> In recent years miscreants have been leveraging the Domain Name System (DNS) to build Internet-scale malicious network infrastructures for malware command and control (C&C). In talk, I will describe our DNS traffic analysis work that aims to identify the C&C domains and hence the infected hosts, and gain insights into malware operations. First, I will describe Kopis, a system that passively monitors DNS traffic at the upper levels of the DNS hierarchy, analyzes global DNS query resolution patterns, and identifies domains likely associated with malware activities. Kopis has high detection rates (e.g., 98.4%) and low false positive rates (e.g., 0.3% or 0.5%). In addition, Kopis is able to detect new malware domains days or even weeks before they appear in public blacklists and security forums. For example, it discovered the rise of a previously unknown DDoS botnet based in China in 2010. Second, I will present a study of the DNS infrastructure used by mobile apps. Using traffic ob			tained from a major US cellular provider as well as a major US non-cellular Internet service provider, we identified the DNS domains looked up by mobile apps, and analyzed information related to the Internet hosts pointed to by these domains. We found that the DNS infrastructure used by mobile apps is part of the infrastructure used by applications in non-cellular world; in other words, the mobile web is part of the Internet. We saw evidence that the criminals behind mobile malware may be the same as those behind botnets and malware in non-cellular world: about 48,098 hosts known to be associated with malicious activities are also pointed to by unknown (likely malicious) domains looked up by mobile apps. We found that the network characteristics of major, widespread mobile threats are very similar to those of non-cellular botnets. These findings that malicious mobile apps and non-cellular malware have commonalities in DNS infrastructure and network characteristics, and therefore, we should develop a DNS 			monitoring and reputation system for cellular carriers similar to the ones already developed for non-cellular ISPs.<br/>
+	<a href="@docs/SBSeg_DNS_11_2012.pdf">Presentation slides</a>
+        </td>
+    </tr>
+    <tr>
+      <th width="120" rowspan="2">14:30-15:15</th>
+      <td style="background: #1B8530; color:#FFF">TI1: Personalized Search Under Attacks</td>
+    </tr>
+    <tr>
+        <td><em>Wenke Lee, Georgia Institute of Technology</em><br /><br />
+			<strong>Abtract:</strong> Most users access the web via a search engine. A major development in search algorithms in the last few years is the use of Personalized Search, promised to deliver the data and services most relevant to a user. While many businesses have benefited from personalized search, so do the attackers.
+
+In this talk, I will discuss the new characteristics of these attacks. In particular, instead of attacking the search engine software, attackers are able to manipulate the input to search engines to influence the output (i.e., search results presented to a user). For example, negative comments about a business can be "drowned out" to continue to scam customers. I will also discuss some new defenses, in particular, how to increase the cost of the attackers.<br/>
+	<a href="@docs/SBSeg_Search_11_2012.pdf">Presentation slides</a>
+        </td>
+    </tr>
+    <tr>
+      <th width="120" rowspan="2">15:15-16:00</th>
+      <td style="background: #1B8530; color:#FFF">PN1: Segurança em redes IPv6</td>
+    </tr>
+    <tr>
+        <td><em>Antonio M. Moreiras, NIC.BR</em><br /><br />
+			<strong>Resumo:</strong> A migração do IPv4 para o IPv6 é uma realidade na Internet. Esta apresentação abordará de forma pragmática e realista as implicações relacionadas à segurança, nas redes IPv6. Existem muitos mitos em relação ao IPv6 ser mais seguro. A ausência de NAT e uma viabilidade melhor para o uso do IPSEC são exemplos de avanços que não devem ser desconsiderados. No entanto, também há vulnerabilidades: algumas comuns ao universo do IPv4, outras novas. No final, o nível de segurança obtido é basicamente o mesmo, com vulnerabilidades e técnicas de proteção similares, mas com diferenças que devem ser conhecidas e levadas em consideração.<br/>
+        </td>
+    </tr>
+    <tr>
+        <td style="background: #1B8530; color:#FFF" colspan="2">Wenke Lee</td>
+    </tr>
+    <tr class="convidados">
+    	<td colspan="2"><img src="img/conv2.jpg" alt="Wemke Lee"/>
+        	<a href="http://wenke.gtisc.gatech.edu/">http://wenke.gtisc.gatech.edu</a><br /><br />
+            Wenke Lee is a Professor in the School of Computer Science, College of Computing, Georgia Institute of Technology. He received a Ph.D. in Computer Science from Columbia University in 1999. His research interests include systems and network security and applied cryptography. He is also the Director of the Georgia Tech Information Security Center (GTISC).
+        </td>
+    </tr>
+    <tr>
+        <td style="background: #1B8530; color:#FFF" colspan="2">Antonio M. Moreiras</td>
+    </tr>
+    <tr class="convidados">
+    	<td colspan="2"><img src="img/conv8.jpg" alt="Antonio M. Moreiras"/>
+        	NIC.BR<br /><br />
+            Antonio M. Moreiras é engenheiro eletricista e mestre em engenharia pela POLI/USP, com MBA pela UFRJ. Estudou também Governança da Internet na Diplo Foundation e na SSIG 2010. Trabalha atualmente no NIC.br, onde está envolvido em projetos para o desenvolvimento da Internet no Brasil, como a disseminação do IPv6, a disponibilização da Hora Legal Brasileira via NTP e estudos sobre a Web.
+        </td>
+    </tr>
+    <tr>
+      <th colspan="2" style="background:#666; color:#FFFFFF; text-align: left">Wednesday, November 21, 2012</th>
+    </tr>
+    <tr>
+      <th width="120" rowspan="2">10:30-11:30</th>
+      <td style="background: #1B8530; color:#FFF">TI2: Delivering New Platform Technologies</td>
+    </tr>
+    <tr>
+    	<td><em>George Cox, Intel Corporation</em><br /><br />
+			<strong>Abtract:</strong> Dreaming up a new technology is just the first of many steps in getting the technology developed, making it deployable, delivering it broadly into the market place, getting it widely enabled, and having it be effectively used. In this talk, we discuss this the various steps required to successfully carry out such a process using Intel’s new RdRand/DRNG technology as an example.<br/>
+		<a href="@docs/Embedding Entropy In Platforms 112012.pdf">Presentation slides</a>
+        </td>
+    </tr>
+    <tr>
+      <th width="120" rowspan="2">11:30-12:30</th>
+      <td style="background: #1B8530; color:#FFF">PN2: Computação Forense: Pesquisas Atuais e Perspectivas</td>
+    </tr>
+    <tr>
+    	<td><em>Itamar de Almeida Carvalho, Polícia Federal</em><br /><br />
+			<strong>Resumo:</strong> A apresentação traz os principais desafios encontrados no trabalho dos peritos criminais, um panorama geral das pesquisas realizadas recentemente por estes profissionais e alguns desafios da área da Computação Forense.
+        </td>
+    </tr>
+    <tr>
+      <th width="120" rowspan="2">16:30-18:30</th>
+      <td style="background: #1B8530; color:#FFF">PI2: Solving The Platform Entropy Problem</td>
+    </tr>
+    <tr>
+	<td><em>George Cox, Intel Corporation</em><br /><br />
+			<strong>Abtract:</strong> This talk will present the need for entropy in Cryptography and the problem of generating adequate streams in hardware, highlighting some recent attacks to software-based implementations. I go on with TRNG, a breakthrough that made a hardware implementation viable, and present DRNG, Intel's implementation available through the RdRand instruction, and how the module can be embedded on processor designs. Finally, I also show performance results in terms of throughput, response time and reseed frequency.<br/>
+		<a href="@docs/Solving The Platform Entropy Problem 112012.pdf">Presentation slides</a>
+        </td>
+    </tr>
+    <tr>
+        <td style="background: #1B8530; color:#FFF" colspan="2">George Cox</td>
+    </tr>
+    <tr class="convidados">
+    	<td colspan="2"><img src="img/conv1.jpg" alt="George Cox" />
+        	Intel Corporation<br /><br />
+            During his 38 year career at Intel, George has lead research and development teams delivering processors, I/O subsystems, supercomputers, interconnects, and security elements. His current Digital Random Number Generator (DRNG) work is the second Intel RNG that his teams have deployed in product. By delivering this DRNG (and its instruction interface – RDRAND), George believes that we can make a fundamental, long term, platform security problem, that is, the absence of a high quality/high performance source of computational entropy, just “go away”. He looks forward to attacking other such low level, fundamental, long term, platform security problems.
+        </td>
+    </tr>
+    <tr>
+        <td style="background: #1B8530; color:#FFF" colspan="2">Itamar  de Almeida Carvalho</td>
+    </tr>
+    <tr class="convidados">
+    	<td colspan="2"><img src="img/conv3.jpg" alt="Itamar  de Almeida Carvalho"/>
+        	Polícia Federal<br /><br />
+            Itamar Carvalho é Perito Criminal Federal da área de Informática, atualmente lotado no Serviço de Perícias em Informática do Instituto Nacional de Criminalística da Polícia Federal. É Bacharel em Ciência da Computação pela Universidade Federal do Ceará e Mestre em Informática Forense e Segurança da Informação pela Universidade de Brasília.
+        </td>
+    </tr>
+</table>
+<br />
+<h1><a name="sessoes-tecnicas">Programação Detalhada - Sessões técnicas</a></h1>
+<table class="prog-detalhe">
+    <tr>
+      <th colspan="2" style="background:#666; color:#FFFFFF; text-align: left">Tuesday, November 20, 2012</th>
+    </tr>
+    <tr>
+      <th width="120" rowspan="4">08:30-10:00</th>
+      <td style="background: #1B8530; color:#FFF">Sessão Técnica 1 (ST1) - Virtualização</td>
+    </tr>
+    <tr>
+        <td><strong>Redes Virtuais Seguras: Uma Nova Abordagem de Mapeamento para Proteger contra Ataques de Disrupção na Rede Física</strong> <br />
+            Rodrigo Ruas Oliveira, <em>UFRGS, Brasil</em><br />
+            Leonardo Bays, <em>Universidade Federal do Rio Grande do Sul, Brasil</em><br />
+            Daniel Marcon, <em>Universidade Federal do Rio Grande do Sul (UFRGS), Brasil</em><br />
+            Miguel Neves, <em>UFRGS, Brasil</em><br />
+            Luciana Buriol, <em>Universidade Federal do Rio Grande do Sul, Brasil</em><br />
+            Luciano Paschoal Gaspary, Marinho Barcellos, <em>UFRGS, Brasil</em>. </td>
+    </tr>
+    <tr>
+        <td><strong>Um Modelo para Mapeamento Ótimo de Redes Virtuais com Requisitos de Segurança</strong> <br />
+            Leonardo Bays, <em>Universidade Federal do Rio Grande do Sul, Brasil</em><br />
+            Rodrigo Ruas Oliveira, <em>UFRGS, Brasil</em><br />
+            Luciana Buriol, <em>Universidade Federal do Rio Grande do Sul, Brasil</em><br />
+            Marinho Barcellos, Luciano Paschoal Gaspary, <em>UFRGS, Brasil</em>.</td>
+    </tr>
+    <tr>
+        <td><strong>Uma arquitetura para auditoria de nível de serviço para computação em nuvem</strong> <br />
+            Juliana Bachtold, <em>Pontifícia Universidade Católica do Paraná - PUCPR, Brasil</em><br />
+            Altair Santin, <em>Pontifícia Universidade Católica do Paraná (PUCPR), Brasil</em><br />
+            Maicon Stihler, Arlindo L. Marcon Jr., <em>PUCPR, Brasil</em><br />
+            Eduardo Viegas, <em>Pontifícia Universidade Católica do Paraná - PUCPR, Brasil</em>.</td>
+    </tr>
+    <tr>
+        <th rowspan="4">08:30-10:00</th>
+      <td style="background: #1B8530; color:#FFF">Sessão Técnica 2 (ST2) - Criptografia e PKI (1)</td>
+    </tr>
+    <tr>
+        <td><strong>Aprimoramento de Esquema de Identificação Baseado no Problema MQ</strong><br />
+            Fábio Monteiro, Denise Goya, <em>Universidade de São Paulo, Brasil</em><br />
+            Routo Terada, <em>University of Sao Paulo, Brazil</em>.</td>
+    </tr>
+    <tr>
+        <td><strong>Chi-square Attacks on Block-Cipher based Compression Functions</strong><br />
+            Daniel Santana de Freitas, <em>UFSC, Brasil</em><br />
+            Jorge Nakahara Junior, <em>---, Brasil</em>.</td>
+    </tr>
+    <tr>
+        <td><strong>Impossible-Differential Attacks on block-cipher based Hash and Compression Functions using 3D and Whirlpool</strong><br />
+            Daniel Santana de Freitas, <em>UFSC, Brasil</em><br />
+            Jorge Nakahara Junior, <em>---, Brasil</em>.</td>
+    </tr>
+    <tr>
+        <th rowspan="3">16:30-17:30</th>
+      <td style="background: #1B8530; color:#FFF">Sessão Técnica 3 (ST3) - Detecção e Prevenção de Ataques e Vulnerabilidades (2)</td>
+    </tr>
+    <tr>
+        <td><strong>SDA-COG Sistema de Detecção de Ataques para Rede de Rádios Cognitivos</strong><br />
+            Joffre Filho, <em>Universidade Federal do Rio de Janeiro, Brasil</em><br />
+            Luiz Rust, <em>Inmetro, Brasil</em><br />
+            Raphael Machado, <em>National Institute of Metrology, Standardization and Industrial Quality, Brazil</em><br />
+            Luci Pirmez, <em>Universidade Federal do Rio de Janeiro, Brasil</em>.</td>
+    </tr>
+    <tr>
+        <td><strong>Detecção de variações de malware metamórfico por meio de normalização de código e identificação de subfluxos</strong><br />
+            Marcelo Cozzolino, <em>Departamento de Polícia Federal do Brasil, Brasil</em><br />
+            Gilbert Martins, <em>Instituto de Ensino Superior FUCAPI, Brasil</em><br />
+            Eduardo Souto, <em>Universidade Federal de Amazonas - UFAM, Brasil</em><br />
+            Flavio Deus, <em>Universidade de Brasília, Brasil</em>.</td>
+    </tr>
+    <tr>
+        <th rowspan="3">17:30-18:30</th>
+      <td style="background: #1B8530; color:#FFF">Sessão Técnica 4 (ST4) - Criminalística</td>
+    </tr>
+    <tr>
+        <td><strong>Identificação de Autoria de Documentos Eletrônicos</strong><br />
+            Walter Oliveira Jr, <em>Pontifícia Universidade Católica do Paraná, Brasil</em><br />
+            Edson Justino, <em>Pontifícia Universidade Católica do Paraná, Brasil</em><br />
+            Luiz Oliveira, <em>UFPR, Brasil</em>.</td>
+    </tr>
+    <tr>
+        <td><strong>Modelagem de Aliciamento de Menores em Mensagens Instantâneas de Texto</strong> <br />
+            Priscila Santin, <em>Pontifícia Universidade Católica do Paraná, Brasil</em><br />
+            Cinthia Freitas, <em>PUCPR, Brasil</em><br />
+            Emerson Paraiso, <em>Pontifícia Universidade Católica do Paraná, Brasil</em><br />
+            Altair Santin, <em>Pontifícia Universidade Católica do Paraná / Pontifical Catholic University of Parana (PUCPR), Brazil</em>. </td>
+    </tr>
+    <tr>
+        <th rowspan="7">16:30-18:30</th>
+      <td style="background: #1B8530; color:#FFF">Sessão Artigos Curtos (AC)</td>
+    </tr>
+    <tr>
+        <td><strong>Um Modelo de Segurança e Privacidade para Redes Sociais Móveis Aplicadas à Área da Saúde</strong> <br />
+            Jesseildo Gonçalves, Ariel Teles, Francisco José Silva, <em>Universidade Federal do Maranhão, Brasil</em>. </td>
+    </tr>
+    <tr>
+        <td><strong>Identity Management Requirements in Future Internet</strong> <br />
+            Jenny Torres, <em>Université Pierre et Marie Curie - Paris 6, France</em><br />
+            Ricardo Tombesi Macedo, Michele Nogueira, <em>Universidade Federal do Paraná, Brasil</em><br />
+            Guy Pujolle, <em>Université Pierre et Marie Curie - Paris 6, France</em>.</td>
+    </tr>
+    <tr>
+        <td><strong>IPSFlow Uma Proposta de IPS Distribuído para Captura e Bloqueio Seletivo de Tráfego Malicioso em Redes Definidas por Software.</strong> <br />
+            Fábio Nagahama, Fernando Farias, <em>Universidade Federal do Pará, Brasil</em><br />
+            Elisangela Aguiar, <em>Universidade da Amazônia / Serviço Federal de Processamento de Dados SERPRO / Universidade Federal, Brasil</em><br />
+            Eduardo Cerqueira, Antônio Abelém, <em>Universidade Federal do Pará - UFPA, Brasil</em><br />
+            Luciano Paschoal Gaspary, Lisandro Zambenedetti Granville, <em>UFRGS, Brasil</em>.</td>
+    </tr>
+    <tr>
+        <td><strong>Avaliação do Classificador Artmap Fuzzy em redes 802.11 com criptografia Pré-RSN (WEP e WPA)</strong> <br />
+            Nelcileno Araujo, <em>Universidade Federal de Mato Grosso, Brasil</em><br />
+            Ruy de Oliveira, <em>Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso, Brasil</em><br />
+            Ailton Shinoda, <em>Universidade Estadual Paulista - UNESP, Brasil</em><br />
+            Ed' Wilson Ferreira, <em>IFMT - Instituto Federal de Mato Grosso, Brasil</em><br />
+            Valtemir do Nascimento, <em>Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso, Brasil</em>.</td>
+    </tr>
+    <tr>
+        <td><strong>Arquitetura de sistema integrado de defesa cibernética para detecção de botnets</strong> <br />
+            Sérgio Cardoso, Ronaldo Salles, <em>Instituto Militar de Engenharia, Brasil</em>.</td>
+    </tr>
+    <tr>
+        <td><strong>Uma Arquitetura para Mitigar Ataques DDoS em Serviços Web sob Nuvem</strong> <br />
+            Cinara Terezinha Menegazzo, <em>Universidade do Estado de Santa Catarina, Brasil</em><br />
+            Fernando Bernardelli, <em>Universidade Federal do Paraná, Brasil</em><br />
+            Fernando Gielow, Nadine Pari, <em>UFPR, Brasil</em><br />
+            Aldri dos Santos, <em>Universidade Federal do Paraná, Brasil</em>.</td>
+    </tr>
+    <tr>
+      <th colspan="2" style="background:#666; color:#FFFFFF; text-align: left">Wednesday, November 21, 2012</th>
+    </tr>
+    <tr>
+        <th rowspan="4">08:30-10:00</th>
+      <td style="background: #1B8530; color:#FFF">Sessão Técnica 5 (ST5) - Criptografia e PKI (2)</td>
+    </tr>
+    <tr>
+        <td><strong>Segurança do bit menos significativo no RSA e em curvas elípticas</strong> <br />
+            Dionathan Nakamura, <em>Universidade de São Paulo, Brasil</em><br />
+            Routo Terada, <em>University of Sao Paulo, Brazil</em>. </td>
+    </tr>
+    <tr>
+        <td><strong>Universally Composable Committed Oblivious Transfer With A Trusted Initializer</strong> <br />
+            Adriana Pinto, Anderson Nascimento, Bernardo David, <em>Universidade de Brasília, Brasil</em><br />
+            Jeroen Graaf, <em>Universidade Federal de Minas Gerais, Brasil</em>.</td>
+    </tr>
+    <tr>
+        <td><strong>Cleaning up the PKI for Long-term Signatures</strong> <br />
+            M. Vigil, <em>Technische Universtaet Darmstadt, Germany</em><br />
+            Ricardo Custódio, <em>UFSC, Brasil</em>.</td>
+    </tr>
+    <tr>
+        <th rowspan="4">08:30-10:00</th>
+      <td style="background: #1B8530; color:#FFF">Sessão Técnica 6 (ST6) - Mitigação e Tolerância a Ataques</td>
+    </tr>
+    <tr>
+        <td><strong>Mitigando Ataques de Egoísmo e Negação de Serviço em Nuvens via Agrupamento de Aplicações</strong> <br />
+            Daniel Marcon, <em>Universidade Federal do Rio Grande do Sul (UFRGS), Brasil</em><br />
+            Miguel Neves, Rodrigo Ruas Oliveira, <em>UFRGS, Brasil</em><br />
+            Luciana Buriol, <em>Universidade Federal do Rio Grande do Sul, Brasil</em><br />
+            Luciano Paschoal Gaspary, Marinho Barcellos, <em>UFRGS, Brasil</em>. </td>
+    </tr>
+    <tr>
+        <td><strong>Um Esquema Cooperativo para Análise da Presença de Ataques EUP em Redes Ad Hoc de Rádio Cognitivo</strong> <br />
+            Julio Soto, <em>Universidade Federal do Paraná - NR2, Brasil</em><br />
+            Saulo Queiroz, <em>Federal University of Parana, Brazil</em><br />
+            Michele Nogueira, <em>Universidade Federal do Paraná, Brasil</em>. </td>
+    </tr>
+    <tr>
+        <td><strong>Usando Criptografia de Limiar para Tolerar Clientes Maliciosos em Memória Compartilhada Dinâmica</strong> <br />
+            Eduardo Alchieri, <em>UnB, Brasil</em><br />
+            Alysson Bessani, <em>University of Lisbon, Faculty of Sciences, Portugal</em><br />
+            Joni da Silva Fraga, <em>UFSC, Brasil</em>. </td>
+    </tr>
+    <tr>
+        <th rowspan="4">14:30-16:00</th>
+      <td style="background: #1B8530; color:#FFF">Sessão Técnica 7 (ST7) - Segurança Baseada em Hardware e Controle de Acesso</td>
+    </tr>
+    <tr>
+        <td><strong>A Secure Relay Protocol for Door Access Control</strong> <br />
+          Hans  Hüttel,&nbsp;<em>University of Aalborg, Denmark</em><br />
+Erik Wognsen, Mikkel Normann Follin, Marcus Calverley, Henrik Søndberg Karlsen,  Bent Thomsen,&nbsp;<em>Department of Computer Science, Aalborg University,  Denmark</em>.</td>
+    </tr>
+    <tr>
+        <td><strong>Modified Current Mask Generation (M-CMG): An Improved Countermeasure Against Differential Power Analysis Attacks</strong> <br />
+            Daniel Mesquita, <em>Universidade Federal de Uberlândia, Brasil</em><br />
+            Hedi Besrour, Machhout Mohsen, Tourki Rached, <em>Monastir University, Tunisia</em>.</td>
+    </tr>
+    <tr>
+        <td><strong>Uma arquitetura de segurança para medidores inteligentes - verificação prática de dados de energia multi-tarifada</strong> <br />
+            Sérgio de Medeiros Câmara, <em>Universidade Federal do Rio de Janeiro, Brasil</em><br />
+            Raphael Machado, <em>National Institute of Metrology, Standardization and Industrial Quality, Brazil</em><br />
+            Luci Pirmez, <em>Universidade Federal do Rio de Janeiro, Brasil</em><br />
+            Luiz Rust, <em>Inmetro, Brasil</em>.
+      </td>
+    </tr>
+  <tr>
+        <th rowspan="4">14:30-16:00</th>
+        <td style="background: #1B8530; color:#FFF">Sessão Técnica 8 (ST8) - Detecção e Prevenção de Ataques e Vulnerabilidades (1)</td>
+    </tr>
+    <tr>
+        <td><strong>Avaliação da Sensibilidade de Preditores de Suavização Exponencial na Detecção de Ataques de Inundação</strong><br />
+            Nícolas Silva, Ronaldo Salles, <em>Instituto Militar de Engenharia, Brasil</em>.</td>
+    </tr>
+    <tr>
+        <td><strong>Análise de Métodos de Aprendizagem de Máquina para Detecção Automática de Spam Hosts</strong><br />
+            Renato Moraes Silva, <em>Universidade Estadual de Campinas - UNICAMP, Brasil</em><br />
+            Tiago Almeida, <em>Federal University of Sao Carlos, Brazil</em><br />
+            Akebo Yamakami, <em>Universidade Estadual de Campinas, Brasil</em>.</td>
+    </tr>
+    <tr>
+        <td><strong>Dynamic Detection of Address Leaks</strong><br />
+            Gabriel Silva Quadros, Rafael Martins, <em>UFMG, Brasil</em><br />
+            Fernando Quintao Pereira, <em>Universidade Federal de Minas Gerais, Brasil</em>.</td>
+    </tr>
+</table>
+<br />
+
+<h1>Livro de Minicursos</h1>
+Os minicursos do SBSeg 2012 estão disponiveis <a href="@docs/SBSeg2012Minicursos.pdf">online</a>.
+
+<h1><a name="minicursos">Programação Detalhada - Minicursos</a></h1>
+
+<table class="prog-detalhe">
+    <tr>
+      <th colspan="2" style="background:#666; color:#FFFFFF; text-align: left">Monday, November 19, 2012</th>
+    </tr>
+    <tr>
+        <th width="120" rowspan="2">08:30-12:30</th>
+      <td style="background: #1B8530; color:#FFF">Minicurso 1 (MC1)</td>
+    </tr>
+    <tr>
+        <td><strong>Análise de vulnerabilidades em Sistemas Computacionais Modernos: Conceitos, Exploits e Proteções</strong><br />
+            <em>Mateus Ferreira (UFAM), Eduardo Feitosa (UFAM), Thiago Rocha (UFAM), Gilbert Martins (Instituto de Ensino Superior FUCAPI), Eduardo Souto (UFAM)</em></p><strong>Resumo</strong>: O crescimento da ocorrência de ataques cibernéticos tem elevado o interesse da comunidade científica e os investimentos de organizações na busca por novas soluções que sejam capazes de lidar com as técnicas de invasão de sistemas computacionais. Entre essas técnicas, o desenvolvimento de exploits artefatos cuidadosamente construídos para explorar falhas vem sendo destacado por diversos autores como uma das principais armas dos atacantes nas últimas décadas. Ã€ medida que esses códigos maliciosos foram se difundindo, mecanismos de proteção foram incorporados aos sistemas operacionais modernos, com o intuito de barrar essas investidas. Em contrapartida, novas técnicas de desenvolvimento de exploits têm sido elaboradas a fim de burlar as barreiras implementadas. Por esse motivo, o desenvolvimento desses artefatos tem sido incorporado também por analistas de segurança às metodologias de testes de penetração, como estratégia para prevenção de ataques. Assim, ao destacar as principais técnicas atualmente empregadas no desenvolvimento de exploits e os métodos usados no comprometimento de ambientes protegidos, este minicurso permite a ampla difusão das estratégias comumente utilizadas pelos atacantes para explorar softwares defeituosos. Consequentemente, contribui também para a pesquisa de novos mecanismos de defesa, a fim de reduzir a escalada do número de explorações de sistemas e minimizar os prejuízos delas decorrentes.</td>
+    </tr>
+    <tr>
+        <th rowspan="2">14:30-18:30</th>
+      <td style="background: #1B8530; color:#FFF">Minicurso 2 (MC2)</td>
+    </tr>
+    <tr>
+        <td><strong>Introdução à Segurança de Dispositivos Móveis Modernos - Um Estudo de Caso em Android</strong><br />
+            <em>Alexandre Braga (CPqD), Erick Nascimento (CPqD), Lucas Palma (CPqD), Rafael Rosa (CPqD)</em></p><strong>Resumo</strong>: Os dispositivos móveis, em particular os smartphones e os tablets, são os protagonistas de uma revolução silenciosa, caracterizada pelo uso de dispositivos com grande poder de processamento e conectividade em ambientes públicos e privados. A agregação de tais características à ampla difusão de dispositivos móveis, trouxe uma série de ameaças, tornando necessário um estudo de novas técnicas e ferramentas de segurança. Este curso tem a finalidade de esclarecer estes assuntos, abordando os aspectos de segurança da informação relacionados aos dispositivos móveis, exibindo ameaças e vulnerabilidades nesta temática. </td>
+    </tr>
+    <tr>
+      <th colspan="2" style="background:#666; color:#FFFFFF; text-align: left">Thursday, November 22, 2012</th>
+    </tr>
+    <tr>
+        <th width="120" rowspan="2">08:30-12:30</th>
+      <td style="background: #1B8530; color:#FFF">Minicurso 3 (MC3)</td>
+    </tr>
+    <tr>
+        <td><strong>Segurança em Redes Centradas em Conteúdo: Vulnerabilidades, Ataques e Contramedidas</strong><br />
+            <em>Igor C. G. Ribeiro (UFF), Flavio Q. Guimarães (UFF), Juliano Kazienko (UFF), Antonio Rocha (UFF), Pedro Velloso (UFF), Igor Moraes (UFF), Célio Vinicius Neves de Albuquerque (UFF)</em></p><strong>Resumo</strong>: Este minicurso tem como objetivo apresentar um estudo teórico das melhorias de segurança, vulnerabilidades, possíveis ataques e contramedidas no âmbito da arquitetura CCN. Tal estudo é realizado com foco nos serviços de segurança, como privacidade, integridade, disponibilidade e proveniência dos dados trocados na rede. Adicionalmente, será demonstrado, através de experimentos práticos com o CCNx, uma maneira de explorar as vulnerabilidades presentes na arquitetura CCN através de um dos ataques apresentados neste trabalho. Ao final do minicurso, os participantes terão uma visão crítica a respeito da segurança dessa nova arquitetura para a Internet do Futuro.</td>
+    </tr>
+    <tr>
+        <th rowspan="2">14:30-18:30</th>
+      <td style="background: #1B8530; color:#FFF">Minicurso 4 (MC4)</td>
+    </tr>
+    <tr>
+        <td><strong>Encriptação Homomórfica</strong><br />
+            <em>Eduardo Morais (Unicamp), Ricardo Dahab (Unicamp)</em></p><strong>Resumo</strong>: Em 1978, Rivest, Adleman e Dertouzos [RAD78] sugeriram a construção de homomorfismos secretos - privacy homomorphisms - como forma de prover um mecanismo de proteção para computação sobre dados sigilosos. O problema permaneceu em aberto até recentemente, quando em 2009 Craig Gentry [Gen09] o resolveu sugerindo a utilização de reticulados ideais na construção de um criptossistema completamente homomórfico. Infelizmente a proposta de Craig Gentry não é eficiente o suficiente para ser usada na prática, mas inúmeros trabalhos têm contribuído para que a eficiência dos algoritmos se torne cada vez maior. Neste minicurso serão estudados os esquemas recentemente propostos por Craig Gentry, primeiramente considerando a versão mais simples, que usa números inteiros e em seguida estudando o esquema baseado em reticulados ideais.</td>
+    </tr>
+</table>
+
+<br />
+<h1>Local do Evento</h1>
+<p>
+<strong><a name="local-evento" href="http://www.pestana.com/pt/pestana-curitiba-hotel/pages/home.aspx">Pestana Hotel Curitiba</a></strong><br />
+Rua Comendador Araújo, 499; 80420-000; Batel
+</p>
+            </div>
+
+            <ul id="menu">
+                <li><a href="index.html" id="btinicio">Início</a></li>
+                <li><a href="evento.html" id="btevento">Sobre o Evento</a></li>
+                <li><a href="comites.html" id="btcomites">Comitês</a></li>
+                <li><a href="chamadas.html" id="btchamadas">Chamadas</a></li>
+                <li><a href="inscricoes.html" id="btinscricoes">Inscrições</a></li>
+                <li><a href="programacao.html" id="btprogramacao">Programação</a></li>
+                <li><a href="viagemeturismo.html" id="btviagemeturismo">Viagem e Turismo</a></li>
+                <li><a href="contato.html" id="btcontato">Contato</a></li>
+            </ul>
+        </div>
+
+        <div id="rodape">
+            <div>
+                <h3>Promoção</h3>
+                <a href="http://www.sbc.org.br/" target="_blank"><img src="img/sbc.jpg" alt="SBC" /></a>
+            </div>
+            <div>
+                <h3>Organização</h3>
+                <a href="http://www.pucpr.br/" target="_blank"><img src="img/pucpr.jpg" alt="PUCPR" /></a>
+                <a href="http://www.ufpr.br/" target="_blank"><img src="img/ufpr.jpg" alt="UFPR" /></a>
+                <a href="http://www.utfpr.edu.br/" target="_blank"><img src="img/utfpr.jpg" alt="UTFPR" /></a>
+            </div>
+            <div id="apoio">
+                <h3>Apoio</h3>
+                <a href="http://www.cgi.br" target="_blank"><img src="img/cgibr.jpg" alt="CGIBR" /></a>
+                <a href="http://www.intel.br" target="_blank"><img src="img/intel.png" alt="Intel" /></a><br/>
+                <a href="http://www.bb.br" target="_blank"><img src="img/bb.jpg" width="370" alt="Banco do Brasil" /></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="copyright">
+        <p>
+            <a id="twitter" href="http://www.twitter.com/#!/sbseg2012" target="_blank">
+                <img src="img/twitter.jpg" alt="Twitter" />
+            </a>
+            Copyright 2012 © Todos os direitos reservados (
+            <a id="webmaster" href="/cdn-cgi/l/email-protection#82f1e0f1e7e5b0b2b3b0c2f2f2e5ebe3acf2f7e1f2f0ace0f0">webmaster</a>)
+        </p>
+    </div>
+    <p id="intel">Intel e seu logotipo são marcas registradas da Intel Corporation nos EUA e/ou em outros países.</p>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

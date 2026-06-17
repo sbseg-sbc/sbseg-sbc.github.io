@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>SBSeg 2012</title>
+    <link href="css/estilo.css" rel="stylesheet" type="text/css" />
+
+    <!-- Estilo do banner de cookies -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+    <!-- Script Google Analytics (bloqueado até consentimento) -->
+    <script type="text/plain" data-cookiecategory="analytics">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27800002-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); 
+        ga.type = 'text/javascript'; 
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; 
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+    <!-- Biblioteca do Cookie Consent -->
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+
+    <script>
+    window.addEventListener('load', function(){
+      var cc = window.cookieconsent.initialise({
+        "type": "opt-in",
+        "position": "bottom",
+        "palette": {
+          "popup": {
+            "background": "#ffffff",
+            "text": "#4b4b4b"
+          },
+          "button": {
+            "background": "#7a003c",
+            "text": "#ffffff",
+            "border": "#7a003c"
+          }
+        },
+        "content": {
+          "message": "Utilizamos cookies para melhorar sua experiência em nosso site e promover os nossos serviços. Ao permitir todos os cookies, você terá acesso a todas as funcionalidades do site. Ao rejeitar os cookies, aqueles que não forem estritamente necessários permanecerão desativados. Saiba mais em nosso",
+          "link": "Aviso de Privacidade",
+          "href": "https://www.pucpr.br/politica-de-privacidade/",
+          "allow": "Permitir Todos os Cookies",
+          "deny": "Recusar não essenciais",
+          "dismiss": "Gerenciar Cookies"
+        },
+        "revokable": true,
+        "revokeBtn": "<div id='reabrirCookies' class='cc-revoke cc-bottom cc-left' style='background:#7a003c;color:#fff;cursor:pointer;padding:10px 15px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.2);'>Configurações de Cookies</div>",
+        "categories": {
+          "necessary": {
+            "needed": true,
+            "wanted": true,
+            "checked": true,
+            "readonly": true,
+            "text": "Cookies essenciais que garantem o funcionamento adequado do site e não podem ser desativados."
+          },
+          "analytics": {
+            "needed": false,
+            "wanted": false,
+            "checked": false,
+            "text": "Cookies de análise e desempenho que nos ajudam a entender como os visitantes interagem com o site e a melhorar nossos serviços."
+          }
+        },
+        "onStatusChange": function(status) {
+          if (this.hasConsented()) {
+            var scripts = document.querySelectorAll('script[type=\"text/plain\"][data-cookiecategory=\"analytics\"]');
+            scripts.forEach(function(tag) {
+              var s = document.createElement('script');
+              s.type = "text/javascript";
+              if (tag.src) s.src = tag.src;
+              else s.innerHTML = tag.innerHTML;
+              document.head.appendChild(s);
+            });
+          }
+        }
+      });
+
+      // Garante que o botão de reabertura funcione após inicialização
+      setTimeout(function() {
+        var btn = document.getElementById('reabrirCookies');
+        if (btn) {
+          btn.addEventListener('click', function() {
+            cc.revokeChoice();
+          });
+        }
+      }, 1000);
+    });
+    </script>
+</head>
+
+<body id="wticg">
+    <div id="geral">
+        <div id="cabecalho">
+            <img class="float-right" src="img/cabecalho2.jpg" alt="" />
+            <img class="float-left" src="img/cabecalho1.jpg" alt="" />
+            <a class="float-right" href="http://sbseg2012.ppgia.pucpr.br/en/index.php">
+                <img class="flag" src="img/en.gif" alt="English version"/>
+            </a>
+            <img id="data" src="img/data.jpg" alt="18 a 29 de novembro em Curitiba-PR" />
+            <a id="logo" href="index.html" title="Voltar para página inicial">
+                <img src="img/logo.jpg" alt="SBSeg 2012" />
+            </a>
+        </div>
+
+        <div id="central">
+            <div id="conteudo">
+                <h1>Chamada de Trabalhos</h1>
+<p>Aqui você encontra a chamada de trabalhos do <a href="@docs/SBSegWTICG.txt">Workshop de Trabalhos de Iniciação Científica - WTICG</a>.</p>
+
+<h1>Artigos Aceitos</h1>
+<p>Aqui você encontra os <a href="wticg.html-aceitos">artigos aceitos</a> para o WTICG 2012.</p>
+
+<h1>Programação</h1>
+
+<table class="prog-detalhe">
+ 
+   <tr>
+      <th colspan="2" style="background:#666; color:#FFFFFF; text-align: left">19 de Novembro de 2012</th>
+    </tr>
+
+    <tr>
+      <th width="120" rowspan="4">08:30-10:00</th>
+      <td style="background: #1B8530; color:#FFF">Sessão Técnica 1 - Privacidade e Segurança em dispositivos móveis</td>
+    </tr>
+
+    <tr>
+        <td><strong>Uma Estratégia para Gerenciar o Compartilhamento de Recursos entre Dispositivos Móveis</strong> <br/>
+	Tiago Henrique Bono, <em>Universidade Estadual de Maringá</em><br/>
+	Luciana Andréia Fondazzi Martimiano, <em>Universidade Estadual de Maringá</em><br/></td>
+    </tr>
+
+    <tr>
+        <td><strong>Computação Distribuída com Preservação de Privacidade</strong><br/>
+	Luís Guilherme Silva Pena, <em>Universidade Federal de Minas Gerais</em><br/>
+	Olivia Maria Alves Coelho, <em>Universidade Federal de Minas Gerais</em><br/>
+	Jeroen van de Graaf, <em>Universidade Federal de Minas Gerais</em><br/></td>
+    </tr>
+
+    <tr>
+        <td><strong>Senhas descartáveis em dispositivos móveis para ambientes de Telemedicina</strong><br/>
+	Thaís Bardini Idalino, <em>Universidade Federal de Santa Catarina</em><br/>
+	Dayana Pierina Brustolin Spagnuelo, <em>Universidade Federal de Santa Catarina</em><br/></td>
+    </tr>
+
+    <tr>
+	<th>10:00-10:30</th>
+	<td><strong>Coffee Break</strong></td>
+    </tr>
+
+    <tr>
+        <th rowspan="5">10:30-12:30</th>
+      <td style="background: #1B8530; color:#FFF">Sessão Técnica 2 - Algoritmos, Protocolos e Técnicas Criptográficas</td>
+    </tr>
+
+    <tr>
+        <td><strong>Modelagem e Verificação Formal de Aspectos de Tempo Real do Protocolo Kerberos</strong><br/>
+	Bruno Marques Cremonezi, <em>Universidade Federal de Juiz de Fora</em><br/>
+	Guilherme Albuquerque Pinto, <em>Universidade Federal de Juiz de Fora</em><br/></td>
+    </tr>
+
+    <tr>
+       <td><strong>Análise e Implementação de um Método para Prover Integridade a Sistemas de Banco de Dados</strong><br/>
+	Gabriel Garcia Becker, <em>Universidade Federal de Santa Catarina</em><br/>
+	Lucas Pandolfo Perin, <em>Universidade Federal de Santa Catarina</em><br/>
+	Anderson Luiz Silvério, <em>Universidade Federal de Santa Catarina</em><br/>
+	Marcelo Carlomagno Carlos, <em>Royal Holloway University of London</em><br/>
+	Ricardo Felipe Custódio, <em>Universidade Federal de Santa Catarina</em><br/>
+	</td>
+	</tr>
+
+	<tr>
+	<td><strong>Um Protocolo Criptográfico para Controle de Medicamentos</strong><br/>
+	Bruno Imhof, <em>Universidade Federal de Santa Catarina</em><br/>
+	Eduardo dos Santos, <em>Universidade Federal de Santa Catarina</em><br/>
+	Ricardo Felipe Custódio, <em>Universidade Federal de Santa Catarina</em><br/>
+	</td>
+	</tr>
+
+	<tr>
+	<td><strong>Adaptações em um HSM para Homologação na ICP-Brasil</strong><br/>
+	Camila Maia Cardozo, <em>Universidade Federal de Santa Catarina</em><br/>
+	Guilherme André Welter, <em>Universidade Federal de Santa Catarina</em><br/>
+	Cláudio Dettoni Júnior, <em>Universidade Federal de Santa Catarina</em><br/>
+	André Bereza Júnior, <em>Universidade Federal de Santa Catarina</em><br/>
+	Ricardo Felipe Custódio, <em>Universidade Federal de Santa Catarina</em><br/>
+	</td>
+	</tr>
+	
+    <tr>
+	<th>12:30-14:30</th>
+	<td><strong>Almoço</strong></td>
+    </tr>
+
+    <tr>
+        <th rowspan="4">14:30-16:00</th>
+      <td style="background: #1B8530; color:#FFF">Sessão Técnica 3 - Segurança em Sistemas</td>
+    </tr>
+
+	<tr>
+	<td><strong>Detecção de Phishing em Páginas Web Utilizando Técnicas de Aprendizagem de Máquina</strong><br/>
+	Francisco Fagner do Rego Cunha, <em>Universidade Federal do Amazonas</em><br/>
+	Eulanda Miranda dos Santos, <em>Universidade Federal do Amazonas</em><br/>
+	Eduardo James Pereira Souto, <em>Universidade Federal do Amazonas</em></br>
+	</td>
+	</tr>
+
+	<tr>
+	<td><strong>Desenvolvimento de Roteiros Laboratoriais de Segurança Computacional em Ambientes Virtualizados</strong><br/>
+	Rodrigo Fantinati Ferreira, <em>Universidade Federal de Santa Catarina</em><br/>
+	Carla Merkle Westphall, <em>Universidade Federal de Santa Catarina</em><br/>
+	</td>
+	</tr>
+
+	<tr>
+	<td><strong>CURUPIRA: Uma Solução para Controle dos Pais em Navegadores Web</strong><br/>
+	Diego Santos Azulay, <em>Universidade Federal do Amazonas</em><br/>
+	Hugo Assis Cunha, <em>Universidade Federal do Amazonas</em><br/>
+	Eduardo Luzeiro Feitosa, <em>Universidade Federal do Amazonas</em><br/>
+	</td>
+	</tr>
+
+    <tr>
+	<th>16:00-16:30</th>
+	<td><strong>Coffee Break</strong></td>
+    </tr>
+
+    <tr>
+	<th>17:00-18:00</th>
+	<td><strong>Premiação e Encerramento do Workshop</strong></td>
+    </tr>
+
+</table>
+            </div>
+
+            <ul id="menu">
+                <li><a href="index.html" id="btinicio">Início</a></li>
+                <li><a href="evento.html" id="btevento">Sobre o Evento</a></li>
+                <li><a href="comites.html" id="btcomites">Comitês</a></li>
+                <li><a href="chamadas.html" id="btchamadas">Chamadas</a></li>
+                <li><a href="inscricoes.html" id="btinscricoes">Inscrições</a></li>
+                <li><a href="programacao.html" id="btprogramacao">Programação</a></li>
+                <li><a href="viagemeturismo.html" id="btviagemeturismo">Viagem e Turismo</a></li>
+                <li><a href="contato.html" id="btcontato">Contato</a></li>
+            </ul>
+        </div>
+
+        <div id="rodape">
+            <div>
+                <h3>Promoção</h3>
+                <a href="http://www.sbc.org.br/" target="_blank"><img src="img/sbc.jpg" alt="SBC" /></a>
+            </div>
+            <div>
+                <h3>Organização</h3>
+                <a href="http://www.pucpr.br/" target="_blank"><img src="img/pucpr.jpg" alt="PUCPR" /></a>
+                <a href="http://www.ufpr.br/" target="_blank"><img src="img/ufpr.jpg" alt="UFPR" /></a>
+                <a href="http://www.utfpr.edu.br/" target="_blank"><img src="img/utfpr.jpg" alt="UTFPR" /></a>
+            </div>
+            <div id="apoio">
+                <h3>Apoio</h3>
+                <a href="http://www.cgi.br" target="_blank"><img src="img/cgibr.jpg" alt="CGIBR" /></a>
+                <a href="http://www.intel.br" target="_blank"><img src="img/intel.png" alt="Intel" /></a><br/>
+                <a href="http://www.bb.br" target="_blank"><img src="img/bb.jpg" width="370" alt="Banco do Brasil" /></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="copyright">
+        <p>
+            <a id="twitter" href="http://www.twitter.com/#!/sbseg2012" target="_blank">
+                <img src="img/twitter.jpg" alt="Twitter" />
+            </a>
+            Copyright 2012 © Todos os direitos reservados (
+            <a id="webmaster" href="/cdn-cgi/l/email-protection#5c2f3e2f393b6e6c6d6e1c2c2c3b353d722c293f2c2e723e2e">webmaster</a>)
+        </p>
+    </div>
+    <p id="intel">Intel e seu logotipo são marcas registradas da Intel Corporation nos EUA e/ou em outros países.</p>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
