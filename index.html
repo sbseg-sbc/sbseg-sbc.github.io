@@ -4,11 +4,64 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SBSeg — Simpósio Brasileiro de Cibersegurança · Arquivo histórico</title>
-<meta name="description" content="Arquivo histórico das edições do SBSeg, o Simpósio Brasileiro de Cibersegurança, promovido pela CESeg/SBC.">
+<meta name="description" content="Arquivo histórico das edições do SBSeg, o Simpósio Brasileiro de Cibersegurança, promovido pela CESeg/SBC. Índice cronológico com cópias estáticas preservadas de cada edição.">
+<meta name="keywords" content="SBSeg, arquivo histórico, cibersegurança, segurança da informação, CESeg, SBC, simpósio, anais, edições">
+<link rel="canonical" href="https://sbseg-sbc.github.io/">
+
+<!-- Open Graph / social — classifica o site como arquivo de uma coleção -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SBSeg · Arquivo histórico">
+<meta property="og:title" content="SBSeg — Arquivo histórico das edições">
+<meta property="og:description" content="Arquivo histórico do Simpósio Brasileiro de Cibersegurança (SBSeg): índice cronológico de 15 edições (2011–2025) com cópias estáticas preservadas.">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://sbseg-sbc.github.io/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SBSeg — Arquivo histórico das edições">
+<meta name="twitter:description" content="Índice cronológico de 15 edições (2011–2025) do Simpósio Brasileiro de Cibersegurança, com cópias estáticas preservadas.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%230e8a78' d='M16 2 4 7v8c0 7 5 12 12 15 7-3 12-8 12-15V7L16 2Zm0 5 8 3v5c0 5-3 8-8 10-5-2-8-5-8-10V10l8-3Z'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Classificação estruturada (schema.org): identifica o site como uma COLEÇÃO ARQUIVÍSTICA,
+     no mesmo espírito do Internet Archive. Estático para ser legível por crawlers sem JS;
+     a lista de edições (hasPart) é enriquecida via JS a partir do array EDITIONS. -->
+<script type="application/ld+json" id="ld-collection">
+{
+  "@context": "https://schema.org",
+  "@type": ["WebSite", "CollectionPage", "ArchiveComponent"],
+  "name": "SBSeg — Arquivo histórico",
+  "alternateName": "Arquivo histórico do Simpósio Brasileiro de Cibersegurança",
+  "url": "https://sbseg-sbc.github.io/",
+  "inLanguage": "pt-BR",
+  "description": "Arquivo histórico das edições do SBSeg, o Simpósio Brasileiro de Cibersegurança. Índice cronológico (2011–2025) com cópias estáticas preservadas dos sites de cada edição, navegáveis offline.",
+  "keywords": ["cibersegurança", "segurança da informação", "arquivo histórico", "anais", "SBSeg"],
+  "isAccessibleForFree": true,
+  "holdingArchive": {
+    "@type": "ArchiveOrganization",
+    "name": "Comissão Especial de Cibersegurança (CESeg)",
+    "alternateName": "CESeg",
+    "url": "https://ceseg-sbc.github.io",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Sociedade Brasileira de Computação (SBC)",
+      "alternateName": "SBC",
+      "url": "https://www.sbc.org.br"
+    }
+  },
+  "about": {
+    "@type": "EventSeries",
+    "name": "Simpósio Brasileiro de Cibersegurança (SBSeg)",
+    "alternateName": "Simpósio Brasileiro em Segurança da Informação e de Sistemas Computacionais",
+    "startDate": "2011",
+    "organizer": {
+      "@type": "Organization",
+      "name": "CESeg / SBC",
+      "url": "https://ceseg-sbc.github.io"
+    }
+  }
+}
+</script>
 <style>
   :root{
     --bg:#ffffff;
@@ -58,6 +111,40 @@
   h1.title{font-size:clamp(2.4rem,6vw,4rem);font-weight:800;letter-spacing:-.03em;line-height:1.04}
   .lead{margin-top:20px;max-width:64ch;font-size:1.15rem;color:var(--muted)}
   .lead strong{color:var(--text);font-weight:600}
+  .ceseg{
+    margin-top:22px;display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
+    background:var(--accent-soft);border:1px solid #cfe6e1;border-radius:12px;
+    padding:12px 16px;font-size:.95rem;color:var(--accent-dark);max-width:64ch;
+  }
+  .ceseg b{font-weight:700}
+  .ceseg .by{color:var(--muted);font-weight:500}
+
+  /* ---------- name-change notice ---------- */
+  .rename{
+    margin-top:26px;max-width:74ch;border:1px solid var(--line);
+    border-left:3px solid var(--accent);border-radius:10px;background:var(--bg-soft);
+    padding:16px 18px;
+  }
+  .rename .rh{
+    display:flex;align-items:center;gap:10px;font-weight:700;color:var(--text);
+    font-size:.95rem;margin-bottom:10px;
+  }
+  .rename .yrflip{
+    display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:700;
+    color:var(--accent-dark);background:var(--accent-soft);border:1px solid #cfe6e1;
+    border-radius:999px;padding:3px 10px;letter-spacing:.01em;
+  }
+  .rename .yrflip .ar{color:var(--accent)}
+  .rename ul{list-style:none;display:grid;gap:10px}
+  .rename li{font-size:.92rem;color:var(--muted);line-height:1.5}
+  .rename li .lbl{
+    display:inline-block;font-size:.72rem;font-weight:700;text-transform:uppercase;
+    letter-spacing:.08em;color:var(--faint);margin-bottom:2px;
+  }
+  .rename .old{color:var(--faint)}
+  .rename .new{color:var(--text);font-weight:600}
+  .rename .new b{color:var(--accent-dark)}
+  .rename .arrow{color:var(--accent);font-weight:700;padding:0 4px}
   .meta{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px 14px}
   .meta span{
     background:var(--bg-soft);border:1px solid var(--line);border-radius:999px;
@@ -153,16 +240,46 @@
 <main id="top">
   <section class="hero">
     <div class="wrap">
-      <p class="eyebrow">CESeg · Sociedade Brasileira de Computação</p>
+      <p class="eyebrow">Comissão Especial de Cibersegurança (CESeg) · Sociedade Brasileira de Computação (SBC)</p>
       <h1 class="title">Simpósio Brasileiro<br>de Cibersegurança</h1>
       <p class="lead"><strong>SBSeg</strong> — o principal fórum nacional de pesquisa em
       segurança da informação e cibersegurança. Este é o <strong>arquivo histórico</strong>
       do evento: um índice das edições ao longo dos anos, com cópias offline preservadas e
       acesso aos sites de cada edição.</p>
+      <div class="ceseg">
+        <span class="by">mantido pela</span>
+        <b>Comissão Especial de Cibersegurança (CESeg)</b>
+        <span class="by">da</span>
+        <b>Sociedade Brasileira de Computação (SBC)</b>
+      </div>
       <div class="meta">
         <span><b>15</b> edições registradas</span>
         <span>2011 <b>—</b> 2025</span>
-        <span>promovido pela <b>CESeg</b>/SBC</span>
+        <span>promovido pela <b>CESeg</b> / <b>SBC</b></span>
+      </div>
+
+      <div class="rename">
+        <div class="rh">
+          <span class="yrflip">2024 <span class="ar">→</span> 2025</span>
+          Mudança de nome em 2025
+        </div>
+        <ul>
+          <li>
+            <span class="lbl">Evento (SBSeg)</span>
+            <span class="old">Simpósio Brasileiro em Segurança da Informação e de Sistemas Computacionais</span>
+            <span class="arrow">→</span>
+            <span class="new"><b>Simpósio Brasileiro de Cibersegurança</b></span>
+          </li>
+          <li>
+            <span class="lbl">Comissão (CESeg)</span>
+            <span class="old">Comissão Especial em Segurança da Informação e de Sistemas Computacionais</span>
+            <span class="arrow">→</span>
+            <span class="new"><b>Comissão Especial de Cibersegurança</b></span>
+          </li>
+        </ul>
+        <p style="margin-top:10px;font-size:.86rem;color:var(--faint)">Até a edição de
+        <b>2024</b> vigorava o nome longo; a partir de <b>2025</b> passou a valer o nome
+        atual e oficial, mais enxuto. As siglas <b>SBSeg</b> e <b>CESeg</b> permaneceram.</p>
       </div>
     </div>
   </section>
@@ -227,7 +344,7 @@
     para o site ao vivo (quando ainda disponível).</p>
     <p class="colophon">
       SBSeg — Simpósio Brasileiro de Cibersegurança<br>
-      Comissão Especial em Segurança da Informação e de Sistemas Computacionais (CESeg) · SBC<br>
+      Comissão Especial de Cibersegurança (CESeg) · Sociedade Brasileira de Computação (SBC)<br>
       Arquivo histórico de edições · atualizado em 2026-06-17
     </p>
   </div>
@@ -276,6 +393,28 @@
       +   '<div class="actions">'+acts.join('')+'</div>'
       + '</div></div>';
   }).join('');
+
+  // Enriquece o JSON-LD da coleção com cada edição como parte arquivada (hasPart),
+  // mantendo a classificação estruturada em sincronia com o array EDITIONS acima.
+  try {
+    var base = "https://sbseg-sbc.github.io/";
+    var ld = JSON.parse(document.getElementById('ld-collection').textContent);
+    ld.hasPart = EDITIONS.map(function(e){
+      var part = {
+        "@type": ["Event", "ArchiveComponent"],
+        "name": e.n,
+        "startDate": String(e.y),
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "superEvent": { "@type": "EventSeries", "name": "SBSeg" },
+        "location": { "@type": "Place", "name": e.loc }
+      };
+      if(e.archive) part.archivedAt = base + e.archive;   // cópia estática preservada
+      if(e.site)    part.url = e.site;                      // site original (quando no ar)
+      return part;
+    });
+    ld.numberOfItems = EDITIONS.length;
+    document.getElementById('ld-collection').textContent = JSON.stringify(ld);
+  } catch (err) { /* enrichment é opcional; o LD estático já classifica o site */ }
 </script>
 </body>
 </html>
