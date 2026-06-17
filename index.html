@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SBSeg — Simpósio Brasileiro de Segurança da Informação e de Sistemas Computacionais</title>
+<title>SBSeg: Simpósio Brasileiro de Segurança da Informação e de Sistemas Computacionais</title>
 <meta name="description" content="Arquivo histórico das edições do SBSeg, o Simpósio Brasileiro de Segurança da Informação e de Sistemas Computacionais, promovido pela CESeg/SBC.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%235eead4' d='M16 2 4 7v8c0 7 5 12 12 15 7-3 12-8 12-15V7L16 2Zm0 5 8 3v5c0 5-3 8-8 10-5-2-8-5-8-10V10l8-3Z'/%3E%3Crect x='13' y='14' width='6' height='7' rx='1' fill='%235eead4'/%3E%3Cpath fill='none' stroke='%235eead4' stroke-width='1.6' d='M14 14v-2a2 2 0 0 1 4 0v2'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -127,6 +127,11 @@
     color:var(--accent);border:1px solid var(--accent-dim);border-radius:999px;padding:3px 9px;
     background:rgba(94,234,212,.06);
   }
+  /* offline-archive badge is a real link sitting above the row's stretched link */
+  a.badge{position:relative;z-index:2;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+  a.badge:hover{background:rgba(94,234,212,.18);border-color:var(--accent);color:#fff}
+  /* stretched link: covers the whole row so it stays clickable as a div */
+  .ed-link{position:absolute;inset:0;z-index:1}
   .ed .go{
     font-family:"IBM Plex Mono",monospace;font-size:.82rem;color:var(--faint);
     display:flex;align-items:center;gap:8px;white-space:nowrap;transition:color .25s;
@@ -187,11 +192,11 @@
     <div class="wrap">
       <p class="eyebrow">CESeg · Sociedade Brasileira de Computação</p>
       <h1 class="title">SB<span class="seg">Seg</span></h1>
-      <p class="lead"><strong>Simpósio Brasileiro de Segurança da Informação e de Sistemas Computacionais</strong> — o principal fórum nacional de pesquisa em segurança da informação e cibersegurança.</p>
+      <p class="lead"><strong>Simpósio Brasileiro de Segurança da Informação e de Sistemas Computacionais</strong>, o principal fórum nacional de pesquisa em segurança da informação e cibersegurança.</p>
       <p class="sub">Este é o arquivo histórico do evento: um índice das edições do SBSeg ao longo dos anos, com acesso aos sites de cada edição.</p>
       <div class="meta">
         <span><b>14</b> edições registradas</span>
-        <span>2012 <b>—</b> 2025</span>
+        <span>2012 <b>a</b> 2025</span>
         <span>promovido pela <b>CESeg</b>/SBC</span>
       </div>
     </div>
@@ -205,39 +210,41 @@
       </div>
       <div class="ed-list">
 
-        <a class="ed reveal" href="https://sbseg2025.ppgia.pucpr.br/" target="_blank" rel="noopener">
+        <div class="ed reveal">
           <span class="year">2025</span>
           <span class="info">
-            <span class="name">SBSeg 2025<span class="badge">arquivo offline</span></span><br>
-            <span class="loc">Curitiba · PR — PUCPR</span>
+            <span class="name">SBSeg 2025<a class="badge" href="sbseg2025/">arquivo offline</a></span><br>
+            <span class="loc">Curitiba · PR · PUCPR</span>
           </span>
           <span class="go">acessar <span class="arrow">↗</span></span>
-        </a>
+          <a class="ed-link" href="https://sbseg2025.ppgia.pucpr.br/" target="_blank" rel="noopener" aria-label="Acessar o site original do SBSeg 2025"></a>
+        </div>
 
-        <a class="ed reveal" href="https://sbseg2024.ita.br/" target="_blank" rel="noopener">
+        <div class="ed reveal">
           <span class="year">2024</span>
           <span class="info">
-            <span class="name">SBSeg 2024<span class="badge">arquivo offline</span></span><br>
-            <span class="loc">São José dos Campos · SP — ITA · 16–19 set</span>
+            <span class="name">SBSeg 2024<a class="badge" href="sbseg2024/">arquivo offline</a></span><br>
+            <span class="loc">São José dos Campos · SP · ITA · 16 a 19 set</span>
           </span>
           <span class="go">acessar <span class="arrow">↗</span></span>
-        </a>
+          <a class="ed-link" href="https://sbseg2024.ita.br/" target="_blank" rel="noopener" aria-label="Acessar o site original do SBSeg 2024"></a>
+        </div>
 
         <a class="ed reveal" href="https://sbseg2023.ufjf.br/" target="_blank" rel="noopener">
           <span class="year">2023</span>
-          <span class="info"><span class="name">SBSeg 2023</span><br><span class="loc">Juiz de Fora · MG — UFJF</span></span>
+          <span class="info"><span class="name">SBSeg 2023</span><br><span class="loc">Juiz de Fora · MG · UFJF</span></span>
           <span class="go">acessar <span class="arrow">↗</span></span>
         </a>
 
         <a class="ed reveal" href="https://sbseg2022.inf.ufsm.br/" target="_blank" rel="noopener">
           <span class="year">2022</span>
-          <span class="info"><span class="name">SBSeg 2022</span><br><span class="loc">Santa Maria · RS — UFSM</span></span>
+          <span class="info"><span class="name">SBSeg 2022</span><br><span class="loc">Santa Maria · RS · UFSM</span></span>
           <span class="go">acessar <span class="arrow">↗</span></span>
         </a>
 
         <a class="ed reveal" href="https://sbseg2021.ufpa.br/" target="_blank" rel="noopener">
           <span class="year">2021</span>
-          <span class="info"><span class="name">SBSeg 2021</span><br><span class="loc">Belém · PA — UFPA</span></span>
+          <span class="info"><span class="name">SBSeg 2021</span><br><span class="loc">Belém · PA · UFPA</span></span>
           <span class="go">acessar <span class="arrow">↗</span></span>
         </a>
 
@@ -249,49 +256,49 @@
 
         <a class="ed reveal" href="https://sbseg2019.ime.usp.br/" target="_blank" rel="noopener">
           <span class="year">2019</span>
-          <span class="info"><span class="name">SBSeg 2019</span><br><span class="loc">São Paulo · SP — IME/USP</span></span>
+          <span class="info"><span class="name">SBSeg 2019</span><br><span class="loc">São Paulo · SP · IME/USP</span></span>
           <span class="go">acessar <span class="arrow">↗</span></span>
         </a>
 
         <a class="ed reveal" href="https://sbseg2018.imd.ufrn.br/" target="_blank" rel="noopener">
           <span class="year">2018</span>
-          <span class="info"><span class="name">SBSeg 2018</span><br><span class="loc">Natal · RN — IMD/UFRN</span></span>
+          <span class="info"><span class="name">SBSeg 2018</span><br><span class="loc">Natal · RN · IMD/UFRN</span></span>
           <span class="go">acessar <span class="arrow">↗</span></span>
         </a>
 
         <a class="ed reveal" href="https://sbseg2017.redes.unb.br/" target="_blank" rel="noopener">
           <span class="year">2017</span>
-          <span class="info"><span class="name">SBSeg 2017</span><br><span class="loc">Brasília · DF — UnB</span></span>
+          <span class="info"><span class="name">SBSeg 2017</span><br><span class="loc">Brasília · DF · UnB</span></span>
           <span class="go">acessar <span class="arrow">↗</span></span>
         </a>
 
         <a class="ed reveal" href="http://sbseg2016.ic.uff.br/" target="_blank" rel="noopener">
           <span class="year">2016</span>
-          <span class="info"><span class="name">SBSeg 2016</span><br><span class="loc">Niterói · RJ — UFF</span></span>
+          <span class="info"><span class="name">SBSeg 2016</span><br><span class="loc">Niterói · RJ · UFF</span></span>
           <span class="go">acessar <span class="arrow">↗</span></span>
         </a>
 
         <a class="ed reveal" href="https://siaiap34.univali.br/sbseg2015/" target="_blank" rel="noopener">
           <span class="year">2015</span>
-          <span class="info"><span class="name">SBSeg 2015</span><br><span class="loc">Florianópolis · SC — UNIVALI</span></span>
+          <span class="info"><span class="name">SBSeg 2015</span><br><span class="loc">Florianópolis · SC · UNIVALI</span></span>
           <span class="go">acessar <span class="arrow">↗</span></span>
         </a>
 
         <a class="ed reveal" href="http://www.sbseg2014.dcc.ufmg.br/" target="_blank" rel="noopener">
           <span class="year">2014</span>
-          <span class="info"><span class="name">SBSeg 2014</span><br><span class="loc">Belo Horizonte · MG — DCC/UFMG</span></span>
+          <span class="info"><span class="name">SBSeg 2014</span><br><span class="loc">Belo Horizonte · MG · DCC/UFMG</span></span>
           <span class="go">acessar <span class="arrow">↗</span></span>
         </a>
 
         <a class="ed reveal" href="http://sbseg2013.icomp.ufam.edu.br/" target="_blank" rel="noopener">
           <span class="year">2013</span>
-          <span class="info"><span class="name">SBSeg 2013</span><br><span class="loc">Manaus · AM — IComp/UFAM</span></span>
+          <span class="info"><span class="name">SBSeg 2013</span><br><span class="loc">Manaus · AM · IComp/UFAM</span></span>
           <span class="go">acessar <span class="arrow">↗</span></span>
         </a>
 
         <a class="ed reveal" href="http://sbseg2012.ppgia.pucpr.br/" target="_blank" rel="noopener">
           <span class="year">2012</span>
-          <span class="info"><span class="name">SBSeg 2012</span><br><span class="loc">Curitiba · PR — PUCPR</span></span>
+          <span class="info"><span class="name">SBSeg 2012</span><br><span class="loc">Curitiba · PR · PUCPR</span></span>
           <span class="go">acessar <span class="arrow">↗</span></span>
         </a>
 
@@ -309,7 +316,7 @@
     </div>
     <p class="archive-note">As edições <b>2024</b> e <b>2025</b> possuem uma <b>cópia estática preservada</b> neste projeto, navegável offline, caso os sites originais saiam do ar. Os links acima apontam para os sites originais ao vivo.</p>
     <p class="colophon">
-      <span class="accent">//</span> SBSeg — Simpósio Brasileiro de Segurança da Informação e de Sistemas Computacionais<br>
+      <span class="accent">//</span> SBSeg: Simpósio Brasileiro de Segurança da Informação e de Sistemas Computacionais<br>
       <span class="accent">//</span> Comissão Especial em Segurança da Informação e de Sistemas Computacionais (CESeg) · SBC<br>
       <span class="accent">//</span> arquivo histórico de edições
     </p>
