@@ -1,4 +1,4 @@
-# SBSeg — Arquivo histórico
+# SBSeg: Arquivo histórico
 
 **Arquivo histórico das edições do SBSeg**, o *Simpósio Brasileiro de Cibersegurança*
 (antigo Simpósio Brasileiro em Segurança da Informação e de Sistemas Computacionais),
@@ -14,14 +14,14 @@ sites de cada edição, navegáveis offline caso o site original saia do ar.
 ## O que está aqui
 
 - **Índice de edições** (2011–2025) na página inicial, cada uma com:
-  - **Arquivo offline** — cópia estática preservada do site da edição (quando disponível);
-  - **Site original** — link para o site ao vivo (quando ainda no ar);
-  - **Logomarca** — página de identidade visual da edição (quando disponível).
+  - **Arquivo offline**: cópia estática preservada do site da edição (quando disponível);
+  - **Site original**: link para o site ao vivo (quando ainda no ar);
+  - **Logomarca**: página de identidade visual da edição (quando disponível).
 - **Recursos transversais** consolidados entre edições:
-  - `organizadores/` — Coordenação Geral e do Comitê de Programa por edição;
-  - `palestrantes/` — palestrantes convidados (keynotes);
-  - `premiacoes/` — trabalhos premiados, por edição e categoria;
-  - `patrocinadores/` — patrocinadores e apoiadores, por cota.
+  - `organizadores/`: Coordenação Geral e do Comitê de Programa por edição;
+  - `palestrantes/`: palestrantes convidados (keynotes);
+  - `premiacoes/`: trabalhos premiados, por edição e categoria;
+  - `patrocinadores/`: patrocinadores e apoiadores, por cota.
 
 ## Estrutura
 
@@ -34,7 +34,7 @@ assets/                 Logomarcas e recursos compartilhados
 
 A página inicial expõe **metadados estruturados** (`schema.org` JSON-LD) que
 classificam o site como uma **coleção arquivística** (`CollectionPage` /
-`ArchiveComponent`), com cada edição registrada como parte preservada — para que
+`ArchiveComponent`), com cada edição registrada como parte preservada, para que
 buscadores e crawlers reconheçam a natureza de arquivo do projeto.
 
 ## Mudança de nome (2025)
@@ -57,6 +57,6 @@ https://sol.sbc.org.br/index.php/sbseg
 
 ## Créditos
 
-Mantido pela **Comissão Especial de Cibersegurança (CESeg)** —
-https://ceseg-sbc.github.io — da **Sociedade Brasileira de Computação (SBC)** —
-https://www.sbc.org.br.
+Mantido pela **Comissão Especial de Cibersegurança (CESeg)**
+(https://ceseg-sbc.github.io), da **Sociedade Brasileira de Computação (SBC)**
+(https://www.sbc.org.br).
