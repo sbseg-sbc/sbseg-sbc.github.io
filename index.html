@@ -100,7 +100,23 @@
   .topnav{display:flex;gap:28px;font-size:.9rem;font-weight:500;color:var(--muted)}
   .topnav a{transition:color .2s}
   .topnav a:hover{color:var(--accent)}
-  @media(max-width:680px){.topnav{display:none}}
+  /* hamburger (mobile) — CSS-only toggle, sem JS */
+  .nav-toggle{display:none}
+  .nav-burger{display:none;cursor:pointer;width:40px;height:40px;
+    align-items:center;justify-content:center;color:var(--muted)}
+  .nav-burger svg{width:24px;height:24px}
+  @media(max-width:680px){
+    .nav-burger{display:flex}
+    .topnav{
+      position:absolute;top:64px;left:0;right:0;
+      flex-direction:column;gap:0;
+      background:rgba(255,255,255,.97);backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+      max-height:0;overflow:hidden;transition:max-height .25s ease;
+    }
+    .topnav a{padding:14px 24px;border-top:1px solid var(--line)}
+    .nav-toggle:checked ~ .topnav{max-height:80vh}
+  }
 
   /* ---------- hero ---------- */
   .hero{padding:72px 0 40px}
@@ -225,6 +241,10 @@
 <header class="topbar">
   <div class="wrap">
     <a class="brand" href="#top"><span class="dot"></span>SBSeg <span class="sub">/ CESeg</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label for="nav-toggle" class="nav-burger" role="button" tabindex="0" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </label>
     <nav class="topnav">
       <a href="#edicoes">Edições</a>
       <a href="organizadores/">Organizadores</a>
