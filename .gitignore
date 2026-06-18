@@ -1,0 +1,10 @@
+# Arquivos .txt permanecem apenas localmente (ex.: contatos.txt, dados pessoais)
+*.txt
+
+# Exceções: .txt que fazem parte dos mirrors históricos do arquivo SBSeg
+!sbseg2012/**/*.txt
+!dados_sbseg_2013/**/*.txt
+
+# Cruft do sistema operacional
+.DS_Store
+Thumbs.db
