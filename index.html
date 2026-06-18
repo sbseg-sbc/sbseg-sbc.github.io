@@ -232,6 +232,13 @@
   }
   .archive-note b{color:var(--text);font-weight:600}
   .colophon{margin-top:26px;font-size:.82rem;color:var(--faint);line-height:1.9}
+  .collab{
+    margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;gap:8px;
+    font-size:.86rem;color:var(--muted);
+  }
+  .collab a{color:var(--accent);font-weight:600;text-decoration:none}
+  .collab a:hover{text-decoration:underline}
+  .collab .heart{color:var(--accent)}
 
   @media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
 </style>
@@ -366,6 +373,12 @@
       SBSeg: Simpósio Brasileiro de Cibersegurança<br>
       Comissão Especial de Cibersegurança (CESeg) · Sociedade Brasileira de Computação (SBC)<br>
       Arquivo histórico de edições · atualizado em 2026-06-17
+    </p>
+    <p class="collab">
+      <span class="heart">♥</span>
+      <span>Colaboração e contribuição:
+      <a href="https://ai-horizon-labs.github.io" target="_blank" rel="noopener">AI Horizon Labs</a>
+      ajudando a comunidade com este site.</span>
     </p>
   </div>
 </footer>
