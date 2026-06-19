@@ -81,11 +81,37 @@
       "padding:4px 9px;border-radius:999px;line-height:1;transition:background .15s,color .15s}" +
       ".lang-switch button:hover{color:var(--accent,#0e8a78)}" +
       ".lang-switch button.active{background:var(--accent,#0e8a78);color:#fff}" +
-      "@media(max-width:680px){.lang-switch button{padding:5px 8px}}";
+      "@media(max-width:680px){.lang-switch button{padding:5px 8px}}" +
+      // Faixa "Beta / em construção" — em destaque no topo de todas as páginas.
+      "#beta-banner{display:flex;align-items:center;justify-content:center;gap:10px;" +
+      "flex-wrap:wrap;background:repeating-linear-gradient(135deg,#f9b418,#f9b418 14px,#f5a800 14px,#f5a800 28px);" +
+      "color:#3a2a00;font-weight:600;font-size:.86rem;letter-spacing:.01em;" +
+      "padding:9px 16px;text-align:center;border-bottom:2px solid #c98700;" +
+      "box-shadow:0 1px 4px rgba(0,0,0,.12);position:relative;z-index:20}" +
+      "#beta-banner .bb-pill{background:#3a2a00;color:#ffd980;font-weight:800;" +
+      "font-size:.72rem;letter-spacing:.06em;padding:3px 10px;border-radius:999px;" +
+      "text-transform:uppercase;white-space:nowrap}" +
+      "#beta-banner .bb-icon{font-size:1.05rem;line-height:1}" +
+      "@media(max-width:480px){#beta-banner{font-size:.78rem;padding:8px 12px;gap:7px}}";
     var s = document.createElement("style");
     s.id = "lang-switch-style";
     s.textContent = css;
     document.head.appendChild(s);
+  }
+
+  // Faixa de aviso "Beta (v0.3) · em construção" inserida no topo do <body>.
+  // Texto traduzível via data-i18n="beta.text"; a versão fica fixa no rótulo.
+  function buildBetaBanner() {
+    if (document.getElementById("beta-banner")) return;
+    var bar = document.createElement("div");
+    bar.id = "beta-banner";
+    bar.setAttribute("role", "status");
+    bar.innerHTML =
+      '<span class="bb-icon" aria-hidden="true">🚧</span>' +
+      '<span class="bb-pill">Beta · v0.3</span>' +
+      '<span class="bb-text" data-i18n="beta.text">site em construção — ' +
+      'conteúdo provisório e sujeito a alterações</span>';
+    document.body.insertBefore(bar, document.body.firstChild);
   }
 
   // Preenche cada placeholder .lang-switch com os botões PT/EN/ES.
@@ -110,6 +136,7 @@
 
   function boot() {
     injectStyles();
+    buildBetaBanner();
     buildSwitchers();
     load(pick());
   }
