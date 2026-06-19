@@ -29,7 +29,12 @@
     "tierSilver": "Silver",
     "tierBronze": "Bronze",
     "tierSupporters": "Supporters",
-    "tierSponsorship": "Sponsorship"
+    "tierSponsorship": "Sponsorship",
+    "tierRealization": "Organized by",
+    "tierPromotion": "Promoted by",
+    "tierOrganization": "Organization",
+    "tierFunding": "Funding",
+    "srcArchivedPage": "archived page ↗"
   },
   "home": {
     "title": "SBSeg: Brazilian Symposium on Cybersecurity · Historical archive",
@@ -123,6 +128,7 @@
     "driveNote": "The official photos of this edition are hosted on the event's Google Drive and Instagram.",
     "fbNote": "The photos of this edition are published on the event's official Facebook page.",
     "note": "Current coverage: <strong>2015, 2017, 2022, 2024 and 2025</strong>. The 2017 and 2022 thumbnails come from the copies preserved in this archive; the other editions link to the original albums (Google Drive, Facebook and Instagram). Other editions will be added as photo sources are located.",
-    "footer": "Archive page · CESeg / SBC. Generated on 2026-06-19. Thumbnails preserved from the photo pages of each edition; full albums on the original websites and social media."
+    "footer": "Archive page · CESeg / SBC. Generated on 2026-06-19. Thumbnails preserved from the photo pages of each edition; full albums on the original websites and social media.",
+    "socialNote": "No copy of photos is preserved in this archive for this edition. The event records are on the official SBSeg social media."
   }
 }

@@ -29,7 +29,12 @@
     "tierSilver": "Prata",
     "tierBronze": "Bronze",
     "tierSupporters": "Apoiadores",
-    "tierSponsorship": "Patrocínio"
+    "tierSponsorship": "Patrocínio",
+    "tierRealization": "Realização",
+    "tierPromotion": "Promoção",
+    "tierOrganization": "Organização",
+    "tierFunding": "Fomento",
+    "srcArchivedPage": "página arquivada ↗"
   },
   "home": {
     "title": "SBSeg: Simpósio Brasileiro de Cibersegurança · Arquivo histórico",
@@ -123,6 +128,7 @@
     "driveNote": "As fotos oficiais desta edição estão hospedadas no Google Drive e no Instagram do evento.",
     "fbNote": "As fotos desta edição estão publicadas na página oficial do evento no Facebook.",
     "note": "Cobertura atual: <strong>2015, 2017, 2022, 2024 e 2025</strong>. As miniaturas de 2017 e 2022 vêm das cópias preservadas neste arquivo; as demais edições remetem aos álbuns originais (Google Drive, Facebook e Instagram). Outras edições serão acrescentadas à medida que as fontes de fotos forem localizadas.",
-    "footer": "Página de arquivamento · CESeg / SBC. Gerada em 2026-06-19. Miniaturas preservadas a partir das páginas de fotos de cada edição; álbuns completos nos sites e redes sociais originais."
+    "footer": "Página de arquivamento · CESeg / SBC. Gerada em 2026-06-19. Miniaturas preservadas a partir das páginas de fotos de cada edição; álbuns completos nos sites e redes sociais originais.",
+    "socialNote": "Não há cópia de fotos preservada neste arquivo para esta edição. Os registros do evento estão nas redes sociais oficiais do SBSeg."
   }
 }
