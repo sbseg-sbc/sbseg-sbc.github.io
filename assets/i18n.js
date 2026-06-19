@@ -99,7 +99,7 @@
     document.head.appendChild(s);
   }
 
-  // Faixa de aviso "Beta (v0.3) · em construção" inserida no topo do <body>.
+  // Faixa de aviso "Beta (v0.4) · em construção" inserida no topo do <body>.
   // Texto traduzível via data-i18n="beta.text"; a versão fica fixa no rótulo.
   function buildBetaBanner() {
     if (document.getElementById("beta-banner")) return;
@@ -108,7 +108,7 @@
     bar.setAttribute("role", "status");
     bar.innerHTML =
       '<span class="bb-icon" aria-hidden="true">🚧</span>' +
-      '<span class="bb-pill">Beta · v0.3</span>' +
+      '<span class="bb-pill">Beta · v0.4</span>' +
       '<span class="bb-text" data-i18n="beta.text">site em construção — ' +
       'conteúdo provisório e sujeito a alterações</span>';
     document.body.insertBefore(bar, document.body.firstChild);
