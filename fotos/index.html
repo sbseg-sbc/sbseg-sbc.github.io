@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="gallery.title">Galeria de Fotos das Edições do SBSeg</title>
+<meta name="description" data-i18n="gallery.metaDesc" data-i18n-attr="content" content="Galeria de fotos das edições do SBSeg, o Simpósio Brasileiro de Cibersegurança: miniaturas e links para os álbuns (site, Google Drive e redes sociais) de cada edição.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#fff;--soft:#f6f8f9;--line:#e6eaec;--text:#16242a;--muted:#5d6b72;--faint:#8a979d;--accent:#0e8a78;--accent-dark:#0a6457}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:"Inter",-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+  .wrap{max-width:1000px;margin:0 auto;padding:2.4rem 1.25rem 4rem}
+  a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+  h1{font-size:1.9rem;letter-spacing:-.02em}
+  .lead{color:var(--muted);margin:.5rem 0 1.6rem;max-width:74ch}
+  .toc{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.4rem}
+  .toc a{font-size:.85rem;border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--muted)}
+  .toc a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+  .edition{border:1px solid var(--line);border-radius:16px;padding:1.3rem 1.5rem;margin:1.1rem 0}
+  .ed-head{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:.6rem;margin-bottom:.9rem}
+  .ed-head h2{font-size:1.4rem;color:var(--accent-dark)}
+  .city{color:var(--faint);font-size:.9rem}
+  .gthumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.5rem;margin:.2rem 0 1rem}
+  .gthumbs a{display:block;border-radius:10px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:var(--soft)}
+  .gthumbs img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+  .gthumbs a:hover img{transform:scale(1.06)}
+  .glinks{display:flex;flex-wrap:wrap;gap:.55rem}
+  .gbtn{display:inline-flex;align-items:center;gap:.45rem;background:var(--accent);color:#fff;font-size:.9rem;
+        font-weight:600;border-radius:999px;padding:.5rem 1rem;box-shadow:0 1px 3px rgba(14,138,120,.25)}
+  .gbtn:hover{background:var(--accent-dark);text-decoration:none}
+  .gbtn.alt{background:var(--soft);color:var(--accent-dark);border:1px solid var(--line);box-shadow:none}
+  .gbtn.alt:hover{border-color:var(--accent);color:var(--accent);background:#fff}
+  .gbtn .ic{font-size:1.05rem;line-height:1}
+  .nolocal{color:var(--muted);font-size:.9rem;margin:.1rem 0 .9rem}
+  .note{color:var(--muted);font-size:.9rem;border-left:3px solid var(--line);padding:.3rem 0 .3rem .9rem;margin:1.6rem 0}
+  footer{color:var(--faint);font-size:.84rem;margin-top:2.4rem;border-top:1px solid var(--line);padding-top:1rem}
+  /* ---------- shared archive top menu ---------- */
+  header.topbar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header.topbar .tb-wrap{max-width:1000px;margin:0 auto;padding:0 1.25rem;display:flex;
+    align-items:center;justify-content:space-between;gap:1rem;min-height:60px;flex-wrap:wrap}
+  header.topbar .brand{display:flex;align-items:center;gap:9px;font-weight:800;
+    letter-spacing:-.02em;font-size:1.05rem;color:var(--text)}
+  header.topbar .brand:hover{text-decoration:none}
+  header.topbar .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
+  header.topbar .brand .sub{color:var(--faint);font-weight:500}
+  header.topbar nav{display:flex;flex-wrap:wrap;gap:.5rem 1.35rem;font-size:.9rem;font-weight:500}
+  header.topbar nav a{color:var(--muted);transition:color .2s}
+  header.topbar nav a:hover{color:var(--accent);text-decoration:none}
+  header.topbar nav a.active{color:var(--accent-dark);font-weight:700}
+  @media(max-width:680px){header.topbar .tb-wrap{padding:.55rem 1rem}
+    header.topbar nav{gap:.35rem 1rem;font-size:.82rem}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="tb-wrap">
+    <a class="brand" href="../"><span class="dot"></span>SBSeg <span class="sub">/ CESeg</span></a>
+    <nav>
+      <a href="../#edicoes" data-i18n="nav.edicoes">Edições</a>
+      <a href="../organizadores/" data-i18n="nav.org">Organizadores</a>
+      <a href="../palestrantes/" data-i18n="nav.speakers">Palestrantes</a>
+      <a href="../premiacoes/" data-i18n="nav.awards">Premiações</a>
+      <a href="../fotos/" class="active" aria-current="page" data-i18n="nav.gallery">Fotos</a>
+      <a href="../patrocinadores/" data-i18n="nav.sponsors">Patrocinadores</a>
+      <a href="https://sol.sbc.org.br/index.php/sbseg" target="_blank" rel="noopener" data-i18n="nav.anais">Anais</a>
+      <a href="https://ceseg-sbc.github.io" target="_blank" rel="noopener" data-i18n="nav.ceseg">CESeg</a>
+      <div class="lang-switch"></div>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+<h1 data-i18n="gallery.h1">Galeria de Fotos das Edições do SBSeg</h1>
+<p class="lead" data-i18n="gallery.lead">Miniaturas e links para os álbuns de fotos das edições do Simpósio Brasileiro de
+Cibersegurança (SBSeg). Onde havia cópia preservada neste arquivo, as miniaturas levam à galeria offline;
+caso contrário, os botões apontam para o álbum no site original, no Google Drive ou nas redes sociais da edição.</p>
+
+<div class="toc">
+  <a href="#g2025">2025</a><a href="#g2024">2024</a><a href="#g2022">2022</a><a href="#g2017">2017</a><a href="#g2015">2015</a>
+</div>
+
+<section class="edition" id="g2025">
+  <div class="ed-head"><h2>SBSeg 2025</h2><span class="city">Foz do Iguaçu · PR · PUCPR · 1–4 set 2025</span></div>
+  <p class="nolocal" data-i18n="gallery.driveNote">As fotos oficiais desta edição estão hospedadas no Google Drive e no Instagram do evento.</p>
+  <div class="glinks">
+    <a class="gbtn" href="https://drive.google.com/drive/folders/1OsrSc7EqoojtHMBt9LpV6d9EwMmbTKfx?usp=share_link" target="_blank" rel="noopener"><span class="ic">🗂️</span> Google Drive</a>
+    <a class="gbtn alt" href="https://www.instagram.com/sbseg2025/" target="_blank" rel="noopener"><span class="ic">📸</span> Instagram @sbseg2025</a>
+  </div>
+</section>
+
+<section class="edition" id="g2024">
+  <div class="ed-head"><h2>SBSeg 2024</h2><span class="city">São José dos Campos · SP · ITA · 16–19 set 2024</span></div>
+  <div class="glinks">
+    <a class="gbtn" href="../sbseg2024/sbseg2024.ita.br/fotos-do-evento/index.html" target="_blank" rel="noopener"><span class="ic">🖼️</span> <span data-i18n="gallery.btnArchived">Galeria (cópia arquivada)</span></a>
+    <a class="gbtn alt" href="https://drive.google.com/drive/folders/1XumhYjvtMGDh5jiY8dWw1ISaO1sqiFAF?usp=sharing" target="_blank" rel="noopener"><span class="ic">🗂️</span> Google Drive</a>
+    <a class="gbtn alt" href="https://www.instagram.com/sbseg2024/" target="_blank" rel="noopener"><span class="ic">📸</span> Instagram @sbseg2024</a>
+  </div>
+</section>
+
+<section class="edition" id="g2022">
+  <div class="ed-head"><h2>SBSeg 2022</h2><span class="city">Santa Maria · RS · UFSM</span></div>
+  <div class="gthumbs">
+    <a href="../sbseg2022/sbseg2022.inf.ufsm.br/fotos.html" target="_blank" rel="noopener"><img src="../sbseg2022/sbseg2022.inf.ufsm.br/images/pictures/segunda-feira/thumbs/rodrigosarasol-01945.jpg" alt="SBSeg 2022 — foto 1" loading="lazy"></a>
+    <a href="../sbseg2022/sbseg2022.inf.ufsm.br/fotos.html" target="_blank" rel="noopener"><img src="../sbseg2022/sbseg2022.inf.ufsm.br/images/pictures/segunda-feira/thumbs/rodrigosarasol-4592.jpg" alt="SBSeg 2022 — foto 2" loading="lazy"></a>
+    <a href="../sbseg2022/sbseg2022.inf.ufsm.br/fotos.html" target="_blank" rel="noopener"><img src="../sbseg2022/sbseg2022.inf.ufsm.br/images/pictures/segunda-feira/thumbs/rodrigosarasol-4679.jpg" alt="SBSeg 2022 — foto 3" loading="lazy"></a>
+    <a href="../sbseg2022/sbseg2022.inf.ufsm.br/fotos.html" target="_blank" rel="noopener"><img src="../sbseg2022/sbseg2022.inf.ufsm.br/images/pictures/terca-feira/thumbs/rodrigosarasol-02007.jpg" alt="SBSeg 2022 — foto 4" loading="lazy"></a>
+    <a href="../sbseg2022/sbseg2022.inf.ufsm.br/fotos.html" target="_blank" rel="noopener"><img src="../sbseg2022/sbseg2022.inf.ufsm.br/images/pictures/terca-feira/thumbs/rodrigosarasol-4887.jpg" alt="SBSeg 2022 — foto 5" loading="lazy"></a>
+    <a href="../sbseg2022/sbseg2022.inf.ufsm.br/fotos.html" target="_blank" rel="noopener"><img src="../sbseg2022/sbseg2022.inf.ufsm.br/images/pictures/terca-feira/thumbs/rodrigosarasol-4962.jpg" alt="SBSeg 2022 — foto 6" loading="lazy"></a>
+  </div>
+  <div class="glinks">
+    <a class="gbtn" href="../sbseg2022/sbseg2022.inf.ufsm.br/fotos.html" target="_blank" rel="noopener"><span class="ic">🖼️</span> <span data-i18n="gallery.btnFull">Galeria completa (cópia arquivada)</span></a>
+    <a class="gbtn alt" href="https://www.facebook.com/SBSegSBC/" target="_blank" rel="noopener"><span class="ic">📘</span> Facebook</a>
+    <a class="gbtn alt" href="https://www.instagram.com/sbseg.sbc/" target="_blank" rel="noopener"><span class="ic">📸</span> Instagram</a>
+  </div>
+</section>
+
+<section class="edition" id="g2017">
+  <div class="ed-head"><h2>SBSeg 2017</h2><span class="city">Brasília · DF · UnB</span></div>
+  <div class="gthumbs">
+    <a href="../sbseg2017/sbseg2017.redes.unb.br/fotos/index.html" target="_blank" rel="noopener"><img src="../sbseg2017/sbseg2017.redes.unb.br/wp-content/uploads/2017/11/IMG_6446-1024x683.jpg" alt="SBSeg 2017 — foto 1" loading="lazy"></a>
+    <a href="../sbseg2017/sbseg2017.redes.unb.br/fotos/index.html" target="_blank" rel="noopener"><img src="../sbseg2017/sbseg2017.redes.unb.br/wp-content/uploads/2017/11/IMG_6452-1024x683.jpg" alt="SBSeg 2017 — foto 2" loading="lazy"></a>
+    <a href="../sbseg2017/sbseg2017.redes.unb.br/fotos/index.html" target="_blank" rel="noopener"><img src="../sbseg2017/sbseg2017.redes.unb.br/wp-content/uploads/2017/11/IMG_6454-1024x683.jpg" alt="SBSeg 2017 — foto 3" loading="lazy"></a>
+    <a href="../sbseg2017/sbseg2017.redes.unb.br/fotos/index.html" target="_blank" rel="noopener"><img src="../sbseg2017/sbseg2017.redes.unb.br/wp-content/uploads/2017/11/IMG_6470-1024x683.jpg" alt="SBSeg 2017 — foto 4" loading="lazy"></a>
+    <a href="../sbseg2017/sbseg2017.redes.unb.br/fotos/index.html" target="_blank" rel="noopener"><img src="../sbseg2017/sbseg2017.redes.unb.br/wp-content/uploads/2017/11/IMG_6480-1024x683.jpg" alt="SBSeg 2017 — foto 5" loading="lazy"></a>
+    <a href="../sbseg2017/sbseg2017.redes.unb.br/fotos/index.html" target="_blank" rel="noopener"><img src="../sbseg2017/sbseg2017.redes.unb.br/wp-content/uploads/2017/11/IMG_6489-1024x683.jpg" alt="SBSeg 2017 — foto 6" loading="lazy"></a>
+  </div>
+  <div class="glinks">
+    <a class="gbtn" href="../sbseg2017/sbseg2017.redes.unb.br/fotos/index.html" target="_blank" rel="noopener"><span class="ic">🖼️</span> <span data-i18n="gallery.btnFull">Galeria completa (cópia arquivada)</span></a>
+  </div>
+</section>
+
+<section class="edition" id="g2015">
+  <div class="ed-head"><h2>SBSeg 2015</h2><span class="city">Florianópolis · SC · UFSC/UNIVALI</span></div>
+  <p class="nolocal" data-i18n="gallery.fbNote">As fotos desta edição estão publicadas na página oficial do evento no Facebook.</p>
+  <div class="glinks">
+    <a class="gbtn" href="https://www.facebook.com/sbseg2015/photos" target="_blank" rel="noopener"><span class="ic">📘</span> Facebook @sbseg2015</a>
+  </div>
+</section>
+
+<div class="note" data-i18n="gallery.note">
+Cobertura atual: <strong>2015, 2017, 2022, 2024 e 2025</strong>. As miniaturas de 2017 e 2022 vêm das cópias
+preservadas neste arquivo; as demais edições remetem aos álbuns originais (Google Drive, Facebook e Instagram).
+Outras edições serão acrescentadas à medida que as fontes de fotos forem localizadas.
+</div>
+
+<footer data-i18n="gallery.footer">
+Página de arquivamento · CESeg / SBC. Gerada em 2026-06-19.
+Miniaturas preservadas a partir das páginas de fotos de cada edição; álbuns completos nos sites e redes sociais originais.
+</footer>
+</div>
+<script src="../assets/i18n.js" defer></script>
+</body>
+</html>

@@ -4,6 +4,7 @@
     "org": "Organizers",
     "speakers": "Speakers",
     "awards": "Awards",
+    "gallery": "Photos",
     "sponsors": "Sponsors",
     "anais": "Proceedings",
     "ceseg": "CESeg"
@@ -37,8 +38,8 @@
     "cesegName1": "Special Committee on Cybersecurity (CESeg)",
     "cesegBy2": "of the",
     "cesegName2": "Brazilian Computer Society (SBC)",
-    "meta1": "<b>15</b> editions on record",
-    "meta2": "2011 <b>to</b> 2025",
+    "meta1": "<b>16</b> editions on record",
+    "meta2": "2011 <b>to</b> 2026",
     "meta3": "promoted by <b>CESeg</b> / <b>SBC</b>",
     "renameHead": "Name change in 2025",
     "renameEventLbl": "Event (SBSeg)",
@@ -62,8 +63,8 @@
     "cardAwardsP": "Award-winning papers by edition, across all categories and sub-events.",
     "cardAwardsGo": "View awards →",
     "cardPhotosH3": "Photo gallery",
-    "cardPhotosP": "Integrated photo gallery of the editions. Under construction.",
-    "cardPhotosGo": "Coming soon",
+    "cardPhotosP": "Thumbnails and links to each edition's photo albums (website, Google Drive and social media).",
+    "cardPhotosGo": "View gallery →",
     "cardSponsorsH3": "Sponsors",
     "cardSponsorsP": "Sponsors and supporters across the editions, organized by tier.",
     "cardSponsorsGo": "View sponsors →",
@@ -89,16 +90,16 @@
     "title": "Speakers of the SBSeg Editions",
     "h1": "Speakers of the SBSeg Editions",
     "lead": "A compilation of the invited keynote speakers from previous editions of the Brazilian Symposium on Cybersecurity (SBSeg). Includes name, affiliation and academic/professional links when available.",
-    "note": "Data compiled from the <em>Previous Editions</em> page of SBSeg 2025 and from the speaker pages of each edition. Current coverage: <strong>2017 to 2024</strong> (31 speakers). The 2012–2016 editions and the speakers' photos will be added in a future stage.",
+    "note": "Data compiled from the <em>Previous Editions</em> page of SBSeg 2025 and from the speaker pages of each edition. Current coverage: <strong>2017 to 2025</strong> (35 keynote speakers). The 2012–2016 editions and the speakers' photos will be added in a future stage.",
     "footer": "Archive page · CESeg / SBC. Generated on 2026-06-17. Primary source: <a href=\"https://sbseg2025.ppgia.pucpr.br/organizacao/edicoes-anteriores/\" target=\"_blank\" rel=\"noopener\">SBSeg 2025 · Previous Editions</a>."
   },
   "awards": {
     "title": "Awards of the SBSeg Editions",
     "h1": "Awards of the SBSeg Editions",
-    "lead": "List of the award-winning papers in each edition of the Brazilian Symposium on Cybersecurity, organized by sub-event and award category. Current coverage: <strong>73 awards</strong> in the editions with an available source.",
+    "lead": "List of the award-winning papers in each edition of the Brazilian Symposium on Cybersecurity, organized by sub-event and award category. Current coverage: <strong>84 awards</strong> in the editions with an available source.",
     "certPdf": "Award certificates (PDF)",
     "cert": "Award certificates",
-    "note": "Editions included so far: 2025, 2024, 2017 and 2012 (those with an accessible awards list). The remaining editions will be added as the sources are located."
+    "note": "Editions included so far: 2025, 2024, 2017, 2014 and 2012 (those with an accessible awards list). The remaining editions will be added as the sources are located."
   },
   "sponsors": {
     "title": "Sponsors of the SBSeg Editions",
@@ -106,7 +107,19 @@
     "h1": "Sponsors of the SBSeg Editions",
     "lead": "Sponsors and supporters of the Brazilian Symposium on Cybersecurity (SBSeg), organized by <strong>sponsorship tier</strong>. The logos were preserved from the sponsor pages of each edition in this historical archive.",
     "note2025": "The SBSeg 2025 sponsorship tiers were <strong>Master, Infinity, Platinum, Diamond, Gold, Silver, Bronze</strong> and <strong>Supporters</strong>. The logos were loaded dynamically on the original site and were not captured in the offline copy; see the full list on the live page.",
-    "note": "Current coverage: <strong>2021, 2022 and 2024</strong> with preserved logos, and <strong>2025</strong> with the sponsorship tiers. The remaining editions will be added as the sources are recovered. Institutions such as CNPq, CAPES, FAPESP, CGI.br and NIC.br frequently appear as institutional funders/supporters of the event.",
+    "note": "Current coverage: <strong>2014, 2021, 2022, 2024 and 2025</strong> with preserved logos. The remaining editions will be added as the sources are recovered. Institutions such as CNPq, CAPES, FAPESP, CGI.br and NIC.br frequently appear as institutional funders/supporters of the event.",
     "footer": "Archive page · CESeg / SBC. Generated on 2026-06-17. Logos compiled from the sponsor pages of each edition preserved in this historical archive."
+  },
+  "gallery": {
+    "title": "Photo Gallery of the SBSeg Editions",
+    "metaDesc": "Photo gallery of the SBSeg editions, the Brazilian Symposium on Cybersecurity: thumbnails and links to each edition's albums (website, Google Drive and social media).",
+    "h1": "Photo Gallery of the SBSeg Editions",
+    "lead": "Thumbnails and links to the photo albums of the editions of the Brazilian Symposium on Cybersecurity (SBSeg). Where a preserved copy exists in this archive, the thumbnails lead to the offline gallery; otherwise the buttons point to the album on the original website, Google Drive or the edition's social media.",
+    "btnArchived": "Gallery (archived copy)",
+    "btnFull": "Full gallery (archived copy)",
+    "driveNote": "The official photos of this edition are hosted on the event's Google Drive and Instagram.",
+    "fbNote": "The photos of this edition are published on the event's official Facebook page.",
+    "note": "Current coverage: <strong>2015, 2017, 2022, 2024 and 2025</strong>. The 2017 and 2022 thumbnails come from the copies preserved in this archive; the other editions link to the original albums (Google Drive, Facebook and Instagram). Other editions will be added as photo sources are located.",
+    "footer": "Archive page · CESeg / SBC. Generated on 2026-06-19. Thumbnails preserved from the photo pages of each edition; full albums on the original websites and social media."
   }
 }

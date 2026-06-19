@@ -4,6 +4,7 @@
     "org": "Organizadores",
     "speakers": "Palestrantes",
     "awards": "Premiações",
+    "gallery": "Fotos",
     "sponsors": "Patrocinadores",
     "anais": "Anais",
     "ceseg": "CESeg"
@@ -37,8 +38,8 @@
     "cesegName1": "Comissão Especial de Cibersegurança (CESeg)",
     "cesegBy2": "da",
     "cesegName2": "Sociedade Brasileira de Computação (SBC)",
-    "meta1": "<b>15</b> edições registradas",
-    "meta2": "2011 <b>a</b> 2025",
+    "meta1": "<b>16</b> edições registradas",
+    "meta2": "2011 <b>a</b> 2026",
     "meta3": "promovido pela <b>CESeg</b> / <b>SBC</b>",
     "renameHead": "Mudança de nome em 2025",
     "renameEventLbl": "Evento (SBSeg)",
@@ -62,8 +63,8 @@
     "cardAwardsP": "Trabalhos premiados por edição, em todas as categorias e sub-eventos.",
     "cardAwardsGo": "Ver premiações →",
     "cardPhotosH3": "Galeria de fotos",
-    "cardPhotosP": "Galeria integrada de fotos das edições. Em construção.",
-    "cardPhotosGo": "Em breve",
+    "cardPhotosP": "Miniaturas e links para os álbuns de fotos de cada edição (site, Google Drive e redes sociais).",
+    "cardPhotosGo": "Ver galeria →",
     "cardSponsorsH3": "Patrocinadores",
     "cardSponsorsP": "Patrocinadores e apoiadores ao longo das edições, organizados por cota.",
     "cardSponsorsGo": "Ver patrocinadores →",
@@ -89,16 +90,16 @@
     "title": "Palestrantes das Edições do SBSeg",
     "h1": "Palestrantes das Edições do SBSeg",
     "lead": "Compilação dos palestrantes convidados (keynotes) das edições anteriores do Simpósio Brasileiro de Cibersegurança (SBSeg). Inclui nome, afiliação e links acadêmicos/profissionais quando disponíveis.",
-    "note": "Dados compilados a partir da página <em>Edições Anteriores</em> do SBSeg 2025 e das páginas de palestrantes de cada edição. Cobertura atual: <strong>2017 a 2024</strong> (31 palestrantes). As edições de 2012 a 2016 e as fotos dos palestrantes serão acrescentadas em uma próxima etapa.",
+    "note": "Dados compilados a partir da página <em>Edições Anteriores</em> do SBSeg 2025 e das páginas de palestrantes de cada edição. Cobertura atual: <strong>2017 a 2025</strong> (35 palestrantes keynote). As edições de 2012 a 2016 e as fotos dos palestrantes serão acrescentadas em uma próxima etapa.",
     "footer": "Página de arquivamento · CESeg / SBC. Gerada em 2026-06-17. Fonte primária: <a href=\"https://sbseg2025.ppgia.pucpr.br/organizacao/edicoes-anteriores/\" target=\"_blank\" rel=\"noopener\">SBSeg 2025 · Edições Anteriores</a>."
   },
   "awards": {
     "title": "Premiações das Edições do SBSeg",
     "h1": "Premiações das Edições do SBSeg",
-    "lead": "Relação dos trabalhos premiados em cada edição do Simpósio Brasileiro de Cibersegurança, organizada por sub-evento e categoria de premiação. Cobertura atual: <strong>73 prêmios</strong> nas edições com fonte disponível.",
+    "lead": "Relação dos trabalhos premiados em cada edição do Simpósio Brasileiro de Cibersegurança, organizada por sub-evento e categoria de premiação. Cobertura atual: <strong>84 prêmios</strong> nas edições com fonte disponível.",
     "certPdf": "Certificados das premiações (PDF)",
     "cert": "Certificados das premiações",
-    "note": "Edições incluídas até o momento: 2025, 2024, 2017 e 2012 (as que têm relação de premiações acessível). As demais edições serão acrescentadas conforme as fontes forem localizadas."
+    "note": "Edições incluídas até o momento: 2025, 2024, 2017, 2014 e 2012 (as que têm relação de premiações acessível). As demais edições serão acrescentadas conforme as fontes forem localizadas."
   },
   "sponsors": {
     "title": "Patrocinadores das Edições do SBSeg",
@@ -106,7 +107,19 @@
     "h1": "Patrocinadores das Edições do SBSeg",
     "lead": "Patrocinadores e apoiadores do Simpósio Brasileiro de Cibersegurança (SBSeg), organizados por <strong>cota de patrocínio</strong>. As logomarcas foram preservadas a partir das páginas de patrocinadores de cada edição neste arquivo histórico.",
     "note2025": "As cotas de patrocínio do SBSeg 2025 foram <strong>Master, Infinity, Platinum, Diamante, Ouro, Prata, Bronze</strong> e <strong>Apoiadores</strong>. As logomarcas eram carregadas dinamicamente no site original e não foram capturadas na cópia offline; consulte a relação completa na página ao vivo.",
-    "note": "Cobertura atual: <strong>2021, 2022 e 2024</strong> com logomarcas preservadas, e <strong>2025</strong> com as cotas de patrocínio. Demais edições serão acrescentadas à medida que as fontes forem recuperadas. Instituições como CNPq, CAPES, FAPESP, CGI.br e NIC.br aparecem frequentemente como financiadoras/apoiadoras institucionais do evento.",
+    "note": "Cobertura atual: <strong>2014, 2021, 2022, 2024 e 2025</strong> com logomarcas preservadas. Demais edições serão acrescentadas à medida que as fontes forem recuperadas. Instituições como CNPq, CAPES, FAPESP, CGI.br e NIC.br aparecem frequentemente como financiadoras/apoiadoras institucionais do evento.",
     "footer": "Página de arquivamento · CESeg / SBC. Gerada em 2026-06-17. Logomarcas compiladas a partir das páginas de patrocinadores de cada edição preservadas neste arquivo histórico."
+  },
+  "gallery": {
+    "title": "Galeria de Fotos das Edições do SBSeg",
+    "metaDesc": "Galeria de fotos das edições do SBSeg, o Simpósio Brasileiro de Cibersegurança: miniaturas e links para os álbuns (site, Google Drive e redes sociais) de cada edição.",
+    "h1": "Galeria de Fotos das Edições do SBSeg",
+    "lead": "Miniaturas e links para os álbuns de fotos das edições do Simpósio Brasileiro de Cibersegurança (SBSeg). Onde havia cópia preservada neste arquivo, as miniaturas levam à galeria offline; caso contrário, os botões apontam para o álbum no site original, no Google Drive ou nas redes sociais da edição.",
+    "btnArchived": "Galeria (cópia arquivada)",
+    "btnFull": "Galeria completa (cópia arquivada)",
+    "driveNote": "As fotos oficiais desta edição estão hospedadas no Google Drive e no Instagram do evento.",
+    "fbNote": "As fotos desta edição estão publicadas na página oficial do evento no Facebook.",
+    "note": "Cobertura atual: <strong>2015, 2017, 2022, 2024 e 2025</strong>. As miniaturas de 2017 e 2022 vêm das cópias preservadas neste arquivo; as demais edições remetem aos álbuns originais (Google Drive, Facebook e Instagram). Outras edições serão acrescentadas à medida que as fontes de fotos forem localizadas.",
+    "footer": "Página de arquivamento · CESeg / SBC. Gerada em 2026-06-19. Miniaturas preservadas a partir das páginas de fotos de cada edição; álbuns completos nos sites e redes sociais originais."
   }
 }

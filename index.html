@@ -12,12 +12,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SBSeg · Arquivo histórico">
 <meta property="og:title" content="SBSeg: Arquivo histórico das edições">
-<meta property="og:description" content="Arquivo histórico do Simpósio Brasileiro de Cibersegurança (SBSeg): índice cronológico de 15 edições (2011–2025) com cópias estáticas preservadas.">
+<meta property="og:description" content="Arquivo histórico do Simpósio Brasileiro de Cibersegurança (SBSeg): índice cronológico de 16 edições (2011–2026) com cópias estáticas preservadas.">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:url" content="https://sbseg-sbc.github.io/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SBSeg: Arquivo histórico das edições">
-<meta name="twitter:description" content="Índice cronológico de 15 edições (2011–2025) do Simpósio Brasileiro de Cibersegurança, com cópias estáticas preservadas.">
+<meta name="twitter:description" content="Índice cronológico de 16 edições (2011–2026) do Simpósio Brasileiro de Cibersegurança, com cópias estáticas preservadas.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%230e8a78' d='M16 2 4 7v8c0 7 5 12 12 15 7-3 12-8 12-15V7L16 2Zm0 5 8 3v5c0 5-3 8-8 10-5-2-8-5-8-10V10l8-3Z'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +34,7 @@
   "alternateName": "Arquivo histórico do Simpósio Brasileiro de Cibersegurança",
   "url": "https://sbseg-sbc.github.io/",
   "inLanguage": "pt-BR",
-  "description": "Arquivo histórico das edições do SBSeg, o Simpósio Brasileiro de Cibersegurança. Índice cronológico (2011–2025) com cópias estáticas preservadas dos sites de cada edição, navegáveis offline.",
+  "description": "Arquivo histórico das edições do SBSeg, o Simpósio Brasileiro de Cibersegurança. Índice cronológico (2011–2026) com cópias estáticas preservadas dos sites de cada edição, navegáveis offline.",
   "keywords": ["cibersegurança", "segurança da informação", "arquivo histórico", "anais", "SBSeg"],
   "isAccessibleForFree": true,
   "holdingArchive": {
@@ -257,6 +257,7 @@
       <a href="organizadores/" data-i18n="nav.org">Organizadores</a>
       <a href="palestrantes/" data-i18n="nav.speakers">Palestrantes</a>
       <a href="premiacoes/" data-i18n="nav.awards">Premiações</a>
+      <a href="fotos/" data-i18n="nav.gallery">Fotos</a>
       <a href="patrocinadores/" data-i18n="nav.sponsors">Patrocinadores</a>
       <a href="https://sol.sbc.org.br/index.php/sbseg" target="_blank" rel="noopener" data-i18n="nav.anais">Anais</a>
       <a href="https://ceseg-sbc.github.io" target="_blank" rel="noopener" data-i18n="nav.ceseg">CESeg</a>
@@ -281,8 +282,8 @@
         <b data-i18n="home.cesegName2">Sociedade Brasileira de Computação (SBC)</b>
       </div>
       <div class="meta">
-        <span data-i18n="home.meta1"><b>15</b> edições registradas</span>
-        <span data-i18n="home.meta2">2011 <b>a</b> 2025</span>
+        <span data-i18n="home.meta1"><b>16</b> edições registradas</span>
+        <span data-i18n="home.meta2">2011 <b>a</b> 2026</span>
         <span data-i18n="home.meta3">promovido pela <b>CESeg</b> / <b>SBC</b></span>
       </div>
 
@@ -344,11 +345,11 @@
           <p data-i18n="home.cardAwardsP">Trabalhos premiados por edição, em todas as categorias e sub-eventos.</p>
           <div class="go" data-i18n="home.cardAwardsGo">Ver premiações →</div>
         </a>
-        <div class="xcard soon">
+        <a class="xcard" href="fotos/">
           <h3 data-i18n="home.cardPhotosH3">Galeria de fotos</h3>
-          <p data-i18n="home.cardPhotosP">Galeria integrada de fotos das edições. Em construção.</p>
-          <div class="go" data-i18n="home.cardPhotosGo">Em breve</div>
-        </div>
+          <p data-i18n="home.cardPhotosP">Miniaturas e links para os álbuns de fotos de cada edição (site, Google Drive e redes sociais).</p>
+          <div class="go" data-i18n="home.cardPhotosGo">Ver galeria →</div>
+        </a>
         <a class="xcard" href="patrocinadores/">
           <h3 data-i18n="home.cardSponsorsH3">Patrocinadores</h3>
           <p data-i18n="home.cardSponsorsP">Patrocinadores e apoiadores ao longo das edições, organizados por cota.</p>
@@ -391,6 +392,7 @@
   // site: original live site or null (dead)
   // brand: logomarca page or null
   var EDITIONS = [
+    {y:2026, n:"SBSeg 2026", loc:"Armação dos Búzios · RJ · UFF · 1–4 set", logo:"assets/logos/sbseg2026.png", archive:"sbseg2026/", site:"https://www.sbseg2026.uff.br/", brand:null},
     {y:2025, n:"SBSeg 2025", loc:"Foz do Iguaçu · PR · PUCPR · 1–4 set", logo:"assets/logos/sbseg2025.png", archive:"sbseg2025/", site:"https://sbseg2025.ppgia.pucpr.br/", brand:"sbseg2025/sbseg2025.ppgia.pucpr.br/informacoes/logomarca/index.html"},
     {y:2024, n:"SBSeg 2024", loc:"São José dos Campos · SP · ITA · 16–19 set", logo:"assets/logos/sbseg2024.png", archive:"sbseg2024/", site:"https://sbseg2024.ita.br/", brand:"sbseg2024/sbseg2024.ita.br/informacoes/logomarca/index.html"},
     {y:2023, n:"SBSeg 2023", loc:"Juiz de Fora · MG · UFJF", logo:null, archive:null, site:"https://sbseg2023.ufjf.br/", brand:null},
