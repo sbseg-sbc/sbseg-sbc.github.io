@@ -34,7 +34,7 @@
   "alternateName": "Arquivo histórico do Simpósio Brasileiro de Cibersegurança",
   "url": "https://sbseg-sbc.github.io/",
   "inLanguage": "pt-BR",
-  "description": "Arquivo histórico das edições do SBSeg, o Simpósio Brasileiro de Cibersegurança. Índice cronológico (2011–2026) com cópias estáticas preservadas dos sites de cada edição, navegáveis offline.",
+  "description": "Arquivo histórico das edições do SBSeg, o Simpósio Brasileiro de Cibersegurança. Índice cronológico (2011–2026) com cópias estáticas preservadas dos sites de cada edição, que permanecem acessíveis aqui mesmo após o site original sair do ar.",
   "keywords": ["cibersegurança", "segurança da informação", "arquivo histórico", "anais", "SBSeg"],
   "isAccessibleForFree": true,
   "holdingArchive": {
@@ -273,7 +273,7 @@
       <h1 class="title" data-i18n="home.h1">Simpósio Brasileiro<br>de Cibersegurança</h1>
       <p class="lead" data-i18n="home.lead">O <strong>SBSeg</strong> é o principal fórum nacional de pesquisa em
       segurança da informação e cibersegurança. Este é o <strong>arquivo histórico</strong>
-      do evento: um índice das edições ao longo dos anos, com cópias offline preservadas e
+      do evento: um índice das edições ao longo dos anos, com cópias estáticas preservadas e
       acesso aos sites de cada edição.</p>
       <div class="ceseg">
         <span class="by" data-i18n="home.cesegBy1">mantido pela</span>
@@ -368,8 +368,8 @@
       <a href="https://www.sbc.org.br" target="_blank" rel="noopener" data-i18n="home.footSbc">↗ Sociedade Brasileira de Computação</a>
     </div>
     <p class="archive-note" data-i18n="home.archiveNote">Várias edições possuem uma <b>cópia estática preservada</b> neste
-    projeto, navegável offline caso o site original saia do ar. Onde a cópia existe, o botão
-    <b>Arquivo offline</b> aparece no cartão da edição; o botão <b>Site original</b> aponta
+    projeto, que continua acessível aqui mesmo que o site original saia do ar. Onde a cópia existe, o botão
+    <b>Cópia estática</b> aparece no cartão da edição; o botão <b>Site original</b> aponta
     para o site ao vivo (quando ainda disponível).</p>
     <p class="colophon" data-i18n="home.colophon">
       SBSeg: Simpósio Brasileiro de Cibersegurança<br>
@@ -418,7 +418,7 @@
       ? '<img src="'+e.logo+'" alt="Logomarca do '+esc(e.n)+'" loading="lazy">'
       : '<div class="logo-fallback"><span class="yr">'+("'"+String(e.y).slice(2))+'</span><span class="tag">SBSeg</span></div>';
     var acts = [];
-    if(e.archive) acts.push('<a class="btn primary" href="'+e.archive+'" data-i18n="home.btnArchive">Arquivo offline</a>');
+    if(e.archive) acts.push('<a class="btn primary" href="'+e.archive+'" data-i18n="home.btnArchive">Cópia estática</a>');
     if(e.site)    acts.push('<a class="btn" href="'+e.site+'" target="_blank" rel="noopener" data-i18n="home.btnSite">Site original</a>');
     if(e.brand)   acts.push('<a class="btn brand" href="'+e.brand+'" data-i18n="home.btnBrand">Logomarca</a>');
     return '<div class="card">'
