@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title data-i18n="home.title">SBSeg: Simpósio Brasileiro de Cibersegurança · Arquivo histórico</title>
-<meta name="description" data-i18n="home.metaDesc" data-i18n-attr="content" content="Arquivo histórico das edições do SBSeg, o Simpósio Brasileiro de Cibersegurança, promovido pela CESeg/SBC. Índice cronológico com cópias estáticas preservadas de cada edição.">
+<meta name="description" data-i18n="home.metaDesc" data-i18n-attr="content" content="Arquivo histórico e ponto de acesso rápido às edições do SBSeg, o Simpósio Brasileiro de Cibersegurança (CESeg/SBC): cópias estáticas preservadas, organizadores, palestrantes, patrocinadores, premiações, fotos e até certificados de premiação.">
 <meta name="keywords" content="SBSeg, arquivo histórico, cibersegurança, segurança da informação, CESeg, SBC, simpósio, anais, edições">
 <link rel="canonical" href="https://sbseg-sbc.github.io/">
 
@@ -206,6 +206,45 @@
   .btn.brand{background:var(--accent-soft);border-color:var(--accent-soft);color:var(--accent-dark)}
   .btn.brand:hover{border-color:var(--accent)}
 
+  /* ---------- mapa das cidades-sede ---------- */
+  section.mapsec{padding:30px 0}
+  .map-cap{max-width:70ch;color:var(--muted);font-size:.95rem;margin-bottom:22px}
+  .map-cap b{color:var(--text);font-weight:600}
+  .map-stage{
+    position:relative;display:flex;justify-content:center;
+    background:var(--bg-soft);border:1px solid var(--line);border-radius:18px;
+    padding:18px;overflow:hidden;
+  }
+  .brmap{width:100%;max-width:560px;height:auto;display:block}
+  .brmap .land{fill:var(--accent-soft);stroke:#bcdcd5;stroke-width:.7;stroke-linejoin:round}
+  .brmap .pt{cursor:pointer}
+  .brmap .pt .halo{fill:var(--accent);opacity:.16;transition:r .18s,opacity .18s}
+  .brmap .pt .core{fill:var(--accent);stroke:#fff;stroke-width:1.4;transition:r .18s,fill .18s}
+  .brmap .pt:hover .core,.brmap .pt:focus .core{fill:var(--accent-dark);r:7}
+  .brmap .pt:hover .halo,.brmap .pt:focus .halo{r:18;opacity:.28}
+  .brmap .pt.live .core{fill:#e0483d}
+  .brmap .pt.live:hover .core,.brmap .pt.live:focus .core{fill:#c23a30}
+  .brmap .pt.live .halo{fill:#e0483d}
+  .map-tip{
+    position:absolute;pointer-events:none;z-index:5;opacity:0;transform:translateY(4px);
+    transition:opacity .14s,transform .14s;background:var(--text);color:#fff;
+    border-radius:10px;padding:9px 12px;font-size:.82rem;line-height:1.45;
+    max-width:230px;box-shadow:0 10px 30px -12px rgba(0,0,0,.5);
+  }
+  .map-tip.on{opacity:1;transform:translateY(0)}
+  .map-tip .tc{font-weight:700;display:block;margin-bottom:2px}
+  .map-tip .ti{color:#bfe9e0;display:block;font-size:.78rem}
+  .map-tip .ty{color:#9fb4b9;display:block;font-size:.75rem;margin-top:3px}
+  .map-legend{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:16px;font-size:.82rem;color:var(--muted)}
+  .map-legend .lk{display:inline-flex;align-items:center;gap:7px}
+  .map-legend .lk i{width:11px;height:11px;border-radius:50%;border:1.4px solid #fff;
+    box-shadow:0 0 0 1px var(--line)}
+  .map-legend .lk.archive i{background:var(--accent)}
+  .map-legend .lk.live i{background:#e0483d}
+  @keyframes cardflash{0%,100%{box-shadow:0 0 0 0 rgba(14,138,120,0)}
+    30%{box-shadow:0 0 0 4px rgba(14,138,120,.45)}}
+  .card.flash{animation:cardflash 1.1s ease}
+
   /* ---------- explore band ---------- */
   section.explore{padding:24px 0 10px}
   .explore-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
@@ -254,6 +293,7 @@
     </label>
     <nav class="topnav">
       <a href="#edicoes" data-i18n="nav.edicoes">Edições</a>
+      <a href="#mapa" data-i18n="nav.mapa">Mapa</a>
       <a href="organizadores/" data-i18n="nav.org">Organizadores</a>
       <a href="palestrantes/" data-i18n="nav.speakers">Palestrantes</a>
       <a href="premiacoes/" data-i18n="nav.awards">Premiações</a>
@@ -272,9 +312,12 @@
       <p class="eyebrow" data-i18n="home.eyebrow">Comissão Especial de Cibersegurança (CESeg) · Sociedade Brasileira de Computação (SBC)</p>
       <h1 class="title" data-i18n="home.h1">Simpósio Brasileiro<br>de Cibersegurança</h1>
       <p class="lead" data-i18n="home.lead">O <strong>SBSeg</strong> é o principal fórum nacional de pesquisa em
-      segurança da informação e cibersegurança. Este é o <strong>arquivo histórico</strong>
-      do evento: um índice das edições ao longo dos anos, com cópias estáticas preservadas e
-      acesso aos sites de cada edição.</p>
+      segurança da informação e cibersegurança. Este site reúne o <strong>arquivo histórico</strong>
+      do evento, com cópias estáticas preservadas de cada edição que continuam acessíveis aqui
+      mesmo quando o site original sai do ar, e funciona também como <strong>ponto de acesso
+      rápido</strong> às informações das edições: organizadores, palestrantes, patrocinadores,
+      premiações e galerias de fotos. Reunimos inclusive <strong>certificados de premiação</strong>,
+      alguns dos quais não estavam disponíveis nem no site original da edição.</p>
       <div class="ceseg">
         <span class="by" data-i18n="home.cesegBy1">mantido pela</span>
         <b data-i18n="home.cesegName1">Comissão Especial de Cibersegurança (CESeg)</b>
@@ -320,6 +363,26 @@
         <span class="count" data-i18n="home.secEditionsCount">índice cronológico</span>
       </div>
       <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="mapsec" id="mapa">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-i18n="home.secMap">Onde o SBSeg aconteceu</h2>
+        <span class="count" data-i18n="home.secMapCount">mapa das cidades-sede</span>
+      </div>
+      <p class="map-cap" data-i18n="home.mapCaption"><b>16 edições</b> em <b>15 cidades-sede</b>
+      por todo o Brasil. Passe o mouse (ou toque) sobre um ponto para ver a cidade, a
+      instituição anfitriã e o ano de cada edição; clique para ir até o cartão da edição.</p>
+      <div class="map-stage">
+        <svg class="brmap" id="brmap" role="img" aria-label="Mapa do Brasil com as cidades-sede das edições do SBSeg" data-i18n="home.mapAria" data-i18n-attr="aria-label"></svg>
+        <div class="map-tip" id="map-tip" role="status" aria-live="polite"></div>
+      </div>
+      <div class="map-legend">
+        <span class="lk archive"><i></i><span data-i18n="home.mapLegArchive">com cópia estática preservada</span></span>
+        <span class="lk live"><i></i><span data-i18n="home.mapLegLive">apenas site original / sem cópia</span></span>
+      </div>
     </div>
   </section>
 
@@ -385,6 +448,7 @@
   </div>
 </footer>
 
+<script src="assets/brazil-map.js"></script>
 <script>
   // Single source of truth for the editions; rendered into cards.
   // logo: path under assets/logos or null (uses typographic fallback)
@@ -392,22 +456,22 @@
   // site: original live site or null (dead)
   // brand: logomarca page or null
   var EDITIONS = [
-    {y:2026, n:"SBSeg 2026", loc:"Armação dos Búzios · RJ · UFF · 1–4 set", logo:"assets/logos/sbseg2026.png", archive:"sbseg2026/", site:"https://www.sbseg2026.uff.br/", brand:null},
-    {y:2025, n:"SBSeg 2025", loc:"Foz do Iguaçu · PR · PUCPR · 1–4 set", logo:"assets/logos/sbseg2025.png", archive:"sbseg2025/", site:"https://sbseg2025.ppgia.pucpr.br/", brand:"sbseg2025/sbseg2025.ppgia.pucpr.br/informacoes/logomarca/index.html"},
-    {y:2024, n:"SBSeg 2024", loc:"São José dos Campos · SP · ITA · 16–19 set", logo:"assets/logos/sbseg2024-cor.png", archive:"sbseg2024/", site:"https://sbseg2024.ita.br/", brand:"sbseg2024/sbseg2024.ita.br/informacoes/logomarca/index.html"},
-    {y:2023, n:"SBSeg 2023", loc:"Juiz de Fora · MG · UFJF", logo:null, archive:null, site:"https://sbseg2023.ufjf.br/", brand:null},
-    {y:2022, n:"SBSeg 2022", loc:"Santa Maria · RS · UFSM", logo:"assets/logos/sbseg2022.png", archive:"sbseg2022/", site:"https://sbseg2022.inf.ufsm.br/", brand:null},
-    {y:2021, n:"SBSeg 2021", loc:"Belém · PA · UFPA", logo:null, archive:"sbseg2021/", site:"https://sbseg2021.ufpa.br/", brand:null},
-    {y:2020, n:"SBSeg 2020", loc:"Petrópolis · RJ", logo:null, archive:"sbseg2020/", site:"http://sbseg.sbc.org.br/2020/", brand:null},
-    {y:2019, n:"SBSeg 2019", loc:"São Paulo · SP · IME/USP", logo:null, archive:"sbseg2019/", site:"https://sbseg2019.ime.usp.br/", brand:null},
-    {y:2018, n:"SBSeg 2018", loc:"Natal · RN · IMD/UFRN", logo:"assets/logos/sbseg2018.png", archive:"sbseg2018/", site:"https://sbseg2018.imd.ufrn.br/", brand:null},
-    {y:2017, n:"SBSeg 2017", loc:"Brasília · DF · UnB", logo:"assets/logos/sbseg2017.png", archive:"sbseg2017/", site:"https://sbseg2017.redes.unb.br/", brand:null},
-    {y:2016, n:"SBSeg 2016", loc:"Niterói · RJ · UFF", logo:null, archive:null, site:"http://sbseg2016.ic.uff.br/", brand:null},
-    {y:2015, n:"SBSeg 2015", loc:"Florianópolis · SC · UFSC/UNIVALI", logo:null, archive:"sbseg2015/", site:null, brand:null},
-    {y:2014, n:"SBSeg 2014", loc:"Belo Horizonte · MG · DCC/UFMG", logo:"assets/logos/sbseg2014.png", archive:"sbseg2014/", site:"http://www.sbseg2014.dcc.ufmg.br/", brand:null},
-    {y:2013, n:"SBSeg 2013", loc:"Manaus · AM · IComp/UFAM", logo:"assets/logos/sbseg2013.png", archive:"sbseg2013/", site:null, brand:null},
-    {y:2012, n:"SBSeg 2012", loc:"Curitiba · PR · PUCPR", logo:"assets/logos/sbseg2012.jpg", archive:"sbseg2012/", site:"http://sbseg2012.ppgia.pucpr.br/", brand:null},
-    {y:2011, n:"SBSeg 2011", loc:"Brasília · DF · UnB", logo:null, archive:"sbseg2011/", site:null, brand:null}
+    {y:2026, lat:-22.7469, lng:-41.8817, n:"SBSeg 2026", loc:"Armação dos Búzios · RJ · UFF · 1–4 set", logo:"assets/logos/sbseg2026.png", archive:"sbseg2026/", site:"https://www.sbseg2026.uff.br/", brand:null},
+    {y:2025, lat:-25.5163, lng:-54.5854, n:"SBSeg 2025", loc:"Foz do Iguaçu · PR · PUCPR · 1–4 set", logo:"assets/logos/sbseg2025.png", archive:"sbseg2025/", site:"https://sbseg2025.ppgia.pucpr.br/", brand:"sbseg2025/sbseg2025.ppgia.pucpr.br/informacoes/logomarca/index.html"},
+    {y:2024, lat:-23.2237, lng:-45.9009, n:"SBSeg 2024", loc:"São José dos Campos · SP · ITA · 16–19 set", logo:"assets/logos/sbseg2024-cor.png", archive:"sbseg2024/", site:"https://sbseg2024.ita.br/", brand:"sbseg2024/sbseg2024.ita.br/informacoes/logomarca/index.html"},
+    {y:2023, lat:-21.7642, lng:-43.3503, n:"SBSeg 2023", loc:"Juiz de Fora · MG · UFJF", logo:null, archive:null, site:"https://sbseg2023.ufjf.br/", brand:null},
+    {y:2022, lat:-29.6868, lng:-53.8149, n:"SBSeg 2022", loc:"Santa Maria · RS · UFSM", logo:"assets/logos/sbseg2022.png", archive:"sbseg2022/", site:"https://sbseg2022.inf.ufsm.br/", brand:null},
+    {y:2021, lat:-1.4558, lng:-48.5039, n:"SBSeg 2021", loc:"Belém · PA · UFPA", logo:null, archive:"sbseg2021/", site:"https://sbseg2021.ufpa.br/", brand:null},
+    {y:2020, lat:-22.505, lng:-43.1786, n:"SBSeg 2020", loc:"Petrópolis · RJ", logo:null, archive:"sbseg2020/", site:"http://sbseg.sbc.org.br/2020/", brand:null},
+    {y:2019, lat:-23.5558, lng:-46.6396, n:"SBSeg 2019", loc:"São Paulo · SP · IME/USP", logo:null, archive:"sbseg2019/", site:"https://sbseg2019.ime.usp.br/", brand:null},
+    {y:2018, lat:-5.7945, lng:-35.211, n:"SBSeg 2018", loc:"Natal · RN · IMD/UFRN", logo:"assets/logos/sbseg2018.png", archive:"sbseg2018/", site:"https://sbseg2018.imd.ufrn.br/", brand:null},
+    {y:2017, lat:-15.7939, lng:-47.8828, n:"SBSeg 2017", loc:"Brasília · DF · UnB", logo:"assets/logos/sbseg2017.png", archive:"sbseg2017/", site:"https://sbseg2017.redes.unb.br/", brand:null},
+    {y:2016, lat:-22.8833, lng:-43.1036, n:"SBSeg 2016", loc:"Niterói · RJ · UFF", logo:null, archive:null, site:"http://sbseg2016.ic.uff.br/", brand:null},
+    {y:2015, lat:-27.5949, lng:-48.5482, n:"SBSeg 2015", loc:"Florianópolis · SC · UFSC/UNIVALI", logo:null, archive:"sbseg2015/", site:null, brand:null},
+    {y:2014, lat:-19.9167, lng:-43.9345, n:"SBSeg 2014", loc:"Belo Horizonte · MG · DCC/UFMG", logo:"assets/logos/sbseg2014.png", archive:"sbseg2014/", site:"http://www.sbseg2014.dcc.ufmg.br/", brand:null},
+    {y:2013, lat:-3.119, lng:-60.0217, n:"SBSeg 2013", loc:"Manaus · AM · IComp/UFAM", logo:"assets/logos/sbseg2013.png", archive:"sbseg2013/", site:null, brand:null},
+    {y:2012, lat:-25.4284, lng:-49.2733, n:"SBSeg 2012", loc:"Curitiba · PR · PUCPR", logo:"assets/logos/sbseg2012.jpg", archive:"sbseg2012/", site:"http://sbseg2012.ppgia.pucpr.br/", brand:null},
+    {y:2011, lat:-15.7939, lng:-47.8828, n:"SBSeg 2011", loc:"Brasília · DF · UnB", logo:null, archive:"sbseg2011/", site:null, brand:null}
   ];
 
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
@@ -421,7 +485,7 @@
     if(e.archive) acts.push('<a class="btn primary" href="'+e.archive+'" data-i18n="home.btnArchive">Cópia estática</a>');
     if(e.site)    acts.push('<a class="btn" href="'+e.site+'" target="_blank" rel="noopener" data-i18n="home.btnSite">Site original</a>');
     if(e.brand)   acts.push('<a class="btn brand" href="'+e.brand+'" data-i18n="home.btnBrand">Logomarca</a>');
-    return '<div class="card">'
+    return '<div class="card" id="ed-'+e.y+'">'
       + '<div class="logo-box">'+logo+'</div>'
       + '<div class="card-body">'
       +   '<div class="ed-name">'+esc(e.n)+'</div>'
@@ -429,6 +493,75 @@
       +   '<div class="actions">'+acts.join('')+'</div>'
       + '</div></div>';
   }).join('');
+
+  // ── Mapa das cidades-sede ────────────────────────────────────────────────
+  // Desenha o contorno do Brasil (assets/brazil-map.js, já projetado) e plota
+  // um ponto por cidade-sede. Edições na mesma cidade (ex.: Brasília 2011/2017)
+  // são agrupadas em um único marcador. A projeção é a MESMA usada no build do
+  // contorno, então os pontos caem exatamente sobre o mapa.
+  (function buildMap(){
+    var M = window.BR_MAP, svg = document.getElementById('brmap');
+    if(!M || !svg) return;
+    svg.setAttribute('viewBox', '0 0 '+M.W+' '+M.H);
+
+    var groups = {}, order = [];
+    EDITIONS.forEach(function(e){
+      var key = e.lat+','+e.lng;
+      if(!groups[key]){ groups[key] = []; order.push(key); }
+      groups[key].push(e);
+    });
+
+    var glist = [], pts = '';
+    order.forEach(function(key){
+      var arr = groups[key].slice().sort(function(a,b){ return b.y - a.y; }); // recente 1º
+      var xy = M.project(arr[0].lat, arr[0].lng);
+      var hasArchive = arr.some(function(e){ return !!e.archive; });
+      var idx = glist.push({ arr:arr, x:xy[0], y:xy[1] }) - 1;
+      var cx = xy[0].toFixed(1), cy = xy[1].toFixed(1);
+      pts += '<g class="pt'+(hasArchive?'':' live')+'" data-g="'+idx+'" tabindex="0" '
+          +  'role="button" aria-label="'+esc(arr[0].loc.split(' · ')[0])+'">'
+          +  '<circle class="halo" cx="'+cx+'" cy="'+cy+'" r="11"/>'
+          +  '<circle class="core" cx="'+cx+'" cy="'+cy+'" r="5"/></g>';
+    });
+    svg.innerHTML = '<path class="land" d="'+M.path+'"/>' + pts;
+
+    var tip = document.getElementById('map-tip'), stage = svg.parentNode;
+    function tipHTML(g){
+      var p = g.arr[0].loc.split(' · '), city = p[0]||'', state = p[1]||'', inst = p[2]||'';
+      var years = g.arr.map(function(e){ return 'SBSeg '+e.y; }).join(' · ');
+      var h = '<span class="tc">'+esc(city)+(state?' · '+esc(state):'')+'</span>';
+      if(inst) h += '<span class="ti">'+esc(inst)+'</span>';
+      return h + '<span class="ty">'+esc(years)+'</span>';
+    }
+    function showTip(idx, el){
+      tip.innerHTML = tipHTML(glist[idx]);
+      tip.classList.add('on');
+      var sr = stage.getBoundingClientRect(), cr = el.getBoundingClientRect();
+      var cx = cr.left + cr.width/2 - sr.left, cyTop = cr.top - sr.top;
+      var tw = tip.offsetWidth, th = tip.offsetHeight;
+      var left = Math.max(6, Math.min(sr.width - tw - 6, cx - tw/2));
+      var top = cyTop - th - 10; if(top < 6) top = cyTop + cr.height + 10;
+      tip.style.left = left+'px'; tip.style.top = top+'px';
+    }
+    function hideTip(){ tip.classList.remove('on'); }
+    function goTo(y){
+      var card = document.getElementById('ed-'+y);
+      if(!card) return;
+      card.scrollIntoView({ behavior:'smooth', block:'center' });
+      card.classList.remove('flash'); void card.offsetWidth; card.classList.add('flash');
+    }
+    Array.prototype.forEach.call(svg.querySelectorAll('.pt'), function(el){
+      var idx = +el.getAttribute('data-g');
+      el.addEventListener('mouseenter', function(){ showTip(idx, el); });
+      el.addEventListener('mouseleave', hideTip);
+      el.addEventListener('focus', function(){ showTip(idx, el); });
+      el.addEventListener('blur', hideTip);
+      el.addEventListener('click', function(){ goTo(glist[idx].arr[0].y); });
+      el.addEventListener('keydown', function(ev){
+        if(ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); goTo(glist[idx].arr[0].y); }
+      });
+    });
+  })();
 
   // Enriquece o JSON-LD da coleção com cada edição como parte arquivada (hasPart),
   // mantendo a classificação estruturada em sincronia com o array EDITIONS acima.

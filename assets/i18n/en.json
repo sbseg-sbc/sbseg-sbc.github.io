@@ -1,9 +1,10 @@
 {
   "beta": {
-    "text": "site under construction — provisional content, subject to change"
+    "text": "site under construction: provisional content, subject to change"
   },
   "nav": {
     "edicoes": "Editions",
+    "mapa": "Map",
     "org": "Organizers",
     "speakers": "Speakers",
     "awards": "Awards",
@@ -39,10 +40,10 @@
   },
   "home": {
     "title": "SBSeg: Brazilian Symposium on Cybersecurity · Historical archive",
-    "metaDesc": "Historical archive of the editions of SBSeg, the Brazilian Symposium on Cybersecurity, promoted by CESeg/SBC. Chronological index with preserved static copies of each edition.",
+    "metaDesc": "Historical archive and quick-access hub for the editions of SBSeg, the Brazilian Symposium on Cybersecurity (CESeg/SBC): preserved static copies, organizers, speakers, sponsors, awards, photos and even award certificates.",
     "eyebrow": "Special Committee on Cybersecurity (CESeg) · Brazilian Computer Society (SBC)",
     "h1": "Brazilian Symposium<br>on Cybersecurity",
-    "lead": "<strong>SBSeg</strong> is Brazil's leading national research forum on information security and cybersecurity. This is the event's <strong>historical archive</strong>: an index of the editions over the years, with preserved static copies and access to each edition's website.",
+    "lead": "<strong>SBSeg</strong> is Brazil's leading national research forum on information security and cybersecurity. This site brings together the event's <strong>historical archive</strong>, with preserved static copies of each edition that stay accessible here even when the original website goes offline, and also works as a <strong>quick-access hub</strong> for each edition's information: organizers, speakers, sponsors, awards and photo galleries. It even gathers <strong>award certificates</strong>, some of which were not available even on the edition's original website.",
     "cesegBy1": "maintained by the",
     "cesegName1": "Special Committee on Cybersecurity (CESeg)",
     "cesegBy2": "of the",
@@ -60,6 +61,12 @@
     "renameNote": "Up to the <b>2024</b> edition the longer name was in use; from <b>2025</b> the current, official and more concise name took effect. The acronyms <b>SBSeg</b> and <b>CESeg</b> were kept.",
     "secEditions": "Editions",
     "secEditionsCount": "chronological index",
+    "secMap": "Where SBSeg took place",
+    "secMapCount": "host-cities map",
+    "mapCaption": "<b>16 editions</b> across <b>15 host cities</b> all over Brazil. Hover (or tap) a dot to see the city, the host institution and the year of each edition; click to jump to the edition's card.",
+    "mapAria": "Map of Brazil with the host cities of the SBSeg editions",
+    "mapLegArchive": "with a preserved static copy",
+    "mapLegLive": "original website only / no copy",
     "secExplore": "Explore the archive",
     "secExploreCount": "cross-cutting resources",
     "cardOrgH3": "Organizers",

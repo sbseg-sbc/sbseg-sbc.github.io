@@ -1,9 +1,10 @@
 {
   "beta": {
-    "text": "site em construção — conteúdo provisório e sujeito a alterações"
+    "text": "site em construção: conteúdo provisório e sujeito a alterações"
   },
   "nav": {
     "edicoes": "Edições",
+    "mapa": "Mapa",
     "org": "Organizadores",
     "speakers": "Palestrantes",
     "awards": "Premiações",
@@ -39,10 +40,10 @@
   },
   "home": {
     "title": "SBSeg: Simpósio Brasileiro de Cibersegurança · Arquivo histórico",
-    "metaDesc": "Arquivo histórico das edições do SBSeg, o Simpósio Brasileiro de Cibersegurança, promovido pela CESeg/SBC. Índice cronológico com cópias estáticas preservadas de cada edição.",
+    "metaDesc": "Arquivo histórico e ponto de acesso rápido às edições do SBSeg, o Simpósio Brasileiro de Cibersegurança (CESeg/SBC): cópias estáticas preservadas, organizadores, palestrantes, patrocinadores, premiações, fotos e até certificados de premiação.",
     "eyebrow": "Comissão Especial de Cibersegurança (CESeg) · Sociedade Brasileira de Computação (SBC)",
     "h1": "Simpósio Brasileiro<br>de Cibersegurança",
-    "lead": "O <strong>SBSeg</strong> é o principal fórum nacional de pesquisa em segurança da informação e cibersegurança. Este é o <strong>arquivo histórico</strong> do evento: um índice das edições ao longo dos anos, com cópias estáticas preservadas e acesso aos sites de cada edição.",
+    "lead": "O <strong>SBSeg</strong> é o principal fórum nacional de pesquisa em segurança da informação e cibersegurança. Este site reúne o <strong>arquivo histórico</strong> do evento, com cópias estáticas preservadas de cada edição que continuam acessíveis aqui mesmo quando o site original sai do ar, e funciona também como <strong>ponto de acesso rápido</strong> às informações das edições: organizadores, palestrantes, patrocinadores, premiações e galerias de fotos. Reunimos inclusive <strong>certificados de premiação</strong>, alguns dos quais não estavam disponíveis nem no site original da edição.",
     "cesegBy1": "mantido pela",
     "cesegName1": "Comissão Especial de Cibersegurança (CESeg)",
     "cesegBy2": "da",
@@ -60,6 +61,12 @@
     "renameNote": "Até a edição de <b>2024</b> vigorava o nome longo; a partir de <b>2025</b> passou a valer o nome atual e oficial, mais enxuto. As siglas <b>SBSeg</b> e <b>CESeg</b> permaneceram.",
     "secEditions": "Edições",
     "secEditionsCount": "índice cronológico",
+    "secMap": "Onde o SBSeg aconteceu",
+    "secMapCount": "mapa das cidades-sede",
+    "mapCaption": "<b>16 edições</b> em <b>15 cidades-sede</b> por todo o Brasil. Passe o mouse (ou toque) sobre um ponto para ver a cidade, a instituição anfitriã e o ano de cada edição; clique para ir até o cartão da edição.",
+    "mapAria": "Mapa do Brasil com as cidades-sede das edições do SBSeg",
+    "mapLegArchive": "com cópia estática preservada",
+    "mapLegLive": "apenas site original / sem cópia",
     "secExplore": "Explorar o arquivo",
     "secExploreCount": "recursos transversais",
     "cardOrgH3": "Organizadores",
