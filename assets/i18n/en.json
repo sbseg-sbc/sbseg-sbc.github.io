@@ -112,10 +112,10 @@
   "awards": {
     "title": "Awards of the SBSeg Editions",
     "h1": "Awards of the SBSeg Editions",
-    "lead": "List of the award-winning papers in each edition of the Brazilian Symposium on Cybersecurity, organized by sub-event and award category. Current coverage: <strong>84 awards</strong> in the editions with an available source.",
+    "lead": "List of the award-winning papers in each edition of the Brazilian Symposium on Cybersecurity, organized by sub-event and award category. Current coverage: <strong>139 awards</strong> in the editions with an available source.",
     "certPdf": "Award certificates (PDF)",
     "cert": "Award certificates",
-    "note": "Editions included so far: 2025, 2024, 2017, 2014 and 2012 (those with an accessible awards list). The remaining editions will be added as the sources are located."
+    "note": "Editions included so far: 2025, 2024, 2023, 2022, 2019, 2017, 2014 and 2012 (those with an accessible awards list). The remaining editions will be added as the sources are located. The 2022 list is preliminary and not yet confirmed against the official certificates."
   },
   "sponsors": {
     "title": "Sponsors of the SBSeg Editions",

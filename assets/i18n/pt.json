@@ -112,10 +112,10 @@
   "awards": {
     "title": "Premiações das Edições do SBSeg",
     "h1": "Premiações das Edições do SBSeg",
-    "lead": "Relação dos trabalhos premiados em cada edição do Simpósio Brasileiro de Cibersegurança, organizada por sub-evento e categoria de premiação. Cobertura atual: <strong>84 prêmios</strong> nas edições com fonte disponível.",
+    "lead": "Relação dos trabalhos premiados em cada edição do Simpósio Brasileiro de Cibersegurança, organizada por sub-evento e categoria de premiação. Cobertura atual: <strong>139 prêmios</strong> nas edições com fonte disponível.",
     "certPdf": "Certificados das premiações (PDF)",
     "cert": "Certificados das premiações",
-    "note": "Edições incluídas até o momento: 2025, 2024, 2017, 2014 e 2012 (as que têm relação de premiações acessível). As demais edições serão acrescentadas conforme as fontes forem localizadas."
+    "note": "Edições incluídas até o momento: 2025, 2024, 2023, 2022, 2019, 2017, 2014 e 2012 (as que têm relação de premiações acessível). As demais edições serão acrescentadas conforme as fontes forem localizadas. A relação de 2022 é preliminar e ainda não confirmada com os certificados oficiais."
   },
   "sponsors": {
     "title": "Patrocinadores das Edições do SBSeg",
