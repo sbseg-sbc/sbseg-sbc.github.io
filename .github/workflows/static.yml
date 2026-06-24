@@ -41,3 +41,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+        with:
+          # Site tem ~4.6k arquivos; o publish pode passar do limite padrao de 10 min.
+          # 30 min de margem evita falha por timeout no deploy.
+          timeout: 1800000
