@@ -99,7 +99,7 @@
     "metaDesc": "Coordinación General y Coordinación del Comité de Programa Técnico (pista principal) de todas las ediciones del SBSeg, el Simposio Brasileño de Ciberseguridad.",
     "h1": "Organizadores y Coordinación del CPT",
     "lead": "Relación de la <strong>Coordinación General</strong> (organizadores generales) y de la <strong>Coordinación del Comité de Programa Técnico</strong> de la <strong>pista principal</strong> de cada edición del Simposio Brasileño de Ciberseguridad (SBSeg). Los datos fueron compilados a partir de las páginas de comités/organización preservadas en este archivo histórico.",
-    "note": "Las ediciones de <strong>2011 (Brasília)</strong>, <strong>2015 (Florianópolis)</strong> y <strong>2023 (Juiz de Fora)</strong> aún no tienen páginas de comités preservadas en este archivo; su coordinación se añadirá en una etapa futura, a medida que se recuperen las fuentes.",
+    "note": "Las ediciones de <strong>2011 (Brasília)</strong> y <strong>2015 (Florianópolis)</strong> aún no tienen páginas de comités preservadas en este archivo; su coordinación se añadirá en una etapa futura, a medida que se recuperen las fuentes.",
     "footer": "Página de archivo · CESeg / SBC. Generada el 2026-06-17. Datos compilados a partir de las páginas de organización/comités de cada edición preservadas en este archivo histórico."
   },
   "speakers": {
@@ -123,7 +123,7 @@
     "h1": "Patrocinadores de las Ediciones del SBSeg",
     "lead": "Patrocinadores y apoyadores del Simposio Brasileño de Ciberseguridad (SBSeg), organizados por <strong>categoría de patrocinio</strong>. Los logotipos fueron preservados a partir de las páginas de patrocinadores de cada edición en este archivo histórico.",
     "note2025": "Las categorías de patrocinio del SBSeg 2025 fueron <strong>Master, Infinity, Platinum, Diamante, Oro, Plata, Bronce</strong> y <strong>Apoyadores</strong>. Los logotipos se cargaban dinámicamente en el sitio original y no fueron capturados en la copia offline; consulte la lista completa en la página en vivo.",
-    "note": "Cobertura actual: <strong>2014, 2021, 2022, 2024 y 2025</strong> con logotipos preservados. Las demás ediciones se añadirán a medida que se recuperen las fuentes. Instituciones como CNPq, CAPES, FAPESP, CGI.br y NIC.br aparecen frecuentemente como financiadoras/apoyadoras institucionales del evento.",
+    "note": "Cobertura actual: <strong>2013, 2014, 2017, 2018, 2019, 2021, 2022, 2023, 2024 y 2025</strong> con logotipos preservados. Las demás ediciones se añadirán a medida que se recuperen las fuentes. Instituciones como CNPq, CAPES, FAPESP, CGI.br y NIC.br aparecen frecuentemente como financiadoras/apoyadoras institucionales del evento.",
     "footer": "Página de archivo · CESeg / SBC. Generada el 2026-06-17. Logotipos compilados a partir de las páginas de patrocinadores de cada edición preservadas en este archivo histórico."
   },
   "gallery": {
@@ -137,8 +137,11 @@
     "driveNote2025": "Las fotos oficiales de esta edición están alojadas en el Google Drive y el Instagram del evento. También hay una copia de respaldo preservada en Internet Archive (archive.org).",
     "btnArchiveOrg": "Respaldo (Internet Archive)",
     "fbNote": "Las fotos de esta edición están publicadas en la página oficial del evento en Facebook.",
-    "note": "Cobertura actual: <strong>2015, 2017, 2022, 2024 y 2025</strong>. Las miniaturas de 2017 y 2022 provienen de las copias preservadas en este archivo; las demás ediciones remiten a los álbumes originales (Google Drive, Facebook e Instagram). Otras ediciones se añadirán a medida que se localicen las fuentes de fotos.",
+    "note": "Cobertura actual: <strong>2015, 2017, 2018, 2019, 2022, 2023, 2024 y 2025</strong>. Las miniaturas de 2017 y 2022 provienen de las copias preservadas en este archivo; las demás ediciones remiten a los álbumes originales (Google Drive, Facebook, Twitter e Instagram). Otras ediciones se añadirán a medida que se localicen las fuentes de fotos.",
     "footer": "Página de archivo · CESeg / SBC. Generada el 2026-06-19. Miniaturas preservadas a partir de las páginas de fotos de cada edición; álbumes completos en los sitios y redes sociales originales.",
-    "socialNote": "No hay copia de fotos preservada en este archivo para esta edición. Los registros del evento están en las redes sociales oficiales del SBSeg."
+    "socialNote": "No hay copia de fotos preservada en este archivo para esta edición. Los registros del evento están en las redes sociales oficiales del SBSeg.",
+    "driveNote2023": "Las fotos oficiales de esta edición están alojadas en carpetas públicas de Google Drive, una por día del evento, más un álbum extra de la cena oficial y la premiación. Los enlaces se extrajeron de la galería de la página inicial del sitio original (preservado en este archivo).",
+    "btnDinner2023": "Cena oficial y premiación",
+    "btnArchived2023": "Galería en la copia archivada"
   }
 }
