@@ -5,6 +5,10 @@
 !sbseg2012/**/*.txt
 !dados_sbseg_2013/**/*.txt
 
+# Acervo pessoal com dados brutos do SBSeg 2008: permanece apenas localmente
+# (fonte da página sbseg2008/, não deve ser publicado no GitHub)
+dados_sbseg_2008/
+
 # Cruft do sistema operacional
 .DS_Store
 Thumbs.db
