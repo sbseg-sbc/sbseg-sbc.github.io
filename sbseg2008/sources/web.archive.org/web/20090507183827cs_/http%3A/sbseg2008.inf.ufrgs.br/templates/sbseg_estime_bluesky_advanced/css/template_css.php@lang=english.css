@@ -1,0 +1,838 @@
+
+/* CSS Document */
+
+body{
+	margin: 0px 0px 0px 0px;
+	background-color: #D9DDE0;
+	text-align: center;
+	font-family: Arial;
+	color: #666666;
+}
+
+body.contentpane{
+	text-align: left;
+	background-color: #ffffff;
+}
+
+#blank_header{
+        color: #9EA0A2;
+        font-family: Arial;
+        font-size: 10px;
+        padding-top: 4px;
+        position: relative;
+        height: 10px; /* 30 */
+        clear: both;
+}
+
+.nh1 {
+        font-size: 1px;
+        font-weight: bold;
+        border-bottom-style: solid;
+        /* border-bottom-color: #FF9900; */
+        border-bottom-color: #3367CD;
+        border-bottom-width: 1px;
+}
+
+
+#container{
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	
+	width: 750px;
+	margin: auto;
+
+	text-align: center;
+	background-image: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/taustakuva.gif');
+	background-repeat: repeat-y;
+	background-position: top center;
+	padding-top: 9px;
+}
+
+#header{
+	width: 738px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	height: 93px;
+	
+	background-image: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/headertausta_english.jpg');
+	background-repeat: repeat-y;
+	background-position: top center;
+}
+
+#headerl{
+	position: relative;
+	top: 30px;
+	left: 26px;
+	float: left;
+	text-align: left; /* ie */
+}
+
+#headerr{
+	position: relative;
+	top: 58px;
+	right: 24px;
+	float: right;
+
+}
+
+div#search{
+	
+}
+
+#search_out{
+	float: left;
+	width: 169px;
+}
+
+#search_in{
+	padding: 0px;
+	height: 22px !important;
+	height: 24px;
+	overflow: hidden;	
+}
+
+#search_in form {
+  padding: 0;
+  margin: 0;
+}
+
+#search_in .inputbox {
+	border: 0px;
+	padding: 3px 3px 3px 11px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 11px;
+	color: #ffffff;
+	
+	background-image: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/ibackground.gif');
+	background-repeat: no-repeat;
+	background-position: top left;
+	width: 169px;
+	height: 22px;
+}
+
+/*#vali{
+	width: 949px;
+	text-align: left;
+	clear: both;	
+}*/
+
+#layoutimage{
+	height: 189px;	
+	background-image: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/headerkuva_english.jpg');
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
+#top{
+	float: right;
+	width: 224px;
+	/*height: 172px; 189px;*/
+}
+
+#user6{
+	width: 660px;
+	float: left;
+	text-align: left;
+}
+
+#navi{
+	background-image: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/navigointibg.gif');
+	background-repeat: no-repeat;
+	background-position: top center;
+	height: 28px;
+	margin-top: 2px;
+	/*margin-left: 14px;*/
+	padding-left: 14px;
+	padding-right: 10px; /* for joomfish */
+}
+
+#contentshadow{
+	background-image: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/contentbg.gif');
+	background-repeat: no-repeat;
+	background-position: top center;
+	height: 17px;
+}
+
+#content{
+	text-align: left;
+	padding: 0px 25px 0px 28px;
+}
+
+#koko{
+	width: 898px;
+	border: 1px solid purple;
+	margin-left: 24px;
+	
+	font-family: Arial;
+	font-size: 11px;
+	color: #666666;
+	line-height: 1.5em;
+}
+
+#vasen{
+	float: left;
+	width: 241px;
+}
+
+#keski{
+	float: right;
+	width: 455px;
+}
+
+#keski2{
+	float: left;
+	width: 420px;	
+}
+
+#keski3{
+	float: left;
+	width: 655px;	
+}
+
+#keski4{
+	float: left;
+	width: 700px;	
+}
+
+#oikea{
+	width: 224px;
+	float: right;
+}
+
+#jako{
+	width: 420px;
+}
+
+#user1{
+	float: left;
+	width: 50%;
+	text-align: left;
+}
+
+#user2{
+	float: right;
+	width: 50%;
+	text-align: left;
+}
+
+#user5{
+	float: left;
+	width: 100%;
+	text-align: left;
+}
+
+#keski2a{
+	float: left;
+	width: 100%;
+}
+
+#footer2{
+	color: #9EA0A2;
+	font-family: Arial;
+	font-size: 12px;
+	height: 195px;
+	clear: both;
+	text-align: left;
+	
+	width: 750px;
+	font-weight: bold;
+	
+}
+
+#copy{
+	float: left;
+	font-size: 10px;
+	padding-top: 40px;
+	padding-left: 28px;
+	color: #666666;
+}
+
+div#copy div{
+	float: left;
+	margin-right: 5px;
+}
+
+#othermenu{
+	float: right;
+	padding-top: 40px;
+	padding-right: 28px;
+	font-size: 10px;
+	color: #666666;
+	font-weight: bold;
+	font-family: Arial;
+}
+
+#footer{
+	color: #9EA0A2;
+	font-family: Arial;
+	font-size: 10px;
+	padding-top: 18px;
+	position: relative;
+	height: 10px; /* 30 */
+	clear: both;
+	
+	background-image: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/footer.gif');
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-color: #D9DDE0;
+	font-weight: bold;
+}
+
+/* for joomla */
+
+ul#mainlevel-nav
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 0.8em;
+}
+
+ul#mainlevel-nav li
+{
+	background-image: none;
+	padding-left: 0px;
+	padding-right: 0px;
+	float: left;
+	margin: 0;
+	font-size: 11px;
+	line-height: 21px;
+	white-space: nowrap;
+	
+	background-image: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/sepa.gif');
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+
+ul#mainlevel-nav li a
+{
+	font-family: Arial;
+	font-weight: bold;
+	display: block;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-decoration: none;
+	color: #5A5E68;
+	background: transparent;
+	margin-top: 4px;
+}
+
+#buttons>ul#mainlevel-nav li a { width: auto; }
+
+	ul#mainlevel-nav li a:hover
+{
+	color: #4060AA;
+
+}
+
+div.moduletable{
+	margin: 0px 0px 10px 0px;
+	width: 224px;
+
+	font-family: Arial;
+	font-size: 11px;
+	color: #666666;
+}
+
+div.moduletable h3{
+	background-image: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/moduletitlebg.gif');
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	padding: 4px 0px 0px 11px;
+	height: 25px; /* 35px */
+	margin: 0;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	color: #ffffff;
+}
+
+div.moduletable table{
+	font-family: Arial;
+	font-size: 11px;
+	color: #666666;
+	width: 204px;
+	margin: 0px 10px 0px 10px;
+}
+
+div.moduletable table.contentpaneopen{
+	margin: 0px 10px 0px 10px;
+	text-align: left;
+}
+
+div.moduletable table.contentpaneopen td{
+	text-align: left;
+}
+
+
+/* graphic grey module box */
+div.moduletablegrey{
+	margin: 0px 0px 10px 0px;
+	width: 224px;
+
+	font-family: Arial;
+	font-size: 11px;
+	color: #666666;
+	background-image: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/moduletitlebg_grey_big.gif');
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
+div.moduletablegrey h3{
+	background-image: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/moduletitlebg_grey.gif');
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	padding: 4px 0px 0px 11px;
+	height: 35px;
+	margin: 0;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	color: #ffffff;
+}
+
+div.moduletablegrey table{
+	font-family: Arial;
+	font-size: 11px;
+	color: #666666;
+	width: 204px;
+	margin: 10px 20px 0px 10px;
+}
+
+div.moduletablegrey div{
+	font-family: Arial;
+	font-size: 11px;
+	color: #666666;
+	padding: 0px 10px 0px 10px;
+}
+
+/* user 1 & user 2 module styles */
+div.moduletableuser{
+	margin: 0px 0px 10px 0px;
+
+	font-family: Arial;
+	font-size: 11px;
+	color: #666666;
+}
+
+div.moduletableuser h3{
+	padding: 0px 0px 0px 0px;
+	margin: 0;
+	font-family: Arial;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: left;
+	color: #3367CD;
+}
+
+div.moduletableuser table{
+	font-family: Arial;
+	font-size: 11px;
+	color: #666666;
+	margin: 10px 20px 0px 10px;
+}
+
+div.moduletableuser div{
+	font-family: Arial;
+	font-size: 11px;
+	color: #666666;
+	padding: 0px 10px 0px 10px;
+}
+
+/* user6 */
+div.moduletableuser6{
+	margin: 0px 0px 0px 0px;
+
+	font-family: Arial;
+	font-size: 11px;
+	color: #666666;
+	background-color: #ffffff;
+	height: 172px;
+}
+
+div.moduletableuser6 h3{
+	padding: 0px 0px 0px 0px;
+	margin: 0;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	color: #3367CD;
+}
+
+/* left footer user7 */
+div.moduletableuser7{
+	margin: 0px 0px 0px 0px;
+	font-family: Arial;
+	float: left;
+	font-size: 10px;
+	color: #666666;
+}
+
+/* right footer user8 */
+div.moduletableuser8{
+	margin: 0px 0px 0px 0px;
+	font-family: Arial;
+	float: right;
+	font-size: 10px;
+	color: #666666;
+}
+
+/* plain color grey box */
+
+div.moduletablegreybox{
+	margin: 0px 0px 10px 0px;
+	width: 224px;
+
+	font-family: Arial;
+	font-size: 11px;
+	color: #666666;
+	background-color: #F6F6F6;
+}
+
+div.moduletablegreybox h3{
+	background-color: #F6F6F6;
+	padding: 13px 0px 0px 11px;
+	margin: 0;
+	font-family: Arial;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: left;
+	color: #3367CD;
+}
+
+div.moduletablegreybox div{
+	font-family: Arial;
+	font-size: 11px;
+	color: #666666;
+	padding: 0px 10px 0px 10px;
+}
+
+div.syndicate{
+	text-align: left;
+}
+
+div.moduletable table.poll{
+	text-align: left;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+table.pollstableborder{
+	text-align: left;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.pollxtd1{
+	margin: 0;
+}
+
+div.syndicate div{
+	text-align: left;
+	margin-left: 11px;
+}
+
+table.contentpaneopen{
+	font-family: Arial;
+	font-size: 11px;
+	color: #666666;
+	
+	padding: 0px 0px 0px 0px;
+}
+
+table.searchintro{
+	font-family: Arial;
+	font-size: 11px;
+	color: #666666;
+}
+
+table.searchintro td{
+	font-family: Arial;
+	font-size: 11px;
+	color: #666666;
+}
+
+table.contentpane{
+	font-family: Arial;
+	font-size: 11px;
+	color: #666666;
+}
+
+table.contentpane table{
+	font-family: Arial;
+	font-size: 11px;
+	color: #666666;
+}
+
+table.poll{
+	font-family: Arial;
+	font-size: 11px;
+	color: #666666;
+}
+
+a.mainlevel:link, a.mainlevel:visited {
+	display: block;
+	background-image: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/bulletti.gif');
+	background-repeat: no-repeat;
+	background-position: top left;
+	/*vertical-align: middle;*/
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFA025;
+	text-align: left;
+	padding-top: 5px;
+	padding-left: 17px;
+	height: 15px !important;
+	height: 20px;
+	text-decoration: none;
+}
+
+a.mainlevel:hover {
+	background-image: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/bulletti_on.gif');
+	background-repeat: no-repeat;
+	background-position: top left;
+	text-decoration: none;
+	color: #3367CD;
+	font-weight: bold;
+}
+
+a.mainlevel#active_menu {
+	background-image: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/bulletti_on.gif');
+	background-repeat: no-repeat;
+	background-position: top left;
+	color:#3367CD;
+	font-weight: bold;
+}
+
+a.mainlevel#active_menu:hover {
+	background: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/bulletti_on.gif') no-repeat;
+	color: #3367CD;
+	font-weight: bold;
+}
+
+.contentheading{
+	margin: 0;
+	font-family: Arial;
+	font-size: 16px;
+	color: #3367CD;
+	font-weight: bold;
+}
+
+.componentheading{
+	margin: 0;
+	font-family: Arial;
+	font-size: 16px;
+	color: #3367CD;
+	font-weight: bold;
+}
+
+h1{
+	margin: 0;
+	font-family: Arial;
+	font-size: 16px;
+	color: #3367CD;
+	font-weight: bold;
+}
+
+h2{
+	margin: 0;
+	font-family: Arial;
+	font-size: 14px;
+	color: #3367CD;
+	font-weight: bold;
+}
+
+h3{
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	color: #3367CD;
+}
+
+h4{
+        font-family: Arial;
+        font-weight: bold;
+        color: #3367CD;
+}
+
+h5{
+        font-family: Arial;
+        font-weight: bold;
+        color: #3367CD;
+}
+
+
+.contentdescription{
+	font-family: Arial;
+	font-size: 11px;
+}
+
+.blog_more{
+	font-family: Arial;
+	font-size: 11px;
+}
+
+.small{
+	font-family: Arial;
+	font-size: 10px;
+	color: #999999;
+}
+
+.createdate{
+	font-family: Arial;
+	font-size: 10px;
+	color: #999999;
+}
+
+.modifydate{
+	font-family: Arial;
+	font-size: 10px;
+	color: #999999;
+}
+
+.back_button{
+	font-family: Arial;
+	font-size: 10px;
+}
+
+.pagenav_prev{
+	font-family: Arial;
+	font-size: 10px;
+}
+
+.pagenav_next{
+	font-family: Arial;
+	font-size: 10px;
+}
+
+.message{
+	font-family: Arial;
+	font-size: 10px;
+}
+
+a:link, a:visited {
+	color: #FFA025; text-decoration: none;
+	font-weight: normal;
+}
+
+a:hover {
+	color: #FFA025;	text-decoration: underline;
+	font-weight: normal;
+}
+
+a.footer:link		{color: #9EA0A2; font-size: 10px; font-weight: bold;}
+a.footer:active		{color: #9EA0A2; font-size: 10px; font-weight: bold;}
+a.footer:hover		{color: #9EA0A2; font-size: 10px; font-weight: bold;}
+a.footer:visited	{color: #9EA0A2; font-size: 10px; font-weight: bold;}
+
+.readon				{background-image: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/readon.gif'); background-repeat: no-repeat; background-position: top left; padding-left: 25px;}
+
+a.readon:link		{background-image: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/readon.gif'); background-repeat: no-repeat; background-position: top left; padding-left: 25px;}
+a.readon:active		{background-image: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/readon.gif'); background-repeat: no-repeat; background-position: top left; padding-left: 25px;}
+a.readon:hover		{background-image: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/readon.gif'); background-repeat: no-repeat; background-position: top left; padding-left: 25px;}
+a.readon:visited	{background-image: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/readon.gif'); background-repeat: no-repeat; background-position: top left; padding-left: 25px;}
+
+ul{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+}
+
+li{
+		line-height: 15px;
+		padding-left: 15px;
+		padding-top: 0px;
+		background-image: url('https://web.archive.org/web/20130207185102im_/http://sbseg2008.inf.ufrgs.br/templates/sbseg_estime_bluesky_advanced/images/bullet.gif');
+		background-repeat: no-repeat;
+		background-position: top left;
+}
+
+ol li{
+		background: none;
+}
+
+div.jflanguageselection
+{
+	float: right;
+	vertical-align: middle;
+	/*padding: 3px 2px 2px 2px;*/
+	padding: 0px;
+}
+ 
+/* language lists with UL (names & images) */
+ul.jflanguageselection{
+	float: right;
+	vertical-align: middle;
+	list-style: none;
+	padding: 7px 0px 0px 0px;
+	margin: 0;
+	font-size: 12px;
+	height: 12px;
+}
+
+ul.jflanguageselection li{
+	background-image: none;
+	padding-left: 0px;
+	padding-right: 0px;
+	float: left;
+	margin: 1px 1px 1px 1px;
+	white-space: nowrap;
+	border: none;
+}
+
+ul.jflanguageselection li a{
+	display: block;
+	color: #3367CD;
+}
+
+ul.jflanguageselection img{
+	border: none;
+}
+
+/** Styles for the drop down list */
+
+#jflanguageselection{
+	float: right;
+	vertical-align: middle;
+}
+
+select.jflanguageselection{
+	border: 1px solid #cccccc;
+	margin: 5px 1px 1px 1px;
+	padding: 0px 0px 1px 0px;
+	font-family: Arial;
+	font-size: 11px;
+	color: #3367CD;
+}
+
+label.jflanguageselection{
+	position:absolute;
+	left:-3000px
+}
+
+/*
+     FILE ARCHIVED ON 18:51:02 Feb 07, 2013 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:15:39 Jul 02, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  capture_cache.get: 0.455
+  load_resource: 67.215
+  PetaboxLoader3.resolve: 54.614
+  PetaboxLoader3.datanode: 11.982
+*/

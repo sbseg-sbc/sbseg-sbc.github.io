@@ -25,6 +25,14 @@ Abra **`index.html`** nesta pasta em qualquer navegador. Não é necessário ser
   por sessão técnica.
 - Datas do processo seletivo.
 
+## Estrutura
+
+- `index.html`: página informativa (local, datas, organização, números, trabalhos aceitos e a
+  presença da edição no Internet Archive).
+- `sources/web.archive.org/`: cópia estática do snapshot de 11/12/2008 do site oficial,
+  espelhada do Internet Archive (Wayback Machine). O archive.org preserva 59 capturas da página
+  inicial (de 29/04/2008 a 11/12/2025) e 1.613 URLs do domínio.
+
 ## Fontes
 
 - Anais do SBSeg 2008, SBC, ISBN 978-85-7669-190-7 (front matter: comitês, mensagens dos

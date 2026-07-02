@@ -1,0 +1,277 @@
+/* CSS Template by gorotron */
+
+body {
+  /*background-image:url(/web/20110826190439im_/http://sbseg2008.inf.ufrgs.br/proceedings/data/bg1b.gif);
+  background-repeat:repeat-x;*/
+  background-color:#D9DDE0;
+  margin:20px;
+  padding:0;
+  text-align:center;
+}
+
+h1 {
+  font-size:24px;
+  color:#FFF;
+  font-weight:700;
+  margin:0;
+}
+
+h2 {
+  font-size:16px;
+  color:#4060AA;
+  font-weight:700;
+  margin:0;
+  padding-bottom:5px;
+  border-bottom:1px dotted #CCC;
+}
+
+h3 {
+  font-size:12px;
+  color:#4060AA;
+  margin:0;
+  font-weight:bold;
+  padding: 10px 0px 10px 0px;
+}
+
+h4 {
+  font-size:10px;
+  color:#4060AA;
+  margin:0;
+  font-weight:bold;
+  padding: 10px 0px 10px 0px;
+}
+
+h5 {
+  font-size:5px;
+  color:#4060AA;
+  margin:0;
+  font-weight:bold;
+  padding: 10px 0px 10px 0px;
+}
+
+p {
+  margin-top:5px;
+  padding-bottom:5px;
+  font-size:11px;
+  line-height:1.5em;
+  font-family: Arial;
+  color: #666666;
+}
+
+input {
+  font-size: 11px;
+  font-family: Arial;
+  color: #666666;
+}
+
+#container {
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:11px;
+  margin:0 auto;
+  width:700px;
+  padding:10px;
+  height:auto;
+  background-color:#FFF;
+  text-align:left;
+}
+
+#banner {
+  width:700px;
+  height:100px;
+  margin-bottom:10px;
+}
+
+
+#bannerRight {
+  width:689px;
+  height:49px;
+  background: url('https://web.archive.org/web/20110826190439im_/http://sbseg2008.inf.ufrgs.br/proceedings/data/images/header.jpg') repeat-x;
+  float:left;
+  /*border:1px solid #CCC;
+  border-width:1px 0 0 1px;*/
+  padding:50px 0 0 10px;
+  margin-right:10px;
+}
+
+#content {
+  background: url('https://web.archive.org/web/20110826190439im_/http://sbseg2008.inf.ufrgs.br/proceedings/data/images/bg1.gif') repeat-y;
+  height:1%;
+  }
+
+#leftColumn {
+  float:left;
+}
+
+#nav {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+#nav a {
+  display:block;
+  font-size:11px;
+  background-image: url('https://web.archive.org/web/20110826190439im_/http://sbseg2008.inf.ufrgs.br/proceedings/data/images/bgmenu.gif');
+  background-repeat:repeat-x;
+  color: #666; /*#CCC;*/
+  text-decoration:none;
+  padding:10px;
+  width:130px;
+  height:10px;
+  border-bottom:1px dotted #FFFFFF; /*#333;*/
+  font-weight: bold;
+
+}
+
+#nav a:hover {
+  /*background-color:#333;*/
+  color: #00578B;
+  font-weight: bold;
+}
+
+#nav a.selected {
+  display:block;
+  font-size:11px;
+  font-weight: bold;
+  background-image: url('https://web.archive.org/web/20110826190439im_/http://sbseg2008.inf.ufrgs.br/proceedings/data/images/bgmenu_selected.gif');
+  background-repeat:repeat-x;
+  color: #4060AA; /*#666;*/
+  text-decoration:none;
+  padding:10px;
+  width:130px;
+  height:10px;
+  border-bottom:1px dotted #FFFFFF; /*#333;*/
+  font-weight: bold;
+
+}
+
+#patrons {
+  position:relative;
+  display:block;
+  bottom:15px;
+  float:bottom;
+  text-align:center;
+  margin-top:0px;
+  margin-bottom:0px;
+  padding:0px;
+
+}
+
+#leftColumnBottom {
+  width:130px;
+  background:url(https://web.archive.org/web/20110826190439im_/http://sbseg2008.inf.ufrgs.br/proceedings/data/bg1c.gif) repeat-x;
+  padding:0px 10px 10px;
+  color:#EAEAEA;
+}
+
+#rightColumn {
+  float:left;
+  width:530px;
+  padding-left:20px;
+  color:#666;
+}
+
+#rightColumn img.template {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  padding: 10px 0px 0px 0px;
+}
+
+#rightColumn ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#rightColumn li {
+  line-height: 15px;
+  padding-left: 15px;
+  padding-top: 0px;
+  background-image: url('https://web.archive.org/web/20110826190439im_/http://sbseg2008.inf.ufrgs.br/proceedings/data/images/bullet.gif');
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+#rightColumn li.paper {
+  line-height: 15px;
+  padding-left: 15px;
+  padding-top: 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+#rightColumn a.site:hover {
+  color: #FFA025;
+}
+
+#rightColumn a.site {
+  color: #FFA025; /*#CCC;*/
+  text-decoration:none;
+}
+
+#rightColumn a.pdf:hover {
+  color: #00578B;
+}
+
+#rightColumn a.pdf {
+  color: #666; /*#CCC;*/
+  text-decoration:none;
+}
+
+#rightColumn a.sumario:hover {
+  color: #666; /*#CCC;*/
+  text-decoration:none;
+}
+
+#rightColumn a.sumario {
+  color:#4060AA;
+  font-size: 12px;
+  text-decoration:none;
+}
+
+#rightColumn p.paragraph {
+  text-indent: 30px;
+}
+
+#clear {
+  clear:both;
+}
+
+.date {
+  font-size:10px;
+  color:#999;
+  font-weight:normal;
+}
+
+#copyright {
+  padding-top:10px;
+  font:10px Arial,Helvetica,sans-serif;
+  color:#369;
+}
+
+#copyright a {
+  text-decoration:none;
+  color:#369;
+}
+
+#copyright a:hover {
+  color:#333;
+}
+
+/*
+     FILE ARCHIVED ON 19:04:39 Aug 26, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:21:46 Jul 02, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  capture_cache.get: 0.414
+  load_resource: 73.464
+  PetaboxLoader3.resolve: 55.882
+  PetaboxLoader3.datanode: 16.941
+*/
