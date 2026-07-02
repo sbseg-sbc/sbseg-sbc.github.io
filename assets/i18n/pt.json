@@ -99,14 +99,14 @@
     "metaDesc": "Coordenação Geral e Coordenação do Comitê de Programa Técnico (trilha principal) de todas as edições do SBSeg, o Simpósio Brasileiro de Cibersegurança.",
     "h1": "Organizadores e Coordenação do TPC",
     "lead": "Relação da <strong>Coordenação Geral</strong> (organizadores gerais) e da <strong>Coordenação do Comitê de Programa Técnico</strong> da <strong>trilha principal</strong> de cada edição do Simpósio Brasileiro de Cibersegurança (SBSeg). Os dados foram compilados a partir das páginas de comitês/organização preservadas neste arquivo histórico.",
-    "note": "As edições de <strong>2011 (Brasília)</strong>, <strong>2015 (Florianópolis)</strong>, <strong>2016 (Niterói)</strong> e <strong>2023 (Juiz de Fora)</strong> ainda não possuem páginas de comitês preservadas neste arquivo; sua coordenação será acrescentada em uma próxima etapa, à medida que as fontes forem recuperadas.",
+    "note": "As edições de <strong>2011 (Brasília)</strong>, <strong>2015 (Florianópolis)</strong> e <strong>2023 (Juiz de Fora)</strong> ainda não possuem páginas de comitês preservadas neste arquivo; sua coordenação será acrescentada em uma próxima etapa, à medida que as fontes forem recuperadas.",
     "footer": "Página de arquivamento · CESeg / SBC. Gerada em 2026-06-17. Dados compilados a partir das páginas de organização/comitês de cada edição preservadas neste arquivo histórico."
   },
   "speakers": {
     "title": "Palestrantes das Edições do SBSeg",
     "h1": "Palestrantes das Edições do SBSeg",
     "lead": "Compilação dos palestrantes convidados (keynotes) das edições anteriores do Simpósio Brasileiro de Cibersegurança (SBSeg). Inclui nome, afiliação e links acadêmicos/profissionais quando disponíveis.",
-    "note": "Dados compilados a partir da página <em>Edições Anteriores</em> do SBSeg 2025 e das páginas de programação/palestrantes de cada edição (inclusive dos sites arquivados). Cobertura atual: <strong>2008 e 2012 a 2025</strong> (54 palestrantes convidados). As edições de 2011, 2015 e 2016 ainda estão pendentes, pois não há programação detalhada disponível nos sites arquivados, e serão acrescentadas junto com as fotos dos palestrantes em uma próxima etapa.",
+    "note": "Dados compilados a partir da página <em>Edições Anteriores</em> do SBSeg 2025 e das páginas de programação/palestrantes de cada edição (inclusive dos sites arquivados). Cobertura atual: <strong>2008 e 2012 a 2025</strong> (60 palestrantes convidados). As edições de 2011 e 2015 ainda estão pendentes, pois não há programação detalhada disponível nos sites arquivados, e serão acrescentadas junto com as fotos dos palestrantes em uma próxima etapa.",
     "footer": "Página de arquivamento · CESeg / SBC. Gerada em 2026-06-17. Fonte primária: <a href=\"https://sbseg2025.ppgia.pucpr.br/organizacao/edicoes-anteriores/\" target=\"_blank\" rel=\"noopener\">SBSeg 2025 · Edições Anteriores</a>."
   },
   "awards": {

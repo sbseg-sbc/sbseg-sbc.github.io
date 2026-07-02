@@ -99,14 +99,14 @@
     "metaDesc": "Coordinación General y Coordinación del Comité de Programa Técnico (pista principal) de todas las ediciones del SBSeg, el Simposio Brasileño de Ciberseguridad.",
     "h1": "Organizadores y Coordinación del CPT",
     "lead": "Relación de la <strong>Coordinación General</strong> (organizadores generales) y de la <strong>Coordinación del Comité de Programa Técnico</strong> de la <strong>pista principal</strong> de cada edición del Simposio Brasileño de Ciberseguridad (SBSeg). Los datos fueron compilados a partir de las páginas de comités/organización preservadas en este archivo histórico.",
-    "note": "Las ediciones de <strong>2011 (Brasília)</strong>, <strong>2015 (Florianópolis)</strong>, <strong>2016 (Niterói)</strong> y <strong>2023 (Juiz de Fora)</strong> aún no tienen páginas de comités preservadas en este archivo; su coordinación se añadirá en una etapa futura, a medida que se recuperen las fuentes.",
+    "note": "Las ediciones de <strong>2011 (Brasília)</strong>, <strong>2015 (Florianópolis)</strong> y <strong>2023 (Juiz de Fora)</strong> aún no tienen páginas de comités preservadas en este archivo; su coordinación se añadirá en una etapa futura, a medida que se recuperen las fuentes.",
     "footer": "Página de archivo · CESeg / SBC. Generada el 2026-06-17. Datos compilados a partir de las páginas de organización/comités de cada edición preservadas en este archivo histórico."
   },
   "speakers": {
     "title": "Ponentes de las Ediciones del SBSeg",
     "h1": "Ponentes de las Ediciones del SBSeg",
     "lead": "Recopilación de los ponentes invitados (keynotes) de ediciones anteriores del Simposio Brasileño de Ciberseguridad (SBSeg). Incluye nombre, afiliación y enlaces académicos/profesionales cuando están disponibles.",
-    "note": "Datos compilados a partir de la página <em>Ediciones Anteriores</em> del SBSeg 2025 y de las páginas de programación/ponentes de cada edición (incluidos los sitios archivados). Cobertura actual: <strong>2008 y 2012 a 2025</strong> (54 ponentes invitados). Las ediciones de 2011, 2015 y 2016 siguen pendientes, ya que no hay programación detallada disponible en los sitios archivados, y se añadirán junto con las fotos de los ponentes en una etapa futura.",
+    "note": "Datos compilados a partir de la página <em>Ediciones Anteriores</em> del SBSeg 2025 y de las páginas de programación/ponentes de cada edición (incluidos los sitios archivados). Cobertura actual: <strong>2008 y 2012 a 2025</strong> (60 ponentes invitados). Las ediciones de 2011 y 2015 siguen pendientes, ya que no hay programación detallada disponible en los sitios archivados, y se añadirán junto con las fotos de los ponentes en una etapa futura.",
     "footer": "Página de archivo · CESeg / SBC. Generada el 2026-06-17. Fuente primaria: <a href=\"https://sbseg2025.ppgia.pucpr.br/organizacao/edicoes-anteriores/\" target=\"_blank\" rel=\"noopener\">SBSeg 2025 · Ediciones Anteriores</a>."
   },
   "awards": {

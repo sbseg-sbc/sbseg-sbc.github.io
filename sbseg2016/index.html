@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SBSeg 2016 · XVI Simpósio Brasileiro em Segurança da Informação e de Sistemas Computacionais</title>
+<style>
+  :root{--bg:#0b1020;--card:#141b33;--fg:#e6e9f2;--muted:#9aa3c0;--accent:#7aa2ff}
+  *{box-sizing:border-box}
+  body{font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--fg);
+       margin:0;line-height:1.6}
+  .wrap{max-width:820px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+  header h1{font-size:1.7rem;line-height:1.3;margin:0 0 .25rem}
+  .sub{color:var(--muted);font-size:1.05rem;margin:0 0 1.5rem}
+  .meta{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.25rem 0}
+  .meta span{background:var(--card);border:1px solid #24305a;border-radius:999px;padding:.35rem .85rem;font-size:.9rem}
+  .card{background:var(--card);border:1px solid #24305a;border-radius:12px;padding:1.25rem 1.4rem;margin:1.25rem 0}
+  h2{font-size:1.2rem;margin:1.75rem 0 .5rem}
+  h3{font-size:1rem;margin:1.1rem 0 .35rem;color:var(--accent)}
+  ul{margin:.4rem 0 .4rem 1.1rem;padding:0}
+  li{margin:.45rem 0}
+  a{color:var(--accent)}
+  .authors{color:var(--muted);font-size:.9rem}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin:.5rem 0 0}
+  .stat{background:#0e1530;border:1px solid #24305a;border-radius:10px;padding:.8rem .9rem;text-align:center}
+  .stat b{display:block;font-size:1.35rem;color:var(--accent)}
+  .stat small{color:var(--muted)}
+  .note{color:var(--muted);font-size:.9rem;border-left:3px solid #24305a;padding:.2rem 0 .2rem .9rem;margin:1.5rem 0}
+  footer{color:var(--muted);font-size:.85rem;margin-top:2.5rem;border-top:1px solid #24305a;padding-top:1rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>SBSeg 2016</h1>
+  <p class="sub">XVI Simpósio Brasileiro em Segurança da Informação e de Sistemas Computacionais</p>
+</header>
+
+<div class="meta">
+  <span>📍 Niterói, Rio de Janeiro</span>
+  <span>📅 7 a 10 de novembro de 2016</span>
+  <span>🏛️ Instituto de Computação da UFF</span>
+  <span>🤝 Promoção: SBC / CESeg</span>
+</div>
+
+<p>O <strong>SBSeg</strong> é o principal evento científico brasileiro em segurança da informação
+e de sistemas computacionais, promovido anualmente pela <strong>Sociedade Brasileira de
+Computação (SBC)</strong>. A <strong>16ª edição</strong> foi realizada de <strong>7 a 10 de
+novembro de 2016</strong>, pela primeira vez em <strong>Niterói (RJ)</strong>, organizada pelo
+Instituto de Computação da <strong>Universidade Federal Fluminense (UFF)</strong>, em parceria
+com a Universidade Federal do Rio de Janeiro (UFRJ).</p>
+
+<p>A programação reuniu sessões técnicas com <strong>31 artigos completos</strong>,
+<strong>6 palestras</strong> (5 internacionais e 1 nacional), <strong>4 minicursos</strong>,
+o <strong>IV Concurso de Teses e Dissertações em Segurança (CTDSeg)</strong> e quatro workshops:
+<strong>WTICG</strong> (10ª edição), <strong>WGID</strong> (6ª edição), <strong>WFC</strong>
+(5ª edição) e <strong>WRAC+</strong> (2ª edição). Os anais somam 789 páginas
+(ISSN 2176-0063).</p>
+
+<h2>A edição em números</h2>
+<div class="card">
+  <div class="stats">
+    <div class="stat"><b>87</b><small>artigos completos submetidos</small></div>
+    <div class="stat"><b>32</b><small>artigos aceitos (~35%)</small></div>
+    <div class="stat"><b>19</b><small>trabalhos submetidos ao CTDSeg</small></div>
+    <div class="stat"><b>10</b><small>selecionados no CTDSeg</small></div>
+    <div class="stat"><b>28</b><small>submissões ao WTICG</small></div>
+    <div class="stat"><b>14</b><small>trabalhos aceitos no WTICG</small></div>
+  </div>
+  <p style="margin:.9rem 0 0">O WFC recebeu 17 submissões e aceitou 7 artigos; o WGID publicou
+  3 artigos completos e 3 resumos estendidos. Nesta edição foi instituído o <strong>CESeg Student
+  Grants</strong>, que subsidiou a inscrição dos estudantes com trabalhos aceitos no WTICG.</p>
+</div>
+
+<h2>Organização</h2>
+<div class="card">
+  <h3>Coordenação Geral</h3>
+  <ul>
+    <li>Igor Monteiro Moraes (UFF)</li>
+    <li>Antônio Augusto de Aragão Rocha (UFF)</li>
+  </ul>
+  <h3>Coordenação do Comitê de Programa</h3>
+  <ul>
+    <li>Leonardo Barbosa e Oliveira (UFMG)</li>
+    <li>Pedro Braconnot Velloso (UFRJ)</li>
+  </ul>
+  <h3>Coordenação de Palestras e Tutoriais</h3>
+  <ul>
+    <li>Luís Henrique Maciel Kosmalski Costa (UFRJ)</li>
+  </ul>
+  <h3>Coordenação de Minicursos</h3>
+  <ul>
+    <li>Michel Abdalla (ENS &amp; CNRS)</li>
+  </ul>
+  <h3>Coordenação do CTDSeg</h3>
+  <ul>
+    <li>Diego de Freitas Aranha (Unicamp)</li>
+    <li>Luciano Paschoal Gaspary (UFRGS)</li>
+  </ul>
+  <h3>Coordenação dos workshops</h3>
+  <ul>
+    <li>WTICG: Daniel Macêdo Batista (IME-USP)</li>
+    <li>WGID: Michelle Silva Wangham (UNIVALI)</li>
+    <li>WFC: Rafael R. Obelheiro (UDESC) e Sandro Süffert (Apura)</li>
+    <li>WRAC+: Raphael Machado (Inmetro)</li>
+  </ul>
+  <h3>Coordenação local</h3>
+  <ul>
+    <li>Célio Vinicius Neves de Albuquerque (UFF)</li>
+    <li>Karina Mochetti (UFF)</li>
+    <li>Luis Antonio Brasil Kowada (UFF)</li>
+    <li>Natalia Castro Fernandes (UFF)</li>
+    <li>Miguel Elias Mitre Campista (UFRJ)</li>
+  </ul>
+</div>
+
+<h2>Palestras</h2>
+<div class="card">
+  <ul>
+    <li>Energy Efficient Security for IoT Devices<br>
+        <span class="authors">David Ott (Intel Labs, EUA)</span></li>
+    <li>Future IoT Security Challenges<br>
+        <span class="authors">Rafael Misoczki (Intel Labs, EUA)</span></li>
+    <li>Distributed Differential Privacy<br>
+        <span class="authors">Christopher Clifton (Purdue University, EUA)</span></li>
+    <li>IoT Blockchain: Open, Secure, Private and Trusted Internet of Things Stack<br>
+        <span class="authors">Martín Serrano (Insight Centre for Data Analytics, NUI Galway, Irlanda)</span></li>
+    <li>The Cyberspace Battle for Information: Combating Internet Censorship<br>
+        <span class="authors">Amir Houmansadr (University of Massachusetts Amherst, EUA)</span></li>
+    <li>Segurança em IoT: o futuro repetindo o passado (palestra nacional)<br>
+        <span class="authors">Miriam von Zuben (CERT.br / NIC.br)</span></li>
+  </ul>
+</div>
+
+<h2>Artigos completos aceitos</h2>
+<div class="card">
+  <h3>Sessão Técnica 1 · Segurança em IoT</h3>
+  <ul>
+    <li>Autenticação de Sensores usando Eventos Físicos<br>
+        <span class="authors">Wilson Melo Jr., Charles Prado e Luiz Fernando Rust da Costa Carmo (Inmetro)</span></li>
+    <li>Um controle de associações resistente a ataques Sybil para a disseminação segura de conteúdo da IoT<br>
+        <span class="authors">Danilo Evangelista (UFPR), Eduardo da Silva (Instituto Federal Catarinense), Michele Nogueira e Aldri dos Santos (UFPR)</span></li>
+    <li>Privacy-Preserving Techniques in Smart Metering: An Overview<br>
+        <span class="authors">Pedro Yóssis Silva Barbosa, José Lucas Silva Freitas, Andrey Brito e Leandro José Ventura Silva (UFCG)</span></li>
+    <li>AdC: um Mecanismo de Controle de Acesso para o Ciclo de Vida das Coisas Inteligentes<br>
+        <span class="authors">Antonio Maia, Artur Luis, Italo Cunha (UFMG), Michele Nogueira (UFPR), Ivan de Oliveira Nunes, Leonardo Cotta (UFMG), Diego Aranha (Unicamp) e Leonardo Oliveira (UFMG)</span></li>
+  </ul>
+  <h3>Sessão Técnica 2 · Segurança Forense</h3>
+  <ul>
+    <li>Metodologia de Detecção de Malware por Heurísticas Comportamentais<br>
+        <span class="authors">Neriberto Prado, Ulisses Penteado (BluePex Security Solutions) e André Grégio (UFPR)</span></li>
+    <li>A comparison of encryption tools for disk data storage from digital forensics point of view<br>
+        <span class="authors">Vitor Hugo Galhardo Moia e Marco Aurelio Amaral Henriques (Unicamp)</span></li>
+    <li>Classificação de Fragmentos de Arquivos com Técnica de Aprendizagem de Máquina baseada em Árvores de Decisão<br>
+        <span class="authors">Juliano Oya e Bruno Hoelz (UnB)</span></li>
+    <li>TARP Fingerprinting: Um Mecanismo de Browser Fingerprinting Baseado em HTML5 Resistente a Contramedidas<br>
+        <span class="authors">Pablo Ximenes (ETICE), Márcio Correia (UFC), Patrícia Mello (Instituto Atlântico), Miguel Franklin de Castro, Rossana Andrade e Fernando Carvalho (UFC)</span></li>
+  </ul>
+  <h3>Sessão Técnica 3 · Segurança de Aplicações</h3>
+  <ul>
+    <li>IBEMCS: IDS Baseado em Eventos Multi-Contexto para SCADA<br>
+        <span class="authors">Anderson D'Aquino (UFRJ), Luiz Fernando Rust da Costa Carmo (Inmetro), Luci Pirmez e Claudio Farias (UFRJ)</span></li>
+    <li>Ataques Furtivos em Sistemas de Controle Físicos Cibernéticos<br>
+        <span class="authors">Alan de Sá (Marinha do Brasil / UFRJ), Luiz Fernando Rust da Costa Carmo e Raphael Machado (Inmetro)</span></li>
+    <li>A framework for searching encrypted databases<br>
+        <span class="authors">Pedro Alves e Diego Aranha (Unicamp)</span></li>
+    <li>Detecção de Ataque DDoS Flash Crowd Realizando a Análise Comportamental nas Solicitações Web<br>
+        <span class="authors">Samuel Jardim, Raul Ceretta Nunes e Marcelo Colomé (UFSM)</span></li>
+  </ul>
+  <h3>Sessão Técnica 4 · Criptografia</h3>
+  <ul>
+    <li>Speeding up the Elliptic Curve Cryptography on the P-384 Curve<br>
+        <span class="authors">Armando Faz Hernández e Julio Hernandez (Unicamp)</span></li>
+    <li>Aplicação do Algoritmo de Colônia de Formigas para Redução do Tamanho de Chaves Públicas na Criptografia Completamente Homomórfica<br>
+        <span class="authors">Joffre Filho, Jonice Oliveira, Claudio de Farias e Gabriel P. Silva (UFRJ)</span></li>
+    <li>A Non-Probabilistic Time-Storage Trade-off for Unsalted Hashes<br>
+        <span class="authors">Frederico Schardong (UFRGS) e Daniel Formolo (Unisinos)</span></li>
+    <li>Efficient Software Implementations of Fantomas<br>
+        <span class="authors">Rafael J. Cruz e Diego Aranha (Unicamp)</span></li>
+  </ul>
+  <h3>Sessão Técnica 5 · Segurança em Nuvem</h3>
+  <ul>
+    <li>Uma versão não interativa do k-NN sobre dados cifrados<br>
+        <span class="authors">Hilder V. L. Pereira e Diego Aranha (Unicamp)</span></li>
+    <li>Agregação de Dados na Nuvem com Garantias de Segurança e Privacidade<br>
+        <span class="authors">Leandro José Ventura Silva, Rodolfo Silva, Andrey Brito e Pedro Yóssis Silva Barbosa (UFCG)</span></li>
+    <li>Armazenamento Seguro de Credenciais e Atributos de Usuários em Federação de Clouds<br>
+        <span class="authors">Luciano Barreto, Leomar Scheunemann Jr., Joni da Silva Fraga e Frank Siqueira (UFSC)</span></li>
+    <li>Determinando o Risco de Fingerprinting em Páginas Web<br>
+        <span class="authors">Adriana Rodrigues, Adria Menezes e Eduardo Feitosa (UFAM)</span></li>
+  </ul>
+  <h3>Sessão Técnica 6 · Segurança de Software</h3>
+  <ul>
+    <li>VoiDbg: Projeto e Implementação de um Debugger Transparente para Inspeção de Aplicações Protegidas<br>
+        <span class="authors">Marcus Botacin, Paulo de Geus (Unicamp) e André Grégio (UFPR)</span></li>
+    <li>Identificação de Códigos Maliciosos Metamórficos pela Medição do Nível de Similaridade de Grafos de Dependência<br>
+        <span class="authors">Gilbert Martins, Vitor Danrley, Paulo dos Santos, Eduardo Souto e Rosiane de Freitas (UFAM)</span></li>
+    <li>Detecção de Vazamentos de Dados em Aplicativos Javascript em Dispositivos Móveis<br>
+        <span class="authors">Thiago Rocha, Brandell Cássio Corrêa Ferreira, Diego Azulay, Alex F. Monteiro, Eduardo Souto (UFAM), Breno Silva, Pedro Minatel e Felipe Boeira (Samsung)</span></li>
+    <li>Detecção de ataques por ROP em tempo real assistida por hardware<br>
+        <span class="authors">Marcus Botacin, Paulo de Geus (Unicamp) e André Grégio (UFPR)</span></li>
+  </ul>
+  <h3>Sessão Técnica 7 · Segurança de Sistemas Distribuídos</h3>
+  <ul>
+    <li>An Architecture for Self-adaptive Distributed Firewall<br>
+        <span class="authors">Edmilson Costa Junior, Silas de Medeiros, Carlos da Silva e Marcos Pinheiro (UFRN)</span></li>
+    <li>Sobre a Influência dos Nós Egoístas no Descarregamento de Tráfego com Redes Oportunistas<br>
+        <span class="authors">Claiton Soares (IFTM/UFF) e Igor Moraes (UFF)</span></li>
+    <li>Tramonto: Uma estratégia de recomendações para Testes de Penetração<br>
+        <span class="authors">Daniel Bertoglio (UNISINOS) e Avelino Zorzo (PUC-RS)</span></li>
+    <li>Detecção de DDoS Através da Análise da Quantificação da Recorrência Baseada na Extração de Características Dinâmicas e Clusterização Adaptativa<br>
+        <span class="authors">Marcelo Antonio Righi e Raul Ceretta Nunes (UFSM)</span></li>
+  </ul>
+  <h3>Sessão Técnica 8 · Segurança de Software 2 / Segurança com Suporte de Hardware</h3>
+  <ul>
+    <li>Go With the FLOW: Fine-Grained Control-Flow Integrity for the Kernel<br>
+        <span class="authors">João Moreira e Sandro Rigo (Unicamp)</span></li>
+    <li>Agrupamento de malware por comportamento de execução usando lógica fuzzy<br>
+        <span class="authors">Lindeberg Leite, Daniel Guerreiro e Silva (UnB) e André Grégio (UFPR)</span></li>
+    <li>Análise Transparente de Malware com Suporte por Hardware<br>
+        <span class="authors">Marcus Botacin, Paulo de Geus (Unicamp) e André Grégio (UFPR)</span></li>
+  </ul>
+</div>
+
+<h2>CTDSeg: IV Concurso de Teses e Dissertações em Segurança</h2>
+<div class="card">
+  <h3>Doutorado</h3>
+  <ul>
+    <li>CCA1-secure somewhat homomorphic encryption<br>
+        <span class="authors">Eduardo Morais, Ricardo Dahab e Diego Aranha (Unicamp)</span></li>
+    <li>Lyra2: Password Hashing Scheme with improved security against time-memory trade-offs<br>
+        <span class="authors">Ewerton Andrade e Marcos Simplicio Jr. (USP)</span></li>
+    <li>Controle de acesso baseado em criptografia para a distribuição segura de conteúdo multimídia em Redes Centradas em Informação<br>
+        <span class="authors">Elisa Mannes e Carlos Maziero (UFPR)</span></li>
+    <li>Securing Networked Embedded Systems through Distributed Systems Analysis<br>
+        <span class="authors">Fernando Augusto Teixeira (UFSJ), Jose-Marcos Nogueira e Leonardo Oliveira (UFMG)</span></li>
+  </ul>
+  <h3>Mestrado</h3>
+  <ul>
+    <li>Computação sobre dados cifrados em GPGPUs<br>
+        <span class="authors">Pedro Alves e Diego Aranha (Unicamp)</span></li>
+    <li>Efficient Methods for Lattice-Based Cryptography<br>
+        <span class="authors">João Marcos Barguil e Paulo Barreto (USP)</span></li>
+    <li>Amostragem Gaussiana aplicada à Criptografia Baseada em Reticulados<br>
+        <span class="authors">Jheyne N. Ortiz, Ricardo Dahab e Diego Aranha (Unicamp)</span></li>
+    <li>An Adaptive Selective Defense for Application Layer DDoS Attacks<br>
+        <span class="authors">Yuri Dantas (Technische Universität Darmstadt), Vivek Nigam e Iguatemi E. Fonseca (UFPB)</span></li>
+    <li>RIP-ROP: uma proteção contra ataques de execução de código arbitrário baseados em Return-Oriented Programming<br>
+        <span class="authors">Mateus Tymburibá (UFMG) e Eduardo Luzeiro Feitosa (UFAM)</span></li>
+    <li>Um IdM e Método de Autenticação baseado em chaves para prover autenticação única em Internet das Coisas<br>
+        <span class="authors">Adriano Witkovski e Altair Santin (PUCPR)</span></li>
+  </ul>
+</div>
+
+<h2>WTICG: X Workshop de Trabalhos de Iniciação Científica e de Graduação</h2>
+<div class="card">
+  <h3>Criptografia e criptoanálise</h3>
+  <ul>
+    <li>Implementação compacta em software do algoritmo Ketje<br>
+        <span class="authors">Carlos Gregoreki e Diego Aranha (Unicamp)</span></li>
+    <li>Implementação eficiente do algoritmo Keyak para ARMv8<br>
+        <span class="authors">André Moraes e Diego Aranha (Unicamp)</span></li>
+    <li>Mineração individual de bitcoins e litecoins no mundo<br>
+        <span class="authors">Guilherme Silva e Carlo Rodrigues (UniCEUB)</span></li>
+  </ul>
+  <h3>Segurança em redes</h3>
+  <ul>
+    <li>Caracterização Remota de Comportamento de Roteadores IPv6<br>
+        <span class="authors">Rafael Luis Caldas Almeida, Elverton Fazzion, Osvaldo Luis Fonseca, Dorgival Guedes, Wagner Meira Jr. e Ítalo Cunha (UFMG)</span></li>
+    <li>Elaboração e Avaliação de um Modelo de Comunicação Direta Criptografada Entre Dispositivo Móvel e Servidor<br>
+        <span class="authors">Juliana Souza e Luciana Martimiano (UEM)</span></li>
+    <li>LETTY: Uma implementação de Website Fingerprinting<br>
+        <span class="authors">Jordan Queiroz e Eduardo Feitosa (UFAM)</span></li>
+  </ul>
+  <h3>Forense computacional e vazamento de informação</h3>
+  <ul>
+    <li>Análise Formal de Requisitos de Consistência para Atribuições de Valoração<br>
+        <span class="authors">Frederico Santiago e Mário Alvim (UFMG)</span></li>
+    <li>Forense computacional em discos de estado sólido: desafios e perspectivas<br>
+        <span class="authors">João Ribeiro e João Gondim (UnB)</span></li>
+    <li>Um Estudo Acerca das Fraudes na Comunicação por Campo de Proximidade<br>
+        <span class="authors">Emilio Reginaldo Tubino e Juliano Kazienko (UNIPAMPA)</span></li>
+  </ul>
+  <h3>Segurança em Internet das Coisas</h3>
+  <ul>
+    <li>Extensão do conjunto de instruções para implementação segura de X25519<br>
+        <span class="authors">Antonio Guimarães, Edson Borin e Diego Aranha (Unicamp)</span></li>
+    <li>Implementação eficiente e segura de cifras de fluxo em software<br>
+        <span class="authors">Daniel Cunha, Rafael J. Cruz e Diego Aranha (Unicamp)</span></li>
+  </ul>
+  <h3>Sessão de pôsteres</h3>
+  <ul>
+    <li>Protótipo para exfiltração óptica de dados em máquinas fisicamente isoladas<br>
+        <span class="authors">Arthur Lopes e Diego Aranha (Unicamp)</span></li>
+    <li>Uma Revisão Sistemática sobre Privacidade do Usuário em Aplicações MCS<br>
+        <span class="authors">Guibson Souza, Ingrid Santos, Karla Susiane dos Santos Pereira e Eduardo Feitosa (UFAM)</span></li>
+    <li>Simbo: Ambiente de Simulação dedicado ao Estudo de Botnets<br>
+        <span class="authors">Felipe Balabanian, Marco Aurelio Amaral Henriques e Moisés Danziger (Unicamp)</span></li>
+  </ul>
+</div>
+
+<h2>WGID: VI Workshop de Gestão de Identidades Digitais</h2>
+<div class="card">
+  <h3>Artigos completos</h3>
+  <ul>
+    <li>Estudo Comparativo das Soluções de eID Móvel para Governo Eletrônico<br>
+        <span class="authors">Glaidson Menegazzo Verzeletti (UNIVALI, IFSC), Emerson Ribeiro de Mello (IFSC), Victor Hugo Barbosa de Oliveira (UnB) e Michelle Silva Wangham (UNIVALI)</span></li>
+    <li>Estrutura e Funcionamento de um Sistema de Identificação Biométrico Peer-to-peer baseado no Protocolo Chord<br>
+        <span class="authors">Clayton G. C. Santos e Rafael T. de Sousa Júnior (UnB)</span></li>
+    <li>Serviço de Gerenciamento de Organizações Virtuais entre Federações SAML<br>
+        <span class="authors">Maykon Chagas de Souza, Jucélio Jair Silva e Michelle Silva Wangham (UNIVALI)</span></li>
+  </ul>
+  <h3>Resumos estendidos</h3>
+  <ul>
+    <li>CoFee: Uma Federação de Identidade para IoT<br>
+        <span class="authors">Pedro Micael T. L. N. Pinto, Antonio L. Maia Neto, Maria Luiza B. A. Santos, Artur Souza (UFMG), Marco A. Amaral Henriques (Unicamp) e Leonardo B. Oliveira (UFMG)</span></li>
+    <li>Protocolos de Autenticação de Dispositivos Móveis em Grupos para a Internet de Objetos (IoT)<br>
+        <span class="authors">Ana Paula Golembiouski Lopes, Lucas de Oliveira Hilgert, Luis Fernando Arias Roman e Paulo Roberto de Lira Gondim (UnB)</span></li>
+    <li>Estudo preliminar sobre o uso dos blockchains de Bitcoin, Litecoin, Ethereum e Namecoin em gestão de identidades<br>
+        <span class="authors">Antônio Unias de Lucena e Marco Aurélio Amaral Henriques (Unicamp)</span></li>
+  </ul>
+</div>
+
+<h2>WFC: V Workshop de Forense Computacional</h2>
+<div class="card">
+  <ul>
+    <li>HoneySELK: Um Ambiente para Pesquisa e Visualização de Ataques Cibernéticos em Tempo Real<br>
+        <span class="authors">Gildásio Oliveira Júnior, Rafael de Sousa Junior, Robson Albuquerque, Edna Canedo (UnB) e André Grégio (UFPR)</span></li>
+    <li>Sampling and Similarity Hashes in Digital Forensics: An Efficient Approach to Find Needles in a Haystack<br>
+        <span class="authors">Vitor Hugo Galhardo Moia e Marco Aurelio Amaral Henriques (Unicamp)</span></li>
+    <li>Análise de Malware .NET para Identificação de Comportamentos Similares<br>
+        <span class="authors">Cicero Luiz Jr. (Unicamp), André Grégio (UFPR) e Paulo Lício de Geus (Unicamp)</span></li>
+    <li>Extração e Análise de Memória Volátil em Ambientes Android: Uma Abordagem Voltada à Reconstrução de Trajetórias com Base no Protocolo NMEA 0183<br>
+        <span class="authors">João Paulo Sousa (PCDF) e João Gondim (UnB)</span></li>
+    <li>Modelagem de Ameaças Antiforenses Aplicada ao Processo Forense Digital<br>
+        <span class="authors">Marcelo Maues e Bruno Hoelz (UnB)</span></li>
+    <li>Técnicas baseadas em Grafos para Priorização de Investigações Policiais de Fraudes Bancárias Eletrônicas<br>
+        <span class="authors">Álex Patrocínio (UnB) e Zenilton Kleber Patrocínio Jr. (PUC Minas)</span></li>
+    <li>Análises de Linhas Temporais Contextuais em Investigações Digitais<br>
+        <span class="authors">Regis Oliveira e Bruno Hoelz (UnB)</span></li>
+  </ul>
+</div>
+
+<h2>WRAC+: II Workshop de Regulação, Avaliação da Conformidade e Certificação de Segurança</h2>
+<div class="card">
+  <ul>
+    <li>Proposta de Metodologia de Homologação e Certificação de Produto de Defesa Cibernética: o caso dos equipamentos de videoconferência<br>
+        <span class="authors">Ariane C. B. Florentino e Sanderson C. M. Barbalho (UnB)</span></li>
+  </ul>
+</div>
+
+<div class="note">
+Esta página foi reconstruída a partir dos <a href="sources/sbseg-2016-anais.pdf">anais oficiais do
+evento</a> (SBC, ISSN 2176-0063, 789 páginas; cópia preservada nesta pasta) e da página de
+palestrantes do site original. O <a href="http://sbseg2016.ic.uff.br/">site oficial da edição</a>
+permanece no ar na UFF; há também uma
+<a href="https://web.archive.org/web/2016*/sbseg2016.ic.uff.br">série de capturas no Internet
+Archive</a>.
+</div>
+
+<footer>
+Página de reconstrução estática para fins de arquivamento · Comissão Especial de Cibersegurança
+(CESeg) / Sociedade Brasileira de Computação (SBC). Compilada em 2026-07-02.
+Fontes: anais do SBSeg 2016 (SBC) e <a href="http://sbseg2016.ic.uff.br/">sbseg2016.ic.uff.br</a>.
+</footer>
+</div>
+</body>
+</html>
