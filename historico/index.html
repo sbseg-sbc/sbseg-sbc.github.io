@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="hist.title">Histórico do SBSeg · Linha do tempo, eras e números do acervo</title>
+<meta name="description" data-i18n="hist.metaDesc" data-i18n-attr="content" content="História do Simpósio Brasileiro de Cibersegurança (SBSeg): linha do tempo das edições, as cinco eras do evento, marcos institucionais e estatísticas apuradas no próprio acervo do arquivo (sedes, coordenações, palestrantes e premiações).">
+<meta name="keywords" content="SBSeg, história, histórico, linha do tempo, cibersegurança, CESeg, SBC, edições, sedes, coordenação">
+<link rel="canonical" href="https://sbseg-sbc.github.io/historico/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SBSeg · Arquivo histórico">
+<meta property="og:title" content="Histórico do SBSeg">
+<meta property="og:description" content="Linha do tempo das edições, as cinco eras do simpósio, marcos institucionais e números apurados no acervo do arquivo.">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://sbseg-sbc.github.io/historico/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%230e8a78' d='M16 2 4 7v8c0 7 5 12 12 15 7-3 12-8 12-15V7L16 2Zm0 5 8 3v5c0 5-3 8-8 10-5-2-8-5-8-10V10l8-3Z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#fff;--soft:#f6f8f9;--line:#e6eaec;--text:#16242a;--muted:#5d6b72;
+        --faint:#8a979d;--accent:#0e8a78;--accent-dark:#0a6457;--accent-soft:#e7f4f1}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:"Inter",-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+  .wrap{max-width:1000px;margin:0 auto;padding:2.4rem 1.25rem 4rem}
+  a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+  .back{display:inline-block;margin-bottom:1.1rem;font-size:.9rem;color:var(--muted)}
+  h1{font-size:1.9rem;letter-spacing:-.02em}
+  .lead{color:var(--muted);margin:.5rem 0 1.6rem;max-width:72ch}
+
+  h2.sec{font-size:1.35rem;letter-spacing:-.01em;margin:2.6rem 0 .3rem;
+    padding-bottom:.5rem;border-bottom:1px solid var(--line)}
+  .sec-note{color:var(--faint);font-size:.86rem;margin:.45rem 0 1.1rem;max-width:74ch}
+
+  /* ---------- números do acervo ---------- */
+  .stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:.7rem;margin:.4rem 0 .2rem}
+  .stat{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:.85rem 1rem}
+  .stat .num{display:block;font-size:1.75rem;font-weight:800;letter-spacing:-.03em;color:var(--accent-dark);line-height:1.1}
+  /* valores textuais (o intervalo de anos) não cabem no corpo dos numéricos */
+  .stat .num.txt{font-size:1.28rem;letter-spacing:-.02em}
+  .stat .lbl{display:block;font-size:.84rem;color:var(--muted);margin-top:.18rem}
+  .stat .src-lnk{display:block;font-size:.76rem;color:var(--faint);margin-top:.35rem}
+  .stat .src-lnk a{color:var(--faint)} .stat .src-lnk a:hover{color:var(--accent)}
+
+  /* ---------- linha do tempo ---------- */
+  ol.timeline{list-style:none;margin:.6rem 0 0;padding:0 0 0 1.6rem;border-left:2px solid var(--line)}
+  ol.timeline li{position:relative;padding:0 0 1.5rem .35rem}
+  ol.timeline li::before{content:"";position:absolute;left:-2.02rem;top:.45rem;width:11px;height:11px;
+    border-radius:50%;background:var(--accent);border:2px solid #fff;box-shadow:0 0 0 2px var(--accent-soft)}
+  ol.timeline li.gap::before{background:#fff;border:2px solid var(--line);box-shadow:none}
+  .tl-head{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap}
+  .tl-year{font-size:1.15rem;font-weight:800;letter-spacing:-.02em;color:var(--accent-dark)}
+  .tl-place{color:var(--text);font-weight:600;font-size:.95rem}
+  .tl-inst{color:var(--faint);font-size:.88rem}
+  .tl-roles{margin-top:.4rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.35rem .9rem}
+  .tl-role{font-size:.87rem;color:var(--muted)}
+  .tl-role .rl{display:block;font-size:.72rem;font-weight:700;text-transform:uppercase;
+    letter-spacing:.07em;color:var(--faint)}
+  .tl-links{margin-top:.45rem;display:flex;gap:.5rem;flex-wrap:wrap}
+  .tl-links a{font-size:.8rem;background:var(--accent-soft);border:1px solid #cfe6e1;
+    border-radius:999px;padding:.18rem .7rem;color:var(--accent-dark)}
+  .tl-links a:hover{text-decoration:none;background:#d8ece7}
+  .tl-links a.plain{background:var(--soft);border-color:var(--line);color:var(--muted)}
+  ol.timeline li.gap .tl-year{color:var(--faint)}
+  .tl-gap-txt{font-size:.87rem;color:var(--faint);margin-top:.2rem}
+
+  /* ---------- eras ---------- */
+  .eras{display:grid;gap:.8rem;margin-top:.5rem}
+  .era{border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;
+    background:var(--soft);padding:1rem 1.15rem}
+  .era .yr{display:inline-block;font-size:.74rem;font-weight:800;letter-spacing:.06em;
+    color:var(--accent-dark);background:var(--accent-soft);border:1px solid #cfe6e1;
+    border-radius:999px;padding:.16rem .65rem;margin-bottom:.5rem}
+  .era h3{font-size:1.05rem;letter-spacing:-.01em;margin-bottom:.35rem}
+  .era p{font-size:.93rem;color:var(--muted);max-width:78ch}
+  .era .ev{display:block;margin-top:.5rem;font-size:.8rem;color:var(--faint)}
+  .era.pre{border-left-color:var(--faint);background:#fbfcfc}
+  .era.pre .yr{color:var(--muted);background:var(--soft);border-color:var(--line)}
+
+  /* ---------- marcos ---------- */
+  ul.marcos{list-style:none;margin:.5rem 0 0;padding:0;display:grid;gap:.45rem}
+  ul.marcos li{display:grid;grid-template-columns:4.6rem 1fr;gap:.9rem;align-items:baseline;
+    background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:.6rem .85rem}
+  ul.marcos .my{font-weight:800;color:var(--accent-dark);font-size:.95rem;letter-spacing:-.01em}
+  ul.marcos .mt{font-size:.9rem;color:var(--text)}
+  ul.marcos .mt em{color:var(--faint);font-style:normal;font-size:.84rem;display:block;margin-top:.12rem}
+
+  /* ---------- geografia ---------- */
+  .geo{display:grid;grid-template-columns:minmax(260px,1fr) minmax(260px,1.05fr);gap:1.4rem;align-items:start;margin-top:.6rem}
+  .mapbox{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:.8rem}
+  .mapbox svg{width:100%;height:auto;display:block}
+  .mapbox svg .land{fill:#e8eef0;stroke:#d3dcdf;stroke-width:1}
+  .mapbox svg .pt .core{fill:var(--accent);stroke:#fff;stroke-width:1.5}
+  .mapbox svg .pt .halo{fill:var(--accent);opacity:.16}
+  ul.regions{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
+  ul.regions li{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:.6rem .85rem}
+  ul.regions .rn{font-weight:700;font-size:.92rem}
+  ul.regions .rd{font-size:.85rem;color:var(--muted);margin-top:.1rem}
+  ul.regions .rc{font-size:.8rem;color:var(--faint);margin-top:.15rem}
+  @media(max-width:760px){.geo{grid-template-columns:1fr}}
+
+  /* ---------- ranking de coordenação ---------- */
+  .rank{display:grid;gap:.35rem;margin-top:.5rem;max-width:60ch}
+  .rank .row{display:grid;grid-template-columns:6.5rem 1fr 2.2rem;gap:.7rem;align-items:center}
+  .rank .rlbl{font-size:.88rem;font-weight:600;text-align:right;color:var(--text)}
+  .rank .bar{height:14px;border-radius:999px;background:var(--accent);min-width:4px}
+  .rank .rval{font-size:.84rem;color:var(--muted)}
+
+  /* ---------- contribuir ---------- */
+  .contrib{border:1px solid #cfe6e1;background:var(--accent-soft);border-radius:12px;
+    padding:1.1rem 1.25rem;margin-top:.6rem}
+  .contrib h3{font-size:1.02rem;margin-bottom:.4rem;color:var(--accent-dark)}
+  .contrib p{font-size:.92rem;color:var(--accent-dark);max-width:76ch}
+  .contrib ul{margin:.6rem 0 0 1.1rem;font-size:.9rem;color:var(--accent-dark)}
+  .contrib li{margin-bottom:.22rem}
+
+  .note{color:var(--muted);font-size:.9rem;border-left:3px solid var(--line);
+    padding:.3rem 0 .3rem .9rem;margin:2rem 0 0}
+  footer{color:var(--faint);font-size:.84rem;margin-top:2.4rem;border-top:1px solid var(--line);padding-top:1rem}
+
+  /* ---------- shared archive top menu ---------- */
+  header.topbar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header.topbar .tb-wrap{max-width:1000px;margin:0 auto;padding:0 1.25rem;display:flex;
+    align-items:center;justify-content:space-between;gap:1rem;min-height:60px;flex-wrap:wrap}
+  header.topbar .brand{display:flex;align-items:center;gap:9px;font-weight:800;
+    letter-spacing:-.02em;font-size:1.05rem;color:var(--text)}
+  header.topbar .brand:hover{text-decoration:none}
+  header.topbar .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
+  header.topbar .brand .sub{color:var(--faint);font-weight:500}
+  header.topbar nav{display:flex;flex-wrap:wrap;gap:.5rem 1.35rem;font-size:.9rem;font-weight:500}
+  header.topbar nav a{color:var(--muted);transition:color .2s}
+  header.topbar nav a:hover{color:var(--accent);text-decoration:none}
+  header.topbar nav a.active{color:var(--accent-dark);font-weight:700}
+  @media(max-width:680px){header.topbar .tb-wrap{padding:.55rem 1rem}
+    header.topbar nav{gap:.35rem 1rem;font-size:.82rem}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="tb-wrap">
+    <a class="brand" href="../"><span class="dot"></span>SBSeg <span class="sub">/ CESeg</span></a>
+    <nav>
+      <a href="../#edicoes" data-i18n="nav.edicoes">Edições</a>
+      <a href="../historico/" class="active" aria-current="page" data-i18n="nav.historico">Histórico</a>
+      <a href="../organizadores/" data-i18n="nav.org">Organizadores</a>
+      <a href="../palestrantes/" data-i18n="nav.speakers">Palestrantes</a>
+      <a href="../premiacoes/" data-i18n="nav.awards">Premiações</a>
+      <a href="../fotos/" data-i18n="nav.gallery">Fotos</a>
+      <a href="../patrocinadores/" data-i18n="nav.sponsors">Patrocinadores</a>
+      <a href="https://ceseg-sbc.github.io/publicacoes.html" data-i18n="nav.anais">Anais</a>
+      <a href="https://ceseg-sbc.github.io" target="_blank" rel="noopener" data-i18n="nav.ceseg">CESeg</a>
+      <div class="lang-switch"></div>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <a class="back" href="../" data-i18n="hist.back">← voltar ao arquivo</a>
+  <h1 data-i18n="hist.h1">Histórico do SBSeg</h1>
+  <p class="lead" data-i18n="hist.lead">
+    A trajetória do Simpósio Brasileiro de Cibersegurança contada pelo que este arquivo preserva:
+    as sedes, as pessoas que coordenaram cada edição, os palestrantes convidados e as premiações.
+    Tudo nesta página é apurado no próprio acervo, e cada número aponta para a página onde os
+    dados podem ser conferidos um a um.
+  </p>
+
+  <!-- ══════════════ 1. números do acervo ══════════════ -->
+  <h2 class="sec" data-i18n="hist.numbersH">O arquivo em números</h2>
+  <p class="sec-note" data-i18n="hist.numbersNote">
+    Contagens apuradas neste acervo, não no conjunto completo da história do simpósio.
+    São recalculadas automaticamente a cada nova edição catalogada.
+  </p>
+  <div class="stats">
+    <div class="stat">
+      <b class="num" data-stat="editions">17</b>
+      <span class="lbl" data-i18n="hist.stEditions">edições preservadas</span>
+      <span class="src-lnk"><a href="../#edicoes" data-i18n="hist.stEditionsSrc">ver as edições</a></span>
+    </div>
+    <div class="stat">
+      <b class="num txt" data-stat="span">2008–2026</b>
+      <span class="lbl" data-i18n="hist.stSpan">período coberto</span>
+    </div>
+    <div class="stat">
+      <b class="num" data-stat="cities">16</b>
+      <span class="lbl" data-i18n="hist.stCities">cidades-sede distintas</span>
+    </div>
+    <div class="stat">
+      <b class="num" data-stat="ufs">10</b>
+      <span class="lbl" data-i18n="hist.stUfs">unidades da federação</span>
+    </div>
+    <div class="stat">
+      <b class="num" data-stat="regions">5 / 5</b>
+      <span class="lbl" data-i18n="hist.stRegions">regiões do país</span>
+    </div>
+    <div class="stat">
+      <b class="num" data-stat="institutions">14</b>
+      <span class="lbl" data-i18n="hist.stInst">instituições anfitriãs</span>
+    </div>
+    <div class="stat">
+      <b class="num" data-stat="coordPeople">55</b>
+      <span class="lbl" data-i18n="hist.stCoord">pessoas na coordenação</span>
+      <span class="src-lnk"><a href="../organizadores/" data-i18n="hist.stCoordSrc">ver organizadores</a></span>
+    </div>
+    <div class="stat">
+      <b class="num" data-stat="speakers">60</b>
+      <span class="lbl" data-i18n="hist.stSpeakers">palestrantes convidados</span>
+      <span class="src-lnk"><a href="../palestrantes/" data-i18n="hist.stSpeakersSrc">ver palestrantes</a></span>
+    </div>
+    <div class="stat">
+      <b class="num" data-stat="awards">139</b>
+      <span class="lbl" data-i18n="hist.stAwards">premiações catalogadas</span>
+      <span class="src-lnk"><a href="../premiacoes/" data-i18n="hist.stAwardsSrc">ver premiações</a></span>
+    </div>
+    <div class="stat">
+      <b class="num" data-stat="subevents">45</b>
+      <span class="lbl" data-i18n="hist.stSubevents">trilhas e subeventos premiados</span>
+    </div>
+  </div>
+
+  <!-- ══════════════ 2. cinco eras ══════════════ -->
+  <h2 class="sec" data-i18n="hist.erasH">Cinco eras do simpósio</h2>
+  <p class="sec-note" data-i18n="hist.erasNote">
+    Uma leitura da história do evento pelo seu formato, sua governança e seu alcance. O primeiro
+    período é anterior ao que este arquivo preserva e está apoiado em fontes públicas da SBC.
+  </p>
+  <div class="eras">
+    <div class="era pre">
+      <span class="yr">2001–2004</span>
+      <h3 data-i18n="hist.era1H">Origens: um workshop dentro de outro evento</h3>
+      <p data-i18n="hist.era1P">
+        A comunidade brasileira de segurança começou a se reunir em um workshop satélite, realizado
+        junto ao Simpósio Brasileiro de Redes de Computadores. Eram poucas sessões por ano, mas
+        suficientes para revelar um público recorrente e a demanda por um fórum próprio. Nessas
+        primeiras edições consolidou-se o hábito de reunir, no mesmo espaço, criptografia, segurança
+        de redes e segurança de sistemas, combinação que se tornaria a marca do evento.
+      </p>
+      <span class="ev" data-i18n="hist.era1Ev">Período anterior ao acervo. Fonte: registros públicos da SBC.</span>
+    </div>
+
+    <div class="era pre">
+      <span class="yr">2005–2010</span>
+      <h3 data-i18n="hist.era2H">Do workshop ao simpósio</h3>
+      <p data-i18n="hist.era2P">
+        O evento ganha estatuto próprio e passa a se chamar Simpósio Brasileiro em Segurança da
+        Informação e de Sistemas Computacionais, com chamada de trabalhos, comitê de programa e
+        anais independentes. A edição de 2008, em Gramado, é a mais antiga preservada aqui e já
+        mostra o formato que se manteria por anos: trilha principal, quatro palestras convidadas
+        internacionais e workshops associados, entre eles o de trabalhos de iniciação científica,
+        que começa nesse período e é o subevento mais longevo registrado neste acervo.
+      </p>
+      <span class="ev" data-i18n="hist.era2Ev">Evidência no acervo: SBSeg 2008 (Gramado, UFRGS), 4 palestrantes convidados.</span>
+    </div>
+
+    <div class="era">
+      <span class="yr">2011–2019</span>
+      <h3 data-i18n="hist.era3H">Itinerância e multiplicação dos subeventos</h3>
+      <p data-i18n="hist.era3P">
+        O simpósio percorre o país e alcança as cinco regiões: Brasília, Curitiba, Manaus, Belo Horizonte, Florianópolis, Niterói, Natal e São Paulo recebem edições consecutivas. O programa deixa de ser uma trilha única e passa a abrigar workshops especializados em gestão de identidades, forense computacional, regulação e certificação, e tecnologia eleitoral, além do Salão de Ferramentas. A edição de 2019 é a mais diversa do período: nove trilhas e subeventos distintos concederam prêmios, incluindo o primeiro hackathon do evento, marca que só seria superada em 2025.
+      </p>
+      <span class="ev" data-i18n="hist.era3Ev">Evidência no acervo: 9 subeventos premiados em 2019, contra 2 em 2017.</span>
+    </div>
+
+    <div class="era">
+      <span class="yr">2020–2022</span>
+      <h3 data-i18n="hist.era4H">A interrupção da itinerância</h3>
+      <p data-i18n="hist.era4P">
+        A pandemia rompe a sequência de encontros presenciais. As edições nominalmente sediadas em Petrópolis e em Belém acontecem em formato remoto, e o próprio acervo guarda o rastro disso: 2020 é a única edição catalogada sem instituição anfitriã no registro e a única cujo site oficial ficou hospedado em domínio da SBC, e não no de uma universidade. A edição de 2022, em Santa Maria, marca a retomada e devolve ao calendário a lógica de rodízio entre regiões.
+      </p>
+      <span class="ev" data-i18n="hist.era4Ev">Evidência no acervo: SBSeg 2020 sem instituição anfitriã e com site no domínio da SBC.</span>
+    </div>
+
+    <div class="era">
+      <span class="yr">2023–hoje</span>
+      <h3 data-i18n="hist.era5H">Cibersegurança, artefatos e novos prêmios</h3>
+      <p data-i18n="hist.era5P">
+        A trilha principal passa a ser explicitamente dividida em Sistemas e Criptografia, e a
+        avaliação de artefatos entra no programa: primeiro reconhecendo os avaliadores, depois com um
+        comitê próprio que concede selos de reprodutibilidade aos trabalhos. Em 2025 vem a mudança
+        de nome, de Segurança da Informação e de Sistemas Computacionais para Cibersegurança,
+        acompanhada da renomeação da comissão especial da SBC para CESeg. A mesma edição estreia um
+        conjunto novo de reconhecimentos, entre eles o prêmio de trabalho que resistiu ao tempo e os
+        de impacto social, internacionalização e cooperação.
+      </p>
+      <span class="ev" data-i18n="hist.era5Ev">Evidência no acervo: selos de artefatos em 2024; 13 categorias premiadas em 2025.</span>
+    </div>
+  </div>
+
+  <!-- ══════════════ 3. linha do tempo ══════════════ -->
+  <h2 class="sec" data-i18n="hist.timelineH">Linha do tempo das edições</h2>
+  <p class="sec-note" data-i18n="hist.timelineNote">
+    Uma entrada por edição preservada, com sede, instituição anfitriã e a coordenação registrada.
+    Os anos ainda sem cópia preservada aparecem marcados como lacuna.
+  </p>
+  <ol class="timeline" id="timeline">
+    <li><span class="tl-year">…</span>
+      <div class="tl-gap-txt" data-i18n="hist.timelineJs">
+        A linha do tempo é montada a partir da lista de edições do arquivo. Ative o JavaScript
+        para vê-la, ou consulte a <a href="../#edicoes">grade de edições</a> e a página de
+        <a href="../organizadores/">organizadores</a>.
+      </div>
+    </li>
+  </ol>
+
+  <!-- ══════════════ 4. marcos ══════════════ -->
+  <h2 class="sec" data-i18n="hist.marcosH">Marcos institucionais</h2>
+  <p class="sec-note" data-i18n="hist.marcosNote">
+    Viradas datadas na forma do evento. Vários anos de estreia de subeventos são deduzidos da
+    numeração ordinal que consta nas premiações preservadas, por exemplo o VIII Salão de
+    Ferramentas em 2024, que situa a primeira edição em 2017.
+  </p>
+  <ul class="marcos">
+    <li><span class="my">2007</span><span class="mt" data-i18n="hist.m2007">Primeira edição do Workshop de Trabalhos de Iniciação Científica e de Graduação (WTICG)<em>Deduzido: XVIII edição realizada em 2024.</em></span></li>
+    <li><span class="my">2008</span><span class="mt" data-i18n="hist.m2008">Edição mais antiga preservada neste arquivo: Gramado, no Instituto de Informática da UFRGS<em>Cópia estática completa do site original.</em></span></li>
+    <li><span class="my">2011</span><span class="mt" data-i18n="hist.m2011">Primeira edição do Workshop de Gestão de Identidades Digitais (WGID)<em>Deduzido: IX edição realizada em 2019.</em></span></li>
+    <li><span class="my">2012</span><span class="mt" data-i18n="hist.m2012">Primeira edição do Workshop de Forense Computacional (WFC)<em>Deduzido: VIII edição realizada em 2019.</em></span></li>
+    <li><span class="my">2015</span><span class="mt" data-i18n="hist.m2015">Primeira edição do Workshop de Regulação, Avaliação da Conformidade e Certificação de Segurança (WRAC+)<em>Deduzido: V edição realizada em 2019.</em></span></li>
+    <li><span class="my">2016</span><span class="mt" data-i18n="hist.m2016">Primeira edição do Workshop de Tecnologia Eleitoral (WTE)<em>Deduzido: IV edição realizada em 2019.</em></span></li>
+    <li><span class="my">2017</span><span class="mt" data-i18n="hist.m2017">Primeira edição do Salão de Ferramentas<em>Deduzido: VIII edição realizada em 2024.</em></span></li>
+    <li><span class="my">2019</span><span class="mt" data-i18n="hist.m2019">Primeiro hackathon do simpósio e o programa mais diverso até então, com nove trilhas e subeventos premiados<em>Também o ano do Prêmio Destaque CESeg.</em></span></li>
+    <li><span class="my">2020</span><span class="mt" data-i18n="hist.m2020">Edições em formato remoto, em 2020 e 2021, interrompem a itinerância presencial<em>Sedes nominais: Petrópolis e Belém.</em></span></li>
+    <li><span class="my">2023</span><span class="mt" data-i18n="hist.m2023">Trilha principal dividida entre Criptografia e Segurança de Sistemas, e primeiro reconhecimento a avaliadores de artefatos<em>Também o ano do prêmio de melhor revisor.</em></span></li>
+    <li><span class="my">2024</span><span class="mt" data-i18n="hist.m2024">O Comitê Técnico de Artefatos passa a conceder selos de reprodutibilidade aos trabalhos<em>Oito artefatos destacados na primeira rodada.</em></span></li>
+    <li><span class="my">2025</span><span class="mt" data-i18n="hist.m2025">O evento passa a se chamar Simpósio Brasileiro de Cibersegurança e a comissão especial da SBC vira CESeg; estreiam os prêmios de trabalho que resistiu ao tempo, impacto social, internacionalização e cooperação<em>Treze categorias premiadas, o maior número do acervo.</em></span></li>
+  </ul>
+
+  <!-- ══════════════ 5. geografia ══════════════ -->
+  <h2 class="sec" data-i18n="hist.geoH">Geografia das edições</h2>
+  <p class="sec-note" data-i18n="hist.geoNote">
+    As sedes preservadas neste arquivo e o ano em que cada região do país aparece pela primeira vez
+    na cobertura. Edições anteriores a 2008 não estão contempladas.
+  </p>
+  <div class="geo">
+    <div class="mapbox"><svg id="brmap" role="img" aria-label="Mapa do Brasil com as cidades-sede do SBSeg"></svg></div>
+    <ul class="regions" id="regions"></ul>
+  </div>
+
+  <!-- ══════════════ 6. coordenação ══════════════ -->
+  <h2 class="sec" data-i18n="hist.rankH">Quem organiza o simpósio</h2>
+  <p class="sec-note" data-i18n="hist.rankNote">
+    Instituições com mais participações na coordenação geral ou na coordenação do comitê de
+    programa, contando uma vez por pessoa por edição. Mede trabalho de organização do evento,
+    não produção científica.
+  </p>
+  <div class="rank" id="rank"></div>
+
+  <!-- ══════════════ 7. contribuir ══════════════ -->
+  <h2 class="sec" data-i18n="hist.gapsH">O que ainda falta</h2>
+  <div class="contrib">
+    <h3 data-i18n="hist.gapsSubH">Este histórico está incompleto, e isso é proposital</h3>
+    <p data-i18n="hist.gapsP">
+      O arquivo preserva o que foi possível recuperar até aqui. As lacunas abaixo são conhecidas e
+      seguem abertas. Se você coordenou, participou ou guardou material de alguma dessas edições,
+      qualquer registro ajuda: páginas do site original, programação, fotos, listas de premiados,
+      cartazes ou a composição das coordenações.
+    </p>
+    <ul>
+      <li data-i18n="hist.gap1">Edições anteriores a 2008, incluindo todo o período de workshop</li>
+      <li data-i18n="hist.gap2">As edições de 2009 e 2010, sem cópia preservada</li>
+      <li data-i18n="hist.gap3">Palestrantes convidados de 2011 e 2015</li>
+      <li data-i18n="hist.gap4">Coordenação das edições de 2011 e 2015</li>
+      <li data-i18n="hist.gap5">Premiações da maioria das edições anteriores a 2019</li>
+    </ul>
+    <p style="margin-top:.7rem" data-i18n="hist.gapsContact">
+      Contribuições podem ser enviadas à <a href="https://ceseg-sbc.github.io" target="_blank" rel="noopener">CESeg</a>
+      ou como proposta de alteração no
+      <a href="https://github.com/sbseg-sbc/sbseg-sbc.github.io" target="_blank" rel="noopener">repositório deste arquivo</a>.
+    </p>
+  </div>
+
+  <div class="note" data-i18n="hist.note">
+    Os números desta página são apurados sobre o conteúdo deste arquivo, e não sobre o conjunto
+    completo da história do simpósio, que é maior do que o material até agora recuperado. Datas de
+    estreia de subeventos marcadas como deduzidas vêm da numeração ordinal informada nas próprias
+    premiações preservadas. Correções são bem-vindas.
+  </div>
+
+  <footer data-i18n="hist.footer">
+    Página de arquivamento · CESeg / SBC. Dados apurados em
+    <a href="../#edicoes">edições</a>, <a href="../organizadores/">organizadores</a>,
+    <a href="../palestrantes/">palestrantes</a> e <a href="../premiacoes/">premiações</a>.
+  </footer>
+</div>
+
+<script src="../assets/brazil-map.js"></script>
+<script src="../assets/editions.js"></script>
+<script>
+/* ──────────────────────────────────────────────────────────────────────────
+   Histórico do SBSeg: tudo nesta página é derivado, nada é redigitado.
+
+   As edições vêm de assets/editions.js (a mesma lista que a home usa). As
+   contagens de coordenação, palestrantes e premiações vêm de um fetch das
+   páginas irmãs, que são analisadas com DOMParser. Assim, ao catalogar uma
+   edição nova em qualquer uma dessas páginas, esta aqui acompanha sozinha.
+
+   Os valores estáticos que já estão no HTML funcionam como fallback: se o
+   fetch falhar (offline, ou a página aberta via file://), a página continua
+   legível e correta na data em que foi gerada.
+   ────────────────────────────────────────────────────────────────────────── */
+(function () {
+  "use strict";
+
+  var ED = window.EDITIONS || [];
+  var BASE = "../";
+
+  function esc(s){
+    return String(s).replace(/[&<>"]/g, function(c){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];
+    });
+  }
+  function setStat(name, value){
+    var el = document.querySelector('[data-stat="'+name+'"]');
+    if (el && value != null) el.textContent = String(value);
+  }
+  // Reaplica as traduções depois de injetar conteúdo, já que o i18n roda uma
+  // única vez no boot e não observa mutações do DOM.
+  function refreshI18n(){
+    if (window.SBSegI18n && typeof window.SBSegI18n.refresh === "function") {
+      window.SBSegI18n.refresh();
+    }
+  }
+
+  // ── partes do campo loc: "Cidade · UF · Instituição · datas" ──────────────
+  function locParts(loc){
+    var p = String(loc || "").split(" · ");
+    return { city: p[0] || "", uf: p[1] || "", inst: p[2] || "", dates: p[3] || "" };
+  }
+
+  // Unidades internas resolvidas para a instituição mantenedora. UFSC/UNIVALI
+  // é coorganização de 2015, por isso conta como duas instituições.
+  var HOST_MAP = {
+    "Inf/UFRGS": ["UFRGS"], "IC/UFF": ["UFF"], "IComp/UFAM": ["UFAM"],
+    "IMD/UFRN": ["UFRN"], "IME/USP": ["USP"], "DCC/UFMG": ["UFMG"],
+    "UFSC/UNIVALI": ["UFSC", "UNIVALI"]
+  };
+  function hostInstitutions(inst){
+    if (!inst) return [];
+    return HOST_MAP[inst] || [inst];
+  }
+
+  var REGIONS = {
+    "Norte":        ["AC","AM","AP","PA","RO","RR","TO"],
+    "Nordeste":     ["AL","BA","CE","MA","PB","PE","PI","RN","SE"],
+    "Centro-Oeste": ["DF","GO","MS","MT"],
+    "Sudeste":      ["ES","MG","RJ","SP"],
+    "Sul":          ["PR","RS","SC"]
+  };
+  var REGION_KEY = { "Norte":"north", "Nordeste":"northeast",
+    "Centro-Oeste":"midwest", "Sudeste":"southeast", "Sul":"south" };
+  function regionOf(uf){
+    for (var r in REGIONS) if (REGIONS[r].indexOf(uf) >= 0) return r;
+    return null;
+  }
+
+  // ── 1. números derivados apenas das edições ──────────────────────────────
+  var years = ED.map(function(e){ return e.y; }).sort(function(a,b){ return a-b; });
+  var cities = {}, ufs = {}, insts = {}, regions = {};
+  ED.forEach(function(e){
+    var p = locParts(e.loc);
+    if (p.city) cities[p.city] = 1;
+    if (p.uf)   ufs[p.uf] = 1;
+    hostInstitutions(p.inst).forEach(function(i){ insts[i] = 1; });
+    var r = regionOf(p.uf);
+    if (r && (!regions[r] || e.y < regions[r].y)) regions[r] = { y:e.y, city:p.city, uf:p.uf };
+  });
+
+  setStat("editions", ED.length);
+  if (years.length) setStat("span", years[0] + "–" + years[years.length-1]);
+  setStat("cities", Object.keys(cities).length);
+  setStat("ufs", Object.keys(ufs).length);
+  setStat("regions", Object.keys(regions).length + " / 5");
+  setStat("institutions", Object.keys(insts).length);
+
+  // ── 2. primeira edição registrada em cada região ─────────────────────────
+  (function buildRegions(){
+    var host = document.getElementById("regions");
+    if (!host) return;
+    var order = ["Sul","Centro-Oeste","Norte","Sudeste","Nordeste"];
+    var rows = order.filter(function(r){ return regions[r]; })
+      .sort(function(a,b){ return regions[a].y - regions[b].y; });
+    host.innerHTML = rows.map(function(r){
+      var g = regions[r];
+      var count = ED.filter(function(e){ return regionOf(locParts(e.loc).uf) === r; }).length;
+      return '<li>'
+        + '<div class="rn"><span data-i18n="hist.region.'+REGION_KEY[r]+'">'+esc(r)+'</span></div>'
+        + '<div class="rd">'+esc(g.city)+' · '+esc(g.uf)+' · '+g.y+'</div>'
+        + '<div class="rc">'+count
+        + (count === 1
+            ? '<span data-i18n="hist.regionCount1"> edição no acervo</span>'
+            : '<span data-i18n="hist.regionCount"> edições no acervo</span>')
+        + '</div>'
+        + '</li>';
+    }).join("");
+  })();
+
+  // ── 3. mapa das sedes (mesma projeção usada na home) ─────────────────────
+  (function buildMap(){
+    var M = window.BR_MAP, svg = document.getElementById("brmap");
+    if (!M || !svg) return;
+    svg.setAttribute("viewBox", "0 0 " + M.W + " " + M.H);
+    var seen = {}, pts = "";
+    ED.forEach(function(e){
+      var key = e.lat + "," + e.lng;
+      if (seen[key]) { seen[key].push(e.y); return; }
+      seen[key] = [e.y];
+      var xy = M.project(e.lat, e.lng), p = locParts(e.loc);
+      pts += '<g class="pt" data-key="'+esc(key)+'">'
+          +  '<title>'+esc(p.city + (p.uf ? " · " + p.uf : ""))+'</title>'
+          +  '<circle class="halo" cx="'+xy[0].toFixed(1)+'" cy="'+xy[1].toFixed(1)+'" r="11"/>'
+          +  '<circle class="core" cx="'+xy[0].toFixed(1)+'" cy="'+xy[1].toFixed(1)+'" r="5"/></g>';
+    });
+    svg.innerHTML = '<path class="land" d="' + M.path + '"/>' + pts;
+  })();
+
+  // ── 4. leitura das páginas irmãs ─────────────────────────────────────────
+  // Cada página é HTML estático seccionado por edição (section.edition + h2),
+  // então um parse leve basta e não exige nenhum formato de dados novo.
+  function fetchDoc(path){
+    return fetch(BASE + path, { cache: "no-cache" })
+      .then(function(r){ return r.ok ? r.text() : null; })
+      .then(function(html){
+        return html ? new DOMParser().parseFromString(html, "text/html") : null;
+      })
+      .catch(function(){ return null; });
+  }
+  function yearOf(section){
+    var h2 = section.querySelector("h2");
+    var m = h2 && h2.textContent.match(/(\d{4})/);
+    return m ? parseInt(m[1], 10) : null;
+  }
+
+  // Siglas normalizadas para o ranking de coordenação: unidades internas e
+  // variações de caixa apontam para a mesma instituição mantenedora.
+  var AFFIL_MAP = {
+    "IME-USP":"USP", "INF-UFRGS":"UFRGS", "ENE – UnB":"UnB", "FGA – UnB":"UnB",
+    "Unicamp":"UNICAMP", "Univali":"UNIVALI"
+  };
+  function canonAffil(a){
+    a = String(a || "").trim();
+    return AFFIL_MAP[a] || a;
+  }
+
+  var coordByYear = {};
+
+  fetchDoc("organizadores/").then(function(doc){
+    if (!doc) return;
+    var people = {}, instCount = {}, records = 0;
+    doc.querySelectorAll("section.edition").forEach(function(sec){
+      var y = yearOf(sec);
+      if (!y) return;
+      var roles = [];
+      sec.querySelectorAll(".role").forEach(function(role){
+        var h3 = role.querySelector("h3");
+        var names = [];
+        role.querySelectorAll("li").forEach(function(li){
+          var person = li.querySelector(".person"), affil = li.querySelector(".affil");
+          if (!person) return;
+          var nm = person.textContent.trim();
+          names.push(nm + (affil ? " (" + affil.textContent.trim() + ")" : ""));
+          people[nm] = (people[nm] || 0) + 1;
+          records++;
+          if (affil) {
+            affil.textContent.split("/").forEach(function(a){
+              var c = canonAffil(a);
+              if (c) instCount[c] = (instCount[c] || 0) + 1;
+            });
+          }
+        });
+        if (names.length) {
+          roles.push({
+            key: h3 ? h3.getAttribute("data-i18n") : null,
+            label: h3 ? h3.textContent.trim() : "",
+            names: names
+          });
+        }
+      });
+      coordByYear[y] = roles;
+    });
+
+    setStat("coordPeople", Object.keys(people).length);
+    buildRank(instCount);
+    buildTimeline();
+  });
+
+  fetchDoc("palestrantes/").then(function(doc){
+    if (!doc) return;
+    setStat("speakers", doc.querySelectorAll(".sp-name").length);
+  });
+
+  fetchDoc("premiacoes/").then(function(doc){
+    if (!doc) return;
+    setStat("awards", doc.querySelectorAll(".award").length);
+    setStat("subevents", doc.querySelectorAll(".subevent").length);
+  });
+
+  // ── 5. ranking das instituições na coordenação ───────────────────────────
+  function buildRank(instCount){
+    var host = document.getElementById("rank");
+    if (!host) return;
+    var rows = Object.keys(instCount)
+      .map(function(k){ return { k:k, v:instCount[k] }; })
+      // Sem corte por posição: um top-N esconderia empates no limite e daria a
+      // impressão de lista completa. O critério é só "mais de uma participação".
+      .filter(function(r){ return r.v >= 2; })
+      .sort(function(a,b){ return b.v - a.v || a.k.localeCompare(b.k); });
+    if (!rows.length) return;
+    var max = rows[0].v;
+    host.innerHTML = rows.map(function(r){
+      var pct = Math.max(4, Math.round(r.v / max * 100));
+      return '<div class="row">'
+        + '<span class="rlbl">'+esc(r.k)+'</span>'
+        + '<span class="bar" style="width:'+pct+'%"></span>'
+        + '<span class="rval">'+r.v+'</span>'
+        + '</div>';
+    }).join("");
+  }
+
+  // ── 6. linha do tempo ────────────────────────────────────────────────────
+  function buildTimeline(){
+    var host = document.getElementById("timeline");
+    if (!host) return;
+
+    var byYear = {};
+    ED.forEach(function(e){ byYear[e.y] = e; });
+    var lo = years[0], hi = years[years.length-1];
+
+    var out = [];
+    for (var y = hi; y >= lo; y--) {
+      var e = byYear[y];
+      if (!e) {
+        out.push('<li class="gap"><div class="tl-head"><span class="tl-year">'+y+'</span></div>'
+          + '<div class="tl-gap-txt" data-i18n="hist.tlGap">edição sem cópia preservada neste arquivo</div></li>');
+        continue;
+      }
+      var p = locParts(e.loc);
+      var head = '<div class="tl-head"><span class="tl-year">'+e.y+'</span>'
+        + '<span class="tl-place">'+esc(p.city + (p.uf ? " · " + p.uf : ""))+'</span>'
+        + (p.inst ? '<span class="tl-inst">'+esc(p.inst)+'</span>' : '')
+        + '</div>';
+
+      var roles = coordByYear[e.y] || [];
+      var rolesHtml = roles.length
+        ? '<div class="tl-roles">' + roles.map(function(r){
+            var lbl = r.key
+              ? '<span class="rl" data-i18n="'+esc(r.key)+'">'+esc(r.label)+'</span>'
+              : '<span class="rl">'+esc(r.label)+'</span>';
+            return '<div class="tl-role">'+lbl+esc(r.names.join(", "))+'</div>';
+          }).join("") + '</div>'
+        : '';
+
+      var links = [];
+      if (e.archive) links.push('<a href="'+BASE+esc(e.archive)+'" data-i18n="home.btnArchive">Cópia estática</a>');
+      if (e.site)    links.push('<a class="plain" href="'+esc(e.site)+'" target="_blank" rel="noopener" data-i18n="home.btnSite">Site original</a>');
+
+      out.push('<li>'+head+rolesHtml
+        + (links.length ? '<div class="tl-links">'+links.join("")+'</div>' : '')
+        + '</li>');
+    }
+    host.innerHTML = out.join("");
+    refreshI18n();
+  }
+
+  // Se o fetch de organizadores falhar, a linha do tempo ainda é montada, só
+  // que sem os nomes das coordenações.
+  setTimeout(function(){
+    var host = document.getElementById("timeline");
+    if (host && host.querySelector("[data-i18n='hist.timelineJs']")) buildTimeline();
+  }, 2500);
+})();
+</script>
+<script src="../assets/i18n.js" defer></script>
+<script src="../assets/analytics.js" defer></script>
+</body>
+</html>

@@ -25,6 +25,7 @@
   var ASSETS_BASE = thisScript.src.replace(/i18n\.js(?:\?.*)?$/, "");
 
   var DICT = {};
+  var CURRENT = "pt";
 
   function pick() {
     var url = new URLSearchParams(location.search).get("lang");
@@ -42,6 +43,7 @@
   }
 
   function applyI18n(lang) {
+    CURRENT = lang;
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       var val = t(el.getAttribute("data-i18n"));
       if (val == null) return; // chave ausente: mantém o texto atual (fallback PT)
@@ -140,6 +142,16 @@
     buildSwitchers();
     load(pick());
   }
+
+  // API mínima para páginas que injetam conteúdo depois do boot (por exemplo a
+  // linha do tempo do histórico, montada após um fetch): refresh() reaplica as
+  // traduções ao DOM inteiro, com o idioma que já está ativo. Sem isso, nós
+  // criados tardiamente ficariam presos no texto PT do template.
+  window.SBSegI18n = {
+    refresh: function () { applyI18n(CURRENT); },
+    lang: function () { return CURRENT; },
+    set: setLang
+  };
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", boot);
