@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="shortcut icon" type="image/png" href="../pt/images/favicon.png"/>
+    <title> SBSeg16 - XVI  Brazilian Symposium on Information and Computational Systems Security</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/prototipo.css">
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script>
+      $(function(){   
+        var nav = $('#menuHeader');   
+	$(window).scroll(function () { 
+          if ($(this).scrollTop() > 1) { 
+	    nav.addClass("navbar-fixed-top navbar-float menuFixo"); 
+	  } 
+          else { 
+            nav.removeClass("navbar-fixed-top navbar-float menuFixo"); 
+	  } 
+        });  
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="navbar-fixed-top container-blankBackground hidden-xs">
+      <div class="row">
+        <div class="col-lg-6 col-md-4 col-sm-12 col-xs-6" style="margin-left: 50px;">
+          <img src="images/logo1.png" class="img-responsive imgTopo" style="margin-right: 10px; ">
+          <img src="images/logo2-eng.png" class="img-responsive imgTopo2" alt="logoSbseg">
+        </div>
+        <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12 col-xs-6">	
+          <h5>Realizado por</h5>
+            <a href="http://www.sbc.org.br" target="new"><img class="img-responsive" src="images/sbc.jpg" style="margin-right: 20px; max-height: 90px;"></a>
+            <img class="img-responsive" src="images/UFF.png" style="margin-right: 5px; max-height: 80px;">
+            <img class="img-responsive" src="images/logo-ic.png" style="max-height: 90px;">
+        </div>	
+        <div class="col-lg-1 col-md-4 col-sm-12 col-xs-12" style="margin-left: 40px; padding-top: 50px;">	
+          <a href="local.html#"><img id="btTradutorEn" src="images/Brasil.png" class="img-responsive" style="max-width: 30px;" onclick= "traducaoPt()" /></a></br>
+	  <!-- <a href="#"><img id="btTradutorEn" src="images/Inglaterra.png" class="img-responsive" style="max-width: 30px;" onclick= "traducaoEn()" /></a> -->
+          <a href="https://www.facebook.com/sbseg2016" target="new"><img id="btTradutorEn" src="images/facebook.jpg" class="img-responsive" style="max-width: 30px; padding-top: 5px;"></a>
+        </div>
+      </div>
+    </div> 
+    
+    <section id="headerCont" class="hidden-xs">	
+      <div class="bkPic2">
+ <!--       <div class="container-fluid bkColor">
+	 </div> -->
+      </div>
+    </section>
+
+    <header>					
+      <nav id="menuHeader" class="navbar navbar-default hidden-xs">
+        <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	  </div>		
+	  <div class="navbar-collapse collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav" style="text-align:center;">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="evento.html">ANNALS</a></li>
+              <li><a href="chamadas.html">CALL FOR PAPERS</a></li>
+              <li><a href="comite.html">COMMITTEE</a></li>
+              <li><a href="palestrantes.html">SPEAKERS</a></li>
+              <li><a href="programacao.html">PROGRAM</a></li>
+              <li><a href="local.html">VENUE</a></li>
+              <li><a href="contato.html">CONTACT US</a></li>
+              <li class="liDif"><a class="inscreve" href="inscricoes.html">REGISTRATION</a></li>
+	    </ul>
+	  </div>
+	</div>	
+      </nav>	
+      <nav id="menuHeaderCel" class="navbar navbar-default navbar-fixed-top visible-xs">
+        <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+            <a href="index.html"><img src="images/SimplificadaNegativa.png" class="img-responsive visible-xs" style="max-width: 120px;"></a>
+	  </div>		
+	  <div class="navbar-collapse collapse" id="navbar-collapse-2">
+          <ul class="nav navbar-nav" style="text-align:center;">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="chamadas.html">CALL FOR PAPERS</a></li>
+              <li><a href="comite.html">COMMITTEE</a></li>
+              <li><a href="palestrantes.html">SPEAKERS</a></li>
+              <li><a href="programacao.html">PROGRAM</a></li>
+              <li><a href="local.html">VENUE</a></li>
+              <li><a href="contato.html">CONTACT US</a></li>
+              <li class="liDif"><a class="inscreve" href="inscricoes.html">REGISTRATION</a></li>
+            </ul>
+	  </div>
+	</div>	
+      </nav>	
+    </header>
+  </body>
+</html>
+<section id="ConteudoBox">
+  <div class="container-fluid" style="margin-bottom: 30px;">
+    <div class="col-md-12">
+      <div class="caixa1">
+        <h1 style="padding-left: 10px;">Venue</h1>
+	<p align="middle" style="font-family:DINPRo-Bold; font-color: rgb(O,122,128);"> The SBSeg16 conference will be held at IC/UFF in Niter&oacute;i, Rio de Janeiro.</p>
+        <p align="middle">
+          <img src="images/por-do-sol-ic.jpg" class="img-responsive center-block" style="max-width: 90%; center-block;">
+          </br>
+          Photo by Mateus Pelegrino.
+        </p>
+        <p align="middle">
+	  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.1818667670896!2d-43.13520415012926!3d-22.906661884938263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99817e78d15de5%3A0xdf50c583c275f4e5!2sInstituto+de+Computa%C3%A7%C3%A3o+-+UFF!5e0!3m2!1sen!2sbr!4v1464116271101" width="90%" height="400px" frameborder="0" style="border:0" align="middle" allowfullscreen></iframe>
+        </p>
+       <!-- <p align="justify">
+        O IC ocupa dois prédios recém-inaugurados, cada um com cinco andares. São 17 salas de aula de 70 a 80 m2, um auditório para 160 pessoas, laboratórios de ensino, laboratórios de pesquisa, secretarias, gabinetes de professores e uma ampla sala de convivência para os alunos. A infraestrutura é suficiente para abrigar as atividades simultâneas do SBSeg16, assim como a secretaria do evento. 
+        IC occupies two newly completed buildings, each with five floors. There are 17 classrooms with 70-80 m2, an auditorium for 160 people, teaching laboratories, research laboratories, offices, faculty offices and a large living room for students. The infrastructure is sufficient to house the simultaneous activities of SBSeg16, as well as the event's secretariat.
+       </p>
+       <p align="justify">
+       Os prédios do IC ficam no <i>campus</i> da Praia Vermelha, no bairro de São Domingos, entre o centro e a zona sul de Niterói. Há duas entradas principais para o <i>campus</i> da Praia Vermelha: uma pela <b> Rua Passo da P&aacute;tria, 156</span></b> e outra pela <b>Av. Milton Tavares de Souza, s/n.</b> 
+Há sete opções de hotéis que ficam até 4,5 km de distância do IC. Dentro do campus há um restaurante universitário e ao redor há outras opções de restaurantes de fácil acesso. O mais completo shopping center da cidade, o Plaza Shopping, está a 1,5 km de distância dos prédios do IC. 
+The Institute of Computing is located in the <i>campus</i> of Praia Vermelha, in the São Domingos area, between the city center and Niterói's south region. There are two main entrances to the <i>campus</i> of Praia Vermelha: one by the <b>Passo da Pátria Street</b> and another by the <b>Milton Tavares de Souza Avenue.</b> 
+There are seven options for hotels that are up to 3 miles away from the IC. Inside the campus there is a university restaurant and nearby there are other options of restaurants. The most comprehensive shopping center of the city, the Plaza Shopping, is less than a mile away from the IC buildings.
+       </p> -->
+        <p align="middle">
+          <img src="images/ic-2.jpg" class="img-responsive center-block" style="max-width: 90%; center-block;">
+          </br>
+          Photo by Alexandre Plastino.
+        </p>
+        </p>
+       <p style="font-family:DINPro-Bold; margin:0px; padding-bottom: 6px;" data-toggle="collapse" role="button" href="#sobreic" aria-expanded="false" aria-controls="sobreic">
+       <i class="glyphicon glyphicon-collapse-down"></i> About IC
+       </p>
+       <div class="collapse" id="sobreic">
+         <p align="justify">
+           <!-- <p align="justify">
+           O <a href="http://www.ic.uff.br" target="new" style="color: rgb(0,122,128)">Instituto de Computação (IC)</a> foi criado no Centro Tecnológico da UFF em 29/12/98, como resultado do amadurecimento das atividades de ensino, pesquisa e extensão desenvolvidas na UFF na área de computação. O IC veio reunir, numa mesma Unidade, um conjunto de professores do Departamento de Ciência da Computação do Instituto de Matemática e de diversos departamentos da Escola de Engenharia. O IC conta com um único departamento, o Departamento de Ciência da Computação (TCC). Criado em 1974, o TCC foi instalado inicialmente no Instituto de Matemática do Centro de Estudos Gerais. Em 1985, o TCC passou a oferecer o Bacharelado em Ciência da Computação. Atualmente, o TCC conta com 65 docentes no seu quadro permanente e atende cerca de 2.000 alunos em suas diferentes atividades acadêmicas.
+           The <a href="http://www.ic.uff.br" target="new" style="color: rgb(0,122,128)">Institute of Computing (IC)</a> was created in the Center of Technology on 12/29/98 as the result of the development of the activities of teaching, research and extension performed at UFF in the Computing area. IC was meant to reunite, at the same unity, a group of professors of the Computer Science Department originally from the Institute of Mathematics and from several departments of the School of Engineering. IC is formed by a unique department, which is the Computer Science Department (TCC). This department was created in 1974, and it initially belonged to the Institute of Mathematics, in the former Center of General Studies. In 1985, TCC started to offer the Bachelor's degree in Computer Science. Nowadays, IC has 65 professors in its permanent team, and it serves approximately 2.000 students in their different academic activities.
+         </p>
+         <p align="justify">
+           Hoje, no IC, são desenvolvidas atividades de ensino, pesquisa e de extensão. Estão sob a responsabilidade do IC os cursos de mestrado e doutorado do <a href="http://www.ic.uff.br/index.php/pt/pos-graduacao" target="new" style="color: rgb(0,122,128)">Programa de Pós-Graduação em Computação (PGC)</a>, avaliado com nota 5 pela CAPES; de Graduação em Ciência da Computação; Graduação em Sistemas de Informação; e de Tecnologia em Sistemas de Computação (curso semipresencial, no âmbito do consórcio CEDERJ), avaliados com notas 4, 5 e 4, respectivamente no último ENADE.
+           Today, activities of teaching, research and extension are developed at IC. As a consequence of its expansion process, the following courses are under the responsibility of IC: the <a href="http://www.ic.uff.br/index.php/pt/pos-graduacao" target="new" style="color: rgb(0,122,128)">Graduate Program in Computing</a>, for Master's and Doctorate degree (with grade 5 by CAPES), the Undergraduate Course of Computer Science, the Undergraduate Course of Information Systems, the Undergraduate Distance Learning Course of Technology in Computing Systems, with grades 4, 5 and 4 in the last ENADE, respectively.
+         </p> -->
+        <p align="middle">
+          <img src="images/ic-1.jpg" class="img-responsive center-block" style="max-width: 90%; center-block;">
+          </br>
+          Photo by Alexandre Plastino.
+        </p>
+       </div>
+       <p style="font-family:DINPro-Bold; margin:0px; padding-bottom: 6px;" data-toggle="collapse" role="button" href="#sobreuff" aria-expanded="false" aria-controls="sobreuff">
+       <i class="glyphicon glyphicon-collapse-down"></i> About UFF
+       </p>
+       <div class="collapse" id="sobreuff">
+	<!--  <p align="justify">
+           A Universidade Federal Fluminense (UFF) foi criada em 1960 com o nome de Universidade Federal do Estado do Rio de Janeiro (UFERJ). Originou-se da incorporação das Escolas Federais de Farmácia, Odontologia e Direito (1912), Medicina (1926) e Medicina Veterinária (1936); agregou outras cinco, das quais três eram estaduais, a saber: Enfermagem (1944), Serviço Social (1945), Engenharia (1952), e outras duas, particulares, Ciências Econômicas (1942) e Filosofia (1947).  Após serem federalizadas e incorporadas, essa união passou a ser denominada Universidade Federal Fluminense. A missão da UFF é produzir, difundir e aplicar conhecimento e cultura de forma crítica e socialmente referenciada.
+           The UFF was created in 1960 with the name of the Federal University of the State of Rio de Janeiro (UFERJ). It originated from the merger of five Federal Colleges already existing in Niterói (Law, Medicine, Dentistry, Pharmacy and Veterinary Medicine) and three state schools (Engineering, Social Work and Nursing) and adding two private faculties (Philosophy and Economics), later federalized and incorporated tendon your current name, Fluminense Federal University. UFF's mission is to produce, disseminate and apply knowledge and culture in a critical and social way.
+         </p>
+	 <p align="justify">
+          A UFF possui unidades acadêmicas em oito municípios do interior do Estado do Rio de Janeiro - Angra dos Reis (Instituto de Educação de Angra dos Reis); Campos dos Goytacazes (Instituto de Ciências da Sociedade e Desenvolvimento Regional); Macaé (Instituto de Ciências da Sociedade); Nova Friburgo (Instituto de Saúde de Nova Friburgo - ISNF); Petrópolis (Escola de Engenharia de Petrópolis); Rio das Ostras (Instituto de Ciência e Tecnologia); Santo Antônio de Pádua (Instituto do Noroeste Fluminense de Educação Superior - INFES), e Volta Redonda, onde se situam o Instituto de Ciências Humanas de Volta Redonda, a Escola de Engenharia Industrial e Metalúrgica (EEIMVR), e o Instituto de Ciências Exatas (ICEx).
+          The UFF has academic units in 8 cities in the Rio de Janeiro State - Angra dos Reis (Angra dos Reis Institute of Education), Campos dos Goytacazes (Institute of Science of Society and Regional Development), Macaé (Institute of Society Sciences), Nova Friburgo (Health Institute of Nova Friburgo - ISNF), Petrópolis (Petrópolis School of Engineering), Rio das Ostras (Institute of Science and Technology), Santo Antônio de Padua (Fluminense Northwest Institute of Higher Education - Infes) and Volta Redonda, with the Institute of Human Sciences of Volta Redonda, the School of Industrial Engineering and Metallurgy (EEIMVR) and the Institute of Mathematical Sciences (ICEX).
+         </p>
+	 <p align="justify">
+          Hoje, a UFF é constituída por 40 Unidades de Ensino sendo 23 Institutos, 10 Faculdades, 6 Escolas e 1 Colégio de Aplicação. São ao todo 123 Departamentos de Ensino, 129 Cursos de Graduação presenciais e 6 Cursos de Graduação a distância oferecidos em 28 Polos da Universidade Aberta do Brasil, em convênio com o CEDERJ-RJ. Na Pós-Graduação Stricto Sensu são 80 programas de Pós-Graduação e 119 cursos, sendo 42 de Doutorado, 59 de Mestrado Acadêmico e 18 Mestrados Profissionais. A Pós-Graduação Lato Sensu apresenta 131 cursos de especialização e 32 programas de Residência Médica. Além de uma Editora e 4 livrarias, na Área Cultural a UFF apresenta um Centro de Artes, composto por Cinema, Teatro, Galeria de Arte e Espaço de Fotografia. Na Área da Música a UFF possui uma Orquestra, um Conjunto de Música Antiga, um Coral e um Quarteto de Cordas.
+          Nowadays, UFF consists of 40 Teaching Units, with 23 Institutes, 10 Faculties, 6 Schools and 1 Laboratory School. Altogether there are 123 Departments, 129 Undergraduate Courses and 6 Undergraduate Distance-Learning Courses offered in 28 centers from Brazil's Open University System, in partnership with CEDERJ-RJ. In the Graduate Sensu Stricto, there are 80 Graduate Programs and 119 Courses, among which 42 are Doctoral, 59 are Academic Masters and 18 are Professional Masters. The Postgraduate Sensu Lato has 131 Specialization Courses and 32 Medical Residency Programs. In addition, it has a publisher with 4 bookstores in UFF Arts Centre, which also includes an Cinema, a Theatre, an Art Gallery and a Photography Space. In the Music Area, UFF has an Orchestra, an Ancient Music Chamber, a Coral and a String Quartet.
+         </p>-->
+      </div>
+       <p style="font-family:DINPro-Bold; margin:0px; padding-bottom: 6px;" data-toggle="collapse" role="button" href="#sobreniteroi" aria-expanded="false" aria-controls="sobreniteroi">
+       <i class="glyphicon glyphicon-collapse-down"></i> About Niter&oacute;i
+       </p>
+       <div class="collapse" id="sobreniteroi">
+         <!-- <p align="justify">
+           Fundada em 1573, Niterói é uma das melhores cidades do Brasil para viver, trabalhar e investir, segundo diferentes indicadores. Com atualmente cerca de 500 mil habitantes, Niterói possui o maior Índice de Desenvolvimento Humano Municipal (IDHM) entre os municípios do Estado do Rio de Janeiro e o sétimo maior entre os municípios de todo o país, segundo o PNUD. Niterói também é o município mais escolarizado do país, segundo dados do INEP (Ministério da Educação/2000). A média de anos de estudo chega a 9,5 com uma taxa de alfabetização de 96,4% na população acima de 15 anos.
+           Founded in 1573, Niterói is one of the best cities in Brazil to live, work and invest. With currently about 500 thousand inhabitants, Niterói has the highest Municipal Human Development Index (IDHM) of the Rio de Janeiro state and it is the seventh largest IDHM of the whole country, according to the UNDP. Niterói is also the most educated city in the country, according to data from the National Institute for Educational Studies and Research (INEP) in 2000. The average years of school attendance is 9.5 and the literacy rate is 96.4% among the population over 15 years.
+         </p>
+	 <p align="justify">
+           O cartão postal da cidade é o Museu de Arte Contemporânea (MAC), um disco voador que repousa em uma colina sobre a Baía de Guanabara. O MAC é uma das obras que fazem parte do Caminho Niemeyer, um conjunto de obras projetado por Oscar Niemeyer, como sugere o nome. Niterói é a cidade com mais obras do arquiteto depois de Brasília. Além disso, há o Complexo dos Fortes, as praias oceânicas como Itacoatiara, o conhecido Mercado de Peixe e a gastronomia de excelência, que fazem de Niterói um destino turístico de relevância no cenário nacional. Além é claro de uma vista privilegiada dos mais conhecidos pontos turísticos do Rio de Janeiro, que está separada de Niterói por apenas 13 quilômetros.
+           The city's main landmark is the Niterói Contemporary Art Museum (MAC), a flying disc that rests on a hill above the Guanabara bay. The MAC is part of the Niemeyer Path, a series of works designed by Oscar Niemeyer, as the name suggests. Niterói is the city with more projects designed by him after Brasilia. Also, Niterói has a complex of fortresses, oceanic beaches, such as Itacoatiara, a well known fish market and a gastronomic excellence which makes Niterói an important tourist destination in Brazil. Besides that, it has a privileged view of the most famous landmarks of Rio de Janeiro, which is separated from Niterói by only 8 miles.
+         </p>
+	 <p align="justify">
+            Mais informações turísticas podem ser obtidas no site da <a href="http://www.neltur.com.br" target="new" style="color: rgb(0,122,128)">Neltur</a>.
+            More tourist information can be found on <a href="http://www.neltur.com.br" target="new" style="color: rgb(0,122,128)"> Neltur's website</a>.
+         </p> -->
+
+        <p align="middle">
+          <!-- <img src="images/mac-por-cesar-de-oliveira-orig.jpg" class="img-responsive center-block" style="max-width: 600px; center-block;">-->
+          <img src="images/mac-por-cesar-de-oliveira-orig.jpg" class="img-responsive center-block" style="max-width: 90%; center-block;">
+          </br>
+          Photo by Cesar de Oliveira.
+        </p>
+        <p align="middle">
+          <img src="images/fortaleza-sta-cruz.jpg" class="img-responsive center-block" style="max-width: 90%; center-block;">
+        </p>
+       </div>
+       <p style="font-family:DINPro-Bold; margin:0px; padding-bottom: 6px;" data-toggle="collapse" role="button" href="#hoteis" aria-expanded="false" aria-controls="hoteis">
+       <i class="glyphicon glyphicon-collapse-down"></i> Accomodation
+       </p>
+       <div class="collapse in" id="hoteis">
+	 <p align="justify">
+           <!-- A <a href="http://www.creacteve.com.br" style="color: rgb(0,122,128)" target="new"> crEAct.eve</a> é a agência oficial do SBSeg16. Em breve, divulgaremos a lista de hotéis parceiros do evento e opções de translado. No momento, para questões de hospedagem e transporte, por favor, envie sua mensagem para <span style="color:rgb(0,122,128)">creacteve&#64;creacteve.com.br</span> com o assunto SBSeg16. -->
+           <a href="http://www.creacteve.com.br" style="color: rgb(0,122,128)" target="new">crEAct.eve </a>(<span style="color:rgb(0,122,128)">creacteve&#64;creacteve.com.br</span>) is the official travel agency for SBSeg16. The list of partner hotels and transfer options will be posted soon.</p>
+         </p>
+       </div>
+       <p style="font-family:DINPro-Bold; margin:0px; padding-bottom: 6px;" data-toggle="collapse" role="button" href="#visto" aria-expanded="false" aria-controls="visto">
+       <i class="glyphicon glyphicon-collapse-down"></i> Visa information
+       </p>
+       <div class="collapse in" id="visto">
+         <p align="justify">
+           A visa may be required to enter Brazil, depending on the agreements between Brazil and your country of citizenship. <span style="font-family:DINPro-Bold">U.S. Citizens, for example, must have a visa to enter Brazil</span>. Please <a href="http://www.portalconsular.mre.gov.br/estrangeiros/1qgrv-simples-ing-14.05.2014.pdf/at_download/file" style="color:rgb(0,122,128)">click here</a> to find the list of countries that require a visa to Brazil. In case you need a visa, please contact the nearest Brazilian Embassy or Consulate Office for more information and required forms. Please note that <span style="font-family:DINPro-Bold">Visas must be obtained prior to departure</span>. Any doubt, please contact the nearest Brazilian Consular division. The address you can find at <a href="http://www.portalconsular.mre.gov.br" style="color:rgb(0,122,128)">http://www.portalconsular.mre.gov.br</a>. 
+Participants who need a Letter of Invitation, please send an email to <span style="color:rgb(0,122,128)">sbseg16&#64;gmail.com</span>. Please note that you need to complete the registration first, and attach the registration confirmation with your request for a visa confirmation letter.
+<!-- Participants who need a Letter of Invitation should complete <a href="http://www.gta.ufrj.br/wdays14/files/invitation_letter-form-wd14.pdf" style="color:rgb(0,122,128)">this form</a> and e- mail it to <span style="color:rgb(0,122,128)">sbseg16&#64;gmail.com</span>. Please note that you need to complete the registration first, and attach the registration confirmation with your request for a visa confirmation letter.-->
+         </p>
+       </div>
+     </div>
+   </div>
+
+<!-- dicas de transporte, clima (média 24, min med 20.3, max media 27.7, 113 mm - climate-data.org etc-->
+</section>
+<section id="patrocinadores" class="">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12 col-xs-12 visible-xs vertical-center text-center" style="padding-bottom: 20px;">
+        <h5>Organized by:</h5>
+        <a href="http://www.sbc.org.br" target="new"><img class="img-responsive" src="images/sbc.jpg" style="margin-right: 20px; max-height: 90px;"></a>
+        <img class="img-responsive" src="images/UFF.png" style="margin-right: 5px; max-height: 80px;">
+        <img class="img-responsive" src="images/logo-ic.png" style="max-height: 90px;">
+      </div>
+      <div class="col-lg-3 col-xs-12 vertical-center">
+          <h5 class="hidden-xs" style="margin-left: 20px;">Supported by: </h5>
+              <img class="img-responsive center-block hidden-xs" src="images/coppe.jpg" style="margin-right:5px; max-width: 90px;padding-bottom: 20px; margin-left: 20px;">
+              <img class="img-responsive center-block hidden-xs" src="images/ufrj.jpg" style="max-height: 95px;padding-bottom: 20px;">
+              <img class="img-responsive center-block hidden-xs" src="images/logo-ceseg.png" style="max-height: 85px; padding-bottom: 20px; margin-left: 10px;">
+	      <div class="row visible-xs text-center">
+                <h5>Supported by: </h5>
+                <div class="col-lg-4 col-xs-6 text-center vertical-center">
+                  <img class="img-responsive" src="images/coppe.jpg" style="margin-left: 100px; max-width: 90px;padding-bottom: 20px; padding-top: 15px;">
+                </div>
+                <div class="col-lg-4 col-xs-6 vertical-center">
+	          <img class="img-responsive" src="images/ufrj.jpg" style="margin-left: -100px; max-height: 95px;padding-bottom: 20px;">
+                </div>
+                <div class="col-lg-4 col-xs-12 vertical-center">
+                  <img class="img-responsive" src="images/logo-ceseg.png" style="margin-left: 0px; max-width: 110px;padding-bottom: 20px;">
+                </div>
+              </div>
+       </div>
+       <div class="col-lg-8 col-xs-12 vertical-center">
+         <h5 class="hidden-xs">Sponsored by:</h5>
+         <div class="row text-center">
+           <h5 class="visible-xs">Sponsored by:</h5>
+           <div class="col-lg-4 text-center col-xs-12 vertical-center">
+             Diamond<br>
+             <img class="img-reponsive center-block" src="images/logo-nic-cgi.png" style="max-width:200px; padding-bottom: 20px;">
+           </div>
+           <div class="col-lg-2 col-xs-12 text-center vertical-center">
+             Gold<br>
+            <img class="img-reponsive center-block" src="images/intel.png" style="max-width: 100px;padding-bottom: 20px; padding-top: 10px;">
+            <img class="img-reponsive center-block" src="images/logo_faperj_cor.jpg" style="max-width: 170px;padding-bottom: 20px; padding-top: 10px;">
+            <img class="img-reponsive center-block" src="images/logo-cnpq.jpg" style="max-width: 170px;padding-bottom: 20px; padding-top: 10px;">
+            <img class="img-reponsive center-block" src="images/logo-capes.png" style="max-width: 100px;padding-bottom: 20px; padding-top: 10px;">
+           </div>
+           <div class="col-lg-3 col-xs-12 text-center vertical-center">
+             Silver<br>
+             <img class="img-reponsive center-block" src="images/lgClavis.png" style="max-width: 160px; padding-top: 15px;padding-bottom: 20px;">
+             <img class="img-reponsive center-block" src="images/proppi.png" style="max-width: 160px; padding-top: 15px;padding-bottom: 20px;">
+           </div>
+           <div class="col-lg-3 col-xs-12 text-center vertical-center">
+             Bronze<br>
+             <img class="img-reponsive center-block" src="images/google.png" style="max-width: 150px; padding-top: 15px;padding-bottom: 20px;" >
+           </div>
+         </div>
+      </div>
+      <div class="col-lg-12 col-xs-12 vertical-center text-center">
+        <h6 style="padding-top: 40px;">Developed by:</h6>
+        <img class="img-responsive center-block" src="images/logoIn.png" style="max-width: 55px; padding-bottom: 20px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--<div class="col-lg-2 col-lg-offset-1 col-col-md-1 col-sm-1 col-xs-12 vertical-center">
+          <h5>Apoiado por:</h5>
+	  <img class="img-responsive" src="images/coppe.jpg" style="margin-right:10px; max-width: 90px;">
+	  <img class="img-responsive" src="images/ufrj.jpg" style="max-height: 95px;">
+      </div>
+      <div class="col-lg-7 col-lg-offset-1 col-md-1 col-sm-1 col-xs-12">
+        <h5>Patrocinado por:</h5>
+	<div class="row">
+          <div class="col-lg-2 col-md-1 col-sm-1 col-xs-12">
+	    Diamante <br>
+            <img class="img-reponsive" src="images/logo-nic-cgi.png" style="max-width:180px;">
+	  </div> 
+	 <div class="col-lg-2 col-md-1 col-sm-1 col-xs-12">
+	    Ouro <br> 
+            <img class="img-reponsive" src="images/intel.jpg" style="max-width: 90px;">
+          </div>
+	  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" style="max-width: 90px;">
+	    Prata <br>
+            <img class="img-reponsive" src="images/lgClavis.png" style="max-width: 90px;">
+          </div>
+	  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" style="max-width: 90px;">
+	    Bronze <br>
+            <img class="img-reponsive" src="images/google.png">
+          </div> 
+        </div>
+      </div>
+      <div class="col-lg-1 col-lg-offset-1 col-md-1 col-sm-1 col-xs-12 vertical-center text-center">
+        <h6>Desenvolvido por:</h6>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+	
+		<!--FIM MENU TOPO-->
+
+	
+
+	<script src="js/jquery-1.12.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/mapa.js"></script>
+ 	<script src="js/bootstrap.min.js"></script>
+ 	<script src="js/prototipo.js"></script>
+ 	<script src="js/tradutor.js"></script>
+ 	    
+ 	
+	</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <title> SBSeg16 - XVI Simp&oacute;sio Brasileiro em Seguran&ccedil;a da Informa&ccedil;&atilde;o e de Sistemas Computacionais
+    </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/prototipo.css">
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script>
+      $(function(){   
+        var nav = $('#menuHeader');   
+	$(window).scroll(function () { 
+          if ($(this).scrollTop() > 1) { 
+	    nav.addClass("navbar-fixed-top navbar-float menuFixo"); 
+	  } 
+          else { 
+            nav.removeClass("navbar-fixed-top navbar-float menuFixo"); 
+	  } 
+        });  
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="navbar-fixed-top container-blankBackground hidden-xs">
+      <div class="row">
+        <div class="col-lg-6 col-md-4 col-sm-12 col-xs-6" style="margin-left: 50px;">
+          <img src="images/logo1.png" class="img-responsive imgTopo" style="margin-right: 10px; ">
+          <img src="images/logo2.png" class="img-responsive imgTopo2" alt="logoSbseg">
+        </div>
+        <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12 col-xs-6">	
+          <h5>Realizado por</h5>
+            <a href="http://www.sbc.org.br" target="new"><img class="img-responsive" src="images/sbc.jpg" style="margin-right: 20px; max-height: 90px;"></a>
+            <img class="img-responsive" src="images/UFF.png" style="margin-right: 5px; max-height: 80px;">
+            <img class="img-responsive" src="images/logo-ic.png" style="max-height: 90px;">
+        </div>	
+        <div class="col-lg-1 col-md-4 col-sm-12 col-xs-12" style="margin-left: 40px; padding-top: 50px;">	
+          <!-- <a href="#"><img id="btTradutorEn" src="images/Brasil.png" class="img-responsive" style="max-width: 30px;" onclick= "traducaoPt()" /></a> -->
+	  <a href="anais.html#"><img id="btTradutorEn" src="images/Inglaterra.png" class="img-responsive" style="max-width: 30px;" onclick= "traducaoEn()" /></a> </br>
+          <a href="https://www.facebook.com/sbseg2016" target="new"><img id="btTradutorEn" src="images/facebook.jpg" class="img-responsive" style="max-width: 30px; padding-top: 5px;"></a>
+        </div>
+      </div>
+    </div> 
+    
+    <section id="headerCont" class="hidden-xs">	
+      <div class="bkPic2">
+ <!--       <div class="container-fluid bkColor">
+	 </div> -->
+      </div>
+    </section>
+
+    <header>					
+      <nav id="menuHeader" class="navbar navbar-default hidden-xs">
+        <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	  </div>		
+	  <div class="navbar-collapse collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav" style="text-align:center;">
+              <li><a href="index.html">IN&Iacute;CIO</a></li>
+              <li><a href="anais.html">ANAIS</a></li>
+              <li><a href="chamadas.html">CHAMADAS</a></li>
+              <li><a href="comite.html">COMIT&Ecirc;</a></li>
+	      <li><a href="palestrantes.html">PALESTRANTES</a></li>
+	      <li><a href="programacao.html">PROGRAMA&Ccedil;&Atilde;O</a></li>
+	      <li><a href="local.html">LOCAL</a></li>
+	      <li><a href="contato.html">CONTATO</a></li>
+	      <li class="liDif"><a class="inscreve" href="inscricoes.html">INSCREVA-SE</a></li>
+	    </ul>
+	  </div>
+	</div>	
+      </nav>	
+      <nav id="menuHeaderCel" class="navbar navbar-default navbar-fixed-top visible-xs">
+        <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+            <a href="index.html"><img src="images/SimplificadaNegativa.png" class="img-responsive visible-xs" style="max-width: 120px;"></a>
+	  </div>		
+	  <div class="navbar-collapse collapse" id="navbar-collapse-2">
+            <ul class="nav navbar-nav" style="text-align:center;">
+              <li><a href="index.html">IN&Iacute;CIO</a></li>
+              <li><a href="chamadas.html">CHAMADAS</a></li>
+              <li><a href="comite.html">COMIT&Ecirc;</a></li>
+	      <li><a href="palestrantes.html">PALESTRANTES</a></li>
+	      <li><a href="programacao.html">PROGRAMA&Ccedil;&Atilde;O</a></li>
+	      <li><a href="local.html">LOCAL</a></li>
+	      <li><a href="contato.html">CONTATO</a></li>
+	      <li class="liDif"><a class="inscreve" href="inscricoes.html">INSCREVA-SE</a></li>
+	    </ul>
+	  </div>
+	</div>	
+      </nav>	
+    </header>
+  </body>
+</html>
+
+<!--Apenas conteúdo -->	
+<section id="ConteudoBox">
+  <div class="container-fluid">
+    <div class="col-md-12"> 
+    <!-- <div class="col-md-7">  -->
+      <!-- <div id="box-toggle" style="max-width: 580px;" class="caixa1"> -->
+      <div id="box-toggle" class="caixa1">
+        <h1>Anais e Livro de Minicursos</h1>
+	<p align="justify">
+        </br>
+               <a href="files/anais.pdf" style=" color: rgb(222,123,50)" ><img class="img-reponsive center-block" src="images/capa-anais.jpg" style="max-width: 200px; padding-bottom: 20px; padding-top: 10px;"></a>
+               <a href="files/minicursos.pdf" style=" color: rgb(222,123,50)" ><img class="img-reponsive center-block" src="images/capa-minicurso.jpg" style="max-width: 200px;padding-bottom: 20px; padding-top: 10px;"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Apenas conteúdo -->	
+<section id="patrocinadores" class="">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12 col-xs-12 visible-xs vertical-center text-center" style="padding-bottom: 20px;">
+        <h5>Realizado por:</h5>
+        <a href="http://www.sbc.org.br" target="new"><img class="img-responsive" src="images/sbc.jpg" style="margin-right: 20px; max-height: 90px;"></a>
+        <img class="img-responsive" src="images/UFF.png" style="margin-right: 5px; max-height: 80px;">
+        <img class="img-responsive" src="images/logo-ic.png" style="max-height: 90px;">
+      </div>
+      <div class="col-lg-3 col-col-xs-12 vertical-center">
+          <h5 class="hidden-xs" style="margin-left: 20px;">Apoiado por: </h5>
+	      <img class="img-responsive center-block hidden-xs" src="images/coppe.jpg" style="margin-right:5px; max-width: 90px;padding-bottom: 20px; margin-left: 20px;">
+	      <img class="img-responsive center-block hidden-xs" src="images/ufrj.jpg" style="max-height: 95px;padding-bottom: 20px;">
+	      <img class="img-responsive center-block hidden-xs" src="images/logo-ceseg.png" style="max-height: 85px; padding-bottom: 20px; margin-left: 10px;">
+	      <div class="row visible-xs text-center">
+                <h5>Apoiado por: </h5>
+                <div class="col-lg-4 col-xs-6 text-center vertical-center">
+                  <img class="img-responsive" src="images/coppe.jpg" style="margin-left: 100px; max-width: 90px;padding-bottom: 20px; padding-top: 15px;">
+                </div>
+                <div class="col-lg-4 col-xs-6 vertical-center">
+	          <img class="img-responsive" src="images/ufrj.jpg" style="margin-left: -100px; max-height: 95px;padding-bottom: 20px;">
+                </div>
+                <div class="col-lg-4 col-xs-12 vertical-center">
+	          <img class="img-responsive" src="images/logo-ceseg.png" style="margin-left: 0px; max-width: 110px;padding-bottom: 20px;">
+                </div>
+              </div>
+       </div>
+       <div class="col-lg-8 col-xs-12 vertical-center">
+         <h5 class="hidden-xs">Patrocinado por:</h5>
+         <div class="row text-center">
+           <h5 class="visible-xs">Patrocinado por:</h5>
+           <div class="col-lg-4 text-center col-xs-12 vertical-center">
+             Diamante<br>
+             <img class="img-reponsive center-block" src="images/logo-nic-cgi.png" style="max-width:200px; padding-bottom: 20px;">
+           </div>
+           <div class="col-lg-2 col-xs-12 text-center vertical-center">
+             Ouro<br>
+             <img class="img-reponsive center-block" src="images/intel.png" style="max-width: 100px;padding-bottom: 20px; padding-top: 10px;">
+             <img class="img-reponsive center-block" src="images/logo_faperj_cor.jpg" style="max-width: 170px;padding-bottom: 20px; padding-top: 10px;">
+             <img class="img-reponsive center-block" src="images/logo-cnpq.jpg" style="max-width: 170px;padding-bottom: 20px; padding-top: 10px;">
+             <img class="img-reponsive center-block" src="images/logo-capes.png" style="max-width: 100px;padding-bottom: 20px; padding-top: 10px;">
+           </div>
+           <div class="col-lg-3 col-xs-12 text-center vertical-center">
+             Prata<br>
+             <img class="img-reponsive center-block" src="images/lgClavis.png" style="max-width: 160px; padding-top: 15px;padding-bottom: 20px;">
+             <img class="img-reponsive center-block" src="images/proppi.png" style="max-width: 160px; padding-top: 15px;padding-bottom: 20px;">
+           </div>
+           <div class="col-lg-3 col-xs-12 text-center vertical-center">
+             Bronze<br>
+             <img class="img-reponsive center-block" src="images/google.png" style="max-width: 150px; padding-top: 15px;padding-bottom: 20px;" >
+           </div>
+         </div>
+      </div>
+      <div class="col-lg-12 col-xs-12 vertical-center text-center">
+        <h6 style="padding-top: 40px;">Desenvolvido por:</h6>
+        <img class="img-responsive center-block" src="images/logoIn.png" style="max-width: 55px; padding-bottom: 20px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--<div class="col-lg-2 col-lg-offset-1 col-col-md-1 col-sm-1 col-xs-12 vertical-center">
+          <h5>Apoiado por:</h5>
+	  <img class="img-responsive" src="images/coppe.jpg" style="margin-right:10px; max-width: 90px;">
+	  <img class="img-responsive" src="images/ufrj.jpg" style="max-height: 95px;">
+      </div>
+      <div class="col-lg-7 col-lg-offset-1 col-md-1 col-sm-1 col-xs-12">
+        <h5>Patrocinado por:</h5>
+	<div class="row">
+          <div class="col-lg-2 col-md-1 col-sm-1 col-xs-12">
+	    Diamante <br>
+            <img class="img-reponsive" src="images/logo-nic-cgi.png" style="max-width:180px;">
+	  </div> 
+	 <div class="col-lg-2 col-md-1 col-sm-1 col-xs-12">
+	    Ouro <br> 
+            <img class="img-reponsive" src="images/intel.jpg" style="max-width: 90px;">
+          </div>
+	  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" style="max-width: 90px;">
+	    Prata <br>
+            <img class="img-reponsive" src="images/lgClavis.png" style="max-width: 90px;">
+          </div>
+	  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" style="max-width: 90px;">
+	    Bronze <br>
+            <img class="img-reponsive" src="images/google.png">
+          </div> 
+        </div>
+      </div>
+      <div class="col-lg-1 col-lg-offset-1 col-md-1 col-sm-1 col-xs-12 vertical-center text-center">
+        <h6>Desenvolvido por:</h6>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+	
+		<!--FIM MENU TOPO-->
+
+	
+
+	<script src="js/jquery-1.12.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/mapa.js"></script>
+ 	<script src="js/bootstrap.min.js"></script>
+ 	<script src="js/prototipo.js"></script>
+ 	<script src="js/tradutor.js"></script>
+ 	    
+ 	
+	</body>
+</html>
+		
+<script>
+			$(document).ready(function () {
+
+		    $('.oculta').before('<span><font color=#007a7d>mais »</font></span>');
+
+		    $('.oculta').css('display', 'none')
+
+		    $('span', '#box-toggle').click(function () {
+
+		        	$(this).next().slideToggle('slow')
+
+		            .siblings('.oculta:visible').slideToggle('fast');
+
+		        	$(this).toggleText('mais »', '« menos')
+
+		            .siblings('span').next('.oculta:visible').prev()
+
+		            .toggleText('mais »', '« menos')
+
+		    });
+
+})
+		</script>

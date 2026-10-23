@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="shortcut icon" type="image/png" href="../pt/images/favicon.png"/>
+    <title> SBSeg16 - XVI  Brazilian Symposium on Information and Computational Systems Security</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/prototipo.css">
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script>
+      $(function(){   
+        var nav = $('#menuHeader');   
+	$(window).scroll(function () { 
+          if ($(this).scrollTop() > 1) { 
+	    nav.addClass("navbar-fixed-top navbar-float menuFixo"); 
+	  } 
+          else { 
+            nav.removeClass("navbar-fixed-top navbar-float menuFixo"); 
+	  } 
+        });  
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="navbar-fixed-top container-blankBackground hidden-xs">
+      <div class="row">
+        <div class="col-lg-6 col-md-4 col-sm-12 col-xs-6" style="margin-left: 50px;">
+          <img src="images/logo1.png" class="img-responsive imgTopo" style="margin-right: 10px; ">
+          <img src="images/logo2-eng.png" class="img-responsive imgTopo2" alt="logoSbseg">
+        </div>
+        <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12 col-xs-6">	
+          <h5>Realizado por</h5>
+            <a href="http://www.sbc.org.br" target="new"><img class="img-responsive" src="images/sbc.jpg" style="margin-right: 20px; max-height: 90px;"></a>
+            <img class="img-responsive" src="images/UFF.png" style="margin-right: 5px; max-height: 80px;">
+            <img class="img-responsive" src="images/logo-ic.png" style="max-height: 90px;">
+        </div>	
+        <div class="col-lg-1 col-md-4 col-sm-12 col-xs-12" style="margin-left: 40px; padding-top: 50px;">	
+          <a href="programacao.html#"><img id="btTradutorEn" src="images/Brasil.png" class="img-responsive" style="max-width: 30px;" onclick= "traducaoPt()" /></a></br>
+	  <!-- <a href="#"><img id="btTradutorEn" src="images/Inglaterra.png" class="img-responsive" style="max-width: 30px;" onclick= "traducaoEn()" /></a> -->
+          <a href="https://www.facebook.com/sbseg2016" target="new"><img id="btTradutorEn" src="images/facebook.jpg" class="img-responsive" style="max-width: 30px; padding-top: 5px;"></a>
+        </div>
+      </div>
+    </div> 
+    
+    <section id="headerCont" class="hidden-xs">	
+      <div class="bkPic2">
+ <!--       <div class="container-fluid bkColor">
+	 </div> -->
+      </div>
+    </section>
+
+    <header>					
+      <nav id="menuHeader" class="navbar navbar-default hidden-xs">
+        <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	  </div>		
+	  <div class="navbar-collapse collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav" style="text-align:center;">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="evento.html">ANNALS</a></li>
+              <li><a href="chamadas.html">CALL FOR PAPERS</a></li>
+              <li><a href="comite.html">COMMITTEE</a></li>
+              <li><a href="palestrantes.html">SPEAKERS</a></li>
+              <li><a href="programacao.html">PROGRAM</a></li>
+              <li><a href="local.html">VENUE</a></li>
+              <li><a href="contato.html">CONTACT US</a></li>
+              <li class="liDif"><a class="inscreve" href="inscricoes.html">REGISTRATION</a></li>
+	    </ul>
+	  </div>
+	</div>	
+      </nav>	
+      <nav id="menuHeaderCel" class="navbar navbar-default navbar-fixed-top visible-xs">
+        <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+            <a href="index.html"><img src="images/SimplificadaNegativa.png" class="img-responsive visible-xs" style="max-width: 120px;"></a>
+	  </div>		
+	  <div class="navbar-collapse collapse" id="navbar-collapse-2">
+          <ul class="nav navbar-nav" style="text-align:center;">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="chamadas.html">CALL FOR PAPERS</a></li>
+              <li><a href="comite.html">COMMITTEE</a></li>
+              <li><a href="palestrantes.html">SPEAKERS</a></li>
+              <li><a href="programacao.html">PROGRAM</a></li>
+              <li><a href="local.html">VENUE</a></li>
+              <li><a href="contato.html">CONTACT US</a></li>
+              <li class="liDif"><a class="inscreve" href="inscricoes.html">REGISTRATION</a></li>
+            </ul>
+	  </div>
+	</div>	
+      </nav>	
+    </header>
+  </body>
+</html>
+<section id="ConteudoBox">
+  <div class="container-fluid">
+    <div class="col-md-12">
+      <div class="caixa1">
+        <h1 style="padding-left: 10px;">Program</h1>
+        
+          <p align="middle">
+            <img src="images/program.png" class="img-responsive center-block" style="max-width: 100%; center-block;">
+          </p>
+          </br>
+          <h4 style="font-family:DINPro-Bold">Activities</h4>
+          <h4 data-toggle="collapse" role="button" href="#palestras" aria-expanded="false" aria-controls="palestras">
+	    <i class="glyphicon glyphicon-collapse-down"></i> Keynotes
+	  </h4>
+	  <div class="collapse" id="palestras">
+            <h4 style="font-family:DINPro-Bold">Tuesday, 11/816</h4>
+            <span style="font-family:DINPro-Bold"> 
+             <font color="#DE7B32"> Keynote 1A (K1A): Energy Efficient Security for IoT Devices </font></br>
+             David Ott (Intel Labs)
+            </span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Auditorium </br> Time: 11:30 h - 12:05 h</font></span></br>
+            </br>
+            <p align="justify">
+            <span style="font-family:DINPro-Bold">Abstract:</span> Power constraints in IoT devices follow from their reliance on finite lifetime batteries which, when depleted, will terminate the device's operation.  Computational requirements for IoT devices have increased sharply over time as the amount of data collected, processed, and communicated has increased.  Meanwhile, capacity gains in battery technology have increased only incrementally over the years.  The result is the well-known battery gap.  As security solutions (e.g., data encryption) similarly increase IoT computational requirements over time in order to remain robust against increasingly capable attackers, an associated security processing gap exists.  In this talk, I will describe the Intel-Brazil research collaboration on Energy Efficient Security for IoT Devices, including research objectives, energy measurement methodologies, and some sample research results.  Included also will be a few reflections on industry-academia collaboration in researching security solutions for the future of technology.
+            </p>
+            </br>
+            <span style="font-family:DINPro-Bold"> 
+             <font color="#DE7B32"> Keynote 1B (K1B): Future IoT Security Challenges </font></br>
+             Rafael Misoczki (Intel Labs)
+            </span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Auditorium </br> Time: 12:05 h - 12:40 h</font></span></br>
+            </br>
+            <p align="justify">
+            <span style="font-family:DINPro-Bold">Abstract:</span> Internet-of-Things is a fascinating topic. It combines all sorts of devices, with different computational power, network bandwidth/speed and energy resources, in a collaborative fashion to achieve an ultimate goal. Due to this discrepancy in terms of resources (from very scarce up to very empowered), providing a concise and efficient security strategy across an IoT vertical is, and has always been, a challenge. If this situation is already challenging now, think about future IoT applications where the scale of the solutions will be exponentially larger and the interdependency between security and safety might turn a simple security vulnerability into a real life-threatening situation. In this short talk, I plan to discuss about a few future IoT applications, such as automotive, smart cities, healthcare and home automation, and their intrinsically related security research challenges.
+            </p>
+            </br>
+ 
+          <span style="font-family:DINPro-Bold"> 
+            <font color="#DE7B32"> Keynote 2 (K2) - Distributed Differential Privacy </font></br>
+            Christopher Clifton (Purdue University, USA)
+            </span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Auditorium </br> Time: 16:30 h - 17:40 h</font></span></br>
+            </br>
+            <p align="justify">
+            <span style="font-family:DINPro-Bold">Abstract:</span> Information Security has long been based on cryptography-style all-or-nothing definitions, such as ciphertext indistinguishability as a measure of confidentiality.  This is often inappropriate in a data privacy context; people want their data to be used, but in a controlled, limited manner.  This talk will describe differential privacy as a means for balancing data use and confidentiality.  We will then show how this solves problems that are swept under the rug in traditional confidentiality definitions.
+</br>
+This will be presented in the context of a distributed data scenario: attempting to share data analysis without sharing the underlying data.  Neither secure multiparty computation or differential privacy adequately solves this problem on its own, but combined, we can achieve good results while controlling disclosure of individual data.  Efficiently combining these techniques turns out to be non-trivial, we will show some of the challenges and how they can be solved.
+            </p>
+            </br>
+          <span style="font-family:DINPro-Bold"> 
+            <font color="#DE7B32"> National Keynote (NK, in portuguese) - Segurança em IoT: o futuro repetindo o passado</font></br>
+            Miriam von Zuben (CERT.br/NIC.br)
+            </span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Auditorium </br> Time: 17:40 h - 18:40 h</font></span></br>
+            </br>
+            <p align="justify">
+            <span style="font-family:DINPro-Bold">Resumo:</span> A Internet das Coisas (IoT) já é uma realidade e apresenta desafios que demandam novas abordagens de segurança. Nesse novo cenário, novas vulnerabilidades surgem e outras bem conhecidas podem ser exploradas. Nessa palestra, a partir do relato de algumas ameaças e ataques, serão analisados os riscos de conectar "coisas" à IoT sem considerar a segurança.
+            </p>
+            </br>
+            <h4 style="font-family:DINPro-Bold">Wednesday, 11/9/16</h4>
+            <span style="font-family:DINPro-Bold"> 
+             <font color="#DE7B32"> Keynote 3 (K3) - IoT Blockchain: Open, Secure, Private and Trusted Internet of Things Stack</font></br>
+             Martín Serrano (Insight Centre for Data Analytics, NUI Galway, IRL)            </span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Auditorium </br> Time: 11:30 h - 12:40 h</font></span></br>
+            </br>
+            <p align="justify">
+            <span style="font-family:DINPro-Bold">Abstract:</span>  Today people have a greater awareness about the benefits of Internet of Things sensed-enabled services, likewise more sensing services are easier to adopt and deploy. Cities are a clear example where IoT has influenced big changes for its infrastructure and its inhabitants, for example today there are cities technologically equipped and socially organized in a way that the generation and deployment of better citizen services and solutions are more rapidly adopted (e.g. Smart Cities). The Internet of Things is already considered the scientific evolution of the Internet that comes with a technology deployment wave of connected devices.
+</br>
+The Open Internet of Things stack, published at the IEEE IoT newsletter in 2015, has been designed in the context of having IoT systems and cloud infrastructures. It is the methodology that defines and establishes the relations between the operations and the role that "things" can play in the whole IoT system(s), likewise it represents the functionality or services that applications are able to provide and support. However the big concern is how Open and Trusted is the Internet of Things Infrastructure and how reliable are the services running in IoT infrastructure to offer data privacy and access security based on IoT services transactions.
+</br>
+In this talk we will go through todays' Open, Security, Privacy and Tryst relations and how the IoT technology and the global conditions, according with new data trends are the channels for user acceptance and large deployments in global user communities. The recently introduced, distributed blockchain, in the security market draws IoT directions to discuss and identify how IoT must be designed to be secure, transparent, highly resistant to outages, auditable, and efficient. The emergent technologies like blockchain will demonstrate where technology has evolved and the manufacturing cost being reduced or not.
+            </p>
+            </br>
+          <span style="font-family:DINPro-Bold"> 
+            <font color="#DE7B32"> Keynote 4 (K4) - The Cyberspace Battle for Information: Combating Internet Censorship </font></br>
+            Amir Houmansadr (University of Massachusetts Amherst, USA)
+            </span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Auditorium </br> Time: 16:30 h - 17:40 h</font></span></br>
+            </br>
+            <p align="justify">
+            <span style="font-family:DINPro-Bold">Abstract:</span> The Internet has become ubiquitous, bringing many benefits to people across the globe. Unfortunately, Internet users face threats to their security and privacy: repressive regimes deprive them of freedom of speech and open access to information, governments and corporations monitor their online behavior, advertisers collect and sell their private data, and cybercriminals hurt them financially through security breaches. My research aims to make Internet communications more secure and privacy-preserving. In this talk, I will focus on the design, implementation, and analysis of tools that help users bypass Internet censorship. I will discuss the major challenges in building robust censorship circumvention tools, introduce two novel classes of systems that we have developed to overcome these challenges, and conclude with several directions for future research. 
+            </p>
+            </br>
+          </div>
+	  <h4 data-toggle="collapse" role="button" href="#artCompletos" aria-expanded="false" aria-controls="artCompletos">
+	    <i class="glyphicon glyphicon-collapse-down"></i> Full papers
+	  </h4>
+	  <div class="collapse" id="artCompletos">
+            <h4 style="font-family:DINPro-Bold">Terça-feira, 8/11/16</h4>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão técnica 1 (ST1): Segurança em IoT </font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Auditório </br> Horário: 9:00 h - 11:00 h </br> Coordenadora: Michelle Wangham (UNIVALI) </font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold">Autenticação de Sensores usando Eventos Físicos</span>
+              </br>
+              <font color="#007A80">Wilson Melo Jr (Inmetro), Charles Prado (Inmetro), Luiz Fernando Rust da Costa Carmo (Inmetro).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Um controle de associações resistente à ataques Sybil para a disseminação segura de conteúdo da IoT</span>
+              </br>
+              <font color="#007A80"> Danilo Evangelista (UFPR), Eduardo da Silva (Instituto Federal Catarinense), Michele Nogueira (UFPR), Aldri dos Santos (UFPR).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Privacy-Preserving Techniques in Smart Metering: An Overview</span>
+              </br>
+              <font color="#007A80">Pedro Yóssis Silva Barbosa (UFCG), José Lucas Silva Freitas (UFCG), Andrey Brito (UFCG), Leandro José Ventura Silva (UFCG).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">AdC: um Mecanismo de Controle de Acesso para o Ciclo de Vida das Coisas Inteligentes</span>
+              </br>
+               <font color="#007A80">Antonio Maia (UFMG), Artur Luis (UFMG), Italo Cunha (UFMG), Michele Nogueira (UFPR), Ivan de Oliveira Nunes (UFMG), Leonardo Cotta (UFMG), Diego Aranha (Unicamp), Leonardo Oliveira (UFMG).</font></br>
+            </p>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão técnica 2 (ST2): Segurança Forense</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 302 </br> Horário: 9:00 h - 11:00 h </br> Coordenador: Ricardo Dahab (Unicamp)</font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold">Metodologia de Detecção de Malware por Heurísticas Comportamentais</span>
+              </br>
+              <font color="#007A80">Neriberto Prado (BluePex Security Solutions), Ulisses Penteado (BluePex Security Solutions), André Grégio (UFPR).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">A comparison of encryption tools for disk data storage from digital forensics point of view</span>
+              </br>
+              <font color="#007A80"> Vitor Hugo Galhardo Moia (Unicamp), Marco Aurelio Amaral Henriques (Unicamp).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Classificação de Fragmentos de Arquivos com Técnica de Aprendizagem de Máquina baseada em Árvores de Decisão</span>
+              </br>
+              <font color="#007A80"> Juliano Oya (UnB), Bruno Hoelz (UnB).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">TARP Fingerprinting: Um Mecanismo de Browser Fingerprinting Baseado em HTML5 Resistente a Contramedidas</span>
+              </br>
+              <font color="#007A80">Pablo Ximenes (ETICE), Márcio Correia (UFC), Patrícia Mello (Instituto Atlântico), Miguel Franklin de Castro (UFC), Rossana Andrade (UFC), Fernando Carvalho (UFC).</font></br>
+            </p>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão técnica 3 (ST3): Segurança de Aplicações </font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Auditório </br> Horário: 14:00 h - 16:00 h </br> Coordenador: Luciano Paschoal Gaspary (UFRGS)</font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold">IBEMCS: IDS Baseado em Eventos Multi-Contexto para SCADA</span>
+              </br>
+              <font color="#007A80">  Anderson D'Aquino (UFRJ), Luiz Fernando Rust da Costa Carmo (Inmetro), Luci Pirmez (UFRJ), Claudio Farias (UFRJ).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Ataques Furtivos em Sistemas de Controle Físicos Cibernéticos</span>
+              </br>
+              <font color="#007A80">Alan de Sá (Marinha do Brasil / UFRJ), Luiz Fernando Rust da Costa Carmo (Inmetro), Raphael Machado (Inmetro)</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">A framework for searching encrypted databases</span>
+              </br>
+              <font color="#007A80">Pedro Alves (Unicamp), Diego Aranha (Unicamp).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Detecção de Ataque DDoS Flash Crowd Realizando a Análise Comportamental nas Solicitações Web</span>
+              </br>
+              <font color="#007A80">Samuel Jardim (UFSM), Raul Ceretta Nunes (UFSM), Marcelo Colomé (UFSM).</font></br>
+            </p>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão técnica 4 (ST4): Criptografia </font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 302 </br> Horário: 14:00 h - 16:00 h </br> Coordenador: Routo Terada (USP)</font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold">Speeding up the Elliptic Curve Cryptography on the P-384 Curve</span>
+              </br>
+              <font color="#007A80">Armando Faz Hernández (Unicamp), Julio Hernandez (Unicamp).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Aplicação do Algoritmo de Colônia de Formigas para Redução do Tamanho de Chaves Públicas na Criptografia Completamente Homomórfica</span>
+              </br>
+              <font color="#007A80">Joffre Filho (UFRJ), Jonice Oliveira (UFRJ), Claudio de Farias (UFRJ), Gabriel P. Silva (UFRJ).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">A Non-Probabilistic Time-Storage Trade-off for Unsalted Hashes</span>
+              </br>
+              <font color="#007A80">Frederico Schardong (UFRGS), Daniel Formolo (Unisinos).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Eficient Software Implementations of Fantomas</span>
+              </br>
+              <font color="#007A80">Rafael J. Cruz (Unicamp), Diego Aranha (Unicamp).</font></br>
+            </p>
+            </br>
+            <h4 style="font-family:DINPro-Bold">Quarta-feira, 9/11/16</h4>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão técnica 5 (ST5): Segurança em Nuvem</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Auditório </br> Horário: 9:00 h - 11:00 h </br> Coordenador: Marco Aurelio Amaral Henriques (Unicamp) </font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold">Uma versão não interativa do k-NN sobre dados cifrados</span>
+              </br>
+              <font color="#007A80">Hilder V. L. Pereira (Unicamp), Diego Aranha (Unicamp).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Agregação de Dados na Nuvem com Garantias de Segurança e Privacidade</span>
+              </br>
+              <font color="#007A80">Leandro José Ventura Silva (UFCG), Rodolfo Silva (UFCG), Andrey Brito (UFCG), Pedro Yóssis Silva Barbosa (UFCG).</font></br>
+           </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Armazenamento Seguro de Credenciais e Atributos de Usuários em Federação de Clouds</span>
+              </br>
+              <font color="#007A80"> Luciano Barreto (UFSC), Leomar Scheunemann Jr (UFSC), Joni da Silva Fraga (UFSC), Frank Siqueira (UFSC).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Determinando o Risco de Fingerprinting em Páginas Web</span>
+              </br>
+              <font color="#007A80"> Adriana Rodrigues (UFAM), Adria Menezes (UFAM), Eduardo Feitosa (UFAM).</font></br>
+            </p>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão técnica 6 (ST6): Segurança de Software</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 302 </br> Horário: 9:00 h - 11:00 h </br> Coordenador: Mateus Ferreira (CEFET-MG)</font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold">VoiDbg: Projeto e Implementação de um Debugger Transparente para Inspeção de Aplicações Protegidas</span>
+              </br>
+              <font color="#007A80">Marcus Botacin (Unicamp), Paulo de Geus (Unicamp), André Grégio (UFPR).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Identificação de Códigos Maliciosos Metamórficos pela Medição do Nível de Similaridade de Grafos de Dependência</span>
+              </br>
+              <font color="#007A80"> Gilbert Martins (UFAM), Vitor Danrley (UFAM), Paulo dos Santos (UFAM), Eduardo Souto (UFAM), Rosiane de Freitas (UFAM).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Detecção de Vazamentos de Dados em Aplicativos Javascript em Dispositivos Móveis</span>
+              </br>
+              <font color="#007A80"> Thiago Rocha (UFAM), Brandell Cássio Corrêa Ferreira (UFAM), Diego Azulay (UFAM), Alex F Monteiro (UFAM), Eduardo Souto (UFAM), Breno Silva (Samsung), Pedro Minatel (Samsung), Felipe Boeira (Samsung).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Detecção de ataques por ROP em tempo real assistida por hardware</span>
+              </br>
+              <font color="#007A80">Marcus Botacin (Unicamp), Paulo de Geus (Unicamp), André Grégio (UFPR).</font></br>
+            </p>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão técnica 7 (ST7): Segurança de Sistemas Distribuídos</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Auditório </br> Horário: 14:00 h - 16:00 h </br> Coordenador: André Grégio (UFPR)</font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold">An Architecture for Self-adaptive Distributed Firewall</span>
+              </br>
+              <font color="#007A80"> Edmilson Costa Junior, Silas de Medeiros, Carlos da Silva, Marcos Pinheiro (UFRN).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Sobre a Influencia dos Nós Egoístas no Descarregamento de Tráfego com Redes Oportunistas</span>
+              </br>
+              <font color="#007A80">Claiton Soares (IFTM/UFF), Igor Moraes (UFF).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Tramonto: Uma estratégia de recomendações para Testes de Penetração</span>
+              </br>
+              <font color="#007A80"> Daniel Bertoglio (UNISINOS), Avelino Zorzo (PUC-RS).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Detecção de DDoS Através da Análise da Quantificação da Recorrência Baseada na Extração de Características Dinâmicas e Clusterização Adaptativa</span>
+              </br>
+              <font color="#007A80">Marcelo Antonio Righi (UFSM), Raul Ceretta Nunes (UFSM).</font></br>
+            </p>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão técnica 8, Partes A e B (ST8A e B): Segurança de Software 2/Segurança com Suporte de Hardware</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 302 </br> Horário: 14:00 h - 16:00 h </br> Coordenadora: Karina Mochetti (UFF)</font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold">Go With the FLOW: Fine-Grained Control-Flow Integrity for the Kernel</span>
+              </br>
+              <font color="#007A80">João Moreira (Unicamp), Sandro Rigo (Unicamp).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Agrupamento de malware por comportamento de execução usando lógica fuzzy</span>
+              </br>
+              <font color="#007A80">Lindeberg Leite (UnB), Daniel Guerreiro e Silva (UnB), André Grégio (UFPR).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Análise Transparente de Malware com Suporte por Hardware</span>
+              </br>
+              <font color="#007A80">Marcus Botacin (Unicamp), Paulo de Geus (Unicamp), André Grégio (UFPR).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Análise e implementação de uma arquitetura iterativa com sub-pipelining de 3 estágios e datapath de 32 bits para um co-processador AES-128</span>
+              </br>
+              <font color="#007A80">Júlio Filho (Unicamp).</font></br>
+            </p>
+            </br>
+          </div>
+
+	  <h4 data-toggle="collapse" role="button" href="#minicursos" aria-expanded="false" aria-controls="minicursos">
+	    <i class="glyphicon glyphicon-collapse-down"></i> Tutorials
+	  </h4>
+	  <div class="collapse" id="minicursos">
+            <h4 style="font-family:DINPro-Bold">Segunda-feira, 7/11/16</h4>
+            <span style="font-family:DINPro-Bold"> 
+             <font color="#DE7B32"> Minicurso 1 (MC1) - Introdução à Privacidade: Uma Abordagem Computacional </font></br>
+             Fábio Borges (LNCC)
+            </span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Auditório </br> Horário: 9:00 h - 12:30 h</font></span></br>
+            </br>
+            <p align="justify">
+            <span style="font-family:DINPro-Bold">Resumo:</span> Tecnologias da informação e comunicação estão continuamente transformando como as pessoas interagem na sociedade. Muitos recursos têm sido disponibilizados para simplificar a vida dos cidadãos. No entanto, estudos para garantir a privacidade têm se tornado cada vez mais necessários. Esta proposta visa apresentar um minicurso no SBSeg 2016 onde se introduz técnicas com suas primitivas criptográficas usadas para garantir a privacidade em diversos cenários.
+            </p>
+            </br>
+            <span style="font-family:DINPro-Bold"> 
+             <font color="#DE7B32"> Minicurso 2 (MC2) - Crimes Cibernéticos e Computação Forense </font></br>
+             Wilson Leite Filho (IGP/SC)
+            </span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Auditório </br> Horário: 14:00 h - 17:30 h</font></span></br>
+            </br>
+            <p align="justify">
+            <span style="font-family:DINPro-Bold">Resumo:</span> O objetivo do minicurso é apresentar aos alunos a área de Computação Forense, englobando os principais crimes cibernéticos e as técnicas e ferramentas usadas na área. O minicurso é embasado na literatura e nos conhecimentos empíricos das perícias criminais oficiais de informática realizadas no Estado de Santa Catarina. Será dividido em parte teórica e prática. Na parte teórica serão apresentados os crimes cibernéticos de repercussão, os principais tópicos da computação forense, os procedimentos de preservação da prova digital e técnicas de busca e recuperação de evidências digitais, inclusive em dispositivos móveis com sistemas operacionais Android e iOS. A parte prática irá compreender a utilização de ferramentas livres para preservação, recuperação e análise de artefatos digitais. O público alvo são graduandos e graduados da área de informática e profissionais do setor com interesse na área.
+            </p>
+            </br>
+             <h4 style="font-family:DINPro-Bold">Quinta-feira, 10/11/16</h4>
+            <span style="font-family:DINPro-Bold"> 
+             <font color="#DE7B32"> Minicurso 3 (MC3) - Canais laterais em criptografia simétrica e de curvas elípticas: ataques e contramedidas </font></br>
+              Lucas Ladeira (Unicamp), Erick Nascimento (Unicamp), João Paulo Fernandes Ventura (Unicamp), Ricardo Dahab (Unicamp), Diego Aranha (Unicamp), Julio Hernandez (Unicamp)
+            </span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 302 </br> Horário: 9:00 h - 12:30 h</font></span></br>
+            </br>
+            <p align="justify">
+            <span style="font-family:DINPro-Bold">Resumo:</span> Existe uma infinidade de ataques visando à quebra de sistemas criptográficos, buscando a obtenção de informação sigilosa, acesso não-autorizado,entre outros. Tais ataques ocorrem tanto sobre o hardware como o software de um sistema. Um tipo de ataque em hardware é o de canais laterais, que faz uso do vazamento de informações durante a execução de alguma primitiva criptográfica. Ataques dessa categoria utilizam variações do tempo de execução, do consumo de potência, do campo magnético, entre outros. As contramedidas podem ser baseadas em modificações no software ou no hardware. Neste minicurso, nossa atenção se restringe ao software, voltada para métodos criptográficos simétricos, e os assimétricos baseados em curvas elípticas.
+            </p>
+            </br>
+            <span style="font-family:DINPro-Bold"> 
+             <font color="#DE7B32"> Minicurso 4 (MC4) - Desafios de Segurança e Confiabilidade na Comunicação para <i>Smart Grids</i></font></br>
+              Yona Lopes (UFF), Tiago Bornia (UFF), Vitor Farias (UFF), Natalia Castro Fernandes (UFF), Debora Muchaluat-Saade (UFF)
+            </span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 302 </br> Horário: 14:00 h - 17:30 h</font></span></br>
+            </br>
+            <p align="justify">
+            <span style="font-family:DINPro-Bold">Resumo:</span> A rede elétrica inteligente traz propostas que mudam de forma profunda a maneira como a energia é provida desde a geração até os consumidores finais. No novo modelo, a quantidade de dispositivos controlados e monitorados aumenta demasiadamente compreendendo inclusive o consumidor final permitindo um sistema mais automatizado, inteligente e eficaz. Para tanto, será necessária uma rede de comunicação altamente segura, confiável e com baixos retardos, de forma que o monitoramento e o controle da rede elétrica possam ser realizados. No entanto, o mesmo sistema interconectado que torna a rede elétrica mais inteligente também traz novos desafios para este cenário, como segurança e confiabilidade. Assim, o foco central deste capítulo é a discussão sobre esses desafios. Serão abordados os principais conceitos relacionados à smart grid, com foco nas vulnerabilidades e ataques que esse tipo de rede pode sofrer. Temas como confiabilidade também tem destaque especial neste minicurso, assim como soluções e recomendações relativas aos principais desafios de segurança.
+            </p>
+            </br>
+          </div>
+
+          <h4 data-toggle="collapse" role="button" href="#ctdseg" aria-expanded="false" aria-controls="ctdseg">
+            <i class="glyphicon glyphicon-collapse-down"></i> CTDSeg - IV Concurso de Teses e Dissertações em Segurança
+          </h4>
+          <div class="collapse" id="ctdseg">
+            <h4 style="font-family:DINPro-Bold">Segunda-feira, 7/11/16</h4>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão técnica 1 (ST1): Doutorado #1</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 306 </br> Horário: 9:30 h - 10:30 h</font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold">CCA1-secure somewhat homomorphic encryption</span>
+              </br>
+              <font color="#007A80">Eduardo Morais (Unicamp), Ricardo Dahab (Unicamp), Diego Aranha (Unicamp).</font></br>
+            </p>
+            <p>
+            <span style="font-family:DINPro-Bold">Lyra2: Password Hashing Scheme with improved security against time-memory trade-offs</span>
+            </br>
+            <font color="#007A80"> Ewerton Andrade (USP), Marcos Simplicio Jr (USP).</font></br>
+            </p>
+            </br> 
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão técnica 2 (ST2): Doutorado #2</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 306 </br> Horário: 11:00 h - 12:00 h</font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold">Controle de acesso baseado em criptografia para a distribuição segura de conteúdo multimídia em Redes Centradas em Informação</span>
+              </br>
+              <font color="#007A80"> Elisa Mannes (UFPR), Carlos Maziero (UFPR).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Securing Networked Embedded Systems through Distributed Systems Analysis</span>
+              </br>
+              <font color="#007A80"> Fernando Augusto Teixeira (UFSJ), Jose-Marcos Nogueira (UFMG), Leonardo Oliveira (UFMG).</font></br>
+            </p>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão técnica 3 (ST3): Mestrado #1</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 306 </br> Horário: 14:00 h - 15:30 h</font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold">Computação sobre dados cifrados em GPGPUs</span>
+              </br>
+              <font color="#007A80">Pedro Alves (Unicamp), Diego Aranha (Unicamp).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Efficient Methods for Lattice-Based Cryptography</span>
+              </br>
+              <font color="#007A80">João Marcos Barguil (USP), Paulo Barreto (USP).</font></br>
+            </p>
+              <span style="font-family:DINPro-Bold">Amostragem Gaussiana aplicada à Criptografia Baseada em Reticulados</span>
+              </br>
+              <font color="#007A80"> Jheyne N. Ortiz (Unicamp), Ricardo Dahab (Unicamp), Diego Aranha (Unicamp).</font></br>
+            </p>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão técnica 4 (ST4): Mestrado #2</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 306 </br> Horário: 16:00 h - 17:30 h</font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold">An Adaptive Selective Defense for Application Layer DDoS Attacks</span>
+              </br>
+              <font color="#007A80">Yuri Dantas (Technische Universitat Darmstadt), Vivek Nigam (UFPB), Iguatemi E. Fonseca (UFPB).</font></br>
+            </p>
+
+            <p>
+              <span style="font-family:DINPro-Bold">RIP-ROP: uma proteção contra ataques de execução de código arbitrário baseados em Return-Oriented Programming</span>
+              </br>
+              <font color="#007A80">Mateus Tymburibá (UFMG), Eduardo Luzeiro Feitosa (UFAM).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Um IdM e Método de Autenticação baseado em chaves para prover autenticação única em Internet das Coisas</span>
+            </br>
+            <font color="#007A80">Adriano Witkovski (PUCPR), Altair Santin (PUCPR).</font></br>
+            </p>
+            </br>
+            <del><h4 style="font-family:DINPro-Bold">Quarta-feira, 9/11/16</h4></del>
+            <h4 style="font-family:DINPro-Bold">Segunda-feira, 7/11/16</h4>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Cerimônia de Premiação</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Durante o coquetel de boas-vindas ao SBSeg16 </br> Horário: 19:00 h - 21:30 h</font></span></br>
+            </br>
+          </div>
+
+	  <h4 data-toggle="collapse" role="button" href="#wticg" aria-expanded="false" aria-controls="wticg">
+            <i class="glyphicon glyphicon-collapse-down"></i> WTICG - X Workshop de Trabalhos de Iniciação Científica e de Graduação
+	  </h4>
+          <div class="collapse" id="wticg">
+            <h4 style="font-family:DINPro-Bold">Segunda-feira, 7/11/16</h4>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão técnica 1 (ST1): Criptografia e criptoanálise: algoritmos, protocolos, técnicas e aplicações</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 302 </br> Horário: 9:00 h - 10:30 h </br> Coordenador: João Gondim (UnB) </font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold">Implementação compacta em software do algoritmo Ketje </span>
+              </br>
+              <font color="#007A80">Carlos Gregoreki (Unicamp), Diego Aranha (Unicamp).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Implementação eficiente do algoritmo Keyak para ARMv8</span>
+              </br>
+              <font color="#007A80">André Moraes (Unicamp), Diego Aranha (Unicamp).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Mineração individual de bitcoins e litecoins no mundo </span>
+              </br>
+              <font color="#007A80">Guilherme Silva (UniCEUB), Carlo Rodrigues (UniCEUB).</font></br>
+            </p>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão técnica 2 (ST2): Segurança em redes</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 302 </br> Horário: 11:00 h - 12:30 h </br> Coordenador a definir</font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold">Caracterização Remota de Comportamento de Roteadores IPv6</span>
+              </br>
+              <font color="#007A80"> Rafael Luis Caldas Almeida (UFMG), Elverton Fazzion (UFMG), Osvaldo Luis Fonseca (UFMG), Dorgival Guedes (UFMG), Wagner Meira Jr. (UFMG), Ítalo Cunha (UFMG).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Elaboração e Avaliação de um Modelo de Comunicação Direta </span>
+              </br>
+              <font color="#007A80"> Juliana Souza (UEM), Luciana Martimiano (UEM).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">LETTY: Uma implementação de Website Fingerprinting </span>
+              </br>
+              <font color="#007A80"> Jordan Queiroz (UFAM), Eduardo Feitosa (UFAM).</font></br>
+            </p>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão técnica 3 (ST3): Forense computacional e vazamento de informação </font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 302 </br> Horário: 14:00 h - 15:30 h </br> Coordenador: Altair Santin (PUCPR)</font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold">Análise Formal de Requisitos de Consistência para Atribuições de Valoração</span>
+              </br>
+              <font color="#007A80"> Frederico Santiago (UFMG), Mário Alvim (UFMG).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold"> Forense computacional em discos de estado sólido: desafios e perspectivas</span>
+              </br>
+              <font color="#007A80"> João Ribeiro (UnB), João Gondim (UnB).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Um Estudo Acerca das Fraudes na Comunicação por Campo de Proximidade </span>
+              </br>
+              <font color="#007A80"> Emilio Reginaldo Tubino (UNIPAMPA), Juliano Kazienko (UNIPAMPA).</font></br>
+            </p>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão de Pôsteres (SP)</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Pilotis do IC </br> Horário: 15:30 h - 16:00 h (mas estarão expostos desde o coffee-break da manhã entre 10:30 e 11:00 h)</br> Coordenador a definir</font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold">Protótipo para exfiltração óptica de dados em máquinas fisicamente isoladas </span>
+              </br>
+              <font color="#007A80">Arthur Lopes (Unicamp), Diego Aranha (Unicamp).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Uma Revisão Sistemática sobre Privacidade do Usuário em Aplicações MCS</span>
+              </br>
+              <font color="#007A80"> Guibson Souza (UFAM), Ingrid Santos (UFAM), Karla Susiane dos Santos Pereira (UFAM), Eduardo Feitosa (UFAM).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Simbo - Ambiente de Simulação dedicado ao Estudo de Botnets</span>
+              </br>
+              <font color="#007A80"> Felipe Balabanian (Unicamp), Marco Aurelio Amaral Henriques (Unicamp), Moisés Danziger (Unicamp).</font></br>
+            </p>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão técnica 4 (ST4): Segurança em Internet das Coisas</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 302 </br> Horário: 16:00 h - 17:00 h </br> Coordenadora: Michelle Wangham (UNIVALI)</font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold">Extensão do conjunto de instruções para implementação segura de X25519 </span>
+              </br>
+              <font color="#007A80"> Antonio Guimarães (Unicamp), Edson Borin (Unicamp), Diego Aranha (Unicamp).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Implementação eficiente e segura de cifras de fluxo em software </span>
+              </br>
+              <font color="#007A80">Daniel Cunha (Unicamp), Rafael J. Cruz (Unicamp), Diego Aranha (Unicamp).</font></br>
+            </p>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Cerimônia de Premiação</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Durante o coquetel de boas-vindas ao SBSeg16 </br> Horário: 19:00 h - 21:30 h</font></span></br>
+            </br>
+          </div> 
+          <h4 data-toggle="collapse" role="button" href="#wgid" aria-expanded="false" aria-controls="wgid"> 
+            <i class="glyphicon glyphicon-collapse-down"></i> WGID - VI Workshop de Gestão de Identidades Digitais
+	  </h4>
+          <div class="collapse" id="wgid">
+            <h4 style="font-family:DINPro-Bold">Quinta-feira, 10/11/16</h4>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão técnica 1 (ST1): Artigos Completos</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 306 </br> Horário: 9:00 h - 10:30 h </br> Coordenadora: Natalia Fernandes (UFF)</font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold">Estudo Comparativo das Soluções de eID Móvel para Governo Eletrônico </span>
+              </br>
+              <font color="#007A80">Glaidson M. Verzeletti (IFSC, UNIVALI), Victor Hugo Barbosa de Oliveira (IFSC), Emerson Ribeiro de Mello (IFSC), Michelle Silva Wangham (UNIVALI)</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Estrutura e Funcionamento de um Sistema de Identificação Biométrico Peer-to-peer baseado no Protocolo Chord</span>
+              </br>
+              <font color="#007A80"> Clayton Guimarães Cova dos Santos (UnB), Rafael T. de Sousa Junior (UnB)</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Serviço de Gerência de Segurança para Organizações Virtuais em Federações SAML</span>
+              </br>
+              <font color="#007A80">Maykon Chagas de Souza (UNIVALI), Jucélio Jair Silva (UNIVALI), Michelle Silva Wangham (UNIVALI)</font></br>
+            </p>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Painel: Desafios da gestão de identidades na Internet das Coisas</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 306 </br> Horário: 11:00 h - 12:30 h </br> Panelistas: Fábio Borges de Oliveira (LNCC), Leonardo B. Oliveira (UFMG), Raphael Machado (Inmetro) </br> Mediadora: Noemi Rodriguez (PUC-Rio)</font></span></br>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold">Palestra: Os Resultados do Piloto Certificado digital ICPEdu P1</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 306 </br> Horário: 14:00 h - 14:30 h </br> Palestrante: Marcio Silva (Analista da DAGSer/RNP)</font></span></br>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold">Palestra: Estatísticas da CAFe e Confederação</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 306 </br> Horário: 14:30 h - 15:00 h </br> Palestrante: Francisco Leonardo Mota (Analista da DAGSer/RNP)</font></span></br>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold">Palestra: FreeRadius V3 no eduroam</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 306 </br> Horário: 15:00 h - 15:30 h </br> Palestrante: Luciano Fernandes da Rocha (Analista da DAGSer/RNP)</font></span></br>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold">Palestra: Ambiente de Experimentação GIdLab </font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 306 </br> Horário: 16:00 h - 16:15 h </br> Palestrante: Maykon Chagas de Souza (UNIVALI)</font></span></br>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão Técnica 2 (ST2): Resumos Estendidos</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 306 </br> Horário: 16:15 h - 17:15 h </br> Coordenadora: Michelle Wangham (UNIVALI)</font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold"> CoFee: Uma Federação de Identidade para IoT </span>
+              </br>
+              <font color="#007A80"> Pedro Pinto (UFMG), Leonardo Barbosa Oliveira (UFMG), Marco Aurelio Amaral Henriques (Unicamp), Antonio Maia (UFMG), Maria Luiza B.A. Santos (UFMG), Artur Luis (UFMG) </font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold"> Protocolos de Autenticação de Dispositivos Móveis em Grupos para a Internet de Objetos (IoT) </span>
+              </br>
+              <font color="#007A80"> Ana Paula Golembiouski Lopes (UnB), Lucas de Oliveira Hilgert (UnB), Luis Fernando Arias Roman (UnB), Paulo Lira Gondim (UnB) </font></br>
+           </p>
+           <p>
+              <span style="font-family:DINPro-Bold"> Estudo preliminar sobre o uso dos blockchains de Bitcoin, Litecoin, Ethereum e Namecoin em gestão de identidades </span> </br>
+              <font color="#007A80"> Antônio Lucena (Unicamp), Marco Aurelio Amaral Henriques (Unicamp) </font></br>
+           </p></br>
+          </div> 
+            <h4 data-toggle="collapse" role="button" href="#wfc" aria-expanded="false" aria-controls="wfc">
+              <i class="glyphicon glyphicon-collapse-down"></i> WFC - V Workshop de Forense Computacional
+	    </h4>
+	    <div class="collapse" id="wfc">
+            <h4 style="font-family:DINPro-Bold">Quinta-feira, 10/11/16</h4>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão técnica 1 (ST1)</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Auditório </br> Horário: 9:00 h - 10:30 h </br> Coordenador: Rafael Obelheiro (UDESC)</font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold">HoneySELK: Um Ambiente para Pesquisa e Visualização de Ataques Cibernéticos em Tempo Real</span>
+              </br>
+              <font color="#007A80"> Gildásio Oliveira Júnior (UnB), Rafael de Sousa Junior (UnB), Robson Albuquerque (UnB), Edna Canedo (UnB), André Grégio (UFPR).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Sampling and Similarity Hashes in Digital Forensics: An Efficient Approach to Find Needles in a Haystack</span>
+              </br>
+              <font color="#007A80">Vitor Hugo Galhardo Moia (Unicamp), Marco Aurelio Amaral Henriques (Unicamp).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Análise de Malware .NET para Identificação de Comportamentos Similares</span>
+              </br>
+              <font color="#007A80">Cicero Luiz Jr. (Unicamp), André Grégio (UFPR), Paulo Lício de Geus (Unicamp).</font></br>
+            </p>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sessão técnica 2 (ST2)</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Auditório </br> Horário: 11:00 h - 12:30 h </br>Coordenador: Rafael Obelheiro (UDESC)</font></span></br>
+            </br>
+            <p>
+              <span style="font-family:DINPro-Bold">Extração e Análise de Memória Volátil em Ambientes Android: Uma Abordagem Voltada à Reconstrução de Trajetórias com Base no Protocolo NMEA 0183</span>
+              </br>
+              <font color="#007A80">João Paulo Sousa (PCDF), João Gondim (UnB).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Modelagem de Ameaças Antiforenses Aplicada ao Processo Forense Digital </span>
+              </br>
+              <font color="#007A80"> Marcelo Maues (UnB), Bruno Hoelz (UnB).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">Técnicas baseadas em Grafos para Priorização de Investigações Policiais de Fraudes Bancárias Eletrônicas </span>
+              </br>
+              <font color="#007A80"> Álex Patrocínio (UnB), Zenilton Kleber Patrocínio Jr (PUC Minas).</font></br>
+            </p>
+            <p>
+              <span style="font-family:DINPro-Bold">
+                 Artigo curto</br>
+                 Análises de Linhas Temporais Contextuais em Investigações Digitais
+              </span>
+              </br>
+              <font color="#007A80">Regis Oliveira (UnB), Bruno Hoelz (UnB).</font></br>
+            </p>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Oficina e Desafio de Computação Forense</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Auditório </br> Horário: 14:00 h - 18:30 h </br> Coordenador: Marco Wanderley (Apura)</font></span></br>
+            </br>
+            <p>
+              A crescente complexidade das ações criminosas virtuais e da sofisticação dos instrumentos maliciosos utilizados para esses fins tem requisitado do Perito/Investigador Forense seu contínuo aprimoramento e em especial a habilidade de lidar com inúmeras ferramentas.
+            </p>  
+            <p>
+              O Desafio Forense a ser realizado no WFC/SBSeg16 visa proporcionar um ambiente seguro para o teste e uso de ferramentas na solução de um jogo de pistas e respostas. O intuito do Desafio é instigar os participantes a utilizar ferramentas forenses de forma criativa e confrontá-los com situações que demandam soluções não ortodoxas.
+            </p>
+            <p>
+              Como preparação para o Desafio será ministrada uma Oficina, na qual serão demonstradas técnicas e ferramentas forenses que poderão usadas na resolução dos problemas que integram o Desafio.
+            </p>
+            <span style="font-family:DINPro-Bold"> Pré-requisitos</span></br>
+            Cada participante deverá ter um notebook com:
+           <ul>
+             <li>VirtualBox (versão 4 ou 5) instalado;</li>
+             <li>2 GB de RAM;</li>
+             <li>8 GB de espaço livre em disco.</li>
+             <li>Uma máquina virtual com um sistema Linux Ubuntu 14.04 64 bits, contendo os arquivos referentes a cada etapa do desafio e as ferramentas necessárias, será fornecida pela organização.</li>  
+           </ul>
+            <span style="font-family:DINPro-Bold"> Regras</span></br>
+            <p>
+              O desafio é composto por doze etapas, cada etapa revela uma senha necessária para abrir o arquivo da etapa seguinte.
+            </p>
+            <p>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> IMPORTANTE</font></span>: "NÃO SERÁ TOLERADO ataque de força bruta contra os arquivos das etapas do desafio. O participante que for identificado tentando realizar esse tipo de ação será imediatamente expulso do desafio." 
+            </p>
+            <p>
+             Para ser declarado ganhador o participante precisa terminar todas as etapas e demonstrar o passo a passo de todas as etapas, primeiro para os organizadores, e depois para todos os participantes do desafio.</br>
+            </p>
+            <p>
+             Ao participar do desafio você aceita automaticamente estas regras.
+            </p>
+          </div> 
+	  <h4 data-toggle="collapse" role="button" href="#wrac" aria-expanded="false" aria-controls="wrac">
+            <i class="glyphicon glyphicon-collapse-down"></i> WRAC+ - II Workshop de Regulação, Avaliação da Conformidade e Certificação de Segurança
+	  </h4>
+	  <div class="collapse" id="wrac">
+            <h4 style="font-family:DINPro-Bold">Segunda-feira, 07/11/16</h4>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Avaliação da Conformidade de dispositivos da ICP-Brasil </font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 304 </br> Horário: 9:00 h - 9:45 h </br> Ruy Ramos (ITI - Instituto Nacional de Tecnologia da Informação) </font></span></br>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Sistema de Homologação e Certificação de Equipamentos de Defesa Cibernética </font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 304 </br> Horário: 9:45 h - 10:30 h </br> Prof. Sanderson Barbalho (UnB) </font></span></br>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Programa Nacional de Certificação e Homologação de Ativos de TIC: Auditoria em Programas e Equipamentos Usados na Administração Pública Federal </font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 304 </br> Horário: 11:00 h - 11:45 h </br> Anderson Souza de Araújo (Secretaria de Tecnologia da Informação do Ministério do Planejamento, Desenvolvimento e Gestão) </font></span></br>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Requisitos de integridade em sistemas de SmartCity </font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 304 </br> Horário: 11:45 h - 12:30 h </br> Jonny Doin (Grid Vortex) </font></span></br>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Regulação e Avaliação de Segurança da Informação no Brasil: histórico recente e perspectivas.  </font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 304 </br> Horário: 14:00 h - 15:30 h </br> Raphael Machado (Inmetro) </font></span></br>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Rodada de apresentações de laboratórios de avaliação de segurança</br> Rodada de discussões técnicas com Reguladores, Laboratórios, Organismos e Fabricantes.
+</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 304 </br> Horário: 16:00 h - 17:30 h </font></span></br>
+            </br>
+          </div> 
+	  <h4 data-toggle="collapse" role="button" href="#reunioes" aria-expanded="false" aria-controls="reunioes">
+            <i class="glyphicon glyphicon-collapse-down"></i> Meetings
+	  </h4>
+	  <div class="collapse" id="reunioes">
+            <h4 style="font-family:DINPro-Bold">Terça-feira, 08/11/16</h4>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Reunião Plenária da Comissão Especial em Segurança da Informação e de Sistemas Computacionais (CESeg) da SBC</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 302 </br> Horário: 17:30 h - 19:00 h </font></span></br>
+            <p> A pauta prevista para a reunião é a seguinte: </br>
+            <ol>
+              <li>Histórico do evento</li>
+              <li>Extrato financeiro da comissão</li>
+              <li>Relato da Coordenação Geral do SBSeg 2016</li>
+              <li>Relato da Coordenação de Programa do SBSeg 2016</li> 
+              <li>Relato da Coordenação Geral do SBSeg 2017</li> 
+              <li>Votação propostas organização das próximas edições SBSeg </li>
+              <li>Eleição Coordenação CESeg e atualização do Comitê Consultivo </li>
+              <li>Votação sobre Formato dos Artigos </li>
+              <li>Assuntos gerais e anúncios</li>
+            </ol>
+            </p>
+            </br>
+             <h4 style="font-family:DINPro-Bold">Quarta-feira, 09/11/16</h4>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> Reunião do Comitê de Organização do SBSeg 2017</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Sala 306 </br> Horário: 17:30 h - 19:00 h </font></span></br>
+            </br>
+ 
+          </div> 
+	  <h4 data-toggle="collapse" role="button" href="#social" aria-expanded="false" aria-controls="social">
+            <i class="glyphicon glyphicon-collapse-down"></i> Social Events
+	  </h4>
+	  <div class="collapse" id="social">
+             <h4 style="font-family:DINPro-Bold">Monday, 11/7/16</h4>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> SBSeg16 Opening Ceremony </font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Auditorium </br> Time: 17:30 h - 19:00 h </font></span></br>
+            </br>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> SBSeg16 Welcome Cocktail </font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> NAB (Núcleo de Análise de Biomassa), Praia Vermelha Campus, near to IC </br> Time: 19:00 h - 21:30 h </font></span></br>
+            </br>
+             <h4 style="font-family:DINPro-Bold">Wednesday, 11/09/16</h4>
+            <font color="#DE7B32"><span style="font-family:DINPro-Bold"> SBSeg16 Conference Dinner</font></span></br>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Fortaleza de Santa Cruz, Zéfiro Eventos </br> Time: 18:30 h - 0:00 h </font></span></br>
+            </br>
+            </br>
+          </div> 
+      </div>
+    </div>
+  </div>
+</section>
+<section id="patrocinadores" class="">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12 col-xs-12 visible-xs vertical-center text-center" style="padding-bottom: 20px;">
+        <h5>Organized by:</h5>
+        <a href="http://www.sbc.org.br" target="new"><img class="img-responsive" src="images/sbc.jpg" style="margin-right: 20px; max-height: 90px;"></a>
+        <img class="img-responsive" src="images/UFF.png" style="margin-right: 5px; max-height: 80px;">
+        <img class="img-responsive" src="images/logo-ic.png" style="max-height: 90px;">
+      </div>
+      <div class="col-lg-3 col-xs-12 vertical-center">
+          <h5 class="hidden-xs" style="margin-left: 20px;">Supported by: </h5>
+              <img class="img-responsive center-block hidden-xs" src="images/coppe.jpg" style="margin-right:5px; max-width: 90px;padding-bottom: 20px; margin-left: 20px;">
+              <img class="img-responsive center-block hidden-xs" src="images/ufrj.jpg" style="max-height: 95px;padding-bottom: 20px;">
+              <img class="img-responsive center-block hidden-xs" src="images/logo-ceseg.png" style="max-height: 85px; padding-bottom: 20px; margin-left: 10px;">
+	      <div class="row visible-xs text-center">
+                <h5>Supported by: </h5>
+                <div class="col-lg-4 col-xs-6 text-center vertical-center">
+                  <img class="img-responsive" src="images/coppe.jpg" style="margin-left: 100px; max-width: 90px;padding-bottom: 20px; padding-top: 15px;">
+                </div>
+                <div class="col-lg-4 col-xs-6 vertical-center">
+	          <img class="img-responsive" src="images/ufrj.jpg" style="margin-left: -100px; max-height: 95px;padding-bottom: 20px;">
+                </div>
+                <div class="col-lg-4 col-xs-12 vertical-center">
+                  <img class="img-responsive" src="images/logo-ceseg.png" style="margin-left: 0px; max-width: 110px;padding-bottom: 20px;">
+                </div>
+              </div>
+       </div>
+       <div class="col-lg-8 col-xs-12 vertical-center">
+         <h5 class="hidden-xs">Sponsored by:</h5>
+         <div class="row text-center">
+           <h5 class="visible-xs">Sponsored by:</h5>
+           <div class="col-lg-4 text-center col-xs-12 vertical-center">
+             Diamond<br>
+             <img class="img-reponsive center-block" src="images/logo-nic-cgi.png" style="max-width:200px; padding-bottom: 20px;">
+           </div>
+           <div class="col-lg-2 col-xs-12 text-center vertical-center">
+             Gold<br>
+            <img class="img-reponsive center-block" src="images/intel.png" style="max-width: 100px;padding-bottom: 20px; padding-top: 10px;">
+            <img class="img-reponsive center-block" src="images/logo_faperj_cor.jpg" style="max-width: 170px;padding-bottom: 20px; padding-top: 10px;">
+            <img class="img-reponsive center-block" src="images/logo-cnpq.jpg" style="max-width: 170px;padding-bottom: 20px; padding-top: 10px;">
+            <img class="img-reponsive center-block" src="images/logo-capes.png" style="max-width: 100px;padding-bottom: 20px; padding-top: 10px;">
+           </div>
+           <div class="col-lg-3 col-xs-12 text-center vertical-center">
+             Silver<br>
+             <img class="img-reponsive center-block" src="images/lgClavis.png" style="max-width: 160px; padding-top: 15px;padding-bottom: 20px;">
+             <img class="img-reponsive center-block" src="images/proppi.png" style="max-width: 160px; padding-top: 15px;padding-bottom: 20px;">
+           </div>
+           <div class="col-lg-3 col-xs-12 text-center vertical-center">
+             Bronze<br>
+             <img class="img-reponsive center-block" src="images/google.png" style="max-width: 150px; padding-top: 15px;padding-bottom: 20px;" >
+           </div>
+         </div>
+      </div>
+      <div class="col-lg-12 col-xs-12 vertical-center text-center">
+        <h6 style="padding-top: 40px;">Developed by:</h6>
+        <img class="img-responsive center-block" src="images/logoIn.png" style="max-width: 55px; padding-bottom: 20px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--<div class="col-lg-2 col-lg-offset-1 col-col-md-1 col-sm-1 col-xs-12 vertical-center">
+          <h5>Apoiado por:</h5>
+	  <img class="img-responsive" src="images/coppe.jpg" style="margin-right:10px; max-width: 90px;">
+	  <img class="img-responsive" src="images/ufrj.jpg" style="max-height: 95px;">
+      </div>
+      <div class="col-lg-7 col-lg-offset-1 col-md-1 col-sm-1 col-xs-12">
+        <h5>Patrocinado por:</h5>
+	<div class="row">
+          <div class="col-lg-2 col-md-1 col-sm-1 col-xs-12">
+	    Diamante <br>
+            <img class="img-reponsive" src="images/logo-nic-cgi.png" style="max-width:180px;">
+	  </div> 
+	 <div class="col-lg-2 col-md-1 col-sm-1 col-xs-12">
+	    Ouro <br> 
+            <img class="img-reponsive" src="images/intel.jpg" style="max-width: 90px;">
+          </div>
+	  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" style="max-width: 90px;">
+	    Prata <br>
+            <img class="img-reponsive" src="images/lgClavis.png" style="max-width: 90px;">
+          </div>
+	  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" style="max-width: 90px;">
+	    Bronze <br>
+            <img class="img-reponsive" src="images/google.png">
+          </div> 
+        </div>
+      </div>
+      <div class="col-lg-1 col-lg-offset-1 col-md-1 col-sm-1 col-xs-12 vertical-center text-center">
+        <h6>Desenvolvido por:</h6>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+	
+		<!--FIM MENU TOPO-->
+
+	
+
+	<script src="js/jquery-1.12.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/mapa.js"></script>
+ 	<script src="js/bootstrap.min.js"></script>
+ 	<script src="js/prototipo.js"></script>
+ 	<script src="js/tradutor.js"></script>
+ 	    
+ 	
+	</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <title> SBSeg16 - XVI Simp&oacute;sio Brasileiro em Seguran&ccedil;a da Informa&ccedil;&atilde;o e de Sistemas Computacionais
+    </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/prototipo.css">
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script>
+      $(function(){   
+        var nav = $('#menuHeader');   
+	$(window).scroll(function () { 
+          if ($(this).scrollTop() > 1) { 
+	    nav.addClass("navbar-fixed-top navbar-float menuFixo"); 
+	  } 
+          else { 
+            nav.removeClass("navbar-fixed-top navbar-float menuFixo"); 
+	  } 
+        });  
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="navbar-fixed-top container-blankBackground hidden-xs">
+      <div class="row">
+        <div class="col-lg-6 col-md-4 col-sm-12 col-xs-6" style="margin-left: 50px;">
+          <img src="images/logo1.png" class="img-responsive imgTopo" style="margin-right: 10px; ">
+          <img src="images/logo2.png" class="img-responsive imgTopo2" alt="logoSbseg">
+        </div>
+        <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12 col-xs-6">	
+          <h5>Realizado por</h5>
+            <a href="http://www.sbc.org.br" target="new"><img class="img-responsive" src="images/sbc.jpg" style="margin-right: 20px; max-height: 90px;"></a>
+            <img class="img-responsive" src="images/UFF.png" style="margin-right: 5px; max-height: 80px;">
+            <img class="img-responsive" src="images/logo-ic.png" style="max-height: 90px;">
+        </div>	
+        <div class="col-lg-1 col-md-4 col-sm-12 col-xs-12" style="margin-left: 40px; padding-top: 50px;">	
+          <!-- <a href="#"><img id="btTradutorEn" src="images/Brasil.png" class="img-responsive" style="max-width: 30px;" onclick= "traducaoPt()" /></a> -->
+	  <a href="palestrantes.html#"><img id="btTradutorEn" src="images/Inglaterra.png" class="img-responsive" style="max-width: 30px;" onclick= "traducaoEn()" /></a> </br>
+          <a href="https://www.facebook.com/sbseg2016" target="new"><img id="btTradutorEn" src="images/facebook.jpg" class="img-responsive" style="max-width: 30px; padding-top: 5px;"></a>
+        </div>
+      </div>
+    </div> 
+    
+    <section id="headerCont" class="hidden-xs">	
+      <div class="bkPic2">
+ <!--       <div class="container-fluid bkColor">
+	 </div> -->
+      </div>
+    </section>
+
+    <header>					
+      <nav id="menuHeader" class="navbar navbar-default hidden-xs">
+        <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	  </div>		
+	  <div class="navbar-collapse collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav" style="text-align:center;">
+              <li><a href="index.html">IN&Iacute;CIO</a></li>
+              <li><a href="anais.html">ANAIS</a></li>
+              <li><a href="chamadas.html">CHAMADAS</a></li>
+              <li><a href="comite.html">COMIT&Ecirc;</a></li>
+	      <li><a href="palestrantes.html">PALESTRANTES</a></li>
+	      <li><a href="programacao.html">PROGRAMA&Ccedil;&Atilde;O</a></li>
+	      <li><a href="local.html">LOCAL</a></li>
+	      <li><a href="contato.html">CONTATO</a></li>
+	      <li class="liDif"><a class="inscreve" href="inscricoes.html">INSCREVA-SE</a></li>
+	    </ul>
+	  </div>
+	</div>	
+      </nav>	
+      <nav id="menuHeaderCel" class="navbar navbar-default navbar-fixed-top visible-xs">
+        <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+            <a href="index.html"><img src="images/SimplificadaNegativa.png" class="img-responsive visible-xs" style="max-width: 120px;"></a>
+	  </div>		
+	  <div class="navbar-collapse collapse" id="navbar-collapse-2">
+            <ul class="nav navbar-nav" style="text-align:center;">
+              <li><a href="index.html">IN&Iacute;CIO</a></li>
+              <li><a href="chamadas.html">CHAMADAS</a></li>
+              <li><a href="comite.html">COMIT&Ecirc;</a></li>
+	      <li><a href="palestrantes.html">PALESTRANTES</a></li>
+	      <li><a href="programacao.html">PROGRAMA&Ccedil;&Atilde;O</a></li>
+	      <li><a href="local.html">LOCAL</a></li>
+	      <li><a href="contato.html">CONTATO</a></li>
+	      <li class="liDif"><a class="inscreve" href="inscricoes.html">INSCREVA-SE</a></li>
+	    </ul>
+	  </div>
+	</div>	
+      </nav>	
+    </header>
+  </body>
+</html>
+<section id="ConteudoBox">
+  <div class="container-fluid">
+    <div class="col-md-12">
+      <div class="caixa1">
+        <h1 style="padding-left: 10px;">Palestrantes</h1>
+            <span style="font-family:DINPro-Bold">
+            <h4><font color="#DE7B32"> Palestra 1A (P1A): Energy Efficient Security for IoT Devices </font></h4>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> David Ott (Intel Labs)</font></span></br>
+            </br>
+            <p align="justify">
+            <span style="font-family:DINPro-Bold">Abstract:</span> Power constraints in IoT devices follow from their reliance on finite lifetime batteries which, when depleted, will terminate the device's operation.  Computational requirements for IoT devices have increased sharply over time as the amount of data collected, processed, and communicated has increased.  Meanwhile, capacity gains in battery technology have increased only incrementally over the years.  The result is the well-known battery gap.  As security solutions (e.g., data encryption) similarly increase IoT computational requirements over time in order to remain robust against increasingly capable attackers, an associated security processing gap exists.  In this talk, I will describe the Intel-Brazil research collaboration on Energy Efficient Security for IoT Devices, including research objectives, energy measurement methodologies, and some sample research results.  Included also will be a few reflections on industry-academia collaboration in researching security solutions for the future of technology.
+            </p>
+            <div class="row">
+              <div class="col-lg-3 col-xs-12 text-center vertical-center">
+                <img class="img-reponsive center-block" src="images/david.jpg" style="max-width: 180px;padding-bottom: 20px; padding-top: 10px;">
+              </div>
+              <div class="col-lg-9 col-xs-12 text-center vertical-center">
+                <p align="justify">
+            <span style="font-family:DINPro-Bold">Short bio:</span> David Ott is a Research Director within Intel Labs where he creates and directs programs that bring together top academic researchers and Intel R&D teams worldwide.  David is a specialist in computer security, communications, and software, and has worked for Intel since 2005 in a variety of technical roles related to Intel platforms and enterprise computing. David holds MS and PhD degrees in Computer Science from the University of North Carolina at Chapel Hill.
+                </p>
+              </div>
+            </div>
+            </br>
+            <span style="font-family:DINPro-Bold">
+             <h4><font color="#DE7B32"> Palestra 1B (P1B): Future IoT Security Challenges </font></h4>  
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Rafael Misoczki (Intel Labs)</font></span></br>
+            </br>
+            <p align="justify">
+            <span style="font-family:DINPro-Bold">Abstract:</span> Internet-of-Things is a fascinating topic. It combines all sorts of devices, with different computational power, network bandwidth/speed and energy resources, in a collaborative fashion to achieve an ultimate goal. Due to this discrepancy in terms of resources (from very scarce up to very empowered), providing a concise and efficient security strategy across an IoT vertical is, and has always been, a challenge. If this situation is already challenging now, think about future IoT applications where the scale of the solutions will be exponentially larger and the interdependency between security and safety might turn a simple security vulnerability into a real life-threatening situation. In this short talk, I plan to discuss about a few future IoT applications, such as automotive, smart cities, healthcare and home automation, and their intrinsically related security research challenges.
+            </p>
+            <p align="justify">
+            </p>
+            <div class="row">
+              <div class="col-lg-3 col-xs-12 text-center vertical-center">
+                <img class="img-reponsive center-block" src="images/rafael.jpg" style="max-width: 160px;padding-bottom: 20px; padding-top: 10px;">
+              </div>
+              <div class="col-lg-9 col-xs-12 text-center vertical-center">
+                <p align="justify">
+            <span style="font-family:DINPro-Bold">Short bio:</span> Rafael Misoczki is a Research Scientist at Intel Labs, Hillsboro, USA. His main research interests are post-quantum cryptography and efficient cryptographic schemes for IoT and wearable devices. Rafael Misoczki received his PhD in Informatique from the Universit&eacute; Paris 6 (Sorbonne Universit&eacute;s), Paris, France, in 2013, with a thesis on efficient constructions for post-quantum cryptography. He also received a MSc degree in Electrical Engineering (2010) and a BSc degree in Computer Science (2008), both from the Universidade de S&atilde;o Paulo, Brazil. 
+                </p>
+              </div>
+            </div>
+ 
+            </br> 
+            <span style="font-family:DINPro-Bold">
+            <h4><font color="#DE7B32"> Palestra 2 (P2): Distributed Differential Privacy </font></h4>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Christopher Clifton (Purdue University, EUA)</font></span></br>
+            </br>
+            <p align="justify">
+            <span style="font-family:DINPro-Bold">Abstract:</span> Information Security has long been based on cryptography-style all-or-nothing definitions, such as ciphertext indistinguishability as a measure of confidentiality.  This is often inappropriate in a data privacy context; people want their data to be used, but in a controlled, limited manner.  This talk will describe differential privacy as a means for balancing data use and confidentiality.  We will then show how this solves problems that are swept under the rug in traditional confidentiality definitions.  
+        </br>
+          This will be presented in the context of a distributed data scenario: attempting to share data analysis without sharing the underlying data.  Neither secure multiparty computation or differential privacy adequately solves this problem on its own, but combined, we can achieve good results while controlling disclosure of individual data.  Efficiently combining these techniques turns out to be non-trivial, we will show some of the challenges and how they can be solved.
+ 
+            </p>
+            <div class="row">
+              <div class="col-lg-3 col-xs-12 text-center vertical-center">
+                <img class="img-reponsive center-block" src="images/clifton.jpg" style="max-width: 160px;padding-bottom: 20px; padding-top: 10px;">
+              </div>
+              <div class="col-lg-9 col-xs-12 text-center vertical-center">
+                <p align="justify">
+            <span style="font-family:DINPro-Bold">Short bio:</span> Dr. Clifton is a Professor of Computer Science at Purdue University.  He works on data privacy, particularly with respect to analysis of private data.  From 2013-2015, Dr. Clifton served as a program director at the National Science Foundation.  Prior to joining Purdue in 2001, he was a principal scientist in the Information Technology Division at the MITRE Corporation. Before joining MITRE in 1995, he was an assistant professor of computer science at Northwestern University.  He has a Bachelor's and Master's degree (1986) from the Massachusetts Institute of Technology, and a Ph.D. (1991) from Princeton University.
+                </p>
+              </div>
+            </div>
+            </br>
+             <span style="font-family:DINPro-Bold">
+            <h4><font color="#DE7B32"> Palestra 3 (P3): IoT Blockchain: Open, Secure, Private and Trusted Internet of Things Stack</font></h4>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Mart&iacute;n Serrano (Insight Centre for Data Analytics, NUI Galway, IRL)</font></span></br>
+            </br>
+            <p align="justify">
+            <span style="font-family:DINPro-Bold"> Abstract:</span>  Today people have a greater awareness about the benefits of Internet of Things sensed-enabled services, likewise more sensing services are easier to adopt and deploy. Cities are a clear example where IoT has influenced big changes for its infrastructure and its inhabitants, for example today there are cities technologically equipped and socially organized in a way that the generation and deployment of better citizen services and solutions are more rapidly adopted (e.g. Smart Cities). The Internet of Things is already considered the scientific evolution of the Internet that comes with a technology deployment wave of connected devices.
+</br>
+The Open Internet of Things stack, published at the IEEE IoT newsletter in 2015, has been designed in the context of having IoT systems and cloud infrastructures. It is the methodology that defines and establishes the relations between the operations and the role that "things" can play in the whole IoT system(s), likewise it represents the functionality or services that applications are able to provide and support. However the big concern is how Open and Trusted is the Internet of Things Infrastructure and how reliable are the services running in IoT infrastructure to offer data privacy and access security based on IoT services transactions.
+</br>
+In this talk we will go through todays' Open, Security, Privacy and Tryst relations and how the IoT technology and the global conditions, according with new data trends are the channels for user acceptance and large deployments in global user communities. The recently introduced, distributed blockchain, in the security market draws IoT directions to discuss and identify how IoT must be designed to be secure, transparent, highly resistant to outages, auditable, and efficient. The emergent technologies like blockchain will demonstrate where technology has evolved and the manufacturing cost being reduced or not.
+            </p>
+            <div class="row">
+              <div class="col-lg-3 col-xs-12 text-center vertical-center">
+                <img class="img-reponsive center-block" src="images/martin.jpg" style="max-width: 160px;padding-bottom: 20px; padding-top: 10px;">
+              </div>
+              <div class="col-lg-9 col-xs-12 text-center vertical-center">
+                <p align="justify">
+                 <span style="font-family:DINPro-Bold">Short bio:</span> Dr. Martin Serrano is the research director and scientific coordinator of the Internet of Things Unit (UIoT) within the Insight Centre for Data Analytics Galway (former DERI) at the National University of Ireland. Dr. Serrano has more than 15 years experience in ICT industry and applied scientific research within a wide range of successful European (FP5-FP7/H2020) collaborative software projects, Irish National Projects (HEA PRTLI, SFI) and also Enterprise Ireland (EI) innovation projects. He also leads Future Internet Research and Experimentation (FIRE) activities and IoT industrial innovation targeted projects. Dr. Serrano is a recognized IoT Expert with a strong background on applied semantic and systems interoperability, services and network management technologies. Dr. Serrano has been included in the list of top 25 key people influencing the Internet of Things (<a href="https://www.siliconrepublic.com/machines/2015/10/06/25-internet-of-things-iot-leaders-ireland">"https://www.siliconrepublic.com/machines/2015/10/06/25-internet-of-things-iot-leaders-ireland</a>), He has a leading role in the European Research Cluster for the IoT and he is board member at the Connected Smart Cities Network. Dr. Serrano is a continuous contributor to the Scientific, Research and Innovation agenda for Europe. He is also actively investigating, Semantic-based Cloud Infrastructures and Big Data Management. Data Bases Stream processing, Cyber-Physical Systems (CPS) Control, Privacy and Security aspects for IoT, Sensor Networks for the IoT and their deployment in cloud computing environments. Dr. Serrano is an active member of IEEE (Computer and Communication Societies) and ACM and He is the author of the book “Applied Ontology Engineering in Cloud Services, Networks and Management Systems” published by Springer, NY, USA and several book chapters on related areas. 
+                </p>
+              </div>
+            </div>
+            </br>
+             <span style="font-family:DINPro-Bold">
+            <h4><font color="#DE7B32"> Palestra 4 (P4): The Cyberspace Battle for Information: Combating Internet Censorship </font></h4>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Amir Houmansadr (University of Massachusetts Amherst, EUA) </font></span></br>
+            </br>
+            <p align="justify">
+            <span style="font-family:DINPro-Bold">Abstract:</span> The Internet has become ubiquitous, bringing many benefits to people across the globe. Unfortunately, Internet users face threats to their security and privacy: repressive regimes deprive them of freedom of speech and open access to information, governments and corporations monitor their online behavior, advertisers collect and sell their private data, and cybercriminals hurt them financially through security breaches. My research aims to make Internet communications more secure and privacy-preserving. In this talk, I will focus on the design, implementation, and analysis of tools that help users bypass Internet censorship. I will discuss the major challenges in building robust censorship circumvention tools, introduce two novel classes of systems that we have developed to overcome these challenges, and conclude with several directions for future research.
+            </p>
+            <div class="row">
+              <div class="col-lg-3 col-xs-12 text-center vertical-center">
+                <img class="img-reponsive center-block" src="images/amir.jpg" style="max-width: 180px;padding-bottom: 20px; padding-top: 10px;">
+              </div>
+              <div class="col-lg-9 col-xs-12 text-center vertical-center">
+                <p align="justify">
+                  <span style="font-family:DINPro-Bold">Short bio:</span> Amir is an assistant professor of computer science at UMass, where he joined in Fall 2014. His area of research is network security and privacy, which includes problems such as Internet censorship resistance, statistical traffic analysis, location privacy, and privacy in next-generation network architectures. He received his Ph.D. from the University of Illinois at Urbana-Champaign in 2012, where he was advised by Nikita Borisov. After that, he was a postdoctoral scholar for two years at the University of Texas at Austin, honored to be working with Vitaly Shmatikov. He also earned his M.Sc. and B.Sc. degrees from the Electrical Engineering Department of Sharif University of Technology. He received a Google Faculty Research Award in 2015 and an NSF CAREER Award in 2016.
+                </p>
+              </div>
+            </div>
+            </br>
+             <span style="font-family:DINPro-Bold">
+            <h4><font color="#DE7B32"> Palestra Nacional (PN): Seguran&ccedil;a em IoT: o futuro repetindo o passado</font></h4>
+            <font color="#007A80"><span style="font-family:DINPro-Bold"> Miriam von Zuben (CERT.br/NIC.br)</font></span></br>
+            </br>
+            <p align="justify">
+            <span style="font-family:DINPro-Bold">Resumo:</span> A Internet das Coisas (IoT) j&aacute; &eacute; uma realidade e apresenta desafios que demandam novas abordagens de seguran&ccedil;a. Nesse novo cen&aacute;rio, novas vulnerabilidades surgem e outras bem conhecidas podem ser exploradas. Nessa palestra, a partir do relato de algumas amea&ccedil;as e ataques, ser&atilde;o analisados os riscos de conectar "coisas" &agrave; IoT sem considerar a seguran&ccedil;a. 
+            </p>
+            <div class="row">
+              <div class="col-lg-3 col-xs-12 text-center vertical-center">
+                <img class="img-reponsive center-block" src="images/miriam.jpg" style="max-width: 160px;padding-bottom: 20px; padding-top: 10px;">
+              </div>
+              <div class="col-lg-9 col-xs-12 text-center vertical-center">
+                <p align="justify">
+            <span style="font-family:DINPro-Bold">Short bio:</span>  Miriam von Zuben &eacute; Analista S&ecirc;nior de Seguran&ccedil;a do CERT.br/NIC.br, desde 2005, tendo atuado nas &aacute;reas de Tratamento de Incidentes e An&aacute;lise de Tend&ecirc;ncias. Atualmente, atua na &aacute;rea de Treinamento e Conscientiza&ccedil;&atilde;o de Usu&aacute;rios, ministrando palestras e desenvolvendo materiais relacionados a boas pr&aacute;ticas de seguran&ccedil;a. &Eacute; tamb&eacute;m instrutora dos cursos do CERT/CC, da Carnegie Mellon University. &Eacute; a principal mantenedora da Cartilha de Seguran&ccedil;a para Internet.
+                </p>
+              </div>
+            </div>
+            </br>
+      </div>	
+    </div>
+  </div>
+</section>
+<section id="patrocinadores" class="">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12 col-xs-12 visible-xs vertical-center text-center" style="padding-bottom: 20px;">
+        <h5>Realizado por:</h5>
+        <a href="http://www.sbc.org.br" target="new"><img class="img-responsive" src="images/sbc.jpg" style="margin-right: 20px; max-height: 90px;"></a>
+        <img class="img-responsive" src="images/UFF.png" style="margin-right: 5px; max-height: 80px;">
+        <img class="img-responsive" src="images/logo-ic.png" style="max-height: 90px;">
+      </div>
+      <div class="col-lg-3 col-col-xs-12 vertical-center">
+          <h5 class="hidden-xs" style="margin-left: 20px;">Apoiado por: </h5>
+	      <img class="img-responsive center-block hidden-xs" src="images/coppe.jpg" style="margin-right:5px; max-width: 90px;padding-bottom: 20px; margin-left: 20px;">
+	      <img class="img-responsive center-block hidden-xs" src="images/ufrj.jpg" style="max-height: 95px;padding-bottom: 20px;">
+	      <img class="img-responsive center-block hidden-xs" src="images/logo-ceseg.png" style="max-height: 85px; padding-bottom: 20px; margin-left: 10px;">
+	      <div class="row visible-xs text-center">
+                <h5>Apoiado por: </h5>
+                <div class="col-lg-4 col-xs-6 text-center vertical-center">
+                  <img class="img-responsive" src="images/coppe.jpg" style="margin-left: 100px; max-width: 90px;padding-bottom: 20px; padding-top: 15px;">
+                </div>
+                <div class="col-lg-4 col-xs-6 vertical-center">
+	          <img class="img-responsive" src="images/ufrj.jpg" style="margin-left: -100px; max-height: 95px;padding-bottom: 20px;">
+                </div>
+                <div class="col-lg-4 col-xs-12 vertical-center">
+	          <img class="img-responsive" src="images/logo-ceseg.png" style="margin-left: 0px; max-width: 110px;padding-bottom: 20px;">
+                </div>
+              </div>
+       </div>
+       <div class="col-lg-8 col-xs-12 vertical-center">
+         <h5 class="hidden-xs">Patrocinado por:</h5>
+         <div class="row text-center">
+           <h5 class="visible-xs">Patrocinado por:</h5>
+           <div class="col-lg-4 text-center col-xs-12 vertical-center">
+             Diamante<br>
+             <img class="img-reponsive center-block" src="images/logo-nic-cgi.png" style="max-width:200px; padding-bottom: 20px;">
+           </div>
+           <div class="col-lg-2 col-xs-12 text-center vertical-center">
+             Ouro<br>
+             <img class="img-reponsive center-block" src="images/intel.png" style="max-width: 100px;padding-bottom: 20px; padding-top: 10px;">
+             <img class="img-reponsive center-block" src="images/logo_faperj_cor.jpg" style="max-width: 170px;padding-bottom: 20px; padding-top: 10px;">
+             <img class="img-reponsive center-block" src="images/logo-cnpq.jpg" style="max-width: 170px;padding-bottom: 20px; padding-top: 10px;">
+             <img class="img-reponsive center-block" src="images/logo-capes.png" style="max-width: 100px;padding-bottom: 20px; padding-top: 10px;">
+           </div>
+           <div class="col-lg-3 col-xs-12 text-center vertical-center">
+             Prata<br>
+             <img class="img-reponsive center-block" src="images/lgClavis.png" style="max-width: 160px; padding-top: 15px;padding-bottom: 20px;">
+             <img class="img-reponsive center-block" src="images/proppi.png" style="max-width: 160px; padding-top: 15px;padding-bottom: 20px;">
+           </div>
+           <div class="col-lg-3 col-xs-12 text-center vertical-center">
+             Bronze<br>
+             <img class="img-reponsive center-block" src="images/google.png" style="max-width: 150px; padding-top: 15px;padding-bottom: 20px;" >
+           </div>
+         </div>
+      </div>
+      <div class="col-lg-12 col-xs-12 vertical-center text-center">
+        <h6 style="padding-top: 40px;">Desenvolvido por:</h6>
+        <img class="img-responsive center-block" src="images/logoIn.png" style="max-width: 55px; padding-bottom: 20px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--<div class="col-lg-2 col-lg-offset-1 col-col-md-1 col-sm-1 col-xs-12 vertical-center">
+          <h5>Apoiado por:</h5>
+	  <img class="img-responsive" src="images/coppe.jpg" style="margin-right:10px; max-width: 90px;">
+	  <img class="img-responsive" src="images/ufrj.jpg" style="max-height: 95px;">
+      </div>
+      <div class="col-lg-7 col-lg-offset-1 col-md-1 col-sm-1 col-xs-12">
+        <h5>Patrocinado por:</h5>
+	<div class="row">
+          <div class="col-lg-2 col-md-1 col-sm-1 col-xs-12">
+	    Diamante <br>
+            <img class="img-reponsive" src="images/logo-nic-cgi.png" style="max-width:180px;">
+	  </div> 
+	 <div class="col-lg-2 col-md-1 col-sm-1 col-xs-12">
+	    Ouro <br> 
+            <img class="img-reponsive" src="images/intel.jpg" style="max-width: 90px;">
+          </div>
+	  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" style="max-width: 90px;">
+	    Prata <br>
+            <img class="img-reponsive" src="images/lgClavis.png" style="max-width: 90px;">
+          </div>
+	  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" style="max-width: 90px;">
+	    Bronze <br>
+            <img class="img-reponsive" src="images/google.png">
+          </div> 
+        </div>
+      </div>
+      <div class="col-lg-1 col-lg-offset-1 col-md-1 col-sm-1 col-xs-12 vertical-center text-center">
+        <h6>Desenvolvido por:</h6>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+	
+		<!--FIM MENU TOPO-->
+
+	
+
+	<script src="js/jquery-1.12.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/mapa.js"></script>
+ 	<script src="js/bootstrap.min.js"></script>
+ 	<script src="js/prototipo.js"></script>
+ 	<script src="js/tradutor.js"></script>
+ 	    
+ 	
+	</body>
+</html>
+			

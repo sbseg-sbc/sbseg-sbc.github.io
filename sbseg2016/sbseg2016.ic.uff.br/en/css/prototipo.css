@@ -1,0 +1,458 @@
+@font-face {
+    font-family: DINPro-Regular;
+    src: url('../fonts/DINPro-Regular.otf');
+}
+@font-face {
+    font-family: DINPro-Bold;
+    src: url('../fonts/DINPro-Bold.otf');
+}
+
+body{
+	font-family: DINPro-Regular;
+	
+}
+/*Navbar*/
+
+.navbar-default{
+	background-color: #007a7d;
+	border:0;
+	border-radius: 0px;
+
+}
+.navbar-default .navbar-nav>li>a{
+	color:#fff;
+	font-size: 23px;
+        z-index: 10;
+}
+.navbar-float{
+	z-index: 5;
+	position:fixed;
+        margin-top: 145px ;
+        font-weight: 300;
+}
+
+.navbar-float-no-photo{
+	z-index: 5;
+	position:fixed;
+        margin-top: 15px ;
+        font-weight: 300;
+}
+
+.container-blankBackground{
+	z-index: 4;
+	background-color:rgb(255,255,255);
+	padding-bottom: 20px
+}
+#headerCont{
+	padding-top: 109px;
+
+}
+
+ .container-fluid{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+#headerCont .col-md-8{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.navbar-default .navbar-toggle{
+	background-color: transparent;
+	border: 0;
+}
+.navbar-default .navbar-toggle .icon-bar{
+	background-color:#fff;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+	background-color: transparent;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	border: 0;
+}
+/*fim navbar*/
+/**imgs esquerda**/
+.logo{
+	max-width:70px;
+	max-height: 60px;
+}
+.logo-i{
+	max-width:80px;
+	max-height: 40px;
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{
+	display:inline-block;
+}
+.patrocinadores img{
+	padding-left:20px;
+}
+
+.imgTopo{
+	max-width:700px;
+	max-height: 100px;
+	margin-top:20px;
+}
+.imgTopo2{
+	max-width: 500px;
+	max-height: 80px;
+	margin-top: 20px;
+}
+.imgTopoRealizadores{
+	margin-top: 30px;
+
+}
+@media (max-width: 1614px){
+	.imgTopo{
+		max-width: 100%;
+	}
+	.imgTopo2{
+		max-width: 100%;
+	}
+}
+@media(max-width: 768px){
+	.imgTopo2{
+		
+	}
+	.imgTopo{
+		
+	}
+	.logoCelular{
+		display: block !important;
+		max-width: 350px;
+		margin-top:80px;
+	}
+}
+/**fim imgs esquerda**/
+/*Conteudo*/
+
+.caixa1{
+	background-color: #fff;
+	margin:auto;
+	position: relative;
+	margin-top:100px;
+	padding:20px;
+	padding-top:90px;
+	-webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.44);
+	-moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.44);
+	box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.44);
+	max-width:900px;
+
+}
+
+
+.caixa1 h1{
+	top:0;
+	left:-12px;
+	position: absolute;
+	background-color: #DE7B32;
+	padding:15px;
+	padding-left:30px;
+	padding-right:100px;
+	font-size: 20px;
+}
+
+.caixa2{
+        position: relative;
+        color:#fff;
+        max-width: 400px;
+        margin-top:70px;
+        background-color: rgba(0,122,128,1);
+        padding:20px;
+        padding-top:90px;
+        -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.44);
+        -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.44);
+        box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.44);
+
+}
+
+.caixa2 h1{
+        color:#383932;
+        top:0;
+        left:-12px;
+        position: absolute;
+        background-color: #DE7B32;
+        padding:15px;
+        padding-left:30px;
+        padding-right:100px;
+        font-size: 20px;
+}
+
+
+
+.caixa2 li{
+	list-style: none;
+	font-size: 15px;
+}
+.caixa2 ul{
+	padding-left:20px;
+}
+.caixa2 li:before {
+    content: "- ";
+    font-size:20px;
+    color:rgb(220, 123, 52);
+    margin-top:4px;
+}
+.bkPic{
+	background-image: url("../images/mac-por-cesar-de-oliveira.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height:420px;
+}
+
+.bkPic2{
+	background-image: url("../images/white.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height:36px;
+}
+
+
+.bkColor{
+	background-color: rgba(255,255,255,0.0);
+	height:100%;
+}
+
+#ConteudoBox{
+	padding-bottom:150px;
+	background-image: url("../images/cadeadoCinza.png");
+	background-repeat: repeat;
+}
+
+/**fim Conteudo*/
+/**footer**/
+.footer{
+	text-align: right;
+	padding-top:80px;
+
+}
+.footer p{
+	font-size: 20px;
+}
+.logoIn{
+	padding-top: 20px;
+}
+.logoIn p{
+	right: 0;
+}
+.logoIn img{
+	max-width: 50px;
+	padding-left: 20px;
+
+}
+#patrocinadores{
+	padding-top:5px;
+	background-color: white;
+	border-top:3px solid #007A80;
+
+}
+/**fim footer**/
+
+
+/**IMPORTANT**/
+.liDif{
+	background-color: #DE7B32;
+	position: absolute !important;
+	height:70px;
+	top:-10px;
+	right:90px;
+}
+.inscreve{
+	color:#383932 !important;
+	padding-top:25px !important;
+}
+
+/**/
+/**responsive**/
+
+
+.bandeiraConfig{
+	text-align: right;
+	padding-right: 40px;
+
+}
+.bandeiraConfig .imgBandeira{
+	width:25px;
+	margin-top:50px;
+	height: 15px;
+}
+.img-f{
+	width: 40px;
+	height: 40px;
+	margin-left: 20px;
+	margin-top: 25px;
+}
+
+.imgVenue{
+	max-width: 90%;
+}
+
+@media (max-width: 1777px){
+	.navbar-default .navbar-nav>li>a{
+		font-size: 18px;
+	}
+}
+@media(max-width: 1492px){
+	.navbar-default .navbar-nav>li>a{
+		font-size:15px;
+	}
+	.liDif{
+		right:25px;
+                z-index: 5; 
+	}
+
+
+}
+@media (max-width: 1300px){
+	.navbar-default .navbar-nav>li>a{
+		font-size:13px;
+	}
+}
+@media(max-width: 1200px){
+	.navbar-default .navbar-nav>li>a{
+		font-size:13px;
+	}
+	.liDif{
+		right:0;
+	}
+	.navbar-nav>li>a{
+		padding-left:10px;
+		padding-right:10px;
+	}
+}
+@media (max-width: 991px){
+	.navbar-default{
+		margin-top: 0px;
+	}
+	.caixa2{
+		margin:auto;
+		margin-top:100px;
+	}
+	.navbar-default .navbar-nav>li>a{
+		font-size:12px;
+	}
+	.liDif{
+		position:relative !important;
+		height:50px;
+		top:0;
+	}
+	.inscreve{
+	color:#383932 !important;
+	padding-top:15px !important;
+	}
+	#patrocinadores h4{
+		font-size:13px;
+	}
+	.col-xs-4{
+		padding-left:0px;
+
+	}
+}
+@media (max-width: 800px){
+	.navbar-default .navbar-nav>li>a{
+		font-size:12px;
+
+	}
+
+@media(max-width: 768px){
+.bkPic{
+	height:230px;
+	margin-top: 0px;
+}
+.container-blankBackground{
+	padding-bottom: 0px;
+}
+}
+@media screen and (max-width: 425px){
+	header{
+		width: 100%;
+		z-index: 1;
+	}
+	.menuFixo{
+		top: 300px !important;
+	}
+	.bkPic{
+	background-image: url("../images/mac-por-cesar-de-oliveira-cel.jpg");
+        max-height: 270px;
+        max-width: 100%;
+}
+	.logoIn p{
+		padding-top:17px;
+	}
+	.bandeiraConfig{
+		padding-top: 30px;
+		padding-right: 20px;
+		margin-top: 0px !important;
+		margin-right: 0px !important;
+	}
+	.bandeiraConfig img{
+		margin-top:0;
+		margin-right: 0;
+	}
+}
+@media screen and (max-width: 375px){
+	.bandeiraConfig{
+		padding-top: 30px;
+		padding-right: 20px;
+		margin-top: 0px !important;
+		margin-right: 0px !important;
+	}
+	.bandeiraConfig img{
+		margin-top:0;
+		margin-right: 0;
+	}
+	
+}
+
+
+
+#imagemFundo{
+	padding-bottom:30px;
+	margin-bottom:50px;
+	margin-top:50px;
+	background: url(https://sbseg2016.ic.uff.br/en/images/imagemfundo.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+        z-index: -1;
+}
+#imagemFundo .col-md-12{
+	text-align: center;
+}
+#imagemFundo .corFundo{
+	background-color: #fff;
+	}	
+@media (max-width: 991px){	
+#imagemFundo .col-sm-12{
+	padding-top:20px;
+}	
+#imagemFundo{
+	padding-bottom:40px;
+}
+}
+/*FIM Section imagemFundo*/
+/*Section ultimoSlider*/
+#ultimoSlider h1{
+	text-align: center;
+	margin-bottom:60px;
+	margin-top:0;
+}
+#ultimoSlider .carousel-control{
+	background-image:none;
+	color: #6e6f4e;
+}
+/*FIM Section ultimoSlider*/
+/*FOOTER*/
+
+
+#mapa{
+	margin-top:50px;
+}
+
+#mapa{
+	position: relative;
+}
+#mapaG{
+	height: 630px;
+}

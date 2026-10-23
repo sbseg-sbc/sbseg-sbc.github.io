@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="shortcut icon" type="image/png" href="../pt/images/favicon.png"/>
+    <title> SBSeg16 - XVI  Brazilian Symposium on Information and Computational Systems Security</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/prototipo.css">
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script>
+      $(function(){   
+        var nav = $('#menuHeader');   
+	$(window).scroll(function () { 
+          if ($(this).scrollTop() > 1) { 
+	    nav.addClass("navbar-fixed-top navbar-float menuFixo"); 
+	  } 
+          else { 
+            nav.removeClass("navbar-fixed-top navbar-float menuFixo"); 
+	  } 
+        });  
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="navbar-fixed-top container-blankBackground hidden-xs">
+      <div class="row">
+        <div class="col-lg-6 col-md-4 col-sm-12 col-xs-6" style="margin-left: 50px;">
+          <img src="images/logo1.png" class="img-responsive imgTopo" style="margin-right: 10px; ">
+          <img src="images/logo2-eng.png" class="img-responsive imgTopo2" alt="logoSbseg">
+        </div>
+        <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12 col-xs-6">	
+          <h5>Realizado por</h5>
+            <a href="http://www.sbc.org.br" target="new"><img class="img-responsive" src="images/sbc.jpg" style="margin-right: 20px; max-height: 90px;"></a>
+            <img class="img-responsive" src="images/UFF.png" style="margin-right: 5px; max-height: 80px;">
+            <img class="img-responsive" src="images/logo-ic.png" style="max-height: 90px;">
+        </div>	
+        <div class="col-lg-1 col-md-4 col-sm-12 col-xs-12" style="margin-left: 40px; padding-top: 50px;">	
+          <a href="sbseg16-aceitos.html#"><img id="btTradutorEn" src="images/Brasil.png" class="img-responsive" style="max-width: 30px;" onclick= "traducaoPt()" /></a></br>
+	  <!-- <a href="#"><img id="btTradutorEn" src="images/Inglaterra.png" class="img-responsive" style="max-width: 30px;" onclick= "traducaoEn()" /></a> -->
+          <a href="https://www.facebook.com/sbseg2016" target="new"><img id="btTradutorEn" src="images/facebook.jpg" class="img-responsive" style="max-width: 30px; padding-top: 5px;"></a>
+        </div>
+      </div>
+    </div> 
+    
+    <section id="headerCont" class="hidden-xs">	
+      <div class="bkPic2">
+ <!--       <div class="container-fluid bkColor">
+	 </div> -->
+      </div>
+    </section>
+
+    <header>					
+      <nav id="menuHeader" class="navbar navbar-default hidden-xs">
+        <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	  </div>		
+	  <div class="navbar-collapse collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav" style="text-align:center;">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="evento.html">ANNALS</a></li>
+              <li><a href="chamadas.html">CALL FOR PAPERS</a></li>
+              <li><a href="comite.html">COMMITTEE</a></li>
+              <li><a href="palestrantes.html">SPEAKERS</a></li>
+              <li><a href="programacao.html">PROGRAM</a></li>
+              <li><a href="local.html">VENUE</a></li>
+              <li><a href="contato.html">CONTACT US</a></li>
+              <li class="liDif"><a class="inscreve" href="inscricoes.html">REGISTRATION</a></li>
+	    </ul>
+	  </div>
+	</div>	
+      </nav>	
+      <nav id="menuHeaderCel" class="navbar navbar-default navbar-fixed-top visible-xs">
+        <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+            <a href="index.html"><img src="images/SimplificadaNegativa.png" class="img-responsive visible-xs" style="max-width: 120px;"></a>
+	  </div>		
+	  <div class="navbar-collapse collapse" id="navbar-collapse-2">
+          <ul class="nav navbar-nav" style="text-align:center;">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="chamadas.html">CALL FOR PAPERS</a></li>
+              <li><a href="comite.html">COMMITTEE</a></li>
+              <li><a href="palestrantes.html">SPEAKERS</a></li>
+              <li><a href="programacao.html">PROGRAM</a></li>
+              <li><a href="local.html">VENUE</a></li>
+              <li><a href="contato.html">CONTACT US</a></li>
+              <li class="liDif"><a class="inscreve" href="inscricoes.html">REGISTRATION</a></li>
+            </ul>
+	  </div>
+	</div>	
+      </nav>	
+    </header>
+  </body>
+</html>
+<section id="ConteudoBox">
+  <div class="container-fluid">
+    <div class="col-md-12">
+      <div class="caixa1">
+        <h1 style="padding-left: 10px;">Artigos aceitos para o SBSeg16</h1>
+        <!-- <h4 style="font-family:DINPro-Bold">Artigos completos</h4> -->
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Speeding up the Elliptic Curve Cryptography on the P-384 Curve</span>
+          </br>
+          <font color="#007A80">Armando Faz Hernández (Unicamp), Julio Hernandez (Unicamp).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Go With the FLOW: Fine-Grained Control-Flow Integrity for the Kernel</span>
+          </br>
+          <font color="#007A80">João Moreira (Unicamp), Sandro Rigo (Unicamp).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">VoiDbg: Projeto e Implementação de um Debugger Transparente para Inspeção de Aplicações Protegidas</span>
+          </br>
+          <font color="#007A80">Marcus Botacin (Unicamp), Paulo de Geus (Unicamp), André Grégio (UFPR).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Detecção de Ataque DDoS Flash Crowd Realizando a Análise Comportamental nas Solicitações Web</span>
+          </br>
+          <font color="#007A80">Samuel Jardim (UFSM), Raul Ceretta Nunes (UFSM), Marcelo Colomé (UFSM).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Aplicação do Algoritmo de Colônia de Formigas para Redução do Tamanho de Chaves Públicas na Criptografia Completamente Homomórfica</span>
+          </br>
+          <font color="#007A80">Joffre Filho (UFRJ), Jonice Oliveira (UFRJ), Claudio de Farias (UFRJ), Gabriel P. Silva (UFRJ).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Agrupamento de malware por comportamento de execução usando lógica fuzzy</span>
+          </br>
+          <font color="#007A80">Lindeberg Leite (UnB), Daniel Guerreiro e Silva (UnB), André Grégio (UFPR).</font></br>
+        </p>
+        </br>
+       <p>
+          <span style="font-family:DINPro-Bold">A framework for searching encrypted databases</span>
+          </br>
+          <font color="#007A80">Pedro Alves (Unicamp), Diego Aranha (Unicamp).</font></br>
+        </p>
+        </br>
+       <p>
+          <span style="font-family:DINPro-Bold">Ataques Furtivos em Sistemas de Controle Físicos Cibernéticos</span>
+          </br>
+          <font color="#007A80">Alan de Sá (Marinha do Brasil / UFRJ), Luiz Fernando Rust da Costa Carmo (Inmetro), Raphael Machado (Inmetro)</font></br>
+        </p>
+        </br>
+       <p>
+          <span style="font-family:DINPro-Bold">Detecção de ataques por ROP em tempo real assistida por hardware</span>
+          </br>
+          <font color="#007A80">Marcus Botacin (Unicamp), Paulo de Geus (Unicamp), André Grégio (UFPR).</font></br>
+        </p>
+        </br>
+       <p>
+          <span style="font-family:DINPro-Bold">Análise Transparente de Malware com Suporte por Hardware</span>
+          </br>
+          <font color="#007A80">Marcus Botacin (Unicamp), Paulo de Geus (Unicamp), André Grégio (UFPR).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Metodologia de Detecção de Malware por Heurísticas Comportamentais</span>
+          </br>
+          <font color="#007A80">Neriberto Prado (BluePex Security Solutions), Ulisses Penteado (BluePex Security Solutions), André Grégio (UFPR).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Autenticação de Sensores usando Eventos Físicos</span>
+          </br>
+          <font color="#007A80">Wilson Melo Jr (Inmetro), Charles Prado (Inmetro), Luiz Fernando Rust da Costa Carmo (Inmetro).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Detecção de Vazamentos de Dados em Aplicativos Javascript em Dispositivos Móveis</span>
+          </br>
+          <font color="#007A80"> Thiago Rocha (UFAM), Brandell Cássio Corrêa Ferreira (UFAM), Diego Azulay (UFAM), Alex F Monteiro (UFAM), Eduardo Souto (UFAM), Breno Silva (Samsung), Pedro Minatel (Samsung), Felipe Boeira (Samsung).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Identificação de Códigos Maliciosos Metamórficos pela Medição do Nível de Similaridade de Grafos de Dependência</span>
+          </br>
+          <font color="#007A80"> Gilbert Martins (UFAM), Vitor Danrley (UFAM), Paulo dos Santos (UFAM), Eduardo Souto (UFAM), Rosiane de Freitas (UFAM).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Um controle de associações resistente à ataques Sybil para a disseminação segura de conteúdo da IoT</span>
+          </br>
+          <font color="#007A80"> Danilo Evangelista (UFPR), Eduardo da Silva (Instituto Federal Catarinense), Michele Nogueira (UFPR), Aldri dos Santos (UFPR).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">An Architecture for Self-adaptive Distributed Firewall</span>
+          </br>
+          <font color="#007A80"> Edmilson Costa Junior, Silas de Medeiros, Carlos da Silva, Marcos Pinheiro (UFRN).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">A comparison of encryption tools for disk data storage from digital forensics point of view</span>
+          </br>
+          <font color="#007A80"> Vitor Hugo Galhardo Moia (Unicamp), Marco Aurelio Amaral Henriques (Unicamp).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Classificação de Fragmentos de Arquivos com Técnica de Aprendizagem de Máquina baseada em Árvores de Decisão</span>
+          </br>
+          <font color="#007A80"> Juliano Oya (UnB), Bruno Hoelz (UnB).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">IBEMCS: IDS Baseado em Eventos Multi-Contexto para SCADA</span>
+          </br>
+          <font color="#007A80">  Anderson D'Aquino (UFRJ), Luiz Fernando Rust da Costa Carmo (Inmetro), Luci Pirmez (UFRJ), Claudio Farias (UFRJ).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Armazenamento Seguro de Credenciais e Atributos de Usuários em Federação de Clouds</span>
+          </br>
+          <font color="#007A80"> Luciano Barreto (UFSC), Leomar Scheunemann Jr (UFSC), Joni da Silva Fraga (UFSC), Frank Siqueira (UFSC).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Determinando o Risco de Fingerprinting em Páginas Web</span>
+          </br>
+          <font color="#007A80"> Adriana Rodrigues (UFAM), Adria Menezes (UFAM), Eduardo Feitosa (UFAM).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Tramonto: Uma estratégia de recomendações para Testes de Penetração</span>
+          </br>
+          <font color="#007A80"> Daniel Bertoglio (UNISINOS), Avelino Zorzo (PUC-RS).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Uma versão não interativa do k-NN sobre dados cifrados</span>
+          </br>
+          <font color="#007A80">Hilder V. L. Pereira (Unicamp), Diego Aranha (Unicamp).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">AdC: um Mecanismo de Controle de Acesso para o Ciclo de Vida das Coisas Inteligentes</span>
+          </br>
+          <font color="#007A80">Antonio Maia (UFMG), Artur Luis (UFMG), Italo Cunha (UFMG), Michele Nogueira (UFPR), Ivan de Oliveira Nunes (UFMG), Leonardo Cotta (UFMG), Diego Aranha (Unicamp), Leonardo Oliveira (UFMG).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">TARP Fingerprinting: Um Mecanismo de Browser Fingerprinting Baseado em HTML5 Resistente a Contramedidas</span>
+          </br>
+          <font color="#007A80">Pablo Ximenes (ETICE), Márcio Correia (UFC), Patrícia Mello (Instituto Atlântico), Miguel Franklin de Castro (UFC), Rossana Andrade (UFC), Fernando Carvalho (UFC).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Sobre a Influencia dos Nós Egoístas no Descarregamento de Tráfego com Redes Oportunistas</span>
+          </br>
+          <font color="#007A80">Claiton Soares (IFTM/UFF), Igor Moraes (UFF).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Eficient Software Implementations of Fantoms</span>
+          </br>
+          <font color="#007A80">Rafael J. Cruz (Unicamp), Diego Aranha (Unicamp).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Agregação de Dados na Nuvem com Garantias de Segurança e Privacidade</span>
+          </br>
+          <font color="#007A80">Leandro José Ventura Silva (UFCG), Rodolfo Silva (UFCG), Andrey Brito (UFCG), Pedro Yóssis Silva Barbosa (UFCG).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Privacy-Preserving Techniques in Smart Metering: An Overview</span>
+          </br>
+          <font color="#007A80">Pedro Yóssis Silva Barbosa (UFCG), José Lucas Silva Freitas (UFCG), Andrey Brito (UFCG), Leandro José Ventura Silva (UFCG).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Detecção de DDoS Através da Análise da Quantificação da Recorrência Baseada na Extração de Características Dinâmicas e Clusterização Adaptativa</span>
+          </br>
+          <font color="#007A80">Marcelo Antonio Righi (UFSM), Raul Ceretta Nunes (UFSM).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">Análise e implementação de uma arquitetura iterativa com sub-pipelining de 3 estágios e datapath de 32 bits para um co-processador AES-128</span>
+          </br>
+          <font color="#007A80">Júlio Filho (Unicamp).</font></br>
+        </p>
+        </br>
+        <p>
+          <span style="font-family:DINPro-Bold">A Non-Probabilistic Time-Storage Trade-off for Unsalted Hashes</span>
+          </br>
+          <font color="#007A80">Frederico Schardong (UFRGS), Daniel Formolo (Unisinos).</font></br>
+        </p>
+        </br>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="patrocinadores" class="">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12 col-xs-12 visible-xs vertical-center text-center" style="padding-bottom: 20px;">
+        <h5>Organized by:</h5>
+        <a href="http://www.sbc.org.br" target="new"><img class="img-responsive" src="images/sbc.jpg" style="margin-right: 20px; max-height: 90px;"></a>
+        <img class="img-responsive" src="images/UFF.png" style="margin-right: 5px; max-height: 80px;">
+        <img class="img-responsive" src="images/logo-ic.png" style="max-height: 90px;">
+      </div>
+      <div class="col-lg-3 col-xs-12 vertical-center">
+          <h5 class="hidden-xs" style="margin-left: 20px;">Supported by: </h5>
+              <img class="img-responsive center-block hidden-xs" src="images/coppe.jpg" style="margin-right:5px; max-width: 90px;padding-bottom: 20px; margin-left: 20px;">
+              <img class="img-responsive center-block hidden-xs" src="images/ufrj.jpg" style="max-height: 95px;padding-bottom: 20px;">
+              <img class="img-responsive center-block hidden-xs" src="images/logo-ceseg.png" style="max-height: 85px; padding-bottom: 20px; margin-left: 10px;">
+	      <div class="row visible-xs text-center">
+                <h5>Supported by: </h5>
+                <div class="col-lg-4 col-xs-6 text-center vertical-center">
+                  <img class="img-responsive" src="images/coppe.jpg" style="margin-left: 100px; max-width: 90px;padding-bottom: 20px; padding-top: 15px;">
+                </div>
+                <div class="col-lg-4 col-xs-6 vertical-center">
+	          <img class="img-responsive" src="images/ufrj.jpg" style="margin-left: -100px; max-height: 95px;padding-bottom: 20px;">
+                </div>
+                <div class="col-lg-4 col-xs-12 vertical-center">
+                  <img class="img-responsive" src="images/logo-ceseg.png" style="margin-left: 0px; max-width: 110px;padding-bottom: 20px;">
+                </div>
+              </div>
+       </div>
+       <div class="col-lg-8 col-xs-12 vertical-center">
+         <h5 class="hidden-xs">Sponsored by:</h5>
+         <div class="row text-center">
+           <h5 class="visible-xs">Sponsored by:</h5>
+           <div class="col-lg-4 text-center col-xs-12 vertical-center">
+             Diamond<br>
+             <img class="img-reponsive center-block" src="images/logo-nic-cgi.png" style="max-width:200px; padding-bottom: 20px;">
+           </div>
+           <div class="col-lg-2 col-xs-12 text-center vertical-center">
+             Gold<br>
+            <img class="img-reponsive center-block" src="images/intel.png" style="max-width: 100px;padding-bottom: 20px; padding-top: 10px;">
+            <img class="img-reponsive center-block" src="images/logo_faperj_cor.jpg" style="max-width: 170px;padding-bottom: 20px; padding-top: 10px;">
+            <img class="img-reponsive center-block" src="images/logo-cnpq.jpg" style="max-width: 170px;padding-bottom: 20px; padding-top: 10px;">
+            <img class="img-reponsive center-block" src="images/logo-capes.png" style="max-width: 100px;padding-bottom: 20px; padding-top: 10px;">
+           </div>
+           <div class="col-lg-3 col-xs-12 text-center vertical-center">
+             Silver<br>
+             <img class="img-reponsive center-block" src="images/lgClavis.png" style="max-width: 160px; padding-top: 15px;padding-bottom: 20px;">
+             <img class="img-reponsive center-block" src="images/proppi.png" style="max-width: 160px; padding-top: 15px;padding-bottom: 20px;">
+           </div>
+           <div class="col-lg-3 col-xs-12 text-center vertical-center">
+             Bronze<br>
+             <img class="img-reponsive center-block" src="images/google.png" style="max-width: 150px; padding-top: 15px;padding-bottom: 20px;" >
+           </div>
+         </div>
+      </div>
+      <div class="col-lg-12 col-xs-12 vertical-center text-center">
+        <h6 style="padding-top: 40px;">Developed by:</h6>
+        <img class="img-responsive center-block" src="images/logoIn.png" style="max-width: 55px; padding-bottom: 20px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--<div class="col-lg-2 col-lg-offset-1 col-col-md-1 col-sm-1 col-xs-12 vertical-center">
+          <h5>Apoiado por:</h5>
+	  <img class="img-responsive" src="images/coppe.jpg" style="margin-right:10px; max-width: 90px;">
+	  <img class="img-responsive" src="images/ufrj.jpg" style="max-height: 95px;">
+      </div>
+      <div class="col-lg-7 col-lg-offset-1 col-md-1 col-sm-1 col-xs-12">
+        <h5>Patrocinado por:</h5>
+	<div class="row">
+          <div class="col-lg-2 col-md-1 col-sm-1 col-xs-12">
+	    Diamante <br>
+            <img class="img-reponsive" src="images/logo-nic-cgi.png" style="max-width:180px;">
+	  </div> 
+	 <div class="col-lg-2 col-md-1 col-sm-1 col-xs-12">
+	    Ouro <br> 
+            <img class="img-reponsive" src="images/intel.jpg" style="max-width: 90px;">
+          </div>
+	  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" style="max-width: 90px;">
+	    Prata <br>
+            <img class="img-reponsive" src="images/lgClavis.png" style="max-width: 90px;">
+          </div>
+	  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" style="max-width: 90px;">
+	    Bronze <br>
+            <img class="img-reponsive" src="images/google.png">
+          </div> 
+        </div>
+      </div>
+      <div class="col-lg-1 col-lg-offset-1 col-md-1 col-sm-1 col-xs-12 vertical-center text-center">
+        <h6>Desenvolvido por:</h6>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+	
+		<!--FIM MENU TOPO-->
+
+	
+
+	<script src="js/jquery-1.12.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/mapa.js"></script>
+ 	<script src="js/bootstrap.min.js"></script>
+ 	<script src="js/prototipo.js"></script>
+ 	<script src="js/tradutor.js"></script>
+ 	    
+ 	
+	</body>
+</html>

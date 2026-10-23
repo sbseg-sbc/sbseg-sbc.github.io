@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="shortcut icon" type="image/png" href="../pt/images/favicon.png"/>
+    <title> SBSeg16 - XVI  Brazilian Symposium on Information and Computational Systems Security</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/prototipo.css">
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script>
+      $(function(){   
+        var nav = $('#menuHeader');   
+	$(window).scroll(function () { 
+          if ($(this).scrollTop() > 1) { 
+	    nav.addClass("navbar-fixed-top navbar-float menuFixo"); 
+	  } 
+          else { 
+            nav.removeClass("navbar-fixed-top navbar-float menuFixo"); 
+	  } 
+        });  
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="navbar-fixed-top container-blankBackground hidden-xs">
+      <div class="row">
+        <div class="col-lg-6 col-md-4 col-sm-12 col-xs-6" style="margin-left: 50px;">
+          <img src="images/logo1.png" class="img-responsive imgTopo" style="margin-right: 10px; ">
+          <img src="images/logo2-eng.png" class="img-responsive imgTopo2" alt="logoSbseg">
+        </div>
+        <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12 col-xs-6">	
+          <h5>Realizado por</h5>
+            <a href="http://www.sbc.org.br" target="new"><img class="img-responsive" src="images/sbc.jpg" style="margin-right: 20px; max-height: 90px;"></a>
+            <img class="img-responsive" src="images/UFF.png" style="margin-right: 5px; max-height: 80px;">
+            <img class="img-responsive" src="images/logo-ic.png" style="max-height: 90px;">
+        </div>	
+        <div class="col-lg-1 col-md-4 col-sm-12 col-xs-12" style="margin-left: 40px; padding-top: 50px;">	
+          <a href="chamadas.html#"><img id="btTradutorEn" src="images/Brasil.png" class="img-responsive" style="max-width: 30px;" onclick= "traducaoPt()" /></a></br>
+	  <!-- <a href="#"><img id="btTradutorEn" src="images/Inglaterra.png" class="img-responsive" style="max-width: 30px;" onclick= "traducaoEn()" /></a> -->
+          <a href="https://www.facebook.com/sbseg2016" target="new"><img id="btTradutorEn" src="images/facebook.jpg" class="img-responsive" style="max-width: 30px; padding-top: 5px;"></a>
+        </div>
+      </div>
+    </div> 
+    
+    <section id="headerCont" class="hidden-xs">	
+      <div class="bkPic2">
+ <!--       <div class="container-fluid bkColor">
+	 </div> -->
+      </div>
+    </section>
+
+    <header>					
+      <nav id="menuHeader" class="navbar navbar-default hidden-xs">
+        <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	  </div>		
+	  <div class="navbar-collapse collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav" style="text-align:center;">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="evento.html">ANNALS</a></li>
+              <li><a href="chamadas.html">CALL FOR PAPERS</a></li>
+              <li><a href="comite.html">COMMITTEE</a></li>
+              <li><a href="palestrantes.html">SPEAKERS</a></li>
+              <li><a href="programacao.html">PROGRAM</a></li>
+              <li><a href="local.html">VENUE</a></li>
+              <li><a href="contato.html">CONTACT US</a></li>
+              <li class="liDif"><a class="inscreve" href="inscricoes.html">REGISTRATION</a></li>
+	    </ul>
+	  </div>
+	</div>	
+      </nav>	
+      <nav id="menuHeaderCel" class="navbar navbar-default navbar-fixed-top visible-xs">
+        <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+            <a href="index.html"><img src="images/SimplificadaNegativa.png" class="img-responsive visible-xs" style="max-width: 120px;"></a>
+	  </div>		
+	  <div class="navbar-collapse collapse" id="navbar-collapse-2">
+          <ul class="nav navbar-nav" style="text-align:center;">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="chamadas.html">CALL FOR PAPERS</a></li>
+              <li><a href="comite.html">COMMITTEE</a></li>
+              <li><a href="palestrantes.html">SPEAKERS</a></li>
+              <li><a href="programacao.html">PROGRAM</a></li>
+              <li><a href="local.html">VENUE</a></li>
+              <li><a href="contato.html">CONTACT US</a></li>
+              <li class="liDif"><a class="inscreve" href="inscricoes.html">REGISTRATION</a></li>
+            </ul>
+	  </div>
+	</div>	
+      </nav>	
+    </header>
+  </body>
+</html>
+<section id="ConteudoBox">
+	<div class="container-fluid">
+		<div class="col-md-12">
+			<div class="caixa1">
+				<h1 style="padding-left: 10px;">Call for papers</h1>
+
+
+
+					<h4 data-toggle="collapse" role="button" href="#artCompletos" aria-expanded="false" aria-controls="artCompletos">
+						<i class="glyphicon glyphicon-collapse-down"></i> Full papers
+					</h4>
+					<div class="collapse" id="artCompletos">
+						</br>
+
+                                                <p style="font-family:DINPro-Bold">THE SELECTED PAPERS ARE <a href="sbseg16-aceitos.html" style="color:rgb(222,123,50);">AVAILABLE</a>.</p>
+						<p style="font-family:DINPro-Bold;">IMPORTANT DATES</p>
+							<p align="justify">
+							<font color="#DE7B32"><span style="font-family:DINPro-Bold">Registration: </span><del>June 15th</del> <del>29th </del><span style="font-family: DINPro-Bold">July 3rd</font></span></br>
+							<font color="#DE7B32"><span style="font-family:DINPro-Bold">Submission: </span><del>June 19th</del><span style="font-family:DINPro-Bold"> July 3rd </font></span></br>
+							<font color="#007A80">Notification of acceptance: September 12th</font></br>
+							<font color="#007A80">Final version: September 26th</font></br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">TOPICS OF INTEREST</p>
+							<p align="justify">
+							The main theme is the security of information and computer systems. In this context, we highlight the following topics, not exhaustive:</br>
+							</p>
+							<ul>
+								<li> Access control models and mechanisms</li>
+								<li> Anonymity and privacy</li>
+								<li> Authentication and identity management</li>
+								<li> Biometric identification systems and techniques</li>
+								<li> Computational forensics and criminalistics</li>
+								<li> Cryptography and cryptanalysis: algorithms, protocols, techniques, and applications</li>
+								<li> Intellectual property protection and DRM</li>
+								<li> Secure hardware: RFID, smart cards, secure sensors</li>
+								<li> Secure Voting systems</li>
+								<li> Security and privacy in applications (digital TV, e-banking, social networks, smart grids)</li>
+								<li> Security incidents: prevention, detection, and response</li>
+								<li> Security in cloud computing</li>
+								<li> Security in databases</li>
+								<li> Security in distributed and parallel systems</li>
+								<li> Security in mobile and embedded systems</li>
+								<li> Security in networks</li>
+								<li> Security in operating systems</li>
+								<li> Security in pervasive computing</li>
+								<li> Security in the Internet of Things</li>
+								<li> Security policies, standards, and norms</li>
+								<li> Software security: development, tests, and certification</li>
+								<li> System audit and risk analysis</li>
+								<li> Trust management</li>
+							</ul>
+						</br>
+						<p style="font-family:DINPro-Bold">INSTRUCTIONS TO AUTHORS</p>
+							<p align="justify">
+							This call refers only to full papers, which should present a research work developed to the point of producing original and relevant results, fully analyzed and validated. Moreover, the paper's presentation should contain a careful and well-based description of the research, as well as conclusions which are consistent with the obtained results. Submitted papers should describe relevant research, experiment reports and case studies.</br>
+							</br>
+							<span style="font-family:DINPro-Bold">All submissions must be anonymous</span>, that is, they should not reveal information in the header, body or references that could easily be used to infer the authors' identities.</br>
+							</br>
+							Articles can be submitted in Portuguese or English. Text formatting should adhere to the SBC template available <a href="http://tinyurl.com/sbc-template-artigos" target="new" style="color:rgb(0,122,128)">here</a>. Full papers have a limit of 14 pages, including figures, tables, references and appendix. Submissions will be accepted solely only in PDF format, through <a href="https://submissoes.sbc.org.br/home.cgi?c=2503" target="new" style="color:rgb(0,122,128)">SBC's JEMS system</a>.</br>
+							</br>
+							Papers will undergo a double-blind review process by the Program Committee. Accepted papers must be presented by one of the registered authors in order to be published in the conference proceedings. The PC will also select the best among the accepted and presented full papers.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">PROGRAM COMMITTEE</p>
+							<span style="font-family:DINPro-Bold"> Program committee chairs</span></br>
+							Leonardo B. Oliveira, UFMG</br>
+							Pedro Braconnot Velloso, UFRJ</br>
+							</br>
+							<span style="font-family:DINPro-Bold">Program committee members</span></br>
+							Alberto Schaeffer Filho, UFRGS</br>
+							Aldri dos Santos, UFPR</br>
+							Altair Olivo Santin, PUCPR</br>
+							Anderson Nascimento, UnB</br>
+							André Grégio, UFPR</br>
+							Carla Merkle Westphall, UFSC</br>
+                                                        Carlos da Silva, UFRN </br>
+							Carlos Maziero, UTFPR/UFPR</br>
+							Carlos Westphall, UFSC</br>
+							Célio Vinicius Neves de Albuquerque, UFF</br>
+							Davidson Boccardo, INMETRO</br>
+							Denise Goya, UFABC</br>
+							Diego Aranha, UNICAMP</br>
+							Dorgival Guedes, UFMG</br>
+                                                        Edna Canedo, UnB</br>
+							Eduardo Alchieri, UnB</br>
+							Eduardo Feitosa, UFAM</br>
+							Eduardo Góes, DPF</br>
+							Eduardo Souto, UFAM</br>
+							Emerson Ribeiro de Mello, IFSC</br>
+							Hao Chi Wong, Intel</br>
+							Jean Martina, UFSC</br>
+							Jeroen van de Graaf, UFMG</br>
+							Joaquim Celestino Júnior, UECE</br>
+							Karina Mochetti, UFF</br>
+							Lau Cheuk Lung, UFSC</br>
+							Leonardo Fagundes, UNISINOS</br>
+							Leonardo Oliveira, UFMG</br>
+							Lisandro Zambenedetti Granville, UFRGS</br>
+							Luciano Paschoal Gaspary, UFRGS</br>
+							Luiz Carlos Albini, UFPR</br>
+							Luiz Fernando Rust da Costa Carmo, INMETRO</br>
+							Marco Aurelio Amaral Henriques, UNICAMP</br>
+							Marcos Simplicio Jr, Poli-USP</br>
+							Marinho Barcellos, UFRGS</br>
+                                                        Marjory da Costa Abreu, UFRN </br>
+							Mário Sérgio Alvim, UFMG</br>
+							Michele Nogueira, UFPR</br>
+							Michelle Wangham, UNIVALI</br>
+							Miguel Elias Mitre Campista, UFRJ</br>
+							Otto Carlos Muniz Bandeira Duarte, UFRJ</br>
+							Paulo André da Silva Gonçalves, UFPE</br>
+							Paulo Lício de Geus, UNICAMP</br>
+							Pedro Braconnot Velloso, UFRJ</br>
+							Priscila Solis, UnB</br>
+                                                        Rafael de Sousa Junior, UnB</br>
+							Rafael Misoczki, Intel Labs - USA</br>
+							Raphael Machado, INMETRO</br>
+							Raul Ceretta Nunes, UFSM</br>
+							Raul Weber, UFRGS</br>
+							Ricardo Custódio, UFSC</br>
+							Ricardo Dahab, UNICAMP</br>
+							Roberto Gallo, KRYPTUS Segurança da Informação</br>
+							Rossana Andrade, UFC</br>
+							Routo Terada, IME-USP</br>
+							Sergio de Oliveira, UFSJ</br>
+						</br>
+					</div>
+
+
+
+					<h4 data-toggle="collapse" role="button" href="#minicursos" aria-expanded="false" aria-controls="minicursos">
+						<i class="glyphicon glyphicon-collapse-down"></i> Tutorials
+					</h4>
+					<div class="collapse" id="minicursos">
+						</br>
+                                                <p style="font-family:DINPro-Bold">THE SELECTED TUTORIALS ARE <a href="mc-aceitos.html" style="color:rgb(222,123,50);">AVAILABLE</a>.</p>
+						<p style="font-family:DINPro-Bold">IMPORTANT DATES</p>
+							<p align="justify">
+
+                                                        <font color="#DE7B32"><span style="font-family:DINPro-Bold">Submission: June </span><del>13th</del><span style="font-family:DINPro-Bold"> 27th </font></span></br>
+							<font color="#007A80">Notification of acceptance: July 20th</font></span></br>
+							<font color="#007A80">Final version: September 15th</font></span></br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">PRESENTATION</p>
+							<p align="justify">
+							Tutorials aim to address important subjects that are usually not covered by undergraduate courses in the security area. The SBSeg committee will prioritize current themes and with great potential to attract undergraduate students and professionals. The tutorial must be in Portuguese (text and presentation). The presentation may include laboratory practice and it has to fit at most in three hours and thirty minutes.</br>
+							</br>
+							If you have any questions about this opportunity or the application process, please contact Michel Abdalla by email <span style="color:rgb(0,122,128)">michel.abdalla@ens.fr</span>.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">TOPICS OF INTEREST</p>
+							<ul>
+								<li>Access control models and mechanisms</li>
+								<li>Anonymity and privacy</li>
+								<li>Authentication and identity management</li>
+								<li>Biometric identification systems and techniques</li>
+								<li>Computational forensics and criminalistics</li>
+								<li>Cryptography and cryptanalysis: algorithms, protocols, techniques, and applications</li>
+								<li>Intellectual property protection and DRM</li>
+								<li>Secure hardware: RFID, smart cards, secure sensors</li>
+								<li>Secure Voting systems</li>
+								<li>Security and privacy in applications (digital TV, e-banking, social networks, smart grids)</li>
+								<li>Security incidents: prevention, detection, and response</li>
+								<li>Security in cloud computing</li>
+								<li>Security in databases</li>
+								<li>Security in distributed and parallel systems</li>
+								<li>Security in mobile and embedded systems</li>
+								<li>Security in networks</li>
+								<li>Security in operating systems</li>
+								<li>Security in pervasive computing</li>
+								<li>Security in the Internet of Things</li>
+								<li>Security policies, standards, and norms</li>
+								<li>Software security: development, tests, and certification</li>
+								<li>System audit and risk analysis</li>
+								<li>Trust management</li>
+							</ul>
+						</br>
+						<p style="font-family:DINPro-Bold">INSTRUCTIONS TO AUTHORS</p>
+							<p align="justify">
+							Instructions are only available in <a href="../pt/chamadas.html" style="color:rgb(0,122,128)">Portuguese</a>.</br>
+							</p>
+						<!-- informações somente na página em português
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						-->
+						</br>
+						<p style="font-family:DINPro-Bold">PROGRAM COMMITTEE</p>
+							<span style="font-family:DINPro-Bold">Tutorials Chair</span></br>
+							Michel Abdalla (ENS &amp; CNRS)</br>
+							</br>
+							<span style="font-family:DINPro-Bold">Program committee members</span></br>
+							Altair Santin, PUCPR</br>
+							Célio Vinicius Neves de Albuquerque, UFF</br>
+							Eduardo Feitosa, UFAM</br>
+							Leonardo Oliveira, UFMG</br>
+							Luis Kowada, UFF</br>
+							Luis Henrique Costa, UFRJ</br>
+							Luiz Fernando Rust da Costa Carmo, Inmetro</br>
+							Marcos Simplicio Jr - Escola Politécnica, USP</br>
+							Michelle Wangham, Univali</br>
+							Ricardo Dahab, UNICAMP</br>
+							Rossana Andrade, UFC</br>
+						</br>
+					</div>
+
+
+
+					<h4 data-toggle="collapse" role="button" href="#ctdseg" aria-expanded="false" aria-controls="ctdseg">
+						<i class="glyphicon glyphicon-collapse-down"></i> CTDSeg - IV  Contest of Theses and Dissertations in Security
+					</h4>
+					<div class="collapse" id="ctdseg">
+						</br>
+
+                                                <p style="font-family:DINPro-Bold">THE SELECTED PAPERS ARE <a href="ctdseg-aceitos.html" style="color:rgb(222,123,50);">AVAILABLE</a>.</p>
+						<p style="font-family:DINPro-Bold">IMPORTANT DATES</p>
+							<p align="justify">
+							<font color="#DE7B32"><span style="font-family:DINPro-Bold">Submission:</span> <del>July 18th</del> <span style="font-family:DINPro-Bold"> August 1st</span></font></br>
+							<font color="#007A80">Notification of acceptance: <del>August 24th</del> September 7th</font></span></br>
+							<font color="#007A80">Final version: September <del>14th</del> 28th</font></br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">PRESENTATION</p>
+							<p align="justify">
+							The Contest of Theses and Dissertations on Information and Computational Systems Security (CTDSeg), part of SBSeg, aims to acknowledge and reward the best doctoral theses and best post-graduate dissertations in the security field. Researchers are invited to submit a summary paper which describes and summarizes the results concluded in their thesis or dissertation. Theses and dissertations completed between August 2014 to June 2016 are eligible for submission. The contest will award the determined three best doctoral theses and the three best post-graduate dissertations.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">INSTRUCTIONS TO AUTHORS</p>
+							<p align="justify">
+							Submitted paper summaries must be written in either Portuguese or English with a maximum page limit of 8 pages. Paper summaries should be formatted based on SBC’s formatting guidelines, available <a href="http://tinyurl.com/sbc-template-artigos" target="new"style="color:rgb(0,122,128)">here</a>. Paper summaries in PDF file form must be submitted through <a href="https://submissoes.sbc.org.br" target="new" style="color:rgb(0,122,128)">SBC’s JEMS portal</a>.</br>
+							</br>
+							The author must discuss the thesis’s or dissertation’s contribution to its intended academic field as well as it’s thematic originally. The summary must also include the following items: the title of the thesis or dissertation, the author’s name, name of supervisor(s) and co-supervisor(s) and their affiliations, the original abstract, motivations, goals, achievements, associated scientific work, and the web address where an official copy of the thesis or dissertation is published and available for view.</br>
+							</br>
+							All submissions must have three files (in PDF format): paper summary, Declaration of Completion for the related thesis or dissertation and the thesis or dissertation. The statement must explicitly state that the candidate’s work was approved and successfully defended. The statement must also indicate the location and date of the defense, the supervisor’s name, and database location.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">TOPICS OF INTEREST</p>
+							<p align="justify">
+							In order to be eligible for consideration, submitted theses and dissertations must be related to a topic in the field of Information and Computational Systems Security.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">EVALUATION</p>
+							<p align="justify">
+							The paper summaries for an applicant’s thesis or dissertation will undergo an initial evaluation by three research experts on SBSeg’s Program Committee. The paper summaries accepted from the initial evaluation stage will be published in the SBSeg symposium proceedings. Furthermore, the principal author must present their thesis or dissertation at the CTDSeg. At CTDSeg, the contest’s Evaluation Committee will review the completed thesis or dissertation and evaluate the applicant’s oral presentation in order to determine the three best doctoral thesis and post-graduate dissertation contestants.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">ORGANIZING COMMITTEE</p>
+							<span style="font-family:DINPro-Bold">CTDSeg Chairs</span></br>
+							Diego F. Aranha, UNICAMP</br>
+							Luciano Paschoal Gaspary, UFRGS</br>
+							</br>
+							<span style="font-family:DINPro-Bold">Program committee members</span></br>
+							TBA</br>
+						</br>
+					</div>
+
+
+
+					<h4 data-toggle="collapse" role="button" href="#wticg" aria-expanded="false" aria-controls="wticg">
+						<i class="glyphicon glyphicon-collapse-down"></i> WTICG - X Workshop on Scientific Initiation and Undergraduate Degree
+					</h4>
+					<div class="collapse" id="wticg">
+						</br>
+
+                                                <p style="font-family:DINPro-Bold">THE SELECTED PAPERS ARE <a href="wticg-aceitos.html" style="color:rgb(222,123,50);">AVAILABLE</a>.</p>
+						<p style="font-family:DINPro-Bold">IMPORTANT DATES</p>
+							<p align="justify">
+							<font color="#DE7B32"><span style="font-family:DINPro-Bold">Submission: July </span><del>15th</del><span style="font-family:DINPro-Bold"> 22th</font></span></br>
+							<font color="#007A80">Notification of Acceptance: August 19th</font></span></br>
+							<font color="#007A80">Final version: September 09th</font></br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">PRESENTATION</p>
+							<p align="justify">
+							The Workshop on Scientific Initiation and Undergraduate Degree (WTICG), a joint event with Brazilian Symposium on Information and Computational Systems Security (SBSeg), aims to encourage new graduates and undergraduates to participate in the production and dissemination of scientific papers on topics related to information and computational systems security.</br>
+							</br>
+							WTICG 2016 will be held in conjunction with SBSeg 2016 in Niterói, RJ, from November 7, 2016 to November 10, 2016. Undergraduate students currently enrolled in university and recent graduates who completed their undergraduate course work from January 1, 2015 are invited to participate in WTICG 2016 (the status of undergraduate student or recent graduate must be proven with proper documentation, to be sent with the paper submission). Authors are invited to submit papers related to Scientific Initiation (IC) projects, completion of course work (TCC), software implementations, and independent projects completed in the years 2015 and 2016 or that are in the final stages of completion. Work completed must be submitted on the category ''Full paper''. Work in progress must be submitted on the category ''Poster''.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">TOPICS OF INTEREST</p>
+							<ul>
+								<li>Access control models and mechanisms</li>
+								<li>Anonymity and privacy</li>
+								<li>Authentication and identity management</li>
+								<li>Biometric identification systems and techniques</li>
+								<li>Computational forensics and criminalistics</li>
+								<li>Cryptography and cryptanalysis: algorithms, protocols, techniques, and applications</li>
+								<li>Intellectual property protection and DRM</li>
+								<li>Secure hardware: RFID, smart cards, secure sensors</li>
+								<li>Secure Voting systems</li>
+								<li>Security and privacy in applications (digital TV, e-banking, social networks, smart grids)</li>
+								<li>Security incidents: prevention, detection, and response</li>
+								<li>Security in cloud computing</li>
+								<li>Security in databases</li>
+								<li>Security in distributed and parallel systems</li>
+								<li>Security in mobile and embedded systems</li>
+								<li>Security in networks</li>
+								<li>Security in operating systems</li>
+								<li>Security in pervasive computing</li>
+								<li>Security in the Internet of Things</li>
+								<li>Security policies, standards, and norms</li>
+								<li>Software security: development, tests, and certification</li>
+								<li>System audit and risk analysis</li>
+								<li>Trust management</li>
+							</ul>
+						</br>
+						<p style="font-family:DINPro-Bold">FULL PAPER</p>
+							<p align="justify">
+							Submitted papers may be written in Portuguese or English with a maximum length of 10 pages. Papers must be formatted based on SBC's formatting guidelines, available <a href="http://goo.gl/3vjRWk" target="new" style="color:rgb(0,122,128)">here</a>. Papers must be submitted through <a href="https://jems.sbc.org.br/home.cgi?c=2582" target="new" style="color:rgb(0,122,128)">SBC’s JEMS portal</a> only in PDF format.</br>
+							</br>
+							The following criteria will be used in the evaluation of submitted papers: originality, relevance, presentation, results and technical quality. Submissions selected by the Program Committee will be published (in digital form), provided that at least one of the papers’ authors is registered for the workshop. All papers selected for publication must be presented during the workshop by one of the authors.</br>
+							</br>
+							During the event, the three best works on the category ''Full Paper'' will be announced. Works that are candidates to win the awards are the ones presented by undergraduate students or recent graduates.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">POSTER</p>
+							<p align="justify">
+							Submitted papers may be written in Portuguese or English with a maximum length of 4 pages. Papers must be formatted based on SBC's formatting guidelines, available <a href="http://goo.gl/3vjRWk" target="new"style="color:rgb(0,122,128)">here</a>. Papers must be submitted through <a href="https://jems.sbc.org.br/home.cgi?c=2582" target="new"style="color:rgb(0,122,128)">SBC’s JEMS portal</a> only in PDF format.</br>
+							</br>
+							This category is intended to work in progress, without consolidated results. The following criteria will be used in the evaluation of submitted papers: originality, relevance, presentation, partial results and technical quality. Submissions selected by the Program Committee will be published (in digital form), provided that at least one of the papers’ authors is registered for the workshop. All papers selected for publication must be presented during the workshop by one of the authors.</br>
+							</br>
+							During the event, the best work on the category ''Poster'' will be announced. Works that are candidates to win the award are the ones presented by undergraduate students or recent graduates.
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">ORGANIZING COMMITTEE</p>
+							<span style="font-family:DINPro-Bold">WTICG Chair</span></br>
+							Daniel Macêdo Batista, USP</br>
+							</br>
+							<span style="font-family:DINPro-Bold">Program committee members</span></br>
+							Altair Santin, PUCPR</br>
+							Anderson Nascimento, UnB</br>
+							Andre Gustavo Degraf Uchoa, The University of York</br>
+							Arlindo Marcon Jr., IFPR</br>
+							Carla Merkle Westphall, UFSC</br>
+							Carlos Maziero, UFPR</br>
+							Diego Aranha, Unicamp</br>
+							Edna Dias Canedo, UnB</br>
+							Eduardo Feitosa, UFAM</br>
+							Eduardo Souto, UFAM</br>
+							Emerson Ribeiro de Mello, IFSC</br>
+							Heverson B. Ribeiro, Université de Neuchâtel</br>
+							Iguatemi E. Fonseca, UFPB</br>
+							João Gondim, UnB</br>
+							Jose Antonio Xexeo, IME</br>
+							Lau Cheuk Lung, UFSC</br>
+							Leonardo B. Oliveira, UFMG</br>
+							Lisandro Zambenedetti Granville, UFRGS</br>
+							Luiz Fernando Rust da Costa Carmo, Inmetro</br>
+							Marcos Simplicio Jr, USP</br>
+							Michelle Wangham , UNIVALI</br>
+							Paulo André da Silva Gonçalves, UFPE</br>
+							Priscila Solis, UnB</br>
+							Rafael Obelheiro, UDESC</br>
+							Raphael Machado, Inmetro</br>
+							Raul Ceretta Nunes, UFSM</br>
+							Ricardo Custódio, UFSC</br>
+							Rossana Andrade, UFC</br>
+							Vivek Nigam, UFPB</br>
+							William de Souza, University of London</br>
+						</br>
+					</div>
+
+
+
+					<h4 data-toggle="collapse" role="button" href="#wgid" aria-expanded="false" aria-controls="wgid">
+						<i class="glyphicon glyphicon-collapse-down"></i> WGID - VI Workshop on Digital Identity Management
+					</h4>
+					<div class="collapse" id="wgid">
+						</br>
+						<p style="font-family:DINPro-Bold">IMPORTANT DATES</p>
+							<p align="justify">
+							<!-- <font color="#DE7B32"><span style="font-family:DINPro-Bold">Submission: September 13th</font></span></br> -->
+
+							<font color="#DE7B32"><span style="font-family:DINPro-Bold">Submission: September </span><del>13th</del><del>23th</del><span style="font-family:DINPro-Bold"> 30th</font></span></br>
+							<font color="#007A80">Notification of Acceptance: October 14th</font></span></br>
+							<font color="#007A80">Final Version: October 21th</font></br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">PRESENTATION</p>
+							<p align="justify">
+							Identity Management consists of an integrated system of policies, processes and technologies that enables organizations to treat and handle users and devices identities in authentication, authorization, accounting and auditing procedures.</br>
+							</br>
+							This is an active research topic and, given its complexity and relevance, should continue from now on. This finding stems from the numerous technical issues that identity management systems should consider such as: ease of use, privacy and user anonymity, security, single sign on, scalability, fine-grained access control (based on attributes), interoperability and system costs (total cost of ownership).</br>
+							</br>
+							The 6th Workshop on Digital Identity Management (WGID) aims to be a forum for discussion and technical paper presentations around the state of the art on technologies related to identity management. In addition, it seeks also to identify research challenges and enable the meeting of researchers on this subject.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">TOPICS OF INTEREST</p>
+							<p align="justify">
+							Authors are invited to submit original works on digital identity management. Topics of interest include (but are not limited to):</br>
+							</p>
+							<ul>
+								<li>Federated mobile access and mobile certification</li>
+								<li>Attribute aggregation</li>
+								<li>Reference Architectures and Frameworks for IdM</li>
+								<li>Auditing in IdM systems</li>
+								<li>Authentication Single Sign On</li>
+								<li>Devices Authentication</li>
+								<li>Authentication and access control for non-web applications and mobile computing</li>
+								<li>Digital Certification</li>
+								<li>Attribute Certificates</li>
+								<li>Life cycle of digital identities (provisioning and administration)</li>
+								<li>Attribute Based Access Control (ABAC)</li>
+								<li>Developing applications using infrastructure of A&A provided by federations</li>
+								<li>Scalability in IdM systems</li>
+								<li>Academic Networks Federations</li>
+								<li>Tools for federations management and monitoring</li>
+								<li>Trust Management in IdM systems</li>
+								<li>Attributes Management</li>
+								<li>Management of A&A in interinstitutional projects</li>
+								<li>User-centric Identity Management</li>
+								<li>Identity Management and Cloud Computing</li>
+								<li>Identity Management and Electronic Government</li>
+								<li>Identity Management and Computational Grids</li>
+								<li>Identity Management and Internet of Things</li>
+								<li>Federated Identity Management</li>
+                                                                <li>Electronic Identity</li>
+								<li>Interoperability between IdM systems</li>
+								<li>Level of Assurance on IdM</li>
+								<li>New approaches to authentication and access control</li>
+								<li>Privacy and anonymity of IdM systems</li>
+								<li>Authentication and Authorization Protocols</li>
+								<li>Social Networks and Digital Identities</li>
+								<li>Techniques for preventing fraud and identity theft</li>
+								<li>Usability in Identity Management technologies</li>
+							</ul>
+						</br>
+						<p style="font-family:DINPro-Bold">WORKSHOP FORMAT</p>
+							<p align="justify">
+							WGID will include the presentation of papers accepted for publication, invited lectures, and a panel discussion.</br>
+                                                        </p>
+						<p style="font-family:DINPro-Bold">INSTRUCTIONS TO AUTHORS</p>
+							<p align="justify">
+							Articles can be submitted in two categories:</br>
+							</br>
+							<span style="font-family:DINPro-Bold">Full papers:</span> A full paper presents research work with original and relevant results, adequately validated and analyzed. Full papers are limited to 12 pages, including all figures, tables, references, and appendices. </br>
+							</br>
+							<span style="font-family:DINPro-Bold">Short papers:</span> Short papers describe ongoing research, computer tools, and practical experiments. Short papers are up to 4 pages long. Papers describing tools and experiments should contain the following information: problem statement and motivation; architecture and description of the main features; URLs for the tool and its documentation; description of eventual demonstrations.</br>
+							</br>
+							Paper formatting should follow the SBC template, available <a href="http://tinyurl.com/sbc-template-artigos" target="new" style="color:rgb(0,122,128)">here</a>. Papers should be submitted as PDF files <a href="https://submissoes.sbc.org.br/home.cgi?c=2647" style="color:rgb(0,122,128)">SBC's JEMS system</a>.</br>
+							</br>
+							After submission to WGID, full and short papers will be evaluated by a body of reviewers in a double-blind manner (without any identification about authors, reviewers or institutions) and the selected works will be organized for presentation and publication in the symposium proceedings. At least one author of each selected paper should register in the Brazilian Symposium on Information and Computational Systems Security and appear at the time and place to be announced in the event program to present the work.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">ORGANIZING COMMITTEE</p>
+						  <span style="font-family:DINPro-Bold">WGID chair</span></br>
+		                                  Michelle S. Wangham, UNIVALI</br>
+                                                 </br>
+						  <span style="font-family:DINPro-Bold">Program committee members</span></br>
+                                                        Altair Santin, PUC-PR</br>
+Antonio Tadeu Gomes, LNCC</br>
+Carlos da Silva, UFRN</br>                      
+Carlos Ferraz, UFPE</br>
+Debora Muchaluat-Saade, UFF</br>
+Emerson Ribeiro de Mello, IFSC</br>
+Fábio Borges, LNCC</br>
+Flavio Deus, UnB</br>
+Gustavo Motta, UFPB</br>
+Jean Martina UFSC</br>
+Leonardo Oliveira, UFMG</br>
+Marco Aurélio Amaral Henriques, UNICAMP</br>
+Michelle Wangham, UNIVALI</br>
+Natália Fernandes, UFF</br>
+Noemi Rodriguez, PUC-Rio</br>
+Rafael de Sousa Junior, UnB</br>
+Ricardo Custódio, UFSC</br>
+Ricardo Dahab, UNICAMP</br>
+Roberto Samarone Araujo, UFPA</br>
+Vinod Rebello, UFF</br>
+		                </br>
+					</div>
+
+
+
+					<h4 data-toggle="collapse" role="button" href="#wfc" aria-expanded="false" aria-controls="wfc">
+						<i class="glyphicon glyphicon-collapse-down"></i> WFC - V Workshop on Computer Forensics
+					</h4>
+					<div class="collapse" id="wfc">
+						</br>
+						<p style="font-family:DINPro-Bold">IMPORTANT DATES</p>
+							<p align="justify">
+							<!-- <font color="#DE7B32"><span style="font-family:DINPro-Bold">Submission: September 13th</font></span></br> -->
+
+							<font color="#DE7B32"><span style="font-family:DINPro-Bold">Submission: September </span><del>13th</del><span style="font-family:DINPro-Bold"> 23th</font></span></br>
+							<font color="#007A80">Notification of Acceptance: October 14th</font></span></br>
+							<font color="#007A80">Final Version: October 21th</font></br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">PRESENTATION</p>
+							<p align="justify">
+							The popularization of the Internet and the proliferation of electronic data processing and communication devices have made technology an ever-increasing part of people's lives. At the same time it opens a virtually infinite spectrum of possibilities for interaction and collaboration, it also creates opportunities for committing different types of crimes. The field of computer forensics is concerned with collecting, extracting, preserving and analysing digital evidence to support investigative and audit procedures. The challenges are great, including several technological, legal and social barriers that have to be overcome, as well as the need for providing professionals with the skills required to work in this area.</br>
+							</br>
+							The V Workshop on Computer Forensics (WFC) aims to be a forum for discussions and technical paper presentations around the state of the art on technologies related to computer forensics. In addition, it also seeks to identify research challenges and foster the integration of researchers and professionals interested in computer forensics.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">TOPICS OF INTEREST</p>
+							<p align="justify">
+							Authors are invited to submit original works related to computer forensics. Topics of interest include (but are not limited to):</br>
+							</p>
+							<ul>
+								<li>Advance Persistent Threat (APT) campaign analysis</li>
+								<li>Anti-forensics and anti-anti-forensics</li>
+								<li>Big Data approaches to forensics, including collection, data mining, and visualization</li>
+								<li>Case studies and trend reports</li>
+								<li>Crime monitoring and detection tools</li>
+								<li>Data hiding and discovery (steganography and steganalysis)</li>
+								<li>Data recovery and reconstruction</li>
+								<li>Database forensics</li>
+								<li>Digital crime</li>
+								<li>Digital evidence and the law</li>
+								<li>Digital evidence storage and preservation</li>
+								<li>Event reconstruction methods and tools</li>
+								<li>ICS/SCADA forensics</li>
+								<li>Internet-of-Things (IoT) forensics (IP cameras, smart TVs, videogames)</li>
+								<li>Interpersonal communications and social network analysis</li>
+								<li>Large-scale investigations</li>
+								<li>Malware forensics and attribution</li>
+								<li>Memory forensics</li>
+								<li>Mobile and embedded device forensics</li>
+								<li>Multimedia forensics</li>
+								<li>Network and distributed systems forensics</li>
+								<li>Point-of-Sale (PoS) malware analysis</li>
+								<li>Pornography and child pornography detection</li>
+								<li>Real-time incident response and analysis</li>
+								<li>Storage forensics</li>
+								<li>Tool testing and development</li>
+								<li>Traffic analysis, traceback and attribution</li>
+								<li>Virtualized environment forensics (virtual machines and cloud computing)</li>
+								<!-- há um tópico a menos em inglês -->
+							</ul>
+						</br>		
+						<p style="font-family:DINPro-Bold">INSTRUCTIONS TO AUTHORS</p>
+							<p align="justify">
+							WFC will include the presentation of papers accepted for publication, invited lectures and a forensics challenge. Papers can be submitted in two categories:</br>
+							</br>
+							<span style="font-family:DINPro-Bold">Full papers:</span> A complete article describes in up to 12 pages (including figures, tables, references, appendices and attachments) a research work that has been developed to the point of producing original and relevant results, properly validated and analyzed.</br>
+							</br>
+							<span style="font-family:DINPro-Bold">Short papers:</span> A short paper describes in up to 4 pages (including figures, tables, references, appendices and attachments) a research work in progress or a computational tool and / or practical experiments. In the case of tools and / or experiments, the abstract should contain at least the following information: description and motivation of the problem addressed by the tool; solution's architecture and description of the main features; tool's URL; tool documentation's URL and description of a possible demonstration.</br>
+							</br>
+							The formatting of the text should follow the pattern of SBC, available <a href="http://tinyurl.com/sbc-template-artigos" target="new" style="color:rgb(0,122,128)">here</a> and shall not contain the names of the authors, affiliation, aknowledgements or any other obvious reference to authorship. Papers must be submitted in English or Portuguese through <a href="https://submissoes.sbc.org.br/home.cgi?c=2648" style="color:rgb(0,122,128)">SBC's JEMS system</a> and shall be exclusively in PDF format.</br>
+							</br>
+							Papers must be written in English or Portuguese, and must be anonymized: remember to remove authors' names and other revealing information prior to submission. All submissions will be evaluated by a body of reviewers in a double-blind manner (without any identification of authors, reviewers or institutions). Accepted papers will be presented at the workshop and published in proceedings.</br>								
+							</br>
+							Authors are expected to present their work in person at the workshop. At least one registration per paper is required in order to be included in the proceedings.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">ORGANIZING COMMITTEE</p>
+							<span style="font-family:DINPro-Bold">WFC Chair</span></br>
+                                    Rafael R. Obelheiro, UDESC</br>
+						</br>
+					</div>
+
+
+
+					<h4 data-toggle="collapse" role="button" href="#wrac" aria-expanded="false" aria-controls="wrac">
+						<i class="glyphicon glyphicon-collapse-down"></i> WRAC+ - II Workshop for Regulation, Conformity Assessment and Certification on Security
+					</h4>
+					<div class="collapse" id="wrac">
+						</br>
+						<p style="font-family:DINPro-Bold">IMPORTANT DATES</p>
+							<p align="justify">
+							<!-- <font color="#DE7B32"><span style="font-family:DINPro-Bold">Submission: September 13th</font></span></br>-->
+
+							<font color="#DE7B32"><span style="font-family:DINPro-Bold">Submission: September </span><del>13th</del><span style="font-family:DINPro-Bold"> 20th</font></span></br>
+							<font color="#007A80">Notification of Acceptance: October 14th</font></span></br>
+							<font color="#007A80">Final Version: October 21th</font></br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">PRESENTATION</p>
+							<p align="justify">
+							The Workshop for Regulation, Conformity Assessment and Certification on Security (WRAC+) is a satellite event of the Brazilian Symposium on Information and Computational Systems Security (SBSeg). The WRAC+ is a forum where Regulators, Certification Bodies, Laboratories, Government, Academia and Industry can discuss different aspects of Conformity Assessment in the area of Information and Computer Systems Security.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">JUSTIFICATION</p>
+							<p align="justify">
+							The so-called "Cyberspace" includes a set of software, hardware and communication networks often invisible, though it supports most of the applications we use every day. This "space" contains Internet and its computers, and also includes a great number of intelligent devices and equipments dedicated to specific applications, in addition to networks interconnecting all of them - those networks may be connected to the Internet or may simply be a segregated network.</br>
+							</br>
+							More and more, it becomes evident that engendered attacks in Cyberspace may have a major impact on the Society welfare. Thus, cyberspace should be subject to some sort of control by the State, in search for its safe operation. Such control takes place by means of a regulatory process in which the State establishes some rules and conduct patterns in order to ensure minimum security in cyberspace - or part of it.</br>
+							</br>
+							WRAC+ will provide a forum in which all stakeholders interested in Cybersecurity issues will be able to interact and discuss how to build rules so that Brazil can reach an appropriate security status in its Cyberspace.</br>
+							</br>
+							Topics address issues of interest to the Academy, Industry and Government, such as:</br>
+							</p>
+							<ul>
+								<li>Which areas are subject to some sort of regulation/control by the State?</li>
+								<li>How to define a set of appropriate requirements for each kind of application?</li>
+								<li>How to specify systematic procedures (tests) to assess compliance with requirements as regarding equipments, software or smart devices operating in Cyberspace?</li>
+								<li>How to evaluate laboratory competency as for the implementation of security assessment activities of equipments, software or smart devices?</li>
+								<li>How to set up a conformity assessment infrastructure and how to integrate it to approval/regulators registration systems?</li>
+								<li>What are the technical limitations of conformity assessment tools?</li>
+							</ul>
+						</br>
+						<p style="font-family:DINPro-Bold">TOPICS OF INTEREST</p>
+							<p align="justify">
+							Although WRAC+ is mainly focused on Regulation and Conformity Assessment, information systems and any embedded software devices are very important objects in assessment process. Therefore, we are also concerned about issues involving Software and Smart Devices Security. WRAC+ intends to deepen discussions related to "security requirements specification" for software and intelligent devices and its "validation" with respect to a given set of requirements.</br>
+							</br>
+							Topics of interest include - but are not limited to - the following:</br>
+							</p>
+							<ul>
+								<li>Software protection and analysis</li>
+								<li>Software testing, verification and validation</li>
+								<li>Software debugging and understanding</li>
+								<li>Metrics, measurement and software analysis</li>
+								<li>Software Vulnerabilities</li>
+								<li>Formal methods</li>
+								<li>Malware detection and analysis</li>
+								<li>Risk management</li>
+								<li>Security regulations and standards</li>
+								<li>Hardware Security: invasive, semi-invasive and non-invasive methods</li>
+								<li>Products and Processes conformity assessment</li>
+								<li>Laboratory accreditation for security testing</li>
+							</ul>
+						</br>
+						<p style="font-family:DINPro-Bold">INSTRUCTIONS TO AUTHORS</p>
+							<p align="justify">
+							Papers may be submitted in two categories:</br>
+							</br>
+							<span style="font-family:DINPro-Bold">Full Papers:</span> A full paper should present a research work developed to the point of producing original and relevant results, fully analyzed and validated. They are limited to a maximum of 10 pages. </br>
+							</br>
+							<span style="font-family:DINPro-Bold">Short Paper:</span> A short paper should describe a research work in progress or practical experiments and "cases". They should contain between 4 and 6 pages.</br>
+							</br>
+							Text formatting should adhere to the SBC template available <a href="http://tinyurl.com/sbc-template-artigos" target="new" style="color:rgb(0,122,128)">here</a>. Submissions will be accepted solely in PDF format, through <a href="https://submissoes.sbc.org.br/home.cgi?c=2646" style="color:rgb(0,122,128)">SBC's JEMS system</a>.</br>
+							</br>
+							Papers will undergo a double-blind review process by the Program Committee. Accepted papers must be presented by one of the registered authors in order to be published in the conference proceedings.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">ORGANIZING COMMITTEE</p>
+							<span style="font-family:DINPro-Bold">WRAC+ Chair</span></br>
+		                    Raphael Machado, INMETRO</br>
+		                    </br>
+						</br>
+					</div>
+
+
+
+			</div>
+		</div>
+	</div>	
+</section>
+<section id="patrocinadores" class="">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12 col-xs-12 visible-xs vertical-center text-center" style="padding-bottom: 20px;">
+        <h5>Organized by:</h5>
+        <a href="http://www.sbc.org.br" target="new"><img class="img-responsive" src="images/sbc.jpg" style="margin-right: 20px; max-height: 90px;"></a>
+        <img class="img-responsive" src="images/UFF.png" style="margin-right: 5px; max-height: 80px;">
+        <img class="img-responsive" src="images/logo-ic.png" style="max-height: 90px;">
+      </div>
+      <div class="col-lg-3 col-xs-12 vertical-center">
+          <h5 class="hidden-xs" style="margin-left: 20px;">Supported by: </h5>
+              <img class="img-responsive center-block hidden-xs" src="images/coppe.jpg" style="margin-right:5px; max-width: 90px;padding-bottom: 20px; margin-left: 20px;">
+              <img class="img-responsive center-block hidden-xs" src="images/ufrj.jpg" style="max-height: 95px;padding-bottom: 20px;">
+              <img class="img-responsive center-block hidden-xs" src="images/logo-ceseg.png" style="max-height: 85px; padding-bottom: 20px; margin-left: 10px;">
+	      <div class="row visible-xs text-center">
+                <h5>Supported by: </h5>
+                <div class="col-lg-4 col-xs-6 text-center vertical-center">
+                  <img class="img-responsive" src="images/coppe.jpg" style="margin-left: 100px; max-width: 90px;padding-bottom: 20px; padding-top: 15px;">
+                </div>
+                <div class="col-lg-4 col-xs-6 vertical-center">
+	          <img class="img-responsive" src="images/ufrj.jpg" style="margin-left: -100px; max-height: 95px;padding-bottom: 20px;">
+                </div>
+                <div class="col-lg-4 col-xs-12 vertical-center">
+                  <img class="img-responsive" src="images/logo-ceseg.png" style="margin-left: 0px; max-width: 110px;padding-bottom: 20px;">
+                </div>
+              </div>
+       </div>
+       <div class="col-lg-8 col-xs-12 vertical-center">
+         <h5 class="hidden-xs">Sponsored by:</h5>
+         <div class="row text-center">
+           <h5 class="visible-xs">Sponsored by:</h5>
+           <div class="col-lg-4 text-center col-xs-12 vertical-center">
+             Diamond<br>
+             <img class="img-reponsive center-block" src="images/logo-nic-cgi.png" style="max-width:200px; padding-bottom: 20px;">
+           </div>
+           <div class="col-lg-2 col-xs-12 text-center vertical-center">
+             Gold<br>
+            <img class="img-reponsive center-block" src="images/intel.png" style="max-width: 100px;padding-bottom: 20px; padding-top: 10px;">
+            <img class="img-reponsive center-block" src="images/logo_faperj_cor.jpg" style="max-width: 170px;padding-bottom: 20px; padding-top: 10px;">
+            <img class="img-reponsive center-block" src="images/logo-cnpq.jpg" style="max-width: 170px;padding-bottom: 20px; padding-top: 10px;">
+            <img class="img-reponsive center-block" src="images/logo-capes.png" style="max-width: 100px;padding-bottom: 20px; padding-top: 10px;">
+           </div>
+           <div class="col-lg-3 col-xs-12 text-center vertical-center">
+             Silver<br>
+             <img class="img-reponsive center-block" src="images/lgClavis.png" style="max-width: 160px; padding-top: 15px;padding-bottom: 20px;">
+             <img class="img-reponsive center-block" src="images/proppi.png" style="max-width: 160px; padding-top: 15px;padding-bottom: 20px;">
+           </div>
+           <div class="col-lg-3 col-xs-12 text-center vertical-center">
+             Bronze<br>
+             <img class="img-reponsive center-block" src="images/google.png" style="max-width: 150px; padding-top: 15px;padding-bottom: 20px;" >
+           </div>
+         </div>
+      </div>
+      <div class="col-lg-12 col-xs-12 vertical-center text-center">
+        <h6 style="padding-top: 40px;">Developed by:</h6>
+        <img class="img-responsive center-block" src="images/logoIn.png" style="max-width: 55px; padding-bottom: 20px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--<div class="col-lg-2 col-lg-offset-1 col-col-md-1 col-sm-1 col-xs-12 vertical-center">
+          <h5>Apoiado por:</h5>
+	  <img class="img-responsive" src="images/coppe.jpg" style="margin-right:10px; max-width: 90px;">
+	  <img class="img-responsive" src="images/ufrj.jpg" style="max-height: 95px;">
+      </div>
+      <div class="col-lg-7 col-lg-offset-1 col-md-1 col-sm-1 col-xs-12">
+        <h5>Patrocinado por:</h5>
+	<div class="row">
+          <div class="col-lg-2 col-md-1 col-sm-1 col-xs-12">
+	    Diamante <br>
+            <img class="img-reponsive" src="images/logo-nic-cgi.png" style="max-width:180px;">
+	  </div> 
+	 <div class="col-lg-2 col-md-1 col-sm-1 col-xs-12">
+	    Ouro <br> 
+            <img class="img-reponsive" src="images/intel.jpg" style="max-width: 90px;">
+          </div>
+	  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" style="max-width: 90px;">
+	    Prata <br>
+            <img class="img-reponsive" src="images/lgClavis.png" style="max-width: 90px;">
+          </div>
+	  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" style="max-width: 90px;">
+	    Bronze <br>
+            <img class="img-reponsive" src="images/google.png">
+          </div> 
+        </div>
+      </div>
+      <div class="col-lg-1 col-lg-offset-1 col-md-1 col-sm-1 col-xs-12 vertical-center text-center">
+        <h6>Desenvolvido por:</h6>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+	
+		<!--FIM MENU TOPO-->
+
+	
+
+	<script src="js/jquery-1.12.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/mapa.js"></script>
+ 	<script src="js/bootstrap.min.js"></script>
+ 	<script src="js/prototipo.js"></script>
+ 	<script src="js/tradutor.js"></script>
+ 	    
+ 	
+	</body>
+</html>

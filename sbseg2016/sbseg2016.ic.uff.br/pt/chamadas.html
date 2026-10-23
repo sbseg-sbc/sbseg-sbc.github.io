@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <title> SBSeg16 - XVI Simp&oacute;sio Brasileiro em Seguran&ccedil;a da Informa&ccedil;&atilde;o e de Sistemas Computacionais
+    </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/prototipo.css">
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script>
+      $(function(){   
+        var nav = $('#menuHeader');   
+	$(window).scroll(function () { 
+          if ($(this).scrollTop() > 1) { 
+	    nav.addClass("navbar-fixed-top navbar-float menuFixo"); 
+	  } 
+          else { 
+            nav.removeClass("navbar-fixed-top navbar-float menuFixo"); 
+	  } 
+        });  
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="navbar-fixed-top container-blankBackground hidden-xs">
+      <div class="row">
+        <div class="col-lg-6 col-md-4 col-sm-12 col-xs-6" style="margin-left: 50px;">
+          <img src="images/logo1.png" class="img-responsive imgTopo" style="margin-right: 10px; ">
+          <img src="images/logo2.png" class="img-responsive imgTopo2" alt="logoSbseg">
+        </div>
+        <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12 col-xs-6">	
+          <h5>Realizado por</h5>
+            <a href="http://www.sbc.org.br" target="new"><img class="img-responsive" src="images/sbc.jpg" style="margin-right: 20px; max-height: 90px;"></a>
+            <img class="img-responsive" src="images/UFF.png" style="margin-right: 5px; max-height: 80px;">
+            <img class="img-responsive" src="images/logo-ic.png" style="max-height: 90px;">
+        </div>	
+        <div class="col-lg-1 col-md-4 col-sm-12 col-xs-12" style="margin-left: 40px; padding-top: 50px;">	
+          <!-- <a href="#"><img id="btTradutorEn" src="images/Brasil.png" class="img-responsive" style="max-width: 30px;" onclick= "traducaoPt()" /></a> -->
+	  <a href="chamadas.html#"><img id="btTradutorEn" src="images/Inglaterra.png" class="img-responsive" style="max-width: 30px;" onclick= "traducaoEn()" /></a> </br>
+          <a href="https://www.facebook.com/sbseg2016" target="new"><img id="btTradutorEn" src="images/facebook.jpg" class="img-responsive" style="max-width: 30px; padding-top: 5px;"></a>
+        </div>
+      </div>
+    </div> 
+    
+    <section id="headerCont" class="hidden-xs">	
+      <div class="bkPic2">
+ <!--       <div class="container-fluid bkColor">
+	 </div> -->
+      </div>
+    </section>
+
+    <header>					
+      <nav id="menuHeader" class="navbar navbar-default hidden-xs">
+        <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	  </div>		
+	  <div class="navbar-collapse collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav" style="text-align:center;">
+              <li><a href="index.html">IN&Iacute;CIO</a></li>
+              <li><a href="anais.html">ANAIS</a></li>
+              <li><a href="chamadas.html">CHAMADAS</a></li>
+              <li><a href="comite.html">COMIT&Ecirc;</a></li>
+	      <li><a href="palestrantes.html">PALESTRANTES</a></li>
+	      <li><a href="programacao.html">PROGRAMA&Ccedil;&Atilde;O</a></li>
+	      <li><a href="local.html">LOCAL</a></li>
+	      <li><a href="contato.html">CONTATO</a></li>
+	      <li class="liDif"><a class="inscreve" href="inscricoes.html">INSCREVA-SE</a></li>
+	    </ul>
+	  </div>
+	</div>	
+      </nav>	
+      <nav id="menuHeaderCel" class="navbar navbar-default navbar-fixed-top visible-xs">
+        <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+            <a href="index.html"><img src="images/SimplificadaNegativa.png" class="img-responsive visible-xs" style="max-width: 120px;"></a>
+	  </div>		
+	  <div class="navbar-collapse collapse" id="navbar-collapse-2">
+            <ul class="nav navbar-nav" style="text-align:center;">
+              <li><a href="index.html">IN&Iacute;CIO</a></li>
+              <li><a href="chamadas.html">CHAMADAS</a></li>
+              <li><a href="comite.html">COMIT&Ecirc;</a></li>
+	      <li><a href="palestrantes.html">PALESTRANTES</a></li>
+	      <li><a href="programacao.html">PROGRAMA&Ccedil;&Atilde;O</a></li>
+	      <li><a href="local.html">LOCAL</a></li>
+	      <li><a href="contato.html">CONTATO</a></li>
+	      <li class="liDif"><a class="inscreve" href="inscricoes.html">INSCREVA-SE</a></li>
+	    </ul>
+	  </div>
+	</div>	
+      </nav>	
+    </header>
+  </body>
+</html>
+<section id="ConteudoBox">
+	<div class="container-fluid">
+ 		<div class="col-md-12">
+			<div class="caixa1">
+				<h1 style="padding-left: 10px;">Chamadas</h1>
+
+
+
+					<h4 data-toggle="collapse" role="button" href="#artCompletos" aria-expanded="false" aria-controls="artCompletos">
+						<i class="glyphicon glyphicon-collapse-down"></i> Artigos completos
+					</h4>
+					<div class="collapse" id="artCompletos">
+						</br>
+
+						<p style="font-family:DINPro-Bold">CONFIRA A <a href="sbseg16-aceitos.html" style="color:rgb(222,123,50);">LISTA</a> DE ARTIGOS ACEITOS</p>
+						<p style="font-family:DINPro-Bold;">DATAS IMPORTANTES</p>
+							<p align="justify">
+                                                        <font color="#DE7B32"><span style="font-family:DINPro-Bold">Registro de artigos: </span><del>15</del> <del>29 de junho</del> <span style="font-family: DINPro-Bold"> 3 de julho</font></span></br>
+
+                                                        <font color="#DE7B32"><span style="font-family:DINPro-Bold">Submissão de artigos: </span><del>19 de junho</del><span style="font-family:DINPro-Bold"> 3 de julho </font></span></br>
+							<font color="#007A80">Notificação de aceitação: 12 de setembro</font></br>
+							<font color="#007A80">Versão final: 26 de setembro</font></br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">TÓPICOS DE INTERESSE</p>
+							<p align="justify">
+								O tema central do evento é a segurança da informação e de sistemas computacionais. Nesse contexto, destacamos os seguintes tópicos, não exaustivos:</br>
+					        </p>
+							<ul>
+								<li> Auditoria e análise de riscos em sistemas</li>
+								<li> Autenticação e gestão de identidades</li>
+								<li> Controle de acesso: modelos e mecanismos</li>
+								<li> Criminalística e forense computacional</li>
+								<li> Criptografia e criptoanálise: algoritmos, protocolos, técnicas, e aplicações</li>
+								<li> Gerência de confiança</li>
+								<li> Hardware seguro: RFIDs, cartões inteligentes, e sensores</li>
+								<li> Incidentes de segurança: prevenção, detecção, e resposta</li>
+								<li> Normatização e políticas de segurança</li>
+								<li> Privacidade e anonimato computacional</li>
+								<li> Proteção de propriedade intelectual e DRM</li>
+								<li> Segurança em aplicações (TV digital, <i>e-banking</i>, redes sociais, <i>smart grids</i></li>
+								<li> Segurança em banco de dados</li>
+								<li> Segurança em computação na nuvem</li>
+								<li> Segurança em computação ubíqua/pervasiva</li>
+								<li> Segurança em Internet das Coisas</li>
+								<li> Segurança em redes</li>
+								<li> Segurança em sistemas móveis e embarcados</li>
+								<li> Segurança em sistemas distribuídos e paralelos</li>
+								<li> Segurança em sistemas operacionais</li>
+								<li> Software seguro: desenvolvimento, testes, e certificação</li>
+								<li> Técnicas e sistemas para identificação biométrica</li>
+								<li> Votação eletrônica segura</li>
+							</ul>
+						</br>
+						<p style="font-family:DINPro-Bold">INSTRUÇÕES AOS AUTORES</p>
+							<p align="justify">
+							Os trabalhos submetidos devem apresentar um trabalho de pesquisa desenvolvido ao ponto de trazer resultados originais e relevantes, devidamente validados e discutidos. Ademais, a apresentação do artigo deve conter uma descrição criteriosa e fundamentada do trabalho de pesquisa, bem como conclusões consistentes com base nos resultados obtidos. Os trabalhos submetidos devem descrever atividades de pesquisa, relatos de experiências relevantes e estudos de casos.</br>
+							</br>
+							<span style="font-family:DINPro-Bold">Todos os artigos devem ser submetidos de forma anônima</span>, ou seja, devem evitar qualquer informação no cabeçalho do artigo, no texto e nas referências que vinculem o artigo à identidade dos autores e suas instituições.</br>
+							</br>
+							Os artigos podem ser escritos em português ou inglês; sua formatação deve seguir o padrão da SBC para escrita de artigos, disponível <a href="http://tinyurl.com/sbc-template-artigos" target="new" style="color:rgb(0,122,128)">aqui</a>. Os artigos têm um limite de 14 páginas, incluindo figuras, tabelas, referências e apêndices. A submissão de artigos será feita exclusivamente em formato PDF, por meio do sistema <a href="https://submissoes.sbc.org.br/home.cgi?c=2503" target="new" style="color:rgb(0,122,128)">JEMS da SBC</a>.</br>
+							</br>
+							Todos os artigos serão avaliados por um corpo de revisores, seguindo um processo de revisão duplamente cega (sem identificação dos autores, revisores e suas instituições). Os artigos aceitos deverão ser apresentados no evento por um dos autores, para que possam ser publicados nos anais do evento. Uma comissão de avaliação escolherá os melhores dentre os artigos completos aceitos e apresentados no evento.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">DIREITOS AUTORAIS</p>
+							<p align="justify">
+                                                          Junto com a versão final dos trabalhos aceitos para publicação no SBSeg16 é necessário enviar o <a href="docs/copyright-sbc-2016.rtf" style="color:rgb(0,122,128)">Contrato de Cessão de Direitos Autorais à SBC</a>. O contrato (de copyright) deve ser submetido via JEMS, preenchido com as informações relativas ao <!-- evento, coordenador(es),--> artigo e autores.
+				                 	</p>		
+							</br>
+	
+
+						<p style="font-family:DINPro-Bold">COMITÊ DE PROGRAMA</p>
+							<span style="font-family:DINPro-Bold">Coordenadores do comitê de programa</span></br>
+							Leonardo B. Oliveira, UFMG</br>
+							Pedro Braconnot Velloso, UFRJ</br>
+							</br>
+							<span style="font-family:DINPro-Bold">Membros do comitê de programa</span></br>
+							Alberto Schaeffer Filho, UFRGS</br>
+							Aldri dos Santos, UFPR</br>
+							Altair Olivo Santin, PUCPR</br>
+							Anderson Nascimento, UnB</br>
+							André Grégio, UFPR</br>
+							Carla Merkle Westphall, UFSC</br>
+                                                        Carlos da Silva, UFRN </br>
+							Carlos Maziero, UTFPR/UFPR</br>
+							Carlos Westphall, UFSC</br>
+							Célio Vinicius Neves de Albuquerque, UFF</br>
+							Davidson Boccardo, INMETRO</br>
+							Denise Goya, UFABC</br>
+							Diego Aranha, UNICAMP</br>
+							Dorgival Guedes, UFMG</br>
+                                                        Edna Canedo, UnB</br>
+							Eduardo Alchieri, UnB</br>
+							Eduardo Feitosa, UFAM</br>
+							Eduardo Góes, DPF</br>
+							Eduardo Souto, UFAM</br>
+							Emerson Ribeiro de Mello, IFSC</br>
+							Hao Chi Wong, Intel</br>
+							Jean Martina, UFSC</br>
+							Jeroen van de Graaf, UFMG</br>
+							Joaquim Celestino Júnior, UECE</br>
+							Karina Mochetti, UFF</br>
+							Lau Cheuk Lung, UFSC</br>
+							Leonardo Fagundes, UNISINOS</br>
+							Leonardo Oliveira, UFMG</br>
+							Lisandro Zambenedetti Granville, UFRGS</br>
+							Luciano Paschoal Gaspary, UFRGS</br>
+							Luiz Carlos Albini, UFPR</br>
+							Luiz Fernando Rust da Costa Carmo, INMETRO</br>
+							Marco Aurelio Amaral Henriques, UNICAMP</br>
+							Marcos Simplicio Jr, Poli-USP</br>
+							Marinho Barcellos, UFRGS</br>
+                                                        Marjory da Costa Abreu, UFRN </br>
+							Mário Sérgio Alvim, UFMG</br>
+							Michele Nogueira, UFPR</br>
+							Michelle Wangham, UNIVALI</br>
+							Miguel Elias Mitre Campista, UFRJ</br>
+							Otto Carlos Muniz Bandeira Duarte, UFRJ</br>
+							Paulo André da Silva Gonçalves, UFPE</br>
+							Paulo Lício de Geus, UNICAMP</br>
+							Pedro Braconnot Velloso, UFRJ</br>
+							Priscila Solis, UnB</br>
+                                                        Rafael de Sousa Junior, UnB</br>
+							Rafael Misoczki, Intel Labs - USA</br>
+							Raphael Machado, INMETRO</br>
+							Raul Ceretta Nunes, UFSM</br>
+							Raul Weber, UFRGS</br>
+							Ricardo Custódio, UFSC</br>
+							Ricardo Dahab, UNICAMP</br>
+							Roberto Gallo, KRYPTUS Segurança da Informação</br>
+							Rossana Andrade, UFC</br>
+							Routo Terada, IME-USP</br>
+							Sergio de Oliveira, UFSJ</br>
+						</br>
+					</div>
+
+
+
+					<h4 data-toggle="collapse" role="button" href="#minicursos" aria-expanded="false" aria-controls="minicursos">
+						<i class="glyphicon glyphicon-collapse-down"></i> Minicursos
+					</h4>
+					<div class="collapse" id="minicursos">
+						</br>
+
+
+						<p style="font-family:DINPro-Bold">CONFIRA A <a href="mc-aceitos.html" style="color:rgb(222,123,50);">LISTA</a> DE MINICURSOS ACEITOS</p>
+						<p style="font-family:DINPro-Bold">DATAS IMPORTANTES</p>
+							<p align="justify">
+                                                        <font color="#DE7B32"><span style="font-family:DINPro-Bold">Submissão de propostas: </span><del>13</del> <span style="font-family: DINPro-Bold"> 27 de junho </font></span></br>
+							<font color="#007A80">Notificação de aceitação: 20 de julho</font></span></br>
+							<font color="#007A80">Entrega do texto completo: 15 de setembro</font></br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">APRESENTAÇÃO</p>
+							<p align="justify">
+							Os Minicursos do SBSeg têm por objetivo abordar temas relevantes geralmente não ministrados nas grades curriculares dos cursos de graduação além de despertar o interesse pela área de segurança entre acadêmicos e profissionais. Priorizam-se temas atuais e com maior potencial para atrair o interesse de jovens estudantes e profissionais, de forma a melhor qualificá-los para suas pesquisas e/ou mercado de trabalho. Cada minicurso deve ser estruturado para um total de três horas e meia, podendo incluir prática de laboratório.</br>
+							</br>
+							Qualquer dúvida sobre os minicursos e o processo de submissão, entre em contato com Michel Abdalla pelo email <span style="color:rgb(0,122,128)">michel.abdalla@ens.fr</span>.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">TÓPICOS DE INTERESSE</p>
+							<ul>
+								<li>Auditoria e análise de riscos em sistemas</li>
+								<li>Autenticação e gestão de identidades</li>
+								<li>Controle de acesso: modelos e mecanismos</li>
+								<li>Criminalística e forense computacional</li>
+								<li>Criptografia e criptoanálise: algoritmos, protocolos, técnicas, e aplicações</li>
+								<li>Gerência de confiança</li>
+								<li>Hardware seguro: RFIDs, cartões inteligentes, e sensores</li>
+								<li>Incidentes de segurança: prevenção, detecção, e resposta</li>
+								<li>Normatização e políticas de segurança</li>
+								<li>Privacidade e anonimato computacional</li>
+								<li>Proteção de propriedade intelectual e DRM</li>
+								<li>Segurança em aplicações (TV digital, <i>e-banking</i>, redes sociais, <i>smart grids</i></li>
+								<li>Segurança em banco de dados</li>
+								<li>Segurança em computação na nuvem</li>
+								<li>Segurança em computação ubíqua/pervasiva</li>
+								<li>Segurança em Internet das Coisas</li>
+								<li>Segurança em redes</li>
+								<li>Segurança em sistemas móveis e embarcados</li>
+								<li>Segurança em sistemas distribuídos e paralelos</li>
+								<li>Segurança em sistemas operacionais</li>
+								<li>Software seguro: desenvolvimento, testes, e certificação</li>
+								<li>Técnicas e sistemas para identificação biométrica</li>
+								<li>Votação eletrônica segura</li>
+							</ul>
+						</br>
+						<p style="font-family:DINPro-Bold">SUBMISSÃO DE PROPOSTAS</p>
+							<p align="justify">
+							Professores/pesquisadores interessados em ministrar um minicurso devem submeter uma proposta, escrita em Português, contendo entre 3 e 5 páginas (excluindo-se os CVs, item 6 abaixo), com as seguintes informações:</br>
+							</br>
+                            <ol>
+								<li>Dados de identificação - Título do minicurso, Autores, Instituição(ções) e Indicação do autor que apresentará o curso;</li>
+								<li>Dados gerais - Objetivos do curso, tratamento dado ao tema (por exemplo: teórico ou prático; apanhado geral de resultados ou aprofundamento de aspectos específicos; apresentação ou comparação de tecnologias; formação de novas habilidades ou informação etc.) e perfil desejado da audiência;</li>
+								<li> Estrutura prevista do texto (tópicos/capítulos a serem desenvolvidos);</li>
+								<li> Para cada capítulo/tópico previsto no item 3, escrever um resumo de seu conteúdo e uma previsão do respectivo número de páginas;</li>
+								<li> Bibliografia principal utilizada na preparação do curso;</li>
+								<li>Curriculum Vitae resumido dos autores (uma página por autor, no máximo).
+                            </ol>								
+                            <span style="font-family:DINPro-Bold">Observe que todas as informações acima devem estar contidas em apenas um documento (um arquivo no formato PDF).</span></br>
+							</br>
+							A submissão de propostas será exclusivamente eletrônica, em formato PDF, através do sistema <a href="https://submissoes.sbc.org.br/home.cgi?c=2581" target="new" style="color:rgb(0,122,128)">JEMS da SBC</a>.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">PROCESSO DE AVALIAÇÃO</p>
+							<p align="justify">
+							Cada proposta submetida ao SBSeg 2016 será avaliada por três ou mais membros da comissão de avaliação. Serão considerados na avaliação os seguintes critérios: relevância e atualidade do tema para o evento, qualidade técnica da proposta e experiência dos proponentes no tema proposto. As melhores propostas em temas distintos serão aceitas para apresentação e publicação.</br>
+							</br>
+							A fim de assegurar a diversidade dos minicursos oferecidos, as propostas selecionadas tratarão de temas distintos. Assim, caso duas ou mais propostas submetidas versem sobre o mesmo tema (ou sobre temas muito sobrepostos), apenas a melhor delas poderá ser selecionada, a critério da comissão de avaliação.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">LIVRO TEXTO</p>
+							<p align="justify">
+							Os autores das propostas selecionadas deverão produzir um texto (capítulo de livro) em Português contendo entre 40 e 50 páginas cada. Os textos serão publicados, na forma de capítulos, no livro "Minicursos SBSeg 2016", a ser distribuído entre os participantes do evento. O formato do capítulo de livro está disponível no <a href="http://tinyurl.com/sbc-template-artigos" target="new" style="color:rgb(0,122,128)">portal da SBC</a>.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">COMITÊ DE PROGRAMA</p>
+							<span style="font-family:DINPro-Bold">Coordenador de minicursos</span></br>
+							Michel Abdalla (ENS &amp; CNRS)</br>
+							</br>
+							<span style="font-family:DINPro-Bold">Membros do comitê de programa</span></br>
+							Altair Santin, PUCPR</br>
+							Célio Vinicius Neves de Albuquerque, UFF</br>
+							Eduardo Feitosa, UFAM</br>
+							Leonardo Oliveira, UFMG</br>
+							Luis Kowada, UFF</br>
+							Luis Henrique Costa, UFRJ</br>
+							Luiz Fernando Rust da Costa Carmo, Inmetro</br>
+							Marcos Simplicio Jr - Escola Politécnica, USP</br>
+							Michelle Wangham, Univali</br>
+							Ricardo Dahab, UNICAMP</br>
+							Rossana Andrade, UFC</br>
+						</br>
+					</div>
+
+
+
+					<h4 data-toggle="collapse" role="button" href="#ctdseg" aria-expanded="false" aria-controls="ctdseg">
+						<i class="glyphicon glyphicon-collapse-down"></i> CTDSeg - IV Concurso de Teses e Dissertações em Segurança
+					</h4>
+					<div class="collapse" id="ctdseg">
+						</br>
+
+						<p style="font-family:DINPro-Bold">CONFIRA A <a href="ctdseg-aceitos.html" style="color:rgb(222,123,50);">LISTA</a> DE TRABALHOS ACEITOS</p>
+						<p style="font-family:DINPro-Bold">DATAS IMPORTANTES</p>
+							<p align="justify">
+							<font color="#DE7B32"><span style="font-family:DINPro-Bold">Submissão de artigos: </span><del>18 de julho</del> <span style="font-family:DINPro-Bold">01 de agosto</span></font></span></br>
+							<font color="#007A80">Notificação de aceitação: <del>24 de agosto</del> 07 de setembro </font></span></br>
+							<font color="#007A80">Versão final: <del>14</del> 28 de setembro</font></br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">APRESENTAÇÃO</p>
+							<p align="justify">
+							O Concurso de Teses e Dissertações em Segurança da Informação e Sistemas Computacionais (CTDSeg), evento integrante do SBSeg, visa a selecionar e premiar as melhores teses de doutorado e as melhores dissertações de mestrado na área. Os pesquisadores estão convidados a submeter um artigo descrevendo e resumindo os resultados obtidos em suas teses e dissertações concluídas no período de agosto de 2014 a junho de 2016. O evento premiará as três melhores teses e as três melhores dissertações.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">INSTRUÇÕES PARA AUTORES</p>
+							<p align="justify">
+							Os artigos submetidos devem ser escritos em português ou inglês na forma de resumo e deverão respeitar o limite máximo de 8 páginas. A formatação do texto deve seguir o padrão da SBC, disponível <a href="http://tinyurl.com/sbc-template-artigos" target="new"style="color:rgb(0,122,128)">aqui</a>. Os artigos devem ser submetidos <a href="https://submissoes.sbc.org.br/home.cgi?c=2583" target="new" style="color:rgb(0,122,128)">aqui</a> e deverão estar, exclusivamente, em formato PDF.</br>
+							</br>
+							O autor deve deixar clara a contribuição do trabalho para a área e sua originalidade. O texto deve incluir, obrigatoriamente, o título da tese ou dissertação, nomes do autor, orientador e co-orientador(es) com as respectivas afiliações, resumo/abstract, motivações, objetivos, resultados obtidos, produção científica associada e o endereço web no qual está disponível a tese/dissertação.</br>
+							</br>
+							Cada trabalho submetido deverá conter três arquivos (em formato PDF): artigo, declaração digitalizada da conclusão e tese/dissertação. Na declaração deverá constar explicitamente que o candidato defendeu e teve o trabalho aprovado. A declaração deverá conter, também, o local, a data da defesa, o nome do orientador e a banca.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">TEMAS DE INTERESSE</p>
+							<p align="justify">
+							Os temas das teses e dissertações devem estar relacionados a qualquer tópico da área da Segurança da Informação e Sistemas Computacionais.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">AVALIAÇÃO</p>
+							<p align="justify">
+							Os artigos de teses e dissertações submetidos passarão por uma etapa inicial de avaliação, em que cada artigo será avaliado por pelo menos três pesquisadores especializados (membros do Comitê de Avaliação). Os trabalhos selecionados serão publicados nos Anais do Congresso, e seu principal autor deverá apresentá-lo no CTDSeg. Para fins de premiação, o Comitê de Avaliação também levará em conta o trabalho completo e a qualidade da apresentação oral no SBSeg.</br>
+							</p>
+						</br>
+					<p style="font-family:DINPro-Bold">DIREITOS AUTORAIS</p>
+							<p align="justify">
+                                                          Junto com a versão final dos trabalhos aceitos para publicação no SBSeg16 é necessário enviar o <a href="docs/copyright-sbc-2016.rtf" style="color:rgb(0,122,128)">Contrato de Cessão de Direitos Autorais à SBC</a>. O contrato (de copyright) deve ser submetido via JEMS, preenchido com as informações relativas ao evento, coordenador(es), artigo e autores.
+				                 	</p>		
+						</br>
+						<p style="font-family:DINPro-Bold">COMITÊ DE ORGANIZAÇÃO</p>
+							<span style="font-family:DINPro-Bold">Coordenadores do CTDSeg 2016</span></br>
+							Diego F. Aranha, UNICAMP</br>
+							Luciano Paschoal Gaspary, UFRGS</br>
+							</br>
+							<span style="font-family:DINPro-Bold">Membros do comitê de avaliação</span></br>
+						Aldri dos Santos (UFPR)</br>
+Altair Santin, PUCPR</br>
+Anderson Nascimento, UnB</br>
+André Grégio, UFPR</br>
+Carlos Maziero, UFPR</br>
+Eduardo Alchieri, UnB</br>
+Fabio Piva, Unicamp</br>
+Fernando Quintao Pereira, UFMG</br>
+Jean Martina, UFSC</br>
+Jeroen van de Graaf, UFMG</br>
+Luciano Paschoal Gaspary, UFRGS</br>
+Luis Menasché Schechter, UFRJ</br>
+Luiz Fernando Rust da Costa Carmo, Inmetro</br>
+Luiz Carlos Albini, UFPR</br>
+Marcos Simplicio Jr, USP</br>
+Mário Alvim, UFMG</br>
+Michele Nogueira, UFPR</br>
+Paulo de Geus, Unicamp</br>
+Ricardo Dahab, Unicamp</br>
+Sandro Rigo, Unicamp</br>
+	
+						</br>
+					</div>
+
+
+
+					<h4 data-toggle="collapse" role="button" href="#wticg" aria-expanded="false" aria-controls="wticg">
+						<i class="glyphicon glyphicon-collapse-down"></i> WTICG - X Workshop de Trabalhos de Iniciação Científica e de Graduação
+					</h4>
+					<div class="collapse" id="wticg">
+						</br>
+						<p style="font-family:DINPro-Bold">CONFIRA A <a href="wticg-aceitos.html" style="color:rgb(222,123,50);">LISTA</a> DE TRABALHOS ACEITOS</p>
+						<p style="font-family:DINPro-Bold">DATAS IMPORTANTES</p>
+							<p align="justify">
+							<font color="#DE7B32"><span style="font-family:DINPro-Bold">Submissão de artigos: </span><del>15</del><span style="font-family:DINPro-Bold"> 22 de julho</font></span></br>
+							<font color="#007A80">Notificação de aceitação: 19 de agosto</font></span></br>
+							<font color="#007A80">Versão final: 09 de setembro</font></br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">APRESENTAÇÃO</p>
+							<p align="justify">
+							O Workshop de Trabalhos de Iniciação Científica e de Graduação (WTICG), evento integrante do Simpósio Brasileiro em Segurança da Informação e de Sistemas Computacionais (SBSeg), visa incentivar a participação de estudantes de graduação e de recém-graduados na produção e divulgação de trabalhos científicos sobre temas relacionados às áreas de segurança da informação e de sistemas computacionais.</br>
+							</br>
+							O WTICG 2016 será realizado em conjunto com o SBSeg 2016 em Niterói, RJ, durante a semana de 7 a 10 de Novembro de 2016. Podem participar do WTICG 2016 estudantes de graduação regularmente matriculados, ou ainda, recém-graduados que tenham concluído o curso a partir de 1 de janeiro de 2015 (a situação de estudante de graduação ou recém-graduado deve ser comprovada com documentação apropriada, que deverá ser enviada juntamente com a submissão do trabalho). Os autores estão convidados a submeter trabalhos de Iniciação Científica (IC), trabalhos de conclusão de curso (TCC), implementações de software e projetos independentes, concluídos nos anos de 2015 e 2016 ou em fase de conclusão. Trabalhos concluídos devem ser submetidos na categoria ``Trabalho completo'', enquanto que trabalhos em andamento devem ser submetidos na categoria ``Pôster''.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">TÓPICOS DE INTERESSE</p>
+							<ul>
+								<li>Auditoria e análise de riscos em sistemas</li>
+								<li>Autenticação e gestão de identidades</li>
+								<li>Controle de acesso: modelos e mecanismos</li>
+								<li>Criminalística e forense computacional</li>
+								<li>Criptografia e criptoanálise: algoritmos, protocolos, técnicas, e aplicações</li>
+								<li>Gerência de confiança</li>
+								<li>Hardware seguro: RFIDs, cartões inteligentes, e sensores</li>
+								<li>Incidentes de segurança: prevenção, detecção, e resposta</li>
+								<li>Normatização e políticas de segurança</li>
+								<li>Privacidade e anonimato computacional</li>
+								<li>Proteção de propriedade intelectual e DRM</li>
+								<li>Segurança em aplicações (TV digital, <i>e-banking</i>, redes sociais, <i>smart grids</i></li>
+								<li>Segurança em banco de dados</li>
+								<li>Segurança em computação na nuvem</li>
+								<li>Segurança em computação ubíqua/pervasiva</li>
+								<li>Segurança em Internet das Coisas</li>
+								<li>Segurança em redes</li>
+								<li>Segurança em sistemas móveis e embarcados</li>
+								<li>Segurança em sistemas distribuídos e paralelos</li>
+								<li>Segurança em sistemas operacionais</li>
+								<li>Software seguro: desenvolvimento, testes, e certificação</li>
+								<li>Técnicas e sistemas para identificação biométrica</li>
+								<li>Votação eletrônica segura</li>
+							</ul>
+						</br>
+						<p style="font-family:DINPro-Bold">TRABALHOS COMPLETOS</p>
+							<p align="justify">
+							Os trabalhos devem ser escritos em português ou inglês, respeitando um limite máximo de 10 páginas. A formatação do texto deve seguir o padrão da SBC, disponível <a href="http://goo.gl/3vjRWk" target="new" style="color:rgb(0,122,128)">aqui</a>. A submissão deve ser realizada no <a href="https://jems.sbc.org.br/home.cgi?c=2582" target="new" style="color:rgb(0,122,128)">sistema JEMS</a> utilizando somente arquivos no formato PDF.</br>
+							</br>
+							Os seguintes critérios serão observados no julgamento dos trabalhos: originalidade, relevância, apresentação, resultados e qualidade técnica. Os trabalhos selecionados pelo comitê de avaliação serão publicados (em meio digital) desde que pelo menos um dos autores esteja inscrito no evento e apresente o trabalho.</br>
+							</br>
+							No evento serão divulgados os três melhores trabalhos da categoria ``Trabalho completo'' que forem apresentados por estudantes ou recém-graduados.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">PÔSTERES</p>
+							<p align="justify">
+							Os trabalhos devem ser escritos em português ou inglês, respeitando um limite máximo de 4 páginas. A formatação do texto deve seguir o padrão da SBC, disponível <a href="http://goo.gl/3vjRWk" target="new"style="color:rgb(0,122,128)">aqui</a>. A submissão deve ser realizada no <a href="https://jems.sbc.org.br/home.cgi?c=2582" target="new"style="color:rgb(0,122,128)">sistema JEMS</a> utilizando somente arquivos no formato PDF.</br>
+							</br>
+							Esta categoria de submissão se destina à submissão de trabalhos em andamento, que ainda não apresentem resultados consolidados. Os seguintes critérios serão observados no julgamento dos trabalhos: originalidade, relevância, apresentação, resultados parciais e qualidade técnica. Os trabalhos selecionados pelo comitê de avaliação serão publicados (em meio digital) desde que pelo menos um dos autores esteja inscrito no evento e apresente o trabalho em formato de pôster.</br>
+							</br>
+							No evento será divulgado o melhor trabalho da categoria ``Pôster'' que for apresentado por estudante ou recém-graduado.
+							</p>
+						</br>
+<p style="font-family:DINPro-Bold">DIREITOS AUTORAIS</p>
+							<p align="justify">
+                                                          Junto com a versão final dos trabalhos aceitos para publicação no SBSeg16 é necessário enviar o <a href="docs/copyright-sbc-2016.rtf" style="color:rgb(0,122,128)">Contrato de Cessão de Direitos Autorais à SBC</a>. O contrato (de copyright) deve ser submetido via JEMS, preenchido com as informações relativas ao evento, coordenador(es), artigo e autores.
+				                 	</p>		
+						</br>
+
+						<p style="font-family:DINPro-Bold">COMITÊ DE ORGANIZAÇÃO</p>
+							<span style="font-family:DINPro-Bold">Coordenador do WTICG 2016</span></br>
+							Daniel Macêdo Batista, USP</br>
+							</br>
+							<span style="font-family:DINPro-Bold">Membros do comitê de programa</span></br>
+							Altair Santin, PUCPR</br>
+							Anderson Nascimento, UnB</br>
+							Andre Gustavo Degraf Uchoa, The University of York</br>
+							Arlindo Marcon Jr., IFPR</br>
+							Carla Merkle Westphall, UFSC</br>
+							Carlos Maziero, UFPR</br>
+							Diego Aranha, Unicamp</br>
+							Edna Dias Canedo, UnB</br>
+							Eduardo Feitosa, UFAM</br>
+							Eduardo Souto, UFAM</br>
+							Emerson Ribeiro de Mello, IFSC</br>
+							Heverson B. Ribeiro, Université de Neuchâtel</br>
+							Iguatemi E. Fonseca, UFPB</br>
+							João Gondim, UnB</br>
+							Jose Antonio Xexeo, IME</br>
+							Lau Cheuk Lung, UFSC</br>
+							Leonardo B. Oliveira, UFMG</br>
+							Lisandro Zambenedetti Granville, UFRGS</br>
+							Luiz Fernando Rust da Costa Carmo, Inmetro</br>
+							Marcos Simplicio Jr, USP</br>
+							Michelle Wangham , UNIVALI</br>
+							Paulo André da Silva Gonçalves, UFPE</br>
+							Priscila Solis, UnB</br>
+							Rafael Obelheiro, UDESC</br>
+							Raphael Machado, Inmetro</br>
+							Raul Ceretta Nunes, UFSM</br>
+							Ricardo Custódio, UFSC</br>
+							Rossana Andrade, UFC</br>
+							Vivek Nigam, UFPB</br>
+							William de Souza, University of London</br>
+						</br>
+					</div>
+
+
+								
+					<h4 data-toggle="collapse" role="button" href="#wgid" aria-expanded="false" aria-controls="wgid">
+						<i class="glyphicon glyphicon-collapse-down"></i> WGID - VI Workshop de Gestão de Identidades Digitais
+					</h4>
+					<div class="collapse" id="wgid">
+						</br>
+						<p style="font-family:DINPro-Bold">DATAS IMPORTANTES</p>
+							<p align="justify">
+					<!--		<font color="#DE7B32"><span style="font-family:DINPro-Bold">Submissão de artigos: 13 de setembro</font></span></br>-->
+							<font color="#DE7B32"><span style="font-family:DINPro-Bold">Submissão de artigos: </span><del>13</del> <del>23</del><span style="font-family:DINPro-Bold"> 30 de setembro</font></span></br>
+							<font color="#007A80">Notificação de aceitação: 14 de outubro</font></span></br>
+							<font color="#007A80">Versão final: 21 de outubro</font></br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">APRESENTAÇÃO</p>
+							<p align="justify">
+                                                        A gestão de identidades (IdM-Identity Management) consiste de um sistema integrado de políticas, processos e tecnologias que permitem às organizações o tratamento e a manipulação de identidades de seus usuários e de seus objetos (dispositivos) em procedimentos de autenticação, autorização, contabilização e auditoria.</br>
+							</br>
+                                                        Este é um tema de pesquisa ativo e, diante da sua complexidade e relevância, deverá continuar assim por muito tempo. Esta constatação decorre das inúmeras questões técnicas que os sistemas de gestão de identidades devem considerar, tais como: facilidade de uso, privacidade e anonimato do usuário, segurança, autenticação única, escalabilidade, controle de acesso de granularidade fina (baseado em atributos), interoperabilidade e custo dos sistemas (total cost of ownership).</br>
+							</br>
+                                                        O VI Workshop de Gestão de Identidades Digitais (WGID) visa ser um fórum para discussões e apresentações técnicas de trabalhos em torno do estado da arte de tecnologias relacionadas com gestão de identidades. Além disso, busca-se também identificar os desafios de pesquisa e possibilitar a reunião de pesquisadores da área.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">TÓPICOS DE INTERESSE</p>
+							<p align="justify">
+							Autores são convidados a submeterem trabalhos originais relacionados a gestão de identidades digitais. Os tópicos de interesse incluem (mas não são limitados a):</br>
+							</p>
+							<ul>
+								<li>Acesso móvel federado e certificação móvel</li>
+								<li>Agregação de Atributos</li>
+								<li>Arquiteturas de Referência e Frameworks para Gestão de Identidade (IdM)</li>
+								<li>Auditoria em sistemas de IdM</li>
+								<li>Autenticação Single Sign On</li>
+								<li>Autenticação de dispositivos</li>
+								<li>Autenticação e controle de acesso em aplicações não web e computação móvel</li>
+								<li>Certificação digital</li>
+								<li>Certificados de Atributos</li>
+								<li>Ciclo de vida de identidades digitais (provisionamento e administração)</li>
+								<li>Controle de acesso baseado em atributos (ABAC)</li>
+								<li>Desenvolvimento de aplicações usando infraestrutura de A&A provida por federações</li>
+								<li>Escalabilidade em sistemas de IdM</li>
+								<li>Federações de Redes Acadêmicas</li>
+								<li>Ferramentas para gestão/monitoramento de federações</li>
+								<li>Gerenciamento de confiança (trust management) em sistema de IdM</li>
+								<li>Gestão de Atributos</li>
+								<li>Gestão de A&A em projetos interinstitucionais</li>
+								<li>Gestão de identidade centrada no usuário</li>
+								<li>Gestão de Identidades e Cloud Computing</li>
+								<li>Gestão de Identidades e Governo Eletrônico</li>
+								<li>Gestão de Identidades e Grades Computacionais</li>
+								<li>Gestão de Identidades e Internet das Coisas</li>
+								<li>Gestão de Identidades Federadas</li>
+								<li>Identidade Eletrônica</li>
+								<li>Interoperabilidade entre sistemas de IdM</li>
+								<li>Níveis de garantia (Level of Assurance) em IdM</li>
+								<li>Novas abordagens de autenticação e autorização</li>
+								<li>Privacidade e anonimato em sistemas de IdM</li>
+								<li>Protocolos de autenticação e autorização</li>
+								<li>Redes Sociais e sistemas de IdM</li>
+                                                                <li>Técnicas de prevenção contra fraudes e roubo de identidade</li>
+								<li>Usabilidade em tecnologias de Gestão de Identidade</li>	
+							</ul>
+						</br>
+						<p style="font-family:DINPro-Bold">FORMATO DO WORKSHOP</p>
+							<p align="justify">
+                                                          O WGID incluirá a apresentação de artigos aceitos para publicação, palestras convidadas e um painel de discussão. 
+                                                        </p>
+						<p style="font-family:DINPro-Bold">INSTRUÇÕES PARA AUTORES</p>
+							<p align="justify">
+							Artigos poderão ser submetidos em duas categorias:</br>
+							</br>
+							<span style="font-family:DINPro-Bold">Artigos Completos:</span> um artigo completo deve apresentar em até 12 páginas (incluindo figuras, tabelas, referências, apêndices e anexos) um trabalho de pesquisa que tenha sido desenvolvido ao ponto de produzir resultados originais e relevantes, devidamente validados e analisados.</br>
+							</br>
+							<span style="font-family:DINPro-Bold">Resumos Estendidos:</span> um resumo deve descrever em até 4 páginas (incluindo figuras, tabelas, referências, apêndices e anexos) um trabalho de pesquisa em andamento ou uma ferramenta computacional e/ou experimentos práticos. No caso de ferramentas e/ou experimentos, o resumo deve conter pelo menos as seguintes informações: descrição e motivação do problema tratado pela ferramenta; arquitetura da solução e descrição das principais funcionalidades; URL onde a ferramenta está disponível; URL da documentação da ferramenta e descrição de uma eventual demonstração.</br>
+							</br>
+							A formatação do texto deve seguir o padrão da SBC, disponível <a href="http://tinyurl.com/sbc-template-artigos" target="new" style="color:rgb(0,122,128)">aqui</a>. Os trabalhos devem ser submetidos em português ou inglês através do <a href="https://submissoes.sbc.org.br/home.cgi?c=2647" style="color:rgb(0,122,128)" target="new">sistema JEMS</a> e deverão estar, exclusivamente, em formato PDF.</br>
+							</br>
+							Após submissão ao WGID, os artigos e resumos serão avaliados por um corpo de revisores de forma duplamente cega (sem nenhuma identificação, seja de autores, revisores ou das instituições envolvidas) e os trabalhos selecionados serão organizados para apresentação e publicação nos anais do evento. No mínimo um dos autores de cada trabalho selecionado deverá se inscrever no Simpósio Brasileiro de Segurança da Informação e de Sistemas Computacionais (SBSEG 2016) e comparecer no local e horário a serem divulgados oportunamente no programa do evento para apresentar o trabalho.</br>
+							</p>
+						</br>
+<p style="font-family:DINPro-Bold">DIREITOS AUTORAIS</p>
+							<p align="justify">
+                                                          Junto com a versão final dos trabalhos aceitos para publicação no SBSeg16 é necessário enviar o <a href="docs/copyright-sbc-2016.rtf" style="color:rgb(0,122,128)">Contrato de Cessão de Direitos Autorais à SBC</a>. O contrato (de copyright) deve ser submetido via JEMS, preenchido com as informações relativas ao evento, coordenador(es), artigo e autores.
+				                 	</p>		
+						</br>
+
+						<p style="font-family:DINPro-Bold">COMITÊ DE ORGANIZAÇÃO</p>
+							<span style="font-family:DINPro-Bold">Coordenadora do WGID</span></br>
+                                                        Michelle S. Wangham, UNIVALI</br>
+                                                        </br>
+							<span style="font-family:DINPro-Bold">Membros do comitê de programa</span></br>
+                                                        Altair Santin, PUC-PR</br>
+Antonio Tadeu Gomes, LNCC</br>
+Carlos da Silva, UFRN</br>                      
+Carlos Ferraz, UFPE</br>
+Debora Muchaluat-Saade, UFF</br>
+Emerson Ribeiro de Mello, IFSC</br>
+Fábio Borges, LNCC</br>
+Flavio Deus, UnB</br>
+Gustavo Motta, UFPB</br>
+Jean Martina UFSC</br>
+Leonardo Oliveira, UFMG</br>
+Marco Aurélio Amaral Henriques, UNICAMP</br>
+Michelle Wangham, UNIVALI</br>
+Natália Fernandes, UFF</br>
+Noemi Rodriguez, PUC-Rio</br>
+Rafael de Sousa Junior, UnB</br>
+Ricardo Custódio, UFSC</br>
+Ricardo Dahab, UNICAMP</br>
+Roberto Samarone Araujo, UFPA</br>
+Vinod Rebello, UFF</br>
+						</p>
+                                                </br>
+					</div>
+
+
+
+					<h4 data-toggle="collapse" role="button" href="#wfc" aria-expanded="false" aria-controls="wfc">
+						<i class="glyphicon glyphicon-collapse-down"></i> WFC - V Workshop de Forense Computacional
+					</h4>
+					<div class="collapse" id="wfc">
+						</br>
+						<p style="font-family:DINPro-Bold">DATAS IMPORTANTES</p>
+							<p align="justify">
+	            <!--						<font color="#DE7B32"><span style="font-family:DINPro-Bold">Submissão de artigos: 13 de setembro</font></span></br>-->	
+
+							 <font color="#DE7B32"><span style="font-family:DINPro-Bold">Submissão de artigos: </span><del>13</del><span style="font-family:DINPro-Bold"> 23 de setembro</font></span></br>
+							<font color="#007A80">Notificação de aceitação: 14 de outubro</font></span></br>
+							<font color="#007A80">Versão final: 21 de outubro</font></br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">APRESENTAÇÃO</p>
+							<p align="justify">
+							A popularização da Internet e a proliferação de dispositivos eletrônicos de processamento e comunicação torna a tecnologia cada vez mais integrada à vida das pessoas. Ao mesmo tempo em que abre um leque virtualmente infinito de possibilidades de interação e colaboração, isso também cria oportunidades para a consecução de diferentes tipos de crimes. A área de forense computacional se preocupa em coletar, extrair, preservar e analisar evidências digitais de modo a embasar procedimentos investigativos e de auditoria. Os desafios são grandes, incluindo diversas barreiras tecnológicas, jurídicas e sociais que precisam ser transpostas e a necessidade de formação de profissionais qualificados para atuar nessa área.</br>
+							</br>
+							O V Workshop de Forense Computacional (WFC) visa ser um fórum para discussões e apresentações técnicas de trabalhos em torno do estado da arte de tecnologias relacionadas com forense computacional. Além disso, busca-se também identificar os desafios de pesquisa e possibilitar a integração de pesquisadores e profissionais da área.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">TÓPICOS DE INTERESSE</p>
+							<p align="justify">
+							Autores são convidados a submeterem trabalhos originais relacionados a forense computacional. Os tópicos de interesse incluem (mas não são limitados a):</br>
+							</p>
+							<ul>
+								<li>Análise de campanhas de Ataques Persistentes e Avançados (APTs)</li>
+								<li>Análise de malware do tipo "bolware" (boletos bancários)</li>
+								<li>Análise de malware para POS/PDV (Point of Sale/Ponto de Venda)</li>
+								<li>Análise de tráfego, rastreamento e atribuição de ataques</li>
+								<li>Análise forense de ambientes virtualizados (máquinas virtuais e computação em nuvem)</li>
+								<li>Análise forense de armazenamento</li>
+								<li>Análise forense de bancos de dados</li>
+								<li>Análise forense de dispositivos embarcados e móveis</li>
+								<li>Análise Forense de IoT (Câmeras IP, Smart TVs, Video-Games)</li>
+								<li>Análise forense de memória</li>
+								<li>Análise forense de multimídia</li>
+								<li>Análise forense em redes e sistemas distribuídos</li>
+								<li>Análise forense em sistemas ICS/SCADA</li>
+								<li>Armazenamento e preservação de evidências digitais</li>
+								<li>Aspectos legais de evidências digitais</li>
+								<li>Big Data em forense, incluindo coleta, mineração e visualização de dados</li>
+								<li>Crimes digitais</li>
+								<li>Desenvolvimento e teste de ferramentas para forense</li>
+								<li>Detecção de pornografia e pornografia infantil</li>
+								<li>Estudos de caso e análise de tendências</li>
+								<li>Ferramentas computacionais para monitoramento e detecção de crimes</li>
+								<li>Ferramentas de comunicação pessoal e análise de redes sociais</li>
+								<li>Investigações de larga escala</li>
+								<li>Malware: análise forense e atribuição</li>
+								<li>Métodos e ferramentas para reconstrução de eventos</li>
+								<li>Ocultação e descoberta de dados (esteganografia e esteganálise)</li>
+								<li>Recuperação e reconstrução de dados</li>
+								<li>Resposta a incidentes e análise em tempo real</li>
+								<li>Técnicas anti-forense e anti-anti-forense</li>
+							</ul>
+						</br>
+						<p style="font-family:DINPro-Bold">INSTRUÇÕES PARA AUTORES</p>
+							<p align="justify">
+							O WFC incluirá a apresentação de artigos aceitos para publicação, de palestra(s) convidada(s) e de um desafio de forense. Artigos poderão ser submetidos em duas categorias:</br>
+							</br>
+							<span style="font-family:DINPro-Bold">Artigos Completos:</span> Um artigo completo deve apresentar um trabalho de pesquisa que tenha sido desenvolvido ao ponto de produzir resultados originais e relevantes, devidamente validados e analisados. Estes devem respeitar um limite máximo de 10 páginas.</br>
+							</br>
+							<span style="font-family:DINPro-Bold">Short papers:</span> Um artigo curto pode descrever um trabalho de pesquisa em andamento ou uma ferramenta computacional e/ou experimentos práticos. Estes devem conter de 4 a 6 páginas. No caso de ferramentas e/ou experimentos, o artigo deve conter as seguintes informações: descrição e motivação do problema tratado pela ferramenta; arquitetura da solução e descrição das principais funcionalidades; URL onde a ferramenta está disponível; URL da documentação da ferramenta e descrição da demonstração planejada.</br>
+							</br>
+							A formatação do texto deve seguir o padrão da SBC, disponível <a href="http://tinyurl.com/sbc-template-artigos" target="new" style="color:rgb(0,122,128)">aqui</a>. A submissão deve ser realizada no <a href="https://submissoes.sbc.org.br/home.cgi?c=2648" style="color:rgb(0,122,128)" target="new">sistema JEMS</a> utilizando somente arquivos no formato PDF.</br>
+							</br>
+							Os trabalhos submetidos ao WFC serão avaliados por um corpo de revisores e os trabalhos selecionados serão organizados para apresentação e publicação nos anais do evento. No mínimo um dos autores de cada trabalho selecionado deverá se inscrever no Simpósio Brasileiro de Segurança da Informação e de Sistemas Computacionais (SBSEG) e comparecer ao evento para apresentar seu trabalho.</br>								
+							</br>
+							Todos artigos devem ser submetidos de forma anônima, ou seja, devem evitar qualquer informação no cabeçalho do artigo, no texto e nas referências que vinculem o artigo à identidade dos autores e suas instituições.</br>
+							</p>
+						</br>
+<p style="font-family:DINPro-Bold">DIREITOS AUTORAIS</p>
+							<p align="justify">
+                                                          Junto com a versão final dos trabalhos aceitos para publicação no SBSeg16 é necessário enviar o <a href="docs/copyright-sbc-2016.rtf" style="color:rgb(0,122,128)">Contrato de Cessão de Direitos Autorais à SBC</a>. O contrato (de copyright) deve ser submetido via JEMS, preenchido com as informações relativas ao evento, coordenador(es), artigo e autores.
+				                 	</p>		
+						</br>
+
+						<p style="font-family:DINPro-Bold">COMITÊ DE ORGANIZAÇÃO</p>
+							<span style="font-family:DINPro-Bold">Coordenadores do WFC</span></br>
+		                    Rafael R. Obelheiro, UDESC</br>
+                                    Sandro S&uuml;ffert, Apura</br>
+						</br>
+
+	                                        <span style="font-family:DINPro-Bold">Membros do comitê de programa</span></br>
+Alceu Britto Jr., PUCPR)</br>
+Altair Santin, PUCPR </br>
+André Grégio, UFPR</br>
+Charles Christian Miers, UDESC </br>
+Cristine Hoepers, CERT.br</br>
+Emerson Ribeiro de Mello, IFSC</br>
+Flavio Elias de Deus, UnB</br>
+João Gondim, UnB</br>
+Klaus Steding-Jessen, CERT.br</br>
+Marcelo Caiado, PGR/MPF</br>
+Paulo Lício de Geus, Unicamp</br>
+Paulo Mafra, SENAI-SC</br>
+Rafael Timóteo Sousa Jr., UnB</br>
+Ricardo Dahab, Unicamp</br>
+Ricardo Kléber Galvão, IFRN</br>
+</br>
+					</div>
+
+
+
+					<h4 data-toggle="collapse" role="button" href="#wrac" aria-expanded="false" aria-controls="wrac">
+						<i class="glyphicon glyphicon-collapse-down"></i> WRAC+ - II Workshop de Regulação, Avaliação da Conformidade e Certificação de Segurança
+					</h4>
+					<div class="collapse" id="wrac">
+						</br>
+						<p style="font-family:DINPro-Bold">DATAS IMPORTANTES</p>
+							<p align="justify">
+						<!--	<font color="#DE7B32"><span style="font-family:DINPro-Bold">Submissão de artigos: 13 de setembro</font></span></br>-->
+							<font color="#DE7B32"><span style="font-family:DINPro-Bold">Submissão de artigos: </span><del>13</del><span style="font-family:DINPro-Bold"> 20 de setembro</font></span></br>
+							<font color="#007A80">Notificação de aceitação: 14 de outubro</font></span></br>
+							<font color="#007A80">Versão final: 21 de outubro</font></br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">APRESENTAÇÃO</p>
+							<p align="justify">
+							O Workshop de Regulação, Avaliação da Conformidade e Certificação de Segurança (WRAC+) é um evento científico organizado como evento satélite do Simpósio Brasileiro em Segurança da Informação e de Sistemas Computacionais (SBSeg). O WRAC+ é um fórum no qual Reguladores, Organismos de Certificação, Laboratórios, Governo, Academia e Indústria podem discutir os diversos aspectos da avaliação da conformidade na área de Segurança da Informação e de Sistemas Computacionais.</br>
+							</p>
+						</br>
+						<p style="font-family:DINPro-Bold">JUSTIFICATIVA</p>
+							<p align="justify">
+							O chamado "espaço cibernético" engloba um conjunto de software, hardware e redes de comunicações muitas vezes invisível, mas que suporta grande parte das aplicações de que fazemos uso, todos os dias. Este "espaço" contém a Internet e seus computadores, mas inclui, ainda, um grande conjunto de equipamentos e dispositivos inteligentes dedicados a aplicações específicas, além das redes que os interligam — redes estas que podem estar conectados à Internet ou dela segregados.</br>
+							</br>
+							Cada vez mais, torna-se evidente que ataques engendrados no espaço cibernético podem ter amplo impacto sobre o bem-estar da Sociedade. Desta forma, o espaço cibernético passa a se tornar passível de algum tipo de controle pelo Estado, visando a sua operação segura. Tal controle acontece por meio de um processo regulatório, no qual o Estado passa a definir regras e padrões de conduta que permitam garantir um mínimo de segurança no espaço cibernético - ou em parte dele.</br>
+							</br>
+							O WRAC+ proporcionará um fórum no qual todos os atores envolvidos com questões de segurança cibernética poderão interagir e discutir qual o melhor caminho para a construção de regras que permitam ao Brasil alcançar um adequado status de segurança em seu espaço cibernético.</br>
+							</br>
+							O assunto envolve questões que interessam à Academia, à Indústria e ao Governo. Tais como:</br>
+							</p>
+							<ul>
+								<li>Que áreas são passíveis de alguma forma de regulação/controle pelo Estado?</li>
+								<li>Como definir um conjunto de requisitos apropriado a cada tipo de aplicação?</li>
+								<li>Como especificar procedimentos sistemáticos (ensaios) para avaliar o atendimento a um requisito por um equipamento, por um software ou por um dispositivo inteligente operando no espaço cibernético?</li>
+								<li>Como avaliar a competência de um laboratório quanto à execução de atividades de avaliação de segurança de equipamento, software ou dispositivo inteligente?</li>
+								<li>Como estabelecer uma infraestrutura de avaliação da conformidade e como integrar esta infraestrutura aos sistemas de homologação/registro de órgãos reguladores?</li>
+								<li>Quais os limites técnicos das ferramentas de avaliação da conformidade?</li>
+							</ul>
+						</br>
+						<p style="font-family:DINPro-Bold">TÓPICOS DE INTERESSE</p>
+							<p align="justify">
+							Embora o foco do WRAC+ seja na regulação e na avaliação da conformidade, os objetos do processo de avaliação são quaisquer sistemas de informação e equipamentos com software embarcado. Logo, há interesse nos temas ligados a Segurança de Software e de Dispositivos Inteligentes. O WRAC+ buscará aprofundar discussões relacionadas à "especificação de requisitos de segurança" de software e dispositivos inteligentes e na "validação" de software e dispositivos inteligentes frente a um conjunto de requisitos.</br>
+							</br>
+							Temas de interesse incluem — mas não se restringem a — os seguintes:</br>
+							</p>
+							<ul>
+								<li>Análise e proteção de software</li>
+								<li>Teste, verificação e validação de software</li>
+								<li>Depuração e compreensão de software</li>
+								<li>Métricas, medições e análise de software</li>
+								<li>Vulnerabilidades de software</li>
+								<li>Métodos formais</li>
+								<li>Detecção e análise de malware</li>
+								<li>Gestão de riscos</li>
+								<li>Normas e padrões de segurança</li>
+								<li>Segurança de hardware: métodos invasivos, semi-invasivos e não invasivos</li>
+								<li>Avaliação da conformidade de produtos e processos</li>
+								<li>Acreditação de laboratórios de análise de segurança</li>
+							</ul>
+						</br>
+						<p style="font-family:DINPro-Bold">INSTRUÇÕES AOS AUTORES</p>
+							<p align="justify">
+							Artigos poderão ser submetidos em duas categorias:</br>
+							</br>
+							<span style="font-family:DINPro-Bold">Artigos Completos:</span> Um artigo completo deve apresentar um trabalho de pesquisa que tenha sido desenvolvido ao ponto de produzir resultados originais e relevantes, devidamente validados e analisados. Estes devem respeitar um limite máximo de 10 páginas.</br>
+							</br>
+							<span style="font-family:DINPro-Bold">Artigos Curtos:</span> Um artigo curto pode descrever um trabalho de pesquisa em andamento ou experimentos práticos e “cases”. Estes devem conter de 4 a 6 páginas.</br>
+							</br>
+							A formatação do texto deve seguir o padrão da SBC, disponível <a href="http://tinyurl.com/sbc-template-artigos" target="new" style="color:rgb(0,122,128)">aqui</a>. A submissão deve ser realizada no <a href="https://submissoes.sbc.org.br/home.cgi?c=2646" style="color:rgb(0,122,128)" target="new">sistema JEMS</a> utilizando somente arquivos no formato PDF.</br>
+							</br>
+							Todos os artigos serão avaliados por um corpo de revisores. Os artigos aceitos deverão ser apresentados no evento por um dos autores, para que possam ser publicados nos anais do evento.</br>
+							</p>
+						</br>
+<p style="font-family:DINPro-Bold">DIREITOS AUTORAIS</p>
+							<p align="justify">
+                                                          Junto com a versão final dos trabalhos aceitos para publicação no SBSeg16 é necessário enviar o <a href="docs/copyright-sbc-2016.rtf" style="color:rgb(0,122,128)">Contrato de Cessão de Direitos Autorais à SBC</a>. O contrato (de copyright) deve ser submetido via JEMS, preenchido com as informações relativas ao evento, coordenador(es), artigo e autores.
+				                 	</p>		
+						</br>
+
+						<p style="font-family:DINPro-Bold">COMITÊ DE ORGANIZAÇÃO</p>
+							<span style="font-family:DINPro-Bold">Coordenador do WRAC+ 2016</span></br>
+							Raphael Machado, INMETRO</br>
+
+</br>
+	                                        <span style="font-family:DINPro-Bold">Membros do comitê de programa</span></br>
+                                                        
+    Carlos D'Avila, UFRJ</br>
+    Danielle Vieira, Inmetro</br>
+    Davidson Boccardo, Inmetro</br>
+    Jayme Szwarcfiter, UFRJ</br>
+    Jonny Doin, Grid Vortex</br>
+    Luiz Fernando Rust da Costa Carmo, Inmetro</br>
+    Ruy Ramos, ITI </br>
+
+						</br>
+					</div>
+
+
+
+			</div>
+		</div>
+	</div>
+</section>
+<section id="patrocinadores" class="">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12 col-xs-12 visible-xs vertical-center text-center" style="padding-bottom: 20px;">
+        <h5>Realizado por:</h5>
+        <a href="http://www.sbc.org.br" target="new"><img class="img-responsive" src="images/sbc.jpg" style="margin-right: 20px; max-height: 90px;"></a>
+        <img class="img-responsive" src="images/UFF.png" style="margin-right: 5px; max-height: 80px;">
+        <img class="img-responsive" src="images/logo-ic.png" style="max-height: 90px;">
+      </div>
+      <div class="col-lg-3 col-col-xs-12 vertical-center">
+          <h5 class="hidden-xs" style="margin-left: 20px;">Apoiado por: </h5>
+	      <img class="img-responsive center-block hidden-xs" src="images/coppe.jpg" style="margin-right:5px; max-width: 90px;padding-bottom: 20px; margin-left: 20px;">
+	      <img class="img-responsive center-block hidden-xs" src="images/ufrj.jpg" style="max-height: 95px;padding-bottom: 20px;">
+	      <img class="img-responsive center-block hidden-xs" src="images/logo-ceseg.png" style="max-height: 85px; padding-bottom: 20px; margin-left: 10px;">
+	      <div class="row visible-xs text-center">
+                <h5>Apoiado por: </h5>
+                <div class="col-lg-4 col-xs-6 text-center vertical-center">
+                  <img class="img-responsive" src="images/coppe.jpg" style="margin-left: 100px; max-width: 90px;padding-bottom: 20px; padding-top: 15px;">
+                </div>
+                <div class="col-lg-4 col-xs-6 vertical-center">
+	          <img class="img-responsive" src="images/ufrj.jpg" style="margin-left: -100px; max-height: 95px;padding-bottom: 20px;">
+                </div>
+                <div class="col-lg-4 col-xs-12 vertical-center">
+	          <img class="img-responsive" src="images/logo-ceseg.png" style="margin-left: 0px; max-width: 110px;padding-bottom: 20px;">
+                </div>
+              </div>
+       </div>
+       <div class="col-lg-8 col-xs-12 vertical-center">
+         <h5 class="hidden-xs">Patrocinado por:</h5>
+         <div class="row text-center">
+           <h5 class="visible-xs">Patrocinado por:</h5>
+           <div class="col-lg-4 text-center col-xs-12 vertical-center">
+             Diamante<br>
+             <img class="img-reponsive center-block" src="images/logo-nic-cgi.png" style="max-width:200px; padding-bottom: 20px;">
+           </div>
+           <div class="col-lg-2 col-xs-12 text-center vertical-center">
+             Ouro<br>
+             <img class="img-reponsive center-block" src="images/intel.png" style="max-width: 100px;padding-bottom: 20px; padding-top: 10px;">
+             <img class="img-reponsive center-block" src="images/logo_faperj_cor.jpg" style="max-width: 170px;padding-bottom: 20px; padding-top: 10px;">
+             <img class="img-reponsive center-block" src="images/logo-cnpq.jpg" style="max-width: 170px;padding-bottom: 20px; padding-top: 10px;">
+             <img class="img-reponsive center-block" src="images/logo-capes.png" style="max-width: 100px;padding-bottom: 20px; padding-top: 10px;">
+           </div>
+           <div class="col-lg-3 col-xs-12 text-center vertical-center">
+             Prata<br>
+             <img class="img-reponsive center-block" src="images/lgClavis.png" style="max-width: 160px; padding-top: 15px;padding-bottom: 20px;">
+             <img class="img-reponsive center-block" src="images/proppi.png" style="max-width: 160px; padding-top: 15px;padding-bottom: 20px;">
+           </div>
+           <div class="col-lg-3 col-xs-12 text-center vertical-center">
+             Bronze<br>
+             <img class="img-reponsive center-block" src="images/google.png" style="max-width: 150px; padding-top: 15px;padding-bottom: 20px;" >
+           </div>
+         </div>
+      </div>
+      <div class="col-lg-12 col-xs-12 vertical-center text-center">
+        <h6 style="padding-top: 40px;">Desenvolvido por:</h6>
+        <img class="img-responsive center-block" src="images/logoIn.png" style="max-width: 55px; padding-bottom: 20px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--<div class="col-lg-2 col-lg-offset-1 col-col-md-1 col-sm-1 col-xs-12 vertical-center">
+          <h5>Apoiado por:</h5>
+	  <img class="img-responsive" src="images/coppe.jpg" style="margin-right:10px; max-width: 90px;">
+	  <img class="img-responsive" src="images/ufrj.jpg" style="max-height: 95px;">
+      </div>
+      <div class="col-lg-7 col-lg-offset-1 col-md-1 col-sm-1 col-xs-12">
+        <h5>Patrocinado por:</h5>
+	<div class="row">
+          <div class="col-lg-2 col-md-1 col-sm-1 col-xs-12">
+	    Diamante <br>
+            <img class="img-reponsive" src="images/logo-nic-cgi.png" style="max-width:180px;">
+	  </div> 
+	 <div class="col-lg-2 col-md-1 col-sm-1 col-xs-12">
+	    Ouro <br> 
+            <img class="img-reponsive" src="images/intel.jpg" style="max-width: 90px;">
+          </div>
+	  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" style="max-width: 90px;">
+	    Prata <br>
+            <img class="img-reponsive" src="images/lgClavis.png" style="max-width: 90px;">
+          </div>
+	  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" style="max-width: 90px;">
+	    Bronze <br>
+            <img class="img-reponsive" src="images/google.png">
+          </div> 
+        </div>
+      </div>
+      <div class="col-lg-1 col-lg-offset-1 col-md-1 col-sm-1 col-xs-12 vertical-center text-center">
+        <h6>Desenvolvido por:</h6>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+	
+		<!--FIM MENU TOPO-->
+
+	
+
+	<script src="js/jquery-1.12.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/mapa.js"></script>
+ 	<script src="js/bootstrap.min.js"></script>
+ 	<script src="js/prototipo.js"></script>
+ 	<script src="js/tradutor.js"></script>
+ 	    
+ 	
+	</body>
+</html>

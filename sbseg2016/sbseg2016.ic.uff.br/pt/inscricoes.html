@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <title> SBSeg16 - XVI Simp&oacute;sio Brasileiro em Seguran&ccedil;a da Informa&ccedil;&atilde;o e de Sistemas Computacionais
+    </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/prototipo.css">
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script>
+      $(function(){   
+        var nav = $('#menuHeader');   
+	$(window).scroll(function () { 
+          if ($(this).scrollTop() > 1) { 
+	    nav.addClass("navbar-fixed-top navbar-float menuFixo"); 
+	  } 
+          else { 
+            nav.removeClass("navbar-fixed-top navbar-float menuFixo"); 
+	  } 
+        });  
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="navbar-fixed-top container-blankBackground hidden-xs">
+      <div class="row">
+        <div class="col-lg-6 col-md-4 col-sm-12 col-xs-6" style="margin-left: 50px;">
+          <img src="images/logo1.png" class="img-responsive imgTopo" style="margin-right: 10px; ">
+          <img src="images/logo2.png" class="img-responsive imgTopo2" alt="logoSbseg">
+        </div>
+        <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12 col-xs-6">	
+          <h5>Realizado por</h5>
+            <a href="http://www.sbc.org.br" target="new"><img class="img-responsive" src="images/sbc.jpg" style="margin-right: 20px; max-height: 90px;"></a>
+            <img class="img-responsive" src="images/UFF.png" style="margin-right: 5px; max-height: 80px;">
+            <img class="img-responsive" src="images/logo-ic.png" style="max-height: 90px;">
+        </div>	
+        <div class="col-lg-1 col-md-4 col-sm-12 col-xs-12" style="margin-left: 40px; padding-top: 50px;">	
+          <!-- <a href="#"><img id="btTradutorEn" src="images/Brasil.png" class="img-responsive" style="max-width: 30px;" onclick= "traducaoPt()" /></a> -->
+	  <a href="inscricoes.html#"><img id="btTradutorEn" src="images/Inglaterra.png" class="img-responsive" style="max-width: 30px;" onclick= "traducaoEn()" /></a> </br>
+          <a href="https://www.facebook.com/sbseg2016" target="new"><img id="btTradutorEn" src="images/facebook.jpg" class="img-responsive" style="max-width: 30px; padding-top: 5px;"></a>
+        </div>
+      </div>
+    </div> 
+    
+    <section id="headerCont" class="hidden-xs">	
+      <div class="bkPic2">
+ <!--       <div class="container-fluid bkColor">
+	 </div> -->
+      </div>
+    </section>
+
+    <header>					
+      <nav id="menuHeader" class="navbar navbar-default hidden-xs">
+        <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	  </div>		
+	  <div class="navbar-collapse collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav" style="text-align:center;">
+              <li><a href="index.html">IN&Iacute;CIO</a></li>
+              <li><a href="anais.html">ANAIS</a></li>
+              <li><a href="chamadas.html">CHAMADAS</a></li>
+              <li><a href="comite.html">COMIT&Ecirc;</a></li>
+	      <li><a href="palestrantes.html">PALESTRANTES</a></li>
+	      <li><a href="programacao.html">PROGRAMA&Ccedil;&Atilde;O</a></li>
+	      <li><a href="local.html">LOCAL</a></li>
+	      <li><a href="contato.html">CONTATO</a></li>
+	      <li class="liDif"><a class="inscreve" href="inscricoes.html">INSCREVA-SE</a></li>
+	    </ul>
+	  </div>
+	</div>	
+      </nav>	
+      <nav id="menuHeaderCel" class="navbar navbar-default navbar-fixed-top visible-xs">
+        <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+            <a href="index.html"><img src="images/SimplificadaNegativa.png" class="img-responsive visible-xs" style="max-width: 120px;"></a>
+	  </div>		
+	  <div class="navbar-collapse collapse" id="navbar-collapse-2">
+            <ul class="nav navbar-nav" style="text-align:center;">
+              <li><a href="index.html">IN&Iacute;CIO</a></li>
+              <li><a href="chamadas.html">CHAMADAS</a></li>
+              <li><a href="comite.html">COMIT&Ecirc;</a></li>
+	      <li><a href="palestrantes.html">PALESTRANTES</a></li>
+	      <li><a href="programacao.html">PROGRAMA&Ccedil;&Atilde;O</a></li>
+	      <li><a href="local.html">LOCAL</a></li>
+	      <li><a href="contato.html">CONTATO</a></li>
+	      <li class="liDif"><a class="inscreve" href="inscricoes.html">INSCREVA-SE</a></li>
+	    </ul>
+	  </div>
+	</div>	
+      </nav>	
+    </header>
+  </body>
+</html>
+<section id="ConteudoBox">
+  <div class="container-fluid">
+    <div class="col-md-12">
+      <div class="caixa1">
+        <h1 style="padding-left: 10px;">Inscri&ccedil;&otilde;es</h1>
+        <h4 style="color: rgb(0,122,128)">
+          <p align="center">
+            Clique <a href="https://centraldesistemas.sbc.org.br/ecos/sbseg2016" target="new" style="color: rgb(222,123,50)">AQUI</a> para fazer sua inscri&ccedil;&atilde;o no SBSeg16.
+          </p>
+        </h4>
+        <!-- <p align="justify">
+          O sistema de inscri&ccedil;&otilde;es ser&aacute; aberto nos pr&oacute;ximos dias. Mais informa&ccedil;&otilde;es sobre formas de pagamento, descontos, pol&iacute;ticas de inscri&ccedil;&otilde;es para autores e cancelamento tamb&eacute;m ser&atilde;o divulgados em breve.
+        </p> -->
+        </br>
+        <p align="justify">
+          A inscri&ccedil;&atilde;o no SBSeg16, em qualquer uma das categorias abaixo, dar&aacute; direito a participa&ccedil;&atilde;o nas sess&otilde;es t&eacute;cnicas, palestras, tutoriais, pain&eacute;is, minicursos e workshops. O participante tamb&eacute;m ter&aacute; direito ao material do simp&oacute;sio, coffee-breaks e coquetel de abertura. Apesar de estarem inclu&iacute;dos no valor da inscri&ccedil;&atilde;o pedimos que, por favor, indiquem no ato da inscri&ccedil;&atilde;o os minicursos e workshops dos quais participar&aacute;. Algumas dessas atividades ter&atilde;o vagas limitadas.
+        </p>
+        </br>
+        <p align="middle">
+          <img src="images/tabela-inscricoes.jpg" class="img-responsive center-block" style="max-width: 80%; max-height: 95%; center-block;">
+          </br>
+        </p>
+        </br>
+
+
+       <p align="justify">
+         * Valores para inscri&ccedil;&atilde;o de n&atilde;o associados que optem por se associarem &agrave; SBC no ato da inscri&ccedil;&atilde;o. A associa&ccedil;&atilde;o &agrave; SBC &eacute; anual. Esta op&ccedil;&atilde;o tamb&eacute;m &eacute; v&aacute;lida para associados que ainda n&atilde;o renovaram a associa&ccedil;&atilde;o 2016 e desejam renovar. Estudantes de Gradua&ccedil;&atilde;o ou P&oacute;s-Gradua&ccedil;&atilde;o que optarem por esta modalidade s&oacute; ter&atilde;o sua associa&ccedil;&atilde;o/renova&ccedil;&atilde;o confirmada depois de enviarem (para o email sbc@sbc.org.br) um comprovante de v&iacute;nculo estudantil, que deve conter: nome da institui&ccedil;&atilde;o, nome do aluno, semestre, curso, e data atual, al&eacute;m de efetuarem o pagamento da inscri&ccedil;&atilde;o. 
+        </p>
+        <p align="justify">
+         ** Valores para inscri&ccedil;&atilde;o de n&atilde;o associados que n&atilde;o optem por se associarem &agrave; SBC no ato da inscri&ccedil;&atilde;o.  Estudantes de Gradua&ccedil;&atilde;o ou P&oacute;s-Gradua&ccedil;&atilde;o que optarem por esta modalidade precisar&atilde;o apresentar no credenciamento do evento um comprovante de v&iacute;nculo estudantil, que deve conter: nome da institui&ccedil;&atilde;o, nome do aluno, semestre, curso, e data atual. Caso falhe em apresentar o comprovante, o inscrito n&atilde;o ser&aacute; credenciado com estudante e ter&aacute; de pagar a diferen&ccedil;a para inscri&ccedil;&atilde;o de Profissional (com valores sem desconto), caso deseje participar do evento. Escolhendo esta categoria voc&ecirc; paga mais caro do que a op&ccedil;&atilde;o que inclui a associa&ccedil;&atilde;o &agrave; SBC, considere se inscrever na categoria que inclui a associa&ccedil;&atilde;o, voc&ecirc; paga menos e ainda se associa &agrave; SBC.
+        </p>
+        <p align="justify">
+         *** Estudantes de ensino m&eacute;dio que optarem por esta modalidade, precisar&atilde;o apresentar no credenciamento do evento um comprovante da sua condi&ccedil;&atilde;o. Caso falhe em apresentar o comprovante, o inscrito n&atilde;o ser&aacute; credenciado como estudante de ensino m&eacute;dio e ter&aacute; de pagar a diferen&ccedil;a para inscri&ccedil;&atilde;o de Profissional (com valores sem desconto), caso deseje participar do evento.
+        </p>
+         </br>
+         <p style="font-family:DINPro-Bold">POL&Iacute;TICA DE INSCRI&Ccedil;&Atilde;O PARA AUTORES</p>
+        <p align="justify">
+          Para cada minicurso e trabalho aceito para publica&ccedil;&atilde;o na <span style="color: rgb(0,122,128)">trilha principal do SBSeg, CTDSeg, WGID, WFC e WRAC+</span>, &eacute; necess&aacute;ria a inscri&ccedil;&atilde;o de um dos autores como <span style="color: rgb(0,122,128)">PROFISSIONAL</span> no SBSeg16 at&eacute; o dia <span style="color: rgb(0,122,128)">21/10/16</span>.</br>
+          <!--Para cada artigo completo aceito para publica&ccedil;&atilde;o no <span style="color: rgb(0,122,128)">SBSeg16</span>, &eacute; necess&aacute;ria a inscri&ccedil;&atilde;o de um dos autores como <span style="color: rgb(0,122,128)">PROFISSIONAL</span> no SBSeg16 at&eacute; o dia <span style="color: rgb(0,122,128)">26/09/16</span>.</br>
+          Para cada trabalho aceito para publica&ccedil;&atilde;o no <span style="color: rgb(0,122,128)">CTDSeg</span>, &eacute; necess&aacute;ria a inscri&ccedil;&atilde;o de um dos autores como <span style="color: rgb(0,122,128)">PROFISSIONAL</span> no SBSeg16 at&eacute; o dia <span style="color: rgb(0,122,128)">28/09/16</span>.</br>
+          Para cada artigo ou trabalho aceito para publica&ccedil;&atilde;o no <span style="color: rgb(0,122,128)">WGID, WFC e WRAC+</span>, &eacute; necess&aacute;ria a inscri&ccedil;&atilde;o de um dos autores como <span style="color: rgb(0,122,128)">PROFISSIONAL</span> no SBSeg16 at&eacute; o dia <span style="color: rgb(0,122,128)">21/10/16</span>.</br> -->
+          Para cada artigo ou poster aceito para publica&ccedil;&atilde;o no <span style="color: rgb(0,122,128)">WTICG</span>, &eacute; necess&aacute;ria a inscri&ccedil;&atilde;o de um dos autores como <span style="color: rgb(0,122,128)">ESTUDANTE</span>, no SBSeg16 at&eacute; o dia <span style="color: rgb(0,122,128)">21/10/16</span>.
+        </p>
+         <p style="font-family:DINPro-Bold">JANTAR DE CONFRATERNIZA&Ccedil;&Atilde;O</p>
+        <p align="justify">
+O valor do jantar de confraterniza&ccedil;&atilde;o (09/11/16) &eacute; de R$ 100,00 e ser&aacute; realizado na Fortaleza de Santa Cruz no espa&ccedil;o <a href="http://www.zefiroeventos.com.br" target="new" style="color: rgb(222,123,50)">Z&eacute;firo Eventos</a>, um dos cart&otilde;es-postais da cidade. <!-- É possível comprar tickets extras para acompanhantes na secretaria do evento.-->  Em breve, daremos detalhes do local do jantar.
+        </p>
+        <p style="font-family:DINPro-Bold">FORMAS DE PAGAMENTO</p>
+        <p align="justify">
+          O pagamento da inscri&ccedil;&atilde;o poder&aacute; ser realizado por meio de Boleto Banc&aacute;rio, Cart&atilde;o de Cr&eacute;dito, D&eacute;bito em Conta Banco do Brasil, Faturamento ou Nota de Empenho. </br>
+          Caso o pagamento da sua inscri&ccedil;&atilde;o seja por nota de empenho, fa&ccedil;a a inscri&ccedil;&atilde;o normalmente no sistema de inscri&ccedil;&otilde;es da SBC (link no in&iacute;cio da p&aacute;gina), escolha "nota de empenho" como forma de pagamento e envie a nota de empenho com o valor total para <span style="color: rgb(0,122,128)">faturamento@sbc.org.br</span>. &Eacute; poss&iacute;vel enviar uma &uacute;nica nota de empenho para v&aacute;rias inscri&ccedil;&otilde;es.
+        </p>
+
+        <p style="font-family:DINPro-Bold">CARAVANAS</p>
+        <p align="justify">
+A cada dez estudantes inscritos, a inscri&ccedil;&atilde;o do d&eacute;cimo-primeiro estudante ser&aacute; gratuita.</br>
+
+Os estudantes devem preencher o formul&aacute;rio de inscri&ccedil;&atilde;o on-line (link no in&iacute;cio desta p&aacute;gina), confirmar e pagar sua inscri&ccedil;&atilde;o. Os inscritos que ser&atilde;o isentos tamb&eacute;m devem preencher o formul&aacute;rio de inscri&ccedil;&atilde;o, por&eacute;m ignorar o boleto banc&aacute;rio (ou outra forma de pagamento escolhida).</br>
+
+Ao completar o grupo de dez, vinte ou mais inscritos, o coordenador da caravana dever&aacute; enviar por email (sbseg16@gmail.com) as seguintes informa&ccedil;&otilde;es: </br>
+(a) a rela&ccedil;&atilde;o de nomes dos estudantes que fazem parte do grupo e os valores das suas respectivas inscri&ccedil;&otilde;es; </br>
+(b) o(s) nome(s) do(s) estudante(s) com inscri&ccedil;&atilde;o gratuita.</br>
+
+Caso tenham d&uacute;vidas ou queiram outras informa&ccedil;&otilde;es, envie email para sbseg16@gmail.com com o assunto CARAVANA.
+       </p>
+
+        <p style="font-family:DINPro-Bold">POL&Iacute;TICA DE CANCELAMENTO</p>
+        <p align="justify">
+          A data limite para solicita&ccedil;&atilde;o de reembolso da inscri&ccedil;&atilde;o &eacute; <span style="color: rgb(0,122,128)">31/10/2016</span>. Ap&oacute;s esta data n&atilde;o haver&aacute; devolu&ccedil;&atilde;o de qualquer valor pago.</br>
+          O valor a ser reembolsado &eacute; de 80% do valor pago, sendo os 20% restantes usados cobrir os custos administrativos da inscri&ccedil;&atilde;o cancelada. Para solicitar o cancelamento, envie um e-mail para <span style="color: rgb(0,122,128)">contasapagar@sbc.org.br</span>.
+        </p>
+      </div>	
+    </div>
+  </div>
+</section>
+<section id="patrocinadores" class="">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12 col-xs-12 visible-xs vertical-center text-center" style="padding-bottom: 20px;">
+        <h5>Realizado por:</h5>
+        <a href="http://www.sbc.org.br" target="new"><img class="img-responsive" src="images/sbc.jpg" style="margin-right: 20px; max-height: 90px;"></a>
+        <img class="img-responsive" src="images/UFF.png" style="margin-right: 5px; max-height: 80px;">
+        <img class="img-responsive" src="images/logo-ic.png" style="max-height: 90px;">
+      </div>
+      <div class="col-lg-3 col-col-xs-12 vertical-center">
+          <h5 class="hidden-xs" style="margin-left: 20px;">Apoiado por: </h5>
+	      <img class="img-responsive center-block hidden-xs" src="images/coppe.jpg" style="margin-right:5px; max-width: 90px;padding-bottom: 20px; margin-left: 20px;">
+	      <img class="img-responsive center-block hidden-xs" src="images/ufrj.jpg" style="max-height: 95px;padding-bottom: 20px;">
+	      <img class="img-responsive center-block hidden-xs" src="images/logo-ceseg.png" style="max-height: 85px; padding-bottom: 20px; margin-left: 10px;">
+	      <div class="row visible-xs text-center">
+                <h5>Apoiado por: </h5>
+                <div class="col-lg-4 col-xs-6 text-center vertical-center">
+                  <img class="img-responsive" src="images/coppe.jpg" style="margin-left: 100px; max-width: 90px;padding-bottom: 20px; padding-top: 15px;">
+                </div>
+                <div class="col-lg-4 col-xs-6 vertical-center">
+	          <img class="img-responsive" src="images/ufrj.jpg" style="margin-left: -100px; max-height: 95px;padding-bottom: 20px;">
+                </div>
+                <div class="col-lg-4 col-xs-12 vertical-center">
+	          <img class="img-responsive" src="images/logo-ceseg.png" style="margin-left: 0px; max-width: 110px;padding-bottom: 20px;">
+                </div>
+              </div>
+       </div>
+       <div class="col-lg-8 col-xs-12 vertical-center">
+         <h5 class="hidden-xs">Patrocinado por:</h5>
+         <div class="row text-center">
+           <h5 class="visible-xs">Patrocinado por:</h5>
+           <div class="col-lg-4 text-center col-xs-12 vertical-center">
+             Diamante<br>
+             <img class="img-reponsive center-block" src="images/logo-nic-cgi.png" style="max-width:200px; padding-bottom: 20px;">
+           </div>
+           <div class="col-lg-2 col-xs-12 text-center vertical-center">
+             Ouro<br>
+             <img class="img-reponsive center-block" src="images/intel.png" style="max-width: 100px;padding-bottom: 20px; padding-top: 10px;">
+             <img class="img-reponsive center-block" src="images/logo_faperj_cor.jpg" style="max-width: 170px;padding-bottom: 20px; padding-top: 10px;">
+             <img class="img-reponsive center-block" src="images/logo-cnpq.jpg" style="max-width: 170px;padding-bottom: 20px; padding-top: 10px;">
+             <img class="img-reponsive center-block" src="images/logo-capes.png" style="max-width: 100px;padding-bottom: 20px; padding-top: 10px;">
+           </div>
+           <div class="col-lg-3 col-xs-12 text-center vertical-center">
+             Prata<br>
+             <img class="img-reponsive center-block" src="images/lgClavis.png" style="max-width: 160px; padding-top: 15px;padding-bottom: 20px;">
+             <img class="img-reponsive center-block" src="images/proppi.png" style="max-width: 160px; padding-top: 15px;padding-bottom: 20px;">
+           </div>
+           <div class="col-lg-3 col-xs-12 text-center vertical-center">
+             Bronze<br>
+             <img class="img-reponsive center-block" src="images/google.png" style="max-width: 150px; padding-top: 15px;padding-bottom: 20px;" >
+           </div>
+         </div>
+      </div>
+      <div class="col-lg-12 col-xs-12 vertical-center text-center">
+        <h6 style="padding-top: 40px;">Desenvolvido por:</h6>
+        <img class="img-responsive center-block" src="images/logoIn.png" style="max-width: 55px; padding-bottom: 20px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--<div class="col-lg-2 col-lg-offset-1 col-col-md-1 col-sm-1 col-xs-12 vertical-center">
+          <h5>Apoiado por:</h5>
+	  <img class="img-responsive" src="images/coppe.jpg" style="margin-right:10px; max-width: 90px;">
+	  <img class="img-responsive" src="images/ufrj.jpg" style="max-height: 95px;">
+      </div>
+      <div class="col-lg-7 col-lg-offset-1 col-md-1 col-sm-1 col-xs-12">
+        <h5>Patrocinado por:</h5>
+	<div class="row">
+          <div class="col-lg-2 col-md-1 col-sm-1 col-xs-12">
+	    Diamante <br>
+            <img class="img-reponsive" src="images/logo-nic-cgi.png" style="max-width:180px;">
+	  </div> 
+	 <div class="col-lg-2 col-md-1 col-sm-1 col-xs-12">
+	    Ouro <br> 
+            <img class="img-reponsive" src="images/intel.jpg" style="max-width: 90px;">
+          </div>
+	  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" style="max-width: 90px;">
+	    Prata <br>
+            <img class="img-reponsive" src="images/lgClavis.png" style="max-width: 90px;">
+          </div>
+	  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" style="max-width: 90px;">
+	    Bronze <br>
+            <img class="img-reponsive" src="images/google.png">
+          </div> 
+        </div>
+      </div>
+      <div class="col-lg-1 col-lg-offset-1 col-md-1 col-sm-1 col-xs-12 vertical-center text-center">
+        <h6>Desenvolvido por:</h6>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+	
+		<!--FIM MENU TOPO-->
+
+	
+
+	<script src="js/jquery-1.12.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/mapa.js"></script>
+ 	<script src="js/bootstrap.min.js"></script>
+ 	<script src="js/prototipo.js"></script>
+ 	<script src="js/tradutor.js"></script>
+ 	    
+ 	
+	</body>
+</html>
+			
