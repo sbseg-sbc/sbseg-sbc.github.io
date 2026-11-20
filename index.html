@@ -135,6 +135,26 @@
   .ceseg b{font-weight:700}
   .ceseg .by{color:var(--muted);font-weight:500}
 
+  /* ---------- próxima edição (destaque) ---------- */
+  .next{
+    margin-top:28px;max-width:74ch;display:flex;flex-wrap:wrap;align-items:center;
+    justify-content:space-between;gap:16px 24px;
+    border:1px solid #cfe6e1;border-left:4px solid var(--accent);border-radius:14px;
+    background:var(--accent-soft);padding:20px 22px;
+  }
+  .next .nx-tag{
+    font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--accent-dark);
+  }
+  .next .nx-name{display:block;margin-top:4px;font-size:1.5rem;font-weight:800;letter-spacing:-.02em;color:var(--text)}
+  .next .nx-sub{display:block;margin-top:2px;font-size:.92rem;color:var(--muted)}
+  .next .nx-go{
+    display:inline-block;background:var(--accent-dark);color:#fff;font-weight:600;font-size:.92rem;
+    padding:10px 18px;border-radius:10px;transition:background .2s;white-space:nowrap;
+  }
+  .next .nx-go:hover,.next .nx-go:focus-visible{background:var(--text)}
+  .topnav a.nav-next{color:var(--accent-dark);font-weight:700}
+
   /* ---------- name-change notice ---------- */
   .rename{
     margin-top:26px;max-width:74ch;border:1px solid var(--line);
@@ -292,6 +312,7 @@
     </label>
     <nav class="topnav">
       <a href="https://ceseg-sbc.github.io" target="_blank" rel="noopener" data-i18n="nav.ceseg">CESeg</a>
+      <a href="2027/" class="nav-next">2027</a>
       <a href="#edicoes" data-i18n="nav.edicoes">Edições</a>
       <a href="historico/" data-i18n="nav.historico">Histórico</a>
       <a href="#mapa" data-i18n="nav.mapa">Mapa</a>
@@ -311,6 +332,14 @@
     <div class="wrap">
       <p class="eyebrow" data-i18n="home.eyebrow">Comissão Especial de Cibersegurança (CESeg) · Sociedade Brasileira de Computação (SBC)</p>
       <h1 class="title" data-i18n="home.h1">Simpósio Brasileiro<br>de Cibersegurança</h1>
+      <section class="next" aria-labelledby="next-name">
+        <div>
+          <span class="nx-tag" data-i18n="home.nextTag">Próxima edição</span>
+          <span class="nx-name" id="next-name">SBSeg 2027</span>
+          <span class="nx-sub" data-i18n="home.nextSub">XXVII Simpósio Brasileiro de Cibersegurança · datas e local a definir</span>
+        </div>
+        <a class="nx-go" href="2027/" data-i18n="home.nextGo">Acessar o site da edição →</a>
+      </section>
       <p class="lead" data-i18n="home.lead">O <strong>SBSeg</strong> é o principal fórum nacional de pesquisa em
       segurança da informação e cibersegurança. Este site reúne o <strong>arquivo histórico</strong>
       do evento, com cópias estáticas preservadas de cada edição que continuam acessíveis aqui

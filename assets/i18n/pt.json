@@ -122,6 +122,9 @@
     "footer": "Página de arquivamento · CESeg / SBC. Dados apurados em <a href=\"../#edicoes\">edições</a>, <a href=\"../organizadores/\">organizadores</a>, <a href=\"../palestrantes/\">palestrantes</a> e <a href=\"../premiacoes/\">premiações</a>."
   },
   "home": {
+    "nextTag": "Próxima edição",
+    "nextSub": "XXVII Simpósio Brasileiro de Cibersegurança · datas e local a definir",
+    "nextGo": "Acessar o site da edição →",
     "title": "SBSeg: Simpósio Brasileiro de Cibersegurança · Arquivo histórico",
     "metaDesc": "Arquivo histórico e ponto de acesso rápido às edições do SBSeg, o Simpósio Brasileiro de Cibersegurança (CESeg/SBC): cópias estáticas preservadas, organizadores, palestrantes, patrocinadores, premiações, fotos e até certificados de premiação.",
     "eyebrow": "Comissão Especial de Cibersegurança (CESeg) · Sociedade Brasileira de Computação (SBC)",

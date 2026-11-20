@@ -27,10 +27,12 @@ sites de cada edição, navegáveis offline caso o site original saia do ar.
 
 ```
 index.html              Índice cronológico das edições (fonte única: array EDITIONS)
-sbsegYYYY/              Cópia estática preservada da edição de cada ano
+404.html                Redireciona endereços antigos /sbsegAAAA/... para /AAAA/...
 organizadores/ ...      Páginas transversais (palestrantes, premiações, etc.)
 assets/                 Logomarcas e recursos compartilhados
 ```
+
+Cada edição tem um repositório próprio na organização, nomeado só com o ano e publicado em `sbseg-sbc.github.io/AAAA/`: [2008](https://github.com/sbseg-sbc/2008), [2011](https://github.com/sbseg-sbc/2011) a [2026](https://github.com/sbseg-sbc/2026) (cópias preservadas) e [2027](https://github.com/sbseg-sbc/2027) (próxima edição). Até novembro de 2026 as cópias ficavam neste repositório, em pastas `sbsegAAAA/`; o histórico do git ainda as guarda.
 
 A página inicial expõe **metadados estruturados** (`schema.org` JSON-LD) que
 classificam o site como uma **coleção arquivística** (`CollectionPage` /

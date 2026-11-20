@@ -122,6 +122,9 @@
     "footer": "Archive page · CESeg / SBC. Data computed from <a href=\"../#edicoes\">editions</a>, <a href=\"../organizadores/\">organizers</a>, <a href=\"../palestrantes/\">speakers</a> and <a href=\"../premiacoes/\">awards</a>."
   },
   "home": {
+    "nextTag": "Next edition",
+    "nextSub": "27th Brazilian Symposium on Cybersecurity · dates and venue to be announced",
+    "nextGo": "Visit the edition website →",
     "title": "SBSeg: Brazilian Symposium on Cybersecurity · Historical archive",
     "metaDesc": "Historical archive and quick-access hub for the editions of SBSeg, the Brazilian Symposium on Cybersecurity (CESeg/SBC): preserved static copies, organizers, speakers, sponsors, awards, photos and even award certificates.",
     "eyebrow": "Special Committee on Cybersecurity (CESeg) · Brazilian Computer Society (SBC)",
